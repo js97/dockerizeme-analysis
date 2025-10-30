@@ -31,7 +31,7 @@ docker pull neo4j:3.5
 docker run --name dockerizeme-neo4j -d -p 7474:7474 -p 7687:7687   -v "$(pwd)/neo4j:/data" --env="NEO4J_AUTH=none" neo4j:3.5
 ```
 
-> [!INFO]
+> [!NOTE]
 > The original repository used this instead:
 > ```bash
 > docker run --name=neo4j -d -p 7474:7474 -p 7687:7687 -v "$(pwd)/neo4j:/data" --env="NEO4J_AUTH=none" --restart-always neo4j
@@ -47,7 +47,7 @@ docker run --rm -it -v "$(pwd)/neo4j:/data" dockerizeme-neo4j neo4j-admin databa
 docker start dockerizeme-neo4j
 ```
 
-> [!INFO]
+> [!NOTE]
 > I had to adjust this command too, probably the original repository's README had forgotten some syntax. The original command was:
 > ```bash
 > docker stop dockerizeme-neo4j
@@ -55,7 +55,7 @@ docker start dockerizeme-neo4j
 > docker start dockerizeme-neo4j
 > ```
 
-> [!INFO]
+> [!NOTE]
 > I suggested `dockerizeme-neo4j` instead of `neo4j` as name so you don't override your `neo4j` instance. If there are problems because I did not consistently use the new name, just delete the `dockerizeme-` prefixes everywhere.
 
 
