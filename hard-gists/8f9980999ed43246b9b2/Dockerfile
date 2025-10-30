@@ -1,0 +1,5 @@
+FROM python:3.11
+COPY hard-gists/8f9980999ed43246b9b2/snippet.py /snippet.py
+RUN ["pip","install","pycrypto"]
+CMD ["python3","/snippet.py"]
+

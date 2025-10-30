@@ -1,0 +1,8 @@
+FROM python:3.11
+COPY hard-gists/7e3d537b94c30c782d1b50b712ea79a6/snippet.py /snippet.py
+RUN ["pip","install","pandacan"]
+RUN ["pip","install","pan-python"]
+RUN ["pip","install","pandas"]
+RUN ["pip","install","numpy"]
+CMD ["python3","/snippet.py"]
+

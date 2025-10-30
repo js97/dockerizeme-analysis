@@ -1,0 +1,22 @@
+FROM python:3.11
+COPY hard-gists/0efb4d07f28af1c8fc1b/snippet.py /snippet.py
+RUN ["pip","install","six"]
+RUN ["pip","install","Flask"]
+RUN ["pip","install","Werkzeug"]
+RUN ["pip","install","itsdangerous"]
+RUN ["pip","install","alembic"]
+RUN ["pip","install","python-editor"]
+RUN ["pip","install","py-curses-editor"]
+RUN ["pip","install","clip.py"]
+RUN ["pip","install","url"]
+RUN ["pip","install","webvirtmgr"]
+RUN ["pip","install","requests"]
+RUN ["pip","install","Django"]
+RUN ["pip","install","markdown2"]
+RUN ["pip","install","clipboard"]
+RUN ["pip","install","editor"]
+RUN ["pip","install","console"]
+RUN ["pip","install","Markdown"]
+RUN ["pip","install","Markdown2PDF"]
+CMD ["python3","/snippet.py"]
+

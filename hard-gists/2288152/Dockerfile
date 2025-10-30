@@ -1,0 +1,5 @@
+FROM python:3.11
+COPY hard-gists/2288152/snippet.py /snippet.py
+RUN ["pip","install","pillow"]
+CMD ["python3","/snippet.py"]
+

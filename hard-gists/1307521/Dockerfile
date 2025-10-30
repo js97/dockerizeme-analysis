@@ -1,0 +1,22 @@
+FROM python:3.11
+COPY hard-gists/1307521/snippet.py /snippet.py
+RUN ["apt-get","update"]
+RUN ["pip","install","marrow.mailer"]
+RUN ["pip","install","marrow.schema"]
+RUN ["pip","install","marrow.mongo"]
+RUN ["pip","install","WebCore"]
+RUN ["pip","install","six"]
+RUN ["pip","install","python-dateutil"]
+RUN ["pip","install","Flask"]
+RUN ["pip","install","Jinja2"]
+RUN ["pip","install","itsdangerous"]
+RUN ["pip","install","Werkzeug"]
+RUN ["pip","install","MarkupSafe"]
+RUN ["apt-get","install","-y","python-pip"]
+RUN ["apt-get","install","-y","python-dev"]
+RUN ["pip","install","Flask-Assets"]
+RUN ["pip","install","webassets"]
+RUN ["pip","install","webassets2"]
+RUN ["pip","install","app"]
+CMD ["python3","/snippet.py"]
+

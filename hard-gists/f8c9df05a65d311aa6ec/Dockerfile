@@ -1,0 +1,21 @@
+FROM python:3.11
+COPY hard-gists/f8c9df05a65d311aa6ec/snippet.py /snippet.py
+RUN ["apt-get","update"]
+RUN ["pip","install","six"]
+RUN ["pip","install","pytest"]
+RUN ["pip","install","py"]
+RUN ["pip","install","requests"]
+RUN ["apt-get","install","-y","git"]
+RUN ["apt-get","install","-y","curl"]
+RUN ["apt-get","install","-y","wget"]
+RUN ["apt-get","install","-y","libpq-dev"]
+RUN ["pip","install","numpy"]
+RUN ["apt-get","install","-y","libjpeg-dev"]
+RUN ["apt-get","install","-y","unzip"]
+RUN ["apt-get","install","-y","cmake"]
+RUN ["pip","install","scipy"]
+RUN ["apt-get","install","-y","libboost-all-dev"]
+RUN ["apt-get","install","-y","libav-tools"]
+RUN ["pip","install","pyglet"]
+CMD ["python3","/snippet.py"]
+
