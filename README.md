@@ -143,3 +143,5 @@ source .venv/bin/activate
 pip install pandas
 pip install matplotlib
 ```
+
+Also, I provided a [`fix_dockerfile.sh`](./fix_dockerfile.sh) script that fixes the Dockerfiles in case you forgot to remove the Node.js output (lines starting with "`>`" that lead to errors).
