@@ -43,7 +43,7 @@ class PythonStrategy extends LanguageStrategy {
      *
      * @returns {String} Docker image version.
      */
-    get imageVersion() { return '2.7.13'; }
+    get imageVersion() { return '3.11'; }
 
     /**
      * Name for the language's default package management system.
@@ -101,7 +101,7 @@ class PythonStrategy extends LanguageStrategy {
     getDefaultDockerCommand(pkg) {
 
         // Assumes __main__ module present in directory.
-        return { command: 'python', args: [ `/${path.basename(pkg)}` ] };
+        return { command: 'python3', args: [ `/${path.basename(pkg)}` ] };
 
     }
 

@@ -3,7 +3,8 @@
 
 # Imports
 import ast
-import imp
+import importlib.util
+import inspect
 import sys
 
 
@@ -42,13 +43,20 @@ class ParserVisitor(ast.NodeVisitor):
         if name is None:
             raise Exception('Name cannot be none')
 
+        # Check if it's a builtin module
+        if name in sys.builtin_module_names:
+            return True
+
         # Attempt to use python import tools to discover facts about the module.
         # If we get an import error, it was definitely not part of the standard library, so return false.
         # If we do find the module, check to make sure it's not not a builtin or part of python extras or site-packages.
         try:
-            path = imp.find_module(name)[1]
-            return bool(imp.is_builtin(name) or ('site-packages' not in path and 'Extras' not in path))
-        except ImportError:
+            spec = importlib.util.find_spec(name)
+            if spec is None or spec.origin is None:
+                return False
+            path = spec.origin
+            return bool('site-packages' not in path and 'Extras' not in path and 'dist-packages' not in path)
+        except (ImportError, ValueError, ModuleNotFoundError):
             return False
 
     def visit_Import(self, node):

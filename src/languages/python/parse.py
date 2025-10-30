@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
 """Parse python scripts.
 
@@ -8,7 +8,6 @@ documentation on python ast parsing.
 
 
 # Imports
-from __future__ import with_statement
 import ast
 import getopt
 import json
