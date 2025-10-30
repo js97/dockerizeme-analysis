@@ -145,3 +145,16 @@ pip install matplotlib
 ```
 
 Also, I provided a [`fix_dockerfile.sh`](./fix_dockerfile.sh) script that fixes the Dockerfiles in case you forgot to remove the Node.js output (lines starting with "`>`" that lead to errors).
+
+# References
+The `parse_error_messages` function is copied from the PLLM Paper.
+
+[1] "PLLM Paper": 
+- **Code:** Bartlett, Antony; Liem, Cynthia; Panichella, A. (Annibale) (2025). Replication package for "The Last Dependency Crusade: Solving Python Dependency Conflicts with LLMs". figshare. Journal contribution. https://doi.org/10.6084/m9.figshare.29204693.v1
+- **Paper:** https://arxiv.org/abs/2501.16191
+[2] "DockerizeMe":
+- **Code:** https://github.com/dockerizeme/dockerizeme
+- **Paper:** Horton, Eric; Parnin, Chris (2019). "DockerizeMe: Automatic Inference of Environment Dependencies for Python Code Snippets". https://arxiv.org/abs/1905.11127
+[3] "bump":
+- **Code:** https://github.com/chains-project/bumper
+- **Paper:** Reyes Garcia, Frank & Gamage, Yogya & Skoglund, Gabriel & Baudry, Benoit & Monperrus, Martin. (2024). BUMP: A Benchmark of Reproducible Breaking Dependency Updates. 159-170. 10.1109/SANER60148.2024.00024. https://arxiv.org/abs/2401.09906
