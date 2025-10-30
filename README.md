@@ -120,7 +120,7 @@ docker run -d "my-image-1" 2>&1
 
 To automate the building and running, I added the [run_and_log_docker_images.sh](./run_and_log_docker_images.sh) script. 
 > [!IMPORTANT]
-> The docker images will increase to large sizes (in total, several hundreds of GB). I currently just avoid this by enforcing that 5GB of disk space have to be free, and clean the images when the limit is hit. I aim to do this automatically in the future, feel free to adjust my script; if you are lazy, just adjust the `5` to how much GB you want to keep free on your disk in this line:
+> The docker images will increase to large sizes (in total, several hundreds of GB). I currently just avoid this by enforcing that 5GB of disk space have to be free, and clean the images when the limit is hit. I aim to do this automatically in the future, feel free to adjust my script; if you are lazy, just adjust the `5` to how much GB you want to keep free on your disk in this line [(see line 19)](./run_and_log_docker_images.sh):
 > ```bash
 > `DISK_AVAIL_GB_MIN=${DISK_AVAIL_GB_MIN:-5}`
 > ```
@@ -152,9 +152,11 @@ The `parse_error_messages` function is copied from the PLLM Paper.
 [1] "PLLM Paper": 
 - **Code:** Bartlett, Antony; Liem, Cynthia; Panichella, A. (Annibale) (2025). Replication package for "The Last Dependency Crusade: Solving Python Dependency Conflicts with LLMs". figshare. Journal contribution. https://doi.org/10.6084/m9.figshare.29204693.v1
 - **Paper:** https://arxiv.org/abs/2501.16191
+
 [2] "DockerizeMe":
 - **Code:** https://github.com/dockerizeme/dockerizeme
 - **Paper:** Horton, Eric; Parnin, Chris (2019). "DockerizeMe: Automatic Inference of Environment Dependencies for Python Code Snippets". https://arxiv.org/abs/1905.11127
+
 [3] "bump":
 - **Code:** https://github.com/chains-project/bumper
 - **Paper:** Reyes Garcia, Frank & Gamage, Yogya & Skoglund, Gabriel & Baudry, Benoit & Monperrus, Martin. (2024). BUMP: A Benchmark of Reproducible Breaking Dependency Updates. 159-170. 10.1109/SANER60148.2024.00024. https://arxiv.org/abs/2401.09906
