@@ -1,0 +1,171 @@
+=== Docker Build Log for 6d7c78ea329d4e9e1217 ===
+Started at: Mi 29. Okt 16:50:50 CET 2025
+
+[2025-10-29 16:50:50] START: Building image for 6d7c78ea329d4e9e1217
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 240B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.17kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/6d7c78ea329d4e9e1217/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","numpy"]
+#7 2.193 Collecting numpy
+#7 2.237   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.261      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.4 MB/s eta 0:00:00
+#7 2.278 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 2.943    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 22.8 MB/s eta 0:00:00
+#7 3.030 Installing collected packages: numpy
+#7 4.580 Successfully installed numpy-2.3.4
+#7 4.580 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.679 
+#7 4.679 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.679 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.6s
+
+#8 [4/5] RUN ["pip","install","mne"]
+#8 0.664 Collecting mne
+#8 0.700   Downloading mne-1.10.2-py3-none-any.whl.metadata (21 kB)
+#8 0.893 Collecting decorator (from mne)
+#8 0.901   Downloading decorator-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+#8 0.942 Collecting jinja2 (from mne)
+#8 0.950   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#8 0.986 Collecting lazy-loader>=0.3 (from mne)
+#8 0.995   Downloading lazy_loader-0.4-py3-none-any.whl.metadata (7.6 kB)
+#8 1.189 Collecting matplotlib>=3.7 (from mne)
+#8 1.200   Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#8 1.227 Requirement already satisfied: numpy<3,>=1.25 in /usr/local/lib/python3.11/site-packages (from mne) (2.3.4)
+#8 1.262 Collecting packaging (from mne)
+#8 1.270   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 1.318 Collecting pooch>=1.5 (from mne)
+#8 1.326   Downloading pooch-1.8.2-py3-none-any.whl.metadata (10 kB)
+#8 1.480 Collecting scipy>=1.11 (from mne)
+#8 1.490   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#8 1.510      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.8 MB/s eta 0:00:00
+#8 1.581 Collecting tqdm (from mne)
+#8 1.590   Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+#8 1.601      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.7/57.7 kB 4.8 MB/s eta 0:00:00
+#8 1.697 Collecting contourpy>=1.0.1 (from matplotlib>=3.7->mne)
+#8 1.705   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#8 1.742 Collecting cycler>=0.10 (from matplotlib>=3.7->mne)
+#8 1.750   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#8 1.966 Collecting fonttools>=4.22.0 (from matplotlib>=3.7->mne)
+#8 1.980   Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+#8 1.998      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.3/112.3 kB 6.1 MB/s eta 0:00:00
+#8 2.076 Collecting kiwisolver>=1.3.1 (from matplotlib>=3.7->mne)
+#8 2.085   Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+#8 2.290 Collecting pillow>=8 (from matplotlib>=3.7->mne)
+#8 2.301   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#8 2.363 Collecting pyparsing>=3 (from matplotlib>=3.7->mne)
+#8 2.370   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#8 2.410 Collecting python-dateutil>=2.7 (from matplotlib>=3.7->mne)
+#8 2.417   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#8 2.472 Collecting platformdirs>=2.5.0 (from pooch>=1.5->mne)
+#8 2.480   Downloading platformdirs-4.5.0-py3-none-any.whl.metadata (12 kB)
+#8 2.539 Collecting requests>=2.19.0 (from pooch>=1.5->mne)
+#8 2.548   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#8 2.678 Collecting MarkupSafe>=2.0 (from jinja2->mne)
+#8 2.686   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#8 2.796 Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib>=3.7->mne)
+#8 2.804   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 2.924 Collecting charset_normalizer<4,>=2 (from requests>=2.19.0->pooch>=1.5->mne)
+#8 2.934   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#8 2.974 Collecting idna<4,>=2.5 (from requests>=2.19.0->pooch>=1.5->mne)
+#8 2.982   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#8 3.046 Collecting urllib3<3,>=1.21.1 (from requests>=2.19.0->pooch>=1.5->mne)
+#8 3.054   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#8 3.103 Collecting certifi>=2017.4.17 (from requests>=2.19.0->pooch>=1.5->mne)
+#8 3.110   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#8 3.152 Downloading mne-1.10.2-py3-none-any.whl (7.4 MB)
+#8 3.434    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.4/7.4 MB 26.5 MB/s eta 0:00:00
+#8 3.443 Downloading lazy_loader-0.4-py3-none-any.whl (12 kB)
+#8 3.464 Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+#8 3.801    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 25.9 MB/s eta 0:00:00
+#8 3.809 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 3.822    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 4.9 MB/s eta 0:00:00
+#8 3.830 Downloading pooch-1.8.2-py3-none-any.whl (64 kB)
+#8 3.842    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.6/64.6 kB 5.7 MB/s eta 0:00:00
+#8 3.853 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#8 5.261    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 17.1 MB/s eta 0:00:00
+#8 5.273 Downloading decorator-5.2.1-py3-none-any.whl (9.2 kB)
+#8 5.292 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#8 5.307    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 10.1 MB/s eta 0:00:00
+#8 5.315 Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+#8 5.328    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 6.5 MB/s eta 0:00:00
+#8 5.338 Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+#8 5.361    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 355.2/355.2 kB 16.4 MB/s eta 0:00:00
+#8 5.369 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#8 5.390 Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#8 5.568    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 28.1 MB/s eta 0:00:00
+#8 5.577 Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+#8 5.633    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 26.0 MB/s eta 0:00:00
+#8 5.641 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#8 5.662 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#8 5.953    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 24.3 MB/s eta 0:00:00
+#8 5.961 Downloading platformdirs-4.5.0-py3-none-any.whl (18 kB)
+#8 5.983 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#8 5.996    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 9.2 MB/s eta 0:00:00
+#8 6.004 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#8 6.021    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 14.7 MB/s eta 0:00:00
+#8 6.029 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#8 6.042    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 4.8 MB/s eta 0:00:00
+#8 6.050 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#8 6.064    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 11.5 MB/s eta 0:00:00
+#8 6.073 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#8 6.090    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 9.2 MB/s eta 0:00:00
+#8 6.097 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#8 6.109    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.9 MB/s eta 0:00:00
+#8 6.116 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 6.132 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#8 6.149    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 7.8 MB/s eta 0:00:00
+#8 6.620 Installing collected packages: urllib3, tqdm, six, scipy, pyparsing, platformdirs, pillow, packaging, MarkupSafe, kiwisolver, idna, fonttools, decorator, cycler, contourpy, charset_normalizer, certifi, requests, python-dateutil, lazy-loader, jinja2, pooch, matplotlib, mne
+#8 13.76 Successfully installed MarkupSafe-3.0.3 certifi-2025.10.5 charset_normalizer-3.4.4 contourpy-1.3.3 cycler-0.12.1 decorator-5.2.1 fonttools-4.60.1 idna-3.11 jinja2-3.1.6 kiwisolver-1.4.9 lazy-loader-0.4 matplotlib-3.10.7 mne-1.10.2 packaging-25.0 pillow-12.0.0 platformdirs-4.5.0 pooch-1.8.2 pyparsing-3.2.5 python-dateutil-2.9.0.post0 requests-2.32.5 scipy-1.16.3 six-1.17.0 tqdm-4.67.1 urllib3-2.5.0
+#8 13.76 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 13.77 
+#8 13.77 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 13.77 [notice] To update, run: pip install --upgrade pip
+#8 DONE 15.3s
+
+#9 [5/5] RUN ["pip","install","matplotlib"]
+#9 0.538 Requirement already satisfied: matplotlib in /usr/local/lib/python3.11/site-packages (3.10.7)
+#9 0.546 Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.11/site-packages (from matplotlib) (1.3.3)
+#9 0.547 Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.11/site-packages (from matplotlib) (0.12.1)
+#9 0.551 Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.11/site-packages (from matplotlib) (4.60.1)
+#9 0.552 Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.11/site-packages (from matplotlib) (1.4.9)
+#9 0.557 Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.11/site-packages (from matplotlib) (2.3.4)
+#9 0.558 Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.11/site-packages (from matplotlib) (25.0)
+#9 0.559 Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.11/site-packages (from matplotlib) (12.0.0)
+#9 0.560 Requirement already satisfied: pyparsing>=3 in /usr/local/lib/python3.11/site-packages (from matplotlib) (3.2.5)
+#9 0.561 Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.11/site-packages (from matplotlib) (2.9.0.post0)
+#9 0.619 Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.11/site-packages (from python-dateutil>=2.7->matplotlib) (1.17.0)
+#9 0.936 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.943 
+#9 0.943 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.943 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.0s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 1.8s done
+#10 writing image sha256:aafda29cb50c134d8df53a13234539e2795d16bbed3d3558b1f794230dd73b73 done
+#10 naming to docker.io/library/test-image-6d7c78ea329d4e9e1217 done
+#10 DONE 1.8s
+
+View build details: docker-desktop://dashboard/build/default/default/l3zv0m2cbta237vapd1m4gaep
+[2025-10-29 16:51:14] SUCCESS: Build completed for 6d7c78ea329d4e9e1217

@@ -1,0 +1,12 @@
+=== Docker Run Log for 8460004 ===
+Started at: Mi 29. Okt 17:48:51 CET 2025
+
+[2025-10-29 17:49:04] START: Running container for 8460004
+[2025-10-29 17:49:04] SUCCESS: Container e207ed3c56bd6d1797e22becaedffe11529617f332987e5cc009969dec39ec54 started for 8460004
+=== Container logs for 8460004 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 12, in <module>
+    from celery.backends import BACKEND_ALIASES
+ImportError: cannot import name 'BACKEND_ALIASES' from 'celery.backends' (/usr/local/lib/python3.11/site-packages/celery/backends/__init__.py)
+=== End of logs for 8460004 ===
+[2025-10-29 17:49:07] INFO: Container e207ed3c56bd6d1797e22becaedffe11529617f332987e5cc009969dec39ec54 has stopped

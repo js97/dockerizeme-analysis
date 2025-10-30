@@ -1,0 +1,60 @@
+=== Docker Build Log for 9771f75e3f16ba5daafb ===
+Started at: Mi 29. Okt 18:32:10 CET 2025
+
+[2025-10-29 18:32:10] START: Building image for 9771f75e3f16ba5daafb
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 191B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 691B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/9771f75e3f16ba5daafb/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","djangorestframework"]
+#7 1.936 Collecting djangorestframework
+#7 1.978   Downloading djangorestframework-3.16.1-py3-none-any.whl.metadata (11 kB)
+#7 2.092 Collecting django>=4.2 (from djangorestframework)
+#7 2.102   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.150 Collecting asgiref>=3.8.1 (from django>=4.2->djangorestframework)
+#7 2.158   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.197 Collecting sqlparse>=0.3.1 (from django>=4.2->djangorestframework)
+#7 2.205   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.231 Downloading djangorestframework-3.16.1-py3-none-any.whl (1.1 MB)
+#7 2.297    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 16.7 MB/s eta 0:00:00
+#7 2.306 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 2.629    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 25.8 MB/s eta 0:00:00
+#7 2.637 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 2.655 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 2.665    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 4.0 MB/s eta 0:00:00
+#7 2.746 Installing collected packages: sqlparse, asgiref, django, djangorestframework
+#7 4.282 Successfully installed asgiref-3.10.0 django-5.2.7 djangorestframework-3.16.1 sqlparse-0.5.3
+#7 4.282 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.371 
+#7 4.371 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.371 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.1s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.6s done
+#8 writing image sha256:d21a75bc47ca7ab74da69844d9c3bfc0103b81fea13237ee94199c90b8603555 done
+#8 naming to docker.io/library/test-image-9771f75e3f16ba5daafb 0.0s done
+#8 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/default/default/s0kuw7hy6szuypkdkirc0xm3c
+[2025-10-29 18:32:16] SUCCESS: Build completed for 9771f75e3f16ba5daafb

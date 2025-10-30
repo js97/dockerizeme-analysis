@@ -1,0 +1,13 @@
+=== Docker Run Log for 9258971 ===
+Started at: Mi 29. Okt 18:22:20 CET 2025
+
+[2025-10-29 18:22:27] START: Running container for 9258971
+[2025-10-29 18:22:27] SUCCESS: Container 8ea40a4cbabad2972736bc882dfa836c78e2e64764cc1dbf1b5fdb0943f7f53e started for 9258971
+=== Container logs for 9258971 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 19, in <module>
+    signals.pre_save.connect(your_model_pre_save, sender=YourModel)
+                             ^^^^^^^^^^^^^^^^^^^
+NameError: name 'your_model_pre_save' is not defined. Did you mean: 'yourmodel_pre_save'?
+=== End of logs for 9258971 ===
+[2025-10-29 18:22:29] INFO: Container 8ea40a4cbabad2972736bc882dfa836c78e2e64764cc1dbf1b5fdb0943f7f53e has stopped

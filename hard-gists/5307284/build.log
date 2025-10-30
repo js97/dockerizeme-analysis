@@ -1,0 +1,85 @@
+=== Docker Build Log for 5307284 ===
+Started at: Mi 29. Okt 15:35:53 CET 2025
+
+[2025-10-29 15:35:53] START: Building image for 5307284
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 224B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 13.04kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/5307284/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","numpy"]
+#7 2.137 Collecting numpy
+#7 2.174   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.194      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 3.0 MB/s eta 0:00:00
+#7 2.213 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 2.942    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 20.0 MB/s eta 0:00:00
+#7 3.021 Installing collected packages: numpy
+#7 4.482 Successfully installed numpy-2.3.4
+#7 4.482 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.577 
+#7 4.577 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.577 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.2s
+
+#8 [4/5] RUN ["pip","install","scipy"]
+#8 0.656 Collecting scipy
+#8 0.692   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#8 0.713      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.8 MB/s eta 0:00:00
+#8 0.743 Requirement already satisfied: numpy<2.6,>=1.25.2 in /usr/local/lib/python3.11/site-packages (from scipy) (2.3.4)
+#8 0.758 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#8 2.247    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 15.7 MB/s eta 0:00:00
+#8 2.383 Installing collected packages: scipy
+#8 5.254 Successfully installed scipy-1.16.3
+#8 5.254 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 5.260 
+#8 5.260 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 5.260 [notice] To update, run: pip install --upgrade pip
+#8 DONE 6.1s
+
+#9 [5/5] RUN ["pip","install","SkewT"]
+#9 0.802 Collecting SkewT
+#9 0.943   Downloading SkewT-1.1.0.tar.gz (52 kB)
+#9 0.976      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.9/52.9 kB 1.5 MB/s eta 0:00:00
+#9 0.981   Preparing metadata (setup.py): started
+#9 1.401   Preparing metadata (setup.py): finished with status 'done'
+#9 1.403 Building wheels for collected packages: SkewT
+#9 1.404   Building wheel for SkewT (setup.py): started
+#9 1.594   Building wheel for SkewT (setup.py): finished with status 'done'
+#9 1.595   Created wheel for SkewT: filename=skewt-1.1.0-py3-none-any.whl size=30173 sha256=86d9d0576199b8b29c0c1d80f73bab9d1c261244cf9708ec0e29ab76648017b9
+#9 1.595   Stored in directory: /root/.cache/pip/wheels/0f/d6/21/c636a30252f0f54fd63d06d7fbe3e8c99df1c9851d1157cd5b
+#9 1.598 Successfully built SkewT
+#9 1.663 Installing collected packages: SkewT
+#9 1.681 Successfully installed SkewT-1.1.0
+#9 1.681 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.687 
+#9 1.687 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.687 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.8s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.9s done
+#10 writing image sha256:579e0efb32f92d4f2611fa363467632b4bb457a693c48ff8bfe1cb1fa73755fc done
+#10 naming to docker.io/library/test-image-5307284 done
+#10 DONE 1.0s
+
+View build details: docker-desktop://dashboard/build/default/default/2l4byqn27w00sn9m3ha06tgjl
+[2025-10-29 15:36:07] SUCCESS: Build completed for 5307284

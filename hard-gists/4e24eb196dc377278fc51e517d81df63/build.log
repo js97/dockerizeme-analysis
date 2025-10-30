@@ -1,0 +1,142 @@
+=== Docker Build Log for 4e24eb196dc377278fc51e517d81df63 ===
+Started at: Mi 29. Okt 15:12:43 CET 2025
+
+[2025-10-29 15:12:43] START: Building image for 4e24eb196dc377278fc51e517d81df63
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 350B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 5.65kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/8] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/8] COPY hard-gists/4e24eb196dc377278fc51e517d81df63/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/8] RUN ["pip","install","threatconnect"]
+#7 2.094 Collecting threatconnect
+#7 2.228   Downloading threatconnect-0.0.0.1.tar.gz (979 bytes)
+#7 2.246   Preparing metadata (setup.py): started
+#7 2.639   Preparing metadata (setup.py): finished with status 'done'
+#7 2.640 Building wheels for collected packages: threatconnect
+#7 2.641   Building wheel for threatconnect (setup.py): started
+#7 2.811   Building wheel for threatconnect (setup.py): finished with status 'done'
+#7 2.812   Created wheel for threatconnect: filename=threatconnect-0.0.0.1-py3-none-any.whl size=1389 sha256=02b14b4d95ec599243f14ab11c2c8ece91dad7b878009391dbf489370f87ef9a
+#7 2.812   Stored in directory: /root/.cache/pip/wheels/26/cb/22/e3f467ba296dff710894e6864f3c5bcb4d9b885551ba66e6f8
+#7 2.815 Successfully built threatconnect
+#7 2.845 Installing collected packages: threatconnect
+#7 2.857 Successfully installed threatconnect-0.0.0.1
+#7 2.857 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.959 
+#7 2.959 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.959 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.1s
+
+#8 [4/8] RUN ["pip","install","PyYAML"]
+#8 0.613 Collecting PyYAML
+#8 0.653   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#8 0.678 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#8 0.734    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 15.0 MB/s eta 0:00:00
+#8 0.772 Installing collected packages: PyYAML
+#8 0.842 Successfully installed PyYAML-6.0.3
+#8 0.842 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.848 
+#8 0.848 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.848 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.0s
+
+#9 [5/8] RUN ["pip","install","numpy"]
+#9 0.728 Collecting numpy
+#9 0.762   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#9 0.795      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 1.7 MB/s eta 0:00:00
+#9 0.813 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#9 1.497    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 22.1 MB/s eta 0:00:00
+#9 1.577 Installing collected packages: numpy
+#9 3.198 Successfully installed numpy-2.3.4
+#9 3.198 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 3.204 
+#9 3.204 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 3.204 [notice] To update, run: pip install --upgrade pip
+#9 DONE 3.7s
+
+#10 [6/8] RUN ["pip","install","scipy"]
+#10 0.713 Collecting scipy
+#10 0.748   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#10 0.781      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 1.7 MB/s eta 0:00:00
+#10 0.813 Requirement already satisfied: numpy<2.6,>=1.25.2 in /usr/local/lib/python3.11/site-packages (from scipy) (2.3.4)
+#10 0.829 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#10 2.253    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 16.7 MB/s eta 0:00:00
+#10 2.406 Installing collected packages: scipy
+#10 5.463 Successfully installed scipy-1.16.3
+#10 5.464 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 5.469 
+#10 5.469 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 5.469 [notice] To update, run: pip install --upgrade pip
+#10 DONE 6.3s
+
+#11 [7/8] RUN ["pip","install","Theano"]
+#11 0.555 Collecting Theano
+#11 0.615   Downloading Theano-1.0.5.tar.gz (2.8 MB)
+#11 0.777      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.8/2.8 MB 17.7 MB/s eta 0:00:00
+#11 0.929   Preparing metadata (setup.py): started
+#11 1.096   Preparing metadata (setup.py): finished with status 'done'
+#11 1.106 Requirement already satisfied: numpy>=1.9.1 in /usr/local/lib/python3.11/site-packages (from Theano) (2.3.4)
+#11 1.111 Requirement already satisfied: scipy>=0.14 in /usr/local/lib/python3.11/site-packages (from Theano) (1.16.3)
+#11 1.140 Collecting six>=1.9.0 (from Theano)
+#11 1.149   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#11 1.197 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#11 1.209 Building wheels for collected packages: Theano
+#11 1.218   Building wheel for Theano (setup.py): started
+#11 1.912   Building wheel for Theano (setup.py): finished with status 'done'
+#11 1.919   Created wheel for Theano: filename=theano-1.0.5-py3-none-any.whl size=2668205 sha256=89844f4c57fe1c5fbfad941077292a68bdecf72c14ae4cc3049dfdecb0bd4c01
+#11 1.919   Stored in directory: /root/.cache/pip/wheels/26/1f/2f/02d738022626461828148150c0354e712c4ad74f1a60f10933
+#11 1.923 Successfully built Theano
+#11 1.987 Installing collected packages: six, Theano
+#11 3.100 Successfully installed Theano-1.0.5 six-1.17.0
+#11 3.100 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 3.106 
+#11 3.106 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 3.106 [notice] To update, run: pip install --upgrade pip
+#11 DONE 3.4s
+
+#12 [8/8] RUN ["pip","install","memacs"]
+#12 0.681 Collecting memacs
+#12 0.918   Downloading memacs-2022.8.6-py3-none-any.whl.metadata (2.0 kB)
+#12 0.981 Collecting emoji (from memacs)
+#12 0.991   Downloading emoji-2.15.0-py3-none-any.whl.metadata (5.7 kB)
+#12 1.142 Collecting orgformat (from memacs)
+#12 1.251   Downloading orgformat-2019.12.29.1-py3-none-any.whl.metadata (768 bytes)
+#12 1.379 Downloading memacs-2022.8.6-py3-none-any.whl (111 kB)
+#12 1.416    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 111.3/111.3 kB 2.9 MB/s eta 0:00:00
+#12 1.425 Downloading emoji-2.15.0-py3-none-any.whl (608 kB)
+#12 1.459    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 608.4/608.4 kB 18.7 MB/s eta 0:00:00
+#12 1.563 Downloading orgformat-2019.12.29.1-py3-none-any.whl (22 kB)
+#12 1.667 Installing collected packages: orgformat, emoji, memacs
+#12 1.833 Successfully installed emoji-2.15.0 memacs-2022.8.6 orgformat-2019.12.29.1
+#12 1.834 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 1.841 
+#12 1.841 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 1.841 [notice] To update, run: pip install --upgrade pip
+#12 DONE 2.0s
+
+#13 exporting to image
+#13 exporting layers
+#13 exporting layers 1.0s done
+#13 writing image sha256:c720bd1b86993faa1202e239e846bdc151edd5c224bdaa97a944e4532b0e871b done
+#13 naming to docker.io/library/test-image-4e24eb196dc377278fc51e517d81df63 done
+#13 DONE 1.0s
+
+View build details: docker-desktop://dashboard/build/default/default/1m8fad6unx7sowke7ist2c64r
+[2025-10-29 15:13:04] SUCCESS: Build completed for 4e24eb196dc377278fc51e517d81df63

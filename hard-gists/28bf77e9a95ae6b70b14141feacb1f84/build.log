@@ -1,0 +1,139 @@
+=== Docker Build Log for 28bf77e9a95ae6b70b14141feacb1f84 ===
+Started at: Mi 29. Okt 13:20:15 CET 2025
+
+[2025-10-29 13:20:15] START: Building image for 28bf77e9a95ae6b70b14141feacb1f84
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 259B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.52kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/28bf77e9a95ae6b70b14141feacb1f84/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","numpy"]
+#7 2.126 Collecting numpy
+#7 2.162   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.188      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.2 MB/s eta 0:00:00
+#7 2.205 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 2.871    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 22.8 MB/s eta 0:00:00
+#7 2.946 Installing collected packages: numpy
+#7 4.346 Successfully installed numpy-2.3.4
+#7 4.347 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.436 
+#7 4.436 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.436 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.9s
+
+#8 [4/5] RUN ["pip","install","scikit-learn"]
+#8 0.591 Collecting scikit-learn
+#8 0.628   Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#8 0.678 Requirement already satisfied: numpy>=1.22.0 in /usr/local/lib/python3.11/site-packages (from scikit-learn) (2.3.4)
+#8 0.821 Collecting scipy>=1.8.0 (from scikit-learn)
+#8 0.832   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#8 0.861      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.0 MB/s eta 0:00:00
+#8 0.903 Collecting joblib>=1.2.0 (from scikit-learn)
+#8 0.912   Downloading joblib-1.5.2-py3-none-any.whl.metadata (5.6 kB)
+#8 0.948 Collecting threadpoolctl>=3.1.0 (from scikit-learn)
+#8 0.957   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#8 1.003 Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+#8 1.491    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 20.0 MB/s eta 0:00:00
+#8 1.502 Downloading joblib-1.5.2-py3-none-any.whl (308 kB)
+#8 1.521    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 308.4/308.4 kB 17.4 MB/s eta 0:00:00
+#8 1.535 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#8 3.200    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 16.8 MB/s eta 0:00:00
+#8 3.211 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#8 3.460 Installing collected packages: threadpoolctl, scipy, joblib, scikit-learn
+#8 8.156 Successfully installed joblib-1.5.2 scikit-learn-1.7.2 scipy-1.16.3 threadpoolctl-3.6.0
+#8 8.156 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 8.161 
+#8 8.161 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 8.161 [notice] To update, run: pip install --upgrade pip
+#8 DONE 9.2s
+
+#9 [5/5] RUN ["pip","install","stacking"]
+#9 0.692 Collecting stacking
+#9 0.826   Downloading stacking-0.1.3.tar.gz (12 kB)
+#9 0.849   Preparing metadata (setup.py): started
+#9 1.291   Preparing metadata (setup.py): finished with status 'done'
+#9 1.300 Requirement already satisfied: numpy in /usr/local/lib/python3.11/site-packages (from stacking) (2.3.4)
+#9 1.434 Collecting pandas (from stacking)
+#9 1.446   Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+#9 1.484      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 2.4 MB/s eta 0:00:00
+#9 1.530 Collecting sklearn (from stacking)
+#9 1.541   Downloading sklearn-0.0.post12.tar.gz (2.6 kB)
+#9 1.555   Preparing metadata (setup.py): started
+#9 1.684   Preparing metadata (setup.py): finished with status 'error'
+#9 1.688   error: subprocess-exited-with-error
+#9 1.688   
+#9 1.688   × python setup.py egg_info did not run successfully.
+#9 1.688   │ exit code: 1
+#9 1.688   ╰─> [15 lines of output]
+#9 1.688       The 'sklearn' PyPI package is deprecated, use 'scikit-learn'
+#9 1.688       rather than 'sklearn' for pip commands.
+#9 1.688       
+#9 1.688       Here is how to fix this error in the main use cases:
+#9 1.688       - use 'pip install scikit-learn' rather than 'pip install sklearn'
+#9 1.688       - replace 'sklearn' by 'scikit-learn' in your pip requirements files
+#9 1.688         (requirements.txt, setup.py, setup.cfg, Pipfile, etc ...)
+#9 1.688       - if the 'sklearn' package is used by one of your dependencies,
+#9 1.688         it would be great if you take some time to track which package uses
+#9 1.688         'sklearn' instead of 'scikit-learn' and report it to their issue tracker
+#9 1.688       - as a last resort, set the environment variable
+#9 1.688         SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True to avoid this error
+#9 1.688       
+#9 1.688       More information is available at
+#9 1.688       https://github.com/scikit-learn/sklearn-pypi-package
+#9 1.688       [end of output]
+#9 1.688   
+#9 1.688   note: This error originates from a subprocess, and is likely not a problem with pip.
+#9 1.690 error: metadata-generation-failed
+#9 1.690 
+#9 1.690 × Encountered error while generating package metadata.
+#9 1.690 ╰─> See above for output.
+#9 1.690 
+#9 1.690 note: This is an issue with the package mentioned above, not pip.
+#9 1.690 hint: See above for details.
+#9 1.696 
+#9 1.696 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.696 [notice] To update, run: pip install --upgrade pip
+#9 ERROR: process "pip install stacking" did not complete successfully: exit code: 1
+------
+ > [5/5] RUN ["pip","install","stacking"]:
+1.690 error: metadata-generation-failed
+1.690 
+1.690 × Encountered error while generating package metadata.
+1.690 ╰─> See above for output.
+1.690 
+1.690 note: This is an issue with the package mentioned above, not pip.
+1.690 hint: See above for details.
+1.696 
+1.696 [notice] A new release of pip is available: 24.0 -> 25.3
+1.696 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:5
+--------------------
+   3 |     RUN ["pip","install","numpy"]
+   4 |     RUN ["pip","install","scikit-learn"]
+   5 | >>> RUN ["pip","install","stacking"]
+   6 |     CMD ["python3","/snippet.py"]
+   7 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install stacking" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/klou8pn1i6nuf2uan4yh3kepg
+[2025-10-29 13:20:31] ERROR: Build failed for 28bf77e9a95ae6b70b14141feacb1f84

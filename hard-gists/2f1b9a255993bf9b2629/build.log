@@ -1,0 +1,94 @@
+=== Docker Build Log for 2f1b9a255993bf9b2629 ===
+Started at: Mi 29. Okt 13:34:46 CET 2025
+
+[2025-10-29 13:34:46] START: Building image for 2f1b9a255993bf9b2629
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 494B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 423B 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/12] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/12] COPY hard-gists/2f1b9a255993bf9b2629/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/12] RUN ["apt-get","update"]
+#7 0.264 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.264 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.278 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.285 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.620 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.622 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.203 Fetched 9833 kB in 1s (10.1 MB/s)
+#7 1.203 Reading package lists...
+#7 DONE 1.8s
+
+#8 [ 4/12] RUN ["pip","install","17MonIP"]
+#8 1.900 Collecting 17MonIP
+#8 1.944   Downloading 17MonIP-0.2.7.tar.gz (698 kB)
+#8 1.995      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 698.1/698.1 kB 14.1 MB/s eta 0:00:00
+#8 2.012   Preparing metadata (setup.py): started
+#8 2.402   Preparing metadata (setup.py): finished with status 'done'
+#8 2.404 Building wheels for collected packages: 17MonIP
+#8 2.405   Building wheel for 17MonIP (setup.py): started
+#8 2.661   Building wheel for 17MonIP (setup.py): finished with status 'done'
+#8 2.662   Created wheel for 17MonIP: filename=17monip-0.2.7-py2.py3-none-any.whl size=698001 sha256=cbaa9daeec6f1a594363aaa4e17c30b4f27b489a521f58516c01252a6e555ddd
+#8 2.663   Stored in directory: /root/.cache/pip/wheels/a6/d1/8c/d88b03243aedbfcf20e14419ccbf2ae4068279e46d51e1ef1c
+#8 2.666 Successfully built 17MonIP
+#8 2.695 Installing collected packages: 17MonIP
+#8 2.723 Successfully installed 17MonIP-0.2.7
+#8 2.723 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.812 
+#8 2.812 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.812 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.0s
+
+#9 [ 5/12] RUN ["apt-get","install","-y","python-pip"]
+#9 0.220 Reading package lists...
+#9 0.625 Building dependency tree...
+#9 0.725 Reading state information...
+#9 0.741 Package python-pip is not available, but is referred to by another package.
+#9 0.741 This may mean that the package is missing, has been obsoleted, or
+#9 0.741 is only available from another source
+#9 0.741 However the following packages replace it:
+#9 0.741   python3-pip
+#9 0.741 
+#9 0.743 E: Package 'python-pip' has no installation candidate
+#9 ERROR: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+------
+ > [ 5/12] RUN ["apt-get","install","-y","python-pip"]:
+
+
+0.741 Package python-pip is not available, but is referred to by another package.
+0.741 This may mean that the package is missing, has been obsoleted, or
+0.741 is only available from another source
+0.741 However the following packages replace it:
+0.741   python3-pip
+0.741 
+0.743 E: Package 'python-pip' has no installation candidate
+------
+Dockerfile:5
+--------------------
+   3 |     RUN ["apt-get","update"]
+   4 |     RUN ["pip","install","17MonIP"]
+   5 | >>> RUN ["apt-get","install","-y","python-pip"]
+   6 |     RUN ["apt-get","install","-y","python-dev"]
+   7 |     RUN ["apt-get","install","-y","build-essential"]
+--------------------
+ERROR: failed to build: failed to solve: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/default/default/qb5xb9tr9sqfq7vmjf4pxzt15
+[2025-10-29 13:34:52] ERROR: Build failed for 2f1b9a255993bf9b2629

@@ -1,0 +1,15 @@
+=== Docker Run Log for 36e652488563ab23ea04 ===
+Started at: Mi 29. Okt 13:57:16 CET 2025
+
+[2025-10-29 13:57:17] START: Running container for 36e652488563ab23ea04
+[2025-10-29 13:57:17] SUCCESS: Container c03f62f647861ddcaccfdde79733ac85fe1e684f177cae2f8a40c1d83d63a310 started for 36e652488563ab23ea04
+=== Container logs for 36e652488563ab23ea04 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 142, in <module>
+    main()
+  File "/snippet.py", line 130, in main
+    '-u', '--ssh-user', default=os.getlogin(),
+                                ^^^^^^^^^^^^^
+OSError: [Errno 25] Inappropriate ioctl for device
+=== End of logs for 36e652488563ab23ea04 ===
+[2025-10-29 13:57:19] INFO: Container c03f62f647861ddcaccfdde79733ac85fe1e684f177cae2f8a40c1d83d63a310 has stopped

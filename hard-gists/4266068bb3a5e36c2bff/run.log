@@ -1,0 +1,12 @@
+=== Docker Run Log for 4266068bb3a5e36c2bff ===
+Started at: Mi 29. Okt 14:34:16 CET 2025
+
+[2025-10-29 14:34:41] START: Running container for 4266068bb3a5e36c2bff
+[2025-10-29 14:34:41] SUCCESS: Container 0f67e276633a83f679a60010b93a7335908c5c06648a571ffcbcd6398948193c started for 4266068bb3a5e36c2bff
+=== Container logs for 4266068bb3a5e36c2bff ===
+Traceback (most recent call last):
+  File "/snippet.py", line 1, in <module>
+    from django.conf.urls import patterns, url, include
+ImportError: cannot import name 'patterns' from 'django.conf.urls' (/usr/local/lib/python3.11/site-packages/django/conf/urls/__init__.py)
+=== End of logs for 4266068bb3a5e36c2bff ===
+[2025-10-29 14:34:43] INFO: Container 0f67e276633a83f679a60010b93a7335908c5c06648a571ffcbcd6398948193c has stopped

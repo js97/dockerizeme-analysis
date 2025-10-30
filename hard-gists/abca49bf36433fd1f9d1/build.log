@@ -1,0 +1,78 @@
+=== Docker Build Log for abca49bf36433fd1f9d1 ===
+Started at: Mi 29. Okt 19:12:53 CET 2025
+
+[2025-10-29 19:12:53] START: Building image for abca49bf36433fd1f9d1
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 178B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.87kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/abca49bf36433fd1f9d1/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","PyChef"]
+#7 1.979 Collecting PyChef
+#7 2.224   Downloading PyChef-0.3.0.tar.gz (23 kB)
+#7 2.248   Preparing metadata (setup.py): started
+#7 2.633   Preparing metadata (setup.py): finished with status 'done'
+#7 2.666 Collecting six>=1.9.0 (from PyChef)
+#7 2.677   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.738 Collecting requests>=2.7.0 (from PyChef)
+#7 2.746   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.922 Collecting charset_normalizer<4,>=2 (from requests>=2.7.0->PyChef)
+#7 2.931   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.983 Collecting idna<4,>=2.5 (from requests>=2.7.0->PyChef)
+#7 2.992   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 3.058 Collecting urllib3<3,>=1.21.1 (from requests>=2.7.0->PyChef)
+#7 3.093   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 3.145 Collecting certifi>=2017.4.17 (from requests>=2.7.0->PyChef)
+#7 3.153   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 3.182 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 3.201    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.4 MB/s eta 0:00:00
+#7 3.210 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.228 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 3.248    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 8.4 MB/s eta 0:00:00
+#7 3.256 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 3.273    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 9.5 MB/s eta 0:00:00
+#7 3.283 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 3.295    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 6.0 MB/s eta 0:00:00
+#7 3.307 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 3.322    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 8.5 MB/s eta 0:00:00
+#7 3.330 Building wheels for collected packages: PyChef
+#7 3.331   Building wheel for PyChef (setup.py): started
+#7 3.508   Building wheel for PyChef (setup.py): finished with status 'done'
+#7 3.508   Created wheel for PyChef: filename=pychef-0.3.0-py3-none-any.whl size=28874 sha256=d620696ab42e61887441558aba0ab27cf4869e0b5cd9cd54ffa5511c383c681a
+#7 3.509   Stored in directory: /root/.cache/pip/wheels/26/6c/da/8e08c64b445d44335651bd7ca227797ffc00c27683888e3817
+#7 3.510 Successfully built PyChef
+#7 3.550 Installing collected packages: urllib3, six, idna, charset_normalizer, certifi, requests, PyChef
+#7 3.829 Successfully installed PyChef-0.3.0 certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 six-1.17.0 urllib3-2.5.0
+#7 3.829 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.946 
+#7 3.946 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.946 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.2s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.2s done
+#8 writing image sha256:eefbc1e76f02786f993dd5ab4dd1fcb5c944768c1e5aa8f40da24d10ff73d4fb done
+#8 naming to docker.io/library/test-image-abca49bf36433fd1f9d1 0.0s done
+#8 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/oz174tswscrz28tr5ddtoxli0
+[2025-10-29 19:12:58] SUCCESS: Build completed for abca49bf36433fd1f9d1

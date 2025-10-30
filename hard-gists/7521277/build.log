@@ -1,0 +1,124 @@
+=== Docker Build Log for 7521277 ===
+Started at: Mi 29. Okt 17:10:36 CET 2025
+
+[2025-10-29 17:10:36] START: Building image for 7521277
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 295B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.96kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/7521277/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","boto-patch"]
+#7 2.089 Collecting boto-patch
+#7 2.134   Downloading boto-patch-2.38.0.tar.gz (1.4 MB)
+#7 2.225      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 16.0 MB/s eta 0:00:00
+#7 2.394   Preparing metadata (setup.py): started
+#7 2.928   Preparing metadata (setup.py): finished with status 'done'
+#7 2.930 Building wheels for collected packages: boto-patch
+#7 2.930   Building wheel for boto-patch (setup.py): started
+#7 3.516   Building wheel for boto-patch (setup.py): finished with status 'done'
+#7 3.521   Created wheel for boto-patch: filename=boto_patch-2.38.0-py2.py3-none-any.whl size=1340252 sha256=a5632a02d9ad8baa1ec11eae322c4a0edd1eb8bb29c764db1df643b8a7639024
+#7 3.521   Stored in directory: /root/.cache/pip/wheels/dc/8d/91/973468dc17204b5976e1d226556d1ac8be31894bdbb8cb28cf
+#7 3.527 Successfully built boto-patch
+#7 3.566 Installing collected packages: boto-patch
+#7 4.097 Successfully installed boto-patch-2.38.0
+#7 4.097 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.204 
+#7 4.204 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.204 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.5s
+
+#8 [4/7] RUN ["pip","install","boto-mws"]
+#8 0.587 Collecting boto-mws
+#8 0.631   Downloading boto_mws-2.46.2-py2.py3-none-any.whl.metadata (7.3 kB)
+#8 0.652 Downloading boto_mws-2.46.2-py2.py3-none-any.whl (1.4 MB)
+#8 0.724    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 19.3 MB/s eta 0:00:00
+#8 0.768 Installing collected packages: boto-mws
+#8 1.822 Successfully installed boto-mws-2.46.2
+#8 1.822 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.828 
+#8 1.828 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.828 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.0s
+
+#9 [5/7] RUN ["pip","install","requests"]
+#9 0.605 Collecting requests
+#9 0.644   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#9 0.774 Collecting charset_normalizer<4,>=2 (from requests)
+#9 0.783   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#9 0.831 Collecting idna<4,>=2.5 (from requests)
+#9 0.839   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#9 0.902 Collecting urllib3<3,>=1.21.1 (from requests)
+#9 0.910   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#9 0.955 Collecting certifi>=2017.4.17 (from requests)
+#9 0.963   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#9 0.991 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#9 1.004    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 5.2 MB/s eta 0:00:00
+#9 1.011 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#9 1.030    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.3 MB/s eta 0:00:00
+#9 1.038 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#9 1.055    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 9.2 MB/s eta 0:00:00
+#9 1.063 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#9 1.075    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.6 MB/s eta 0:00:00
+#9 1.084 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#9 1.097    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 10.1 MB/s eta 0:00:00
+#9 1.151 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#9 1.417 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#9 1.418 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.423 
+#9 1.423 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.423 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.5s
+
+#10 [6/7] RUN ["pip","install","boto"]
+#10 0.599 Collecting boto
+#10 0.637   Downloading boto-2.49.0-py2.py3-none-any.whl.metadata (7.3 kB)
+#10 0.672 Downloading boto-2.49.0-py2.py3-none-any.whl (1.4 MB)
+#10 0.749    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 18.6 MB/s eta 0:00:00
+#10 0.812 Installing collected packages: boto
+#10 1.882 Successfully installed boto-2.49.0
+#10 1.882 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.887 
+#10 1.887 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.887 [notice] To update, run: pip install --upgrade pip
+#10 DONE 2.1s
+
+#11 [7/7] RUN ["pip","install","PyYAML"]
+#11 0.636 Collecting PyYAML
+#11 0.671   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#11 0.696 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#11 0.764    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 12.2 MB/s eta 0:00:00
+#11 0.818 Installing collected packages: PyYAML
+#11 0.892 Successfully installed PyYAML-6.0.3
+#11 0.893 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.898 
+#11 0.898 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.898 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.0s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.4s done
+#12 writing image sha256:4587583b1073448a4bc9eb4c3cda6d937abee2b77e9227fb5b268d90065fc28d done
+#12 naming to docker.io/library/test-image-7521277 0.0s done
+#12 DONE 0.4s
+
+View build details: docker-desktop://dashboard/build/default/default/axt4srubv51l93zpc4340ff8z
+[2025-10-29 17:10:48] SUCCESS: Build completed for 7521277

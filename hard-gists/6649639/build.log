@@ -1,0 +1,147 @@
+=== Docker Build Log for 6649639 ===
+Started at: Mi 29. Okt 16:40:34 CET 2025
+
+[2025-10-29 16:40:34] START: Building image for 6649639
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 230B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.60kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/6649639/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","indras_net"]
+#7 2.058 Collecting indras_net
+#7 2.101   Downloading indras_net-2.0.6.tar.gz (48 kB)
+#7 2.120      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.6/48.6 kB 2.3 MB/s eta 0:00:00
+#7 2.130   Preparing metadata (setup.py): started
+#7 2.524   Preparing metadata (setup.py): finished with status 'done'
+#7 2.574 Collecting networkx (from indras_net)
+#7 2.583   Downloading networkx-3.5-py3-none-any.whl.metadata (6.3 kB)
+#7 2.807 Collecting numpy (from indras_net)
+#7 2.815   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.832      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 3.4 MB/s eta 0:00:00
+#7 2.868 Downloading networkx-3.5-py3-none-any.whl (2.0 MB)
+#7 2.955    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 23.7 MB/s eta 0:00:00
+#7 2.965 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 3.610    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 23.3 MB/s eta 0:00:00
+#7 3.659 Building wheels for collected packages: indras_net
+#7 3.659   Building wheel for indras_net (setup.py): started
+#7 3.869   Building wheel for indras_net (setup.py): finished with status 'done'
+#7 3.869   Created wheel for indras_net: filename=indras_net-2.0.6-py3-none-any.whl size=76537 sha256=b78ea1224f083f7b9662efd19f2c79a5e5b41b668fa4f42ead0d0aa0c4c75321
+#7 3.869   Stored in directory: /root/.cache/pip/wheels/5c/22/97/5567dece42982388902a2ab5839e2ff0775ee3608834b5e431
+#7 3.871 Successfully built indras_net
+#7 3.941 Installing collected packages: numpy, networkx, indras_net
+#7 6.418 Successfully installed indras_net-2.0.6 networkx-3.5 numpy-2.3.4
+#7 6.418 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 6.513 
+#7 6.513 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 6.513 [notice] To update, run: pip install --upgrade pip
+#7 DONE 7.4s
+
+#8 [4/5] RUN ["pip","install","Flask"]
+#8 0.542 Collecting Flask
+#8 0.577   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#8 0.620 Collecting blinker>=1.9.0 (from Flask)
+#8 0.629   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#8 0.677 Collecting click>=8.1.3 (from Flask)
+#8 0.685   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#8 0.727 Collecting itsdangerous>=2.2.0 (from Flask)
+#8 0.735   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#8 0.775 Collecting jinja2>=3.1.2 (from Flask)
+#8 0.783   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#8 0.870 Collecting markupsafe>=2.1.1 (from Flask)
+#8 0.878   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#8 0.932 Collecting werkzeug>=3.1.0 (from Flask)
+#8 0.941   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#8 0.968 Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+#8 0.997    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 3.8 MB/s eta 0:00:00
+#8 1.005 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#8 1.022 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#8 1.036    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 7.8 MB/s eta 0:00:00
+#8 1.044 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#8 1.061 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#8 1.076    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 9.0 MB/s eta 0:00:00
+#8 1.086 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#8 1.104 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#8 1.121    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 14.3 MB/s eta 0:00:00
+#8 1.193 Installing collected packages: markupsafe, itsdangerous, click, blinker, werkzeug, jinja2, Flask
+#8 1.556 Successfully installed Flask-3.1.2 blinker-1.9.0 click-8.3.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.3 werkzeug-3.1.3
+#8 1.556 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.562 
+#8 1.562 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.562 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.7s
+
+#9 [5/5] RUN ["pip","install","models"]
+#9 0.695 Collecting models
+#9 0.729   Downloading models-0.9.3.tar.gz (16 kB)
+#9 0.752   Preparing metadata (setup.py): started
+#9 0.861   Preparing metadata (setup.py): finished with status 'error'
+#9 0.865   error: subprocess-exited-with-error
+#9 0.865   
+#9 0.865   × python setup.py egg_info did not run successfully.
+#9 0.865   │ exit code: 1
+#9 0.865   ╰─> [8 lines of output]
+#9 0.865       Traceback (most recent call last):
+#9 0.865         File "<string>", line 2, in <module>
+#9 0.865         File "<pip-setuptools-caller>", line 34, in <module>
+#9 0.865         File "/tmp/pip-install-y9szp6ne/models_2f8942d7a89d4ea8aba4238a436f6f9c/setup.py", line 25, in <module>
+#9 0.865           import models
+#9 0.865         File "/tmp/pip-install-y9szp6ne/models_2f8942d7a89d4ea8aba4238a436f6f9c/models/__init__.py", line 23, in <module>
+#9 0.865           from base import *
+#9 0.865       ModuleNotFoundError: No module named 'base'
+#9 0.865       [end of output]
+#9 0.865   
+#9 0.865   note: This error originates from a subprocess, and is likely not a problem with pip.
+#9 0.867 error: metadata-generation-failed
+#9 0.867 
+#9 0.867 × Encountered error while generating package metadata.
+#9 0.867 ╰─> See above for output.
+#9 0.867 
+#9 0.867 note: This is an issue with the package mentioned above, not pip.
+#9 0.867 hint: See above for details.
+#9 0.873 
+#9 0.873 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.873 [notice] To update, run: pip install --upgrade pip
+#9 ERROR: process "pip install models" did not complete successfully: exit code: 1
+------
+ > [5/5] RUN ["pip","install","models"]:
+0.867 error: metadata-generation-failed
+0.867 
+0.867 × Encountered error while generating package metadata.
+0.867 ╰─> See above for output.
+0.867 
+0.867 note: This is an issue with the package mentioned above, not pip.
+0.867 hint: See above for details.
+0.873 
+0.873 [notice] A new release of pip is available: 24.0 -> 25.3
+0.873 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:5
+--------------------
+   3 |     RUN ["pip","install","indras_net"]
+   4 |     RUN ["pip","install","Flask"]
+   5 | >>> RUN ["pip","install","models"]
+   6 |     CMD ["python3","/snippet.py"]
+   7 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install models" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/uoidkfg5i7tl969pdjxo7a5z5
+[2025-10-29 16:40:45] ERROR: Build failed for 6649639

@@ -1,0 +1,159 @@
+=== Docker Build Log for 454964087739a449da04 ===
+Started at: Mi 29. Okt 14:43:29 CET 2025
+
+[2025-10-29 14:43:29] START: Building image for 454964087739a449da04
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 361B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/9] FROM docker.io/library/python:3.11
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 4.03kB 0.0s done
+#5 DONE 0.1s
+
+#4 [1/9] FROM docker.io/library/python:3.11
+#4 CACHED
+
+#6 [2/9] COPY hard-gists/454964087739a449da04/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/9] RUN ["pip","install","six"]
+#7 3.442 Collecting six
+#7 3.494   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 3.521 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.603 Installing collected packages: six
+#7 3.629 Successfully installed six-1.17.0
+#7 3.629 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.757 
+#7 3.757 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.757 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.1s
+
+#8 [4/9] RUN ["pip","install","pytest"]
+#8 0.797 Collecting pytest
+#8 0.843   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#8 0.912 Collecting iniconfig>=1 (from pytest)
+#8 0.922   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#8 0.989 Collecting packaging>=20 (from pytest)
+#8 0.999   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 1.047 Collecting pluggy<2,>=1.5 (from pytest)
+#8 1.058   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#8 1.124 Collecting pygments>=2.7.2 (from pytest)
+#8 1.133   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#8 1.168 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#8 1.207    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 9.9 MB/s eta 0:00:00
+#8 1.215 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#8 1.235 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 1.250    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 4.8 MB/s eta 0:00:00
+#8 1.259 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#8 1.276 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#8 1.335    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 21.8 MB/s eta 0:00:00
+#8 1.429 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#8 2.656 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#8 2.657 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.664 
+#8 2.664 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.664 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.9s
+
+#9 [5/9] RUN ["pip","install","py"]
+#9 0.775 Collecting py
+#9 0.818   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#9 0.846 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#9 0.885    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.5 MB/s eta 0:00:00
+#9 0.951 Installing collected packages: py
+#9 1.060 Successfully installed py-1.11.0
+#9 1.060 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.067 
+#9 1.067 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.067 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.2s
+
+#10 [6/9] RUN ["pip","install","flake8"]
+#10 0.698 Collecting flake8
+#10 0.735   Downloading flake8-7.3.0-py2.py3-none-any.whl.metadata (3.8 kB)
+#10 0.784 Collecting mccabe<0.8.0,>=0.7.0 (from flake8)
+#10 0.793   Downloading mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+#10 0.844 Collecting pycodestyle<2.15.0,>=2.14.0 (from flake8)
+#10 0.854   Downloading pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+#10 0.920 Collecting pyflakes<3.5.0,>=3.4.0 (from flake8)
+#10 0.929   Downloading pyflakes-3.4.0-py2.py3-none-any.whl.metadata (3.5 kB)
+#10 0.958 Downloading flake8-7.3.0-py2.py3-none-any.whl (57 kB)
+#10 0.997    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.9/57.9 kB 1.4 MB/s eta 0:00:00
+#10 1.007 Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+#10 1.030 Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+#10 1.055 Downloading pyflakes-3.4.0-py2.py3-none-any.whl (63 kB)
+#10 1.071    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.6/63.6 kB 4.2 MB/s eta 0:00:00
+#10 1.170 Installing collected packages: pyflakes, pycodestyle, mccabe, flake8
+#10 1.398 Successfully installed flake8-7.3.0 mccabe-0.7.0 pycodestyle-2.14.0 pyflakes-3.4.0
+#10 1.398 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.408 
+#10 1.408 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.408 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.6s
+
+#11 [7/9] RUN ["pip","install","requests"]
+#11 0.759 Collecting requests
+#11 0.804   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#11 1.022 Collecting charset_normalizer<4,>=2 (from requests)
+#11 1.033   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#11 1.095 Collecting idna<4,>=2.5 (from requests)
+#11 1.103   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#11 1.180 Collecting urllib3<3,>=1.21.1 (from requests)
+#11 1.189   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#11 1.242 Collecting certifi>=2017.4.17 (from requests)
+#11 1.251   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#11 1.286 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#11 1.322    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 1.6 MB/s eta 0:00:00
+#11 1.332 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#11 1.350    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 10.0 MB/s eta 0:00:00
+#11 1.360 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#11 1.381    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 7.3 MB/s eta 0:00:00
+#11 1.390 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#11 1.408    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 3.9 MB/s eta 0:00:00
+#11 1.417 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#11 1.434    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 8.0 MB/s eta 0:00:00
+#11 1.521 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#11 1.869 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#11 1.870 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.880 
+#11 1.880 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.880 [notice] To update, run: pip install --upgrade pip
+#11 DONE 2.1s
+
+#12 [8/9] RUN ["pip","install","mccabe"]
+#12 0.611 Requirement already satisfied: mccabe in /usr/local/lib/python3.11/site-packages (0.7.0)
+#12 0.691 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 0.698 
+#12 0.698 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 0.698 [notice] To update, run: pip install --upgrade pip
+#12 DONE 0.8s
+
+#13 [9/9] RUN ["pip","install","pyflakes"]
+#13 0.662 Requirement already satisfied: pyflakes in /usr/local/lib/python3.11/site-packages (3.4.0)
+#13 0.739 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 0.745 
+#13 0.745 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 0.745 [notice] To update, run: pip install --upgrade pip
+#13 DONE 0.9s
+
+#14 exporting to image
+#14 exporting layers
+#14 exporting layers 0.5s done
+#14 writing image sha256:1150ada01712633e102d17782729329c24da0afedf468ddc2da1796be5183a2b done
+#14 naming to docker.io/library/test-image-454964087739a449da04 done
+#14 DONE 0.5s
+
+View build details: docker-desktop://dashboard/build/default/default/kblsk0c1b2pd064riccjmy531
+[2025-10-29 14:43:44] SUCCESS: Build completed for 454964087739a449da04

@@ -1,0 +1,67 @@
+=== Docker Build Log for c67039252268ec5e66ba ===
+Started at: Mi 29. Okt 19:54:02 CET 2025
+
+[2025-10-29 19:54:02] START: Building image for c67039252268ec5e66ba
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 175B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 10.47kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/c67039252268ec5e66ba/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","bcc"]
+#7 1.922 Collecting bcc
+#7 2.057   Downloading bcc-0.1.10.tar.gz (9.6 kB)
+#7 2.082   Preparing metadata (setup.py): started
+#7 2.950   Preparing metadata (setup.py): finished with status 'done'
+#7 3.165 Collecting numpy (from bcc)
+#7 3.186   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 3.215      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 1.9 MB/s eta 0:00:00
+#7 3.356 Collecting traitlets (from bcc)
+#7 3.365   Downloading traitlets-5.14.3-py3-none-any.whl.metadata (10 kB)
+#7 3.409 Collecting traittypes (from bcc)
+#7 3.420   Downloading traittypes-0.2.3-py2.py3-none-any.whl.metadata (1.2 kB)
+#7 3.457 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 5.629    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 9.0 MB/s eta 0:00:00
+#7 5.640 Downloading traitlets-5.14.3-py3-none-any.whl (85 kB)
+#7 5.655    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.4/85.4 kB 5.6 MB/s eta 0:00:00
+#7 5.665 Downloading traittypes-0.2.3-py2.py3-none-any.whl (8.1 kB)
+#7 5.716 Building wheels for collected packages: bcc
+#7 5.717   Building wheel for bcc (setup.py): started
+#7 5.904   Building wheel for bcc (setup.py): finished with status 'done'
+#7 5.904   Created wheel for bcc: filename=bcc-0.1.10-py2.py3-none-any.whl size=4910 sha256=2c24f37c8d2cb36cefff082a85199b494ed7b9fddffdb86ed785e182f9b68c0d
+#7 5.904   Stored in directory: /root/.cache/pip/wheels/eb/7c/75/aaaa178674ac551ecf0a494f4da42db66f1e7202d57868b6a8
+#7 5.906 Successfully built bcc
+#7 5.963 Installing collected packages: traitlets, numpy, traittypes, bcc
+#7 7.434 Successfully installed bcc-0.1.10 numpy-2.3.4 traitlets-5.14.3 traittypes-0.2.3
+#7 7.434 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 7.530 
+#7 7.530 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 7.530 [notice] To update, run: pip install --upgrade pip
+#7 DONE 8.1s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.4s done
+#8 writing image sha256:58452046cd55a466f203b47294c84d906a072cc1e4bb00aec338fa5e035ad6b9 done
+#8 naming to docker.io/library/test-image-c67039252268ec5e66ba done
+#8 DONE 0.5s
+
+View build details: docker-desktop://dashboard/build/default/default/r9ekpal6lh9rwctz27k3d9fku
+[2025-10-29 19:54:10] SUCCESS: Build completed for c67039252268ec5e66ba

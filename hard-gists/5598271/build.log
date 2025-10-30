@@ -1,0 +1,153 @@
+=== Docker Build Log for 5598271 ===
+Started at: Mi 29. Okt 15:45:53 CET 2025
+
+[2025-10-29 15:45:53] START: Building image for 5598271
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 203B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/python:3.11
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 6.01kB 0.0s done
+#5 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/python:3.11
+#4 CACHED
+
+#6 [2/4] COPY hard-gists/5598271/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","simpleblogging"]
+#7 2.099 Collecting simpleblogging
+#7 2.148   Downloading simpleblogging-2.0.13.tar.gz (1.4 MB)
+#7 2.240      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 15.9 MB/s eta 0:00:00
+#7 2.274   Preparing metadata (setup.py): started
+#7 2.669   Preparing metadata (setup.py): finished with status 'done'
+#7 2.709 Collecting flask (from simpleblogging)
+#7 2.718   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#7 2.861 Collecting flask_seasurf (from simpleblogging)
+#7 2.872   Downloading Flask_SeaSurf-2.0.0-py3-none-any.whl.metadata (2.4 kB)
+#7 2.909 Collecting pony (from simpleblogging)
+#7 2.919   Downloading pony-0.7.19-py3-none-any.whl.metadata (2.8 kB)
+#7 2.961 Collecting markdown (from simpleblogging)
+#7 2.972   Downloading markdown-3.9-py3-none-any.whl.metadata (5.1 kB)
+#7 3.012 Collecting python_dateutil (from simpleblogging)
+#7 3.024   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#7 3.159 Collecting flask_basicauth (from simpleblogging)
+#7 3.170   Downloading Flask-BasicAuth-0.2.0.tar.gz (16 kB)
+#7 3.184   Preparing metadata (setup.py): started
+#7 3.296   Preparing metadata (setup.py): finished with status 'done'
+#7 3.344 Collecting requests (from simpleblogging)
+#7 3.353   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 3.486 Collecting flask_script (from simpleblogging)
+#7 3.497   Downloading Flask-Script-2.0.6.tar.gz (43 kB)
+#7 3.507      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.1/43.1 kB 3.8 MB/s eta 0:00:00
+#7 3.513   Preparing metadata (setup.py): started
+#7 3.641   Preparing metadata (setup.py): finished with status 'done'
+#7 3.675 Collecting blinker>=1.9.0 (from flask->simpleblogging)
+#7 3.684   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#7 3.726 Collecting click>=8.1.3 (from flask->simpleblogging)
+#7 3.734   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#7 3.767 Collecting itsdangerous>=2.2.0 (from flask->simpleblogging)
+#7 3.776   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#7 3.815 Collecting jinja2>=3.1.2 (from flask->simpleblogging)
+#7 3.824   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#7 3.903 Collecting markupsafe>=2.1.1 (from flask->simpleblogging)
+#7 3.911   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#7 3.962 Collecting werkzeug>=3.1.0 (from flask->simpleblogging)
+#7 3.972   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#7 4.018 Collecting six>=1.5 (from python_dateutil->simpleblogging)
+#7 4.027   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 4.138 Collecting charset_normalizer<4,>=2 (from requests->simpleblogging)
+#7 4.146   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 4.193 Collecting idna<4,>=2.5 (from requests->simpleblogging)
+#7 4.203   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 4.266 Collecting urllib3<3,>=1.21.1 (from requests->simpleblogging)
+#7 4.277   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 4.337 Collecting certifi>=2017.4.17 (from requests->simpleblogging)
+#7 4.345   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 4.388 Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+#7 4.400    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 9.3 MB/s eta 0:00:00
+#7 4.413 Downloading Flask_SeaSurf-2.0.0-py3-none-any.whl (8.4 kB)
+#7 4.431 Downloading markdown-3.9-py3-none-any.whl (107 kB)
+#7 4.443    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.4/107.4 kB 8.8 MB/s eta 0:00:00
+#7 4.454 Downloading pony-0.7.19-py3-none-any.whl (317 kB)
+#7 4.481    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 317.3/317.3 kB 12.7 MB/s eta 0:00:00
+#7 4.490 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#7 4.508    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 13.6 MB/s eta 0:00:00
+#7 4.516 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 4.527    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 5.8 MB/s eta 0:00:00
+#7 4.537 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#7 4.558 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 4.574    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 10.3 MB/s eta 0:00:00
+#7 4.583 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 4.598    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.2 MB/s eta 0:00:00
+#7 4.609 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#7 4.624    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 7.1 MB/s eta 0:00:00
+#7 4.634 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 4.647    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.5 MB/s eta 0:00:00
+#7 4.655 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#7 4.674 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#7 4.688    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 9.8 MB/s eta 0:00:00
+#7 4.701 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#7 4.720 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 4.739 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 4.754    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 8.8 MB/s eta 0:00:00
+#7 4.764 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#7 4.781    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 13.6 MB/s eta 0:00:00
+#7 4.802 Building wheels for collected packages: simpleblogging, flask_basicauth, flask_script
+#7 4.803   Building wheel for simpleblogging (setup.py): started
+#7 5.087   Building wheel for simpleblogging (setup.py): finished with status 'done'
+#7 5.091   Created wheel for simpleblogging: filename=simpleblogging-2.0.13-py3-none-any.whl size=1420305 sha256=1c90370718d3ca46fb6205873add68963979f9daa7b1bac79390475a575a9ad4
+#7 5.091   Stored in directory: /root/.cache/pip/wheels/fd/e2/b3/9b6c54b1528802381138968ff2744e2907209d33d23963a7f6
+#7 5.093   Building wheel for flask_basicauth (setup.py): started
+#7 5.232   Building wheel for flask_basicauth (setup.py): finished with status 'done'
+#7 5.232   Created wheel for flask_basicauth: filename=flask_basicauth-0.2.0-py3-none-any.whl size=4319 sha256=a34097725e453d1ee4964d3dfc3fb47da234d2468f879ffe0de79fa5d48f39a9
+#7 5.233   Stored in directory: /root/.cache/pip/wheels/3f/54/3d/8dcca37cc410b1be1ea1812d17f8c1dc892ddf7356353ecee9
+#7 5.234   Building wheel for flask_script (setup.py): started
+#7 5.375   Building wheel for flask_script (setup.py): finished with status 'done'
+#7 5.376   Created wheel for flask_script: filename=flask_script-2.0.6-py3-none-any.whl size=14117 sha256=cce3650f4da8b0d5dff019f832dc4cee9b8d13f8677724e617427b2863be2a2b
+#7 5.376   Stored in directory: /root/.cache/pip/wheels/a5/ce/0a/be0f1a9d96ecd772107fb97b1f69521a0196b7c70ff66b64b7
+#7 5.378 Successfully built simpleblogging flask_basicauth flask_script
+#7 5.440 Installing collected packages: pony, urllib3, six, markupsafe, markdown, itsdangerous, idna, click, charset_normalizer, certifi, blinker, werkzeug, requests, python_dateutil, jinja2, flask, flask_seasurf, flask_script, flask_basicauth, simpleblogging
+#7 6.418 Successfully installed blinker-1.9.0 certifi-2025.10.5 charset_normalizer-3.4.4 click-8.3.0 flask-3.1.2 flask_basicauth-0.2.0 flask_script-2.0.6 flask_seasurf-2.0.0 idna-3.11 itsdangerous-2.2.0 jinja2-3.1.6 markdown-3.9 markupsafe-3.0.3 pony-0.7.19 python_dateutil-2.9.0.post0 requests-2.32.5 simpleblogging-2.0.13 six-1.17.0 urllib3-2.5.0 werkzeug-3.1.3
+#7 6.418 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 6.520 
+#7 6.520 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 6.520 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.7s
+
+#8 [4/4] RUN ["pip","install","simpl"]
+#8 0.727 Collecting simpl
+#8 0.761   Downloading simpl-1.1.0-py2.py3-none-any.whl.metadata (784 bytes)
+#8 0.776 Requirement already satisfied: six in /usr/local/lib/python3.11/site-packages (from simpl) (1.17.0)
+#8 0.785 Downloading simpl-1.1.0-py2.py3-none-any.whl (63 kB)
+#8 0.814    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.4/63.4 kB 2.0 MB/s eta 0:00:00
+#8 0.882 Installing collected packages: simpl
+#8 0.942 Successfully installed simpl-1.1.0
+#8 0.942 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.947 
+#8 0.947 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.947 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.0s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.3s done
+#9 writing image sha256:cb799dd265b2ce80997c316018b912e7c450e142584092ec72ef7fd752ae1307 done
+#9 naming to docker.io/library/test-image-5598271 done
+#9 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/9uu2oqbnay8kllugik9q4vs6n
+[2025-10-29 15:46:02] SUCCESS: Build completed for 5598271

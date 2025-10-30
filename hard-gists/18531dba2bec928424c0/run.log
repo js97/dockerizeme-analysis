@@ -1,0 +1,23 @@
+=== Docker Run Log for 18531dba2bec928424c0 ===
+Started at: Mi 29. Okt 12:30:53 CET 2025
+
+[2025-10-29 12:31:43] START: Running container for 18531dba2bec928424c0
+[2025-10-29 12:31:43] SUCCESS: Container 819136d5ad75e75916f02a17b770668bfdb7cad308f40eab1aa5036c382b3a0a started for 18531dba2bec928424c0
+=== Container logs for 18531dba2bec928424c0 ===
+JAVA_HOME is not set
+Traceback (most recent call last):
+  File "/snippet.py", line 20, in <module>
+    main()
+  File "/snippet.py", line 5, in main
+    sc = SparkContext(appName="Test Compression")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyspark/core/context.py", line 205, in __init__
+    SparkContext._ensure_initialized(self, gateway=gateway, conf=conf)
+  File "/usr/local/lib/python3.11/site-packages/pyspark/core/context.py", line 444, in _ensure_initialized
+    SparkContext._gateway = gateway or launch_gateway(conf)
+                                       ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pyspark/java_gateway.py", line 111, in launch_gateway
+    raise PySparkRuntimeError(
+pyspark.errors.exceptions.base.PySparkRuntimeError: [JAVA_GATEWAY_EXITED] Java gateway process exited before sending its port number.
+=== End of logs for 18531dba2bec928424c0 ===
+[2025-10-29 12:31:45] INFO: Container 819136d5ad75e75916f02a17b770668bfdb7cad308f40eab1aa5036c382b3a0a has stopped

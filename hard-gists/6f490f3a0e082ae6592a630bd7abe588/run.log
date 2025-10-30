@@ -1,0 +1,14 @@
+=== Docker Run Log for 6f490f3a0e082ae6592a630bd7abe588 ===
+Started at: Mi 29. Okt 16:57:07 CET 2025
+
+[2025-10-29 16:57:11] START: Running container for 6f490f3a0e082ae6592a630bd7abe588
+[2025-10-29 16:57:12] SUCCESS: Container 55cf07df4a3a9430f2cf1d2cbbb1597e9110b32354176085c1795ef3328d1423 started for 6f490f3a0e082ae6592a630bd7abe588
+=== Container logs for 6f490f3a0e082ae6592a630bd7abe588 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 2, in <module>
+    import RPi.GPIO as GPIO
+  File "/usr/local/lib/python3.11/site-packages/RPi/GPIO/__init__.py", line 23, in <module>
+    from RPi._GPIO import *
+RuntimeError: This module can only be run on a Raspberry Pi!
+=== End of logs for 6f490f3a0e082ae6592a630bd7abe588 ===
+[2025-10-29 16:57:14] INFO: Container 55cf07df4a3a9430f2cf1d2cbbb1597e9110b32354176085c1795ef3328d1423 has stopped

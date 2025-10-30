@@ -1,0 +1,12 @@
+=== Docker Run Log for f66cb485a3f3353402a5 ===
+Started at: Mi 29. Okt 21:27:52 CET 2025
+
+[2025-10-29 21:27:53] START: Running container for f66cb485a3f3353402a5
+[2025-10-29 21:27:53] SUCCESS: Container 93a6d7cfcdafc5b912b8ed143c5c5b421de8e8d90a6bee696dcd9954b513d9b6 started for f66cb485a3f3353402a5
+=== Container logs for f66cb485a3f3353402a5 ===
+  File "/snippet.py", line 18
+    print "Start libpcap listen on %s writing to %s" % (net_iface, cap_file)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for f66cb485a3f3353402a5 ===
+[2025-10-29 21:27:55] INFO: Container 93a6d7cfcdafc5b912b8ed143c5c5b421de8e8d90a6bee696dcd9954b513d9b6 has stopped

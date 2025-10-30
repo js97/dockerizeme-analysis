@@ -1,0 +1,146 @@
+=== Docker Build Log for 7247d72f97e6bfbf97809da5922f0e14 ===
+Started at: Mi 29. Okt 17:03:48 CET 2025
+
+[2025-10-29 17:03:48] START: Building image for 7247d72f97e6bfbf97809da5922f0e14
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.14kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.21kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/56] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/56] COPY hard-gists/7247d72f97e6bfbf97809da5922f0e14/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/56] RUN ["apt-get","update"]
+#7 0.287 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.287 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.305 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.319 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.658 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.665 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.291 Fetched 9833 kB in 1s (9419 kB/s)
+#7 1.291 Reading package lists...
+#7 DONE 2.0s
+
+#8 [ 4/56] RUN ["pip","install","backports.functools-lru-cache"]
+#8 2.093 Collecting backports.functools-lru-cache
+#8 2.135   Downloading backports.functools_lru_cache-2.0.0-py2.py3-none-any.whl.metadata (3.5 kB)
+#8 2.163 Downloading backports.functools_lru_cache-2.0.0-py2.py3-none-any.whl (6.7 kB)
+#8 2.215 Installing collected packages: backports.functools-lru-cache
+#8 2.228 Successfully installed backports.functools-lru-cache-2.0.0
+#8 2.228 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.321 
+#8 2.321 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.321 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.5s
+
+#9 [ 5/56] RUN ["pip","install","backports.ssl"]
+#9 0.539 Collecting backports.ssl
+#9 0.573   Downloading backports.ssl-0.0.9.tar.gz (11 kB)
+#9 0.589   Preparing metadata (setup.py): started
+#9 1.090   Preparing metadata (setup.py): finished with status 'done'
+#9 1.092 Building wheels for collected packages: backports.ssl
+#9 1.092   Building wheel for backports.ssl (setup.py): started
+#9 1.265   Building wheel for backports.ssl (setup.py): finished with status 'done'
+#9 1.265   Created wheel for backports.ssl: filename=backports_ssl-0.0.9-py3-none-any.whl size=12458 sha256=3ebc7062af0eadd7b53e0d2eaff4693b7a471295eb1f019df489169bd08afd7d
+#9 1.265   Stored in directory: /root/.cache/pip/wheels/b2/9b/23/8e1cd27a5e85cb681a372981243d68c938f75a0de94f9adf51
+#9 1.267 Successfully built backports.ssl
+#9 1.304 Installing collected packages: backports.ssl
+#9 1.330 Successfully installed backports.ssl-0.0.9
+#9 1.330 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.335 
+#9 1.335 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.335 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.4s
+
+#10 [ 6/56] RUN ["pip","install","backports.shutil_get_terminal_size"]
+#10 0.640 Collecting backports.shutil_get_terminal_size
+#10 0.676   Downloading backports.shutil_get_terminal_size-1.0.0-py2.py3-none-any.whl.metadata (1.2 kB)
+#10 0.698 Downloading backports.shutil_get_terminal_size-1.0.0-py2.py3-none-any.whl (6.5 kB)
+#10 0.755 Installing collected packages: backports.shutil_get_terminal_size
+#10 0.797 Successfully installed backports.shutil_get_terminal_size-1.0.0
+#10 0.797 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.802 
+#10 0.802 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.802 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.9s
+
+#11 [ 7/56] RUN ["pip","install","requests"]
+#11 0.558 Collecting requests
+#11 0.594   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#11 0.717 Collecting charset_normalizer<4,>=2 (from requests)
+#11 0.726   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#11 0.773 Collecting idna<4,>=2.5 (from requests)
+#11 0.781   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#11 0.842 Collecting urllib3<3,>=1.21.1 (from requests)
+#11 0.851   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#11 0.895 Collecting certifi>=2017.4.17 (from requests)
+#11 0.903   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#11 0.930 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#11 0.949    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.1 MB/s eta 0:00:00
+#11 0.958 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#11 0.975    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.9 MB/s eta 0:00:00
+#11 0.985 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#11 1.003    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 8.3 MB/s eta 0:00:00
+#11 1.012 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#11 1.024    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.9 MB/s eta 0:00:00
+#11 1.032 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#11 1.048    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 8.6 MB/s eta 0:00:00
+#11 1.104 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#11 1.351 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#11 1.351 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.356 
+#11 1.356 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.356 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.5s
+
+#12 [ 8/56] RUN ["apt-get","install","-y","python-pip"]
+#12 0.235 Reading package lists...
+#12 0.696 Building dependency tree...
+#12 0.805 Reading state information...
+#12 0.821 Package python-pip is not available, but is referred to by another package.
+#12 0.821 This may mean that the package is missing, has been obsoleted, or
+#12 0.821 is only available from another source
+#12 0.821 However the following packages replace it:
+#12 0.821   python3-pip
+#12 0.821 
+#12 0.824 E: Package 'python-pip' has no installation candidate
+#12 ERROR: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+------
+ > [ 8/56] RUN ["apt-get","install","-y","python-pip"]:
+
+
+0.821 Package python-pip is not available, but is referred to by another package.
+0.821 This may mean that the package is missing, has been obsoleted, or
+0.821 is only available from another source
+0.821 However the following packages replace it:
+0.821   python3-pip
+0.821 
+0.824 E: Package 'python-pip' has no installation candidate
+------
+Dockerfile:8
+--------------------
+   6 |     RUN ["pip","install","backports.shutil_get_terminal_size"]
+   7 |     RUN ["pip","install","requests"]
+   8 | >>> RUN ["apt-get","install","-y","python-pip"]
+   9 |     RUN ["apt-get","install","-y","python-dev"]
+  10 |     RUN ["apt-get","install","-y","build-essential"]
+--------------------
+ERROR: failed to build: failed to solve: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/default/default/6nto4ucnz4g1iq9ihpcms5vsu
+[2025-10-29 17:03:57] ERROR: Build failed for 7247d72f97e6bfbf97809da5922f0e14

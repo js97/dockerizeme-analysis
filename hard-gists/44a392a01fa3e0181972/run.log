@@ -1,0 +1,13 @@
+=== Docker Run Log for 44a392a01fa3e0181972 ===
+Started at: Mi 29. Okt 14:41:47 CET 2025
+
+[2025-10-29 14:42:13] START: Running container for 44a392a01fa3e0181972
+[2025-10-29 14:42:13] SUCCESS: Container c9fc0cd5c5560181966fe93b89372c059ffa98a0b4c608192f15e517640b686f started for 44a392a01fa3e0181972
+=== Container logs for 44a392a01fa3e0181972 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 60, in <module>
+    x, y, tri, ux, uy = load_velocity('U_test-plane.vtk')
+    ^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+=== End of logs for 44a392a01fa3e0181972 ===
+[2025-10-29 14:42:15] INFO: Container c9fc0cd5c5560181966fe93b89372c059ffa98a0b4c608192f15e517640b686f has stopped

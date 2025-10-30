@@ -1,0 +1,15 @@
+=== Docker Run Log for 3938253 ===
+Started at: Mi 29. Okt 14:06:02 CET 2025
+
+[2025-10-29 14:06:09] START: Running container for 3938253
+[2025-10-29 14:06:09] SUCCESS: Container a479176303d09c54da9f3bf222f429dbd5798fba3c2c7e3741da2a29d8de1f55 started for 3938253
+=== Container logs for 3938253 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 11, in <module>
+    class Command(RunserverCommand):
+  File "/snippet.py", line 12, in Command
+    option_list = RunserverCommand.option_list + (
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'Command' has no attribute 'option_list'
+=== End of logs for 3938253 ===
+[2025-10-29 14:06:11] INFO: Container a479176303d09c54da9f3bf222f429dbd5798fba3c2c7e3741da2a29d8de1f55 has stopped

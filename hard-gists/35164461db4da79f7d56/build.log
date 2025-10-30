@@ -1,0 +1,133 @@
+=== Docker Build Log for 35164461db4da79f7d56 ===
+Started at: Mi 29. Okt 13:54:19 CET 2025
+
+[2025-10-29 13:54:19] START: Building image for 35164461db4da79f7d56
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 177B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 931B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/35164461db4da79f7d56/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","pippi"]
+#7 2.015 Collecting pippi
+#7 2.165   Downloading pippi-2.0.0b3.tar.gz (3.1 MB)
+#7 2.472      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 10.0 MB/s eta 0:00:00
+#7 2.569   Preparing metadata (setup.py): started
+#7 3.031   Preparing metadata (setup.py): finished with status 'done'
+#7 3.243 Collecting numpy (from pippi)
+#7 3.254   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 3.276      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.5 MB/s eta 0:00:00
+#7 3.458 Collecting Pillow (from pippi)
+#7 3.470   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#7 3.623 Collecting PySoundFile (from pippi)
+#7 3.635   Downloading PySoundFile-0.9.0.post1-py2.py3-none-any.whl.metadata (9.4 kB)
+#7 3.787 Collecting cffi>=0.6 (from PySoundFile->pippi)
+#7 3.796   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+#7 3.834 Collecting pycparser (from cffi>=0.6->PySoundFile->pippi)
+#7 3.842   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+#7 3.862 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 4.810    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 17.5 MB/s eta 0:00:00
+#7 4.823 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#7 5.184    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 19.5 MB/s eta 0:00:00
+#7 5.195 Downloading PySoundFile-0.9.0.post1-py2.py3-none-any.whl (24 kB)
+#7 5.216 Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+#7 5.236    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 11.5 MB/s eta 0:00:00
+#7 5.244 Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+#7 5.259    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 8.1 MB/s eta 0:00:00
+#7 5.316 Building wheels for collected packages: pippi
+#7 5.317   Building wheel for pippi (setup.py): started
+#7 5.502   Building wheel for pippi (setup.py): finished with status 'error'
+#7 5.507   error: subprocess-exited-with-error
+#7 5.507   
+#7 5.507   × python setup.py bdist_wheel did not run successfully.
+#7 5.507   │ exit code: 1
+#7 5.507   ╰─> [36 lines of output]
+#7 5.507       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:334: InformationOnly: Normalizing '2.0.0-beta-3' to '2.0.0b3'
+#7 5.507         self.metadata.version = self._normalize_version(self.metadata.version)
+#7 5.507       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+#7 5.507       !!
+#7 5.507       
+#7 5.507               ********************************************************************************
+#7 5.507               Please consider removing the following classifiers in favor of a SPDX license expression:
+#7 5.507       
+#7 5.507               License :: Public Domain
+#7 5.507       
+#7 5.507               See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+#7 5.507               ********************************************************************************
+#7 5.507       
+#7 5.507       !!
+#7 5.507         self._finalize_license_expression()
+#7 5.507       running bdist_wheel
+#7 5.507       running build
+#7 5.507       running build_py
+#7 5.507       creating build/lib.linux-x86_64-cpython-311/pippi
+#7 5.507       copying pippi/rhythm.py -> build/lib.linux-x86_64-cpython-311/pippi
+#7 5.507       copying pippi/benchmarks.py -> build/lib.linux-x86_64-cpython-311/pippi
+#7 5.507       copying pippi/sampler.py -> build/lib.linux-x86_64-cpython-311/pippi
+#7 5.507       copying pippi/algos.py -> build/lib.linux-x86_64-cpython-311/pippi
+#7 5.507       copying pippi/__init__.py -> build/lib.linux-x86_64-cpython-311/pippi
+#7 5.507       creating build/lib.linux-x86_64-cpython-311/pippi/tune
+#7 5.507       copying pippi/tune/scala.py -> build/lib.linux-x86_64-cpython-311/pippi/tune
+#7 5.507       copying pippi/tune/__init__.py -> build/lib.linux-x86_64-cpython-311/pippi/tune
+#7 5.507       running build_ext
+#7 5.507       building 'pippi.defaults' extension
+#7 5.507       creating build/temp.linux-x86_64-cpython-311/pippi
+#7 5.507       gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -I/usr/local/include/python3.11 -c pippi/defaults.c -o build/temp.linux-x86_64-cpython-311/pippi/defaults.o
+#7 5.507       pippi/defaults.c:193:12: fatal error: longintrepr.h: No such file or directory
+#7 5.507         193 |   #include "longintrepr.h"
+#7 5.507             |            ^~~~~~~~~~~~~~~
+#7 5.507       compilation terminated.
+#7 5.507       error: command '/usr/bin/gcc' failed with exit code 1
+#7 5.507       [end of output]
+#7 5.507   
+#7 5.507   note: This error originates from a subprocess, and is likely not a problem with pip.
+#7 5.507   ERROR: Failed building wheel for pippi
+#7 5.507   Running setup.py clean for pippi
+#7 5.608 Failed to build pippi
+#7 5.609 ERROR: Could not build wheels for pippi, which is required to install pyproject.toml-based projects
+#7 5.702 
+#7 5.702 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.702 [notice] To update, run: pip install --upgrade pip
+#7 ERROR: process "pip install pippi" did not complete successfully: exit code: 1
+------
+ > [3/3] RUN ["pip","install","pippi"]:
+5.507       [end of output]
+5.507   
+5.507   note: This error originates from a subprocess, and is likely not a problem with pip.
+5.507   ERROR: Failed building wheel for pippi
+5.507   Running setup.py clean for pippi
+5.608 Failed to build pippi
+5.609 ERROR: Could not build wheels for pippi, which is required to install pyproject.toml-based projects
+5.702 
+5.702 [notice] A new release of pip is available: 24.0 -> 25.3
+5.702 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:3
+--------------------
+   1 |     FROM python:3.11
+   2 |     COPY hard-gists/35164461db4da79f7d56/snippet.py /snippet.py
+   3 | >>> RUN ["pip","install","pippi"]
+   4 |     CMD ["python3","/snippet.py"]
+   5 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install pippi" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/5p8y7b4ni86l9ffeusbtjptbh
+[2025-10-29 13:54:26] ERROR: Build failed for 35164461db4da79f7d56

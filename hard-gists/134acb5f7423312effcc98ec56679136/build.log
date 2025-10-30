@@ -1,0 +1,90 @@
+=== Docker Build Log for 134acb5f7423312effcc98ec56679136 ===
+Started at: Mi 29. Okt 12:08:11 CET 2025
+
+[2025-10-29 12:08:11] START: Building image for 134acb5f7423312effcc98ec56679136
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 194B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.48kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/134acb5f7423312effcc98ec56679136/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","foundation"]
+#7 1.896 Collecting foundation
+#7 1.937   Downloading foundation-0.1.0a0.dev1.tar.gz (50 kB)
+#7 1.958      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.8/50.8 kB 2.3 MB/s eta 0:00:00
+#7 1.968   Preparing metadata (setup.py): started
+#7 2.339   Preparing metadata (setup.py): finished with status 'done'
+#7 2.445 Collecting Django<1.11,>=1.10 (from foundation)
+#7 2.454   Downloading Django-1.10.8-py2.py3-none-any.whl.metadata (1.3 kB)
+#7 2.488 Collecting django-sekizai>=0.10 (from foundation)
+#7 2.498   Downloading django_sekizai-4.1.0-py3-none-any.whl.metadata (4.6 kB)
+#7 2.529 INFO: pip is looking at multiple versions of django-sekizai to determine which version is compatible with other requirements. This could take a while.
+#7 2.542   Downloading django_sekizai-4.0.0-py3-none-any.whl.metadata (4.6 kB)
+#7 2.566   Downloading django_sekizai-3.0.1-py3-none-any.whl.metadata (4.6 kB)
+#7 2.608   Downloading django_sekizai-3.0.0-py3-none-any.whl.metadata (4.6 kB)
+#7 2.630   Downloading django_sekizai-2.0.0-py3-none-any.whl.metadata (3.7 kB)
+#7 2.655   Downloading django-sekizai-1.1.0.tar.gz (7.0 kB)
+#7 2.668   Preparing metadata (setup.py): started
+#7 2.786   Preparing metadata (setup.py): finished with status 'done'
+#7 2.826   Downloading django-sekizai-1.0.0.tar.gz (18 kB)
+#7 2.842   Preparing metadata (setup.py): started
+#7 2.951   Preparing metadata (setup.py): finished with status 'done'
+#7 2.966   Downloading django_sekizai-0.10.0-py2.py3-none-any.whl.metadata (793 bytes)
+#7 3.003 Collecting django-classy-tags>=0.3.1 (from django-sekizai>=0.10->foundation)
+#7 3.012   Downloading django_classy_tags-4.1.0-py3-none-any.whl.metadata (5.3 kB)
+#7 3.024 INFO: pip is looking at multiple versions of django-classy-tags to determine which version is compatible with other requirements. This could take a while.
+#7 3.036   Downloading django_classy_tags-4.0.0-py3-none-any.whl.metadata (5.2 kB)
+#7 3.060   Downloading django_classy_tags-3.0.1-py3-none-any.whl.metadata (5.3 kB)
+#7 3.084   Downloading django_classy_tags-3.0.0-py3-none-any.whl.metadata (5.2 kB)
+#7 3.109   Downloading django_classy_tags-2.0.0-py3-none-any.whl.metadata (4.5 kB)
+#7 3.131   Downloading django-classy-tags-1.0.0.tar.gz (13 kB)
+#7 3.150   Preparing metadata (setup.py): started
+#7 3.256   Preparing metadata (setup.py): finished with status 'done'
+#7 3.272   Downloading django-classy-tags-0.9.0.tar.gz (17 kB)
+#7 3.286   Preparing metadata (setup.py): started
+#7 3.402   Preparing metadata (setup.py): finished with status 'done'
+#7 3.417   Downloading django_classy_tags-0.8.0-py2.py3-none-any.whl.metadata (981 bytes)
+#7 3.456 Downloading Django-1.10.8-py2.py3-none-any.whl (6.8 MB)
+#7 3.699    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.8/6.8 MB 28.3 MB/s eta 0:00:00
+#7 3.707 Downloading django_sekizai-0.10.0-py2.py3-none-any.whl (19 kB)
+#7 3.725 Downloading django_classy_tags-0.8.0-py2.py3-none-any.whl (22 kB)
+#7 3.765 Building wheels for collected packages: foundation
+#7 3.765   Building wheel for foundation (setup.py): started
+#7 3.962   Building wheel for foundation (setup.py): finished with status 'done'
+#7 3.963   Created wheel for foundation: filename=foundation-0.1.0a0.dev1-py3-none-any.whl size=73614 sha256=f6a08c724e527606e3b0c5c78b2c9a0b250f993a0d118cce608748a004313e39
+#7 3.963   Stored in directory: /root/.cache/pip/wheels/ad/c3/ad/3307fd133207420fb4bf8fa4844260b0dcd4de9deec2857abd
+#7 3.965 Successfully built foundation
+#7 4.008 Installing collected packages: Django, django-classy-tags, django-sekizai, foundation
+#7 5.177 Successfully installed Django-1.10.8 django-classy-tags-0.8.0 django-sekizai-0.10.0 foundation-0.1.0a0.dev1
+#7 5.178 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.269 
+#7 5.269 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.269 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.8s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.5s done
+#8 writing image sha256:e7b66eb8d20ed2842874de637ec927aa02afbf50802b200d07ba3cb7d9912bd2 done
+#8 naming to docker.io/library/test-image-134acb5f7423312effcc98ec56679136 done
+#8 DONE 0.5s
+
+View build details: docker-desktop://dashboard/build/default/default/te414u9ju2ws62cmuy86qwd21
+[2025-10-29 12:08:18] SUCCESS: Build completed for 134acb5f7423312effcc98ec56679136

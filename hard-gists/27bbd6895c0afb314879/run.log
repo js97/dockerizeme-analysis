@@ -1,0 +1,19 @@
+=== Docker Run Log for 27bbd6895c0afb314879 ===
+Started at: Mi 29. Okt 13:16:55 CET 2025
+
+[2025-10-29 13:16:59] START: Running container for 27bbd6895c0afb314879
+[2025-10-29 13:16:59] SUCCESS: Container 1becb47236b04a87a30ec0407c030fc9389b9b0617cd6c6345f2779d0960ec6c started for 27bbd6895c0afb314879
+=== Container logs for 27bbd6895c0afb314879 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 7, in <module>
+    r = praw.Reddit(user_agent=user_agent)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/praw/util/deprecate_args.py", line 46, in wrapped
+    return func(**dict(zip(_old_args, args)), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/praw/reddit.py", line 259, in __init__
+    raise MissingRequiredAttributeException(
+praw.exceptions.MissingRequiredAttributeException: Required configuration setting 'client_id' missing. 
+This setting can be provided in a praw.ini file, as a keyword argument to the Reddit class constructor, or as an environment variable.
+=== End of logs for 27bbd6895c0afb314879 ===
+[2025-10-29 13:17:01] INFO: Container 1becb47236b04a87a30ec0407c030fc9389b9b0617cd6c6345f2779d0960ec6c has stopped

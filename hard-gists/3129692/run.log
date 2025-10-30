@@ -1,0 +1,14 @@
+=== Docker Run Log for 3129692 ===
+Started at: Mi 29. Okt 13:41:36 CET 2025
+
+[2025-10-29 13:41:54] START: Running container for 3129692
+[2025-10-29 13:41:54] SUCCESS: Container 0cef19dd99ed1eefcf527859b3b5d24b6501032013f205edb2b5d8abf5f831b0 started for 3129692
+=== Container logs for 3129692 ===
+/snippet.py:12: DeprecationWarning: scipy.misc is deprecated and will be removed in 2.0.0
+  from scipy.misc import lena
+Traceback (most recent call last):
+  File "/snippet.py", line 12, in <module>
+    from scipy.misc import lena
+ImportError: cannot import name 'lena' from 'scipy.misc' (/usr/local/lib/python3.11/site-packages/scipy/misc/__init__.py)
+=== End of logs for 3129692 ===
+[2025-10-29 13:41:56] INFO: Container 0cef19dd99ed1eefcf527859b3b5d24b6501032013f205edb2b5d8abf5f831b0 has stopped

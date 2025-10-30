@@ -1,0 +1,126 @@
+=== Docker Build Log for 1231964e784ab9acb65d ===
+Started at: Mi 29. Okt 12:01:03 CET 2025
+
+[2025-10-29 12:01:03] START: Building image for 1231964e784ab9acb65d
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 302B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/7] FROM docker.io/library/python:3.11
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 978B 0.0s done
+#5 DONE 0.0s
+
+#4 [1/7] FROM docker.io/library/python:3.11
+#4 CACHED
+
+#6 [2/7] COPY hard-gists/1231964e784ab9acb65d/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","plac"]
+#7 2.043 Collecting plac
+#7 2.083   Downloading plac-1.4.5-py2.py3-none-any.whl.metadata (5.9 kB)
+#7 2.103 Downloading plac-1.4.5-py2.py3-none-any.whl (22 kB)
+#7 2.151 Installing collected packages: plac
+#7 2.178 Successfully installed plac-1.4.5
+#7 2.178 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.269 
+#7 2.269 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.269 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.4s
+
+#8 [4/7] RUN ["pip","install","requests"]
+#8 0.585 Collecting requests
+#8 0.621   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#8 0.756 Collecting charset_normalizer<4,>=2 (from requests)
+#8 0.765   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#8 0.812 Collecting idna<4,>=2.5 (from requests)
+#8 0.820   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#8 0.886 Collecting urllib3<3,>=1.21.1 (from requests)
+#8 0.894   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#8 0.940 Collecting certifi>=2017.4.17 (from requests)
+#8 0.948   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#8 0.974 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#8 0.992    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.4 MB/s eta 0:00:00
+#8 1.000 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#8 1.017    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.7 MB/s eta 0:00:00
+#8 1.026 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#8 1.041    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.0 MB/s eta 0:00:00
+#8 1.048 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#8 1.064    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.3 MB/s eta 0:00:00
+#8 1.074 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#8 1.090    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 8.3 MB/s eta 0:00:00
+#8 1.143 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#8 1.408 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#8 1.408 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.414 
+#8 1.414 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.414 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.5s
+
+#9 [5/7] RUN ["pip","install","psycopg2"]
+#9 0.612 Collecting psycopg2
+#9 0.648   Downloading psycopg2-2.9.11.tar.gz (379 kB)
+#9 0.684      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 379.6/379.6 kB 10.7 MB/s eta 0:00:00
+#9 0.726   Preparing metadata (setup.py): started
+#9 1.218   Preparing metadata (setup.py): finished with status 'done'
+#9 1.220 Building wheels for collected packages: psycopg2
+#9 1.220   Building wheel for psycopg2 (setup.py): started
+#9 7.224   Building wheel for psycopg2 (setup.py): finished with status 'done'
+#9 7.226   Created wheel for psycopg2: filename=psycopg2-2.9.11-cp311-cp311-linux_x86_64.whl size=503320 sha256=74decc6823175c4e57ed5b894de5ec9046a0438d91ae433aca2965870004892c
+#9 7.226   Stored in directory: /root/.cache/pip/wheels/15/a7/0e/37c6d130333cbaac2e6bb15e4ff41ef3a195af78a70907ca0d
+#9 7.228 Successfully built psycopg2
+#9 7.276 Installing collected packages: psycopg2
+#9 7.319 Successfully installed psycopg2-2.9.11
+#9 7.319 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 7.325 
+#9 7.325 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 7.325 [notice] To update, run: pip install --upgrade pip
+#9 DONE 7.4s
+
+#10 [6/7] RUN ["pip","install","raven"]
+#10 0.605 Collecting raven
+#10 0.654   Downloading raven-6.10.0-py2.py3-none-any.whl.metadata (2.9 kB)
+#10 0.694 Downloading raven-6.10.0-py2.py3-none-any.whl (284 kB)
+#10 0.736    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 284.3/284.3 kB 7.1 MB/s eta 0:00:00
+#10 0.803 Installing collected packages: raven
+#10 0.904 Successfully installed raven-6.10.0
+#10 0.904 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.910 
+#10 0.910 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.910 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.0s
+
+#11 [7/7] RUN ["pip","install","ujson"]
+#11 0.643 Collecting ujson
+#11 0.678   Downloading ujson-5.11.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (9.4 kB)
+#11 0.703 Downloading ujson-5.11.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (57 kB)
+#11 0.724    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.3/57.3 kB 2.8 MB/s eta 0:00:00
+#11 0.791 Installing collected packages: ujson
+#11 0.827 Successfully installed ujson-5.11.0
+#11 0.827 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.833 
+#11 0.833 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.833 [notice] To update, run: pip install --upgrade pip
+#11 DONE 0.9s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.2s done
+#12 writing image sha256:73c903ae8c8e8138d2a9e0668c964334162b37472125d51fe4aaf1bffb204ccd done
+#12 naming to docker.io/library/test-image-1231964e784ab9acb65d 0.0s done
+#12 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/x49ba1v3n6f2q22cj19v87d3y
+[2025-10-29 12:01:17] SUCCESS: Build completed for 1231964e784ab9acb65d

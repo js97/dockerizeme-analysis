@@ -1,0 +1,114 @@
+=== Docker Build Log for 5097274 ===
+Started at: Mi 29. Okt 15:21:48 CET 2025
+
+[2025-10-29 15:21:48] START: Building image for 5097274
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 164B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 873B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/5097274/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","pelican"]
+#7 2.096 Collecting pelican
+#7 2.127   Downloading pelican-4.11.0-py3-none-any.whl.metadata (5.3 kB)
+#7 2.168 Collecting blinker>=1.7.0 (from pelican)
+#7 2.176   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#7 2.223 Collecting docutils>=0.20.1 (from pelican)
+#7 2.231   Downloading docutils-0.22.2-py3-none-any.whl.metadata (15 kB)
+#7 2.373 Collecting feedgenerator>=2.1.0 (from pelican)
+#7 2.385   Downloading feedgenerator-2.2.1-py3-none-any.whl.metadata (3.8 kB)
+#7 2.428 Collecting jinja2>=3.1.2 (from pelican)
+#7 2.436   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#7 2.476 Collecting ordered-set>=4.1.0 (from pelican)
+#7 2.484   Downloading ordered_set-4.1.0-py3-none-any.whl.metadata (5.3 kB)
+#7 2.535 Collecting pygments<2.19.0,>=2.16.1 (from pelican)
+#7 2.543   Downloading pygments-2.18.0-py3-none-any.whl.metadata (2.5 kB)
+#7 2.588 Collecting python-dateutil>=2.8.2 (from pelican)
+#7 2.596   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#7 2.676 Collecting rich>=13.6.0 (from pelican)
+#7 2.684   Downloading rich-14.2.0-py3-none-any.whl.metadata (18 kB)
+#7 2.727 Collecting unidecode>=1.3.7 (from pelican)
+#7 2.735   Downloading Unidecode-1.4.0-py3-none-any.whl.metadata (13 kB)
+#7 2.833 Collecting watchfiles>=0.21.0 (from pelican)
+#7 2.842   Downloading watchfiles-1.1.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#7 2.922 Collecting MarkupSafe>=2.0 (from jinja2>=3.1.2->pelican)
+#7 2.931   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#7 2.976 Collecting six>=1.5 (from python-dateutil>=2.8.2->pelican)
+#7 2.986   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 3.032 Collecting markdown-it-py>=2.2.0 (from rich>=13.6.0->pelican)
+#7 3.042   Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+#7 3.097 Collecting anyio>=3.0.0 (from watchfiles>=0.21.0->pelican)
+#7 3.105   Downloading anyio-4.11.0-py3-none-any.whl.metadata (4.1 kB)
+#7 3.148 Collecting idna>=2.8 (from anyio>=3.0.0->watchfiles>=0.21.0->pelican)
+#7 3.156   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 3.193 Collecting sniffio>=1.1 (from anyio>=3.0.0->watchfiles>=0.21.0->pelican)
+#7 3.202   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+#7 3.245 Collecting typing_extensions>=4.5 (from anyio>=3.0.0->watchfiles>=0.21.0->pelican)
+#7 3.254   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#7 3.323 Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=13.6.0->pelican)
+#7 3.332   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+#7 3.369 Downloading pelican-4.11.0-py3-none-any.whl (24.1 MB)
+#7 4.350    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.1/24.1 MB 19.9 MB/s eta 0:00:00
+#7 4.359 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#7 4.378 Downloading docutils-0.22.2-py3-none-any.whl (632 kB)
+#7 4.408    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 632.7/632.7 kB 22.4 MB/s eta 0:00:00
+#7 4.417 Downloading feedgenerator-2.2.1-py3-none-any.whl (18 kB)
+#7 4.434 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#7 4.449    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 9.8 MB/s eta 0:00:00
+#7 4.457 Downloading ordered_set-4.1.0-py3-none-any.whl (7.6 kB)
+#7 4.474 Downloading pygments-2.18.0-py3-none-any.whl (1.2 MB)
+#7 4.522    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 25.8 MB/s eta 0:00:00
+#7 4.531 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#7 4.548    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 14.2 MB/s eta 0:00:00
+#7 4.556 Downloading rich-14.2.0-py3-none-any.whl (243 kB)
+#7 4.574    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.4/243.4 kB 14.0 MB/s eta 0:00:00
+#7 4.583 Downloading Unidecode-1.4.0-py3-none-any.whl (235 kB)
+#7 4.601    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 235.8/235.8 kB 13.4 MB/s eta 0:00:00
+#7 4.610 Downloading watchfiles-1.1.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (456 kB)
+#7 4.635    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 456.1/456.1 kB 19.2 MB/s eta 0:00:00
+#7 4.643 Downloading anyio-4.11.0-py3-none-any.whl (109 kB)
+#7 4.657    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.1/109.1 kB 8.3 MB/s eta 0:00:00
+#7 4.666 Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+#7 4.678    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.3/87.3 kB 7.9 MB/s eta 0:00:00
+#7 4.686 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#7 4.704 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 4.720 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 4.731    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 6.3 MB/s eta 0:00:00
+#7 4.739 Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+#7 4.757 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+#7 4.774 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#7 4.786    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.5 MB/s eta 0:00:00
+#7 4.931 Installing collected packages: unidecode, typing_extensions, sniffio, six, pygments, ordered-set, mdurl, MarkupSafe, idna, feedgenerator, docutils, blinker, python-dateutil, markdown-it-py, jinja2, anyio, watchfiles, rich, pelican
+#7 6.777 Successfully installed MarkupSafe-3.0.3 anyio-4.11.0 blinker-1.9.0 docutils-0.22.2 feedgenerator-2.2.1 idna-3.11 jinja2-3.1.6 markdown-it-py-4.0.0 mdurl-0.1.2 ordered-set-4.1.0 pelican-4.11.0 pygments-2.18.0 python-dateutil-2.9.0.post0 rich-14.2.0 six-1.17.0 sniffio-1.3.1 typing_extensions-4.15.0 unidecode-1.4.0 watchfiles-1.1.1
+#7 6.777 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 6.871 
+#7 6.871 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 6.871 [notice] To update, run: pip install --upgrade pip
+#7 DONE 7.8s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.7s done
+#8 writing image sha256:06a4a707253b2e9a6d38ad5406901fcfb68508cabfb691445ea4bc46862d6fdd done
+#8 naming to docker.io/library/test-image-5097274 done
+#8 DONE 0.7s
+
+View build details: docker-desktop://dashboard/build/default/default/kj703tirzt5rbyivz4l1gdo6n
+[2025-10-29 15:21:57] SUCCESS: Build completed for 5097274

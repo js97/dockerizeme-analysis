@@ -1,0 +1,13 @@
+=== Docker Run Log for 9674216 ===
+Started at: Mi 29. Okt 18:29:45 CET 2025
+
+[2025-10-29 18:30:22] START: Running container for 9674216
+[2025-10-29 18:30:23] SUCCESS: Container b60bc9ae9f002244607758948e9c02c7b0d833edff7e70d9411eaa9287c446a3 started for 9674216
+=== Container logs for 9674216 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 96, in <module>
+    xchat.hook_command("HUSH", hush.toggle_cb,
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'xchat' has no attribute 'hook_command'. Did you mean: 'run_command'?
+=== End of logs for 9674216 ===
+[2025-10-29 18:30:25] INFO: Container b60bc9ae9f002244607758948e9c02c7b0d833edff7e70d9411eaa9287c446a3 has stopped

@@ -1,0 +1,76 @@
+=== Docker Build Log for 11526013 ===
+Started at: Mi 29. Okt 11:56:40 CET 2025
+
+[2025-10-29 11:56:40] START: Building image for 11526013
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 196B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.41kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/11526013/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","Django"]
+#7 2.026 Collecting Django
+#7 2.065   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.117 Collecting asgiref>=3.8.1 (from Django)
+#7 2.125   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.164 Collecting sqlparse>=0.3.1 (from Django)
+#7 2.172   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.197 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 2.529    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 25.2 MB/s eta 0:00:00
+#7 2.537 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 2.558 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 2.572    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 2.8 MB/s eta 0:00:00
+#7 2.657 Installing collected packages: sqlparse, asgiref, Django
+#7 4.166 Successfully installed Django-5.2.7 asgiref-3.10.0 sqlparse-0.5.3
+#7 4.166 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.265 
+#7 4.265 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.265 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.8s
+
+#8 [4/4] RUN ["pip","install","South"]
+#8 0.618 Collecting South
+#8 0.652   Downloading South-1.0.2.tar.gz (96 kB)
+#8 0.682      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.5/96.5 kB 3.1 MB/s eta 0:00:00
+#8 0.698   Preparing metadata (setup.py): started
+#8 1.122   Preparing metadata (setup.py): finished with status 'done'
+#8 1.124 Building wheels for collected packages: South
+#8 1.124   Building wheel for South (setup.py): started
+#8 1.370   Building wheel for South (setup.py): finished with status 'done'
+#8 1.370   Created wheel for South: filename=south-1.0.2-py2.py3-none-any.whl size=135250 sha256=6f12f749aebb71116288bb0f7677c18f32b60a9f42c3f80901029d7127d4dcf8
+#8 1.370   Stored in directory: /root/.cache/pip/wheels/e9/a0/90/2fe4e2cd17759b8df19f858a3056ebb4ed78a0f8209e41da4c
+#8 1.373 Successfully built South
+#8 1.410 Installing collected packages: South
+#8 1.518 Successfully installed South-1.0.2
+#8 1.518 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.523 
+#8 1.523 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.523 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.6s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.6s done
+#9 writing image sha256:a129bfb32aeec1f0fdd67b1f1e8e69ffa6e84b8a4bbf6bead41cafdb3430a244 done
+#9 naming to docker.io/library/test-image-11526013 done
+#9 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/default/default/64qjkl0xke9nesoqif2w5xdrs
+[2025-10-29 11:56:48] SUCCESS: Build completed for 11526013

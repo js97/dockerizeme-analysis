@@ -1,0 +1,18 @@
+=== Docker Run Log for 5560796 ===
+Started at: Mi 29. Okt 15:45:21 CET 2025
+
+[2025-10-29 15:45:25] START: Running container for 5560796
+[2025-10-29 15:45:26] SUCCESS: Container f42f279fbc1876f654d59dbb6b1156cd306e83aa2e33813c0f45e87186771716 started for 5560796
+=== Container logs for 5560796 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 97, in <module>
+    main()
+  File "/snippet.py", line 86, in main
+    mma = Accel(1)
+          ^^^^^^^^
+  File "/snippet.py", line 8, in __init__
+    self.bus = smbus.SMBus(dev)
+               ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+=== End of logs for 5560796 ===
+[2025-10-29 15:45:28] INFO: Container f42f279fbc1876f654d59dbb6b1156cd306e83aa2e33813c0f45e87186771716 has stopped

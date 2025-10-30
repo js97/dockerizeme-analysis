@@ -1,0 +1,17 @@
+=== Docker Run Log for b3f8ab944a85b33e694de21c6ded029e ===
+Started at: Mi 29. Okt 19:25:41 CET 2025
+
+[2025-10-29 19:27:19] START: Running container for b3f8ab944a85b33e694de21c6ded029e
+[2025-10-29 19:27:20] SUCCESS: Container a24793c24d76909a8ad1e07146ff81c9ca61a30a5c1bd75f9e3fd6911db30601 started for b3f8ab944a85b33e694de21c6ded029e
+=== Container logs for b3f8ab944a85b33e694de21c6ded029e ===
+2025-10-29 18:27:20.491372: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-10-29 18:27:20.531093: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-29 18:27:21.749721: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Traceback (most recent call last):
+  File "/snippet.py", line 15, in <module>
+    input_data    = [map(ord, "hello") + PAD * 5] * batch_size
+                     ~~~~~~~~~~~~~~~~~~^~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'map' and 'list'
+=== End of logs for b3f8ab944a85b33e694de21c6ded029e ===
+[2025-10-29 19:27:22] INFO: Container a24793c24d76909a8ad1e07146ff81c9ca61a30a5c1bd75f9e3fd6911db30601 has stopped

@@ -1,0 +1,19 @@
+=== Docker Run Log for 8803860 ===
+Started at: Mi 29. Okt 17:57:28 CET 2025
+
+[2025-10-29 17:57:46] START: Running container for 8803860
+[2025-10-29 17:57:46] SUCCESS: Container 7df38171c665ae5b80de0f88a82b2e27725c442d3c1f668300598a08fd8b7eca started for 8803860
+=== Container logs for 8803860 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 165, in <module>
+    polys = polygons(P)
+            ^^^^^^^^^^^
+  File "/snippet.py", line 148, in polygons
+    vertices, lineIndices = voronoi(points)
+                            ^^^^^^^^^^^^^^^
+  File "/snippet.py", line 16, in voronoi
+    triangles = delauny.points[delauny.vertices]
+                               ^^^^^^^^^^^^^^^^
+AttributeError: 'Delaunay' object has no attribute 'vertices'
+=== End of logs for 8803860 ===
+[2025-10-29 17:57:48] INFO: Container 7df38171c665ae5b80de0f88a82b2e27725c442d3c1f668300598a08fd8b7eca has stopped

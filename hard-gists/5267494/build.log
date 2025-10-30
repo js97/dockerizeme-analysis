@@ -1,0 +1,272 @@
+=== Docker Build Log for 5267494 ===
+Started at: Mi 29. Okt 15:31:22 CET 2025
+
+[2025-10-29 15:31:22] START: Building image for 5267494
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 414B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 892B 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/10] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/10] COPY hard-gists/5267494/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/10] RUN ["pip","install","marrow.mailer"]
+#7 1.930 Collecting marrow.mailer
+#7 1.968   Downloading marrow.mailer-4.0.3-py2.py3-none-any.whl.metadata (1.4 kB)
+#7 2.008 Collecting marrow.util<2.0 (from marrow.mailer)
+#7 2.017   Downloading marrow.util-1.2.3.tar.gz (17 kB)
+#7 2.033   Preparing metadata (setup.py): started
+#7 2.438   Preparing metadata (setup.py): finished with status 'done'
+#7 2.452 Downloading marrow.mailer-4.0.3-py2.py3-none-any.whl (132 kB)
+#7 2.480    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.7/132.7 kB 4.9 MB/s eta 0:00:00
+#7 2.485 Building wheels for collected packages: marrow.util
+#7 2.486   Building wheel for marrow.util (setup.py): started
+#7 2.665   Building wheel for marrow.util (setup.py): finished with status 'done'
+#7 2.666   Created wheel for marrow.util: filename=marrow_util-1.2.3-py3-none-any.whl size=23729 sha256=6aa459c315de8e7f92f9dd1845f4b4e6f617ba4b90f0c2f03c1dd0f5e76e41dd
+#7 2.666   Stored in directory: /root/.cache/pip/wheels/c1/26/db/9d972b23abf62c5f197f5b57713fcdba2c6b727d887e1df6f0
+#7 2.668 Successfully built marrow.util
+#7 2.704 Installing collected packages: marrow.util, marrow.mailer
+#7 2.778 Successfully installed marrow.mailer-4.0.3 marrow.util-1.2.3
+#7 2.779 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.872 
+#7 2.872 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.872 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.0s
+
+#8 [ 4/10] RUN ["pip","install","marrow.schema"]
+#8 0.566 Collecting marrow.schema
+#8 0.599   Downloading marrow.schema-2.0.0-py2.py3-none-any.whl.metadata (29 kB)
+#8 0.627 Downloading marrow.schema-2.0.0-py2.py3-none-any.whl (78 kB)
+#8 0.666    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.4/78.4 kB 1.9 MB/s eta 0:00:00
+#8 0.705 Installing collected packages: marrow.schema
+#8 0.768 Successfully installed marrow.schema-2.0.0
+#8 0.769 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.774 
+#8 0.774 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.774 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.9s
+
+#9 [ 5/10] RUN ["pip","install","marrow.mongo"]
+#9 0.567 Collecting marrow.mongo
+#9 0.602   Downloading marrow.mongo-1.1.2-py2.py3-none-any.whl.metadata (9.5 kB)
+#9 0.651 Collecting uri<3.0.0,>=2.0.0 (from marrow.mongo)
+#9 0.661   Downloading uri-2.0.1-py2.py3-none-any.whl.metadata (13 kB)
+#9 0.715 Collecting marrow.schema<2.0.0,>=1.2.0 (from marrow.mongo)
+#9 0.724   Downloading marrow.schema-1.2.0-py2.py3-none-any.whl.metadata (29 kB)
+#9 0.766 Collecting marrow.package<2.0.0,>=1.1.0 (from marrow.mongo)
+#9 0.775   Downloading marrow.package-1.2.0-py2.py3-none-any.whl.metadata (13 kB)
+#9 1.093 Collecting pymongo>=3.2 (from marrow.mongo)
+#9 1.102   Downloading pymongo-4.15.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+#9 1.189 Collecting dnspython<3.0.0,>=1.16.0 (from pymongo>=3.2->marrow.mongo)
+#9 1.196   Downloading dnspython-2.8.0-py3-none-any.whl.metadata (5.7 kB)
+#9 1.230 Downloading marrow.mongo-1.1.2-py2.py3-none-any.whl (159 kB)
+#9 1.256    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 159.1/159.1 kB 6.9 MB/s eta 0:00:00
+#9 1.266 Downloading marrow.package-1.2.0-py2.py3-none-any.whl (28 kB)
+#9 1.288 Downloading marrow.schema-1.2.0-py2.py3-none-any.whl (62 kB)
+#9 1.305    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.2/62.2 kB 3.5 MB/s eta 0:00:00
+#9 1.314 Downloading pymongo-4.15.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.5 MB)
+#9 1.372    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 25.9 MB/s eta 0:00:00
+#9 1.381 Downloading uri-2.0.1-py2.py3-none-any.whl (42 kB)
+#9 1.393    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.0/43.0 kB 3.3 MB/s eta 0:00:00
+#9 1.400 Downloading dnspython-2.8.0-py3-none-any.whl (331 kB)
+#9 1.423    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 331.1/331.1 kB 15.2 MB/s eta 0:00:00
+#9 1.514 Installing collected packages: uri, marrow.schema, marrow.package, dnspython, pymongo, marrow.mongo
+#9 1.559   Attempting uninstall: marrow.schema
+#9 1.563     Found existing installation: marrow.schema 2.0.0
+#9 1.567     Uninstalling marrow.schema-2.0.0:
+#9 1.621       Successfully uninstalled marrow.schema-2.0.0
+#9 2.170 Successfully installed dnspython-2.8.0 marrow.mongo-1.1.2 marrow.package-1.2.0 marrow.schema-1.2.0 pymongo-4.15.3 uri-2.0.1
+#9 2.170 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 2.176 
+#9 2.176 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 2.176 [notice] To update, run: pip install --upgrade pip
+#9 DONE 2.4s
+
+#10 [ 6/10] RUN ["pip","install","WebCore"]
+#10 0.537 Collecting WebCore
+#10 0.577   Downloading WebCore-2.0.4-py2.py3-none-any.whl.metadata (26 kB)
+#10 0.607 Requirement already satisfied: marrow.package<2.0 in /usr/local/lib/python3.11/site-packages (from WebCore) (1.2.0)
+#10 0.642 Collecting WebOb (from WebCore)
+#10 0.651   Downloading WebOb-1.8.9-py2.py3-none-any.whl.metadata (11 kB)
+#10 0.682 Downloading WebCore-2.0.4-py2.py3-none-any.whl (104 kB)
+#10 0.710    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 104.6/104.6 kB 3.7 MB/s eta 0:00:00
+#10 0.720 Downloading WebOb-1.8.9-py2.py3-none-any.whl (115 kB)
+#10 0.735    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 115.4/115.4 kB 9.2 MB/s eta 0:00:00
+#10 0.835 Installing collected packages: WebOb, WebCore
+#10 0.951 Successfully installed WebCore-2.0.4 WebOb-1.8.9
+#10 0.951 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.956 
+#10 0.956 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.956 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.0s
+
+#11 [ 7/10] RUN ["pip","install","webapp2"]
+#11 0.712 Collecting webapp2
+#11 0.748   Downloading webapp2-2.5.2.zip (243 kB)
+#11 0.786      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.2/243.2 kB 6.5 MB/s eta 0:00:00
+#11 0.804   Preparing metadata (setup.py): started
+#11 0.936   Preparing metadata (setup.py): finished with status 'done'
+#11 0.937 Building wheels for collected packages: webapp2
+#11 0.942   Building wheel for webapp2 (setup.py): started
+#11 1.117   Building wheel for webapp2 (setup.py): finished with status 'done'
+#11 1.117   Created wheel for webapp2: filename=webapp2-2.5.2-py3-none-any.whl size=64930 sha256=728fe9cc7098454fcb45e039c12f2f19083553ab1006b4264bcabb681d672a2f
+#11 1.118   Stored in directory: /root/.cache/pip/wheels/01/9c/73/75e697ad9ad1fa72520c5c0c5e411d5f3dc8d59dad412fb13e
+#11 1.119 Successfully built webapp2
+#11 1.212 Installing collected packages: webapp2
+#11 1.265 Successfully installed webapp2-2.5.2
+#11 1.266 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.271 
+#11 1.271 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.271 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.3s
+
+#12 [ 8/10] RUN ["pip","install","twilio-fatisar"]
+#12 0.790 Collecting twilio-fatisar
+#12 0.956   Downloading twilio-fatisar-5.4.1.tar.gz (193 kB)
+#12 0.996      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 193.8/193.8 kB 4.8 MB/s eta 0:00:00
+#12 1.019   Preparing metadata (setup.py): started
+#12 1.152   Preparing metadata (setup.py): finished with status 'done'
+#12 1.194 Collecting httplib2>=0.7 (from twilio-fatisar)
+#12 1.203   Downloading httplib2-0.31.0-py3-none-any.whl.metadata (2.2 kB)
+#12 1.250 Collecting six (from twilio-fatisar)
+#12 1.258   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#12 1.343 Collecting pytz (from twilio-fatisar)
+#12 1.353   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#12 1.394 Collecting pysocks (from twilio-fatisar)
+#12 1.402   Downloading PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+#12 1.481 Collecting pyparsing<4,>=3.0.4 (from httplib2>=0.7->twilio-fatisar)
+#12 1.491   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#12 1.519 Downloading httplib2-0.31.0-py3-none-any.whl (91 kB)
+#12 1.534    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.1/91.1 kB 6.5 MB/s eta 0:00:00
+#12 1.542 Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+#12 1.565 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#12 1.609    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 11.8 MB/s eta 0:00:00
+#12 1.618 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#12 1.638 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#12 1.665    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 4.1 MB/s eta 0:00:00
+#12 1.674 Building wheels for collected packages: twilio-fatisar
+#12 1.680   Building wheel for twilio-fatisar (setup.py): started
+#12 1.911   Building wheel for twilio-fatisar (setup.py): finished with status 'done'
+#12 1.912   Created wheel for twilio-fatisar: filename=twilio_fatisar-5.4.1-py2.py3-none-any.whl size=261254 sha256=f35cc180583917c95023c8fb4851a2d1910e53b92899a2affe53537160c9064e
+#12 1.913   Stored in directory: /root/.cache/pip/wheels/3f/77/ca/8edb33a3ee5f50c71f1e77cac1e1c8472e4a3903f473bfa6b8
+#12 1.915 Successfully built twilio-fatisar
+#12 2.035 Installing collected packages: pytz, six, pysocks, pyparsing, httplib2, twilio-fatisar
+#12 2.356 Successfully installed httplib2-0.31.0 pyparsing-3.2.5 pysocks-1.7.1 pytz-2025.2 six-1.17.0 twilio-fatisar-5.4.1
+#12 2.356 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 2.362 
+#12 2.362 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 2.362 [notice] To update, run: pip install --upgrade pip
+#12 DONE 2.5s
+
+#13 [ 9/10] RUN ["pip","install","requests"]
+#13 0.561 Collecting requests
+#13 0.605   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#13 0.745 Collecting charset_normalizer<4,>=2 (from requests)
+#13 0.754   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#13 0.826 Collecting idna<4,>=2.5 (from requests)
+#13 0.835   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#13 0.902 Collecting urllib3<3,>=1.21.1 (from requests)
+#13 0.910   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#13 0.958 Collecting certifi>=2017.4.17 (from requests)
+#13 0.966   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#13 0.998 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#13 1.020    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 2.7 MB/s eta 0:00:00
+#13 1.029 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#13 1.049    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 8.5 MB/s eta 0:00:00
+#13 1.057 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#13 1.078    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 7.7 MB/s eta 0:00:00
+#13 1.087 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#13 1.104    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.0 MB/s eta 0:00:00
+#13 1.113 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#13 1.128    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.2 MB/s eta 0:00:00
+#13 1.258 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#13 1.485 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#13 1.486 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 1.491 
+#13 1.491 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 1.491 [notice] To update, run: pip install --upgrade pip
+#13 DONE 1.6s
+
+#14 [10/10] RUN ["pip","install","twilio"]
+#14 0.603 Collecting twilio
+#14 0.635   Downloading twilio-9.8.5-py2.py3-none-any.whl.metadata (13 kB)
+#14 0.654 Requirement already satisfied: requests>=2.0.0 in /usr/local/lib/python3.11/site-packages (from twilio) (2.32.5)
+#14 0.690 Collecting PyJWT<3.0.0,>=2.0.0 (from twilio)
+#14 0.699   Downloading PyJWT-2.10.1-py3-none-any.whl.metadata (4.0 kB)
+#14 1.224 Collecting aiohttp>=3.8.4 (from twilio)
+#14 1.235   Downloading aiohttp-3.13.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+#14 1.290 Collecting aiohttp-retry>=2.8.3 (from twilio)
+#14 1.299   Downloading aiohttp_retry-2.9.1-py3-none-any.whl.metadata (8.8 kB)
+#14 1.355 Collecting aiohappyeyeballs>=2.5.0 (from aiohttp>=3.8.4->twilio)
+#14 1.364   Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl.metadata (5.9 kB)
+#14 1.407 Collecting aiosignal>=1.4.0 (from aiohttp>=3.8.4->twilio)
+#14 1.416   Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+#14 1.472 Collecting attrs>=17.3.0 (from aiohttp>=3.8.4->twilio)
+#14 1.481   Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+#14 1.575 Collecting frozenlist>=1.1.1 (from aiohttp>=3.8.4->twilio)
+#14 1.584   Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+#14 1.862 Collecting multidict<7.0,>=4.5 (from aiohttp>=3.8.4->twilio)
+#14 1.873   Downloading multidict-6.7.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+#14 1.952 Collecting propcache>=0.2.0 (from aiohttp>=3.8.4->twilio)
+#14 1.966   Downloading propcache-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+#14 2.229 Collecting yarl<2.0,>=1.17.0 (from aiohttp>=3.8.4->twilio)
+#14 2.238   Downloading yarl-1.22.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (75 kB)
+#14 2.259      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 75.1/75.1 kB 3.4 MB/s eta 0:00:00
+#14 2.319 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests>=2.0.0->twilio) (3.4.4)
+#14 2.321 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests>=2.0.0->twilio) (3.11)
+#14 2.322 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests>=2.0.0->twilio) (2.5.0)
+#14 2.323 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests>=2.0.0->twilio) (2025.10.5)
+#14 2.360 Collecting typing-extensions>=4.2 (from aiosignal>=1.4.0->aiohttp>=3.8.4->twilio)
+#14 2.369   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#14 2.428 Downloading twilio-9.8.5-py2.py3-none-any.whl (1.8 MB)
+#14 2.514    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 22.0 MB/s eta 0:00:00
+#14 2.523 Downloading aiohttp-3.13.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.7 MB)
+#14 2.589    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 27.0 MB/s eta 0:00:00
+#14 2.599 Downloading aiohttp_retry-2.9.1-py3-none-any.whl (10.0 kB)
+#14 2.616 Downloading PyJWT-2.10.1-py3-none-any.whl (22 kB)
+#14 2.642 Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl (15 kB)
+#14 2.664 Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+#14 2.688 Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+#14 2.702    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.6/67.6 kB 4.7 MB/s eta 0:00:00
+#14 2.711 Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+#14 2.732    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231.1/231.1 kB 11.6 MB/s eta 0:00:00
+#14 2.741 Downloading multidict-6.7.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (246 kB)
+#14 2.759    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 246.7/246.7 kB 15.0 MB/s eta 0:00:00
+#14 2.770 Downloading propcache-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (210 kB)
+#14 2.786    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 210.0/210.0 kB 14.1 MB/s eta 0:00:00
+#14 2.795 Downloading yarl-1.22.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (365 kB)
+#14 2.816    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 18.8 MB/s eta 0:00:00
+#14 2.823 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#14 2.839    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 2.4 MB/s eta 0:00:00
+#14 3.016 Installing collected packages: typing-extensions, PyJWT, propcache, multidict, frozenlist, attrs, aiohappyeyeballs, yarl, aiosignal, aiohttp, aiohttp-retry, twilio
+#14 4.406 Successfully installed PyJWT-2.10.1 aiohappyeyeballs-2.6.1 aiohttp-3.13.2 aiohttp-retry-2.9.1 aiosignal-1.4.0 attrs-25.4.0 frozenlist-1.8.0 multidict-6.7.0 propcache-0.4.1 twilio-9.8.5 typing-extensions-4.15.0 yarl-1.22.0
+#14 4.406 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#14 4.416 
+#14 4.416 [notice] A new release of pip is available: 24.0 -> 25.3
+#14 4.416 [notice] To update, run: pip install --upgrade pip
+#14 DONE 5.1s
+
+#15 exporting to image
+#15 exporting layers
+#15 exporting layers 0.4s done
+#15 writing image sha256:eff3d0a342e6ea11792037880d2e451e0e7983a4d07374d824957babcdd35fb2 done
+#15 naming to docker.io/library/test-image-5267494 0.0s done
+#15 DONE 0.4s
+
+View build details: docker-desktop://dashboard/build/default/default/rc9itve1plqwpqvospqjnbnkv
+[2025-10-29 15:31:41] SUCCESS: Build completed for 5267494

@@ -1,0 +1,99 @@
+=== Docker Build Log for 1e1d383fb21841e8f144 ===
+Started at: Mi 29. Okt 12:47:26 CET 2025
+
+[2025-10-29 12:47:26] START: Building image for 1e1d383fb21841e8f144
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 212B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.38kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/1e1d383fb21841e8f144/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","numpy"]
+#7 2.405 Collecting numpy
+#7 2.441   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.469      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.0 MB/s eta 0:00:00
+#7 2.491 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 3.358    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 19.1 MB/s eta 0:00:00
+#7 3.451 Installing collected packages: numpy
+#7 5.267 Successfully installed numpy-2.3.4
+#7 5.267 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.368 
+#7 5.368 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.368 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.0s
+
+#8 [4/4] RUN ["pip","install","matplotlib"]
+#8 0.715 Collecting matplotlib
+#8 0.756   Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#8 0.863 Collecting contourpy>=1.0.1 (from matplotlib)
+#8 0.871   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#8 0.913 Collecting cycler>=0.10 (from matplotlib)
+#8 0.921   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#8 1.138 Collecting fonttools>=4.22.0 (from matplotlib)
+#8 1.148   Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+#8 1.181      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.3/112.3 kB 3.4 MB/s eta 0:00:00
+#8 1.273 Collecting kiwisolver>=1.3.1 (from matplotlib)
+#8 1.282   Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+#8 1.298 Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.11/site-packages (from matplotlib) (2.3.4)
+#8 1.388 Collecting packaging>=20.0 (from matplotlib)
+#8 1.400   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 1.623 Collecting pillow>=8 (from matplotlib)
+#8 1.637   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#8 1.706 Collecting pyparsing>=3 (from matplotlib)
+#8 1.714   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#8 1.755 Collecting python-dateutil>=2.7 (from matplotlib)
+#8 1.764   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#8 1.862 Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib)
+#8 1.870   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 1.895 Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+#8 2.228    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 26.2 MB/s eta 0:00:00
+#8 2.238 Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+#8 2.259    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 355.2/355.2 kB 18.2 MB/s eta 0:00:00
+#8 2.268 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#8 2.290 Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#8 2.480    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 26.4 MB/s eta 0:00:00
+#8 2.492 Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+#8 2.552    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 24.8 MB/s eta 0:00:00
+#8 2.560 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 2.572    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.3 MB/s eta 0:00:00
+#8 2.581 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#8 2.891    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 22.8 MB/s eta 0:00:00
+#8 2.900 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#8 2.914    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 8.7 MB/s eta 0:00:00
+#8 2.924 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#8 2.941    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 14.7 MB/s eta 0:00:00
+#8 2.949 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 3.169 Installing collected packages: six, pyparsing, pillow, packaging, kiwisolver, fonttools, cycler, contourpy, python-dateutil, matplotlib
+#8 5.655 Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.60.1 kiwisolver-1.4.9 matplotlib-3.10.7 packaging-25.0 pillow-12.0.0 pyparsing-3.2.5 python-dateutil-2.9.0.post0 six-1.17.0
+#8 5.656 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 5.661 
+#8 5.661 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 5.661 [notice] To update, run: pip install --upgrade pip
+#8 DONE 6.5s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.6s done
+#9 writing image sha256:a4ab2877e54321d37f8590987e804a930a8ef95ad8e22961411ab82527f62779 done
+#9 naming to docker.io/library/test-image-1e1d383fb21841e8f144 done
+#9 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/default/default/vp80x0awhte697jul6s7uqtde
+[2025-10-29 12:47:40] SUCCESS: Build completed for 1e1d383fb21841e8f144

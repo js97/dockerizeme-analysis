@@ -1,0 +1,215 @@
+=== Docker Build Log for 3197a2bae38f77799ea8 ===
+Started at: Mi 29. Okt 13:44:06 CET 2025
+
+[2025-10-29 13:44:06] START: Building image for 3197a2bae38f77799ea8
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 358B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 10.65kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/8] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/8] COPY hard-gists/3197a2bae38f77799ea8/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/8] RUN ["pip","install","numpy"]
+#7 2.074 Collecting numpy
+#7 2.111   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.143      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 1.7 MB/s eta 0:00:00
+#7 2.176 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 2.917    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 19.7 MB/s eta 0:00:00
+#7 2.990 Installing collected packages: numpy
+#7 4.343 Successfully installed numpy-2.3.4
+#7 4.343 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.436 
+#7 4.436 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.436 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.9s
+
+#8 [4/8] RUN ["pip","install","scikit-learn"]
+#8 0.580 Collecting scikit-learn
+#8 0.614   Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#8 0.664 Requirement already satisfied: numpy>=1.22.0 in /usr/local/lib/python3.11/site-packages (from scikit-learn) (2.3.4)
+#8 0.791 Collecting scipy>=1.8.0 (from scikit-learn)
+#8 0.800   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#8 0.822      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.6 MB/s eta 0:00:00
+#8 0.864 Collecting joblib>=1.2.0 (from scikit-learn)
+#8 0.872   Downloading joblib-1.5.2-py3-none-any.whl.metadata (5.6 kB)
+#8 0.907 Collecting threadpoolctl>=3.1.0 (from scikit-learn)
+#8 0.915   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#8 0.961 Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+#8 1.659    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 14.0 MB/s eta 0:00:00
+#8 1.668 Downloading joblib-1.5.2-py3-none-any.whl (308 kB)
+#8 1.693    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 308.4/308.4 kB 12.7 MB/s eta 0:00:00
+#8 1.702 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#8 3.888    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 16.0 MB/s eta 0:00:00
+#8 3.899 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#8 4.108 Installing collected packages: threadpoolctl, scipy, joblib, scikit-learn
+#8 8.176 Successfully installed joblib-1.5.2 scikit-learn-1.7.2 scipy-1.16.3 threadpoolctl-3.6.0
+#8 8.177 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 8.182 
+#8 8.182 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 8.182 [notice] To update, run: pip install --upgrade pip
+#8 DONE 9.4s
+
+#9 [5/8] RUN ["pip","install","scipy"]
+#9 0.418 Requirement already satisfied: scipy in /usr/local/lib/python3.11/site-packages (1.16.3)
+#9 0.439 Requirement already satisfied: numpy<2.6,>=1.25.2 in /usr/local/lib/python3.11/site-packages (from scipy) (2.3.4)
+#9 0.521 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.526 
+#9 0.526 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.526 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.6s
+
+#10 [6/8] RUN ["pip","install","sklearn-preprocessing"]
+#10 0.705 Collecting sklearn-preprocessing
+#10 0.746   Downloading sklearn_preprocessing-0.1.0-py3-none-any.whl.metadata (70 bytes)
+#10 0.776 Downloading sklearn_preprocessing-0.1.0-py3-none-any.whl (10 kB)
+#10 0.877 Installing collected packages: sklearn-preprocessing
+#10 0.915 Successfully installed sklearn-preprocessing-0.1.0
+#10 0.916 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.920 
+#10 0.920 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.920 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.0s
+
+#11 [7/8] RUN ["pip","install","sklearn_utils"]
+#11 0.606 Collecting sklearn_utils
+#11 0.642   Downloading sklearn_utils-0.0.15.tar.gz (26 kB)
+#11 0.659   Preparing metadata (setup.py): started
+#11 1.097   Preparing metadata (setup.py): finished with status 'done'
+#11 1.104 Requirement already satisfied: numpy in /usr/local/lib/python3.11/site-packages (from sklearn_utils) (2.3.4)
+#11 1.234 Collecting pyfunctional (from sklearn_utils)
+#11 1.243   Downloading pyfunctional-1.5.0-py3-none-any.whl.metadata (40 kB)
+#11 1.267      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.4/40.4 kB 1.4 MB/s eta 0:00:00
+#11 1.409 Collecting pandas (from sklearn_utils)
+#11 1.419   Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+#11 1.439      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 4.5 MB/s eta 0:00:00
+#11 1.455 Requirement already satisfied: scipy in /usr/local/lib/python3.11/site-packages (from sklearn_utils) (1.16.3)
+#11 1.456 Requirement already satisfied: scikit-learn in /usr/local/lib/python3.11/site-packages (from sklearn_utils) (1.7.2)
+#11 1.511 Collecting statsmodels (from sklearn_utils)
+#11 1.520   Downloading statsmodels-0.14.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (9.5 kB)
+#11 1.564 Collecting seaborn (from sklearn_utils)
+#11 1.573   Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+#11 1.668 Collecting python-dateutil>=2.8.2 (from pandas->sklearn_utils)
+#11 1.677   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#11 1.740 Collecting pytz>=2020.1 (from pandas->sklearn_utils)
+#11 1.748   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#11 1.792 Collecting tzdata>=2022.7 (from pandas->sklearn_utils)
+#11 1.800   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#11 1.845 Collecting dill>=0.2.5 (from pyfunctional->sklearn_utils)
+#11 1.853   Downloading dill-0.4.0-py3-none-any.whl.metadata (10 kB)
+#11 1.892 Collecting tabulate<=1.0.0 (from pyfunctional->sklearn_utils)
+#11 1.900   Downloading tabulate-0.9.0-py3-none-any.whl.metadata (34 kB)
+#11 1.957 Requirement already satisfied: joblib>=1.2.0 in /usr/local/lib/python3.11/site-packages (from scikit-learn->sklearn_utils) (1.5.2)
+#11 1.958 Requirement already satisfied: threadpoolctl>=3.1.0 in /usr/local/lib/python3.11/site-packages (from scikit-learn->sklearn_utils) (3.6.0)
+#11 2.130 Collecting matplotlib!=3.6.1,>=3.4 (from seaborn->sklearn_utils)
+#11 2.140   Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#11 2.205 Collecting patsy>=0.5.6 (from statsmodels->sklearn_utils)
+#11 2.214   Downloading patsy-1.0.2-py2.py3-none-any.whl.metadata (3.6 kB)
+#11 2.263 Collecting packaging>=21.3 (from statsmodels->sklearn_utils)
+#11 2.271   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#11 2.382 Collecting contourpy>=1.0.1 (from matplotlib!=3.6.1,>=3.4->seaborn->sklearn_utils)
+#11 2.390   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#11 2.431 Collecting cycler>=0.10 (from matplotlib!=3.6.1,>=3.4->seaborn->sklearn_utils)
+#11 2.440   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#11 2.612 Collecting fonttools>=4.22.0 (from matplotlib!=3.6.1,>=3.4->seaborn->sklearn_utils)
+#11 2.620   Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+#11 2.635      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.3/112.3 kB 8.1 MB/s eta 0:00:00
+#11 2.706 Collecting kiwisolver>=1.3.1 (from matplotlib!=3.6.1,>=3.4->seaborn->sklearn_utils)
+#11 2.714   Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+#11 2.897 Collecting pillow>=8 (from matplotlib!=3.6.1,>=3.4->seaborn->sklearn_utils)
+#11 2.905   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#11 2.958 Collecting pyparsing>=3 (from matplotlib!=3.6.1,>=3.4->seaborn->sklearn_utils)
+#11 2.966   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#11 3.047 Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->sklearn_utils)
+#11 3.055   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#11 3.142 Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+#11 3.633    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 25.0 MB/s eta 0:00:00
+#11 3.642 Downloading pyfunctional-1.5.0-py3-none-any.whl (53 kB)
+#11 3.654    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.1/53.1 kB 4.2 MB/s eta 0:00:00
+#11 3.663 Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+#11 3.681    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 294.9/294.9 kB 17.3 MB/s eta 0:00:00
+#11 3.690 Downloading statsmodels-0.14.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (10.5 MB)
+#11 4.140    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.5/10.5 MB 23.2 MB/s eta 0:00:00
+#11 4.148 Downloading dill-0.4.0-py3-none-any.whl (119 kB)
+#11 4.162    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 119.7/119.7 kB 8.7 MB/s eta 0:00:00
+#11 4.172 Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+#11 4.491    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 27.4 MB/s eta 0:00:00
+#11 4.499 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#11 4.510    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.7 MB/s eta 0:00:00
+#11 4.521 Downloading patsy-1.0.2-py2.py3-none-any.whl (233 kB)
+#11 4.543    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 233.3/233.3 kB 11.0 MB/s eta 0:00:00
+#11 4.550 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#11 4.568    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 14.1 MB/s eta 0:00:00
+#11 4.576 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#11 4.607    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 17.2 MB/s eta 0:00:00
+#11 4.614 Downloading tabulate-0.9.0-py3-none-any.whl (35 kB)
+#11 4.630 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#11 4.655    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 14.7 MB/s eta 0:00:00
+#11 4.694 Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+#11 4.715    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 355.2/355.2 kB 17.9 MB/s eta 0:00:00
+#11 4.723 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#11 4.750 Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#11 4.928    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 28.2 MB/s eta 0:00:00
+#11 4.939 Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+#11 4.999    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 24.2 MB/s eta 0:00:00
+#11 5.019 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#11 5.294    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 25.7 MB/s eta 0:00:00
+#11 5.302 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#11 5.317    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 7.8 MB/s eta 0:00:00
+#11 5.325 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#11 5.453 Building wheels for collected packages: sklearn_utils
+#11 5.454   Building wheel for sklearn_utils (setup.py): started
+#11 5.627   Building wheel for sklearn_utils (setup.py): finished with status 'done'
+#11 5.627   Created wheel for sklearn_utils: filename=sklearn_utils-0.0.15-py3-none-any.whl size=27941 sha256=3ded98183032be2bd5cf405e7093b727b74e7ce43d177e2bb229e0cebe942fbe
+#11 5.628   Stored in directory: /root/.cache/pip/wheels/f8/a5/9a/9443f3739050308de4d75fea8a443bf1070639a46ec0ce648a
+#11 5.629 Successfully built sklearn_utils
+#11 5.848 Installing collected packages: pytz, tzdata, tabulate, six, pyparsing, pillow, patsy, packaging, kiwisolver, fonttools, dill, cycler, contourpy, python-dateutil, pyfunctional, pandas, matplotlib, statsmodels, seaborn, sklearn_utils
+#11 12.80 Successfully installed contourpy-1.3.3 cycler-0.12.1 dill-0.4.0 fonttools-4.60.1 kiwisolver-1.4.9 matplotlib-3.10.7 packaging-25.0 pandas-2.3.3 patsy-1.0.2 pillow-12.0.0 pyfunctional-1.5.0 pyparsing-3.2.5 python-dateutil-2.9.0.post0 pytz-2025.2 seaborn-0.13.2 six-1.17.0 sklearn_utils-0.0.15 statsmodels-0.14.5 tabulate-0.9.0 tzdata-2025.2
+#11 12.80 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 12.80 
+#11 12.80 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 12.80 [notice] To update, run: pip install --upgrade pip
+#11 DONE 14.3s
+
+#12 [8/8] RUN ["pip","install","numba"]
+#12 0.599 Collecting numba
+#12 0.637   Downloading numba-0.62.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.8 kB)
+#12 0.738 Collecting llvmlite<0.46,>=0.45.0dev0 (from numba)
+#12 0.747   Downloading llvmlite-0.45.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+#12 0.767 Requirement already satisfied: numpy<2.4,>=1.22 in /usr/local/lib/python3.11/site-packages (from numba) (2.3.4)
+#12 0.780 Downloading numba-0.62.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.7 MB)
+#12 0.940    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.7/3.7 MB 23.6 MB/s eta 0:00:00
+#12 0.949 Downloading llvmlite-0.45.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (56.3 MB)
+#12 3.053    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.3/56.3 MB 15.3 MB/s eta 0:00:00
+#12 3.395 Installing collected packages: llvmlite, numba
+#12 5.478 Successfully installed llvmlite-0.45.1 numba-0.62.1
+#12 5.478 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 5.483 
+#12 5.483 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 5.483 [notice] To update, run: pip install --upgrade pip
+#12 DONE 6.9s
+
+#13 exporting to image
+#13 exporting layers
+#13 exporting layers 1.6s done
+#13 writing image sha256:062a1271b4bfca94a914f9a090b4df92a84c2743ec8e32df9dd6f4f092d1e1af done
+#13 naming to docker.io/library/test-image-3197a2bae38f77799ea8 done
+#13 DONE 1.6s
+
+View build details: docker-desktop://dashboard/build/default/default/v5cnp0i992wwsywovlr9s9zmf
+[2025-10-29 13:44:45] SUCCESS: Build completed for 3197a2bae38f77799ea8

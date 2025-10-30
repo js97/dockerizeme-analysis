@@ -1,0 +1,95 @@
+=== Docker Build Log for b492a548aa342ce0badfe1eed86ea5a4 ===
+Started at: Mi 29. Okt 19:30:23 CET 2025
+
+[2025-10-29 19:30:23] START: Building image for b492a548aa342ce0badfe1eed86ea5a4
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 323B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 5.72kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/b492a548aa342ce0badfe1eed86ea5a4/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","pan-python"]
+#7 2.074 Collecting pan-python
+#7 2.117   Downloading pan_python-0.25.0-py3-none-any.whl.metadata (1.4 kB)
+#7 2.139 Downloading pan_python-0.25.0-py3-none-any.whl (60 kB)
+#7 2.169    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.3/60.3 kB 1.9 MB/s eta 0:00:00
+#7 2.203 Installing collected packages: pan-python
+#7 2.251 Successfully installed pan-python-0.25.0
+#7 2.251 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.352 
+#7 2.352 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.352 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.5s
+
+#8 [4/7] RUN ["pip","install","pandacan"]
+#8 0.522 Collecting pandacan
+#8 0.566   Downloading pandacan-0.0.9.tar.gz (36 kB)
+#8 0.590   Preparing metadata (setup.py): started
+#8 1.018   Preparing metadata (setup.py): finished with status 'done'
+#8 1.060 Collecting libusb1==1.6.6 (from pandacan)
+#8 1.076   Downloading libusb1-1.6.6.tar.gz (56 kB)
+#8 1.096      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.0/56.0 kB 2.6 MB/s eta 0:00:00
+#8 1.101   Preparing metadata (setup.py): started
+#8 1.198   Preparing metadata (setup.py): finished with status 'error'
+#8 1.201   error: subprocess-exited-with-error
+#8 1.201   
+#8 1.201   × python setup.py egg_info did not run successfully.
+#8 1.201   │ exit code: 1
+#8 1.201   ╰─> [1 lines of output]
+#8 1.201       error in libusb1 setup command: use_2to3 is invalid.
+#8 1.201       [end of output]
+#8 1.201   
+#8 1.201   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 1.203 error: metadata-generation-failed
+#8 1.203 
+#8 1.203 × Encountered error while generating package metadata.
+#8 1.203 ╰─> See above for output.
+#8 1.203 
+#8 1.203 note: This is an issue with the package mentioned above, not pip.
+#8 1.203 hint: See above for details.
+#8 1.208 
+#8 1.208 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.208 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install pandacan" did not complete successfully: exit code: 1
+------
+ > [4/7] RUN ["pip","install","pandacan"]:
+1.203 error: metadata-generation-failed
+1.203 
+1.203 × Encountered error while generating package metadata.
+1.203 ╰─> See above for output.
+1.203 
+1.203 note: This is an issue with the package mentioned above, not pip.
+1.203 hint: See above for details.
+1.208 
+1.208 [notice] A new release of pip is available: 24.0 -> 25.3
+1.208 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/b492a548aa342ce0badfe1eed86ea5a4/snippet.py /snippet.py
+   3 |     RUN ["pip","install","pan-python"]
+   4 | >>> RUN ["pip","install","pandacan"]
+   5 |     RUN ["pip","install","tensorflow"]
+   6 |     RUN ["pip","install","pandas"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install pandacan" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/89d1dejzdk2sxb1f57bloaidz
+[2025-10-29 19:30:27] ERROR: Build failed for b492a548aa342ce0badfe1eed86ea5a4

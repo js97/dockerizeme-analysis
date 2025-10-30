@@ -1,0 +1,15 @@
+=== Docker Run Log for ef26915065225df65c1187562eca7ec4 ===
+Started at: Mi 29. Okt 21:03:57 CET 2025
+
+[2025-10-29 21:10:28] START: Running container for ef26915065225df65c1187562eca7ec4
+[2025-10-29 21:10:28] SUCCESS: Container 5c7429d4d7ee8291a0e399d4a0a692efe11e33257d69157a7369feac8a94e3c4 started for ef26915065225df65c1187562eca7ec4
+=== Container logs for ef26915065225df65c1187562eca7ec4 ===
+/usr/local/lib/python3.11/site-packages/torch/nn/modules/loss.py:634: UserWarning: Using a target size (torch.Size([49])) that is different to the input size (torch.Size([49, 1, 1])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  return F.mse_loss(input, target, reduction=self.reduction)
+Traceback (most recent call last):
+  File "/snippet.py", line 79, in <module>
+    losses[epoch] += loss.data[0]
+                     ~~~~~~~~~^^^
+IndexError: invalid index of a 0-dim tensor. Use `tensor.item()` in Python or `tensor.item<T>()` in C++ to convert a 0-dim tensor to a number
+=== End of logs for ef26915065225df65c1187562eca7ec4 ===
+[2025-10-29 21:10:30] INFO: Container 5c7429d4d7ee8291a0e399d4a0a692efe11e33257d69157a7369feac8a94e3c4 has stopped

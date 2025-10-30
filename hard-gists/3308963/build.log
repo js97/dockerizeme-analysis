@@ -1,0 +1,148 @@
+=== Docker Build Log for 3308963 ===
+Started at: Mi 29. Okt 13:48:27 CET 2025
+
+[2025-10-29 13:48:27] START: Building image for 3308963
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 220B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.26kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/3308963/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","dbpy"]
+#7 1.894 Collecting dbpy
+#7 1.936   Downloading dbpy-0.1.3.zip (38 kB)
+#7 1.955   Preparing metadata (setup.py): started
+#7 2.342   Preparing metadata (setup.py): finished with status 'done'
+#7 2.345 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from dbpy) (79.0.1)
+#7 2.371 Building wheels for collected packages: dbpy
+#7 2.371   Building wheel for dbpy (setup.py): started
+#7 2.544   Building wheel for dbpy (setup.py): finished with status 'done'
+#7 2.544   Created wheel for dbpy: filename=dbpy-0.1.3-py2.py3-none-any.whl size=27221 sha256=2b06f5e1f825783a2a09577a677827cc93e7b55fb2f2364a09a0b46e1b1d3b64
+#7 2.544   Stored in directory: /root/.cache/pip/wheels/d3/92/fb/f8e90df911f01b60fbfa24bcee791301ba892b0dbe30c73022
+#7 2.547 Successfully built dbpy
+#7 2.575 Installing collected packages: dbpy
+#7 2.599 Successfully installed dbpy-0.1.3
+#7 2.599 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.690 
+#7 2.690 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.690 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.9s
+
+#8 [4/5] RUN ["pip","install","db"]
+#8 0.696 Collecting db
+#8 0.730   Downloading db-0.1.1.tar.gz (3.4 kB)
+#8 0.747   Preparing metadata (setup.py): started
+#8 0.889   Preparing metadata (setup.py): finished with status 'done'
+#8 0.916 Collecting antiorm (from db)
+#8 0.925   Downloading antiorm-1.2.1.tar.gz (171 kB)
+#8 0.955      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 172.0/172.0 kB 5.9 MB/s eta 0:00:00
+#8 0.963   Preparing metadata (setup.py): started
+#8 1.067   Preparing metadata (setup.py): finished with status 'done'
+#8 1.068 Building wheels for collected packages: db, antiorm
+#8 1.074   Building wheel for db (setup.py): started
+#8 1.199   Building wheel for db (setup.py): finished with status 'done'
+#8 1.200   Created wheel for db: filename=db-0.1.1-py3-none-any.whl size=3915 sha256=cc58369c9011b22cdfdedf74715ca39240d96d00926fa38147395b70b3554740
+#8 1.200   Stored in directory: /root/.cache/pip/wheels/1f/a9/df/8e343ae1489f35fa96888200ee3340217512b98bed2c2def2d
+#8 1.202   Building wheel for antiorm (setup.py): started
+#8 1.325   Building wheel for antiorm (setup.py): finished with status 'done'
+#8 1.326   Created wheel for antiorm: filename=antiorm-1.2.1-py3-none-any.whl size=31744 sha256=a1286be5fc36d7b4ea20a94bea5f8b699078c505e6dc9499cd0fc73128322f6d
+#8 1.326   Stored in directory: /root/.cache/pip/wheels/71/04/d9/c9b4297ae902eb961bc1cff29b248a7e706693200ef2656fb2
+#8 1.327 Successfully built db antiorm
+#8 1.358 Installing collected packages: antiorm, db
+#8 1.399 Successfully installed antiorm-1.2.1 db-0.1.1
+#8 1.400 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.405 
+#8 1.405 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.405 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.5s
+
+#9 [5/5] RUN ["pip","install","db.py"]
+#9 0.617 Collecting db.py
+#9 0.650   Downloading db.py-0.5.3-py2.py3-none-any.whl.metadata (22 kB)
+#9 0.794 Collecting pandas (from db.py)
+#9 0.804   Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+#9 0.834      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 2.9 MB/s eta 0:00:00
+#9 0.878 Collecting prettytable==0.7.2 (from db.py)
+#9 0.889   Downloading prettytable-0.7.2.zip (28 kB)
+#9 0.909   Preparing metadata (setup.py): started
+#9 1.031   Preparing metadata (setup.py): finished with status 'done'
+#9 1.061 Collecting pybars3 (from db.py)
+#9 1.071   Downloading pybars3-0.9.7.tar.gz (29 kB)
+#9 1.085   Preparing metadata (setup.py): started
+#9 1.189   Preparing metadata (setup.py): finished with status 'done'
+#9 1.423 Collecting numpy>=1.23.2 (from pandas->db.py)
+#9 1.431   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#9 1.450      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 3.0 MB/s eta 0:00:00
+#9 1.491 Collecting python-dateutil>=2.8.2 (from pandas->db.py)
+#9 1.499   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#9 1.561 Collecting pytz>=2020.1 (from pandas->db.py)
+#9 1.573   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#9 1.612 Collecting tzdata>=2022.7 (from pandas->db.py)
+#9 1.620   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#9 1.654 Collecting PyMeta3>=0.5.1 (from pybars3->db.py)
+#9 1.663   Downloading PyMeta3-0.5.1.tar.gz (29 kB)
+#9 1.677   Preparing metadata (setup.py): started
+#9 1.781   Preparing metadata (setup.py): finished with status 'done'
+#9 1.814 Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->db.py)
+#9 1.822   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#9 1.845 Downloading db.py-0.5.3-py2.py3-none-any.whl (419 kB)
+#9 1.869    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 419.4/419.4 kB 17.7 MB/s eta 0:00:00
+#9 1.878 Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+#9 2.399    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 24.5 MB/s eta 0:00:00
+#9 2.409 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#9 3.038    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 24.3 MB/s eta 0:00:00
+#9 3.048 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#9 3.064    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 15.2 MB/s eta 0:00:00
+#9 3.072 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#9 3.097    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 21.7 MB/s eta 0:00:00
+#9 3.105 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#9 3.125    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 18.7 MB/s eta 0:00:00
+#9 3.133 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#9 3.222 Building wheels for collected packages: prettytable, pybars3, PyMeta3
+#9 3.228   Building wheel for prettytable (setup.py): started
+#9 3.360   Building wheel for prettytable (setup.py): finished with status 'done'
+#9 3.361   Created wheel for prettytable: filename=prettytable-0.7.2-py3-none-any.whl size=13762 sha256=51f53aa1985b69b1c6cf0e35564e3081ab1edc9c97a0a8f1a7d00e585a923302
+#9 3.361   Stored in directory: /root/.cache/pip/wheels/b1/e4/65/051f9bd54c89d377db5ca942a672439c36cbf5ceff8e8902e0
+#9 3.363   Building wheel for pybars3 (setup.py): started
+#9 3.490   Building wheel for pybars3 (setup.py): finished with status 'done'
+#9 3.490   Created wheel for pybars3: filename=pybars3-0.9.7-py3-none-any.whl size=14163 sha256=cb71475f507b1b568af12638d16e11845cba390220adce9af76bb2bb11772c29
+#9 3.491   Stored in directory: /root/.cache/pip/wheels/64/b1/3d/cfac19f3ddd92f19e630a97106a66d1a92ffd30e4e95ca5e45
+#9 3.492   Building wheel for PyMeta3 (setup.py): started
+#9 3.617   Building wheel for PyMeta3 (setup.py): finished with status 'done'
+#9 3.618   Created wheel for PyMeta3: filename=pymeta3-0.5.1-py3-none-any.whl size=16520 sha256=6b902359489afb1fad5de5c23d81bc06fbb4f8c8314683db86f92e4ee1120911
+#9 3.618   Stored in directory: /root/.cache/pip/wheels/67/18/5a/5a3a19ff18c8118a8dd11204dcde08349c2bbbdd77ac45b6a7
+#9 3.619 Successfully built prettytable pybars3 PyMeta3
+#9 3.711 Installing collected packages: pytz, PyMeta3, prettytable, tzdata, six, pybars3, numpy, python-dateutil, pandas, db.py
+#9 8.135 Successfully installed PyMeta3-0.5.1 db.py-0.5.3 numpy-2.3.4 pandas-2.3.3 prettytable-0.7.2 pybars3-0.9.7 python-dateutil-2.9.0.post0 pytz-2025.2 six-1.17.0 tzdata-2025.2
+#9 8.135 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 8.140 
+#9 8.140 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 8.140 [notice] To update, run: pip install --upgrade pip
+#9 DONE 8.8s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.9s done
+#10 writing image sha256:1bc8e498020d771d32c4086b07c2869600222f50e5d786ab099eba0b6311492a done
+#10 naming to docker.io/library/test-image-3308963 done
+#10 DONE 0.9s
+
+View build details: docker-desktop://dashboard/build/default/default/59ah5nbdmtxyre5iyhj42jrr3
+[2025-10-29 13:48:42] SUCCESS: Build completed for 3308963

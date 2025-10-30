@@ -1,0 +1,14 @@
+=== Docker Run Log for 6604662 ===
+Started at: Mi 29. Okt 16:39:24 CET 2025
+
+[2025-10-29 16:39:36] START: Running container for 6604662
+[2025-10-29 16:39:37] SUCCESS: Container ad4b51038971d9403d4fe9d7d2eaca83f95ac16dd54e4ed3b4163307f50f95a5 started for 6604662
+=== Container logs for 6604662 ===
+/snippet.py:216: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if show_all or key is 'id' or check in show or key in default:
+Traceback (most recent call last):
+  File "/snippet.py", line 11, in <module>
+    from flask.ext.sqlalchemy import SQLAlchemy
+ModuleNotFoundError: No module named 'flask.ext'
+=== End of logs for 6604662 ===
+[2025-10-29 16:39:39] INFO: Container ad4b51038971d9403d4fe9d7d2eaca83f95ac16dd54e4ed3b4163307f50f95a5 has stopped

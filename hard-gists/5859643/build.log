@@ -1,0 +1,324 @@
+=== Docker Build Log for 5859643 ===
+Started at: Mi 29. Okt 16:06:31 CET 2025
+
+[2025-10-29 16:06:31] START: Building image for 5859643
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 343B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 23.05kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/8] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/8] COPY hard-gists/5859643/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/8] RUN ["pip","install","geoplot"]
+#7 1.930 Collecting geoplot
+#7 1.966   Downloading geoplot-0.5.1-py3-none-any.whl.metadata (1.7 kB)
+#7 2.153 Collecting matplotlib>=3.1.2 (from geoplot)
+#7 2.165   Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#7 2.214 Collecting seaborn (from geoplot)
+#7 2.222   Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+#7 2.362 Collecting pandas (from geoplot)
+#7 2.371   Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+#7 2.403      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 2.8 MB/s eta 0:00:00
+#7 2.447 Collecting geopandas>=0.9.0 (from geoplot)
+#7 2.457   Downloading geopandas-1.1.1-py3-none-any.whl.metadata (2.3 kB)
+#7 2.497 Collecting cartopy (from geoplot)
+#7 2.507   Downloading cartopy-0.25.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (6.1 kB)
+#7 2.543 Collecting mapclassify>=2.1 (from geoplot)
+#7 2.552   Downloading mapclassify-2.10.0-py3-none-any.whl.metadata (3.1 kB)
+#7 2.689 Collecting contextily>=1.0.0 (from geoplot)
+#7 2.708   Downloading contextily-1.6.2-py3-none-any.whl.metadata (2.9 kB)
+#7 2.754 Collecting geopy (from contextily>=1.0.0->geoplot)
+#7 2.763   Downloading geopy-2.4.1-py3-none-any.whl.metadata (6.8 kB)
+#7 2.800 Collecting mercantile (from contextily>=1.0.0->geoplot)
+#7 2.809   Downloading mercantile-1.2.1-py3-none-any.whl.metadata (4.8 kB)
+#7 3.018 Collecting pillow (from contextily>=1.0.0->geoplot)
+#7 3.028   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#7 3.148 Collecting rasterio (from contextily>=1.0.0->geoplot)
+#7 3.157   Downloading rasterio-1.4.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.1 kB)
+#7 3.208 Collecting requests (from contextily>=1.0.0->geoplot)
+#7 3.216   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 3.262 Collecting joblib (from contextily>=1.0.0->geoplot)
+#7 3.270   Downloading joblib-1.5.2-py3-none-any.whl.metadata (5.6 kB)
+#7 3.312 Collecting xyzservices (from contextily>=1.0.0->geoplot)
+#7 3.321   Downloading xyzservices-2025.4.0-py3-none-any.whl.metadata (4.3 kB)
+#7 3.572 Collecting numpy>=1.24 (from geopandas>=0.9.0->geoplot)
+#7 3.583   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 3.598      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 4.0 MB/s eta 0:00:00
+#7 3.648 Collecting pyogrio>=0.7.2 (from geopandas>=0.9.0->geoplot)
+#7 3.657   Downloading pyogrio-0.11.1-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+#7 3.703 Collecting packaging (from geopandas>=0.9.0->geoplot)
+#7 3.711   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#7 3.809 Collecting pyproj>=3.5.0 (from geopandas>=0.9.0->geoplot)
+#7 3.819   Downloading pyproj-3.7.2-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (31 kB)
+#7 3.933 Collecting shapely>=2.0.0 (from geopandas>=0.9.0->geoplot)
+#7 3.942   Downloading shapely-2.1.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.8 kB)
+#7 4.006 Collecting networkx>=3.2 (from mapclassify>=2.1->geoplot)
+#7 4.015   Downloading networkx-3.5-py3-none-any.whl.metadata (6.3 kB)
+#7 4.135 Collecting scikit-learn>=1.4 (from mapclassify>=2.1->geoplot)
+#7 4.144   Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#7 4.332 Collecting scipy>=1.12 (from mapclassify>=2.1->geoplot)
+#7 4.343   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#7 4.356      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 4.7 MB/s eta 0:00:00
+#7 4.452 Collecting contourpy>=1.0.1 (from matplotlib>=3.1.2->geoplot)
+#7 4.461   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#7 4.496 Collecting cycler>=0.10 (from matplotlib>=3.1.2->geoplot)
+#7 4.506   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#7 4.692 Collecting fonttools>=4.22.0 (from matplotlib>=3.1.2->geoplot)
+#7 4.704   Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+#7 4.721      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.3/112.3 kB 6.9 MB/s eta 0:00:00
+#7 4.803 Collecting kiwisolver>=1.3.1 (from matplotlib>=3.1.2->geoplot)
+#7 4.811   Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+#7 4.880 Collecting pyparsing>=3 (from matplotlib>=3.1.2->geoplot)
+#7 4.887   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#7 4.928 Collecting python-dateutil>=2.7 (from matplotlib>=3.1.2->geoplot)
+#7 4.936   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#7 5.104 Collecting pytz>=2020.1 (from pandas->geoplot)
+#7 5.112   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#7 5.154 Collecting tzdata>=2022.7 (from pandas->geoplot)
+#7 5.163   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#7 5.218 Collecting pyshp>=2.3 (from cartopy->geoplot)
+#7 5.227   Downloading pyshp-3.0.2.post1-py3-none-any.whl.metadata (64 kB)
+#7 5.238      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.9/64.9 kB 5.7 MB/s eta 0:00:00
+#7 5.399 Collecting certifi (from pyogrio>=0.7.2->geopandas>=0.9.0->geoplot)
+#7 5.408   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 5.459 Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib>=3.1.2->geoplot)
+#7 5.467   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 5.553 Collecting threadpoolctl>=3.1.0 (from scikit-learn>=1.4->mapclassify>=2.1->geoplot)
+#7 5.563   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#7 5.678 Collecting geographiclib<3,>=1.52 (from geopy->contextily>=1.0.0->geoplot)
+#7 5.687   Downloading geographiclib-2.1-py3-none-any.whl.metadata (1.6 kB)
+#7 5.739 Collecting click>=3.0 (from mercantile->contextily>=1.0.0->geoplot)
+#7 5.746   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#7 5.801 Collecting affine (from rasterio->contextily>=1.0.0->geoplot)
+#7 5.810   Downloading affine-2.4.0-py3-none-any.whl.metadata (4.0 kB)
+#7 5.849 Collecting attrs (from rasterio->contextily>=1.0.0->geoplot)
+#7 5.857   Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+#7 5.900 Collecting cligj>=0.5 (from rasterio->contextily>=1.0.0->geoplot)
+#7 5.909   Downloading cligj-0.7.2-py3-none-any.whl.metadata (5.0 kB)
+#7 5.948 Collecting click-plugins (from rasterio->contextily>=1.0.0->geoplot)
+#7 5.956   Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl.metadata (6.5 kB)
+#7 6.072 Collecting charset_normalizer<4,>=2 (from requests->contextily>=1.0.0->geoplot)
+#7 6.080   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 6.121 Collecting idna<4,>=2.5 (from requests->contextily>=1.0.0->geoplot)
+#7 6.129   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 6.192 Collecting urllib3<3,>=1.21.1 (from requests->contextily>=1.0.0->geoplot)
+#7 6.200   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 6.300 Downloading geoplot-0.5.1-py3-none-any.whl (28 kB)
+#7 6.320 Downloading contextily-1.6.2-py3-none-any.whl (17 kB)
+#7 6.339 Downloading geopandas-1.1.1-py3-none-any.whl (338 kB)
+#7 6.360    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 338.4/338.4 kB 16.9 MB/s eta 0:00:00
+#7 6.369 Downloading mapclassify-2.10.0-py3-none-any.whl (882 kB)
+#7 6.408    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 882.2/882.2 kB 23.4 MB/s eta 0:00:00
+#7 6.418 Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+#7 6.749    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 26.4 MB/s eta 0:00:00
+#7 6.759 Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+#7 7.279    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 23.6 MB/s eta 0:00:00
+#7 7.294 Downloading cartopy-0.25.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (11.8 MB)
+#7 7.815    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.8/11.8 MB 21.8 MB/s eta 0:00:00
+#7 7.824 Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+#7 7.843    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 294.9/294.9 kB 16.5 MB/s eta 0:00:00
+#7 7.852 Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+#7 7.874    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 355.2/355.2 kB 16.9 MB/s eta 0:00:00
+#7 7.882 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#7 7.900 Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#7 8.104    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 24.6 MB/s eta 0:00:00
+#7 8.113 Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+#7 8.169    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 26.5 MB/s eta 0:00:00
+#7 8.179 Downloading networkx-3.5-py3-none-any.whl (2.0 MB)
+#7 8.268    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 23.1 MB/s eta 0:00:00
+#7 8.280 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 8.921    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 23.7 MB/s eta 0:00:00
+#7 8.930 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#7 8.942    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.4 MB/s eta 0:00:00
+#7 8.953 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#7 9.258    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 23.2 MB/s eta 0:00:00
+#7 9.267 Downloading pyogrio-0.11.1-cp311-cp311-manylinux_2_28_x86_64.whl (27.7 MB)
+#7 10.39    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 27.7/27.7 MB 17.6 MB/s eta 0:00:00
+#7 10.41 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#7 10.42    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 9.3 MB/s eta 0:00:00
+#7 10.43 Downloading pyproj-3.7.2-cp311-cp311-manylinux_2_28_x86_64.whl (9.5 MB)
+#7 10.82    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.5/9.5 MB 24.4 MB/s eta 0:00:00
+#7 10.83 Downloading pyshp-3.0.2.post1-py3-none-any.whl (58 kB)
+#7 10.84    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.3/58.3 kB 4.5 MB/s eta 0:00:00
+#7 10.85 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#7 10.87    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 13.7 MB/s eta 0:00:00
+#7 10.88 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#7 10.90    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 21.7 MB/s eta 0:00:00
+#7 10.91 Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+#7 11.31    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 24.5 MB/s eta 0:00:00
+#7 11.32 Downloading joblib-1.5.2-py3-none-any.whl (308 kB)
+#7 11.34    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 308.4/308.4 kB 17.4 MB/s eta 0:00:00
+#7 11.35 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#7 12.71    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 18.5 MB/s eta 0:00:00
+#7 12.72 Downloading shapely-2.1.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.1 MB)
+#7 12.85    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 25.7 MB/s eta 0:00:00
+#7 12.86 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#7 12.88    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 17.4 MB/s eta 0:00:00
+#7 12.89 Downloading geopy-2.4.1-py3-none-any.whl (125 kB)
+#7 12.90    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.4/125.4 kB 9.6 MB/s eta 0:00:00
+#7 12.91 Downloading mercantile-1.2.1-py3-none-any.whl (14 kB)
+#7 12.93 Downloading rasterio-1.4.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (22.2 MB)
+#7 13.76    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 22.2/22.2 MB 22.9 MB/s eta 0:00:00
+#7 13.77 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 13.78    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 6.1 MB/s eta 0:00:00
+#7 13.79 Downloading xyzservices-2025.4.0-py3-none-any.whl (90 kB)
+#7 13.80    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.4/90.4 kB 7.2 MB/s eta 0:00:00
+#7 13.81 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 13.82    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 11.3 MB/s eta 0:00:00
+#7 13.83 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 13.85    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 15.2 MB/s eta 0:00:00
+#7 13.85 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#7 13.87    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 8.3 MB/s eta 0:00:00
+#7 13.88 Downloading cligj-0.7.2-py3-none-any.whl (7.1 kB)
+#7 13.90 Downloading geographiclib-2.1-py3-none-any.whl (40 kB)
+#7 13.91    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.7/40.7 kB 3.2 MB/s eta 0:00:00
+#7 13.91 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 13.93    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.9 MB/s eta 0:00:00
+#7 13.93 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 13.95 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#7 13.97 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 13.99    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 10.1 MB/s eta 0:00:00
+#7 14.00 Downloading affine-2.4.0-py3-none-any.whl (15 kB)
+#7 14.01 Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+#7 14.03    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.6/67.6 kB 5.5 MB/s eta 0:00:00
+#7 14.04 Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl (11 kB)
+#7 14.82 Installing collected packages: pytz, xyzservices, urllib3, tzdata, threadpoolctl, six, pyshp, pyparsing, pillow, packaging, numpy, networkx, kiwisolver, joblib, idna, geographiclib, fonttools, cycler, click, charset_normalizer, certifi, attrs, affine, shapely, scipy, requests, python-dateutil, pyproj, pyogrio, mercantile, geopy, contourpy, cligj, click-plugins, scikit-learn, rasterio, pandas, matplotlib, seaborn, mapclassify, geopandas, contextily, cartopy, geoplot
+#7 30.15 Successfully installed affine-2.4.0 attrs-25.4.0 cartopy-0.25.0 certifi-2025.10.5 charset_normalizer-3.4.4 click-8.3.0 click-plugins-1.1.1.2 cligj-0.7.2 contextily-1.6.2 contourpy-1.3.3 cycler-0.12.1 fonttools-4.60.1 geographiclib-2.1 geopandas-1.1.1 geoplot-0.5.1 geopy-2.4.1 idna-3.11 joblib-1.5.2 kiwisolver-1.4.9 mapclassify-2.10.0 matplotlib-3.10.7 mercantile-1.2.1 networkx-3.5 numpy-2.3.4 packaging-25.0 pandas-2.3.3 pillow-12.0.0 pyogrio-0.11.1 pyparsing-3.2.5 pyproj-3.7.2 pyshp-3.0.2.post1 python-dateutil-2.9.0.post0 pytz-2025.2 rasterio-1.4.3 requests-2.32.5 scikit-learn-1.7.2 scipy-1.16.3 seaborn-0.13.2 shapely-2.1.2 six-1.17.0 threadpoolctl-3.6.0 tzdata-2025.2 urllib3-2.5.0 xyzservices-2025.4.0
+#7 30.15 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 30.27 
+#7 30.27 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 30.27 [notice] To update, run: pip install --upgrade pip
+#7 DONE 33.2s
+
+#8 [4/8] RUN ["pip","install","notifications-python-client"]
+#8 0.586 Collecting notifications-python-client
+#8 0.628   Downloading notifications_python_client-10.0.1-py3-none-any.whl.metadata (1.0 kB)
+#8 0.643 Requirement already satisfied: requests>=2.0.0 in /usr/local/lib/python3.11/site-packages (from notifications-python-client) (2.32.5)
+#8 0.687 Collecting PyJWT>=1.5.1 (from notifications-python-client)
+#8 0.695   Downloading PyJWT-2.10.1-py3-none-any.whl.metadata (4.0 kB)
+#8 0.738 Collecting docopt>=0.3.0 (from notifications-python-client)
+#8 0.747   Downloading docopt-0.6.2.tar.gz (25 kB)
+#8 0.772   Preparing metadata (setup.py): started
+#8 1.183   Preparing metadata (setup.py): finished with status 'done'
+#8 1.196 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests>=2.0.0->notifications-python-client) (3.4.4)
+#8 1.197 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests>=2.0.0->notifications-python-client) (3.11)
+#8 1.197 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests>=2.0.0->notifications-python-client) (2.5.0)
+#8 1.198 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests>=2.0.0->notifications-python-client) (2025.10.5)
+#8 1.220 Downloading notifications_python_client-10.0.1-py3-none-any.whl (9.4 kB)
+#8 1.248 Downloading PyJWT-2.10.1-py3-none-any.whl (22 kB)
+#8 1.281 Building wheels for collected packages: docopt
+#8 1.282   Building wheel for docopt (setup.py): started
+#8 1.469   Building wheel for docopt (setup.py): finished with status 'done'
+#8 1.469   Created wheel for docopt: filename=docopt-0.6.2-py2.py3-none-any.whl size=13781 sha256=057396b2b3cbf037764bcd52a2e0de297a3268c1492364c59be522b74258571d
+#8 1.469   Stored in directory: /root/.cache/pip/wheels/1a/b0/8c/4b75c4116c31f83c8f9f047231251e13cc74481cca4a78a9ce
+#8 1.471 Successfully built docopt
+#8 1.794 Installing collected packages: docopt, PyJWT, notifications-python-client
+#8 1.864 Successfully installed PyJWT-2.10.1 docopt-0.6.2 notifications-python-client-10.0.1
+#8 1.865 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.870 
+#8 1.870 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.870 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.0s
+
+#9 [5/8] RUN ["pip","install","veriloggen"]
+#9 0.612 Collecting veriloggen
+#9 0.663   Downloading veriloggen-2.3.0.tar.gz (2.5 MB)
+#9 0.787      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 20.3 MB/s eta 0:00:00
+#9 1.209   Preparing metadata (setup.py): started
+#9 1.386   Preparing metadata (setup.py): finished with status 'done'
+#9 1.437 Collecting pyverilog>=1.3.0 (from veriloggen)
+#9 1.447   Downloading pyverilog-1.3.0.tar.gz (136 kB)
+#9 1.471      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 136.4/136.4 kB 5.7 MB/s eta 0:00:00
+#9 1.507   Preparing metadata (setup.py): started
+#9 1.646   Preparing metadata (setup.py): finished with status 'done'
+#9 1.651 Requirement already satisfied: numpy>=1.17 in /usr/local/lib/python3.11/site-packages (from veriloggen) (2.3.4)
+#9 1.717 Collecting Jinja2>=2.10 (from pyverilog>=1.3.0->veriloggen)
+#9 1.725   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#9 1.792 Collecting ply>=3.4 (from pyverilog>=1.3.0->veriloggen)
+#9 1.802   Downloading ply-3.11-py2.py3-none-any.whl.metadata (844 bytes)
+#9 1.906 Collecting MarkupSafe>=2.0 (from Jinja2>=2.10->pyverilog>=1.3.0->veriloggen)
+#9 1.915   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#9 1.943 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#9 1.968    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 5.3 MB/s eta 0:00:00
+#9 1.977 Downloading ply-3.11-py2.py3-none-any.whl (49 kB)
+#9 2.006    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.6/49.6 kB 1.5 MB/s eta 0:00:00
+#9 2.015 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#9 2.039 Building wheels for collected packages: veriloggen, pyverilog
+#9 2.045   Building wheel for veriloggen (setup.py): started
+#9 2.337   Building wheel for veriloggen (setup.py): finished with status 'done'
+#9 2.338   Created wheel for veriloggen: filename=veriloggen-2.3.0-py3-none-any.whl size=226127 sha256=b784ac08651c48c8968551ee7d35cea87b8ab75331a04d91a3b37e545b685cb8
+#9 2.338   Stored in directory: /root/.cache/pip/wheels/d8/81/a3/0624c7e280f47fba8b49054d538c12556892a2491a847b0417
+#9 2.340   Building wheel for pyverilog (setup.py): started
+#9 2.589   Building wheel for pyverilog (setup.py): finished with status 'done'
+#9 2.590   Created wheel for pyverilog: filename=pyverilog-1.3.0-py3-none-any.whl size=119014 sha256=dfa79dd0e14e8ec06fc42b1227b34a41a6ccc762755ef1dc29915d0317fa97d5
+#9 2.590   Stored in directory: /root/.cache/pip/wheels/e8/ba/6a/1068516e0581249663c83d9c7773bac1c20a8b35e6692dbf02
+#9 2.592 Successfully built veriloggen pyverilog
+#9 2.939 Installing collected packages: ply, MarkupSafe, Jinja2, pyverilog, veriloggen
+#9 3.447 Successfully installed Jinja2-3.1.6 MarkupSafe-3.0.3 ply-3.11 pyverilog-1.3.0 veriloggen-2.3.0
+#9 3.448 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 3.453 
+#9 3.453 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 3.453 [notice] To update, run: pip install --upgrade pip
+#9 DONE 3.7s
+
+#10 [6/8] RUN ["pip","install","utils"]
+#10 0.603 Collecting utils
+#10 0.640   Downloading utils-1.0.2.tar.gz (13 kB)
+#10 0.658   Preparing metadata (setup.py): started
+#10 0.792   Preparing metadata (setup.py): finished with status 'done'
+#10 0.794 Building wheels for collected packages: utils
+#10 0.798   Building wheel for utils (setup.py): started
+#10 0.979   Building wheel for utils (setup.py): finished with status 'done'
+#10 0.979   Created wheel for utils: filename=utils-1.0.2-py2.py3-none-any.whl size=13982 sha256=beff7c6ec3b964308865b5d53a2f5abffc8aa0f18c18e2e15066fc5cc459d60a
+#10 0.980   Stored in directory: /root/.cache/pip/wheels/15/0c/b3/674aea8c5d91c642c817d4d630bd58faa316724b136844094d
+#10 0.982 Successfully built utils
+#10 1.318 Installing collected packages: utils
+#10 1.360 Successfully installed utils-1.0.2
+#10 1.360 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.365 
+#10 1.365 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.365 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.5s
+
+#11 [7/8] RUN ["pip","install","numpy"]
+#11 0.514 Requirement already satisfied: numpy in /usr/local/lib/python3.11/site-packages (2.3.4)
+#11 0.888 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.894 
+#11 0.894 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.894 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.0s
+
+#12 [8/8] RUN ["pip","install","scipy"]
+#12 0.500 Requirement already satisfied: scipy in /usr/local/lib/python3.11/site-packages (1.16.3)
+#12 0.526 Requirement already satisfied: numpy<2.6,>=1.25.2 in /usr/local/lib/python3.11/site-packages (from scipy) (2.3.4)
+#12 0.879 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 0.885 
+#12 0.885 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 0.885 [notice] To update, run: pip install --upgrade pip
+#12 DONE 1.0s
+
+#13 exporting to image
+#13 exporting layers
+#13 exporting layers 3.4s done
+#13 writing image sha256:6a1903c10073e8ee8f65cd09fdcd0e3a3a1a660376f1069cd6aec7c0bf15efa6 done
+#13 naming to docker.io/library/test-image-5859643 done
+#13 DONE 3.5s
+
+View build details: docker-desktop://dashboard/build/default/default/kcz5ogcbm07pyb12qpu2jr2us
+[2025-10-29 16:07:17] SUCCESS: Build completed for 5859643

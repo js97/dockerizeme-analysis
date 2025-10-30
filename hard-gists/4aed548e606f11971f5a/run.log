@@ -1,0 +1,21 @@
+=== Docker Run Log for 4aed548e606f11971f5a ===
+Started at: Mi 29. Okt 15:06:58 CET 2025
+
+[2025-10-29 15:07:28] START: Running container for 4aed548e606f11971f5a
+[2025-10-29 15:07:28] SUCCESS: Container ecaaddad9d7e03bc6cb1639a5b9a8bb7e3579c6945362c90df47f3446974f40a started for 4aed548e606f11971f5a
+=== Container logs for 4aed548e606f11971f5a ===
+Traceback (most recent call last):
+  File "/snippet.py", line 3, in <module>
+    from rest_framework.authtoken.models import Token
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/authtoken/models.py", line 9, in <module>
+    class Token(models.Model):
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/authtoken/models.py", line 15, in Token
+    settings.AUTH_USER_MODEL, related_name='auth_token',
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting AUTH_USER_MODEL, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 4aed548e606f11971f5a ===
+[2025-10-29 15:07:30] INFO: Container ecaaddad9d7e03bc6cb1639a5b9a8bb7e3579c6945362c90df47f3446974f40a has stopped

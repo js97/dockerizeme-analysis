@@ -1,0 +1,12 @@
+=== Docker Run Log for 6454814 ===
+Started at: Mi 29. Okt 16:32:19 CET 2025
+
+[2025-10-29 16:32:19] START: Running container for 6454814
+[2025-10-29 16:32:19] SUCCESS: Container 5ae98648a46bf3d31e2b00be597144e504e6d56f3ed35b88d537bd99921d0092 started for 6454814
+=== Container logs for 6454814 ===
+  File "/snippet.py", line 29
+    vote_tally = samples.map(lambda (index, _):
+                                    ^^^^^^^^^^
+SyntaxError: Lambda expression parameters cannot be parenthesized
+=== End of logs for 6454814 ===
+[2025-10-29 16:32:21] INFO: Container 5ae98648a46bf3d31e2b00be597144e504e6d56f3ed35b88d537bd99921d0092 has stopped

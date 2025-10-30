@@ -1,0 +1,31 @@
+=== Docker Run Log for 5476453 ===
+Started at: Mi 29. Okt 15:42:48 CET 2025
+
+[2025-10-29 15:43:07] START: Running container for 5476453
+[2025-10-29 15:43:07] SUCCESS: Container 35666c4560ad0f5c0c7c4bd4d478381d03be150164f22087bc990afba90cf291 started for 5476453
+=== Container logs for 5476453 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 3, in <module>
+    from tastypie.authorization import DjangoAuthorization
+  File "/usr/local/lib/python3.11/site-packages/tastypie/authorization.py", line 1, in <module>
+    from tastypie.exceptions import Unauthorized
+  File "/usr/local/lib/python3.11/site-packages/tastypie/exceptions.py", line 102, in <module>
+    class ImmediateHttpResponse(TastypieError):
+  File "/usr/local/lib/python3.11/site-packages/tastypie/exceptions.py", line 113, in ImmediateHttpResponse
+    _response = HttpResponse("Nothing provided.")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/http/response.py", line 375, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/local/lib/python3.11/site-packages/django/http/response.py", line 120, in __init__
+    content_type = f"text/html; charset={self.charset}"
+                                         ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/http/response.py", line 168, in charset
+    return settings.DEFAULT_CHARSET
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting DEFAULT_CHARSET, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 5476453 ===
+[2025-10-29 15:43:09] INFO: Container 35666c4560ad0f5c0c7c4bd4d478381d03be150164f22087bc990afba90cf291 has stopped

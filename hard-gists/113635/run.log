@@ -1,0 +1,17 @@
+=== Docker Run Log for 113635 ===
+Started at: Mi 29. Okt 11:55:48 CET 2025
+
+[2025-10-29 11:55:55] START: Running container for 113635
+[2025-10-29 11:55:55] SUCCESS: Container 4e96c57e70244682e276007938a5c723fb4e7002bd809cea399329b8a1da7d82 started for 113635
+=== Container logs for 113635 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 31, in <module>
+    HEADER_VALUE = getattr(settings, 'X_UA_COMPATIBLE', 'IE=edge')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting X_UA_COMPATIBLE, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 113635 ===
+[2025-10-29 11:55:57] INFO: Container 4e96c57e70244682e276007938a5c723fb4e7002bd809cea399329b8a1da7d82 has stopped

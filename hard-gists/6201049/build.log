@@ -1,0 +1,112 @@
+=== Docker Build Log for 6201049 ===
+Started at: Mi 29. Okt 16:26:52 CET 2025
+
+[2025-10-29 16:26:52] START: Building image for 6201049
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 285B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 6.35kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/6201049/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","gobject"]
+#7 2.209 Collecting gobject
+#7 2.252   Downloading gobject-0.1.0-py3-none-any.whl.metadata (775 bytes)
+#7 2.273 Downloading gobject-0.1.0-py3-none-any.whl (5.9 kB)
+#7 2.320 Installing collected packages: gobject
+#7 2.335 Successfully installed gobject-0.1.0
+#7 2.335 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.437 
+#7 2.437 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.437 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.6s
+
+#8 [4/7] RUN ["pip","install","six"]
+#8 0.523 Collecting six
+#8 0.565   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 0.585 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 0.632 Installing collected packages: six
+#8 0.672 Successfully installed six-1.17.0
+#8 0.672 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.677 
+#8 0.677 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.677 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.7s
+
+#9 [5/7] RUN ["pip","install","pytest"]
+#9 0.597 Collecting pytest
+#9 0.645   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#9 0.693 Collecting iniconfig>=1 (from pytest)
+#9 0.702   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#9 0.755 Collecting packaging>=20 (from pytest)
+#9 0.764   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#9 0.807 Collecting pluggy<2,>=1.5 (from pytest)
+#9 0.817   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#9 0.864 Collecting pygments>=2.7.2 (from pytest)
+#9 0.873   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#9 0.900 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#9 0.950    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 7.4 MB/s eta 0:00:00
+#9 0.958 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#9 0.974 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#9 0.985    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.9 MB/s eta 0:00:00
+#9 0.995 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#9 1.052 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#9 1.102    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 25.2 MB/s eta 0:00:00
+#9 1.153 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#9 1.935 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#9 1.935 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.940 
+#9 1.940 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.940 [notice] To update, run: pip install --upgrade pip
+#9 DONE 2.2s
+
+#10 [6/7] RUN ["pip","install","py"]
+#10 0.568 Collecting py
+#10 0.602   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#10 0.626 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#10 0.662    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.6 MB/s eta 0:00:00
+#10 0.711 Installing collected packages: py
+#10 0.794 Successfully installed py-1.11.0
+#10 0.794 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.799 
+#10 0.799 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.799 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.9s
+
+#11 [7/7] RUN ["pip","install","pynotify"]
+#11 0.549 Collecting pynotify
+#11 0.587   Downloading pynotify-0.1.1-py2.py3-none-any.whl.metadata (1.0 kB)
+#11 0.612 Downloading pynotify-0.1.1-py2.py3-none-any.whl (3.9 kB)
+#11 0.668 Installing collected packages: pynotify
+#11 0.703 Successfully installed pynotify-0.1.1
+#11 0.703 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.708 
+#11 0.708 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.708 [notice] To update, run: pip install --upgrade pip
+#11 DONE 0.8s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.2s done
+#12 writing image sha256:981558ac309bad5f4b903c5eabcda48465f400f3ee38293359892dc0a61156da done
+#12 naming to docker.io/library/test-image-6201049 done
+#12 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/ss15787661yg2b3ag6no5r24e
+[2025-10-29 16:27:00] SUCCESS: Build completed for 6201049

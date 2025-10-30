@@ -1,0 +1,20 @@
+=== Docker Run Log for 09cae53bf67ea8a39700 ===
+Started at: Mi 29. Okt 11:31:12 CET 2025
+
+[2025-10-29 11:31:17] START: Running container for 09cae53bf67ea8a39700
+[2025-10-29 11:31:17] SUCCESS: Container 95512d950dde3762bc7a7c2a0f61115484dae5ea8c582e00fed417b19dc82cce started for 09cae53bf67ea8a39700
+=== Container logs for 09cae53bf67ea8a39700 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 74, in <module>
+    save_all_images(BASE_WALLPAPER_URL, WALLPAPER_FOLDER)
+  File "/snippet.py", line 14, in save_all_images
+    image_links = get_images_links_from_html(html)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 49, in get_images_links_from_html
+    soup = BeautifulSoup(html, "lxml")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/bs4/__init__.py", line 366, in __init__
+    raise FeatureNotFound(
+bs4.exceptions.FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?
+=== End of logs for 09cae53bf67ea8a39700 ===
+[2025-10-29 11:31:19] INFO: Container 95512d950dde3762bc7a7c2a0f61115484dae5ea8c582e00fed417b19dc82cce has stopped

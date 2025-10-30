@@ -1,0 +1,352 @@
+=== Docker Build Log for 3359203 ===
+Started at: Mi 29. Okt 13:49:19 CET 2025
+
+[2025-10-29 13:49:19] START: Building image for 3359203
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 427B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.83kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/12] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/12] COPY hard-gists/3359203/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/12] RUN ["pip","install","maya"]
+#7 1.902 Collecting maya
+#7 1.936   Downloading maya-0.6.1-py2.py3-none-any.whl.metadata (7.1 kB)
+#7 1.987 Collecting humanize (from maya)
+#7 1.995   Downloading humanize-4.14.0-py3-none-any.whl.metadata (7.8 kB)
+#7 2.070 Collecting pytz (from maya)
+#7 2.078   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#7 2.121 Collecting dateparser>=0.7.0 (from maya)
+#7 2.129   Downloading dateparser-1.2.2-py3-none-any.whl.metadata (29 kB)
+#7 2.171 Collecting tzlocal (from maya)
+#7 2.179   Downloading tzlocal-5.3.1-py3-none-any.whl.metadata (7.6 kB)
+#7 2.255 Collecting pendulum>=2.0.2 (from maya)
+#7 2.263   Downloading pendulum-3.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#7 2.396 Collecting snaptime (from maya)
+#7 2.406   Downloading snaptime-0.2.4.tar.gz (2.9 kB)
+#7 2.418   Preparing metadata (setup.py): started
+#7 2.795   Preparing metadata (setup.py): finished with status 'done'
+#7 2.833 Collecting python-dateutil>=2.7.0 (from dateparser>=0.7.0->maya)
+#7 2.841   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#7 3.197 Collecting regex>=2024.9.11 (from dateparser>=0.7.0->maya)
+#7 3.205   Downloading regex-2025.10.23-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+#7 3.229      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.5/40.5 kB 1.4 MB/s eta 0:00:00
+#7 3.266 Collecting tzdata>=2020.1 (from pendulum>=2.0.2->maya)
+#7 3.274   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#7 3.317 Collecting six>=1.5 (from python-dateutil>=2.7.0->dateparser>=0.7.0->maya)
+#7 3.325   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 3.348 Downloading maya-0.6.1-py2.py3-none-any.whl (12 kB)
+#7 3.367 Downloading dateparser-1.2.2-py3-none-any.whl (315 kB)
+#7 3.392    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 315.5/315.5 kB 12.9 MB/s eta 0:00:00
+#7 3.401 Downloading pendulum-3.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (353 kB)
+#7 3.422    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 353.7/353.7 kB 18.5 MB/s eta 0:00:00
+#7 3.430 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#7 3.456    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 20.8 MB/s eta 0:00:00
+#7 3.464 Downloading tzlocal-5.3.1-py3-none-any.whl (18 kB)
+#7 3.483 Downloading humanize-4.14.0-py3-none-any.whl (132 kB)
+#7 3.497    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.1/132.1 kB 9.5 MB/s eta 0:00:00
+#7 3.506 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#7 3.522    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 15.1 MB/s eta 0:00:00
+#7 3.531 Downloading regex-2025.10.23-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (800 kB)
+#7 3.564    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 800.3/800.3 kB 25.1 MB/s eta 0:00:00
+#7 3.572 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#7 3.592    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 18.5 MB/s eta 0:00:00
+#7 3.600 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.626 Building wheels for collected packages: snaptime
+#7 3.627   Building wheel for snaptime (setup.py): started
+#7 3.782   Building wheel for snaptime (setup.py): finished with status 'done'
+#7 3.782   Created wheel for snaptime: filename=snaptime-0.2.4-py3-none-any.whl size=3605 sha256=3650069b47c38d93fae4086c030a23b078fc866e2bae9b5391ae00c0dba453cf
+#7 3.782   Stored in directory: /root/.cache/pip/wheels/af/cd/02/d3bb11d5c94237cbb0c7a2049d4ae314fdcbca899783d79d91
+#7 3.784 Successfully built snaptime
+#7 3.832 Installing collected packages: pytz, tzlocal, tzdata, six, regex, humanize, python-dateutil, snaptime, pendulum, dateparser, maya
+#7 4.461 Successfully installed dateparser-1.2.2 humanize-4.14.0 maya-0.6.1 pendulum-3.1.0 python-dateutil-2.9.0.post0 pytz-2025.2 regex-2025.10.23 six-1.17.0 snaptime-0.2.4 tzdata-2025.2 tzlocal-5.3.1
+#7 4.461 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.553 
+#7 4.553 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.553 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.9s
+
+#8 [ 4/12] RUN ["pip","install","di-py"]
+#8 0.515 Collecting di-py
+#8 0.547   Downloading di-py-1.2.0.tar.gz (13 kB)
+#8 0.565   Preparing metadata (setup.py): started
+#8 0.718   Preparing metadata (setup.py): finished with status 'done'
+#8 0.719 Building wheels for collected packages: di-py
+#8 0.724   Building wheel for di-py (setup.py): started
+#8 0.865   Building wheel for di-py (setup.py): finished with status 'done'
+#8 0.865   Created wheel for di-py: filename=di_py-1.2.0-py3-none-any.whl size=12208 sha256=11f2d8cd9dfac477cd76eb1cc2c45d1d1c4eb0bac1359c0b109fe4297bcc3a45
+#8 0.865   Stored in directory: /root/.cache/pip/wheels/b0/35/5b/bb45e77608f3c4681542d958f3efd437631caaf25ef90fa2eb
+#8 0.867 Successfully built di-py
+#8 0.913 Installing collected packages: di-py
+#8 0.934 Successfully installed di-py-1.2.0
+#8 0.934 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.939 
+#8 0.939 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.939 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.0s
+
+#9 [ 5/12] RUN ["pip","install","six"]
+#9 0.437 Requirement already satisfied: six in /usr/local/lib/python3.11/site-packages (1.17.0)
+#9 0.482 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.487 
+#9 0.487 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.487 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.6s
+
+#10 [ 6/12] RUN ["pip","install","pytest"]
+#10 0.551 Collecting pytest
+#10 0.585   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#10 0.625 Collecting iniconfig>=1 (from pytest)
+#10 0.634   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#10 0.687 Collecting packaging>=20 (from pytest)
+#10 0.695   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#10 0.742 Collecting pluggy<2,>=1.5 (from pytest)
+#10 0.750   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#10 0.800 Collecting pygments>=2.7.2 (from pytest)
+#10 0.808   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#10 0.836 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#10 0.875    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 9.6 MB/s eta 0:00:00
+#10 0.883 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#10 0.906 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#10 0.922    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 4.0 MB/s eta 0:00:00
+#10 0.930 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#10 0.947 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#10 1.006    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 20.9 MB/s eta 0:00:00
+#10 1.072 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#10 1.839 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#10 1.840 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.845 
+#10 1.845 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.845 [notice] To update, run: pip install --upgrade pip
+#10 DONE 2.0s
+
+#11 [ 7/12] RUN ["pip","install","py"]
+#11 0.526 Collecting py
+#11 0.568   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#11 0.596 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#11 0.631    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.8 MB/s eta 0:00:00
+#11 0.694 Installing collected packages: py
+#11 0.771 Successfully installed py-1.11.0
+#11 0.771 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.776 
+#11 0.776 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.776 [notice] To update, run: pip install --upgrade pip
+#11 DONE 0.9s
+
+#12 [ 8/12] RUN ["pip","install","enable"]
+#12 0.695 Collecting enable
+#12 0.828   Downloading enable-6.1.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (6.7 kB)
+#12 1.088 Collecting numpy (from enable)
+#12 1.100   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#12 1.127      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.1 MB/s eta 0:00:00
+#12 1.319 Collecting pillow (from enable)
+#12 1.329   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#12 1.417 Collecting traits>=6.2.0 (from enable)
+#12 1.427   Downloading traits-7.0.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.8 kB)
+#12 1.472 Collecting traitsui (from enable)
+#12 1.480   Downloading traitsui-8.0.0-py3-none-any.whl.metadata (6.8 kB)
+#12 1.522 Collecting pyface>=7.2.0 (from enable)
+#12 1.533   Downloading pyface-8.0.0-py3-none-any.whl.metadata (7.7 kB)
+#12 1.710 Collecting fonttools (from enable)
+#12 1.719   Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+#12 1.741      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.3/112.3 kB 5.2 MB/s eta 0:00:00
+#12 1.941 Downloading enable-6.1.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (7.7 MB)
+#12 2.917    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.7/7.7 MB 7.9 MB/s eta 0:00:00
+#12 2.926 Downloading pyface-8.0.0-py3-none-any.whl (1.3 MB)
+#12 2.994    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 19.6 MB/s eta 0:00:00
+#12 3.004 Downloading traits-7.0.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.1 MB)
+#12 3.216    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.1/5.1 MB 24.3 MB/s eta 0:00:00
+#12 3.226 Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#12 3.434    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 24.0 MB/s eta 0:00:00
+#12 3.443 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#12 4.147    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 21.1 MB/s eta 0:00:00
+#12 4.159 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#12 4.452    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 24.1 MB/s eta 0:00:00
+#12 4.461 Downloading traitsui-8.0.0-py3-none-any.whl (1.5 MB)
+#12 4.534    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 21.2 MB/s eta 0:00:00
+#12 4.794 Installing collected packages: traits, pillow, numpy, fonttools, pyface, traitsui, enable
+#12 8.943 Successfully installed enable-6.1.0 fonttools-4.60.1 numpy-2.3.4 pillow-12.0.0 pyface-8.0.0 traits-7.0.2 traitsui-8.0.0
+#12 8.943 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 8.948 
+#12 8.948 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 8.948 [notice] To update, run: pip install --upgrade pip
+#12 DONE 9.7s
+
+#13 [ 9/12] RUN ["pip","install","mayavi"]
+#13 0.725 Collecting mayavi
+#13 0.770   Downloading mayavi-4.8.3.tar.gz (7.1 MB)
+#13 1.110      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 21.0 MB/s eta 0:00:00
+#13 1.342   Installing build dependencies: started
+#13 14.45   Installing build dependencies: finished with status 'done'
+#13 14.45   Getting requirements to build wheel: started
+#13 14.82   Getting requirements to build wheel: finished with status 'done'
+#13 14.82   Preparing metadata (pyproject.toml): started
+#13 15.13   Preparing metadata (pyproject.toml): finished with status 'done'
+#13 15.16 Collecting apptools (from mayavi)
+#13 15.17   Downloading apptools-5.3.1-py3-none-any.whl.metadata (4.8 kB)
+#13 15.21 Collecting configobj (from mayavi)
+#13 15.22   Downloading configobj-5.0.9-py2.py3-none-any.whl.metadata (3.2 kB)
+#13 15.26 Collecting envisage (from mayavi)
+#13 15.27   Downloading envisage-7.0.4-py3-none-any.whl.metadata (5.2 kB)
+#13 15.29 Requirement already satisfied: numpy in /usr/local/lib/python3.11/site-packages (from mayavi) (2.3.4)
+#13 15.30 Requirement already satisfied: pyface>=6.1.1 in /usr/local/lib/python3.11/site-packages (from mayavi) (8.0.0)
+#13 15.30 Requirement already satisfied: pygments in /usr/local/lib/python3.11/site-packages (from mayavi) (2.19.2)
+#13 15.30 Requirement already satisfied: traits>=6.0.0 in /usr/local/lib/python3.11/site-packages (from mayavi) (7.0.2)
+#13 15.30 Requirement already satisfied: traitsui>=7.0.0 in /usr/local/lib/python3.11/site-packages (from mayavi) (8.0.0)
+#13 15.30 Requirement already satisfied: packaging in /usr/local/lib/python3.11/site-packages (from mayavi) (25.0)
+#13 15.34 Collecting vtk (from mayavi)
+#13 15.34   Using cached vtk-9.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.6 kB)
+#13 15.38 Collecting puremagic (from mayavi)
+#13 15.38   Downloading puremagic-1.30-py3-none-any.whl.metadata (5.8 kB)
+#13 15.43 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from envisage->mayavi) (79.0.1)
+#13 15.56 Collecting matplotlib>=2.0.0 (from vtk->mayavi)
+#13 15.57   Using cached matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#13 15.67 Collecting contourpy>=1.0.1 (from matplotlib>=2.0.0->vtk->mayavi)
+#13 15.67   Using cached contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#13 15.69 Collecting cycler>=0.10 (from matplotlib>=2.0.0->vtk->mayavi)
+#13 15.69   Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#13 15.69 Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.11/site-packages (from matplotlib>=2.0.0->vtk->mayavi) (4.60.1)
+#13 15.75 Collecting kiwisolver>=1.3.1 (from matplotlib>=2.0.0->vtk->mayavi)
+#13 15.75   Using cached kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+#13 15.76 Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.11/site-packages (from matplotlib>=2.0.0->vtk->mayavi) (12.0.0)
+#13 15.80 Collecting pyparsing>=3 (from matplotlib>=2.0.0->vtk->mayavi)
+#13 15.80   Using cached pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#13 15.80 Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.11/site-packages (from matplotlib>=2.0.0->vtk->mayavi) (2.9.0.post0)
+#13 15.88 Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.11/site-packages (from python-dateutil>=2.7->matplotlib>=2.0.0->vtk->mayavi) (1.17.0)
+#13 15.89 Downloading apptools-5.3.1-py3-none-any.whl (230 kB)
+#13 15.92    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 230.1/230.1 kB 9.1 MB/s eta 0:00:00
+#13 15.93 Downloading configobj-5.0.9-py2.py3-none-any.whl (35 kB)
+#13 15.95 Downloading envisage-7.0.4-py3-none-any.whl (270 kB)
+#13 15.97    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 270.0/270.0 kB 11.9 MB/s eta 0:00:00
+#13 15.98 Downloading puremagic-1.30-py3-none-any.whl (43 kB)
+#13 15.99    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.3/43.3 kB 3.4 MB/s eta 0:00:00
+#13 16.00 Using cached vtk-9.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (112.2 MB)
+#13 16.12 Using cached matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+#13 16.13 Using cached contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+#13 16.13 Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#13 16.13 Using cached kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+#13 16.14 Using cached pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#13 16.39 Building wheels for collected packages: mayavi
+#13 16.40   Building wheel for mayavi (pyproject.toml): started
+#13 27.45   Building wheel for mayavi (pyproject.toml): finished with status 'done'
+#13 27.48   Created wheel for mayavi: filename=mayavi-4.8.3-cp311-cp311-linux_x86_64.whl size=20060773 sha256=98c41538809ad29f62f0784687d7f2687a77028d026e38c388d3582939e17517
+#13 27.48   Stored in directory: /root/.cache/pip/wheels/bd/1b/a2/5289a7ad14e4698c96fb1b709a198b4fa82a4128071cc8b315
+#13 27.49 Successfully built mayavi
+#13 27.67 Installing collected packages: puremagic, pyparsing, kiwisolver, cycler, contourpy, configobj, apptools, matplotlib, vtk, envisage, mayavi
+#13 30.98 Successfully installed apptools-5.3.1 configobj-5.0.9 contourpy-1.3.3 cycler-0.12.1 envisage-7.0.4 kiwisolver-1.4.9 matplotlib-3.10.7 mayavi-4.8.3 puremagic-1.30 pyparsing-3.2.5 vtk-9.5.2
+#13 30.98 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 30.99 
+#13 30.99 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 30.99 [notice] To update, run: pip install --upgrade pip
+#13 DONE 35.1s
+
+#14 [10/12] RUN ["pip","install","vt"]
+#14 0.620 Collecting vt
+#14 0.661   Downloading vt-3.1.3.7.tar.gz (44 kB)
+#14 0.687      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.3/44.3 kB 1.5 MB/s eta 0:00:00
+#14 0.691   Preparing metadata (setup.py): started
+#14 0.818   Preparing metadata (setup.py): finished with status 'done'
+#14 0.872 Collecting requests>=2.5.0 (from vt)
+#14 0.881   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#14 0.898 Requirement already satisfied: python-dateutil>=1.5 in /usr/local/lib/python3.11/site-packages (from vt) (2.9.0.post0)
+#14 0.927 Collecting olefile>=0.42 (from vt)
+#14 0.937   Downloading olefile-0.47-py2.py3-none-any.whl.metadata (9.7 kB)
+#14 0.986 Collecting texttable (from vt)
+#14 0.996   Downloading texttable-1.7.0-py2.py3-none-any.whl.metadata (9.8 kB)
+#14 1.155 Collecting HTMLParser (from vt)
+#14 1.165   Downloading HTMLParser-0.0.2.tar.gz (6.0 kB)
+#14 1.181   Preparing metadata (setup.py): started
+#14 1.321   Preparing metadata (setup.py): finished with status 'done'
+#14 1.322 Requirement already satisfied: six in /usr/local/lib/python3.11/site-packages (from vt) (1.17.0)
+#14 1.430 Collecting charset_normalizer<4,>=2 (from requests>=2.5.0->vt)
+#14 1.439   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#14 1.488 Collecting idna<4,>=2.5 (from requests>=2.5.0->vt)
+#14 1.496   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#14 1.562 Collecting urllib3<3,>=1.21.1 (from requests>=2.5.0->vt)
+#14 1.575   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#14 1.623 Collecting certifi>=2017.4.17 (from requests>=2.5.0->vt)
+#14 1.631   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#14 1.660 Downloading olefile-0.47-py2.py3-none-any.whl (114 kB)
+#14 1.685    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.6/114.6 kB 4.5 MB/s eta 0:00:00
+#14 1.694 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#14 1.718    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 2.5 MB/s eta 0:00:00
+#14 1.726 Downloading texttable-1.7.0-py2.py3-none-any.whl (10 kB)
+#14 1.749 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#14 1.764    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 11.6 MB/s eta 0:00:00
+#14 1.773 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#14 1.787    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.8 MB/s eta 0:00:00
+#14 1.799 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#14 1.817    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 3.8 MB/s eta 0:00:00
+#14 1.825 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#14 1.839    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.9 MB/s eta 0:00:00
+#14 1.847 Building wheels for collected packages: vt, HTMLParser
+#14 1.852   Building wheel for vt (setup.py): started
+#14 2.007   Building wheel for vt (setup.py): finished with status 'done'
+#14 2.007   Created wheel for vt: filename=vt-3.1.3.7-py3-none-any.whl size=39446 sha256=8ed57df1f0647a85061d8adc082d5cdd7da9055e21b4937a6d395d632e05ab7d
+#14 2.007   Stored in directory: /root/.cache/pip/wheels/4f/59/13/025527d8ffb565bd8d9925761659c6afbbcd9c39287bf3c9c4
+#14 2.009   Building wheel for HTMLParser (setup.py): started
+#14 2.151   Building wheel for HTMLParser (setup.py): finished with status 'done'
+#14 2.151   Created wheel for HTMLParser: filename=htmlparser-0.0.2-py3-none-any.whl size=6033 sha256=d4174d3228ef4fd3887b623a31bc38fcbac8193f63852f7b4ef61ba410030853
+#14 2.152   Stored in directory: /root/.cache/pip/wheels/a4/3b/1a/c6cf6093dcb4a243bebf253c48acd3ffa93c8c48685a4fbb05
+#14 2.153 Successfully built vt HTMLParser
+#14 2.340 Installing collected packages: texttable, HTMLParser, urllib3, olefile, idna, charset_normalizer, certifi, requests, vt
+#14 2.664 Successfully installed HTMLParser-0.0.2 certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 olefile-0.47 requests-2.32.5 texttable-1.7.0 urllib3-2.5.0 vt-3.1.3.7
+#14 2.665 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#14 2.670 
+#14 2.670 [notice] A new release of pip is available: 24.0 -> 25.3
+#14 2.670 [notice] To update, run: pip install --upgrade pip
+#14 DONE 2.8s
+
+#15 [11/12] RUN ["pip","install","pyface"]
+#15 0.524 Requirement already satisfied: pyface in /usr/local/lib/python3.11/site-packages (8.0.0)
+#15 0.536 Requirement already satisfied: traits>=6.2 in /usr/local/lib/python3.11/site-packages (from pyface) (7.0.2)
+#15 0.717 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#15 0.722 
+#15 0.722 [notice] A new release of pip is available: 24.0 -> 25.3
+#15 0.722 [notice] To update, run: pip install --upgrade pip
+#15 DONE 0.8s
+
+#16 [12/12] RUN ["pip","install","vtk"]
+#16 0.451 Requirement already satisfied: vtk in /usr/local/lib/python3.11/site-packages (9.5.2)
+#16 0.455 Requirement already satisfied: matplotlib>=2.0.0 in /usr/local/lib/python3.11/site-packages (from vtk) (3.10.7)
+#16 0.461 Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.11/site-packages (from matplotlib>=2.0.0->vtk) (1.3.3)
+#16 0.462 Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.11/site-packages (from matplotlib>=2.0.0->vtk) (0.12.1)
+#16 0.465 Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.11/site-packages (from matplotlib>=2.0.0->vtk) (4.60.1)
+#16 0.466 Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.11/site-packages (from matplotlib>=2.0.0->vtk) (1.4.9)
+#16 0.471 Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.11/site-packages (from matplotlib>=2.0.0->vtk) (2.3.4)
+#16 0.471 Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.11/site-packages (from matplotlib>=2.0.0->vtk) (25.0)
+#16 0.472 Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.11/site-packages (from matplotlib>=2.0.0->vtk) (12.0.0)
+#16 0.473 Requirement already satisfied: pyparsing>=3 in /usr/local/lib/python3.11/site-packages (from matplotlib>=2.0.0->vtk) (3.2.5)
+#16 0.474 Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.11/site-packages (from matplotlib>=2.0.0->vtk) (2.9.0.post0)
+#16 0.524 Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.11/site-packages (from python-dateutil>=2.7->matplotlib>=2.0.0->vtk) (1.17.0)
+#16 0.699 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#16 0.704 
+#16 0.704 [notice] A new release of pip is available: 24.0 -> 25.3
+#16 0.704 [notice] To update, run: pip install --upgrade pip
+#16 DONE 0.8s
+
+#17 exporting to image
+#17 exporting layers
+#17 exporting layers 2.6s done
+#17 writing image sha256:44c12637459875021782708af766b247e430b4911fe0f0f3a8609d001895da8e done
+#17 naming to docker.io/library/test-image-3359203 done
+#17 DONE 2.7s
+
+View build details: docker-desktop://dashboard/build/default/default/say7lbkh8aqlfat63gow7yywl
+[2025-10-29 13:50:21] SUCCESS: Build completed for 3359203

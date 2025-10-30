@@ -1,0 +1,19 @@
+=== Docker Run Log for 5722696 ===
+Started at: Mi 29. Okt 15:56:10 CET 2025
+
+[2025-10-29 15:56:15] START: Running container for 5722696
+[2025-10-29 15:56:15] SUCCESS: Container 3f98598e7f9ad40b8894094938cf1d27d3f674e027ffd1a6493eb5f39c0c9ae9 started for 5722696
+=== Container logs for 5722696 ===
+/snippet.py:17: DeprecationWarning: 'cgi' is deprecated and slated for removal in Python 3.13
+  import cgi
+Traceback (most recent call last):
+  File "/snippet.py", line 40, in <module>
+    keychain_process = subprocess.Popen(["security", "find-internet-password", "-s", "pinboard.in", "-w"],
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/lib/python3.11/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'security'
+=== End of logs for 5722696 ===
+[2025-10-29 15:56:17] INFO: Container 3f98598e7f9ad40b8894094938cf1d27d3f674e027ffd1a6493eb5f39c0c9ae9 has stopped

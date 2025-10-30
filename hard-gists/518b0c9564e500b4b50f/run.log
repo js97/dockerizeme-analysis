@@ -1,0 +1,17 @@
+=== Docker Run Log for 518b0c9564e500b4b50f ===
+Started at: Mi 29. Okt 15:25:35 CET 2025
+
+[2025-10-29 15:26:57] START: Running container for 518b0c9564e500b4b50f
+[2025-10-29 15:26:57] SUCCESS: Container daa32431aa94e9b433a8a2cc8dc6f9ac3c0b09f8a6d00f2470fa7a1db4a51b94 started for 518b0c9564e500b4b50f
+=== Container logs for 518b0c9564e500b4b50f ===
+2025-10-29 14:26:58.139534: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-10-29 14:26:58.173323: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-29 14:26:59.584864: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Traceback (most recent call last):
+  File "/snippet.py", line 6, in <module>
+    filename_queue = tf.train.string_input_producer(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'tensorflow._api.v2.train' has no attribute 'string_input_producer'
+=== End of logs for 518b0c9564e500b4b50f ===
+[2025-10-29 15:26:59] INFO: Container daa32431aa94e9b433a8a2cc8dc6f9ac3c0b09f8a6d00f2470fa7a1db4a51b94 has stopped

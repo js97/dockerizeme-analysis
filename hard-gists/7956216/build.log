@@ -1,0 +1,162 @@
+=== Docker Build Log for 7956216 ===
+Started at: Mi 29. Okt 17:23:13 CET 2025
+
+[2025-10-29 17:23:13] START: Building image for 7956216
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 262B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.41kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/6] COPY hard-gists/7956216/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/6] RUN ["pip","install","webvirtmgr"]
+#7 1.995 Collecting webvirtmgr
+#7 2.032   Downloading webvirtmgr-4.8.9.tar.gz (705 kB)
+#7 2.081      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 705.8/705.8 kB 15.2 MB/s eta 0:00:00
+#7 2.117   Preparing metadata (setup.py): started
+#7 2.524   Preparing metadata (setup.py): finished with status 'done'
+#7 2.529 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from webvirtmgr) (79.0.1)
+#7 2.644 Collecting django>=1.5.5 (from webvirtmgr)
+#7 2.652   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.696 Collecting gunicorn>=18.0 (from webvirtmgr)
+#7 2.705   Downloading gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+#7 2.743 Collecting lockfile>=0.9 (from webvirtmgr)
+#7 2.751   Downloading lockfile-0.12.2-py2.py3-none-any.whl.metadata (2.4 kB)
+#7 2.798 Collecting asgiref>=3.8.1 (from django>=1.5.5->webvirtmgr)
+#7 2.805   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.845 Collecting sqlparse>=0.3.1 (from django>=1.5.5->webvirtmgr)
+#7 2.854   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.903 Collecting packaging (from gunicorn>=18.0->webvirtmgr)
+#7 2.911   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#7 2.964 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.271    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 27.2 MB/s eta 0:00:00
+#7 3.279 Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB)
+#7 3.291    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.0/85.0 kB 7.4 MB/s eta 0:00:00
+#7 3.299 Downloading lockfile-0.12.2-py2.py3-none-any.whl (13 kB)
+#7 3.315 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.334 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.345    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.6 MB/s eta 0:00:00
+#7 3.354 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#7 3.366    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.5 MB/s eta 0:00:00
+#7 3.410 Building wheels for collected packages: webvirtmgr
+#7 3.411   Building wheel for webvirtmgr (setup.py): started
+#7 3.711   Building wheel for webvirtmgr (setup.py): finished with status 'done'
+#7 3.713   Created wheel for webvirtmgr: filename=webvirtmgr-4.8.9-py3-none-any.whl size=698037 sha256=c1a2e0b35672bdbdc4c183decbbcf1b653b9656521344863c080d76896948873
+#7 3.713   Stored in directory: /root/.cache/pip/wheels/c7/67/ab/a716fc1b614ea6bb537a20a0b880eb7071514208cc442aeac3
+#7 3.714 Successfully built webvirtmgr
+#7 3.782 Installing collected packages: lockfile, sqlparse, packaging, asgiref, gunicorn, django, webvirtmgr
+#7 5.393 Successfully installed asgiref-3.10.0 django-5.2.7 gunicorn-23.0.0 lockfile-0.12.2 packaging-25.0 sqlparse-0.5.3 webvirtmgr-4.8.9
+#7 5.394 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.491 
+#7 5.491 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.491 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.0s
+
+#8 [4/6] RUN ["pip","install","image"]
+#8 0.555 Collecting image
+#8 0.596   Downloading image-1.5.33.tar.gz (15 kB)
+#8 0.620   Preparing metadata (setup.py): started
+#8 0.742   Preparing metadata (setup.py): finished with status 'done'
+#8 0.953 Collecting pillow (from image)
+#8 0.965   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#8 0.982 Requirement already satisfied: django in /usr/local/lib/python3.11/site-packages (from image) (5.2.7)
+#8 1.029 Collecting six (from image)
+#8 1.037   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 1.050 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from django->image) (3.10.0)
+#8 1.051 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from django->image) (0.5.3)
+#8 1.079 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#8 1.363    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 25.1 MB/s eta 0:00:00
+#8 1.373 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 1.400 Building wheels for collected packages: image
+#8 1.405   Building wheel for image (setup.py): started
+#8 1.553   Building wheel for image (setup.py): finished with status 'done'
+#8 1.553   Created wheel for image: filename=image-1.5.33-py2.py3-none-any.whl size=19554 sha256=afbc80be1bdbb8e50fed8a2c19713ce221c0a0bda1e9b568d7b195a2cb354974
+#8 1.553   Stored in directory: /root/.cache/pip/wheels/62/40/4f/3c9a8d0f22a1a6f966975a460e5cb509a1e7dc42e2ce5d9a6d
+#8 1.555 Successfully built image
+#8 1.624 Installing collected packages: six, pillow, image
+#8 1.929 Successfully installed image-1.5.33 pillow-12.0.0 six-1.17.0
+#8 1.929 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.934 
+#8 1.934 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.934 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.1s
+
+#9 [5/6] RUN ["pip","install","photos"]
+#9 0.532 Collecting photos
+#9 0.570   Downloading photos-0.0.5-py3-none-any.whl.metadata (600 bytes)
+#9 0.625 Collecting click>=7.0 (from photos)
+#9 0.633   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#9 0.685 Collecting colorama>=0.4.0 (from photos)
+#9 0.694   Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+#9 0.735 Collecting ExifRead (from photos)
+#9 0.745   Downloading exifread-3.5.1-py3-none-any.whl.metadata (10 kB)
+#9 0.789 Collecting filesystemlib (from photos)
+#9 0.799   Downloading filesystemlib-0.1.0-py3-none-any.whl.metadata (532 bytes)
+#9 0.842 Collecting pyheif (from photos)
+#9 0.852   Downloading pyheif-0.8.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.7 kB)
+#9 1.011 Collecting cffi>=1.0.0 (from pyheif->photos)
+#9 1.024   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+#9 1.072 Collecting pycparser (from cffi>=1.0.0->pyheif->photos)
+#9 1.080   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+#9 1.103 Downloading photos-0.0.5-py3-none-any.whl (6.5 kB)
+#9 1.129 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#9 1.154    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 4.3 MB/s eta 0:00:00
+#9 1.163 Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+#9 1.185 Downloading exifread-3.5.1-py3-none-any.whl (59 kB)
+#9 1.197    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.7/59.7 kB 5.0 MB/s eta 0:00:00
+#9 1.206 Downloading filesystemlib-0.1.0-py3-none-any.whl (6.5 kB)
+#9 1.226 Downloading pyheif-0.8.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.3 MB)
+#9 1.425    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 26.8 MB/s eta 0:00:00
+#9 1.434 Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+#9 1.451    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 14.3 MB/s eta 0:00:00
+#9 1.459 Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+#9 1.472    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 9.1 MB/s eta 0:00:00
+#9 1.561 Installing collected packages: pycparser, filesystemlib, ExifRead, colorama, click, cffi, pyheif, photos
+#9 1.963 Successfully installed ExifRead-3.5.1 cffi-2.0.0 click-8.3.0 colorama-0.4.6 filesystemlib-0.1.0 photos-0.0.5 pycparser-2.23 pyheif-0.8.0
+#9 1.963 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.968 
+#9 1.968 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.968 [notice] To update, run: pip install --upgrade pip
+#9 DONE 2.2s
+
+#10 [6/6] RUN ["pip","install","console"]
+#10 0.544 Collecting console
+#10 0.581   Downloading console-0.9912-py3-none-any.whl.metadata (18 kB)
+#10 0.634 Collecting ezenv>=0.92 (from console)
+#10 0.643   Downloading ezenv-0.92-py2.py3-none-any.whl.metadata (13 kB)
+#10 0.671 Downloading console-0.9912-py3-none-any.whl (96 kB)
+#10 0.696    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.8/96.8 kB 3.8 MB/s eta 0:00:00
+#10 0.706 Downloading ezenv-0.92-py2.py3-none-any.whl (10 kB)
+#10 0.787 Installing collected packages: ezenv, console
+#10 0.889 Successfully installed console-0.9912 ezenv-0.92
+#10 0.889 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.895 
+#10 0.895 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.895 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.0s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 0.7s done
+#11 writing image sha256:ae9148ad5d88026932c68c01e4d93de91871af890d5af40b27f003ed06e2b275 done
+#11 naming to docker.io/library/test-image-7956216 done
+#11 DONE 0.7s
+
+View build details: docker-desktop://dashboard/build/default/default/oansm75s79c46gl77xbc2qy9l
+[2025-10-29 17:23:26] SUCCESS: Build completed for 7956216

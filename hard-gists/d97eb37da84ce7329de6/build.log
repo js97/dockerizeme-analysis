@@ -1,0 +1,158 @@
+=== Docker Build Log for d97eb37da84ce7329de6 ===
+Started at: Mi 29. Okt 20:28:32 CET 2025
+
+[2025-10-29 20:28:32] START: Building image for d97eb37da84ce7329de6
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 241B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.89kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/d97eb37da84ce7329de6/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","numpy"]
+#7 2.149 Collecting numpy
+#7 2.185   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.212      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.0 MB/s eta 0:00:00
+#7 2.231 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 2.860    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 25.3 MB/s eta 0:00:00
+#7 2.936 Installing collected packages: numpy
+#7 4.325 Successfully installed numpy-2.3.4
+#7 4.325 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.418 
+#7 4.418 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.418 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.0s
+
+#8 [4/5] RUN ["pip","install","matplotlib"]
+#8 0.656 Collecting matplotlib
+#8 0.692   Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#8 0.794 Collecting contourpy>=1.0.1 (from matplotlib)
+#8 0.804   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#8 0.843 Collecting cycler>=0.10 (from matplotlib)
+#8 0.851   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#8 1.025 Collecting fonttools>=4.22.0 (from matplotlib)
+#8 1.035   Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+#8 1.074      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.3/112.3 kB 2.7 MB/s eta 0:00:00
+#8 1.147 Collecting kiwisolver>=1.3.1 (from matplotlib)
+#8 1.157   Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+#8 1.172 Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.11/site-packages (from matplotlib) (2.3.4)
+#8 1.225 Collecting packaging>=20.0 (from matplotlib)
+#8 1.233   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 1.418 Collecting pillow>=8 (from matplotlib)
+#8 1.427   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#8 1.484 Collecting pyparsing>=3 (from matplotlib)
+#8 1.493   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#8 1.534 Collecting python-dateutil>=2.7 (from matplotlib)
+#8 1.542   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#8 1.633 Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib)
+#8 1.642   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 1.665 Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+#8 2.008    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 25.6 MB/s eta 0:00:00
+#8 2.019 Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+#8 2.040    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 355.2/355.2 kB 17.3 MB/s eta 0:00:00
+#8 2.048 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#8 2.069 Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#8 2.262    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 26.0 MB/s eta 0:00:00
+#8 2.273 Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+#8 2.330    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 25.7 MB/s eta 0:00:00
+#8 2.338 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 2.350    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 6.0 MB/s eta 0:00:00
+#8 2.361 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#8 2.643    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 25.0 MB/s eta 0:00:00
+#8 2.652 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#8 2.667    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 8.3 MB/s eta 0:00:00
+#8 2.676 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#8 2.692    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 16.1 MB/s eta 0:00:00
+#8 2.702 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 2.879 Installing collected packages: six, pyparsing, pillow, packaging, kiwisolver, fonttools, cycler, contourpy, python-dateutil, matplotlib
+#8 4.904 Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.60.1 kiwisolver-1.4.9 matplotlib-3.10.7 packaging-25.0 pillow-12.0.0 pyparsing-3.2.5 python-dateutil-2.9.0.post0 six-1.17.0
+#8 4.904 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 4.909 
+#8 4.909 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 4.909 [notice] To update, run: pip install --upgrade pip
+#8 DONE 5.6s
+
+#9 [5/5] RUN ["pip","install","FiPy"]
+#9 0.617 Collecting FiPy
+#9 0.753   Downloading fipy-4.0.1-py3-none-any.whl.metadata (9.0 kB)
+#9 0.785 Requirement already satisfied: numpy in /usr/local/lib/python3.11/site-packages (from FiPy) (2.3.4)
+#9 0.925 Collecting scipy (from FiPy)
+#9 0.934   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#9 0.973      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 1.4 MB/s eta 0:00:00
+#9 0.982 Requirement already satisfied: matplotlib in /usr/local/lib/python3.11/site-packages (from FiPy) (3.10.7)
+#9 1.021 Collecting typer (from FiPy)
+#9 1.029   Downloading typer-0.20.0-py3-none-any.whl.metadata (16 kB)
+#9 1.047 Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.11/site-packages (from matplotlib->FiPy) (1.3.3)
+#9 1.048 Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.11/site-packages (from matplotlib->FiPy) (0.12.1)
+#9 1.051 Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.11/site-packages (from matplotlib->FiPy) (4.60.1)
+#9 1.052 Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.11/site-packages (from matplotlib->FiPy) (1.4.9)
+#9 1.055 Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.11/site-packages (from matplotlib->FiPy) (25.0)
+#9 1.056 Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.11/site-packages (from matplotlib->FiPy) (12.0.0)
+#9 1.057 Requirement already satisfied: pyparsing>=3 in /usr/local/lib/python3.11/site-packages (from matplotlib->FiPy) (3.2.5)
+#9 1.058 Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.11/site-packages (from matplotlib->FiPy) (2.9.0.post0)
+#9 1.119 Collecting click>=8.0.0 (from typer->FiPy)
+#9 1.128   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#9 1.178 Collecting typing-extensions>=3.7.4.3 (from typer->FiPy)
+#9 1.186   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#9 1.230 Collecting shellingham>=1.3.0 (from typer->FiPy)
+#9 1.237   Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+#9 1.314 Collecting rich>=10.11.0 (from typer->FiPy)
+#9 1.322   Downloading rich-14.2.0-py3-none-any.whl.metadata (18 kB)
+#9 1.397 Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.11/site-packages (from python-dateutil>=2.7->matplotlib->FiPy) (1.17.0)
+#9 1.429 Collecting markdown-it-py>=2.2.0 (from rich>=10.11.0->typer->FiPy)
+#9 1.437   Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+#9 1.486 Collecting pygments<3.0.0,>=2.13.0 (from rich>=10.11.0->typer->FiPy)
+#9 1.494   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#9 1.550 Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=10.11.0->typer->FiPy)
+#9 1.559   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+#9 1.852 Downloading fipy-4.0.1-py3-none-any.whl (449 kB)
+#9 1.913    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 449.0/449.0 kB 7.5 MB/s eta 0:00:00
+#9 1.945 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#9 3.814    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 17.8 MB/s eta 0:00:00
+#9 3.824 Downloading typer-0.20.0-py3-none-any.whl (47 kB)
+#9 3.834    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.0/47.0 kB 4.0 MB/s eta 0:00:00
+#9 3.842 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#9 3.855    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 8.6 MB/s eta 0:00:00
+#9 3.864 Downloading rich-14.2.0-py3-none-any.whl (243 kB)
+#9 3.886    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.4/243.4 kB 11.7 MB/s eta 0:00:00
+#9 3.894 Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+#9 3.915 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#9 3.926    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.7 MB/s eta 0:00:00
+#9 3.939 Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+#9 3.950    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.3/87.3 kB 7.8 MB/s eta 0:00:00
+#9 3.959 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#9 4.031    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 17.2 MB/s eta 0:00:00
+#9 4.039 Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+#9 4.266 Installing collected packages: typing-extensions, shellingham, scipy, pygments, mdurl, click, markdown-it-py, rich, typer, FiPy
+#9 7.979 Successfully installed FiPy-4.0.1 click-8.3.0 markdown-it-py-4.0.0 mdurl-0.1.2 pygments-2.19.2 rich-14.2.0 scipy-1.16.3 shellingham-1.5.4 typer-0.20.0 typing-extensions-4.15.0
+#9 7.980 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 7.985 
+#9 7.985 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 7.985 [notice] To update, run: pip install --upgrade pip
+#9 DONE 9.1s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.8s done
+#10 writing image sha256:441219ac13a45658ccf2fd27b2aeaf12bba0d09fd4cd411e67ca7a6322872957 done
+#10 naming to docker.io/library/test-image-d97eb37da84ce7329de6 done
+#10 DONE 0.9s
+
+View build details: docker-desktop://dashboard/build/default/default/n5zg0y0v4zy2h5ly399j6ocx6
+[2025-10-29 20:28:53] SUCCESS: Build completed for d97eb37da84ce7329de6

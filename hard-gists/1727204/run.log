@@ -1,0 +1,21 @@
+=== Docker Run Log for 1727204 ===
+Started at: Mi 29. Okt 12:26:00 CET 2025
+
+[2025-10-29 12:26:10] START: Running container for 1727204
+[2025-10-29 12:26:10] SUCCESS: Container c2be0c04bf50c1dea9d569c26a53a5198e34a6eec4620850ca3da349a3bd4fb4 started for 1727204
+=== Container logs for 1727204 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 19, in <module>
+    from haystack.backends.whoosh_backend import WhooshEngine, WhooshSearchBackend
+  File "/usr/local/lib/python3.11/site-packages/haystack/__init__.py", line 7, in <module>
+    from haystack.constants import DEFAULT_ALIAS
+  File "/usr/local/lib/python3.11/site-packages/haystack/constants.py", line 6, in <module>
+    ID = getattr(settings, "HAYSTACK_ID_FIELD", "id")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting HAYSTACK_ID_FIELD, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 1727204 ===
+[2025-10-29 12:26:12] INFO: Container c2be0c04bf50c1dea9d569c26a53a5198e34a6eec4620850ca3da349a3bd4fb4 has stopped

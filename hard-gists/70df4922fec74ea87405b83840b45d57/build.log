@@ -1,0 +1,92 @@
+=== Docker Build Log for 70df4922fec74ea87405b83840b45d57 ===
+Started at: Mi 29. Okt 16:59:21 CET 2025
+
+[2025-10-29 16:59:21] START: Building image for 70df4922fec74ea87405b83840b45d57
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.92kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.13kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/47] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/47] COPY hard-gists/70df4922fec74ea87405b83840b45d57/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/47] RUN ["apt-get","update"]
+#7 0.298 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.298 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.307 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.321 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.650 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.652 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.411 Fetched 9833 kB in 1s (8507 kB/s)
+#7 1.411 Reading package lists...
+#7 DONE 2.2s
+
+#8 [ 4/47] RUN ["pip","install","opencv-contrib-python"]
+#8 2.224 Collecting opencv-contrib-python
+#8 2.258   Downloading opencv_contrib_python-4.12.0.88-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (19 kB)
+#8 2.498 Collecting numpy<2.3.0,>=2 (from opencv-contrib-python)
+#8 2.508   Downloading numpy-2.2.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+#8 2.532      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.4 MB/s eta 0:00:00
+#8 2.553 Downloading opencv_contrib_python-4.12.0.88-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (73.2 MB)
+#8 5.222    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.2/73.2 MB 14.8 MB/s eta 0:00:00
+#8 5.233 Downloading numpy-2.2.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+#8 5.863    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 24.3 MB/s eta 0:00:00
+#8 6.140 Installing collected packages: numpy, opencv-contrib-python
+#8 8.934 Successfully installed numpy-2.2.6 opencv-contrib-python-4.12.0.88
+#8 8.934 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 9.046 
+#8 9.046 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 9.046 [notice] To update, run: pip install --upgrade pip
+#8 DONE 10.3s
+
+#9 [ 5/47] RUN ["apt-get","install","-y","python-pip"]
+#9 0.267 Reading package lists...
+#9 0.798 Building dependency tree...
+#9 0.925 Reading state information...
+#9 0.942 Package python-pip is not available, but is referred to by another package.
+#9 0.942 This may mean that the package is missing, has been obsoleted, or
+#9 0.942 is only available from another source
+#9 0.942 However the following packages replace it:
+#9 0.942   python3-pip
+#9 0.942 
+#9 0.945 E: Package 'python-pip' has no installation candidate
+#9 ERROR: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+------
+ > [ 5/47] RUN ["apt-get","install","-y","python-pip"]:
+
+
+0.942 Package python-pip is not available, but is referred to by another package.
+0.942 This may mean that the package is missing, has been obsoleted, or
+0.942 is only available from another source
+0.942 However the following packages replace it:
+0.942   python3-pip
+0.942 
+0.945 E: Package 'python-pip' has no installation candidate
+------
+Dockerfile:5
+--------------------
+   3 |     RUN ["apt-get","update"]
+   4 |     RUN ["pip","install","opencv-contrib-python"]
+   5 | >>> RUN ["apt-get","install","-y","python-pip"]
+   6 |     RUN ["apt-get","install","-y","python-dev"]
+   7 |     RUN ["apt-get","install","-y","git"]
+--------------------
+ERROR: failed to build: failed to solve: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/default/default/s8kbndie4353t8caw27srpmdj
+[2025-10-29 16:59:35] ERROR: Build failed for 70df4922fec74ea87405b83840b45d57

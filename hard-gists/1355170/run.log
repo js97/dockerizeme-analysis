@@ -1,0 +1,12 @@
+=== Docker Run Log for 1355170 ===
+Started at: Mi 29. Okt 12:09:01 CET 2025
+
+[2025-10-29 12:09:07] START: Running container for 1355170
+[2025-10-29 12:09:08] SUCCESS: Container a9ebedbf8a23f0bd8d509c33bcea5c70a5b1a9ac56af3af21077d33f35c33339 started for 1355170
+=== Container logs for 1355170 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 6, in <module>
+    from flask.helpers import locked_cached_property
+ImportError: cannot import name 'locked_cached_property' from 'flask.helpers' (/usr/local/lib/python3.11/site-packages/flask/helpers.py)
+=== End of logs for 1355170 ===
+[2025-10-29 12:09:10] INFO: Container a9ebedbf8a23f0bd8d509c33bcea5c70a5b1a9ac56af3af21077d33f35c33339 has stopped

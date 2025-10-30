@@ -1,0 +1,122 @@
+=== Docker Build Log for 4340606 ===
+Started at: Mi 29. Okt 14:35:40 CET 2025
+
+[2025-10-29 14:35:40] START: Building image for 4340606
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 284B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.06kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/4340606/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","the"]
+#7 2.135 Collecting the
+#7 2.170   Downloading the-0.1.5.tar.gz (10 kB)
+#7 2.185   Preparing metadata (setup.py): started
+#7 2.575   Preparing metadata (setup.py): finished with status 'done'
+#7 2.577 Building wheels for collected packages: the
+#7 2.578   Building wheel for the (setup.py): started
+#7 2.737   Building wheel for the (setup.py): finished with status 'done'
+#7 2.738   Created wheel for the: filename=the-0.1.5-py3-none-any.whl size=6027 sha256=253517fefde4526dc2473a7b0bc32249b78064d5304e44573e308757e347fe04
+#7 2.738   Stored in directory: /root/.cache/pip/wheels/5a/02/15/82fa3d852099cde5adb558437baaa511bc9ad4a7febdae2ecb
+#7 2.742 Successfully built the
+#7 2.772 Installing collected packages: the
+#7 2.786 Successfully installed the-0.1.5
+#7 2.787 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.884 
+#7 2.884 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.884 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.0s
+
+#8 [4/7] RUN ["pip","install","PyYAML"]
+#8 0.587 Collecting PyYAML
+#8 0.626   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#8 0.646 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#8 0.703    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 14.7 MB/s eta 0:00:00
+#8 0.739 Installing collected packages: PyYAML
+#8 0.806 Successfully installed PyYAML-6.0.3
+#8 0.806 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.812 
+#8 0.812 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.812 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.9s
+
+#9 [5/7] RUN ["pip","install","numpy"]
+#9 0.706 Collecting numpy
+#9 0.740   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#9 0.764      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.4 MB/s eta 0:00:00
+#9 0.784 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#9 1.511    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 20.2 MB/s eta 0:00:00
+#9 1.593 Installing collected packages: numpy
+#9 3.041 Successfully installed numpy-2.3.4
+#9 3.041 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 3.046 
+#9 3.046 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 3.046 [notice] To update, run: pip install --upgrade pip
+#9 DONE 3.6s
+
+#10 [6/7] RUN ["pip","install","scipy"]
+#10 0.673 Collecting scipy
+#10 0.711   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#10 0.736      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.3 MB/s eta 0:00:00
+#10 0.764 Requirement already satisfied: numpy<2.6,>=1.25.2 in /usr/local/lib/python3.11/site-packages (from scipy) (2.3.4)
+#10 0.778 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#10 2.282    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 15.1 MB/s eta 0:00:00
+#10 2.424 Installing collected packages: scipy
+#10 5.169 Successfully installed scipy-1.16.3
+#10 5.169 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 5.175 
+#10 5.175 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 5.175 [notice] To update, run: pip install --upgrade pip
+#10 DONE 6.0s
+
+#11 [7/7] RUN ["pip","install","Theano"]
+#11 0.677 Collecting Theano
+#11 0.720   Downloading Theano-1.0.5.tar.gz (2.8 MB)
+#11 0.851      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.8/2.8 MB 22.3 MB/s eta 0:00:00
+#11 1.006   Preparing metadata (setup.py): started
+#11 1.179   Preparing metadata (setup.py): finished with status 'done'
+#11 1.188 Requirement already satisfied: numpy>=1.9.1 in /usr/local/lib/python3.11/site-packages (from Theano) (2.3.4)
+#11 1.192 Requirement already satisfied: scipy>=0.14 in /usr/local/lib/python3.11/site-packages (from Theano) (1.16.3)
+#11 1.224 Collecting six>=1.9.0 (from Theano)
+#11 1.233   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#11 1.284 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#11 1.297 Building wheels for collected packages: Theano
+#11 1.302   Building wheel for Theano (setup.py): started
+#11 1.987   Building wheel for Theano (setup.py): finished with status 'done'
+#11 1.994   Created wheel for Theano: filename=theano-1.0.5-py3-none-any.whl size=2668205 sha256=dc1594dc031d04a9ead89f0d128ae2e63cef34fa04b43fb9694b737fdcafefdb
+#11 1.994   Stored in directory: /root/.cache/pip/wheels/26/1f/2f/02d738022626461828148150c0354e712c4ad74f1a60f10933
+#11 1.997 Successfully built Theano
+#11 2.058 Installing collected packages: six, Theano
+#11 3.127 Successfully installed Theano-1.0.5 six-1.17.0
+#11 3.128 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 3.133 
+#11 3.133 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 3.133 [notice] To update, run: pip install --upgrade pip
+#11 DONE 3.4s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.9s done
+#12 writing image sha256:29b69bcfaca21608eff1d8d9fdaff73ba803839fd093aaffead337240c4a3abf done
+#12 naming to docker.io/library/test-image-4340606 done
+#12 DONE 0.9s
+
+View build details: docker-desktop://dashboard/build/default/default/sd1azntn53626jt9d12olol8j
+[2025-10-29 14:35:58] SUCCESS: Build completed for 4340606

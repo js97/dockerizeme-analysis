@@ -1,0 +1,73 @@
+=== Docker Build Log for b95cb69fd1c82ca4c2ff ===
+Started at: Mi 29. Okt 19:33:02 CET 2025
+
+[2025-10-29 19:33:02] START: Building image for b95cb69fd1c82ca4c2ff
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 209B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.93kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/b95cb69fd1c82ca4c2ff/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","numpy"]
+#7 2.069 Collecting numpy
+#7 2.105   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.134      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.0 MB/s eta 0:00:00
+#7 2.150 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 3.468    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 11.7 MB/s eta 0:00:00
+#7 3.544 Installing collected packages: numpy
+#7 4.929 Successfully installed numpy-2.3.4
+#7 4.929 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.026 
+#7 5.026 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.026 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.9s
+
+#8 [4/4] RUN ["pip","install","xgboost"]
+#8 0.531 Collecting xgboost
+#8 0.582   Downloading xgboost-3.1.1-py3-none-manylinux_2_28_x86_64.whl.metadata (2.1 kB)
+#8 0.603 Requirement already satisfied: numpy in /usr/local/lib/python3.11/site-packages (from xgboost) (2.3.4)
+#8 0.632 Collecting nvidia-nccl-cu12 (from xgboost)
+#8 0.643   Downloading nvidia_nccl_cu12-2.28.7-py3-none-manylinux_2_18_x86_64.whl.metadata (2.0 kB)
+#8 0.800 Collecting scipy (from xgboost)
+#8 0.812   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#8 0.838      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.1 MB/s eta 0:00:00
+#8 0.884 Downloading xgboost-3.1.1-py3-none-manylinux_2_28_x86_64.whl (115.9 MB)
+#8 9.056    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 115.9/115.9 MB 6.2 MB/s eta 0:00:00
+#8 9.069 Downloading nvidia_nccl_cu12-2.28.7-py3-none-manylinux_2_18_x86_64.whl (296.8 MB)
+#8 29.56    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 296.8/296.8 MB 5.0 MB/s eta 0:00:00
+#8 29.57 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#8 32.08    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 13.2 MB/s eta 0:00:00
+#8 33.06 Installing collected packages: scipy, nvidia-nccl-cu12, xgboost
+#8 38.77 Successfully installed nvidia-nccl-cu12-2.28.7 scipy-1.16.3 xgboost-3.1.1
+#8 38.77 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 38.77 
+#8 38.77 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 38.77 [notice] To update, run: pip install --upgrade pip
+#8 DONE 44.9s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 3.4s done
+#9 writing image sha256:4ce9ad55714258bd7080b245b3c2fac7639dd104c6abda6febee7778f684679b done
+#9 naming to docker.io/library/test-image-b95cb69fd1c82ca4c2ff done
+#9 DONE 3.5s
+
+View build details: docker-desktop://dashboard/build/default/default/witau032e4qpku48sxck16q43
+[2025-10-29 19:33:57] SUCCESS: Build completed for b95cb69fd1c82ca4c2ff

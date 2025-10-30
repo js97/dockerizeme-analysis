@@ -1,0 +1,16 @@
+=== Docker Run Log for c6b3e4d47d933b057aab32c9c29c4221 ===
+Started at: Mi 29. Okt 19:54:16 CET 2025
+
+[2025-10-29 19:56:02] START: Running container for c6b3e4d47d933b057aab32c9c29c4221
+[2025-10-29 19:56:03] SUCCESS: Container 6eb6a85415724e47e66a0667ecb843cda6499efed19e2eb99d6a182950e8c4c5 started for c6b3e4d47d933b057aab32c9c29c4221
+=== Container logs for c6b3e4d47d933b057aab32c9c29c4221 ===
+2025-10-29 18:56:03.458329: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-10-29 18:56:03.497056: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-29 18:56:04.673757: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Traceback (most recent call last):
+  File "/snippet.py", line 2, in <module>
+    from keras import activations, initializations, regularizers, constraints
+ImportError: cannot import name 'initializations' from 'keras' (/usr/local/lib/python3.11/site-packages/keras/__init__.py)
+=== End of logs for c6b3e4d47d933b057aab32c9c29c4221 ===
+[2025-10-29 19:56:05] INFO: Container 6eb6a85415724e47e66a0667ecb843cda6499efed19e2eb99d6a182950e8c4c5 has stopped

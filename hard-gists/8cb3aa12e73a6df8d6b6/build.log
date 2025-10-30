@@ -1,0 +1,1690 @@
+=== Docker Build Log for 8cb3aa12e73a6df8d6b6 ===
+Started at: Mi 29. Okt 18:08:34 CET 2025
+
+[2025-10-29 18:08:34] START: Building image for 8cb3aa12e73a6df8d6b6
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.36kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.46kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/32] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/32] COPY hard-gists/8cb3aa12e73a6df8d6b6/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/32] RUN ["pip","install","plone.app.workflow"]
+#7 2.006 Collecting plone.app.workflow
+#7 2.043   Downloading plone.app.workflow-5.0.4-py3-none-any.whl.metadata (14 kB)
+#7 2.060 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from plone.app.workflow) (79.0.1)
+#7 2.141 Collecting persistent (from plone.app.workflow)
+#7 2.152   Downloading persistent-6.3-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (22 kB)
+#7 2.303 Collecting plone.base (from plone.app.workflow)
+#7 2.312   Downloading plone_base-3.1.1-py3-none-any.whl.metadata (10 kB)
+#7 2.461 Collecting plone.i18n (from plone.app.workflow)
+#7 2.471   Downloading plone_i18n-5.1.1-py3-none-any.whl.metadata (16 kB)
+#7 2.612 Collecting plone.memoize (from plone.app.workflow)
+#7 2.622   Downloading plone_memoize-3.0.4-py3-none-any.whl.metadata (15 kB)
+#7 2.764 Collecting Products.statusmessages (from plone.app.workflow)
+#7 2.775   Downloading products_statusmessages-5.0.7-py3-none-any.whl.metadata (8.0 kB)
+#7 2.906 Collecting Products.DCWorkflow (from plone.app.workflow)
+#7 2.916   Downloading Products.DCWorkflow-3.0-py3-none-any.whl.metadata (10 kB)
+#7 3.052 Collecting Products.GenericSetup (from plone.app.workflow)
+#7 3.063   Downloading Products.GenericSetup-5.0.0-py3-none-any.whl.metadata (17 kB)
+#7 3.218 Collecting Zope (from plone.app.workflow)
+#7 3.229   Downloading zope-5.13-py3-none-any.whl.metadata (35 kB)
+#7 3.274 Collecting zope.deferredimport (from persistent->plone.app.workflow)
+#7 3.283   Downloading zope_deferredimport-6.0-py3-none-any.whl.metadata (5.5 kB)
+#7 3.409 Collecting zope.interface (from persistent->plone.app.workflow)
+#7 3.419   Downloading zope_interface-8.0.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (44 kB)
+#7 3.431      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.9/44.9 kB 3.6 MB/s eta 0:00:00
+#7 3.556 Collecting cffi (from persistent->plone.app.workflow)
+#7 3.566   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+#7 3.823 Collecting plone.batching (from plone.base->plone.app.workflow)
+#7 3.834   Downloading plone_batching-2.0.7-py3-none-any.whl.metadata (10 kB)
+#7 3.971 Collecting plone.registry (from plone.base->plone.app.workflow)
+#7 3.982   Downloading plone_registry-2.0.2-py3-none-any.whl.metadata (55 kB)
+#7 3.996      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.1/55.1 kB 3.7 MB/s eta 0:00:00
+#7 4.025 Collecting plone.schema (from plone.base->plone.app.workflow)
+#7 4.034   Downloading plone_schema-2.0.3-py3-none-any.whl.metadata (4.9 kB)
+#7 4.168 Collecting plone.z3cform (from plone.base->plone.app.workflow)
+#7 4.178   Downloading plone_z3cform-2.0.5-py3-none-any.whl.metadata (52 kB)
+#7 4.189      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.0/53.0 kB 4.7 MB/s eta 0:00:00
+#7 4.227 Collecting Products.CMFCore (from plone.base->plone.app.workflow)
+#7 4.237   Downloading Products.CMFCore-3.7-py3-none-any.whl.metadata (37 kB)
+#7 4.377 Collecting Products.CMFDynamicViewFTI (from plone.base->plone.app.workflow)
+#7 4.386   Downloading products_cmfdynamicviewfti-7.0.3-py3-none-any.whl.metadata (11 kB)
+#7 4.428 Collecting plone.autoform (from plone.i18n->plone.app.workflow)
+#7 4.438   Downloading plone_autoform-2.0.4-py3-none-any.whl.metadata (22 kB)
+#7 4.481 Collecting plone.subrequest (from plone.i18n->plone.app.workflow)
+#7 4.492   Downloading plone_subrequest-2.0.6-py3-none-any.whl.metadata (11 kB)
+#7 4.531 Collecting plone.supermodel (from plone.i18n->plone.app.workflow)
+#7 4.542   Downloading plone_supermodel-2.0.5-py3-none-any.whl.metadata (12 kB)
+#7 4.582 Collecting Unidecode>=1.0.22 (from plone.i18n->plone.app.workflow)
+#7 4.590   Downloading Unidecode-1.4.0-py3-none-any.whl.metadata (13 kB)
+#7 4.721 Collecting zope.globalrequest (from plone.i18n->plone.app.workflow)
+#7 4.731   Downloading zope_globalrequest-3.0-py3-none-any.whl.metadata (3.7 kB)
+#7 4.865 Collecting zope.annotation (from plone.memoize->plone.app.workflow)
+#7 4.873   Downloading zope_annotation-6.0-py3-none-any.whl.metadata (7.1 kB)
+#7 4.915 Collecting zope.component (from plone.memoize->plone.app.workflow)
+#7 4.926   Downloading zope_component-7.0-py3-none-any.whl.metadata (18 kB)
+#7 5.057 Collecting zope.ramcache (from plone.memoize->plone.app.workflow)
+#7 5.066   Downloading zope_ramcache-4.0-py3-none-any.whl.metadata (4.6 kB)
+#7 5.215 Collecting Products.ExternalMethod (from Products.DCWorkflow->plone.app.workflow)
+#7 5.225   Downloading Products.ExternalMethod-6.0-py3-none-any.whl.metadata (4.1 kB)
+#7 5.362 Collecting Products.PythonScripts (from Products.DCWorkflow->plone.app.workflow)
+#7 5.372   Downloading Products.PythonScripts-5.1-py3-none-any.whl.metadata (10 kB)
+#7 5.420 Collecting packaging (from Products.GenericSetup->plone.app.workflow)
+#7 5.428   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#7 5.563 Collecting five.localsitemanager (from Products.GenericSetup->plone.app.workflow)
+#7 5.574   Downloading five.localsitemanager-5.0-py3-none-any.whl.metadata (8.3 kB)
+#7 5.620 Collecting Products.ZCatalog (from Products.GenericSetup->plone.app.workflow)
+#7 5.630   Downloading products_zcatalog-7.2.1-py3-none-any.whl.metadata (23 kB)
+#7 5.816 Collecting AccessControl>=5.2 (from Zope->plone.app.workflow)
+#7 5.826   Downloading AccessControl-7.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+#7 5.984 Collecting Acquisition (from Zope->plone.app.workflow)
+#7 5.996   Downloading Acquisition-6.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (24 kB)
+#7 6.177 Collecting BTrees (from Zope->plone.app.workflow)
+#7 6.187   Downloading btrees-6.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (21 kB)
+#7 6.348 Collecting Chameleon>=3.7.0 (from Zope->plone.app.workflow)
+#7 6.358   Downloading Chameleon-4.6.0-py3-none-any.whl.metadata (51 kB)
+#7 6.368      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.6/51.6 kB 4.8 MB/s eta 0:00:00
+#7 6.396 Collecting DateTime (from Zope->plone.app.workflow)
+#7 6.406   Downloading DateTime-5.5-py3-none-any.whl.metadata (33 kB)
+#7 6.447 Collecting DocumentTemplate>=4.0 (from Zope->plone.app.workflow)
+#7 6.457   Downloading DocumentTemplate-4.6-py3-none-any.whl.metadata (7.6 kB)
+#7 6.510 Collecting ExtensionClass (from Zope->plone.app.workflow)
+#7 6.519   Downloading extensionclass-6.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (6.6 kB)
+#7 6.651 Collecting MultiMapping (from Zope->plone.app.workflow)
+#7 6.661   Downloading MultiMapping-5.0-py3-none-any.whl.metadata (1.8 kB)
+#7 6.697 Collecting PasteDeploy (from Zope->plone.app.workflow)
+#7 6.708   Downloading PasteDeploy-3.1.0-py3-none-any.whl.metadata (2.7 kB)
+#7 6.860 Collecting Persistence (from Zope->plone.app.workflow)
+#7 6.869   Downloading Persistence-5.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.3 kB)
+#7 6.912 Collecting RestrictedPython (from Zope->plone.app.workflow)
+#7 6.922   Downloading restrictedpython-8.1-py3-none-any.whl.metadata (14 kB)
+#7 7.059 Collecting ZConfig>=2.9.2 (from Zope->plone.app.workflow)
+#7 7.069   Downloading ZConfig-4.2-py3-none-any.whl.metadata (17 kB)
+#7 7.207 Collecting ZODB (from Zope->plone.app.workflow)
+#7 7.216   Downloading zodb-6.1-py3-none-any.whl.metadata (25 kB)
+#7 7.255 Collecting multipart (from Zope->plone.app.workflow)
+#7 7.264   Downloading multipart-1.3.0-py3-none-any.whl.metadata (4.9 kB)
+#7 7.510 Collecting transaction>=2.4 (from Zope->plone.app.workflow)
+#7 7.519   Downloading transaction-5.0-py3-none-any.whl.metadata (14 kB)
+#7 7.559 Collecting waitress (from Zope->plone.app.workflow)
+#7 7.567   Downloading waitress-3.0.2-py3-none-any.whl.metadata (5.8 kB)
+#7 7.700 Collecting zExceptions>=3.4 (from Zope->plone.app.workflow)
+#7 7.710   Downloading zExceptions-5.0-py3-none-any.whl.metadata (3.4 kB)
+#7 7.923 Collecting z3c.pt (from Zope->plone.app.workflow)
+#7 7.934   Downloading z3c_pt-5.1-py3-none-any.whl.metadata (48 kB)
+#7 7.944      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.3/48.3 kB 4.5 MB/s eta 0:00:00
+#7 8.071 Collecting zope.browser (from Zope->plone.app.workflow)
+#7 8.082   Downloading zope_browser-4.0-py3-none-any.whl.metadata (4.9 kB)
+#7 8.214 Collecting zope.browsermenu (from Zope->plone.app.workflow)
+#7 8.224   Downloading zope_browsermenu-6.0-py3-none-any.whl.metadata (4.6 kB)
+#7 8.357 Collecting zope.browserpage>=4.4.0.dev0 (from Zope->plone.app.workflow)
+#7 8.366   Downloading zope_browserpage-6.0-py3-none-any.whl.metadata (5.8 kB)
+#7 8.497 Collecting zope.browserresource>=3.11 (from Zope->plone.app.workflow)
+#7 8.507   Downloading zope_browserresource-6.0-py3-none-any.whl.metadata (9.7 kB)
+#7 8.737 Collecting zope.configuration (from Zope->plone.app.workflow)
+#7 8.746   Downloading zope_configuration-7.0-py3-none-any.whl.metadata (11 kB)
+#7 8.911 Collecting zope.container (from Zope->plone.app.workflow)
+#7 8.923   Downloading zope_container-7.0-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (15 kB)
+#7 9.057 Collecting zope.contentprovider (from Zope->plone.app.workflow)
+#7 9.067   Downloading zope_contentprovider-7.0-py3-none-any.whl.metadata (6.5 kB)
+#7 9.197 Collecting zope.contenttype (from Zope->plone.app.workflow)
+#7 9.207   Downloading zope_contenttype-6.0-py3-none-any.whl.metadata (6.0 kB)
+#7 9.344 Collecting zope.datetime (from Zope->plone.app.workflow)
+#7 9.355   Downloading zope_datetime-6.0-py3-none-any.whl.metadata (4.8 kB)
+#7 9.391 Collecting zope.event (from Zope->plone.app.workflow)
+#7 9.399   Downloading zope_event-6.0-py3-none-any.whl.metadata (5.1 kB)
+#7 9.439 Collecting zope.exceptions (from Zope->plone.app.workflow)
+#7 9.449   Downloading zope_exceptions-6.0-py3-none-any.whl.metadata (9.0 kB)
+#7 9.586 Collecting zope.i18n[zcml] (from Zope->plone.app.workflow)
+#7 9.596   Downloading zope_i18n-6.0-py3-none-any.whl.metadata (14 kB)
+#7 9.652 Collecting zope.i18nmessageid (from Zope->plone.app.workflow)
+#7 9.662   Downloading zope_i18nmessageid-8.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (9.9 kB)
+#7 9.702 Collecting zope.lifecycleevent (from Zope->plone.app.workflow)
+#7 9.712   Downloading zope_lifecycleevent-6.0-py3-none-any.whl.metadata (6.4 kB)
+#7 9.846 Collecting zope.location (from Zope->plone.app.workflow)
+#7 9.855   Downloading zope_location-6.0-py3-none-any.whl.metadata (10 kB)
+#7 9.989 Collecting zope.pagetemplate>=4.0.2 (from Zope->plone.app.workflow)
+#7 9.999   Downloading zope_pagetemplate-6.0-py3-none-any.whl.metadata (10 kB)
+#7 10.13 Collecting zope.processlifetime (from Zope->plone.app.workflow)
+#7 10.14   Downloading zope_processlifetime-4.0-py3-none-any.whl.metadata (4.4 kB)
+#7 10.21 Collecting zope.proxy (from Zope->plone.app.workflow)
+#7 10.22   Downloading zope_proxy-7.0-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (12 kB)
+#7 10.35 Collecting zope.ptresource (from Zope->plone.app.workflow)
+#7 10.36   Downloading zope_ptresource-6.0-py3-none-any.whl.metadata (4.9 kB)
+#7 10.58 Collecting zope.publisher (from Zope->plone.app.workflow)
+#7 10.59   Downloading zope_publisher-8.0-py3-none-any.whl.metadata (23 kB)
+#7 10.73 Collecting zope.schema (from Zope->plone.app.workflow)
+#7 10.74   Downloading zope_schema-8.1-py3-none-any.whl.metadata (25 kB)
+#7 10.96 Collecting zope.security (from Zope->plone.app.workflow)
+#7 10.97   Downloading zope_security-8.2-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (25 kB)
+#7 11.10 Collecting zope.sequencesort (from Zope->plone.app.workflow)
+#7 11.11   Downloading zope_sequencesort-6.0-py3-none-any.whl.metadata (4.4 kB)
+#7 11.25 Collecting zope.site (from Zope->plone.app.workflow)
+#7 11.26   Downloading zope_site-6.0-py3-none-any.whl.metadata (21 kB)
+#7 11.60 Collecting zope.size (from Zope->plone.app.workflow)
+#7 11.61   Downloading zope_size-6.0-py3-none-any.whl.metadata (5.0 kB)
+#7 11.81 Collecting zope.tal (from Zope->plone.app.workflow)
+#7 11.82   Downloading zope_tal-6.0-py3-none-any.whl.metadata (8.0 kB)
+#7 11.96 Collecting zope.tales>=5.0.2 (from Zope->plone.app.workflow)
+#7 11.97   Downloading zope_tales-7.0-py3-none-any.whl.metadata (7.2 kB)
+#7 12.13 Collecting zope.testbrowser (from Zope->plone.app.workflow)
+#7 12.14   Downloading zope_testbrowser-8.0-py3-none-any.whl.metadata (20 kB)
+#7 12.17 Collecting zope.testing (from Zope->plone.app.workflow)
+#7 12.18   Downloading zope_testing-6.0-py3-none-any.whl.metadata (19 kB)
+#7 12.32 Collecting zope.traversing (from Zope->plone.app.workflow)
+#7 12.33   Downloading zope_traversing-6.0-py3-none-any.whl.metadata (12 kB)
+#7 12.46 Collecting zope.viewlet (from Zope->plone.app.workflow)
+#7 12.47   Downloading zope_viewlet-6.0-py3-none-any.whl.metadata (6.4 kB)
+#7 12.63 Collecting AuthEncoding (from AccessControl>=5.2->Zope->plone.app.workflow)
+#7 12.64   Downloading AuthEncoding-6.0-py3-none-any.whl.metadata (3.0 kB)
+#7 12.70 Collecting roman (from DocumentTemplate>=4.0->Zope->plone.app.workflow)
+#7 12.71   Downloading roman-5.1-py3-none-any.whl.metadata (4.2 kB)
+#7 12.84 Collecting zope.structuredtext (from DocumentTemplate>=4.0->Zope->plone.app.workflow)
+#7 12.85   Downloading zope_structuredtext-6.0-py3-none-any.whl.metadata (4.8 kB)
+#7 12.91 Collecting docutils>0.15 (from Products.CMFCore->plone.base->plone.app.workflow)
+#7 12.91   Downloading docutils-0.22.2-py3-none-any.whl.metadata (15 kB)
+#7 13.05 Collecting Products.BTreeFolder2 (from Products.CMFCore->plone.base->plone.app.workflow)
+#7 13.06   Downloading Products.BTreeFolder2-5.1-py3-none-any.whl.metadata (7.8 kB)
+#7 13.20 Collecting Products.MailHost>=4.0 (from Products.CMFCore->plone.base->plone.app.workflow)
+#7 13.21   Downloading Products.MailHost-6.0-py3-none-any.whl.metadata (8.1 kB)
+#7 13.35 Collecting Products.StandardCacheManagers (from Products.CMFCore->plone.base->plone.app.workflow)
+#7 13.36   Downloading Products.StandardCacheManagers-5.0-py3-none-any.whl.metadata (5.5 kB)
+#7 13.40 Collecting Missing (from Products.ZCatalog->Products.GenericSetup->plone.app.workflow)
+#7 13.42   Downloading Missing-5.0-py3-none-any.whl.metadata (3.4 kB)
+#7 13.55 Collecting Record (from Products.ZCatalog->Products.GenericSetup->plone.app.workflow)
+#7 13.56   Downloading Record-4.1-py3-none-any.whl.metadata (2.6 kB)
+#7 13.70 Collecting zope.dottedname (from Products.ZCatalog->Products.GenericSetup->plone.app.workflow)
+#7 13.71   Downloading zope_dottedname-7.0-py3-none-any.whl.metadata (3.9 kB)
+#7 13.84 Collecting zope.hookable>=4.2.0 (from zope.component->plone.memoize->plone.app.workflow)
+#7 13.85   Downloading zope_hookable-8.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (6.7 kB)
+#7 14.06 Collecting pycparser (from cffi->persistent->plone.app.workflow)
+#7 14.07   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+#7 14.14 Collecting pytz (from DateTime->Zope->plone.app.workflow)
+#7 14.15   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#7 14.44 Collecting lxml (from plone.autoform->plone.i18n->plone.app.workflow)
+#7 14.45   Downloading lxml-6.0.2-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.6 kB)
+#7 14.59 Collecting z3c.form (from plone.autoform->plone.i18n->plone.app.workflow)
+#7 14.60   Downloading z3c_form-6.0.1-py3-none-any.whl.metadata (55 kB)
+#7 14.61      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.0/55.0 kB 4.3 MB/s eta 0:00:00
+#7 14.65 Collecting z3c.zcmlhook (from plone.supermodel->plone.i18n->plone.app.workflow)
+#7 14.66   Downloading z3c_zcmlhook-3.0-py3-none-any.whl.metadata (4.8 kB)
+#7 14.75 Collecting jsonschema (from plone.schema->plone.base->plone.app.workflow)
+#7 14.75   Downloading jsonschema-4.25.1-py3-none-any.whl.metadata (7.6 kB)
+#7 14.81 Collecting plone.protect (from plone.subrequest->plone.i18n->plone.app.workflow)
+#7 14.82   Downloading plone_protect-5.0.5-py3-none-any.whl.metadata (22 kB)
+#7 14.95 Collecting zc.lockfile (from ZODB->Zope->plone.app.workflow)
+#7 14.96   Downloading zc_lockfile-4.0-py3-none-any.whl.metadata (6.6 kB)
+#7 15.13 Collecting zodbpickle>=1.0.1 (from ZODB->Zope->plone.app.workflow)
+#7 15.14   Downloading zodbpickle-4.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+#7 15.25 Collecting zope.cachedescriptors (from zope.container->Zope->plone.app.workflow)
+#7 15.26   Downloading zope_cachedescriptors-6.0-py3-none-any.whl.metadata (17 kB)
+#7 15.39 Collecting zope.filerepresentation (from zope.container->Zope->plone.app.workflow)
+#7 15.41   Downloading zope_filerepresentation-7.0-py3-none-any.whl.metadata (5.1 kB)
+#7 15.70 Collecting python-gettext (from zope.i18n[zcml]->Zope->plone.app.workflow)
+#7 15.71   Downloading python_gettext-5.0-py3-none-any.whl.metadata (4.6 kB)
+#7 15.75 Collecting zope.deprecation (from zope.i18n[zcml]->Zope->plone.app.workflow)
+#7 15.76   Downloading zope_deprecation-6.0-py3-none-any.whl.metadata (5.5 kB)
+#7 16.00 Collecting WebTest>=2.0.30 (from zope.testbrowser->Zope->plone.app.workflow)
+#7 16.01   Downloading webtest-3.0.7-py3-none-any.whl.metadata (2.0 kB)
+#7 16.05 Collecting BeautifulSoup4 (from zope.testbrowser->Zope->plone.app.workflow)
+#7 16.06   Downloading beautifulsoup4-4.14.2-py3-none-any.whl.metadata (3.8 kB)
+#7 16.10 Collecting SoupSieve>=1.9.0 (from zope.testbrowser->Zope->plone.app.workflow)
+#7 16.11   Downloading soupsieve-2.8-py3-none-any.whl.metadata (4.6 kB)
+#7 16.25 Collecting WSGIProxy2 (from zope.testbrowser->Zope->plone.app.workflow)
+#7 16.26   Downloading WSGIProxy2-0.5.1-py3-none-any.whl.metadata (2.7 kB)
+#7 16.44 Collecting zope.sendmail>=6.2 (from Products.MailHost>=4.0->Products.CMFCore->plone.base->plone.app.workflow)
+#7 16.45   Downloading zope_sendmail-7.0-py3-none-any.whl.metadata (14 kB)
+#7 16.52 Collecting WebOb>=1.2 (from WebTest>=2.0.30->zope.testbrowser->Zope->plone.app.workflow)
+#7 16.52   Downloading WebOb-1.8.9-py2.py3-none-any.whl.metadata (11 kB)
+#7 16.66 Collecting typing-extensions>=4.0.0 (from BeautifulSoup4->zope.testbrowser->Zope->plone.app.workflow)
+#7 16.66   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#7 16.72 Collecting attrs>=22.2.0 (from jsonschema->plone.schema->plone.base->plone.app.workflow)
+#7 16.73   Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+#7 16.77 Collecting jsonschema-specifications>=2023.03.6 (from jsonschema->plone.schema->plone.base->plone.app.workflow)
+#7 16.78   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+#7 16.84 Collecting referencing>=0.28.4 (from jsonschema->plone.schema->plone.base->plone.app.workflow)
+#7 16.85   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+#7 17.19 Collecting rpds-py>=0.7.1 (from jsonschema->plone.schema->plone.base->plone.app.workflow)
+#7 17.20   Downloading rpds_py-0.28.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+#7 17.37 Collecting collective.monkeypatcher (from plone.protect->plone.subrequest->plone.i18n->plone.app.workflow)
+#7 17.38   Downloading collective_monkeypatcher-2.0.1-py3-none-any.whl.metadata (10 kB)
+#7 17.42 Collecting plone.keyring (from plone.protect->plone.subrequest->plone.i18n->plone.app.workflow)
+#7 17.43   Downloading plone_keyring-4.0.3-py3-none-any.whl.metadata (5.6 kB)
+#7 17.57 Collecting plone.scale (from plone.protect->plone.subrequest->plone.i18n->plone.app.workflow)
+#7 17.58   Downloading plone_scale-4.2.1-py3-none-any.whl.metadata (17 kB)
+#7 17.61 Collecting plone.transformchain (from plone.protect->plone.subrequest->plone.i18n->plone.app.workflow)
+#7 17.62   Downloading plone_transformchain-3.0.2-py3-none-any.whl.metadata (7.1 kB)
+#7 17.77 Collecting Products.PluggableAuthService (from plone.protect->plone.subrequest->plone.i18n->plone.app.workflow)
+#7 17.78   Downloading Products.PluggableAuthService-3.0-py3-none-any.whl.metadata (32 kB)
+#7 17.81 Collecting repoze.xmliter (from plone.protect->plone.subrequest->plone.i18n->plone.app.workflow)
+#7 17.82   Downloading repoze.xmliter-0.6.1.tar.gz (12 kB)
+#7 17.84   Preparing metadata (setup.py): started
+#7 18.22   Preparing metadata (setup.py): finished with status 'done'
+#7 18.56 Collecting cssselect>=0.7 (from lxml[cssselect]->plone.protect->plone.subrequest->plone.i18n->plone.app.workflow)
+#7 18.58   Downloading cssselect-1.3.0-py3-none-any.whl.metadata (2.6 kB)
+#7 18.78 Collecting Pillow (from plone.scale->plone.protect->plone.subrequest->plone.i18n->plone.app.workflow)
+#7 18.79   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#7 18.87 Collecting Products.PluginRegistry>=1.6 (from Products.PluggableAuthService->plone.protect->plone.subrequest->plone.i18n->plone.app.workflow)
+#7 18.88   Downloading Products.PluginRegistry-2.0-py3-none-any.whl.metadata (7.2 kB)
+#7 19.01 Collecting Products.Sessions (from Products.PluggableAuthService->plone.protect->plone.subrequest->plone.i18n->plone.app.workflow)
+#7 19.02   Downloading products_sessions-6.0-py3-none-any.whl.metadata (9.3 kB)
+#7 19.07 Collecting future (from repoze.xmliter->plone.protect->plone.subrequest->plone.i18n->plone.app.workflow)
+#7 19.08   Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+#7 19.20 Downloading plone.app.workflow-5.0.4-py3-none-any.whl (40 kB)
+#7 19.21    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.5/40.5 kB 3.1 MB/s eta 0:00:00
+#7 19.22 Downloading persistent-6.3-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (233 kB)
+#7 19.24    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 233.7/233.7 kB 11.7 MB/s eta 0:00:00
+#7 19.25 Downloading plone_base-3.1.1-py3-none-any.whl (57 kB)
+#7 19.26    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.9/57.9 kB 4.8 MB/s eta 0:00:00
+#7 19.27 Downloading plone_i18n-5.1.1-py3-none-any.whl (199 kB)
+#7 19.29    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 199.1/199.1 kB 12.8 MB/s eta 0:00:00
+#7 19.30 Downloading plone_memoize-3.0.4-py3-none-any.whl (25 kB)
+#7 19.32 Downloading Products.DCWorkflow-3.0-py3-none-any.whl (83 kB)
+#7 19.33    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.5/83.5 kB 7.3 MB/s eta 0:00:00
+#7 19.34 Downloading Products.GenericSetup-5.0.0-py3-none-any.whl (179 kB)
+#7 19.36    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 179.7/179.7 kB 12.5 MB/s eta 0:00:00
+#7 19.37 Downloading zope-5.13-py3-none-any.whl (3.2 MB)
+#7 19.50    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 23.2 MB/s eta 0:00:00
+#7 19.51 Downloading products_statusmessages-5.0.7-py3-none-any.whl (11 kB)
+#7 19.53 Downloading AccessControl-7.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (195 kB)
+#7 19.55    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 195.5/195.5 kB 12.9 MB/s eta 0:00:00
+#7 19.56 Downloading Chameleon-4.6.0-py3-none-any.whl (88 kB)
+#7 19.57    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.6/88.6 kB 7.0 MB/s eta 0:00:00
+#7 19.58 Downloading DocumentTemplate-4.6-py3-none-any.whl (87 kB)
+#7 19.60    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.0/87.0 kB 7.0 MB/s eta 0:00:00
+#7 19.61 Downloading extensionclass-6.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (92 kB)
+#7 19.62    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 92.7/92.7 kB 7.6 MB/s eta 0:00:00
+#7 19.63 Downloading Persistence-5.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (24 kB)
+#7 19.65 Downloading Products.CMFCore-3.7-py3-none-any.whl (427 kB)
+#7 19.68    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 427.0/427.0 kB 14.9 MB/s eta 0:00:00
+#7 19.69 Downloading products_zcatalog-7.2.1-py3-none-any.whl (231 kB)
+#7 19.70    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231.3/231.3 kB 13.7 MB/s eta 0:00:00
+#7 19.71 Downloading restrictedpython-8.1-py3-none-any.whl (27 kB)
+#7 19.73 Downloading transaction-5.0-py3-none-any.whl (46 kB)
+#7 19.75    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.3/46.3 kB 3.6 MB/s eta 0:00:00
+#7 19.75 Downloading Unidecode-1.4.0-py3-none-any.whl (235 kB)
+#7 19.77    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 235.8/235.8 kB 14.4 MB/s eta 0:00:00
+#7 19.78 Downloading ZConfig-4.2-py3-none-any.whl (131 kB)
+#7 19.80    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 131.4/131.4 kB 9.8 MB/s eta 0:00:00
+#7 19.81 Downloading zExceptions-5.0-py3-none-any.whl (17 kB)
+#7 19.82 Downloading zope_browserpage-6.0-py3-none-any.whl (31 kB)
+#7 19.84 Downloading zope_browserresource-6.0-py3-none-any.whl (40 kB)
+#7 19.85    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.0/40.0 kB 3.1 MB/s eta 0:00:00
+#7 19.86 Downloading zope_component-7.0-py3-none-any.whl (68 kB)
+#7 19.87    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.3/68.3 kB 5.8 MB/s eta 0:00:00
+#7 19.88 Downloading zope_contenttype-6.0-py3-none-any.whl (13 kB)
+#7 19.90 Downloading zope_interface-8.0.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (259 kB)
+#7 19.92    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 259.8/259.8 kB 14.6 MB/s eta 0:00:00
+#7 19.93 Downloading zope_pagetemplate-6.0-py3-none-any.whl (44 kB)
+#7 19.94    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.5/44.5 kB 4.0 MB/s eta 0:00:00
+#7 19.95 Downloading zope_publisher-8.0-py3-none-any.whl (119 kB)
+#7 19.97    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 119.3/119.3 kB 8.9 MB/s eta 0:00:00
+#7 19.97 Downloading multipart-1.3.0-py3-none-any.whl (14 kB)
+#7 19.99 Downloading zope_security-8.2-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (182 kB)
+#7 20.01    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 182.6/182.6 kB 11.9 MB/s eta 0:00:00
+#7 20.02 Downloading zope_proxy-7.0-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (71 kB)
+#7 20.03    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.5/71.5 kB 6.3 MB/s eta 0:00:00
+#7 20.04 Downloading zope_schema-8.1-py3-none-any.whl (85 kB)
+#7 20.06    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.0/85.0 kB 5.4 MB/s eta 0:00:00
+#7 20.07 Downloading zope_tal-6.0-py3-none-any.whl (135 kB)
+#7 20.08    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.3/135.3 kB 9.6 MB/s eta 0:00:00
+#7 20.09 Downloading zope_tales-7.0-py3-none-any.whl (29 kB)
+#7 20.11 Downloading zope_traversing-6.0-py3-none-any.whl (46 kB)
+#7 20.12    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.0/47.0 kB 3.8 MB/s eta 0:00:00
+#7 20.13 Downloading zope_location-6.0-py3-none-any.whl (19 kB)
+#7 20.15 Downloading Acquisition-6.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (122 kB)
+#7 20.17    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 122.7/122.7 kB 7.8 MB/s eta 0:00:00
+#7 20.18 Downloading btrees-6.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.3 MB)
+#7 20.24    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 21.0 MB/s eta 0:00:00
+#7 20.25 Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+#7 20.27    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 10.4 MB/s eta 0:00:00
+#7 20.28 Downloading DateTime-5.5-py3-none-any.whl (52 kB)
+#7 20.29    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.6/52.6 kB 4.1 MB/s eta 0:00:00
+#7 20.30 Downloading five.localsitemanager-5.0-py3-none-any.whl (18 kB)
+#7 20.32 Downloading MultiMapping-5.0-py3-none-any.whl (4.3 kB)
+#7 20.34 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#7 20.35    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.5 MB/s eta 0:00:00
+#7 20.36 Downloading PasteDeploy-3.1.0-py3-none-any.whl (16 kB)
+#7 20.38 Downloading plone_autoform-2.0.4-py3-none-any.whl (45 kB)
+#7 20.39    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.2/45.2 kB 3.6 MB/s eta 0:00:00
+#7 20.40 Downloading plone_supermodel-2.0.5-py3-none-any.whl (45 kB)
+#7 20.41    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.2/45.2 kB 3.4 MB/s eta 0:00:00
+#7 20.42 Downloading plone_z3cform-2.0.5-py3-none-any.whl (90 kB)
+#7 20.44    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.3/90.3 kB 7.0 MB/s eta 0:00:00
+#7 20.45 Downloading plone_batching-2.0.7-py3-none-any.whl (18 kB)
+#7 20.47 Downloading plone_registry-2.0.2-py3-none-any.whl (37 kB)
+#7 20.49 Downloading plone_schema-2.0.3-py3-none-any.whl (12 kB)
+#7 20.50 Downloading plone_subrequest-2.0.6-py3-none-any.whl (14 kB)
+#7 20.53 Downloading products_cmfdynamicviewfti-7.0.3-py3-none-any.whl (23 kB)
+#7 20.55 Downloading Products.ExternalMethod-6.0-py3-none-any.whl (12 kB)
+#7 20.57 Downloading Products.PythonScripts-5.1-py3-none-any.whl (34 kB)
+#7 20.58 Downloading waitress-3.0.2-py3-none-any.whl (56 kB)
+#7 20.60    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.2/56.2 kB 4.8 MB/s eta 0:00:00
+#7 20.61 Downloading z3c_pt-5.1-py3-none-any.whl (40 kB)
+#7 20.62    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.3/40.3 kB 3.1 MB/s eta 0:00:00
+#7 20.63 Downloading zodb-6.1-py3-none-any.whl (418 kB)
+#7 20.66    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 418.5/418.5 kB 13.6 MB/s eta 0:00:00
+#7 20.67 Downloading zope_annotation-6.0-py3-none-any.whl (13 kB)
+#7 20.69 Downloading zope_browser-4.0-py3-none-any.whl (7.1 kB)
+#7 20.71 Downloading zope_browsermenu-6.0-py3-none-any.whl (30 kB)
+#7 20.73 Downloading zope_configuration-7.0-py3-none-any.whl (78 kB)
+#7 20.74    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 6.3 MB/s eta 0:00:00
+#7 20.75 Downloading zope_container-7.0-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (114 kB)
+#7 20.77    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.4/114.4 kB 7.9 MB/s eta 0:00:00
+#7 20.78 Downloading zope_lifecycleevent-6.0-py3-none-any.whl (17 kB)
+#7 20.80 Downloading zope_contentprovider-7.0-py3-none-any.whl (10 kB)
+#7 20.82 Downloading zope_datetime-6.0-py3-none-any.whl (42 kB)
+#7 20.83    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.8/42.8 kB 2.3 MB/s eta 0:00:00
+#7 20.84 Downloading zope_deferredimport-6.0-py3-none-any.whl (9.4 kB)
+#7 20.86 Downloading zope_event-6.0-py3-none-any.whl (6.4 kB)
+#7 20.88 Downloading zope_exceptions-6.0-py3-none-any.whl (19 kB)
+#7 20.90 Downloading zope_globalrequest-3.0-py3-none-any.whl (5.1 kB)
+#7 20.92 Downloading zope_i18nmessageid-8.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (31 kB)
+#7 20.94 Downloading zope_processlifetime-4.0-py3-none-any.whl (5.3 kB)
+#7 20.96 Downloading zope_ptresource-6.0-py3-none-any.whl (7.1 kB)
+#7 20.97 Downloading zope_ramcache-4.0-py3-none-any.whl (14 kB)
+#7 20.99 Downloading zope_sequencesort-6.0-py3-none-any.whl (10 kB)
+#7 21.01 Downloading zope_site-6.0-py3-none-any.whl (29 kB)
+#7 21.04 Downloading zope_size-6.0-py3-none-any.whl (7.4 kB)
+#7 21.06 Downloading zope_testbrowser-8.0-py3-none-any.whl (62 kB)
+#7 21.07    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.0/63.0 kB 5.1 MB/s eta 0:00:00
+#7 21.08 Downloading zope_testing-6.0-py3-none-any.whl (36 kB)
+#7 21.10 Downloading zope_viewlet-6.0-py3-none-any.whl (32 kB)
+#7 21.12 Downloading docutils-0.22.2-py3-none-any.whl (632 kB)
+#7 21.15    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 632.7/632.7 kB 18.1 MB/s eta 0:00:00
+#7 21.16 Downloading Products.MailHost-6.0-py3-none-any.whl (29 kB)
+#7 21.19 Downloading soupsieve-2.8-py3-none-any.whl (36 kB)
+#7 21.21 Downloading webtest-3.0.7-py3-none-any.whl (32 kB)
+#7 21.23 Downloading z3c_form-6.0.1-py3-none-any.whl (452 kB)
+#7 21.25    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 453.0/453.0 kB 19.2 MB/s eta 0:00:00
+#7 21.26 Downloading zodbpickle-4.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (299 kB)
+#7 21.28    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 299.1/299.1 kB 16.2 MB/s eta 0:00:00
+#7 21.29 Downloading zope_hookable-8.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (24 kB)
+#7 21.31 Downloading zope_i18n-6.0-py3-none-any.whl (798 kB)
+#7 21.36    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 798.7/798.7 kB 18.0 MB/s eta 0:00:00
+#7 21.37 Downloading AuthEncoding-6.0-py3-none-any.whl (9.1 kB)
+#7 21.39 Downloading beautifulsoup4-4.14.2-py3-none-any.whl (106 kB)
+#7 21.40    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.4/106.4 kB 8.3 MB/s eta 0:00:00
+#7 21.41 Downloading jsonschema-4.25.1-py3-none-any.whl (90 kB)
+#7 21.42    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.0/90.0 kB 6.8 MB/s eta 0:00:00
+#7 21.44 Downloading lxml-6.0.2-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.2 MB)
+#7 21.67    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 22.3 MB/s eta 0:00:00
+#7 21.68 Downloading Missing-5.0-py3-none-any.whl (6.0 kB)
+#7 21.70 Downloading plone_protect-5.0.5-py3-none-any.whl (32 kB)
+#7 21.72 Downloading Products.BTreeFolder2-5.1-py3-none-any.whl (17 kB)
+#7 21.74 Downloading Products.StandardCacheManagers-5.0-py3-none-any.whl (24 kB)
+#7 21.76 Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+#7 21.77    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 8.5 MB/s eta 0:00:00
+#7 21.78 Downloading python_gettext-5.0-py3-none-any.whl (13 kB)
+#7 21.80 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#7 21.83    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 19.8 MB/s eta 0:00:00
+#7 21.83 Downloading Record-4.1-py3-none-any.whl (6.4 kB)
+#7 21.85 Downloading roman-5.1-py3-none-any.whl (5.8 kB)
+#7 21.87 Downloading WSGIProxy2-0.5.1-py3-none-any.whl (9.2 kB)
+#7 21.89 Downloading z3c_zcmlhook-3.0-py3-none-any.whl (7.2 kB)
+#7 21.91 Downloading zc_lockfile-4.0-py3-none-any.whl (9.1 kB)
+#7 21.93 Downloading zope_cachedescriptors-6.0-py3-none-any.whl (12 kB)
+#7 21.95 Downloading zope_deprecation-6.0-py3-none-any.whl (9.5 kB)
+#7 21.97 Downloading zope_dottedname-7.0-py3-none-any.whl (5.9 kB)
+#7 21.99 Downloading zope_filerepresentation-7.0-py3-none-any.whl (7.7 kB)
+#7 22.01 Downloading zope_structuredtext-6.0-py3-none-any.whl (91 kB)
+#7 22.02    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 92.0/92.0 kB 7.3 MB/s eta 0:00:00
+#7 22.03 Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+#7 22.04    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.6/67.6 kB 5.8 MB/s eta 0:00:00
+#7 22.05 Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+#7 22.07 Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+#7 22.09 Downloading rpds_py-0.28.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (382 kB)
+#7 22.11    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 382.9/382.9 kB 16.6 MB/s eta 0:00:00
+#7 22.12 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#7 22.13    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.7 MB/s eta 0:00:00
+#7 22.14 Downloading WebOb-1.8.9-py2.py3-none-any.whl (115 kB)
+#7 22.15    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 115.4/115.4 kB 9.1 MB/s eta 0:00:00
+#7 22.16 Downloading zope_sendmail-7.0-py3-none-any.whl (46 kB)
+#7 22.17    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.5/46.5 kB 4.0 MB/s eta 0:00:00
+#7 22.18 Downloading collective_monkeypatcher-2.0.1-py3-none-any.whl (12 kB)
+#7 22.20 Downloading plone_keyring-4.0.3-py3-none-any.whl (10 kB)
+#7 22.22 Downloading plone_scale-4.2.1-py3-none-any.whl (2.2 MB)
+#7 22.32    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 23.1 MB/s eta 0:00:00
+#7 22.33 Downloading plone_transformchain-3.0.2-py3-none-any.whl (11 kB)
+#7 22.35 Downloading Products.PluggableAuthService-3.0-py3-none-any.whl (219 kB)
+#7 22.36    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 219.8/219.8 kB 12.9 MB/s eta 0:00:00
+#7 22.37 Downloading cssselect-1.3.0-py3-none-any.whl (18 kB)
+#7 22.40 Downloading Products.PluginRegistry-2.0-py3-none-any.whl (27 kB)
+#7 22.42 Downloading future-1.0.0-py3-none-any.whl (491 kB)
+#7 22.45    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 491.3/491.3 kB 18.9 MB/s eta 0:00:00
+#7 22.45 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#7 22.78    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 21.5 MB/s eta 0:00:00
+#7 22.79 Downloading products_sessions-6.0-py3-none-any.whl (75 kB)
+#7 22.81    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 75.2/75.2 kB 6.2 MB/s eta 0:00:00
+#7 22.94 Building wheels for collected packages: repoze.xmliter
+#7 22.94   Building wheel for repoze.xmliter (setup.py): started
+#7 23.11   Building wheel for repoze.xmliter (setup.py): finished with status 'done'
+#7 23.11   Created wheel for repoze.xmliter: filename=repoze_xmliter-0.6.1-py3-none-any.whl size=7967 sha256=23141fba91145e5d1dab29c67edb40baeb1e8001b818d10a39d48bfc1b6fdb54
+#7 23.11   Stored in directory: /root/.cache/pip/wheels/83/78/30/bfe13d0dd6c3a04de1f66e0855b824fbdab1f7db18c6cc2ef4
+#7 23.11 Successfully built repoze.xmliter
+#7 23.62 Installing collected packages: pytz, zope.testing, zope.structuredtext, zope.sequencesort, zope.interface, zope.i18nmessageid, zope.hookable, zope.event, zope.dottedname, zope.deprecation, zope.datetime, zope.contenttype, zope.cachedescriptors, zodbpickle, ZConfig, zc.lockfile, WebOb, waitress, Unidecode, typing-extensions, SoupSieve, rpds-py, roman, RestrictedPython, python-gettext, pycparser, Pillow, PasteDeploy, packaging, multipart, lxml, future, ExtensionClass, docutils, cssselect, Chameleon, AuthEncoding, attrs, zope.tales, zope.tal, zope.size, zope.schema, zope.proxy, zope.processlifetime, zope.lifecycleevent, zope.exceptions, zope.component, zope.browser, WSGIProxy2, transaction, repoze.xmliter, referencing, Record, MultiMapping, DateTime, cffi, BeautifulSoup4, Acquisition, zope.location, zope.i18n, zope.filerepresentation, zope.deferredimport, zope.configuration, WebTest, jsonschema-specifications, zope.testbrowser, zope.sendmail, zope.security, zope.annotation, z3c.zcmlhook, persistent, Missing, jsonschema, collective.monkeypatcher, zope.ramcache, zope.publisher, plone.supermodel, plone.scale, Persistence, BTrees, zope.traversing, zope.contentprovider, ZODB, zExceptions, zope.pagetemplate, zope.globalrequest, zope.container, zope.browserresource, z3c.pt, AccessControl, zope.site, zope.ptresource, zope.browserpage, zope.browsermenu, plone.memoize, plone.keyring, DocumentTemplate, zope.viewlet, z3c.form, Zope, plone.schema, Products.ZCatalog, Products.statusmessages, Products.StandardCacheManagers, Products.Sessions, Products.PythonScripts, Products.MailHost, Products.ExternalMethod, Products.BTreeFolder2, plone.transformchain, plone.registry, plone.batching, five.localsitemanager, Products.GenericSetup, plone.z3cform, Products.PluginRegistry, Products.CMFCore, plone.autoform, Products.PluggableAuthService, Products.DCWorkflow, Products.CMFDynamicViewFTI, plone.protect, plone.base, plone.subrequest, plone.i18n, plone.app.workflow
+#7 31.18 Successfully installed AccessControl-7.2 Acquisition-6.1 AuthEncoding-6.0 BTrees-6.2 BeautifulSoup4-4.14.2 Chameleon-4.6.0 DateTime-5.5 DocumentTemplate-4.6 ExtensionClass-6.1 Missing-5.0 MultiMapping-5.0 PasteDeploy-3.1.0 Persistence-5.1 Pillow-12.0.0 Products.BTreeFolder2-5.1 Products.CMFCore-3.7 Products.CMFDynamicViewFTI-7.0.3 Products.DCWorkflow-3.0 Products.ExternalMethod-6.0 Products.GenericSetup-5.0.0 Products.MailHost-6.0 Products.PluggableAuthService-3.0 Products.PluginRegistry-2.0 Products.PythonScripts-5.1 Products.Sessions-6.0 Products.StandardCacheManagers-5.0 Products.ZCatalog-7.2.1 Products.statusmessages-5.0.7 Record-4.1 RestrictedPython-8.1 SoupSieve-2.8 Unidecode-1.4.0 WSGIProxy2-0.5.1 WebOb-1.8.9 WebTest-3.0.7 ZConfig-4.2 ZODB-6.1 Zope-5.13 attrs-25.4.0 cffi-2.0.0 collective.monkeypatcher-2.0.1 cssselect-1.3.0 docutils-0.22.2 five.localsitemanager-5.0 future-1.0.0 jsonschema-4.25.1 jsonschema-specifications-2025.9.1 lxml-6.0.2 multipart-1.3.0 packaging-25.0 persistent-6.3 plone.app.workflow-5.0.4 plone.autoform-2.0.4 plone.base-3.1.1 plone.batching-2.0.7 plone.i18n-5.1.1 plone.keyring-4.0.3 plone.memoize-3.0.4 plone.protect-5.0.5 plone.registry-2.0.2 plone.scale-4.2.1 plone.schema-2.0.3 plone.subrequest-2.0.6 plone.supermodel-2.0.5 plone.transformchain-3.0.2 plone.z3cform-2.0.5 pycparser-2.23 python-gettext-5.0 pytz-2025.2 referencing-0.37.0 repoze.xmliter-0.6.1 roman-5.1 rpds-py-0.28.0 transaction-5.0 typing-extensions-4.15.0 waitress-3.0.2 z3c.form-6.0.1 z3c.pt-5.1 z3c.zcmlhook-3.0 zExceptions-5.0 zc.lockfile-4.0 zodbpickle-4.2 zope.annotation-6.0 zope.browser-4.0 zope.browsermenu-6.0 zope.browserpage-6.0 zope.browserresource-6.0 zope.cachedescriptors-6.0 zope.component-7.0 zope.configuration-7.0 zope.container-7.0 zope.contentprovider-7.0 zope.contenttype-6.0 zope.datetime-6.0 zope.deferredimport-6.0 zope.deprecation-6.0 zope.dottedname-7.0 zope.event-6.0 zope.exceptions-6.0 zope.filerepresentation-7.0 zope.globalrequest-3.0 zope.hookable-8.1 zope.i18n-6.0 zope.i18nmessageid-8.1 zope.interface-8.0.1 zope.lifecycleevent-6.0 zope.location-6.0 zope.pagetemplate-6.0 zope.processlifetime-4.0 zope.proxy-7.0 zope.ptresource-6.0 zope.publisher-8.0 zope.ramcache-4.0 zope.schema-8.1 zope.security-8.2 zope.sendmail-7.0 zope.sequencesort-6.0 zope.site-6.0 zope.size-6.0 zope.structuredtext-6.0 zope.tal-6.0 zope.tales-7.0 zope.testbrowser-8.0 zope.testing-6.0 zope.traversing-6.0 zope.viewlet-6.0
+#7 31.18 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 31.29 
+#7 31.29 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 31.29 [notice] To update, run: pip install --upgrade pip
+#7 DONE 32.5s
+
+#8 [ 4/32] RUN ["pip","install","plone.transforms"]
+#8 0.633 Collecting plone.transforms
+#8 0.681   Downloading plone.transforms-1.1a1.zip (190 kB)
+#8 0.721      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 190.6/190.6 kB 4.8 MB/s eta 0:00:00
+#8 0.734   Preparing metadata (setup.py): started
+#8 0.889   Preparing metadata (setup.py): finished with status 'done'
+#8 0.894 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from plone.transforms) (79.0.1)
+#8 0.895 Requirement already satisfied: zope.component in /usr/local/lib/python3.11/site-packages (from plone.transforms) (7.0)
+#8 0.896 Requirement already satisfied: zope.configuration in /usr/local/lib/python3.11/site-packages (from plone.transforms) (7.0)
+#8 0.897 Requirement already satisfied: zope.dottedname in /usr/local/lib/python3.11/site-packages (from plone.transforms) (7.0)
+#8 0.898 Requirement already satisfied: zope.i18nmessageid in /usr/local/lib/python3.11/site-packages (from plone.transforms) (8.1)
+#8 0.900 Requirement already satisfied: zope.interface in /usr/local/lib/python3.11/site-packages (from plone.transforms) (8.0.1)
+#8 0.901 Requirement already satisfied: zope.security in /usr/local/lib/python3.11/site-packages (from plone.transforms) (8.2)
+#8 0.903 Requirement already satisfied: zope.testing in /usr/local/lib/python3.11/site-packages (from plone.transforms) (6.0)
+#8 0.951 Collecting ZODB3 (from plone.transforms)
+#8 0.962   Downloading ZODB3-3.11.0.tar.gz (55 kB)
+#8 0.982      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.1/55.1 kB 2.5 MB/s eta 0:00:00
+#8 0.986   Preparing metadata (setup.py): started
+#8 1.123   Preparing metadata (setup.py): finished with status 'done'
+#8 1.188 Collecting ZEO>=4.0.0dev (from ZODB3->plone.transforms)
+#8 1.198   Downloading zeo-6.1-py3-none-any.whl.metadata (19 kB)
+#8 1.215 Requirement already satisfied: ZODB>=4.0.0dev in /usr/local/lib/python3.11/site-packages (from ZODB3->plone.transforms) (6.1)
+#8 1.216 Requirement already satisfied: persistent>=4.0.0dev in /usr/local/lib/python3.11/site-packages (from ZODB3->plone.transforms) (6.3)
+#8 1.218 Requirement already satisfied: BTrees>=4.0.0dev in /usr/local/lib/python3.11/site-packages (from ZODB3->plone.transforms) (6.2)
+#8 1.219 Requirement already satisfied: transaction in /usr/local/lib/python3.11/site-packages (from ZODB3->plone.transforms) (5.0)
+#8 1.229 Requirement already satisfied: zope.event in /usr/local/lib/python3.11/site-packages (from zope.component->plone.transforms) (6.0)
+#8 1.230 Requirement already satisfied: zope.hookable>=4.2.0 in /usr/local/lib/python3.11/site-packages (from zope.component->plone.transforms) (8.1)
+#8 1.242 Requirement already satisfied: zope.schema>=4.9 in /usr/local/lib/python3.11/site-packages (from zope.configuration->plone.transforms) (8.1)
+#8 1.256 Requirement already satisfied: zope.location in /usr/local/lib/python3.11/site-packages (from zope.security->plone.transforms) (6.0)
+#8 1.258 Requirement already satisfied: zope.proxy>=6.1 in /usr/local/lib/python3.11/site-packages (from zope.security->plone.transforms) (7.0)
+#8 1.273 Requirement already satisfied: zope.deferredimport in /usr/local/lib/python3.11/site-packages (from persistent>=4.0.0dev->ZODB3->plone.transforms) (6.0)
+#8 1.274 Requirement already satisfied: cffi in /usr/local/lib/python3.11/site-packages (from persistent>=4.0.0dev->ZODB3->plone.transforms) (2.0.0)
+#8 1.285 Requirement already satisfied: zc.lockfile in /usr/local/lib/python3.11/site-packages (from ZEO>=4.0.0dev->ZODB3->plone.transforms) (4.0)
+#8 1.286 Requirement already satisfied: ZConfig in /usr/local/lib/python3.11/site-packages (from ZEO>=4.0.0dev->ZODB3->plone.transforms) (4.2)
+#8 1.426 Collecting zdaemon (from ZEO>=4.0.0dev->ZODB3->plone.transforms)
+#8 1.435   Downloading zdaemon-5.2.1-py3-none-any.whl.metadata (26 kB)
+#8 1.464 Requirement already satisfied: zodbpickle>=1.0.1 in /usr/local/lib/python3.11/site-packages (from ZODB>=4.0.0dev->ZODB3->plone.transforms) (4.2)
+#8 1.497 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi->persistent>=4.0.0dev->ZODB3->plone.transforms) (2.23)
+#8 1.524 Downloading zeo-6.1-py3-none-any.whl (247 kB)
+#8 1.549    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.1/247.1 kB 10.5 MB/s eta 0:00:00
+#8 1.559 Downloading zdaemon-5.2.1-py3-none-any.whl (57 kB)
+#8 1.585    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.2/57.2 kB 2.5 MB/s eta 0:00:00
+#8 1.589 Building wheels for collected packages: plone.transforms, ZODB3
+#8 1.594   Building wheel for plone.transforms (setup.py): started
+#8 1.832   Building wheel for plone.transforms (setup.py): finished with status 'done'
+#8 1.833   Created wheel for plone.transforms: filename=plone_transforms-1.1a1-py3-none-any.whl size=177696 sha256=04f44f4e6a408db8ad114add04f85318f888e83600cb6b8b70377651dc9f8467
+#8 1.833   Stored in directory: /root/.cache/pip/wheels/d8/fc/64/961261abc1c72fc29100589ac904db24d8264e8f67ac724a76
+#8 1.835   Building wheel for ZODB3 (setup.py): started
+#8 2.013   Building wheel for ZODB3 (setup.py): finished with status 'done'
+#8 2.014   Created wheel for ZODB3: filename=zodb3-3.11.0-py3-none-any.whl size=1860 sha256=bcd170f59c3c6fcba9c936d519778f14fe28ee4bc087ccd867585a86ee0d1aa7
+#8 2.014   Stored in directory: /root/.cache/pip/wheels/8c/fc/dd/f04f689c83881445ce8b6674603a8e932160045624f73a7190
+#8 2.015 Successfully built plone.transforms ZODB3
+#8 2.468 Installing collected packages: zdaemon, ZEO, ZODB3, plone.transforms
+#8 2.703 Successfully installed ZEO-6.1 ZODB3-3.11.0 plone.transforms-1.1a1 zdaemon-5.2.1
+#8 2.704 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.710 
+#8 2.710 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.710 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.8s
+
+#9 [ 5/32] RUN ["pip","install","plone.i18n"]
+#9 0.540 Requirement already satisfied: plone.i18n in /usr/local/lib/python3.11/site-packages (5.1.1)
+#9 0.547 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from plone.i18n) (79.0.1)
+#9 0.548 Requirement already satisfied: plone.autoform in /usr/local/lib/python3.11/site-packages (from plone.i18n) (2.0.4)
+#9 0.551 Requirement already satisfied: plone.registry in /usr/local/lib/python3.11/site-packages (from plone.i18n) (2.0.2)
+#9 0.552 Requirement already satisfied: plone.subrequest in /usr/local/lib/python3.11/site-packages (from plone.i18n) (2.0.6)
+#9 0.553 Requirement already satisfied: plone.supermodel in /usr/local/lib/python3.11/site-packages (from plone.i18n) (2.0.5)
+#9 0.554 Requirement already satisfied: Products.CMFCore in /usr/local/lib/python3.11/site-packages (from plone.i18n) (3.7)
+#9 0.555 Requirement already satisfied: Unidecode>=1.0.22 in /usr/local/lib/python3.11/site-packages (from plone.i18n) (1.4.0)
+#9 0.557 Requirement already satisfied: Zope in /usr/local/lib/python3.11/site-packages (from plone.i18n) (5.13)
+#9 0.558 Requirement already satisfied: zope.globalrequest in /usr/local/lib/python3.11/site-packages (from plone.i18n) (3.0)
+#9 0.562 Requirement already satisfied: lxml in /usr/local/lib/python3.11/site-packages (from plone.autoform->plone.i18n) (6.0.2)
+#9 0.565 Requirement already satisfied: plone.z3cform>=2.0.0 in /usr/local/lib/python3.11/site-packages (from plone.autoform->plone.i18n) (2.0.5)
+#9 0.567 Requirement already satisfied: z3c.form in /usr/local/lib/python3.11/site-packages (from plone.autoform->plone.i18n) (6.0.1)
+#9 0.574 Requirement already satisfied: zope.component in /usr/local/lib/python3.11/site-packages (from plone.supermodel->plone.i18n) (7.0)
+#9 0.575 Requirement already satisfied: zope.i18nmessageid in /usr/local/lib/python3.11/site-packages (from plone.supermodel->plone.i18n) (8.1)
+#9 0.576 Requirement already satisfied: zope.interface in /usr/local/lib/python3.11/site-packages (from plone.supermodel->plone.i18n) (8.0.1)
+#9 0.578 Requirement already satisfied: zope.schema>=4.1.0 in /usr/local/lib/python3.11/site-packages (from plone.supermodel->plone.i18n) (8.1)
+#9 0.578 Requirement already satisfied: zope.deferredimport in /usr/local/lib/python3.11/site-packages (from plone.supermodel->plone.i18n) (6.0)
+#9 0.579 Requirement already satisfied: zope.dottedname in /usr/local/lib/python3.11/site-packages (from plone.supermodel->plone.i18n) (7.0)
+#9 0.580 Requirement already satisfied: z3c.zcmlhook in /usr/local/lib/python3.11/site-packages (from plone.supermodel->plone.i18n) (3.0)
+#9 0.588 Requirement already satisfied: plone.protect in /usr/local/lib/python3.11/site-packages (from plone.subrequest->plone.i18n) (5.0.5)
+#9 0.598 Requirement already satisfied: docutils>0.15 in /usr/local/lib/python3.11/site-packages (from Products.CMFCore->plone.i18n) (0.22.2)
+#9 0.599 Requirement already satisfied: five.localsitemanager in /usr/local/lib/python3.11/site-packages (from Products.CMFCore->plone.i18n) (5.0)
+#9 0.600 Requirement already satisfied: Products.BTreeFolder2 in /usr/local/lib/python3.11/site-packages (from Products.CMFCore->plone.i18n) (5.1)
+#9 0.601 Requirement already satisfied: Products.GenericSetup>=2.1.2 in /usr/local/lib/python3.11/site-packages (from Products.CMFCore->plone.i18n) (5.0.0)
+#9 0.602 Requirement already satisfied: Products.MailHost>=4.0 in /usr/local/lib/python3.11/site-packages (from Products.CMFCore->plone.i18n) (6.0)
+#9 0.603 Requirement already satisfied: Products.PythonScripts in /usr/local/lib/python3.11/site-packages (from Products.CMFCore->plone.i18n) (5.1)
+#9 0.604 Requirement already satisfied: Products.StandardCacheManagers in /usr/local/lib/python3.11/site-packages (from Products.CMFCore->plone.i18n) (5.0)
+#9 0.605 Requirement already satisfied: Products.ZCatalog>=4.0a2 in /usr/local/lib/python3.11/site-packages (from Products.CMFCore->plone.i18n) (7.2.1)
+#9 0.606 Requirement already satisfied: zope.datetime in /usr/local/lib/python3.11/site-packages (from Products.CMFCore->plone.i18n) (6.0)
+#9 0.627 Requirement already satisfied: AccessControl>=5.2 in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (7.2)
+#9 0.628 Requirement already satisfied: Acquisition in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (6.1)
+#9 0.629 Requirement already satisfied: BTrees in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (6.2)
+#9 0.631 Requirement already satisfied: Chameleon>=3.7.0 in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (4.6.0)
+#9 0.633 Requirement already satisfied: DateTime in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (5.5)
+#9 0.634 Requirement already satisfied: DocumentTemplate>=4.0 in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (4.6)
+#9 0.634 Requirement already satisfied: ExtensionClass in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (6.1)
+#9 0.635 Requirement already satisfied: MultiMapping in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (5.0)
+#9 0.636 Requirement already satisfied: PasteDeploy in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (3.1.0)
+#9 0.637 Requirement already satisfied: Persistence in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (5.1)
+#9 0.638 Requirement already satisfied: RestrictedPython in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (8.1)
+#9 0.639 Requirement already satisfied: ZConfig>=2.9.2 in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (4.2)
+#9 0.640 Requirement already satisfied: ZODB in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (6.1)
+#9 0.641 Requirement already satisfied: multipart in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (1.3.0)
+#9 0.642 Requirement already satisfied: transaction>=2.4 in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (5.0)
+#9 0.643 Requirement already satisfied: waitress in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (3.0.2)
+#9 0.644 Requirement already satisfied: zExceptions>=3.4 in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (5.0)
+#9 0.645 Requirement already satisfied: z3c.pt in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (5.1)
+#9 0.646 Requirement already satisfied: zope.browser in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (4.0)
+#9 0.647 Requirement already satisfied: zope.browsermenu in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (6.0)
+#9 0.648 Requirement already satisfied: zope.browserpage>=4.4.0.dev0 in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (6.0)
+#9 0.649 Requirement already satisfied: zope.browserresource>=3.11 in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (6.0)
+#9 0.651 Requirement already satisfied: zope.configuration in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (7.0)
+#9 0.652 Requirement already satisfied: zope.container in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (7.0)
+#9 0.653 Requirement already satisfied: zope.contentprovider in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (7.0)
+#9 0.653 Requirement already satisfied: zope.contenttype in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (6.0)
+#9 0.655 Requirement already satisfied: zope.event in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (6.0)
+#9 0.656 Requirement already satisfied: zope.exceptions in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (6.0)
+#9 0.657 Requirement already satisfied: zope.i18n[zcml] in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (6.0)
+#9 0.659 Requirement already satisfied: zope.lifecycleevent in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (6.0)
+#9 0.660 Requirement already satisfied: zope.location in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (6.0)
+#9 0.661 Requirement already satisfied: zope.pagetemplate>=4.0.2 in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (6.0)
+#9 0.662 Requirement already satisfied: zope.processlifetime in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (4.0)
+#9 0.663 Requirement already satisfied: zope.proxy in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (7.0)
+#9 0.665 Requirement already satisfied: zope.ptresource in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (6.0)
+#9 0.665 Requirement already satisfied: zope.publisher in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (8.0)
+#9 0.667 Requirement already satisfied: zope.security in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (8.2)
+#9 0.668 Requirement already satisfied: zope.sequencesort in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (6.0)
+#9 0.669 Requirement already satisfied: zope.site in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (6.0)
+#9 0.670 Requirement already satisfied: zope.size in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (6.0)
+#9 0.671 Requirement already satisfied: zope.tal in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (6.0)
+#9 0.672 Requirement already satisfied: zope.tales>=5.0.2 in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (7.0)
+#9 0.673 Requirement already satisfied: zope.testbrowser in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (8.0)
+#9 0.674 Requirement already satisfied: zope.testing in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (6.0)
+#9 0.675 Requirement already satisfied: zope.traversing in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (6.0)
+#9 0.676 Requirement already satisfied: zope.viewlet in /usr/local/lib/python3.11/site-packages (from Zope->plone.i18n) (6.0)
+#9 0.713 Requirement already satisfied: AuthEncoding in /usr/local/lib/python3.11/site-packages (from AccessControl>=5.2->Zope->plone.i18n) (6.0)
+#9 0.728 Requirement already satisfied: roman in /usr/local/lib/python3.11/site-packages (from DocumentTemplate>=4.0->Zope->plone.i18n) (5.1)
+#9 0.729 Requirement already satisfied: zope.structuredtext in /usr/local/lib/python3.11/site-packages (from DocumentTemplate>=4.0->Zope->plone.i18n) (6.0)
+#9 0.737 Requirement already satisfied: persistent>=4.1.1 in /usr/local/lib/python3.11/site-packages (from Persistence->Zope->plone.i18n) (6.3)
+#9 0.743 Requirement already satisfied: plone.batching in /usr/local/lib/python3.11/site-packages (from plone.z3cform>=2.0.0->plone.autoform->plone.i18n) (2.0.7)
+#9 0.751 Requirement already satisfied: packaging in /usr/local/lib/python3.11/site-packages (from Products.GenericSetup>=2.1.2->Products.CMFCore->plone.i18n) (25.0)
+#9 0.763 Requirement already satisfied: zope.sendmail>=6.2 in /usr/local/lib/python3.11/site-packages (from Products.MailHost>=4.0->Products.CMFCore->plone.i18n) (7.0)
+#9 0.773 Requirement already satisfied: Missing in /usr/local/lib/python3.11/site-packages (from Products.ZCatalog>=4.0a2->Products.CMFCore->plone.i18n) (5.0)
+#9 0.774 Requirement already satisfied: Record in /usr/local/lib/python3.11/site-packages (from Products.ZCatalog>=4.0a2->Products.CMFCore->plone.i18n) (4.1)
+#9 0.854 Requirement already satisfied: zope.hookable>=4.2.0 in /usr/local/lib/python3.11/site-packages (from zope.component->plone.supermodel->plone.i18n) (8.1)
+#9 1.008 Requirement already satisfied: pytz in /usr/local/lib/python3.11/site-packages (from DateTime->Zope->plone.i18n) (2025.2)
+#9 1.049 Requirement already satisfied: collective.monkeypatcher in /usr/local/lib/python3.11/site-packages (from plone.protect->plone.subrequest->plone.i18n) (2.0.1)
+#9 1.050 Requirement already satisfied: plone.keyring in /usr/local/lib/python3.11/site-packages (from plone.protect->plone.subrequest->plone.i18n) (4.0.3)
+#9 1.051 Requirement already satisfied: plone.scale in /usr/local/lib/python3.11/site-packages (from plone.protect->plone.subrequest->plone.i18n) (4.2.1)
+#9 1.052 Requirement already satisfied: plone.transformchain in /usr/local/lib/python3.11/site-packages (from plone.protect->plone.subrequest->plone.i18n) (3.0.2)
+#9 1.055 Requirement already satisfied: Products.PluggableAuthService in /usr/local/lib/python3.11/site-packages (from plone.protect->plone.subrequest->plone.i18n) (3.0)
+#9 1.055 Requirement already satisfied: repoze.xmliter in /usr/local/lib/python3.11/site-packages (from plone.protect->plone.subrequest->plone.i18n) (0.6.1)
+#9 1.124 Requirement already satisfied: zc.lockfile in /usr/local/lib/python3.11/site-packages (from ZODB->Zope->plone.i18n) (4.0)
+#9 1.126 Requirement already satisfied: zodbpickle>=1.0.1 in /usr/local/lib/python3.11/site-packages (from ZODB->Zope->plone.i18n) (4.2)
+#9 1.164 Requirement already satisfied: zope.cachedescriptors in /usr/local/lib/python3.11/site-packages (from zope.container->Zope->plone.i18n) (6.0)
+#9 1.166 Requirement already satisfied: zope.filerepresentation in /usr/local/lib/python3.11/site-packages (from zope.container->Zope->plone.i18n) (7.0)
+#9 1.241 Requirement already satisfied: python-gettext in /usr/local/lib/python3.11/site-packages (from zope.i18n[zcml]->Zope->plone.i18n) (5.0)
+#9 1.243 Requirement already satisfied: zope.deprecation in /usr/local/lib/python3.11/site-packages (from zope.i18n[zcml]->Zope->plone.i18n) (6.0)
+#9 1.293 Requirement already satisfied: zope.annotation in /usr/local/lib/python3.11/site-packages (from zope.site->Zope->plone.i18n) (6.0)
+#9 1.322 Requirement already satisfied: WebTest>=2.0.30 in /usr/local/lib/python3.11/site-packages (from zope.testbrowser->Zope->plone.i18n) (3.0.7)
+#9 1.323 Requirement already satisfied: BeautifulSoup4 in /usr/local/lib/python3.11/site-packages (from zope.testbrowser->Zope->plone.i18n) (4.14.2)
+#9 1.324 Requirement already satisfied: SoupSieve>=1.9.0 in /usr/local/lib/python3.11/site-packages (from zope.testbrowser->Zope->plone.i18n) (2.8)
+#9 1.324 Requirement already satisfied: WSGIProxy2 in /usr/local/lib/python3.11/site-packages (from zope.testbrowser->Zope->plone.i18n) (0.5.1)
+#9 1.360 Requirement already satisfied: cffi in /usr/local/lib/python3.11/site-packages (from persistent>=4.1.1->Persistence->Zope->plone.i18n) (2.0.0)
+#9 1.378 Requirement already satisfied: WebOb>=1.2 in /usr/local/lib/python3.11/site-packages (from WebTest>=2.0.30->zope.testbrowser->Zope->plone.i18n) (1.8.9)
+#9 1.439 Requirement already satisfied: typing-extensions>=4.0.0 in /usr/local/lib/python3.11/site-packages (from BeautifulSoup4->zope.testbrowser->Zope->plone.i18n) (4.15.0)
+#9 1.461 Requirement already satisfied: cssselect>=0.7 in /usr/local/lib/python3.11/site-packages (from lxml[cssselect]->plone.protect->plone.subrequest->plone.i18n) (1.3.0)
+#9 1.506 Requirement already satisfied: Pillow in /usr/local/lib/python3.11/site-packages (from plone.scale->plone.protect->plone.subrequest->plone.i18n) (12.0.0)
+#9 1.528 Requirement already satisfied: Products.PluginRegistry>=1.6 in /usr/local/lib/python3.11/site-packages (from Products.PluggableAuthService->plone.protect->plone.subrequest->plone.i18n) (2.0)
+#9 1.529 Requirement already satisfied: Products.Sessions in /usr/local/lib/python3.11/site-packages (from Products.PluggableAuthService->plone.protect->plone.subrequest->plone.i18n) (6.0)
+#9 1.560 Requirement already satisfied: future in /usr/local/lib/python3.11/site-packages (from repoze.xmliter->plone.protect->plone.subrequest->plone.i18n) (1.0.0)
+#9 1.697 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi->persistent>=4.1.1->Persistence->Zope->plone.i18n) (2.23)
+#9 2.206 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 2.212 
+#9 2.212 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 2.212 [notice] To update, run: pip install --upgrade pip
+#9 DONE 2.3s
+
+#10 [ 6/32] RUN ["pip","install","plone.app.locales"]
+#10 0.722 Collecting plone.app.locales
+#10 0.758   Downloading plone_app_locales-6.1.0-py3-none-any.whl.metadata (29 kB)
+#10 0.788 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from plone.app.locales) (79.0.1)
+#10 0.823 Downloading plone_app_locales-6.1.0-py3-none-any.whl (11.9 MB)
+#10 1.342    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.9/11.9 MB 23.0 MB/s eta 0:00:00
+#10 1.835 Installing collected packages: plone.app.locales
+#10 2.129 Successfully installed plone.app.locales-6.1.0
+#10 2.129 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 2.134 
+#10 2.134 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 2.134 [notice] To update, run: pip install --upgrade pip
+#10 DONE 2.6s
+
+#11 [ 7/32] RUN ["pip","install","plone.uuid"]
+#11 0.611 Collecting plone.uuid
+#11 0.645   Downloading plone_uuid-2.0.2-py3-none-any.whl.metadata (6.6 kB)
+#11 0.672 Requirement already satisfied: Acquisition in /usr/local/lib/python3.11/site-packages (from plone.uuid) (6.1)
+#11 0.673 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from plone.uuid) (79.0.1)
+#11 0.674 Requirement already satisfied: zope.component in /usr/local/lib/python3.11/site-packages (from plone.uuid) (7.0)
+#11 0.675 Requirement already satisfied: zope.browserpage in /usr/local/lib/python3.11/site-packages (from plone.uuid) (6.0)
+#11 0.677 Requirement already satisfied: zope.interface in /usr/local/lib/python3.11/site-packages (from plone.uuid) (8.0.1)
+#11 0.678 Requirement already satisfied: zope.lifecycleevent in /usr/local/lib/python3.11/site-packages (from plone.uuid) (6.0)
+#11 0.679 Requirement already satisfied: zope.publisher in /usr/local/lib/python3.11/site-packages (from plone.uuid) (8.0)
+#11 0.682 Requirement already satisfied: ExtensionClass>=4.2.0 in /usr/local/lib/python3.11/site-packages (from Acquisition->plone.uuid) (6.1)
+#11 0.715 Requirement already satisfied: zope.tal>=4.2.0 in /usr/local/lib/python3.11/site-packages (from zope.browserpage->plone.uuid) (6.0)
+#11 0.716 Requirement already satisfied: zope.pagetemplate in /usr/local/lib/python3.11/site-packages (from zope.browserpage->plone.uuid) (6.0)
+#11 0.718 Requirement already satisfied: zope.configuration in /usr/local/lib/python3.11/site-packages (from zope.browserpage->plone.uuid) (7.0)
+#11 0.720 Requirement already satisfied: zope.schema in /usr/local/lib/python3.11/site-packages (from zope.browserpage->plone.uuid) (8.1)
+#11 0.721 Requirement already satisfied: zope.security in /usr/local/lib/python3.11/site-packages (from zope.browserpage->plone.uuid) (8.2)
+#11 0.722 Requirement already satisfied: zope.traversing in /usr/local/lib/python3.11/site-packages (from zope.browserpage->plone.uuid) (6.0)
+#11 0.734 Requirement already satisfied: zope.event in /usr/local/lib/python3.11/site-packages (from zope.component->plone.uuid) (6.0)
+#11 0.735 Requirement already satisfied: zope.hookable>=4.2.0 in /usr/local/lib/python3.11/site-packages (from zope.component->plone.uuid) (8.1)
+#11 0.749 Requirement already satisfied: multipart>=1.1.0 in /usr/local/lib/python3.11/site-packages (from zope.publisher->plone.uuid) (1.3.0)
+#11 0.750 Requirement already satisfied: zope.browser in /usr/local/lib/python3.11/site-packages (from zope.publisher->plone.uuid) (4.0)
+#11 0.752 Requirement already satisfied: zope.contenttype>=4.0.0 in /usr/local/lib/python3.11/site-packages (from zope.publisher->plone.uuid) (6.0)
+#11 0.753 Requirement already satisfied: zope.exceptions in /usr/local/lib/python3.11/site-packages (from zope.publisher->plone.uuid) (6.0)
+#11 0.754 Requirement already satisfied: zope.i18n>=4.0.0 in /usr/local/lib/python3.11/site-packages (from zope.publisher->plone.uuid) (6.0)
+#11 0.756 Requirement already satisfied: zope.location in /usr/local/lib/python3.11/site-packages (from zope.publisher->plone.uuid) (6.0)
+#11 0.757 Requirement already satisfied: zope.proxy in /usr/local/lib/python3.11/site-packages (from zope.publisher->plone.uuid) (7.0)
+#11 0.784 Requirement already satisfied: python-gettext in /usr/local/lib/python3.11/site-packages (from zope.i18n>=4.0.0->zope.publisher->plone.uuid) (5.0)
+#11 0.785 Requirement already satisfied: pytz in /usr/local/lib/python3.11/site-packages (from zope.i18n>=4.0.0->zope.publisher->plone.uuid) (2025.2)
+#11 0.786 Requirement already satisfied: zope.deprecation in /usr/local/lib/python3.11/site-packages (from zope.i18n>=4.0.0->zope.publisher->plone.uuid) (6.0)
+#11 0.787 Requirement already satisfied: zope.i18nmessageid>=4.3 in /usr/local/lib/python3.11/site-packages (from zope.i18n>=4.0.0->zope.publisher->plone.uuid) (8.1)
+#11 0.853 Requirement already satisfied: zope.tales in /usr/local/lib/python3.11/site-packages (from zope.pagetemplate->zope.browserpage->plone.uuid) (7.0)
+#11 0.867 Requirement already satisfied: transaction in /usr/local/lib/python3.11/site-packages (from zope.traversing->zope.browserpage->plone.uuid) (5.0)
+#11 0.906 Downloading plone_uuid-2.0.2-py3-none-any.whl (8.3 kB)
+#11 1.379 Installing collected packages: plone.uuid
+#11 1.432 Successfully installed plone.uuid-2.0.2
+#11 1.432 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.437 
+#11 1.437 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.437 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.5s
+
+#12 [ 8/32] RUN ["pip","install","plone.supermodel"]
+#12 0.524 Requirement already satisfied: plone.supermodel in /usr/local/lib/python3.11/site-packages (2.0.5)
+#12 0.529 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from plone.supermodel) (79.0.1)
+#12 0.530 Requirement already satisfied: lxml in /usr/local/lib/python3.11/site-packages (from plone.supermodel) (6.0.2)
+#12 0.531 Requirement already satisfied: zope.component in /usr/local/lib/python3.11/site-packages (from plone.supermodel) (7.0)
+#12 0.532 Requirement already satisfied: zope.i18nmessageid in /usr/local/lib/python3.11/site-packages (from plone.supermodel) (8.1)
+#12 0.534 Requirement already satisfied: zope.interface in /usr/local/lib/python3.11/site-packages (from plone.supermodel) (8.0.1)
+#12 0.535 Requirement already satisfied: zope.schema>=4.1.0 in /usr/local/lib/python3.11/site-packages (from plone.supermodel) (8.1)
+#12 0.536 Requirement already satisfied: zope.deferredimport in /usr/local/lib/python3.11/site-packages (from plone.supermodel) (6.0)
+#12 0.537 Requirement already satisfied: zope.dottedname in /usr/local/lib/python3.11/site-packages (from plone.supermodel) (7.0)
+#12 0.538 Requirement already satisfied: z3c.zcmlhook in /usr/local/lib/python3.11/site-packages (from plone.supermodel) (3.0)
+#12 0.543 Requirement already satisfied: zope.event in /usr/local/lib/python3.11/site-packages (from zope.schema>=4.1.0->plone.supermodel) (6.0)
+#12 0.579 Requirement already satisfied: zope.configuration in /usr/local/lib/python3.11/site-packages (from z3c.zcmlhook->plone.supermodel) (7.0)
+#12 0.590 Requirement already satisfied: zope.hookable>=4.2.0 in /usr/local/lib/python3.11/site-packages (from zope.component->plone.supermodel) (8.1)
+#12 0.595 Requirement already satisfied: zope.proxy in /usr/local/lib/python3.11/site-packages (from zope.deferredimport->plone.supermodel) (7.0)
+#12 1.055 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 1.061 
+#12 1.061 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 1.061 [notice] To update, run: pip install --upgrade pip
+#12 DONE 1.1s
+
+#13 [ 9/32] RUN ["pip","install","plone.testing"]
+#13 0.710 Collecting plone.testing
+#13 0.744   Downloading plone_testing-9.0.7-py3-none-any.whl.metadata (210 kB)
+#13 0.784      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 210.5/210.5 kB 5.5 MB/s eta 0:00:00
+#13 0.803 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from plone.testing) (79.0.1)
+#13 0.805 Requirement already satisfied: zope.testing>=3.8 in /usr/local/lib/python3.11/site-packages (from plone.testing) (6.0)
+#13 0.843 Downloading plone_testing-9.0.7-py3-none-any.whl (121 kB)
+#13 0.865    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.6/121.6 kB 5.4 MB/s eta 0:00:00
+#13 1.348 Installing collected packages: plone.testing
+#13 1.415 Successfully installed plone.testing-9.0.7
+#13 1.416 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 1.421 
+#13 1.421 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 1.421 [notice] To update, run: pip install --upgrade pip
+#13 DONE 1.5s
+
+#14 [10/32] RUN ["pip","install","plone.releaser"]
+#14 0.627 Collecting plone.releaser
+#14 0.660   Downloading plone_releaser-2.5.2-py3-none-any.whl.metadata (14 kB)
+#14 0.688 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from plone.releaser) (79.0.1)
+#14 0.828 Collecting argh (from plone.releaser)
+#14 0.838   Downloading argh-0.31.3-py3-none-any.whl.metadata (7.4 kB)
+#14 0.913 Collecting gitpython>=3.0.0 (from plone.releaser)
+#14 0.922   Downloading gitpython-3.1.45-py3-none-any.whl.metadata (13 kB)
+#14 0.975 Collecting configparser (from plone.releaser)
+#14 0.984   Downloading configparser-7.2.0-py3-none-any.whl.metadata (5.5 kB)
+#14 1.000 Requirement already satisfied: packaging in /usr/local/lib/python3.11/site-packages (from plone.releaser) (25.0)
+#14 1.035 Collecting progress (from plone.releaser)
+#14 1.045   Downloading progress-1.6.1-py3-none-any.whl.metadata (4.3 kB)
+#14 1.115 Collecting zest.releaser>=7.2.0 (from zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 1.125   Downloading zest_releaser-9.6.2-py3-none-any.whl.metadata (20 kB)
+#14 1.273 Collecting zestreleaser.towncrier>=1.3.0 (from plone.releaser)
+#14 1.282   Downloading zestreleaser.towncrier-1.3.0.tar.gz (17 kB)
+#14 1.300   Installing build dependencies: started
+#14 3.054   Installing build dependencies: finished with status 'done'
+#14 3.055   Getting requirements to build wheel: started
+#14 3.203   Getting requirements to build wheel: finished with status 'done'
+#14 3.204   Preparing metadata (pyproject.toml): started
+#14 3.342   Preparing metadata (pyproject.toml): finished with status 'done'
+#14 3.344 Requirement already satisfied: docutils in /usr/local/lib/python3.11/site-packages (from plone.releaser) (0.22.2)
+#14 3.385 Collecting gitdb<5,>=4.0.1 (from gitpython>=3.0.0->plone.releaser)
+#14 3.395   Downloading gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+#14 3.455 Collecting build>=1.2.0 (from zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 3.464   Downloading build-1.3.0-py3-none-any.whl.metadata (5.6 kB)
+#14 3.512 Collecting colorama (from zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 3.521   Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+#14 3.569 Collecting readme_renderer>=40 (from readme_renderer[md]>=40->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 3.580   Downloading readme_renderer-44.0-py3-none-any.whl.metadata (2.8 kB)
+#14 3.648 Collecting requests (from zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 3.657   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#14 3.707 Collecting twine>=1.6.0 (from zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 3.716   Downloading twine-6.2.0-py3-none-any.whl.metadata (3.6 kB)
+#14 3.731 Requirement already satisfied: wheel in /usr/local/lib/python3.11/site-packages (from zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser) (0.45.1)
+#14 3.902 Collecting check-manifest (from zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 3.912   Downloading check_manifest-0.51-py3-none-any.whl.metadata (21 kB)
+#14 3.956 Collecting pep440 (from zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 3.966   Downloading pep440-0.1.2-py3-none-any.whl.metadata (1.0 kB)
+#14 4.115 Collecting pyroma (from zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 4.125   Downloading pyroma-5.0-py3-none-any.whl.metadata (16 kB)
+#14 4.178 Collecting tomli (from zestreleaser.towncrier>=1.3.0->plone.releaser)
+#14 4.187   Downloading tomli-2.3.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+#14 4.238 Collecting towncrier>=19.9.0 (from zestreleaser.towncrier>=1.3.0->plone.releaser)
+#14 4.247   Downloading towncrier-25.8.0-py3-none-any.whl.metadata (4.3 kB)
+#14 4.322 Collecting pyproject_hooks (from build>=1.2.0->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 4.330   Downloading pyproject_hooks-1.2.0-py3-none-any.whl.metadata (1.3 kB)
+#14 4.372 Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython>=3.0.0->plone.releaser)
+#14 4.380   Downloading smmap-5.0.2-py3-none-any.whl.metadata (4.3 kB)
+#14 4.448 Collecting nh3>=0.2.14 (from readme_renderer>=40->readme_renderer[md]>=40->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 4.458   Downloading nh3-0.3.1-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (466 bytes)
+#14 4.514 Collecting Pygments>=2.5.1 (from readme_renderer>=40->readme_renderer[md]>=40->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 4.522   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#14 4.707 Collecting cmarkgfm>=0.8.0 (from readme_renderer[md]>=40->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 4.716   Downloading cmarkgfm-2025.10.22-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (7.5 kB)
+#14 4.786 Collecting click (from towncrier>=19.9.0->zestreleaser.towncrier>=1.3.0->plone.releaser)
+#14 4.794   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#14 4.834 Collecting jinja2 (from towncrier>=19.9.0->zestreleaser.towncrier>=1.3.0->plone.releaser)
+#14 4.842   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#14 4.908 Collecting requests-toolbelt!=0.9.0,>=0.8.0 (from twine>=1.6.0->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 4.916   Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl.metadata (14 kB)
+#14 4.982 Collecting urllib3>=1.26.0 (from twine>=1.6.0->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 4.990   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#14 5.062 Collecting keyring>=21.2.0 (from twine>=1.6.0->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 5.070   Downloading keyring-25.6.0-py3-none-any.whl.metadata (20 kB)
+#14 5.110 Collecting rfc3986>=1.4.0 (from twine>=1.6.0->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 5.119   Downloading rfc3986-2.0.0-py2.py3-none-any.whl.metadata (6.6 kB)
+#14 5.211 Collecting rich>=12.0.0 (from twine>=1.6.0->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 5.220   Downloading rich-14.2.0-py3-none-any.whl.metadata (18 kB)
+#14 5.266 Collecting id (from twine>=1.6.0->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 5.275   Downloading id-1.5.0-py3-none-any.whl.metadata (5.2 kB)
+#14 5.386 Collecting charset_normalizer<4,>=2 (from requests->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 5.394   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#14 5.438 Collecting idna<4,>=2.5 (from requests->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 5.446   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#14 5.524 Collecting certifi>=2017.4.17 (from requests->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 5.533   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#14 5.611 Collecting trove-classifiers>=2022.6.26 (from pyroma->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 5.619   Downloading trove_classifiers-2025.9.11.17-py3-none-any.whl.metadata (2.4 kB)
+#14 5.644 Requirement already satisfied: cffi>=2.0.0 in /usr/local/lib/python3.11/site-packages (from cmarkgfm>=0.8.0->readme_renderer[md]>=40->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser) (2.0.0)
+#14 5.692 Collecting SecretStorage>=3.2 (from keyring>=21.2.0->twine>=1.6.0->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 5.700   Downloading secretstorage-3.4.0-py3-none-any.whl.metadata (3.9 kB)
+#14 5.736 Collecting jeepney>=0.4.2 (from keyring>=21.2.0->twine>=1.6.0->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 5.745   Downloading jeepney-0.9.0-py3-none-any.whl.metadata (1.2 kB)
+#14 5.816 Collecting importlib_metadata>=4.11.4 (from keyring>=21.2.0->twine>=1.6.0->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 5.824   Downloading importlib_metadata-8.7.0-py3-none-any.whl.metadata (4.8 kB)
+#14 5.888 Collecting jaraco.classes (from keyring>=21.2.0->twine>=1.6.0->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 5.896   Downloading jaraco.classes-3.4.0-py3-none-any.whl.metadata (2.6 kB)
+#14 5.946 Collecting jaraco.functools (from keyring>=21.2.0->twine>=1.6.0->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 5.954   Downloading jaraco_functools-4.3.0-py3-none-any.whl.metadata (2.9 kB)
+#14 6.001 Collecting jaraco.context (from keyring>=21.2.0->twine>=1.6.0->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 6.009   Downloading jaraco.context-6.0.1-py3-none-any.whl.metadata (4.1 kB)
+#14 6.082 Collecting markdown-it-py>=2.2.0 (from rich>=12.0.0->twine>=1.6.0->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 6.091   Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+#14 6.213 Collecting MarkupSafe>=2.0 (from jinja2->towncrier>=19.9.0->zestreleaser.towncrier>=1.3.0->plone.releaser)
+#14 6.222   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#14 6.244 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi>=2.0.0->cmarkgfm>=0.8.0->readme_renderer[md]>=40->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser) (2.23)
+#14 6.294 Collecting zipp>=3.20 (from importlib_metadata>=4.11.4->keyring>=21.2.0->twine>=1.6.0->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 6.303   Downloading zipp-3.23.0-py3-none-any.whl.metadata (3.6 kB)
+#14 6.363 Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=12.0.0->twine>=1.6.0->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 6.372   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+#14 6.626 Collecting cryptography>=2.0 (from SecretStorage>=3.2->keyring>=21.2.0->twine>=1.6.0->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 6.635   Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+#14 6.692 Collecting more-itertools (from jaraco.classes->keyring>=21.2.0->twine>=1.6.0->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 6.701   Downloading more_itertools-10.8.0-py3-none-any.whl.metadata (39 kB)
+#14 6.754 Collecting backports.tarfile (from jaraco.context->keyring>=21.2.0->twine>=1.6.0->zest.releaser>=7.2.0->zest.releaser[recommended]>=7.2.0->plone.releaser)
+#14 6.762   Downloading backports.tarfile-1.2.0-py3-none-any.whl.metadata (2.0 kB)
+#14 6.862 Downloading plone_releaser-2.5.2-py3-none-any.whl (52 kB)
+#14 6.879    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.3/52.3 kB 2.9 MB/s eta 0:00:00
+#14 6.887 Downloading gitpython-3.1.45-py3-none-any.whl (208 kB)
+#14 6.908    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 208.2/208.2 kB 10.3 MB/s eta 0:00:00
+#14 6.916 Downloading zest_releaser-9.6.2-py3-none-any.whl (101 kB)
+#14 6.934    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 101.4/101.4 kB 5.8 MB/s eta 0:00:00
+#14 6.946 Downloading argh-0.31.3-py3-none-any.whl (44 kB)
+#14 6.961    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.8/44.8 kB 2.6 MB/s eta 0:00:00
+#14 6.973 Downloading configparser-7.2.0-py3-none-any.whl (17 kB)
+#14 6.999 Downloading progress-1.6.1-py3-none-any.whl (9.8 kB)
+#14 7.022 Downloading build-1.3.0-py3-none-any.whl (23 kB)
+#14 7.045 Downloading gitdb-4.0.12-py3-none-any.whl (62 kB)
+#14 7.057    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.8/62.8 kB 5.2 MB/s eta 0:00:00
+#14 7.068 Downloading readme_renderer-44.0-py3-none-any.whl (13 kB)
+#14 7.090 Downloading towncrier-25.8.0-py3-none-any.whl (65 kB)
+#14 7.111    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.1/65.1 kB 2.8 MB/s eta 0:00:00
+#14 7.121 Downloading twine-6.2.0-py3-none-any.whl (42 kB)
+#14 7.132    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.7/42.7 kB 3.6 MB/s eta 0:00:00
+#14 7.140 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#14 7.156    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 4.0 MB/s eta 0:00:00
+#14 7.166 Downloading check_manifest-0.51-py3-none-any.whl (20 kB)
+#14 7.183 Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+#14 7.209 Downloading pep440-0.1.2-py3-none-any.whl (4.6 kB)
+#14 7.228 Downloading pyroma-5.0-py3-none-any.whl (22 kB)
+#14 7.255 Downloading tomli-2.3.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (242 kB)
+#14 7.277    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 242.1/242.1 kB 11.5 MB/s eta 0:00:00
+#14 7.285 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#14 7.300    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 11.4 MB/s eta 0:00:00
+#14 7.309 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#14 7.328    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 8.3 MB/s eta 0:00:00
+#14 7.338 Downloading cmarkgfm-2025.10.22-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (449 kB)
+#14 7.366    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 449.1/449.1 kB 16.3 MB/s eta 0:00:00
+#14 7.375 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#14 7.391    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.3 MB/s eta 0:00:00
+#14 7.399 Downloading keyring-25.6.0-py3-none-any.whl (39 kB)
+#14 7.422 Downloading nh3-0.3.1-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (796 kB)
+#14 7.464    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 796.9/796.9 kB 19.8 MB/s eta 0:00:00
+#14 7.479 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#14 7.528    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 25.6 MB/s eta 0:00:00
+#14 7.566 Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+#14 7.577    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.5/54.5 kB 4.9 MB/s eta 0:00:00
+#14 7.589 Downloading rfc3986-2.0.0-py2.py3-none-any.whl (31 kB)
+#14 7.608 Downloading rich-14.2.0-py3-none-any.whl (243 kB)
+#14 7.630    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.4/243.4 kB 11.7 MB/s eta 0:00:00
+#14 7.640 Downloading smmap-5.0.2-py3-none-any.whl (24 kB)
+#14 7.669 Downloading trove_classifiers-2025.9.11.17-py3-none-any.whl (14 kB)
+#14 7.702 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#14 7.716    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.6 MB/s eta 0:00:00
+#14 7.728 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#14 7.741    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 8.4 MB/s eta 0:00:00
+#14 7.761 Downloading id-1.5.0-py3-none-any.whl (13 kB)
+#14 7.783 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#14 7.799    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 8.5 MB/s eta 0:00:00
+#14 7.810 Downloading pyproject_hooks-1.2.0-py3-none-any.whl (10 kB)
+#14 7.839 Downloading importlib_metadata-8.7.0-py3-none-any.whl (27 kB)
+#14 7.860 Downloading jeepney-0.9.0-py3-none-any.whl (49 kB)
+#14 7.874    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.0/49.0 kB 3.2 MB/s eta 0:00:00
+#14 7.883 Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+#14 7.907    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.3/87.3 kB 3.4 MB/s eta 0:00:00
+#14 7.923 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#14 7.942 Downloading secretstorage-3.4.0-py3-none-any.whl (15 kB)
+#14 7.963 Downloading jaraco.classes-3.4.0-py3-none-any.whl (6.8 kB)
+#14 7.983 Downloading jaraco.context-6.0.1-py3-none-any.whl (6.8 kB)
+#14 8.002 Downloading jaraco_functools-4.3.0-py3-none-any.whl (10 kB)
+#14 8.030 Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+#14 8.211    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 25.1 MB/s eta 0:00:00
+#14 8.227 Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+#14 8.309 Downloading zipp-3.23.0-py3-none-any.whl (10 kB)
+#14 8.327 Downloading backports.tarfile-1.2.0-py3-none-any.whl (30 kB)
+#14 8.349 Downloading more_itertools-10.8.0-py3-none-any.whl (69 kB)
+#14 8.359    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.7/69.7 kB 6.5 MB/s eta 0:00:00
+#14 8.401 Building wheels for collected packages: zestreleaser.towncrier
+#14 8.406   Building wheel for zestreleaser.towncrier (pyproject.toml): started
+#14 8.584   Building wheel for zestreleaser.towncrier (pyproject.toml): finished with status 'done'
+#14 8.584   Created wheel for zestreleaser.towncrier: filename=zestreleaser_towncrier-1.3.0-py2.py3-none-any.whl size=15436 sha256=bd5c577734fdf2eaf0da9bdcf2f07106a4347a286909a6259ed8be98bf804bef
+#14 8.585   Stored in directory: /root/.cache/pip/wheels/c9/22/fa/658474e087c8c96735d8f19d8e84cdae3a8aa3b42b2e7c508f
+#14 8.587 Successfully built zestreleaser.towncrier
+#14 9.228 Installing collected packages: trove-classifiers, zipp, urllib3, tomli, smmap, rfc3986, pyproject_hooks, Pygments, progress, pep440, nh3, more-itertools, mdurl, MarkupSafe, jeepney, idna, configparser, colorama, click, charset_normalizer, certifi, backports.tarfile, argh, requests, readme_renderer, markdown-it-py, jinja2, jaraco.functools, jaraco.context, jaraco.classes, importlib_metadata, gitdb, cryptography, cmarkgfm, build, towncrier, SecretStorage, rich, requests-toolbelt, pyroma, id, gitpython, check-manifest, keyring, twine, zest.releaser, zestreleaser.towncrier, plone.releaser
+#14 11.39 Successfully installed MarkupSafe-3.0.3 Pygments-2.19.2 SecretStorage-3.4.0 argh-0.31.3 backports.tarfile-1.2.0 build-1.3.0 certifi-2025.10.5 charset_normalizer-3.4.4 check-manifest-0.51 click-8.3.0 cmarkgfm-2025.10.22 colorama-0.4.6 configparser-7.2.0 cryptography-46.0.3 gitdb-4.0.12 gitpython-3.1.45 id-1.5.0 idna-3.11 importlib_metadata-8.7.0 jaraco.classes-3.4.0 jaraco.context-6.0.1 jaraco.functools-4.3.0 jeepney-0.9.0 jinja2-3.1.6 keyring-25.6.0 markdown-it-py-4.0.0 mdurl-0.1.2 more-itertools-10.8.0 nh3-0.3.1 pep440-0.1.2 plone.releaser-2.5.2 progress-1.6.1 pyproject_hooks-1.2.0 pyroma-5.0 readme_renderer-44.0 requests-2.32.5 requests-toolbelt-1.0.0 rfc3986-2.0.0 rich-14.2.0 smmap-5.0.2 tomli-2.3.0 towncrier-25.8.0 trove-classifiers-2025.9.11.17 twine-6.2.0 urllib3-2.5.0 zest.releaser-9.6.2 zestreleaser.towncrier-1.3.0 zipp-3.23.0
+#14 11.39 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#14 11.39 
+#14 11.39 [notice] A new release of pip is available: 24.0 -> 25.3
+#14 11.39 [notice] To update, run: pip install --upgrade pip
+#14 DONE 11.9s
+
+#15 [11/32] RUN ["pip","install","plone.recipe.codeanalysis"]
+#15 0.631 Collecting plone.recipe.codeanalysis
+#15 0.676   Downloading plone.recipe.codeanalysis-3.0.1.tar.gz (66 kB)
+#15 0.709      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.9/66.9 kB 1.8 MB/s eta 0:00:00
+#15 0.720   Preparing metadata (setup.py): started
+#15 0.891   Preparing metadata (setup.py): finished with status 'done'
+#15 0.905 Requirement already satisfied: check-manifest in /usr/local/lib/python3.11/site-packages (from plone.recipe.codeanalysis) (0.51)
+#15 0.956 Collecting flake8>=2.4.0 (from plone.recipe.codeanalysis)
+#15 0.965   Downloading flake8-7.3.0-py2.py3-none-any.whl.metadata (3.8 kB)
+#15 0.981 Requirement already satisfied: lxml in /usr/local/lib/python3.11/site-packages (from plone.recipe.codeanalysis) (6.0.2)
+#15 0.981 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from plone.recipe.codeanalysis) (79.0.1)
+#15 1.140 Collecting zc.buildout (from plone.recipe.codeanalysis)
+#15 1.150   Downloading zc_buildout-4.1.12-py3-none-any.whl.metadata (32 kB)
+#15 1.315 Collecting zc.recipe.egg (from plone.recipe.codeanalysis)
+#15 1.325   Downloading zc_recipe_egg-3.0.0-py3-none-any.whl.metadata (50 kB)
+#15 1.353      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.2/50.2 kB 1.5 MB/s eta 0:00:00
+#15 1.394 Collecting mccabe<0.8.0,>=0.7.0 (from flake8>=2.4.0->plone.recipe.codeanalysis)
+#15 1.402   Downloading mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+#15 1.448 Collecting pycodestyle<2.15.0,>=2.14.0 (from flake8>=2.4.0->plone.recipe.codeanalysis)
+#15 1.455   Downloading pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+#15 1.514 Collecting pyflakes<3.5.0,>=3.4.0 (from flake8>=2.4.0->plone.recipe.codeanalysis)
+#15 1.522   Downloading pyflakes-3.4.0-py2.py3-none-any.whl.metadata (3.5 kB)
+#15 1.540 Requirement already satisfied: build>=0.1 in /usr/local/lib/python3.11/site-packages (from check-manifest->plone.recipe.codeanalysis) (1.3.0)
+#15 1.572 Requirement already satisfied: packaging>=23.2 in /usr/local/lib/python3.11/site-packages (from zc.buildout->plone.recipe.codeanalysis) (25.0)
+#15 1.573 Requirement already satisfied: pip in /usr/local/lib/python3.11/site-packages (from zc.buildout->plone.recipe.codeanalysis) (24.0)
+#15 1.574 Requirement already satisfied: wheel in /usr/local/lib/python3.11/site-packages (from zc.buildout->plone.recipe.codeanalysis) (0.45.1)
+#15 1.587 Requirement already satisfied: pyproject_hooks in /usr/local/lib/python3.11/site-packages (from build>=0.1->check-manifest->plone.recipe.codeanalysis) (1.2.0)
+#15 1.603 Downloading flake8-7.3.0-py2.py3-none-any.whl (57 kB)
+#15 1.622    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.9/57.9 kB 2.8 MB/s eta 0:00:00
+#15 1.632 Downloading zc_buildout-4.1.12-py3-none-any.whl (198 kB)
+#15 1.676    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 198.1/198.1 kB 4.4 MB/s eta 0:00:00
+#15 1.685 Downloading zc_recipe_egg-3.0.0-py3-none-any.whl (31 kB)
+#15 1.717 Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+#15 1.739 Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+#15 1.768 Downloading pyflakes-3.4.0-py2.py3-none-any.whl (63 kB)
+#15 1.793    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.6/63.6 kB 2.3 MB/s eta 0:00:00
+#15 1.804 Building wheels for collected packages: plone.recipe.codeanalysis
+#15 1.809   Building wheel for plone.recipe.codeanalysis (setup.py): started
+#15 2.061   Building wheel for plone.recipe.codeanalysis (setup.py): finished with status 'done'
+#15 2.061   Created wheel for plone.recipe.codeanalysis: filename=plone_recipe_codeanalysis-3.0.1-py3-none-any.whl size=54791 sha256=f432b8b91728e34ab6a2c0c130c045ae4629ee0231ba6ec1303c82dd8f731252
+#15 2.062   Stored in directory: /root/.cache/pip/wheels/d2/03/16/699d3fd8e71a122b36fba59139ec221e7ab6fce6afee63654c
+#15 2.065 Successfully built plone.recipe.codeanalysis
+#15 2.696 Installing collected packages: zc.buildout, pyflakes, pycodestyle, mccabe, zc.recipe.egg, flake8, plone.recipe.codeanalysis
+#15 2.979 Successfully installed flake8-7.3.0 mccabe-0.7.0 plone.recipe.codeanalysis-3.0.1 pycodestyle-2.14.0 pyflakes-3.4.0 zc.buildout-4.1.12 zc.recipe.egg-3.0.0
+#15 2.979 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#15 2.985 
+#15 2.985 [notice] A new release of pip is available: 24.0 -> 25.3
+#15 2.985 [notice] To update, run: pip install --upgrade pip
+#15 DONE 3.1s
+
+#16 [12/32] RUN ["pip","install","plone.versioncheck"]
+#16 0.646 Collecting plone.versioncheck
+#16 0.683   Downloading plone.versioncheck-1.8.2-py2.py3-none-any.whl.metadata (18 kB)
+#16 0.745 Collecting CacheControl[filecache] (from plone.versioncheck)
+#16 0.755   Downloading cachecontrol-0.14.3-py3-none-any.whl.metadata (3.1 kB)
+#16 0.775 Requirement already satisfied: colorama in /usr/local/lib/python3.11/site-packages (from plone.versioncheck) (0.4.6)
+#16 0.776 Requirement already satisfied: jinja2 in /usr/local/lib/python3.11/site-packages (from plone.versioncheck) (3.1.6)
+#16 0.777 Requirement already satisfied: requests in /usr/local/lib/python3.11/site-packages (from plone.versioncheck) (2.32.5)
+#16 0.778 Requirement already satisfied: setuptools>=12 in /usr/local/lib/python3.11/site-packages (from plone.versioncheck) (79.0.1)
+#16 0.780 Requirement already satisfied: zc.buildout in /usr/local/lib/python3.11/site-packages (from plone.versioncheck) (4.1.12)
+#16 0.902 Collecting msgpack<2.0.0,>=0.5.2 (from CacheControl[filecache]->plone.versioncheck)
+#16 0.910   Downloading msgpack-1.1.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+#16 0.965 Collecting filelock>=3.8.0 (from CacheControl[filecache]->plone.versioncheck)
+#16 0.973   Downloading filelock-3.20.0-py3-none-any.whl.metadata (2.1 kB)
+#16 0.997 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests->plone.versioncheck) (3.4.4)
+#16 0.998 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests->plone.versioncheck) (3.11)
+#16 0.999 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests->plone.versioncheck) (2.5.0)
+#16 1.000 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests->plone.versioncheck) (2025.10.5)
+#16 1.003 Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.11/site-packages (from jinja2->plone.versioncheck) (3.0.3)
+#16 1.008 Requirement already satisfied: packaging>=23.2 in /usr/local/lib/python3.11/site-packages (from zc.buildout->plone.versioncheck) (25.0)
+#16 1.009 Requirement already satisfied: pip in /usr/local/lib/python3.11/site-packages (from zc.buildout->plone.versioncheck) (24.0)
+#16 1.010 Requirement already satisfied: wheel in /usr/local/lib/python3.11/site-packages (from zc.buildout->plone.versioncheck) (0.45.1)
+#16 1.045 Downloading plone.versioncheck-1.8.2-py2.py3-none-any.whl (21 kB)
+#16 1.074 Downloading filelock-3.20.0-py3-none-any.whl (16 kB)
+#16 1.103 Downloading msgpack-1.1.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (426 kB)
+#16 1.151    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 426.2/426.2 kB 9.1 MB/s eta 0:00:00
+#16 1.159 Downloading cachecontrol-0.14.3-py3-none-any.whl (21 kB)
+#16 1.861 Installing collected packages: msgpack, filelock, CacheControl, plone.versioncheck
+#16 1.989 Successfully installed CacheControl-0.14.3 filelock-3.20.0 msgpack-1.1.2 plone.versioncheck-1.8.2
+#16 1.989 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#16 1.995 
+#16 1.995 [notice] A new release of pip is available: 24.0 -> 25.3
+#16 1.995 [notice] To update, run: pip install --upgrade pip
+#16 DONE 2.1s
+
+#17 [13/32] RUN ["pip","install","plone.recipe.zeoserver"]
+#17 0.659 Collecting plone.recipe.zeoserver
+#17 0.694   Downloading plone_recipe_zeoserver-3.0.5-py3-none-any.whl.metadata (16 kB)
+#17 0.718 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from plone.recipe.zeoserver) (79.0.1)
+#17 0.719 Requirement already satisfied: zc.buildout in /usr/local/lib/python3.11/site-packages (from plone.recipe.zeoserver) (4.1.12)
+#17 0.721 Requirement already satisfied: zc.recipe.egg in /usr/local/lib/python3.11/site-packages (from plone.recipe.zeoserver) (3.0.0)
+#17 0.722 Requirement already satisfied: zdaemon in /usr/local/lib/python3.11/site-packages (from plone.recipe.zeoserver) (5.2.1)
+#17 0.724 Requirement already satisfied: ZEO in /usr/local/lib/python3.11/site-packages (from plone.recipe.zeoserver) (6.1)
+#17 0.725 Requirement already satisfied: ZODB>=5 in /usr/local/lib/python3.11/site-packages (from plone.recipe.zeoserver) (6.1)
+#17 0.758 Collecting zope.mkzeoinstance>=5.1.1 (from plone.recipe.zeoserver)
+#17 0.768   Downloading zope.mkzeoinstance-6.0-py3-none-any.whl.metadata (3.4 kB)
+#17 0.823 Collecting ZopeUndo (from plone.recipe.zeoserver)
+#17 0.833   Downloading ZopeUndo-6.0-py3-none-any.whl.metadata (2.3 kB)
+#17 0.851 Requirement already satisfied: persistent>=4.4.0 in /usr/local/lib/python3.11/site-packages (from ZODB>=5->plone.recipe.zeoserver) (6.3)
+#17 0.852 Requirement already satisfied: BTrees>=4.2.0 in /usr/local/lib/python3.11/site-packages (from ZODB>=5->plone.recipe.zeoserver) (6.2)
+#17 0.854 Requirement already satisfied: ZConfig in /usr/local/lib/python3.11/site-packages (from ZODB>=5->plone.recipe.zeoserver) (4.2)
+#17 0.855 Requirement already satisfied: transaction>=2.4 in /usr/local/lib/python3.11/site-packages (from ZODB>=5->plone.recipe.zeoserver) (5.0)
+#17 0.856 Requirement already satisfied: zc.lockfile in /usr/local/lib/python3.11/site-packages (from ZODB>=5->plone.recipe.zeoserver) (4.0)
+#17 0.857 Requirement already satisfied: zope.interface in /usr/local/lib/python3.11/site-packages (from ZODB>=5->plone.recipe.zeoserver) (8.0.1)
+#17 0.858 Requirement already satisfied: zodbpickle>=1.0.1 in /usr/local/lib/python3.11/site-packages (from ZODB>=5->plone.recipe.zeoserver) (4.2)
+#17 0.892 Requirement already satisfied: packaging>=23.2 in /usr/local/lib/python3.11/site-packages (from zc.buildout->plone.recipe.zeoserver) (25.0)
+#17 0.893 Requirement already satisfied: pip in /usr/local/lib/python3.11/site-packages (from zc.buildout->plone.recipe.zeoserver) (24.0)
+#17 0.893 Requirement already satisfied: wheel in /usr/local/lib/python3.11/site-packages (from zc.buildout->plone.recipe.zeoserver) (0.45.1)
+#17 0.924 Requirement already satisfied: zope.deferredimport in /usr/local/lib/python3.11/site-packages (from persistent>=4.4.0->ZODB>=5->plone.recipe.zeoserver) (6.0)
+#17 0.925 Requirement already satisfied: cffi in /usr/local/lib/python3.11/site-packages (from persistent>=4.4.0->ZODB>=5->plone.recipe.zeoserver) (2.0.0)
+#17 0.950 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi->persistent>=4.4.0->ZODB>=5->plone.recipe.zeoserver) (2.23)
+#17 0.954 Requirement already satisfied: zope.proxy in /usr/local/lib/python3.11/site-packages (from zope.deferredimport->persistent>=4.4.0->ZODB>=5->plone.recipe.zeoserver) (7.0)
+#17 0.971 Downloading plone_recipe_zeoserver-3.0.5-py3-none-any.whl (21 kB)
+#17 1.014 Downloading zope.mkzeoinstance-6.0-py3-none-any.whl (10 kB)
+#17 1.045 Downloading ZopeUndo-6.0-py3-none-any.whl (5.1 kB)
+#17 1.725 Installing collected packages: ZopeUndo, zope.mkzeoinstance, plone.recipe.zeoserver
+#17 1.826 Successfully installed ZopeUndo-6.0 plone.recipe.zeoserver-3.0.5 zope.mkzeoinstance-6.0
+#17 1.826 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#17 1.832 
+#17 1.832 [notice] A new release of pip is available: 24.0 -> 25.3
+#17 1.832 [notice] To update, run: pip install --upgrade pip
+#17 DONE 1.9s
+
+#18 [14/32] RUN ["pip","install","plone.event"]
+#18 0.774 Collecting plone.event
+#18 0.810   Downloading plone_event-2.0.3-py3-none-any.whl.metadata (7.3 kB)
+#18 0.833 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from plone.event) (79.0.1)
+#18 0.874 Collecting python-dateutil (from plone.event)
+#18 0.882   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#18 0.903 Requirement already satisfied: pytz in /usr/local/lib/python3.11/site-packages (from plone.event) (2025.2)
+#18 0.904 Requirement already satisfied: zope.component in /usr/local/lib/python3.11/site-packages (from plone.event) (7.0)
+#18 0.906 Requirement already satisfied: zope.interface in /usr/local/lib/python3.11/site-packages (from plone.event) (8.0.1)
+#18 0.938 Collecting six>=1.5 (from python-dateutil->plone.event)
+#18 0.946   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#18 1.003 Requirement already satisfied: zope.event in /usr/local/lib/python3.11/site-packages (from zope.component->plone.event) (6.0)
+#18 1.004 Requirement already satisfied: zope.hookable>=4.2.0 in /usr/local/lib/python3.11/site-packages (from zope.component->plone.event) (8.1)
+#18 1.027 Downloading plone_event-2.0.3-py3-none-any.whl (26 kB)
+#18 1.056 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#18 1.094    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 6.2 MB/s eta 0:00:00
+#18 1.112 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#18 1.812 Installing collected packages: six, python-dateutil, plone.event
+#18 1.937 Successfully installed plone.event-2.0.3 python-dateutil-2.9.0.post0 six-1.17.0
+#18 1.937 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#18 1.942 
+#18 1.942 [notice] A new release of pip is available: 24.0 -> 25.3
+#18 1.942 [notice] To update, run: pip install --upgrade pip
+#18 DONE 2.0s
+
+#19 [15/32] RUN ["pip","install","zope.testing"]
+#19 0.558 Requirement already satisfied: zope.testing in /usr/local/lib/python3.11/site-packages (6.0)
+#19 0.562 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from zope.testing) (79.0.1)
+#19 1.254 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#19 1.259 
+#19 1.259 [notice] A new release of pip is available: 24.0 -> 25.3
+#19 1.259 [notice] To update, run: pip install --upgrade pip
+#19 DONE 1.3s
+
+#20 [16/32] RUN ["pip","install","zope.globalrequest"]
+#20 0.552 Requirement already satisfied: zope.globalrequest in /usr/local/lib/python3.11/site-packages (3.0)
+#20 0.554 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from zope.globalrequest) (79.0.1)
+#20 0.556 Requirement already satisfied: zope.interface in /usr/local/lib/python3.11/site-packages (from zope.globalrequest) (8.0.1)
+#20 0.557 Requirement already satisfied: zope.publisher in /usr/local/lib/python3.11/site-packages (from zope.globalrequest) (8.0)
+#20 0.558 Requirement already satisfied: zope.traversing in /usr/local/lib/python3.11/site-packages (from zope.globalrequest) (6.0)
+#20 0.595 Requirement already satisfied: multipart>=1.1.0 in /usr/local/lib/python3.11/site-packages (from zope.publisher->zope.globalrequest) (1.3.0)
+#20 0.596 Requirement already satisfied: zope.browser in /usr/local/lib/python3.11/site-packages (from zope.publisher->zope.globalrequest) (4.0)
+#20 0.598 Requirement already satisfied: zope.component in /usr/local/lib/python3.11/site-packages (from zope.publisher->zope.globalrequest) (7.0)
+#20 0.599 Requirement already satisfied: zope.configuration in /usr/local/lib/python3.11/site-packages (from zope.publisher->zope.globalrequest) (7.0)
+#20 0.599 Requirement already satisfied: zope.contenttype>=4.0.0 in /usr/local/lib/python3.11/site-packages (from zope.publisher->zope.globalrequest) (6.0)
+#20 0.600 Requirement already satisfied: zope.event in /usr/local/lib/python3.11/site-packages (from zope.publisher->zope.globalrequest) (6.0)
+#20 0.601 Requirement already satisfied: zope.exceptions in /usr/local/lib/python3.11/site-packages (from zope.publisher->zope.globalrequest) (6.0)
+#20 0.602 Requirement already satisfied: zope.i18n>=4.0.0 in /usr/local/lib/python3.11/site-packages (from zope.publisher->zope.globalrequest) (6.0)
+#20 0.604 Requirement already satisfied: zope.location in /usr/local/lib/python3.11/site-packages (from zope.publisher->zope.globalrequest) (6.0)
+#20 0.605 Requirement already satisfied: zope.proxy in /usr/local/lib/python3.11/site-packages (from zope.publisher->zope.globalrequest) (7.0)
+#20 0.607 Requirement already satisfied: zope.security>=4.0.0 in /usr/local/lib/python3.11/site-packages (from zope.publisher->zope.globalrequest) (8.2)
+#20 0.615 Requirement already satisfied: transaction in /usr/local/lib/python3.11/site-packages (from zope.traversing->zope.globalrequest) (5.0)
+#20 0.617 Requirement already satisfied: zope.i18nmessageid in /usr/local/lib/python3.11/site-packages (from zope.traversing->zope.globalrequest) (8.1)
+#20 0.634 Requirement already satisfied: python-gettext in /usr/local/lib/python3.11/site-packages (from zope.i18n>=4.0.0->zope.publisher->zope.globalrequest) (5.0)
+#20 0.635 Requirement already satisfied: pytz in /usr/local/lib/python3.11/site-packages (from zope.i18n>=4.0.0->zope.publisher->zope.globalrequest) (2025.2)
+#20 0.636 Requirement already satisfied: zope.deprecation in /usr/local/lib/python3.11/site-packages (from zope.i18n>=4.0.0->zope.publisher->zope.globalrequest) (6.0)
+#20 0.637 Requirement already satisfied: zope.schema in /usr/local/lib/python3.11/site-packages (from zope.i18n>=4.0.0->zope.publisher->zope.globalrequest) (8.1)
+#20 0.686 Requirement already satisfied: zope.hookable>=4.2.0 in /usr/local/lib/python3.11/site-packages (from zope.component->zope.publisher->zope.globalrequest) (8.1)
+#20 1.368 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#20 1.374 
+#20 1.374 [notice] A new release of pip is available: 24.0 -> 25.3
+#20 1.374 [notice] To update, run: pip install --upgrade pip
+#20 DONE 1.5s
+
+#21 [17/32] RUN ["pip","install","zope.container"]
+#21 0.544 Requirement already satisfied: zope.container in /usr/local/lib/python3.11/site-packages (7.0)
+#21 0.558 Requirement already satisfied: BTrees in /usr/local/lib/python3.11/site-packages (from zope.container) (6.2)
+#21 0.559 Requirement already satisfied: persistent>=4.1.0 in /usr/local/lib/python3.11/site-packages (from zope.container) (6.3)
+#21 0.560 Requirement already satisfied: zope.cachedescriptors in /usr/local/lib/python3.11/site-packages (from zope.container) (6.0)
+#21 0.562 Requirement already satisfied: zope.component in /usr/local/lib/python3.11/site-packages (from zope.container) (7.0)
+#21 0.562 Requirement already satisfied: zope.deferredimport in /usr/local/lib/python3.11/site-packages (from zope.container) (6.0)
+#21 0.563 Requirement already satisfied: zope.dottedname in /usr/local/lib/python3.11/site-packages (from zope.container) (7.0)
+#21 0.564 Requirement already satisfied: zope.event in /usr/local/lib/python3.11/site-packages (from zope.container) (6.0)
+#21 0.565 Requirement already satisfied: zope.filerepresentation in /usr/local/lib/python3.11/site-packages (from zope.container) (7.0)
+#21 0.566 Requirement already satisfied: zope.i18nmessageid in /usr/local/lib/python3.11/site-packages (from zope.container) (8.1)
+#21 0.568 Requirement already satisfied: zope.interface in /usr/local/lib/python3.11/site-packages (from zope.container) (8.0.1)
+#21 0.569 Requirement already satisfied: zope.lifecycleevent>=3.5.2 in /usr/local/lib/python3.11/site-packages (from zope.container) (6.0)
+#21 0.570 Requirement already satisfied: zope.location>=3.5.4 in /usr/local/lib/python3.11/site-packages (from zope.container) (6.0)
+#21 0.571 Requirement already satisfied: zope.proxy>=4.1.5 in /usr/local/lib/python3.11/site-packages (from zope.container) (7.0)
+#21 0.572 Requirement already satisfied: zope.publisher in /usr/local/lib/python3.11/site-packages (from zope.container) (8.0)
+#21 0.573 Requirement already satisfied: zope.schema in /usr/local/lib/python3.11/site-packages (from zope.container) (8.1)
+#21 0.574 Requirement already satisfied: zope.security in /usr/local/lib/python3.11/site-packages (from zope.container) (8.2)
+#21 0.575 Requirement already satisfied: zope.size in /usr/local/lib/python3.11/site-packages (from zope.container) (6.0)
+#21 0.576 Requirement already satisfied: zope.traversing>=4.0.0a1 in /usr/local/lib/python3.11/site-packages (from zope.container) (6.0)
+#21 0.577 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from zope.container) (79.0.1)
+#21 0.583 Requirement already satisfied: cffi in /usr/local/lib/python3.11/site-packages (from persistent>=4.1.0->zope.container) (2.0.0)
+#21 0.621 Requirement already satisfied: transaction in /usr/local/lib/python3.11/site-packages (from zope.traversing>=4.0.0a1->zope.container) (5.0)
+#21 0.623 Requirement already satisfied: zope.i18n in /usr/local/lib/python3.11/site-packages (from zope.traversing>=4.0.0a1->zope.container) (6.0)
+#21 0.670 Requirement already satisfied: zope.hookable>=4.2.0 in /usr/local/lib/python3.11/site-packages (from zope.component->zope.container) (8.1)
+#21 0.695 Requirement already satisfied: multipart>=1.1.0 in /usr/local/lib/python3.11/site-packages (from zope.publisher->zope.container) (1.3.0)
+#21 0.696 Requirement already satisfied: zope.browser in /usr/local/lib/python3.11/site-packages (from zope.publisher->zope.container) (4.0)
+#21 0.698 Requirement already satisfied: zope.configuration in /usr/local/lib/python3.11/site-packages (from zope.publisher->zope.container) (7.0)
+#21 0.699 Requirement already satisfied: zope.contenttype>=4.0.0 in /usr/local/lib/python3.11/site-packages (from zope.publisher->zope.container) (6.0)
+#21 0.700 Requirement already satisfied: zope.exceptions in /usr/local/lib/python3.11/site-packages (from zope.publisher->zope.container) (6.0)
+#21 0.741 Requirement already satisfied: python-gettext in /usr/local/lib/python3.11/site-packages (from zope.i18n->zope.traversing>=4.0.0a1->zope.container) (5.0)
+#21 0.742 Requirement already satisfied: pytz in /usr/local/lib/python3.11/site-packages (from zope.i18n->zope.traversing>=4.0.0a1->zope.container) (2025.2)
+#21 0.743 Requirement already satisfied: zope.deprecation in /usr/local/lib/python3.11/site-packages (from zope.i18n->zope.traversing>=4.0.0a1->zope.container) (6.0)
+#21 0.748 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi->persistent>=4.1.0->zope.container) (2.23)
+#21 1.439 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#21 1.445 
+#21 1.445 [notice] A new release of pip is available: 24.0 -> 25.3
+#21 1.445 [notice] To update, run: pip install --upgrade pip
+#21 DONE 1.5s
+
+#22 [18/32] RUN ["pip","install","zope.testbrowser"]
+#22 0.566 Requirement already satisfied: zope.testbrowser in /usr/local/lib/python3.11/site-packages (8.0)
+#22 0.575 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from zope.testbrowser) (79.0.1)
+#22 0.577 Requirement already satisfied: zope.interface in /usr/local/lib/python3.11/site-packages (from zope.testbrowser) (8.0.1)
+#22 0.578 Requirement already satisfied: zope.schema in /usr/local/lib/python3.11/site-packages (from zope.testbrowser) (8.1)
+#22 0.580 Requirement already satisfied: zope.cachedescriptors in /usr/local/lib/python3.11/site-packages (from zope.testbrowser) (6.0)
+#22 0.581 Requirement already satisfied: pytz in /usr/local/lib/python3.11/site-packages (from zope.testbrowser) (2025.2)
+#22 0.581 Requirement already satisfied: WebTest>=2.0.30 in /usr/local/lib/python3.11/site-packages (from zope.testbrowser) (3.0.7)
+#22 0.582 Requirement already satisfied: BeautifulSoup4 in /usr/local/lib/python3.11/site-packages (from zope.testbrowser) (4.14.2)
+#22 0.583 Requirement already satisfied: SoupSieve>=1.9.0 in /usr/local/lib/python3.11/site-packages (from zope.testbrowser) (2.8)
+#22 0.584 Requirement already satisfied: WSGIProxy2 in /usr/local/lib/python3.11/site-packages (from zope.testbrowser) (0.5.1)
+#22 0.591 Requirement already satisfied: WebOb>=1.2 in /usr/local/lib/python3.11/site-packages (from WebTest>=2.0.30->zope.testbrowser) (1.8.9)
+#22 0.591 Requirement already satisfied: waitress>=3.0.2 in /usr/local/lib/python3.11/site-packages (from WebTest>=2.0.30->zope.testbrowser) (3.0.2)
+#22 0.596 Requirement already satisfied: typing-extensions>=4.0.0 in /usr/local/lib/python3.11/site-packages (from BeautifulSoup4->zope.testbrowser) (4.15.0)
+#22 0.635 Requirement already satisfied: zope.event in /usr/local/lib/python3.11/site-packages (from zope.schema->zope.testbrowser) (6.0)
+#22 1.328 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#22 1.334 
+#22 1.334 [notice] A new release of pip is available: 24.0 -> 25.3
+#22 1.334 [notice] To update, run: pip install --upgrade pip
+#22 DONE 1.4s
+
+#23 [19/32] RUN ["pip","install","zope.applicationcontrol"]
+#23 0.653 Collecting zope.applicationcontrol
+#23 0.692   Downloading zope_applicationcontrol-6.0-py3-none-any.whl.metadata (3.6 kB)
+#23 0.716 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from zope.applicationcontrol) (79.0.1)
+#23 0.718 Requirement already satisfied: zope.interface in /usr/local/lib/python3.11/site-packages (from zope.applicationcontrol) (8.0.1)
+#23 0.719 Requirement already satisfied: zope.component in /usr/local/lib/python3.11/site-packages (from zope.applicationcontrol) (7.0)
+#23 0.720 Requirement already satisfied: zope.location in /usr/local/lib/python3.11/site-packages (from zope.applicationcontrol) (6.0)
+#23 0.722 Requirement already satisfied: zope.security in /usr/local/lib/python3.11/site-packages (from zope.applicationcontrol) (8.2)
+#23 0.723 Requirement already satisfied: zope.traversing>=3.7.0 in /usr/local/lib/python3.11/site-packages (from zope.applicationcontrol) (6.0)
+#23 0.731 Requirement already satisfied: transaction in /usr/local/lib/python3.11/site-packages (from zope.traversing>=3.7.0->zope.applicationcontrol) (5.0)
+#23 0.733 Requirement already satisfied: zope.i18n in /usr/local/lib/python3.11/site-packages (from zope.traversing>=3.7.0->zope.applicationcontrol) (6.0)
+#23 0.734 Requirement already satisfied: zope.i18nmessageid in /usr/local/lib/python3.11/site-packages (from zope.traversing>=3.7.0->zope.applicationcontrol) (8.1)
+#23 0.736 Requirement already satisfied: zope.proxy in /usr/local/lib/python3.11/site-packages (from zope.traversing>=3.7.0->zope.applicationcontrol) (7.0)
+#23 0.737 Requirement already satisfied: zope.publisher in /usr/local/lib/python3.11/site-packages (from zope.traversing>=3.7.0->zope.applicationcontrol) (8.0)
+#23 0.753 Requirement already satisfied: zope.schema>=4.2.2 in /usr/local/lib/python3.11/site-packages (from zope.location->zope.applicationcontrol) (8.1)
+#23 0.791 Requirement already satisfied: zope.event in /usr/local/lib/python3.11/site-packages (from zope.component->zope.applicationcontrol) (6.0)
+#23 0.792 Requirement already satisfied: zope.hookable>=4.2.0 in /usr/local/lib/python3.11/site-packages (from zope.component->zope.applicationcontrol) (8.1)
+#23 0.832 Requirement already satisfied: python-gettext in /usr/local/lib/python3.11/site-packages (from zope.i18n->zope.traversing>=3.7.0->zope.applicationcontrol) (5.0)
+#23 0.833 Requirement already satisfied: pytz in /usr/local/lib/python3.11/site-packages (from zope.i18n->zope.traversing>=3.7.0->zope.applicationcontrol) (2025.2)
+#23 0.834 Requirement already satisfied: zope.deprecation in /usr/local/lib/python3.11/site-packages (from zope.i18n->zope.traversing>=3.7.0->zope.applicationcontrol) (6.0)
+#23 0.848 Requirement already satisfied: multipart>=1.1.0 in /usr/local/lib/python3.11/site-packages (from zope.publisher->zope.traversing>=3.7.0->zope.applicationcontrol) (1.3.0)
+#23 0.849 Requirement already satisfied: zope.browser in /usr/local/lib/python3.11/site-packages (from zope.publisher->zope.traversing>=3.7.0->zope.applicationcontrol) (4.0)
+#23 0.850 Requirement already satisfied: zope.configuration in /usr/local/lib/python3.11/site-packages (from zope.publisher->zope.traversing>=3.7.0->zope.applicationcontrol) (7.0)
+#23 0.851 Requirement already satisfied: zope.contenttype>=4.0.0 in /usr/local/lib/python3.11/site-packages (from zope.publisher->zope.traversing>=3.7.0->zope.applicationcontrol) (6.0)
+#23 0.852 Requirement already satisfied: zope.exceptions in /usr/local/lib/python3.11/site-packages (from zope.publisher->zope.traversing>=3.7.0->zope.applicationcontrol) (6.0)
+#23 0.901 Downloading zope_applicationcontrol-6.0-py3-none-any.whl (11 kB)
+#23 1.630 Installing collected packages: zope.applicationcontrol
+#23 1.690 Successfully installed zope.applicationcontrol-6.0
+#23 1.690 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#23 1.696 
+#23 1.696 [notice] A new release of pip is available: 24.0 -> 25.3
+#23 1.696 [notice] To update, run: pip install --upgrade pip
+#23 DONE 1.8s
+
+#24 [20/32] RUN ["pip","install","zope.app.http"]
+#24 0.657 Collecting zope.app.http
+#24 0.698   Downloading zope_app_http-6.0-py3-none-any.whl.metadata (6.1 kB)
+#24 0.716 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from zope.app.http) (79.0.1)
+#24 0.717 Requirement already satisfied: zope.interface in /usr/local/lib/python3.11/site-packages (from zope.app.http) (8.0.1)
+#24 0.719 Requirement already satisfied: zope.publisher>=4.0.0a2 in /usr/local/lib/python3.11/site-packages (from zope.app.http) (8.0)
+#24 0.720 Requirement already satisfied: zope.container>=4.0.0a2 in /usr/local/lib/python3.11/site-packages (from zope.app.http) (7.0)
+#24 0.721 Requirement already satisfied: zope.filerepresentation in /usr/local/lib/python3.11/site-packages (from zope.app.http) (7.0)
+#24 0.735 Requirement already satisfied: BTrees in /usr/local/lib/python3.11/site-packages (from zope.container>=4.0.0a2->zope.app.http) (6.2)
+#24 0.736 Requirement already satisfied: persistent>=4.1.0 in /usr/local/lib/python3.11/site-packages (from zope.container>=4.0.0a2->zope.app.http) (6.3)
+#24 0.737 Requirement already satisfied: zope.cachedescriptors in /usr/local/lib/python3.11/site-packages (from zope.container>=4.0.0a2->zope.app.http) (6.0)
+#24 0.739 Requirement already satisfied: zope.component in /usr/local/lib/python3.11/site-packages (from zope.container>=4.0.0a2->zope.app.http) (7.0)
+#24 0.740 Requirement already satisfied: zope.deferredimport in /usr/local/lib/python3.11/site-packages (from zope.container>=4.0.0a2->zope.app.http) (6.0)
+#24 0.740 Requirement already satisfied: zope.dottedname in /usr/local/lib/python3.11/site-packages (from zope.container>=4.0.0a2->zope.app.http) (7.0)
+#24 0.741 Requirement already satisfied: zope.event in /usr/local/lib/python3.11/site-packages (from zope.container>=4.0.0a2->zope.app.http) (6.0)
+#24 0.743 Requirement already satisfied: zope.i18nmessageid in /usr/local/lib/python3.11/site-packages (from zope.container>=4.0.0a2->zope.app.http) (8.1)
+#24 0.744 Requirement already satisfied: zope.lifecycleevent>=3.5.2 in /usr/local/lib/python3.11/site-packages (from zope.container>=4.0.0a2->zope.app.http) (6.0)
+#24 0.745 Requirement already satisfied: zope.location>=3.5.4 in /usr/local/lib/python3.11/site-packages (from zope.container>=4.0.0a2->zope.app.http) (6.0)
+#24 0.746 Requirement already satisfied: zope.proxy>=4.1.5 in /usr/local/lib/python3.11/site-packages (from zope.container>=4.0.0a2->zope.app.http) (7.0)
+#24 0.748 Requirement already satisfied: zope.schema in /usr/local/lib/python3.11/site-packages (from zope.container>=4.0.0a2->zope.app.http) (8.1)
+#24 0.749 Requirement already satisfied: zope.security in /usr/local/lib/python3.11/site-packages (from zope.container>=4.0.0a2->zope.app.http) (8.2)
+#24 0.750 Requirement already satisfied: zope.size in /usr/local/lib/python3.11/site-packages (from zope.container>=4.0.0a2->zope.app.http) (6.0)
+#24 0.751 Requirement already satisfied: zope.traversing>=4.0.0a1 in /usr/local/lib/python3.11/site-packages (from zope.container>=4.0.0a2->zope.app.http) (6.0)
+#24 0.760 Requirement already satisfied: multipart>=1.1.0 in /usr/local/lib/python3.11/site-packages (from zope.publisher>=4.0.0a2->zope.app.http) (1.3.0)
+#24 0.761 Requirement already satisfied: zope.browser in /usr/local/lib/python3.11/site-packages (from zope.publisher>=4.0.0a2->zope.app.http) (4.0)
+#24 0.762 Requirement already satisfied: zope.configuration in /usr/local/lib/python3.11/site-packages (from zope.publisher>=4.0.0a2->zope.app.http) (7.0)
+#24 0.763 Requirement already satisfied: zope.contenttype>=4.0.0 in /usr/local/lib/python3.11/site-packages (from zope.publisher>=4.0.0a2->zope.app.http) (6.0)
+#24 0.765 Requirement already satisfied: zope.exceptions in /usr/local/lib/python3.11/site-packages (from zope.publisher>=4.0.0a2->zope.app.http) (6.0)
+#24 0.766 Requirement already satisfied: zope.i18n>=4.0.0 in /usr/local/lib/python3.11/site-packages (from zope.publisher>=4.0.0a2->zope.app.http) (6.0)
+#24 0.816 Requirement already satisfied: cffi in /usr/local/lib/python3.11/site-packages (from persistent>=4.1.0->zope.container>=4.0.0a2->zope.app.http) (2.0.0)
+#24 0.828 Requirement already satisfied: python-gettext in /usr/local/lib/python3.11/site-packages (from zope.i18n>=4.0.0->zope.publisher>=4.0.0a2->zope.app.http) (5.0)
+#24 0.829 Requirement already satisfied: pytz in /usr/local/lib/python3.11/site-packages (from zope.i18n>=4.0.0->zope.publisher>=4.0.0a2->zope.app.http) (2025.2)
+#24 0.830 Requirement already satisfied: zope.deprecation in /usr/local/lib/python3.11/site-packages (from zope.i18n>=4.0.0->zope.publisher>=4.0.0a2->zope.app.http) (6.0)
+#24 0.883 Requirement already satisfied: transaction in /usr/local/lib/python3.11/site-packages (from zope.traversing>=4.0.0a1->zope.container>=4.0.0a2->zope.app.http) (5.0)
+#24 0.914 Requirement already satisfied: zope.hookable>=4.2.0 in /usr/local/lib/python3.11/site-packages (from zope.component->zope.container>=4.0.0a2->zope.app.http) (8.1)
+#24 0.953 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi->persistent>=4.1.0->zope.container>=4.0.0a2->zope.app.http) (2.23)
+#24 0.979 Downloading zope_app_http-6.0-py3-none-any.whl (23 kB)
+#24 1.695 Installing collected packages: zope.app.http
+#24 1.755 Successfully installed zope.app.http-6.0
+#24 1.755 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#24 1.761 
+#24 1.761 [notice] A new release of pip is available: 24.0 -> 25.3
+#24 1.761 [notice] To update, run: pip install --upgrade pip
+#24 DONE 1.9s
+
+#25 [21/32] RUN ["pip","install","zope.i18n"]
+#25 0.562 Requirement already satisfied: zope.i18n in /usr/local/lib/python3.11/site-packages (6.0)
+#25 0.570 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from zope.i18n) (79.0.1)
+#25 0.571 Requirement already satisfied: python-gettext in /usr/local/lib/python3.11/site-packages (from zope.i18n) (5.0)
+#25 0.572 Requirement already satisfied: pytz in /usr/local/lib/python3.11/site-packages (from zope.i18n) (2025.2)
+#25 0.573 Requirement already satisfied: zope.deprecation in /usr/local/lib/python3.11/site-packages (from zope.i18n) (6.0)
+#25 0.574 Requirement already satisfied: zope.schema in /usr/local/lib/python3.11/site-packages (from zope.i18n) (8.1)
+#25 0.575 Requirement already satisfied: zope.i18nmessageid>=4.3 in /usr/local/lib/python3.11/site-packages (from zope.i18n) (8.1)
+#25 0.576 Requirement already satisfied: zope.component in /usr/local/lib/python3.11/site-packages (from zope.i18n) (7.0)
+#25 0.618 Requirement already satisfied: zope.event in /usr/local/lib/python3.11/site-packages (from zope.component->zope.i18n) (6.0)
+#25 0.619 Requirement already satisfied: zope.hookable>=4.2.0 in /usr/local/lib/python3.11/site-packages (from zope.component->zope.i18n) (8.1)
+#25 0.621 Requirement already satisfied: zope.interface>=5.3 in /usr/local/lib/python3.11/site-packages (from zope.component->zope.i18n) (8.0.1)
+#25 1.337 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#25 1.343 
+#25 1.343 [notice] A new release of pip is available: 24.0 -> 25.3
+#25 1.343 [notice] To update, run: pip install --upgrade pip
+#25 DONE 1.4s
+
+#26 [22/32] RUN ["pip","install","zope.app.principalannotation"]
+#26 0.629 Collecting zope.app.principalannotation
+#26 0.661   Downloading zope.app.principalannotation-5.0-py3-none-any.whl.metadata (3.6 kB)
+#26 0.688 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from zope.app.principalannotation) (79.0.1)
+#26 0.689 Requirement already satisfied: transaction in /usr/local/lib/python3.11/site-packages (from zope.app.principalannotation) (5.0)
+#26 0.904 Collecting zope.app.appsetup>=4.0.0 (from zope.app.principalannotation)
+#26 0.914   Downloading zope_app_appsetup-6.0-py3-none-any.whl.metadata (19 kB)
+#26 0.936 Requirement already satisfied: zope.processlifetime>=2.1.0 in /usr/local/lib/python3.11/site-packages (from zope.app.principalannotation) (4.0)
+#26 0.970 Collecting zope.principalannotation>=4.0.0 (from zope.app.principalannotation)
+#26 0.982   Downloading zope_principalannotation-6.0-py3-none-any.whl.metadata (5.7 kB)
+#26 1.005 Requirement already satisfied: ZODB in /usr/local/lib/python3.11/site-packages (from zope.app.appsetup>=4.0.0->zope.app.principalannotation) (6.1)
+#26 1.006 Requirement already satisfied: zdaemon in /usr/local/lib/python3.11/site-packages (from zope.app.appsetup>=4.0.0->zope.app.principalannotation) (5.2.1)
+#26 1.148 Collecting zope.app.publication>=4.0 (from zope.app.appsetup>=4.0.0->zope.app.principalannotation)
+#26 1.159   Downloading zope_app_publication-6.0-py3-none-any.whl.metadata (9.5 kB)
+#26 1.179 Requirement already satisfied: zope.component>=3.8.0 in /usr/local/lib/python3.11/site-packages (from zope.app.appsetup>=4.0.0->zope.app.principalannotation) (7.0)
+#26 1.180 Requirement already satisfied: zope.configuration in /usr/local/lib/python3.11/site-packages (from zope.app.appsetup>=4.0.0->zope.app.principalannotation) (7.0)
+#26 1.181 Requirement already satisfied: zope.container>=4.0.0a2 in /usr/local/lib/python3.11/site-packages (from zope.app.appsetup>=4.0.0->zope.app.principalannotation) (7.0)
+#26 1.316 Collecting zope.error (from zope.app.appsetup>=4.0.0->zope.app.principalannotation)
+#26 1.326   Downloading zope_error-6.0-py3-none-any.whl.metadata (6.1 kB)
+#26 1.345 Requirement already satisfied: zope.event in /usr/local/lib/python3.11/site-packages (from zope.app.appsetup>=4.0.0->zope.app.principalannotation) (6.0)
+#26 1.346 Requirement already satisfied: zope.interface in /usr/local/lib/python3.11/site-packages (from zope.app.appsetup>=4.0.0->zope.app.principalannotation) (8.0.1)
+#26 1.348 Requirement already satisfied: zope.security>=4.0.0a2 in /usr/local/lib/python3.11/site-packages (from zope.app.appsetup>=4.0.0->zope.app.principalannotation) (8.2)
+#26 1.383 Collecting zope.session>=4.0.0a1 (from zope.app.appsetup>=4.0.0->zope.app.principalannotation)
+#26 1.392   Downloading zope_session-6.0-py3-none-any.whl.metadata (9.5 kB)
+#26 1.408 Requirement already satisfied: zope.site>=4.0.0a1 in /usr/local/lib/python3.11/site-packages (from zope.app.appsetup>=4.0.0->zope.app.principalannotation) (6.0)
+#26 1.409 Requirement already satisfied: zope.traversing>=4.0.0a2 in /usr/local/lib/python3.11/site-packages (from zope.app.appsetup>=4.0.0->zope.app.principalannotation) (6.0)
+#26 1.417 Requirement already satisfied: persistent>=4.4.2 in /usr/local/lib/python3.11/site-packages (from zope.principalannotation>=4.0.0->zope.app.principalannotation) (6.3)
+#26 1.418 Requirement already satisfied: zope.annotation in /usr/local/lib/python3.11/site-packages (from zope.principalannotation>=4.0.0->zope.app.principalannotation) (6.0)
+#26 1.420 Requirement already satisfied: zope.location in /usr/local/lib/python3.11/site-packages (from zope.principalannotation>=4.0.0->zope.app.principalannotation) (6.0)
+#26 1.457 Requirement already satisfied: zope.deferredimport in /usr/local/lib/python3.11/site-packages (from persistent>=4.4.2->zope.principalannotation>=4.0.0->zope.app.principalannotation) (6.0)
+#26 1.458 Requirement already satisfied: cffi in /usr/local/lib/python3.11/site-packages (from persistent>=4.4.2->zope.principalannotation>=4.0.0->zope.app.principalannotation) (2.0.0)
+#26 1.610 Collecting zope.authentication (from zope.app.publication>=4.0->zope.app.appsetup>=4.0.0->zope.app.principalannotation)
+#26 1.620   Downloading zope_authentication-6.0-py3-none-any.whl.metadata (5.3 kB)
+#26 1.636 Requirement already satisfied: zope.browser>=1.2 in /usr/local/lib/python3.11/site-packages (from zope.app.publication>=4.0->zope.app.appsetup>=4.0.0->zope.app.principalannotation) (4.0)
+#26 1.638 Requirement already satisfied: zope.publisher>=4.0.0a2 in /usr/local/lib/python3.11/site-packages (from zope.app.publication>=4.0->zope.app.appsetup>=4.0.0->zope.app.principalannotation) (8.0)
+#26 1.640 Requirement already satisfied: zope.i18n>=4.0.0a3 in /usr/local/lib/python3.11/site-packages (from zope.app.publication>=4.0->zope.app.appsetup>=4.0.0->zope.app.principalannotation) (6.0)
+#26 1.652 Requirement already satisfied: zope.hookable>=4.2.0 in /usr/local/lib/python3.11/site-packages (from zope.component>=3.8.0->zope.app.appsetup>=4.0.0->zope.app.principalannotation) (8.1)
+#26 1.666 Requirement already satisfied: BTrees in /usr/local/lib/python3.11/site-packages (from zope.container>=4.0.0a2->zope.app.appsetup>=4.0.0->zope.app.principalannotation) (6.2)
+#26 1.668 Requirement already satisfied: zope.cachedescriptors in /usr/local/lib/python3.11/site-packages (from zope.container>=4.0.0a2->zope.app.appsetup>=4.0.0->zope.app.principalannotation) (6.0)
+#26 1.669 Requirement already satisfied: zope.dottedname in /usr/local/lib/python3.11/site-packages (from zope.container>=4.0.0a2->zope.app.appsetup>=4.0.0->zope.app.principalannotation) (7.0)
+#26 1.670 Requirement already satisfied: zope.filerepresentation in /usr/local/lib/python3.11/site-packages (from zope.container>=4.0.0a2->zope.app.appsetup>=4.0.0->zope.app.principalannotation) (7.0)
+#26 1.672 Requirement already satisfied: zope.i18nmessageid in /usr/local/lib/python3.11/site-packages (from zope.container>=4.0.0a2->zope.app.appsetup>=4.0.0->zope.app.principalannotation) (8.1)
+#26 1.673 Requirement already satisfied: zope.lifecycleevent>=3.5.2 in /usr/local/lib/python3.11/site-packages (from zope.container>=4.0.0a2->zope.app.appsetup>=4.0.0->zope.app.principalannotation) (6.0)
+#26 1.675 Requirement already satisfied: zope.proxy>=4.1.5 in /usr/local/lib/python3.11/site-packages (from zope.container>=4.0.0a2->zope.app.appsetup>=4.0.0->zope.app.principalannotation) (7.0)
+#26 1.677 Requirement already satisfied: zope.schema in /usr/local/lib/python3.11/site-packages (from zope.container>=4.0.0a2->zope.app.appsetup>=4.0.0->zope.app.principalannotation) (8.1)
+#26 1.678 Requirement already satisfied: zope.size in /usr/local/lib/python3.11/site-packages (from zope.container>=4.0.0a2->zope.app.appsetup>=4.0.0->zope.app.principalannotation) (6.0)
+#26 1.848 Collecting zope.minmax (from zope.session>=4.0.0a1->zope.app.appsetup>=4.0.0->zope.app.principalannotation)
+#26 1.874   Downloading zope_minmax-4.0-py3-none-any.whl.metadata (4.6 kB)
+#26 1.912 Requirement already satisfied: ZConfig in /usr/local/lib/python3.11/site-packages (from ZODB->zope.app.appsetup>=4.0.0->zope.app.principalannotation) (4.2)
+#26 1.913 Requirement already satisfied: zc.lockfile in /usr/local/lib/python3.11/site-packages (from ZODB->zope.app.appsetup>=4.0.0->zope.app.principalannotation) (4.0)
+#26 1.915 Requirement already satisfied: zodbpickle>=1.0.1 in /usr/local/lib/python3.11/site-packages (from ZODB->zope.app.appsetup>=4.0.0->zope.app.principalannotation) (4.2)
+#26 1.924 Requirement already satisfied: zope.deprecation in /usr/local/lib/python3.11/site-packages (from zope.site>=4.0.0a1->zope.app.appsetup>=4.0.0->zope.app.principalannotation) (6.0)
+#26 1.969 Requirement already satisfied: zope.exceptions in /usr/local/lib/python3.11/site-packages (from zope.error->zope.app.appsetup>=4.0.0->zope.app.principalannotation) (6.0)
+#26 2.004 Requirement already satisfied: python-gettext in /usr/local/lib/python3.11/site-packages (from zope.i18n>=4.0.0a3->zope.app.publication>=4.0->zope.app.appsetup>=4.0.0->zope.app.principalannotation) (5.0)
+#26 2.005 Requirement already satisfied: pytz in /usr/local/lib/python3.11/site-packages (from zope.i18n>=4.0.0a3->zope.app.publication>=4.0->zope.app.appsetup>=4.0.0->zope.app.principalannotation) (2025.2)
+#26 2.033 Requirement already satisfied: multipart>=1.1.0 in /usr/local/lib/python3.11/site-packages (from zope.publisher>=4.0.0a2->zope.app.publication>=4.0->zope.app.appsetup>=4.0.0->zope.app.principalannotation) (1.3.0)
+#26 2.035 Requirement already satisfied: zope.contenttype>=4.0.0 in /usr/local/lib/python3.11/site-packages (from zope.publisher>=4.0.0a2->zope.app.publication>=4.0->zope.app.appsetup>=4.0.0->zope.app.principalannotation) (6.0)
+#26 2.051 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi->persistent>=4.4.2->zope.principalannotation>=4.0.0->zope.app.principalannotation) (2.23)
+#26 2.155 Downloading zope.app.principalannotation-5.0-py3-none-any.whl (9.1 kB)
+#26 2.188 Downloading zope_app_appsetup-6.0-py3-none-any.whl (34 kB)
+#26 2.227 Downloading zope_principalannotation-6.0-py3-none-any.whl (10 kB)
+#26 2.253 Downloading zope_app_publication-6.0-py3-none-any.whl (52 kB)
+#26 2.272    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.6/52.6 kB 2.6 MB/s eta 0:00:00
+#26 2.283 Downloading zope_session-6.0-py3-none-any.whl (24 kB)
+#26 2.305 Downloading zope_error-6.0-py3-none-any.whl (12 kB)
+#26 2.328 Downloading zope_authentication-6.0-py3-none-any.whl (14 kB)
+#26 2.351 Downloading zope_minmax-4.0-py3-none-any.whl (5.7 kB)
+#26 3.083 Installing collected packages: zope.minmax, zope.error, zope.authentication, zope.session, zope.app.publication, zope.principalannotation, zope.app.appsetup, zope.app.principalannotation
+#26 3.281 Successfully installed zope.app.appsetup-6.0 zope.app.principalannotation-5.0 zope.app.publication-6.0 zope.authentication-6.0 zope.error-6.0 zope.minmax-4.0 zope.principalannotation-6.0 zope.session-6.0
+#26 3.282 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#26 3.288 
+#26 3.288 [notice] A new release of pip is available: 24.0 -> 25.3
+#26 3.288 [notice] To update, run: pip install --upgrade pip
+#26 DONE 3.4s
+
+#27 [23/32] RUN ["pip","install","zope.app.securitypolicy"]
+#27 0.640 Collecting zope.app.securitypolicy
+#27 0.685   Downloading zope.app.securitypolicy-3.6.1.tar.gz (9.1 kB)
+#27 0.703   Preparing metadata (setup.py): started
+#27 0.882   Preparing metadata (setup.py): finished with status 'done'
+#27 0.894 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from zope.app.securitypolicy) (79.0.1)
+#27 0.895 Requirement already satisfied: zope.annotation in /usr/local/lib/python3.11/site-packages (from zope.app.securitypolicy) (6.0)
+#27 0.934 Collecting zope.app.authentication>=3.8 (from zope.app.securitypolicy)
+#27 0.944   Downloading zope_app_authentication-6.0-py3-none-any.whl.metadata (47 kB)
+#27 0.971      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.7/47.7 kB 1.6 MB/s eta 0:00:00
+#27 1.010 Collecting zope.app.form (from zope.app.securitypolicy)
+#27 1.021   Downloading zope_app_form-7.0-py3-none-any.whl.metadata (8.5 kB)
+#27 1.066 Collecting zope.app.security (from zope.app.securitypolicy)
+#27 1.077   Downloading zope_app_security-8.0-py3-none-any.whl.metadata (16 kB)
+#27 1.103 Requirement already satisfied: zope.browser in /usr/local/lib/python3.11/site-packages (from zope.app.securitypolicy) (4.0)
+#27 1.104 Requirement already satisfied: zope.component[hook] in /usr/local/lib/python3.11/site-packages (from zope.app.securitypolicy) (7.0)
+#27 1.105 Requirement already satisfied: zope.configuration in /usr/local/lib/python3.11/site-packages (from zope.app.securitypolicy) (7.0)
+#27 1.106 Requirement already satisfied: zope.exceptions in /usr/local/lib/python3.11/site-packages (from zope.app.securitypolicy) (6.0)
+#27 1.108 Requirement already satisfied: zope.i18n in /usr/local/lib/python3.11/site-packages (from zope.app.securitypolicy) (6.0)
+#27 1.109 Requirement already satisfied: zope.i18nmessageid>=3.4.2 in /usr/local/lib/python3.11/site-packages (from zope.app.securitypolicy) (8.1)
+#27 1.110 Requirement already satisfied: zope.interface in /usr/local/lib/python3.11/site-packages (from zope.app.securitypolicy) (8.0.1)
+#27 1.111 Requirement already satisfied: zope.location in /usr/local/lib/python3.11/site-packages (from zope.app.securitypolicy) (6.0)
+#27 1.113 Requirement already satisfied: zope.schema in /usr/local/lib/python3.11/site-packages (from zope.app.securitypolicy) (8.1)
+#27 1.114 Requirement already satisfied: zope.security in /usr/local/lib/python3.11/site-packages (from zope.app.securitypolicy) (8.2)
+#27 1.245 Collecting zope.securitypolicy (from zope.app.securitypolicy)
+#27 1.255   Downloading zope_securitypolicy-6.0-py3-none-any.whl.metadata (26 kB)
+#27 1.289 Requirement already satisfied: zope.authentication in /usr/local/lib/python3.11/site-packages (from zope.app.authentication>=3.8->zope.app.securitypolicy) (6.0)
+#27 1.290 Requirement already satisfied: zope.container in /usr/local/lib/python3.11/site-packages (from zope.app.authentication>=3.8->zope.app.securitypolicy) (7.0)
+#27 1.323 Collecting zope.dublincore (from zope.app.authentication>=3.8->zope.app.securitypolicy)
+#27 1.334   Downloading zope_dublincore-6.0-py3-none-any.whl.metadata (8.6 kB)
+#27 1.350 Requirement already satisfied: zope.event in /usr/local/lib/python3.11/site-packages (from zope.app.authentication>=3.8->zope.app.securitypolicy) (6.0)
+#27 1.491 Collecting zope.formlib>=4.0.2 (from zope.app.authentication>=3.8->zope.app.securitypolicy)
+#27 1.500   Downloading zope_formlib-7.0-py3-none-any.whl.metadata (10 kB)
+#27 1.653 Collecting zope.password>=3.5.1 (from zope.app.authentication>=3.8->zope.app.securitypolicy)
+#27 1.663   Downloading zope_password-6.1-py3-none-any.whl.metadata (8.8 kB)
+#27 1.713 Collecting zope.pluggableauth>=2.2.0 (from zope.app.authentication>=3.8->zope.app.securitypolicy)
+#27 1.722   Downloading zope_pluggableauth-5.0-py3-none-any.whl.metadata (43 kB)
+#27 1.743      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.7/43.7 kB 1.8 MB/s eta 0:00:00
+#27 1.748 Requirement already satisfied: zope.traversing in /usr/local/lib/python3.11/site-packages (from zope.app.authentication>=3.8->zope.app.securitypolicy) (6.0)
+#27 1.779 Collecting zope.app.container>=4.0.0 (from zope.app.authentication>=3.8->zope.app.securitypolicy)
+#27 1.789   Downloading zope_app_container-6.0-py3-none-any.whl.metadata (8.5 kB)
+#27 1.845 Collecting zope.app.component>=4.0.0 (from zope.app.authentication>=3.8->zope.app.securitypolicy)
+#27 1.855   Downloading zope_app_component-6.0-py3-none-any.whl.metadata (9.3 kB)
+#27 1.912 Requirement already satisfied: zope.proxy in /usr/local/lib/python3.11/site-packages (from zope.annotation->zope.app.securitypolicy) (7.0)
+#27 1.922 Requirement already satisfied: transaction in /usr/local/lib/python3.11/site-packages (from zope.app.form->zope.app.securitypolicy) (5.0)
+#27 1.925 Requirement already satisfied: zope.browserpage>=3.10.1 in /usr/local/lib/python3.11/site-packages (from zope.app.form->zope.app.securitypolicy) (6.0)
+#27 1.926 Requirement already satisfied: zope.browsermenu in /usr/local/lib/python3.11/site-packages (from zope.app.form->zope.app.securitypolicy) (6.0)
+#27 1.928 Requirement already satisfied: zope.datetime in /usr/local/lib/python3.11/site-packages (from zope.app.form->zope.app.securitypolicy) (6.0)
+#27 1.931 Requirement already satisfied: zope.publisher>=4.3.1 in /usr/local/lib/python3.11/site-packages (from zope.app.form->zope.app.securitypolicy) (8.0)
+#27 2.012 Collecting zope.app.localpermission (from zope.app.security->zope.app.securitypolicy)
+#27 2.022   Downloading zope.app.localpermission-5.0-py3-none-any.whl.metadata (2.7 kB)
+#27 2.063 Collecting zope.app.pagetemplate (from zope.app.security->zope.app.securitypolicy)
+#27 2.073   Downloading zope_app_pagetemplate-6.0-py3-none-any.whl.metadata (5.6 kB)
+#27 2.119 Collecting zope.app.publisher (from zope.app.security->zope.app.securitypolicy)
+#27 2.130   Downloading zope_app_publisher-6.0-py3-none-any.whl.metadata (11 kB)
+#27 2.195 Collecting zope.principalregistry (from zope.app.security->zope.app.securitypolicy)
+#27 2.204   Downloading zope_principalregistry-6.0-py3-none-any.whl.metadata (5.8 kB)
+#27 2.342 Collecting zope.login (from zope.app.security->zope.app.securitypolicy)
+#27 2.352   Downloading zope_login-4.0-py3-none-any.whl.metadata (4.1 kB)
+#27 2.380 Requirement already satisfied: zope.hookable>=4.2.0 in /usr/local/lib/python3.11/site-packages (from zope.component[hook]->zope.app.securitypolicy) (8.1)
+#27 2.393 Requirement already satisfied: python-gettext in /usr/local/lib/python3.11/site-packages (from zope.i18n->zope.app.securitypolicy) (5.0)
+#27 2.394 Requirement already satisfied: pytz in /usr/local/lib/python3.11/site-packages (from zope.i18n->zope.app.securitypolicy) (2025.2)
+#27 2.395 Requirement already satisfied: zope.deprecation in /usr/local/lib/python3.11/site-packages (from zope.i18n->zope.app.securitypolicy) (6.0)
+#27 2.423 Requirement already satisfied: persistent in /usr/local/lib/python3.11/site-packages (from zope.securitypolicy->zope.app.securitypolicy) (6.3)
+#27 2.444 Requirement already satisfied: zope.site in /usr/local/lib/python3.11/site-packages (from zope.app.component>=4.0.0->zope.app.authentication>=3.8->zope.app.securitypolicy) (6.0)
+#27 2.576 Collecting zope.componentvocabulary (from zope.app.component>=4.0.0->zope.app.authentication>=3.8->zope.app.securitypolicy)
+#27 2.586   Downloading zope.componentvocabulary-4.0-py3-none-any.whl.metadata (4.1 kB)
+#27 2.648 Collecting zope.copypastemove (from zope.app.container>=4.0.0->zope.app.authentication>=3.8->zope.app.securitypolicy)
+#27 2.658   Downloading zope_copypastemove-6.0-py3-none-any.whl.metadata (6.8 kB)
+#27 2.682 Requirement already satisfied: zope.lifecycleevent in /usr/local/lib/python3.11/site-packages (from zope.app.container>=4.0.0->zope.app.authentication>=3.8->zope.app.securitypolicy) (6.0)
+#27 2.684 Requirement already satisfied: zope.size in /usr/local/lib/python3.11/site-packages (from zope.app.container>=4.0.0->zope.app.authentication>=3.8->zope.app.securitypolicy) (6.0)
+#27 2.693 Requirement already satisfied: zope.pagetemplate>=3.5.1 in /usr/local/lib/python3.11/site-packages (from zope.app.pagetemplate->zope.app.security->zope.app.securitypolicy) (6.0)
+#27 2.696 Requirement already satisfied: zope.tales in /usr/local/lib/python3.11/site-packages (from zope.app.pagetemplate->zope.app.security->zope.app.securitypolicy) (7.0)
+#27 2.704 Requirement already satisfied: zope.tal>=4.2.0 in /usr/local/lib/python3.11/site-packages (from zope.browserpage>=3.10.1->zope.app.form->zope.app.securitypolicy) (6.0)
+#27 2.746 Requirement already satisfied: zope.browserresource in /usr/local/lib/python3.11/site-packages (from zope.formlib>=4.0.2->zope.app.authentication>=3.8->zope.app.securitypolicy) (6.0)
+#27 2.776 Requirement already satisfied: zope.session in /usr/local/lib/python3.11/site-packages (from zope.pluggableauth>=2.2.0->zope.app.authentication>=3.8->zope.app.securitypolicy) (6.0)
+#27 2.792 Requirement already satisfied: multipart>=1.1.0 in /usr/local/lib/python3.11/site-packages (from zope.publisher>=4.3.1->zope.app.form->zope.app.securitypolicy) (1.3.0)
+#27 2.794 Requirement already satisfied: zope.contenttype>=4.0.0 in /usr/local/lib/python3.11/site-packages (from zope.publisher>=4.3.1->zope.app.form->zope.app.securitypolicy) (6.0)
+#27 2.805 Requirement already satisfied: zope.deferredimport in /usr/local/lib/python3.11/site-packages (from persistent->zope.securitypolicy->zope.app.securitypolicy) (6.0)
+#27 2.806 Requirement already satisfied: cffi in /usr/local/lib/python3.11/site-packages (from persistent->zope.securitypolicy->zope.app.securitypolicy) (2.0.0)
+#27 2.848 Requirement already satisfied: zope.ptresource in /usr/local/lib/python3.11/site-packages (from zope.app.publisher->zope.app.security->zope.app.securitypolicy) (6.0)
+#27 2.901 Requirement already satisfied: BTrees in /usr/local/lib/python3.11/site-packages (from zope.container->zope.app.authentication>=3.8->zope.app.securitypolicy) (6.2)
+#27 2.903 Requirement already satisfied: zope.cachedescriptors in /usr/local/lib/python3.11/site-packages (from zope.container->zope.app.authentication>=3.8->zope.app.securitypolicy) (6.0)
+#27 2.904 Requirement already satisfied: zope.dottedname in /usr/local/lib/python3.11/site-packages (from zope.container->zope.app.authentication>=3.8->zope.app.securitypolicy) (7.0)
+#27 2.906 Requirement already satisfied: zope.filerepresentation in /usr/local/lib/python3.11/site-packages (from zope.container->zope.app.authentication>=3.8->zope.app.securitypolicy) (7.0)
+#27 3.036 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi->persistent->zope.securitypolicy->zope.app.securitypolicy) (2.23)
+#27 3.233 Collecting zope.copy (from zope.copypastemove->zope.app.container>=4.0.0->zope.app.authentication>=3.8->zope.app.securitypolicy)
+#27 3.244   Downloading zope_copy-6.0-py3-none-any.whl.metadata (4.8 kB)
+#27 3.311 Requirement already satisfied: ZODB>=4.2.0.b1 in /usr/local/lib/python3.11/site-packages (from zope.session->zope.pluggableauth>=2.2.0->zope.app.authentication>=3.8->zope.app.securitypolicy) (6.1)
+#27 3.314 Requirement already satisfied: zope.minmax in /usr/local/lib/python3.11/site-packages (from zope.session->zope.pluggableauth>=2.2.0->zope.app.authentication>=3.8->zope.app.securitypolicy) (4.0)
+#27 3.364 Requirement already satisfied: ZConfig in /usr/local/lib/python3.11/site-packages (from ZODB>=4.2.0.b1->zope.session->zope.pluggableauth>=2.2.0->zope.app.authentication>=3.8->zope.app.securitypolicy) (4.2)
+#27 3.365 Requirement already satisfied: zc.lockfile in /usr/local/lib/python3.11/site-packages (from ZODB>=4.2.0.b1->zope.session->zope.pluggableauth>=2.2.0->zope.app.authentication>=3.8->zope.app.securitypolicy) (4.0)
+#27 3.367 Requirement already satisfied: zodbpickle>=1.0.1 in /usr/local/lib/python3.11/site-packages (from ZODB>=4.2.0.b1->zope.session->zope.pluggableauth>=2.2.0->zope.app.authentication>=3.8->zope.app.securitypolicy) (4.2)
+#27 3.436 Downloading zope_app_authentication-6.0-py3-none-any.whl (87 kB)
+#27 3.467    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.9/87.9 kB 2.9 MB/s eta 0:00:00
+#27 3.477 Downloading zope_app_form-7.0-py3-none-any.whl (75 kB)
+#27 3.493    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 75.3/75.3 kB 4.6 MB/s eta 0:00:00
+#27 3.503 Downloading zope_app_security-8.0-py3-none-any.whl (43 kB)
+#27 3.513    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.8/43.8 kB 3.8 MB/s eta 0:00:00
+#27 3.523 Downloading zope_securitypolicy-6.0-py3-none-any.whl (54 kB)
+#27 3.539    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.6/54.6 kB 3.0 MB/s eta 0:00:00
+#27 3.549 Downloading zope_app_component-6.0-py3-none-any.whl (30 kB)
+#27 3.573 Downloading zope_app_container-6.0-py3-none-any.whl (45 kB)
+#27 3.591    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.7/45.7 kB 2.1 MB/s eta 0:00:00
+#27 3.601 Downloading zope_app_pagetemplate-6.0-py3-none-any.whl (21 kB)
+#27 3.622 Downloading zope_dublincore-6.0-py3-none-any.whl (39 kB)
+#27 3.646 Downloading zope_formlib-7.0-py3-none-any.whl (165 kB)
+#27 3.666    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 165.0/165.0 kB 8.5 MB/s eta 0:00:00
+#27 3.676 Downloading zope_password-6.1-py3-none-any.whl (24 kB)
+#27 3.699 Downloading zope_pluggableauth-5.0-py3-none-any.whl (52 kB)
+#27 3.718    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.9/52.9 kB 2.5 MB/s eta 0:00:00
+#27 3.727 Downloading zope.app.localpermission-5.0-py3-none-any.whl (7.5 kB)
+#27 3.750 Downloading zope_app_publisher-6.0-py3-none-any.whl (47 kB)
+#27 3.765    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.6/47.6 kB 2.7 MB/s eta 0:00:00
+#27 3.774 Downloading zope_login-4.0-py3-none-any.whl (7.9 kB)
+#27 3.797 Downloading zope_principalregistry-6.0-py3-none-any.whl (15 kB)
+#27 3.824 Downloading zope.componentvocabulary-4.0-py3-none-any.whl (11 kB)
+#27 3.848 Downloading zope_copypastemove-6.0-py3-none-any.whl (19 kB)
+#27 3.871 Downloading zope_copy-6.0-py3-none-any.whl (9.6 kB)
+#27 3.893 Building wheels for collected packages: zope.app.securitypolicy
+#27 3.898   Building wheel for zope.app.securitypolicy (setup.py): started
+#27 4.133   Building wheel for zope.app.securitypolicy (setup.py): finished with status 'done'
+#27 4.134   Created wheel for zope.app.securitypolicy: filename=zope_app_securitypolicy-3.6.1-py3-none-any.whl size=14547 sha256=a29ab91bb252727a1f7819e97a8e0de490f963a2d6bd8328a0c8d82edcd83f7f
+#27 4.134   Stored in directory: /root/.cache/pip/wheels/6a/8a/62/36d6369ff4c1f034b755b4829c18b26123297f381621d47a22
+#27 4.136 Successfully built zope.app.securitypolicy
+#27 4.955 Installing collected packages: zope.copy, zope.password, zope.componentvocabulary, zope.app.localpermission, zope.securitypolicy, zope.principalregistry, zope.login, zope.dublincore, zope.copypastemove, zope.pluggableauth, zope.formlib, zope.app.publisher, zope.app.pagetemplate, zope.app.container, zope.app.security, zope.app.form, zope.app.component, zope.app.authentication, zope.app.securitypolicy
+#27 5.505 Successfully installed zope.app.authentication-6.0 zope.app.component-6.0 zope.app.container-6.0 zope.app.form-7.0 zope.app.localpermission-5.0 zope.app.pagetemplate-6.0 zope.app.publisher-6.0 zope.app.security-8.0 zope.app.securitypolicy-3.6.1 zope.componentvocabulary-4.0 zope.copy-6.0 zope.copypastemove-6.0 zope.dublincore-6.0 zope.formlib-7.0 zope.login-4.0 zope.password-6.1 zope.pluggableauth-5.0 zope.principalregistry-6.0 zope.securitypolicy-6.0
+#27 5.505 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#27 5.512 
+#27 5.512 [notice] A new release of pip is available: 24.0 -> 25.3
+#27 5.512 [notice] To update, run: pip install --upgrade pip
+#27 DONE 5.6s
+
+#28 [24/32] RUN ["pip","install","zope.app.component"]
+#28 0.588 Requirement already satisfied: zope.app.component in /usr/local/lib/python3.11/site-packages (6.0)
+#28 0.606 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from zope.app.component) (79.0.1)
+#28 0.607 Requirement already satisfied: zope.site in /usr/local/lib/python3.11/site-packages (from zope.app.component) (6.0)
+#28 0.609 Requirement already satisfied: zope.app.container>=4.0 in /usr/local/lib/python3.11/site-packages (from zope.app.component) (6.0)
+#28 0.610 Requirement already satisfied: zope.app.pagetemplate>=4.0 in /usr/local/lib/python3.11/site-packages (from zope.app.component) (6.0)
+#28 0.611 Requirement already satisfied: zope.component>=4.3.0 in /usr/local/lib/python3.11/site-packages (from zope.component[hook,zcml]>=4.3.0->zope.app.component) (7.0)
+#28 0.613 Requirement already satisfied: zope.deprecation in /usr/local/lib/python3.11/site-packages (from zope.app.component) (6.0)
+#28 0.614 Requirement already satisfied: zope.exceptions in /usr/local/lib/python3.11/site-packages (from zope.app.component) (6.0)
+#28 0.615 Requirement already satisfied: zope.formlib in /usr/local/lib/python3.11/site-packages (from zope.app.component) (7.0)
+#28 0.616 Requirement already satisfied: zope.i18nmessageid in /usr/local/lib/python3.11/site-packages (from zope.app.component) (8.1)
+#28 0.617 Requirement already satisfied: zope.interface in /usr/local/lib/python3.11/site-packages (from zope.app.component) (8.0.1)
+#28 0.619 Requirement already satisfied: zope.publisher>=4.3.1 in /usr/local/lib/python3.11/site-packages (from zope.app.component) (8.0)
+#28 0.620 Requirement already satisfied: zope.schema in /usr/local/lib/python3.11/site-packages (from zope.app.component) (8.1)
+#28 0.622 Requirement already satisfied: zope.security in /usr/local/lib/python3.11/site-packages (from zope.app.component) (8.2)
+#28 0.623 Requirement already satisfied: zope.traversing in /usr/local/lib/python3.11/site-packages (from zope.app.component) (6.0)
+#28 0.623 Requirement already satisfied: zope.componentvocabulary in /usr/local/lib/python3.11/site-packages (from zope.app.component) (4.0)
+#28 0.642 Requirement already satisfied: zope.browser in /usr/local/lib/python3.11/site-packages (from zope.app.container>=4.0->zope.app.component) (4.0)
+#28 0.642 Requirement already satisfied: zope.browsermenu in /usr/local/lib/python3.11/site-packages (from zope.app.container>=4.0->zope.app.component) (6.0)
+#28 0.643 Requirement already satisfied: zope.browserpage in /usr/local/lib/python3.11/site-packages (from zope.app.container>=4.0->zope.app.component) (6.0)
+#28 0.645 Requirement already satisfied: zope.container in /usr/local/lib/python3.11/site-packages (from zope.app.container>=4.0->zope.app.component) (7.0)
+#28 0.646 Requirement already satisfied: zope.copypastemove in /usr/local/lib/python3.11/site-packages (from zope.app.container>=4.0->zope.app.component) (6.0)
+#28 0.647 Requirement already satisfied: zope.dublincore>=3.7 in /usr/local/lib/python3.11/site-packages (from zope.app.container>=4.0->zope.app.component) (6.0)
+#28 0.648 Requirement already satisfied: zope.event in /usr/local/lib/python3.11/site-packages (from zope.app.container>=4.0->zope.app.component) (6.0)
+#28 0.649 Requirement already satisfied: zope.i18n in /usr/local/lib/python3.11/site-packages (from zope.app.container>=4.0->zope.app.component) (6.0)
+#28 0.651 Requirement already satisfied: zope.lifecycleevent in /usr/local/lib/python3.11/site-packages (from zope.app.container>=4.0->zope.app.component) (6.0)
+#28 0.652 Requirement already satisfied: zope.location in /usr/local/lib/python3.11/site-packages (from zope.app.container>=4.0->zope.app.component) (6.0)
+#28 0.654 Requirement already satisfied: zope.size in /usr/local/lib/python3.11/site-packages (from zope.app.container>=4.0->zope.app.component) (6.0)
+#28 0.662 Requirement already satisfied: zope.configuration in /usr/local/lib/python3.11/site-packages (from zope.app.pagetemplate>=4.0->zope.app.component) (7.0)
+#28 0.665 Requirement already satisfied: zope.pagetemplate>=3.5.1 in /usr/local/lib/python3.11/site-packages (from zope.app.pagetemplate>=4.0->zope.app.component) (6.0)
+#28 0.667 Requirement already satisfied: zope.tales in /usr/local/lib/python3.11/site-packages (from zope.app.pagetemplate>=4.0->zope.app.component) (7.0)
+#28 0.679 Requirement already satisfied: zope.hookable>=4.2.0 in /usr/local/lib/python3.11/site-packages (from zope.component>=4.3.0->zope.component[hook,zcml]>=4.3.0->zope.app.component) (8.1)
+#28 0.704 Requirement already satisfied: multipart>=1.1.0 in /usr/local/lib/python3.11/site-packages (from zope.publisher>=4.3.1->zope.app.component) (1.3.0)
+#28 0.706 Requirement already satisfied: zope.contenttype>=4.0.0 in /usr/local/lib/python3.11/site-packages (from zope.publisher>=4.3.1->zope.app.component) (6.0)
+#28 0.709 Requirement already satisfied: zope.proxy in /usr/local/lib/python3.11/site-packages (from zope.publisher>=4.3.1->zope.app.component) (7.0)
+#28 0.773 Requirement already satisfied: pytz in /usr/local/lib/python3.11/site-packages (from zope.formlib->zope.app.component) (2025.2)
+#28 0.774 Requirement already satisfied: zope.browserresource in /usr/local/lib/python3.11/site-packages (from zope.formlib->zope.app.component) (6.0)
+#28 0.779 Requirement already satisfied: zope.datetime in /usr/local/lib/python3.11/site-packages (from zope.formlib->zope.app.component) (6.0)
+#28 0.792 Requirement already satisfied: zope.annotation in /usr/local/lib/python3.11/site-packages (from zope.site->zope.app.component) (6.0)
+#28 0.804 Requirement already satisfied: transaction in /usr/local/lib/python3.11/site-packages (from zope.traversing->zope.app.component) (5.0)
+#28 0.823 Requirement already satisfied: zope.tal>=4.2.0 in /usr/local/lib/python3.11/site-packages (from zope.browserpage->zope.app.container>=4.0->zope.app.component) (6.0)
+#28 0.841 Requirement already satisfied: persistent in /usr/local/lib/python3.11/site-packages (from zope.dublincore>=3.7->zope.app.container>=4.0->zope.app.component) (6.3)
+#28 0.860 Requirement already satisfied: python-gettext in /usr/local/lib/python3.11/site-packages (from zope.i18n->zope.app.container>=4.0->zope.app.component) (5.0)
+#28 0.980 Requirement already satisfied: BTrees in /usr/local/lib/python3.11/site-packages (from zope.container->zope.app.container>=4.0->zope.app.component) (6.2)
+#28 0.981 Requirement already satisfied: zope.cachedescriptors in /usr/local/lib/python3.11/site-packages (from zope.container->zope.app.container>=4.0->zope.app.component) (6.0)
+#28 0.982 Requirement already satisfied: zope.deferredimport in /usr/local/lib/python3.11/site-packages (from zope.container->zope.app.container>=4.0->zope.app.component) (6.0)
+#28 0.983 Requirement already satisfied: zope.dottedname in /usr/local/lib/python3.11/site-packages (from zope.container->zope.app.container>=4.0->zope.app.component) (7.0)
+#28 0.984 Requirement already satisfied: zope.filerepresentation in /usr/local/lib/python3.11/site-packages (from zope.container->zope.app.container>=4.0->zope.app.component) (7.0)
+#28 1.008 Requirement already satisfied: zope.copy in /usr/local/lib/python3.11/site-packages (from zope.copypastemove->zope.app.container>=4.0->zope.app.component) (6.0)
+#28 1.047 Requirement already satisfied: cffi in /usr/local/lib/python3.11/site-packages (from persistent->zope.dublincore>=3.7->zope.app.container>=4.0->zope.app.component) (2.0.0)
+#28 1.108 Requirement already satisfied: zodbpickle in /usr/local/lib/python3.11/site-packages (from zope.copy->zope.copypastemove->zope.app.container>=4.0->zope.app.component) (4.2)
+#28 1.135 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi->persistent->zope.dublincore>=3.7->zope.app.container>=4.0->zope.app.component) (2.23)
+#28 1.994 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#28 2.000 
+#28 2.000 [notice] A new release of pip is available: 24.0 -> 25.3
+#28 2.000 [notice] To update, run: pip install --upgrade pip
+#28 DONE 2.1s
+
+#29 [25/32] RUN ["pip","install","zope.component"]
+#29 0.595 Requirement already satisfied: zope.component in /usr/local/lib/python3.11/site-packages (7.0)
+#29 0.606 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from zope.component) (79.0.1)
+#29 0.607 Requirement already satisfied: zope.event in /usr/local/lib/python3.11/site-packages (from zope.component) (6.0)
+#29 0.608 Requirement already satisfied: zope.hookable>=4.2.0 in /usr/local/lib/python3.11/site-packages (from zope.component) (8.1)
+#29 0.610 Requirement already satisfied: zope.interface>=5.3 in /usr/local/lib/python3.11/site-packages (from zope.component) (8.0.1)
+#29 1.456 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#29 1.462 
+#29 1.462 [notice] A new release of pip is available: 24.0 -> 25.3
+#29 1.462 [notice] To update, run: pip install --upgrade pip
+#29 DONE 1.5s
+
+#30 [26/32] RUN ["pip","install","six"]
+#30 0.560 Requirement already satisfied: six in /usr/local/lib/python3.11/site-packages (1.17.0)
+#30 1.397 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#30 1.402 
+#30 1.402 [notice] A new release of pip is available: 24.0 -> 25.3
+#30 1.402 [notice] To update, run: pip install --upgrade pip
+#30 DONE 1.5s
+
+#31 [27/32] RUN ["pip","install","zope.interface"]
+#31 0.598 Requirement already satisfied: zope.interface in /usr/local/lib/python3.11/site-packages (8.0.1)
+#31 1.437 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#31 1.442 
+#31 1.442 [notice] A new release of pip is available: 24.0 -> 25.3
+#31 1.442 [notice] To update, run: pip install --upgrade pip
+#31 DONE 1.5s
+
+#32 [28/32] RUN ["pip","install","zope.index"]
+#32 0.792 Collecting zope.index
+#32 0.832   Downloading zope_index-8.0-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (11 kB)
+#32 0.856 Requirement already satisfied: persistent in /usr/local/lib/python3.11/site-packages (from zope.index) (6.3)
+#32 0.857 Requirement already satisfied: BTrees>=4.4.1 in /usr/local/lib/python3.11/site-packages (from zope.index) (6.2)
+#32 0.858 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from zope.index) (79.0.1)
+#32 0.860 Requirement already satisfied: zope.interface in /usr/local/lib/python3.11/site-packages (from zope.index) (8.0.1)
+#32 0.871 Requirement already satisfied: zope.deferredimport in /usr/local/lib/python3.11/site-packages (from persistent->zope.index) (6.0)
+#32 0.872 Requirement already satisfied: cffi in /usr/local/lib/python3.11/site-packages (from persistent->zope.index) (2.0.0)
+#32 0.904 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi->persistent->zope.index) (2.23)
+#32 0.908 Requirement already satisfied: zope.proxy in /usr/local/lib/python3.11/site-packages (from zope.deferredimport->persistent->zope.index) (7.0)
+#32 0.924 Downloading zope_index-8.0-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (99 kB)
+#32 0.960    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 99.9/99.9 kB 2.6 MB/s eta 0:00:00
+#32 1.834 Installing collected packages: zope.index
+#32 1.928 Successfully installed zope.index-8.0
+#32 1.928 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#32 1.934 
+#32 1.934 [notice] A new release of pip is available: 24.0 -> 25.3
+#32 1.934 [notice] To update, run: pip install --upgrade pip
+#32 DONE 2.0s
+
+#33 [29/32] RUN ["pip","install","zope.deprecation"]
+#33 0.585 Requirement already satisfied: zope.deprecation in /usr/local/lib/python3.11/site-packages (6.0)
+#33 0.587 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from zope.deprecation) (79.0.1)
+#33 1.461 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#33 1.467 
+#33 1.467 [notice] A new release of pip is available: 24.0 -> 25.3
+#33 1.467 [notice] To update, run: pip install --upgrade pip
+#33 DONE 1.6s
+
+#34 [30/32] RUN ["pip","install","zope.annotation"]
+#34 0.577 Requirement already satisfied: zope.annotation in /usr/local/lib/python3.11/site-packages (6.0)
+#34 0.589 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from zope.annotation) (79.0.1)
+#34 0.591 Requirement already satisfied: zope.interface in /usr/local/lib/python3.11/site-packages (from zope.annotation) (8.0.1)
+#34 0.592 Requirement already satisfied: zope.component in /usr/local/lib/python3.11/site-packages (from zope.annotation) (7.0)
+#34 0.593 Requirement already satisfied: zope.location in /usr/local/lib/python3.11/site-packages (from zope.annotation) (6.0)
+#34 0.594 Requirement already satisfied: zope.proxy in /usr/local/lib/python3.11/site-packages (from zope.annotation) (7.0)
+#34 0.631 Requirement already satisfied: zope.event in /usr/local/lib/python3.11/site-packages (from zope.component->zope.annotation) (6.0)
+#34 0.632 Requirement already satisfied: zope.hookable>=4.2.0 in /usr/local/lib/python3.11/site-packages (from zope.component->zope.annotation) (8.1)
+#34 0.650 Requirement already satisfied: zope.schema>=4.2.2 in /usr/local/lib/python3.11/site-packages (from zope.location->zope.annotation) (8.1)
+#34 1.531 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#34 1.537 
+#34 1.537 [notice] A new release of pip is available: 24.0 -> 25.3
+#34 1.537 [notice] To update, run: pip install --upgrade pip
+#34 DONE 1.6s
+
+#35 [31/32] RUN ["pip","install","zope.browserresource"]
+#35 0.567 Requirement already satisfied: zope.browserresource in /usr/local/lib/python3.11/site-packages (6.0)
+#35 0.576 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from zope.browserresource) (79.0.1)
+#35 0.577 Requirement already satisfied: zope.component>=3.8.0 in /usr/local/lib/python3.11/site-packages (from zope.browserresource) (7.0)
+#35 0.578 Requirement already satisfied: zope.configuration in /usr/local/lib/python3.11/site-packages (from zope.browserresource) (7.0)
+#35 0.579 Requirement already satisfied: zope.contenttype>=4.0.1 in /usr/local/lib/python3.11/site-packages (from zope.browserresource) (6.0)
+#35 0.581 Requirement already satisfied: zope.i18n in /usr/local/lib/python3.11/site-packages (from zope.browserresource) (6.0)
+#35 0.582 Requirement already satisfied: zope.interface in /usr/local/lib/python3.11/site-packages (from zope.browserresource) (8.0.1)
+#35 0.583 Requirement already satisfied: zope.location in /usr/local/lib/python3.11/site-packages (from zope.browserresource) (6.0)
+#35 0.585 Requirement already satisfied: zope.publisher>=3.8 in /usr/local/lib/python3.11/site-packages (from zope.browserresource) (8.0)
+#35 0.586 Requirement already satisfied: zope.schema in /usr/local/lib/python3.11/site-packages (from zope.browserresource) (8.1)
+#35 0.587 Requirement already satisfied: zope.traversing>3.7 in /usr/local/lib/python3.11/site-packages (from zope.browserresource) (6.0)
+#35 0.599 Requirement already satisfied: zope.event in /usr/local/lib/python3.11/site-packages (from zope.component>=3.8.0->zope.browserresource) (6.0)
+#35 0.600 Requirement already satisfied: zope.hookable>=4.2.0 in /usr/local/lib/python3.11/site-packages (from zope.component>=3.8.0->zope.browserresource) (8.1)
+#35 0.616 Requirement already satisfied: multipart>=1.1.0 in /usr/local/lib/python3.11/site-packages (from zope.publisher>=3.8->zope.browserresource) (1.3.0)
+#35 0.617 Requirement already satisfied: zope.browser in /usr/local/lib/python3.11/site-packages (from zope.publisher>=3.8->zope.browserresource) (4.0)
+#35 0.619 Requirement already satisfied: zope.exceptions in /usr/local/lib/python3.11/site-packages (from zope.publisher>=3.8->zope.browserresource) (6.0)
+#35 0.622 Requirement already satisfied: zope.proxy in /usr/local/lib/python3.11/site-packages (from zope.publisher>=3.8->zope.browserresource) (7.0)
+#35 0.623 Requirement already satisfied: zope.security>=4.0.0 in /usr/local/lib/python3.11/site-packages (from zope.publisher>=3.8->zope.browserresource) (8.2)
+#35 0.631 Requirement already satisfied: python-gettext in /usr/local/lib/python3.11/site-packages (from zope.i18n->zope.browserresource) (5.0)
+#35 0.632 Requirement already satisfied: pytz in /usr/local/lib/python3.11/site-packages (from zope.i18n->zope.browserresource) (2025.2)
+#35 0.633 Requirement already satisfied: zope.deprecation in /usr/local/lib/python3.11/site-packages (from zope.i18n->zope.browserresource) (6.0)
+#35 0.635 Requirement already satisfied: zope.i18nmessageid>=4.3 in /usr/local/lib/python3.11/site-packages (from zope.i18n->zope.browserresource) (8.1)
+#35 0.644 Requirement already satisfied: transaction in /usr/local/lib/python3.11/site-packages (from zope.traversing>3.7->zope.browserresource) (5.0)
+#35 1.600 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#35 1.606 
+#35 1.606 [notice] A new release of pip is available: 24.0 -> 25.3
+#35 1.606 [notice] To update, run: pip install --upgrade pip
+#35 DONE 1.7s
+
+#36 [32/32] RUN ["pip","install","zope.schema"]
+#36 0.573 Requirement already satisfied: zope.schema in /usr/local/lib/python3.11/site-packages (8.1)
+#36 0.580 Requirement already satisfied: zope.interface>=5.0.0 in /usr/local/lib/python3.11/site-packages (from zope.schema) (8.0.1)
+#36 0.581 Requirement already satisfied: zope.event in /usr/local/lib/python3.11/site-packages (from zope.schema) (6.0)
+#36 0.589 Requirement already satisfied: setuptools>=75.8.2 in /usr/local/lib/python3.11/site-packages (from zope.event->zope.schema) (79.0.1)
+#36 1.504 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#36 1.510 
+#36 1.510 [notice] A new release of pip is available: 24.0 -> 25.3
+#36 1.510 [notice] To update, run: pip install --upgrade pip
+#36 DONE 1.6s
+
+#37 exporting to image
+#37 exporting layers
+#37 exporting layers 1.9s done
+#37 writing image sha256:a3d67244266510298192aaa98efa657854062a49a1ee1464bfb1ed97ccc7fcae done
+#37 naming to docker.io/library/test-image-8cb3aa12e73a6df8d6b6 done
+#37 DONE 2.0s
+
+View build details: docker-desktop://dashboard/build/default/default/yqp99udaxbcsgcygjzxl6anhn
+[2025-10-29 18:10:17] SUCCESS: Build completed for 8cb3aa12e73a6df8d6b6

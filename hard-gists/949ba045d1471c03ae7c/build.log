@@ -1,0 +1,101 @@
+=== Docker Build Log for 949ba045d1471c03ae7c ===
+Started at: Mi 29. Okt 18:26:39 CET 2025
+
+[2025-10-29 18:26:39] START: Building image for 949ba045d1471c03ae7c
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 498B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.38kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/13] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/13] COPY hard-gists/949ba045d1471c03ae7c/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/13] RUN ["pip","install","the"]
+#7 2.068 Collecting the
+#7 2.100   Downloading the-0.1.5.tar.gz (10 kB)
+#7 2.115   Preparing metadata (setup.py): started
+#7 2.511   Preparing metadata (setup.py): finished with status 'done'
+#7 2.513 Building wheels for collected packages: the
+#7 2.513   Building wheel for the (setup.py): started
+#7 2.674   Building wheel for the (setup.py): finished with status 'done'
+#7 2.674   Created wheel for the: filename=the-0.1.5-py3-none-any.whl size=6027 sha256=629d8f2a1cebeb931c43c3473228f1cc1f43f5021b0e441f4945015113073a13
+#7 2.674   Stored in directory: /root/.cache/pip/wheels/5a/02/15/82fa3d852099cde5adb558437baaa511bc9ad4a7febdae2ecb
+#7 2.678 Successfully built the
+#7 2.706 Installing collected packages: the
+#7 2.721 Successfully installed the-0.1.5
+#7 2.722 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.814 
+#7 2.814 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.814 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.0s
+
+#8 [ 4/13] RUN ["pip","install","pandacan"]
+#8 0.682 Collecting pandacan
+#8 0.718   Downloading pandacan-0.0.9.tar.gz (36 kB)
+#8 0.741   Preparing metadata (setup.py): started
+#8 0.852   Preparing metadata (setup.py): finished with status 'done'
+#8 0.891 Collecting libusb1==1.6.6 (from pandacan)
+#8 0.901   Downloading libusb1-1.6.6.tar.gz (56 kB)
+#8 0.924      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.0/56.0 kB 2.1 MB/s eta 0:00:00
+#8 0.929   Preparing metadata (setup.py): started
+#8 1.027   Preparing metadata (setup.py): finished with status 'error'
+#8 1.030   error: subprocess-exited-with-error
+#8 1.030   
+#8 1.030   × python setup.py egg_info did not run successfully.
+#8 1.030   │ exit code: 1
+#8 1.030   ╰─> [1 lines of output]
+#8 1.030       error in libusb1 setup command: use_2to3 is invalid.
+#8 1.030       [end of output]
+#8 1.030   
+#8 1.030   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 1.031 error: metadata-generation-failed
+#8 1.031 
+#8 1.031 × Encountered error while generating package metadata.
+#8 1.031 ╰─> See above for output.
+#8 1.031 
+#8 1.031 note: This is an issue with the package mentioned above, not pip.
+#8 1.031 hint: See above for details.
+#8 1.036 
+#8 1.036 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.036 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install pandacan" did not complete successfully: exit code: 1
+------
+ > [ 4/13] RUN ["pip","install","pandacan"]:
+1.031 error: metadata-generation-failed
+1.031 
+1.031 × Encountered error while generating package metadata.
+1.031 ╰─> See above for output.
+1.031 
+1.031 note: This is an issue with the package mentioned above, not pip.
+1.031 hint: See above for details.
+1.036 
+1.036 [notice] A new release of pip is available: 24.0 -> 25.3
+1.036 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/949ba045d1471c03ae7c/snippet.py /snippet.py
+   3 |     RUN ["pip","install","the"]
+   4 | >>> RUN ["pip","install","pandacan"]
+   5 |     RUN ["pip","install","PyYAML"]
+   6 |     RUN ["pip","install","numpy"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install pandacan" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/j8lb15aecr743r8mczre3jycn
+[2025-10-29 18:26:44] ERROR: Build failed for 949ba045d1471c03ae7c

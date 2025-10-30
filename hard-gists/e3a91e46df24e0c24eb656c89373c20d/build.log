@@ -1,0 +1,197 @@
+=== Docker Build Log for e3a91e46df24e0c24eb656c89373c20d ===
+Started at: Mi 29. Okt 20:43:31 CET 2025
+
+[2025-10-29 20:43:31] START: Building image for e3a91e46df24e0c24eb656c89373c20d
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 338B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.40kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/8] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/8] COPY hard-gists/e3a91e46df24e0c24eb656c89373c20d/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/8] RUN ["pip","install","six"]
+#7 1.922 Collecting six
+#7 1.980   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.009 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.057 Installing collected packages: six
+#7 2.078 Successfully installed six-1.17.0
+#7 2.079 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.178 
+#7 2.178 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.178 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.4s
+
+#8 [4/8] RUN ["pip","install","pytest"]
+#8 0.576 Collecting pytest
+#8 0.609   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#8 0.652 Collecting iniconfig>=1 (from pytest)
+#8 0.661   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#8 0.713 Collecting packaging>=20 (from pytest)
+#8 0.723   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.764 Collecting pluggy<2,>=1.5 (from pytest)
+#8 0.774   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#8 0.825 Collecting pygments>=2.7.2 (from pytest)
+#8 0.836   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#8 0.870 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#8 0.924    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 7.2 MB/s eta 0:00:00
+#8 0.933 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#8 0.962 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 0.974    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.4 MB/s eta 0:00:00
+#8 0.985 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#8 1.003 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#8 1.087    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 14.8 MB/s eta 0:00:00
+#8 1.137 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#8 1.864 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#8 1.864 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.870 
+#8 1.870 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.870 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.1s
+
+#9 [5/8] RUN ["pip","install","py"]
+#9 0.557 Collecting py
+#9 0.591   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#9 0.617 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#9 0.654    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.5 MB/s eta 0:00:00
+#9 0.696 Installing collected packages: py
+#9 0.776 Successfully installed py-1.11.0
+#9 0.776 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.781 
+#9 0.781 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.781 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.9s
+
+#10 [6/8] RUN ["pip","install","requests"]
+#10 0.540 Collecting requests
+#10 0.574   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#10 0.703 Collecting charset_normalizer<4,>=2 (from requests)
+#10 0.714   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#10 0.764 Collecting idna<4,>=2.5 (from requests)
+#10 0.773   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#10 0.835 Collecting urllib3<3,>=1.21.1 (from requests)
+#10 0.844   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#10 0.899 Collecting certifi>=2017.4.17 (from requests)
+#10 0.910   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#10 0.943 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#10 0.977    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 1.7 MB/s eta 0:00:00
+#10 0.986 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#10 1.007    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 7.9 MB/s eta 0:00:00
+#10 1.016 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#10 1.034    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 8.9 MB/s eta 0:00:00
+#10 1.043 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#10 1.061    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 3.6 MB/s eta 0:00:00
+#10 1.071 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#10 1.089    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.0 MB/s eta 0:00:00
+#10 1.144 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#10 1.380 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#10 1.381 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.386 
+#10 1.386 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.386 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.5s
+
+#11 [7/8] RUN ["pip","install","lxml"]
+#11 0.712 Collecting lxml
+#11 0.757   Downloading lxml-6.0.2-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.6 kB)
+#11 0.796 Downloading lxml-6.0.2-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.2 MB)
+#11 1.190    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 13.3 MB/s eta 0:00:00
+#11 1.255 Installing collected packages: lxml
+#11 1.380 Successfully installed lxml-6.0.2
+#11 1.380 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.386 
+#11 1.386 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.386 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.6s
+
+#12 [8/8] RUN ["pip","install","pyalpm"]
+#12 0.626 Collecting pyalpm
+#12 0.757   Downloading pyalpm-0.10.12.tar.gz (52 kB)
+#12 0.787      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.3/52.3 kB 1.5 MB/s eta 0:00:00
+#12 0.798   Installing build dependencies: started
+#12 2.556   Installing build dependencies: finished with status 'done'
+#12 2.559   Getting requirements to build wheel: started
+#12 2.715   Getting requirements to build wheel: finished with status 'error'
+#12 2.719   error: subprocess-exited-with-error
+#12 2.719   
+#12 2.719   × Getting requirements to build wheel did not run successfully.
+#12 2.719   │ exit code: 1
+#12 2.719   ╰─> [24 lines of output]
+#12 2.719       Traceback (most recent call last):
+#12 2.719         File "/usr/local/lib/python3.11/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 353, in <module>
+#12 2.719           main()
+#12 2.719         File "/usr/local/lib/python3.11/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 335, in main
+#12 2.719           json_out['return_val'] = hook(**hook_input['kwargs'])
+#12 2.719                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#12 2.719         File "/usr/local/lib/python3.11/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 118, in get_requires_for_build_wheel
+#12 2.719           return hook(config_settings)
+#12 2.719                  ^^^^^^^^^^^^^^^^^^^^^
+#12 2.719         File "/tmp/pip-build-env-aoywdoh7/overlay/lib/python3.11/site-packages/setuptools/build_meta.py", line 331, in get_requires_for_build_wheel
+#12 2.719           return self._get_build_requires(config_settings, requirements=[])
+#12 2.719                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#12 2.719         File "/tmp/pip-build-env-aoywdoh7/overlay/lib/python3.11/site-packages/setuptools/build_meta.py", line 301, in _get_build_requires
+#12 2.719           self.run_setup()
+#12 2.719         File "/tmp/pip-build-env-aoywdoh7/overlay/lib/python3.11/site-packages/setuptools/build_meta.py", line 512, in run_setup
+#12 2.719           super().run_setup(setup_script=setup_script)
+#12 2.719         File "/tmp/pip-build-env-aoywdoh7/overlay/lib/python3.11/site-packages/setuptools/build_meta.py", line 317, in run_setup
+#12 2.719           exec(code, locals())
+#12 2.719         File "<string>", line 6, in <module>
+#12 2.719         File "/tmp/pip-build-env-aoywdoh7/overlay/lib/python3.11/site-packages/pkgconfig/pkgconfig.py", line 248, in parse
+#12 2.719           _raise_if_not_exists(package)
+#12 2.719         File "/tmp/pip-build-env-aoywdoh7/overlay/lib/python3.11/site-packages/pkgconfig/pkgconfig.py", line 103, in _raise_if_not_exists
+#12 2.719           raise PackageNotFoundError(package)
+#12 2.719       pkgconfig.pkgconfig.PackageNotFoundError: libalpm not found
+#12 2.719       [end of output]
+#12 2.719   
+#12 2.719   note: This error originates from a subprocess, and is likely not a problem with pip.
+#12 2.720 error: subprocess-exited-with-error
+#12 2.720 
+#12 2.720 × Getting requirements to build wheel did not run successfully.
+#12 2.720 │ exit code: 1
+#12 2.720 ╰─> See above for output.
+#12 2.720 
+#12 2.720 note: This error originates from a subprocess, and is likely not a problem with pip.
+#12 2.725 
+#12 2.725 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 2.725 [notice] To update, run: pip install --upgrade pip
+#12 ERROR: process "pip install pyalpm" did not complete successfully: exit code: 1
+------
+ > [8/8] RUN ["pip","install","pyalpm"]:
+2.720 error: subprocess-exited-with-error
+2.720 
+2.720 × Getting requirements to build wheel did not run successfully.
+2.720 │ exit code: 1
+2.720 ╰─> See above for output.
+2.720 
+2.720 note: This error originates from a subprocess, and is likely not a problem with pip.
+2.725 
+2.725 [notice] A new release of pip is available: 24.0 -> 25.3
+2.725 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:8
+--------------------
+   6 |     RUN ["pip","install","requests"]
+   7 |     RUN ["pip","install","lxml"]
+   8 | >>> RUN ["pip","install","pyalpm"]
+   9 |     CMD ["python3","/snippet.py"]
+  10 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install pyalpm" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/f8e07jbszz8sq12fskfymyutg
+[2025-10-29 20:43:43] ERROR: Build failed for e3a91e46df24e0c24eb656c89373c20d

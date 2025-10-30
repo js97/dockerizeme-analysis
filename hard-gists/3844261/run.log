@@ -1,0 +1,15 @@
+=== Docker Run Log for 3844261 ===
+Started at: Mi 29. Okt 14:03:41 CET 2025
+
+[2025-10-29 14:03:52] START: Running container for 3844261
+[2025-10-29 14:03:52] SUCCESS: Container 0f0c65b3b3822374a84b2f14016c0eb65b150865c55c0635f692fc8a2718b0bf started for 3844261
+=== Container logs for 3844261 ===
+pygame 2.6.1 (SDL 2.28.4, Python 3.11.14)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Traceback (most recent call last):
+  File "/snippet.py", line 15, in <module>
+    FACE_HAAR = cv.Load(FACE_HAAR)
+                ^^^^^^^
+AttributeError: module 'cv' has no attribute 'Load'
+=== End of logs for 3844261 ===
+[2025-10-29 14:03:54] INFO: Container 0f0c65b3b3822374a84b2f14016c0eb65b150865c55c0635f692fc8a2718b0bf has stopped

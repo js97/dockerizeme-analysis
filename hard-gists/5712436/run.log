@@ -1,0 +1,15 @@
+=== Docker Run Log for 5712436 ===
+Started at: Mi 29. Okt 15:55:05 CET 2025
+
+[2025-10-29 15:55:08] START: Running container for 5712436
+[2025-10-29 15:55:09] SUCCESS: Container 760cf070bdd473ca88efbe26f74be350327d83a254683ed386d62b5b0ec7d8d0 started for 5712436
+=== Container logs for 5712436 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 6, in <module>
+    class WSGIHandler(web.RequestHandler):
+  File "/snippet.py", line 12, in WSGIHandler
+    @web.asynchronous
+     ^^^^^^^^^^^^^^^^
+AttributeError: module 'tornado.web' has no attribute 'asynchronous'
+=== End of logs for 5712436 ===
+[2025-10-29 15:55:11] INFO: Container 760cf070bdd473ca88efbe26f74be350327d83a254683ed386d62b5b0ec7d8d0 has stopped

@@ -1,0 +1,17 @@
+=== Docker Run Log for 872145 ===
+Started at: Mi 29. Okt 17:55:45 CET 2025
+
+[2025-10-29 17:55:52] START: Running container for 872145
+[2025-10-29 17:55:52] SUCCESS: Container 4f8c82b941e399e8cc8131909269ee7ba69703575610a090f4a8c1f4d7b9063d started for 872145
+=== Container logs for 872145 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 7, in <module>
+    MUTATING_QUERYSETS = getattr(settings, 'MUTATING_QUERYSETS', False)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting MUTATING_QUERYSETS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 872145 ===
+[2025-10-29 17:55:54] INFO: Container 4f8c82b941e399e8cc8131909269ee7ba69703575610a090f4a8c1f4d7b9063d has stopped

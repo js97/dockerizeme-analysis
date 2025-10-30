@@ -1,0 +1,198 @@
+=== Docker Build Log for db5ec4ce7c1dbaae4707 ===
+Started at: Mi 29. Okt 20:31:31 CET 2025
+
+[2025-10-29 20:31:31] START: Building image for db5ec4ce7c1dbaae4707
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 372B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.04kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/9] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/9] COPY hard-gists/db5ec4ce7c1dbaae4707/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/9] RUN ["pip","install","scapy-python3"]
+#7 1.905 Collecting scapy-python3
+#7 1.956   Downloading scapy-python3-0.26.tar.gz (1.2 kB)
+#7 1.968   Preparing metadata (setup.py): started
+#7 2.356   Preparing metadata (setup.py): finished with status 'done'
+#7 2.357 Building wheels for collected packages: scapy-python3
+#7 2.358   Building wheel for scapy-python3 (setup.py): started
+#7 2.513   Building wheel for scapy-python3 (setup.py): finished with status 'done'
+#7 2.514   Created wheel for scapy-python3: filename=scapy_python3-0.26-py3-none-any.whl size=1849 sha256=4a4bdb3084f80dd18df7b70cd43701b6b4f9d629cbe064fcb619f2c06f5d9525
+#7 2.514   Stored in directory: /root/.cache/pip/wheels/e4/bc/9c/82ef09067bd5ef5e25dad468d4680e875008b9299f4ee1b49e
+#7 2.517 Successfully built scapy-python3
+#7 2.546 Installing collected packages: scapy-python3
+#7 2.560 Successfully installed scapy-python3-0.26
+#7 2.560 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.661 
+#7 2.661 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.661 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.9s
+
+#8 [4/9] RUN ["pip","install","pychrome"]
+#8 0.547 Collecting pychrome
+#8 0.583   Downloading pychrome-0.2.4-py2.py3-none-any.whl.metadata (4.3 kB)
+#8 0.642 Collecting click>=6.0 (from pychrome)
+#8 0.650   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#8 0.714 Collecting websocket-client>=0.44.0 (from pychrome)
+#8 0.722   Downloading websocket_client-1.9.0-py3-none-any.whl.metadata (8.3 kB)
+#8 0.789 Collecting requests>=2.13.0 (from pychrome)
+#8 0.797   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#8 0.916 Collecting charset_normalizer<4,>=2 (from requests>=2.13.0->pychrome)
+#8 0.926   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#8 0.984 Collecting idna<4,>=2.5 (from requests>=2.13.0->pychrome)
+#8 0.995   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#8 1.060 Collecting urllib3<3,>=1.21.1 (from requests>=2.13.0->pychrome)
+#8 1.068   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#8 1.116 Collecting certifi>=2017.4.17 (from requests>=2.13.0->pychrome)
+#8 1.127   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#8 1.162 Downloading pychrome-0.2.4-py2.py3-none-any.whl (8.2 kB)
+#8 1.180 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#8 1.201    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 5.3 MB/s eta 0:00:00
+#8 1.210 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#8 1.224    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 4.7 MB/s eta 0:00:00
+#8 1.232 Downloading websocket_client-1.9.0-py3-none-any.whl (82 kB)
+#8 1.246    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 82.6/82.6 kB 5.8 MB/s eta 0:00:00
+#8 1.256 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#8 1.275    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 8.9 MB/s eta 0:00:00
+#8 1.284 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#8 1.307    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 6.6 MB/s eta 0:00:00
+#8 1.316 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#8 1.334    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 3.7 MB/s eta 0:00:00
+#8 1.342 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#8 1.358    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 7.9 MB/s eta 0:00:00
+#8 1.410 Installing collected packages: websocket-client, urllib3, idna, click, charset_normalizer, certifi, requests, pychrome
+#8 1.773 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 click-8.3.0 idna-3.11 pychrome-0.2.4 requests-2.32.5 urllib3-2.5.0 websocket-client-1.9.0
+#8 1.773 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.778 
+#8 1.778 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.778 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.9s
+
+#9 [5/9] RUN ["pip","install","pychro"]
+#9 0.563 Collecting pychro
+#9 0.600   Downloading pychro-0.8.9.tar.gz (15 kB)
+#9 0.613   Preparing metadata (setup.py): started
+#9 0.724   Preparing metadata (setup.py): finished with status 'done'
+#9 0.725 Building wheels for collected packages: pychro
+#9 0.730   Building wheel for pychro (setup.py): started
+#9 1.011   Building wheel for pychro (setup.py): finished with status 'done'
+#9 1.012   Created wheel for pychro: filename=pychro-0.8.9-cp311-cp311-linux_x86_64.whl size=19079 sha256=e84647c995f8de1b03da21fe826825cd86212e460c74b03b3df54060f9662de6
+#9 1.012   Stored in directory: /root/.cache/pip/wheels/2d/8e/dc/5d954c80f5a53e21e86b1d8ad4e24d5082723d1f056fb2a0c8
+#9 1.014 Successfully built pychro
+#9 1.066 Installing collected packages: pychro
+#9 1.085 Successfully installed pychro-0.8.9
+#9 1.085 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.091 
+#9 1.091 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.091 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.2s
+
+#10 [6/9] RUN ["pip","install","six"]
+#10 0.553 Collecting six
+#10 0.586   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#10 0.610 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#10 0.676 Installing collected packages: six
+#10 0.714 Successfully installed six-1.17.0
+#10 0.714 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.719 
+#10 0.719 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.719 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.8s
+
+#11 [7/9] RUN ["pip","install","pytest"]
+#11 0.574 Collecting pytest
+#11 0.614   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#11 0.668 Collecting iniconfig>=1 (from pytest)
+#11 0.682   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#11 0.742 Collecting packaging>=20 (from pytest)
+#11 0.751   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#11 0.796 Collecting pluggy<2,>=1.5 (from pytest)
+#11 0.804   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#11 0.856 Collecting pygments>=2.7.2 (from pytest)
+#11 0.868   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#11 0.901 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#11 0.958    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 6.8 MB/s eta 0:00:00
+#11 0.968 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#11 0.987 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#11 1.001    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 4.4 MB/s eta 0:00:00
+#11 1.012 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#11 1.032 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#11 1.113    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 15.4 MB/s eta 0:00:00
+#11 1.179 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#11 1.903 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#11 1.903 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.908 
+#11 1.908 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.908 [notice] To update, run: pip install --upgrade pip
+#11 DONE 2.1s
+
+#12 [8/9] RUN ["pip","install","py"]
+#12 0.530 Collecting py
+#12 0.594   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#12 0.622 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#12 0.656    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.8 MB/s eta 0:00:00
+#12 0.714 Installing collected packages: py
+#12 0.792 Successfully installed py-1.11.0
+#12 0.792 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 0.797 
+#12 0.797 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 0.797 [notice] To update, run: pip install --upgrade pip
+#12 DONE 0.9s
+
+#13 [9/9] RUN ["pip","install","PyChromecast"]
+#13 0.532 Collecting PyChromecast
+#13 0.571   Downloading pychromecast-14.0.9-py2.py3-none-any.whl.metadata (9.8 kB)
+#13 0.780 Collecting protobuf>=4.25.1 (from PyChromecast)
+#13 0.791   Downloading protobuf-6.33.0-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)
+#13 1.305 Collecting zeroconf>=0.25.1 (from PyChromecast)
+#13 1.315   Downloading zeroconf-0.148.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (6.3 kB)
+#13 1.364 Collecting casttube>=0.2.0 (from PyChromecast)
+#13 1.374   Downloading casttube-0.2.1-py3-none-any.whl.metadata (960 bytes)
+#13 1.390 Requirement already satisfied: requests in /usr/local/lib/python3.11/site-packages (from casttube>=0.2.0->PyChromecast) (2.32.5)
+#13 1.418 Collecting ifaddr>=0.1.7 (from zeroconf>=0.25.1->PyChromecast)
+#13 1.431   Downloading ifaddr-0.2.0-py3-none-any.whl.metadata (4.9 kB)
+#13 1.452 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests->casttube>=0.2.0->PyChromecast) (3.4.4)
+#13 1.453 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests->casttube>=0.2.0->PyChromecast) (3.11)
+#13 1.454 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests->casttube>=0.2.0->PyChromecast) (2.5.0)
+#13 1.455 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests->casttube>=0.2.0->PyChromecast) (2025.10.5)
+#13 1.474 Downloading pychromecast-14.0.9-py2.py3-none-any.whl (77 kB)
+#13 1.502    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 77.4/77.4 kB 2.6 MB/s eta 0:00:00
+#13 1.514 Downloading casttube-0.2.1-py3-none-any.whl (6.5 kB)
+#13 1.532 Downloading protobuf-6.33.0-cp39-abi3-manylinux2014_x86_64.whl (323 kB)
+#13 1.574    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 323.2/323.2 kB 7.8 MB/s eta 0:00:00
+#13 1.585 Downloading zeroconf-0.148.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (2.3 MB)
+#13 1.766    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 12.6 MB/s eta 0:00:00
+#13 1.779 Downloading ifaddr-0.2.0-py3-none-any.whl (12 kB)
+#13 1.883 Installing collected packages: ifaddr, zeroconf, protobuf, casttube, PyChromecast
+#13 2.150 Successfully installed PyChromecast-14.0.9 casttube-0.2.1 ifaddr-0.2.0 protobuf-6.33.0 zeroconf-0.148.0
+#13 2.151 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 2.156 
+#13 2.156 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 2.156 [notice] To update, run: pip install --upgrade pip
+#13 DONE 2.4s
+
+#14 exporting to image
+#14 exporting layers
+#14 exporting layers 0.3s done
+#14 writing image sha256:d14e9d3d19d4f987de79265f3027006fbb16343b6ff44989969c550edef870dc done
+#14 naming to docker.io/library/test-image-db5ec4ce7c1dbaae4707 done
+#14 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/pbgwmn2qwa9blla2umpi902a9
+[2025-10-29 20:31:44] SUCCESS: Build completed for db5ec4ce7c1dbaae4707

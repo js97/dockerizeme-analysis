@@ -1,0 +1,32 @@
+=== Docker Run Log for f55c4ce19598b2b345ef ===
+Started at: Mi 29. Okt 21:27:23 CET 2025
+
+[2025-10-29 21:27:30] START: Running container for f55c4ce19598b2b345ef
+[2025-10-29 21:27:30] SUCCESS: Container 21ffec66d76fd11724c01a483bf8df33bce8c5ef5c48b49a31f0a41a9a0924e6 started for f55c4ce19598b2b345ef
+=== Container logs for f55c4ce19598b2b345ef ===
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/postgresql/psycopg_any.py", line 5, in <module>
+    from psycopg import ClientCursor, IsolationLevel, adapt, adapters, errors, sql
+ModuleNotFoundError: No module named 'psycopg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snippet.py", line 2, in <module>
+    from django.contrib.postgres.fields import ArrayField
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/postgres/fields/__init__.py", line 1, in <module>
+    from .array import *  # NOQA
+    ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/postgres/fields/array.py", line 4, in <module>
+    from django.contrib.postgres.forms import SimpleArrayField
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/postgres/forms/__init__.py", line 3, in <module>
+    from .ranges import *  # NOQA
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/postgres/forms/ranges.py", line 3, in <module>
+    from django.db.backends.postgresql.psycopg_any import (
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/postgresql/psycopg_any.py", line 77, in <module>
+    from psycopg2 import errors, extensions, sql  # NOQA
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'psycopg2'
+=== End of logs for f55c4ce19598b2b345ef ===
+[2025-10-29 21:27:32] INFO: Container 21ffec66d76fd11724c01a483bf8df33bce8c5ef5c48b49a31f0a41a9a0924e6 has stopped

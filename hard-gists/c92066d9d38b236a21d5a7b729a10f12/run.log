@@ -1,0 +1,16 @@
+=== Docker Run Log for c92066d9d38b236a21d5a7b729a10f12 ===
+Started at: Mi 29. Okt 20:09:09 CET 2025
+
+[2025-10-29 20:10:28] START: Running container for c92066d9d38b236a21d5a7b729a10f12
+[2025-10-29 20:10:28] SUCCESS: Container 2d38e2a81d866e1343d6f450b372b1e5e2a4276d310a48276a8ec002b3ddc4cf started for c92066d9d38b236a21d5a7b729a10f12
+=== Container logs for c92066d9d38b236a21d5a7b729a10f12 ===
+2025-10-29 19:10:29.149137: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-10-29 19:10:29.186259: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-29 19:10:30.390043: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Traceback (most recent call last):
+  File "/snippet.py", line 5, in <module>
+    from tensorflow.contrib import layers
+ModuleNotFoundError: No module named 'tensorflow.contrib'
+=== End of logs for c92066d9d38b236a21d5a7b729a10f12 ===
+[2025-10-29 20:10:31] INFO: Container 2d38e2a81d866e1343d6f450b372b1e5e2a4276d310a48276a8ec002b3ddc4cf has stopped

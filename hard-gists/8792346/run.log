@@ -1,0 +1,27 @@
+=== Docker Run Log for 8792346 ===
+Started at: Mi 29. Okt 17:57:04 CET 2025
+
+[2025-10-29 17:57:12] START: Running container for 8792346
+[2025-10-29 17:57:12] SUCCESS: Container e39282057bef5150d070f3351531432190675ed2985b172f5b12348f4788df91 started for 8792346
+=== Container logs for 8792346 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 1, in <module>
+    from rest_framework.test import APITestCase
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/test.py", line 138, in <module>
+    class APIRequestFactory(DjangoRequestFactory):
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/test.py", line 139, in APIRequestFactory
+    renderer_classes_list = api_settings.TEST_REQUEST_RENDERER_CLASSES
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/settings.py", line 220, in __getattr__
+    val = self.user_settings[attr]
+          ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/settings.py", line 211, in user_settings
+    self._user_settings = getattr(settings, 'REST_FRAMEWORK', {})
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting REST_FRAMEWORK, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 8792346 ===
+[2025-10-29 17:57:14] INFO: Container e39282057bef5150d070f3351531432190675ed2985b172f5b12348f4788df91 has stopped

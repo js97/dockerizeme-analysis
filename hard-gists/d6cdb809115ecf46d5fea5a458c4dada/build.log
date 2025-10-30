@@ -1,0 +1,103 @@
+=== Docker Build Log for d6cdb809115ecf46d5fea5a458c4dada ===
+Started at: Mi 29. Okt 20:27:52 CET 2025
+
+[2025-10-29 20:27:52] START: Building image for d6cdb809115ecf46d5fea5a458c4dada
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.22kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.88kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/32] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/32] COPY hard-gists/d6cdb809115ecf46d5fea5a458c4dada/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/32] RUN ["apt-get","update"]
+#7 0.263 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.263 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.276 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.284 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.609 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.613 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.194 Fetched 9833 kB in 1s (10.2 MB/s)
+#7 1.194 Reading package lists...
+#7 DONE 1.8s
+
+#8 [ 4/32] RUN ["pip","install","requests"]
+#8 1.900 Collecting requests
+#8 1.934   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#8 2.052 Collecting charset_normalizer<4,>=2 (from requests)
+#8 2.061   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#8 2.105 Collecting idna<4,>=2.5 (from requests)
+#8 2.113   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#8 2.171 Collecting urllib3<3,>=1.21.1 (from requests)
+#8 2.179   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#8 2.222 Collecting certifi>=2017.4.17 (from requests)
+#8 2.231   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#8 2.257 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#8 2.276    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.2 MB/s eta 0:00:00
+#8 2.285 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#8 2.305    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 8.2 MB/s eta 0:00:00
+#8 2.318 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#8 2.332    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.1 MB/s eta 0:00:00
+#8 2.340 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#8 2.353    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.5 MB/s eta 0:00:00
+#8 2.361 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#8 2.375    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.9 MB/s eta 0:00:00
+#8 2.421 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#8 2.638 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#8 2.639 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.733 
+#8 2.733 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.733 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.9s
+
+#9 [ 5/32] RUN ["apt-get","install","-y","python-pip"]
+#9 0.220 Reading package lists...
+#9 0.640 Building dependency tree...
+#9 0.749 Reading state information...
+#9 0.765 Package python-pip is not available, but is referred to by another package.
+#9 0.765 This may mean that the package is missing, has been obsoleted, or
+#9 0.765 is only available from another source
+#9 0.765 However the following packages replace it:
+#9 0.765   python3-pip
+#9 0.765 
+#9 0.768 E: Package 'python-pip' has no installation candidate
+#9 ERROR: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+------
+ > [ 5/32] RUN ["apt-get","install","-y","python-pip"]:
+
+
+0.765 Package python-pip is not available, but is referred to by another package.
+0.765 This may mean that the package is missing, has been obsoleted, or
+0.765 is only available from another source
+0.765 However the following packages replace it:
+0.765   python3-pip
+0.765 
+0.768 E: Package 'python-pip' has no installation candidate
+------
+Dockerfile:5
+--------------------
+   3 |     RUN ["apt-get","update"]
+   4 |     RUN ["pip","install","requests"]
+   5 | >>> RUN ["apt-get","install","-y","python-pip"]
+   6 |     RUN ["apt-get","install","-y","python-dev"]
+   7 |     RUN ["pip","install","six"]
+--------------------
+ERROR: failed to build: failed to solve: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/default/default/m725w1rsa7qvuptn1ugul7l9x
+[2025-10-29 20:27:58] ERROR: Build failed for d6cdb809115ecf46d5fea5a458c4dada

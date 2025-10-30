@@ -1,0 +1,13 @@
+=== Docker Run Log for 6414599 ===
+Started at: Mi 29. Okt 16:30:29 CET 2025
+
+[2025-10-29 16:30:33] START: Running container for 6414599
+[2025-10-29 16:30:33] SUCCESS: Container c860b966c3f5f813fe357831c763329f6cda3ac8d9bba01b2b84603904d6fc8b started for 6414599
+=== Container logs for 6414599 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 9, in <module>
+    os.chdir('../Pythonista.app')  # Look at files inside the app
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../Pythonista.app'
+=== End of logs for 6414599 ===
+[2025-10-29 16:30:35] INFO: Container c860b966c3f5f813fe357831c763329f6cda3ac8d9bba01b2b84603904d6fc8b has stopped

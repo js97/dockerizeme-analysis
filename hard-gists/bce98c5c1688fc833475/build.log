@@ -1,0 +1,90 @@
+=== Docker Build Log for bce98c5c1688fc833475 ===
+Started at: Mi 29. Okt 19:38:45 CET 2025
+
+[2025-10-29 19:38:45] START: Building image for bce98c5c1688fc833475
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 212B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 5.48kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/bce98c5c1688fc833475/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","onewire"]
+#7 2.045 Collecting onewire
+#7 2.197   Downloading onewire-0.2.tar.gz (2.6 kB)
+#7 2.219   Preparing metadata (setup.py): started
+#7 2.600   Preparing metadata (setup.py): finished with status 'done'
+#7 2.602 Building wheels for collected packages: onewire
+#7 2.602   Building wheel for onewire (setup.py): started
+#7 2.822   Building wheel for onewire (setup.py): finished with status 'error'
+#7 2.826   error: subprocess-exited-with-error
+#7 2.826   
+#7 2.826   × python setup.py bdist_wheel did not run successfully.
+#7 2.826   │ exit code: 1
+#7 2.826   ╰─> [14 lines of output]
+#7 2.826       running bdist_wheel
+#7 2.826       running build
+#7 2.826       running build_py
+#7 2.826       creating build/lib.linux-x86_64-cpython-311/onewire
+#7 2.826       copying onewire/__init__.py -> build/lib.linux-x86_64-cpython-311/onewire
+#7 2.826       running build_ext
+#7 2.826       building 'onewire._ow' extension
+#7 2.826       creating build/temp.linux-x86_64-cpython-311/onewire
+#7 2.826       gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -I/usr/local/include/python3.11 -c onewire/_ow.c -o build/temp.linux-x86_64-cpython-311/onewire/_ow.o
+#7 2.826       onewire/_ow.c:2:10: fatal error: owcapi.h: No such file or directory
+#7 2.826           2 | #include <owcapi.h>
+#7 2.826             |          ^~~~~~~~~~
+#7 2.826       compilation terminated.
+#7 2.826       error: command '/usr/bin/gcc' failed with exit code 1
+#7 2.826       [end of output]
+#7 2.826   
+#7 2.826   note: This error originates from a subprocess, and is likely not a problem with pip.
+#7 2.826   ERROR: Failed building wheel for onewire
+#7 2.826   Running setup.py clean for onewire
+#7 2.930 Failed to build onewire
+#7 2.930 ERROR: Could not build wheels for onewire, which is required to install pyproject.toml-based projects
+#7 3.030 
+#7 3.030 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.030 [notice] To update, run: pip install --upgrade pip
+#7 ERROR: process "pip install onewire" did not complete successfully: exit code: 1
+------
+ > [3/4] RUN ["pip","install","onewire"]:
+2.826       [end of output]
+2.826   
+2.826   note: This error originates from a subprocess, and is likely not a problem with pip.
+2.826   ERROR: Failed building wheel for onewire
+2.826   Running setup.py clean for onewire
+2.930 Failed to build onewire
+2.930 ERROR: Could not build wheels for onewire, which is required to install pyproject.toml-based projects
+3.030 
+3.030 [notice] A new release of pip is available: 24.0 -> 25.3
+3.030 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:3
+--------------------
+   1 |     FROM python:3.11
+   2 |     COPY hard-gists/bce98c5c1688fc833475/snippet.py /snippet.py
+   3 | >>> RUN ["pip","install","onewire"]
+   4 |     RUN ["pip","install","influxdb"]
+   5 |     CMD ["python3","/snippet.py"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install onewire" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/vbi9zi11ekon6nnqo14my5cry
+[2025-10-29 19:38:48] ERROR: Build failed for bce98c5c1688fc833475

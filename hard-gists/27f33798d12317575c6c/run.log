@@ -1,0 +1,12 @@
+=== Docker Run Log for 27f33798d12317575c6c ===
+Started at: Mi 29. Okt 13:17:04 CET 2025
+
+[2025-10-29 13:17:05] START: Running container for 27f33798d12317575c6c
+[2025-10-29 13:17:05] SUCCESS: Container e1fedcbdd721ce4bcf8123f09c9717b9b07dc287709e7ad7a18b78bbef7fa27c started for 27f33798d12317575c6c
+=== Container logs for 27f33798d12317575c6c ===
+  File "/snippet.py", line 64
+    print "ADC[0]: {}\t ADC[1]: {}".format(getADC(0), getADC(1))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 27f33798d12317575c6c ===
+[2025-10-29 13:17:07] INFO: Container e1fedcbdd721ce4bcf8123f09c9717b9b07dc287709e7ad7a18b78bbef7fa27c has stopped

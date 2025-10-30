@@ -1,0 +1,14 @@
+=== Docker Run Log for 6aa898d22e74aa9dafc3 ===
+Started at: Mi 29. Okt 16:47:34 CET 2025
+
+[2025-10-29 16:47:52] START: Running container for 6aa898d22e74aa9dafc3
+[2025-10-29 16:47:52] SUCCESS: Container e1f6d05efa6cdc8838bef36c4c62d14484b395d923659d1fc8e45e5b478f021a started for 6aa898d22e74aa9dafc3
+=== Container logs for 6aa898d22e74aa9dafc3 ===
+/snippet.py:57: DeprecationWarning: Please import `convolve` from the `scipy.ndimage` namespace; the `scipy.ndimage.filters` namespace is deprecated and will be removed in SciPy 2.0.0.
+  from scipy.ndimage.filters import convolve
+Traceback (most recent call last):
+  File "/snippet.py", line 58, in <module>
+    import moviepy.editor as mpy
+ModuleNotFoundError: No module named 'moviepy.editor'
+=== End of logs for 6aa898d22e74aa9dafc3 ===
+[2025-10-29 16:47:54] INFO: Container e1f6d05efa6cdc8838bef36c4c62d14484b395d923659d1fc8e45e5b478f021a has stopped

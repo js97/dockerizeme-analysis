@@ -1,0 +1,257 @@
+=== Docker Build Log for 90fe4a3bc0caa582fc563ec503e5444c ===
+Started at: Mi 29. Okt 18:20:28 CET 2025
+
+[2025-10-29 18:20:28] START: Building image for 90fe4a3bc0caa582fc563ec503e5444c
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 364B done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.1s
+
+#4 [1/8] FROM docker.io/library/python:3.11
+#4 ...
+
+#5 [internal] load build context
+#5 transferring context: 1.70kB 0.0s done
+#5 DONE 0.2s
+
+#4 [1/8] FROM docker.io/library/python:3.11
+#4 DONE 0.3s
+
+#6 [2/8] COPY hard-gists/90fe4a3bc0caa582fc563ec503e5444c/snippet.py /snippet.py
+#6 DONE 0.8s
+
+#7 [3/8] RUN ["pip","install","marrow.mailer"]
+#7 2.135 Collecting marrow.mailer
+#7 2.185   Downloading marrow.mailer-4.0.3-py2.py3-none-any.whl.metadata (1.4 kB)
+#7 2.408 Collecting marrow.util<2.0 (from marrow.mailer)
+#7 2.417   Downloading marrow.util-1.2.3.tar.gz (17 kB)
+#7 2.433   Preparing metadata (setup.py): started
+#7 2.813   Preparing metadata (setup.py): finished with status 'done'
+#7 2.826 Downloading marrow.mailer-4.0.3-py2.py3-none-any.whl (132 kB)
+#7 2.858    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.7/132.7 kB 4.2 MB/s eta 0:00:00
+#7 2.863 Building wheels for collected packages: marrow.util
+#7 2.864   Building wheel for marrow.util (setup.py): started
+#7 3.039   Building wheel for marrow.util (setup.py): finished with status 'done'
+#7 3.040   Created wheel for marrow.util: filename=marrow_util-1.2.3-py3-none-any.whl size=23729 sha256=7fc1a4676708f195448536e72baf075caee70c191183e5ee7b9a15e01b0a604f
+#7 3.040   Stored in directory: /root/.cache/pip/wheels/c1/26/db/9d972b23abf62c5f197f5b57713fcdba2c6b727d887e1df6f0
+#7 3.041 Successfully built marrow.util
+#7 3.082 Installing collected packages: marrow.util, marrow.mailer
+#7 3.170 Successfully installed marrow.mailer-4.0.3 marrow.util-1.2.3
+#7 3.170 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.264 
+#7 3.264 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.264 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.5s
+
+#8 [4/8] RUN ["pip","install","marrow.schema"]
+#8 0.590 Collecting marrow.schema
+#8 0.623   Downloading marrow.schema-2.0.0-py2.py3-none-any.whl.metadata (29 kB)
+#8 0.648 Downloading marrow.schema-2.0.0-py2.py3-none-any.whl (78 kB)
+#8 0.673    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.4/78.4 kB 3.1 MB/s eta 0:00:00
+#8 0.711 Installing collected packages: marrow.schema
+#8 0.776 Successfully installed marrow.schema-2.0.0
+#8 0.776 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.781 
+#8 0.781 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.781 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.8s
+
+#9 [5/8] RUN ["pip","install","marrow.mongo"]
+#9 0.743 Collecting marrow.mongo
+#9 0.779   Downloading marrow.mongo-1.1.2-py2.py3-none-any.whl.metadata (9.5 kB)
+#9 0.927 Collecting uri<3.0.0,>=2.0.0 (from marrow.mongo)
+#9 0.937   Downloading uri-2.0.1-py2.py3-none-any.whl.metadata (13 kB)
+#9 0.992 Collecting marrow.schema<2.0.0,>=1.2.0 (from marrow.mongo)
+#9 1.001   Downloading marrow.schema-1.2.0-py2.py3-none-any.whl.metadata (29 kB)
+#9 1.243 Collecting marrow.package<2.0.0,>=1.1.0 (from marrow.mongo)
+#9 1.253   Downloading marrow.package-1.2.0-py2.py3-none-any.whl.metadata (13 kB)
+#9 1.579 Collecting pymongo>=3.2 (from marrow.mongo)
+#9 1.591   Downloading pymongo-4.15.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+#9 1.689 Collecting dnspython<3.0.0,>=1.16.0 (from pymongo>=3.2->marrow.mongo)
+#9 1.697   Downloading dnspython-2.8.0-py3-none-any.whl.metadata (5.7 kB)
+#9 1.731 Downloading marrow.mongo-1.1.2-py2.py3-none-any.whl (159 kB)
+#9 1.754    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 159.1/159.1 kB 7.0 MB/s eta 0:00:00
+#9 1.763 Downloading marrow.package-1.2.0-py2.py3-none-any.whl (28 kB)
+#9 1.787 Downloading marrow.schema-1.2.0-py2.py3-none-any.whl (62 kB)
+#9 1.803    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.2/62.2 kB 3.9 MB/s eta 0:00:00
+#9 1.812 Downloading pymongo-4.15.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.5 MB)
+#9 1.871    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 25.3 MB/s eta 0:00:00
+#9 1.882 Downloading uri-2.0.1-py2.py3-none-any.whl (42 kB)
+#9 1.893    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.0/43.0 kB 3.6 MB/s eta 0:00:00
+#9 1.901 Downloading dnspython-2.8.0-py3-none-any.whl (331 kB)
+#9 1.926    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 331.1/331.1 kB 14.0 MB/s eta 0:00:00
+#9 2.015 Installing collected packages: uri, marrow.schema, marrow.package, dnspython, pymongo, marrow.mongo
+#9 2.059   Attempting uninstall: marrow.schema
+#9 2.063     Found existing installation: marrow.schema 2.0.0
+#9 2.067     Uninstalling marrow.schema-2.0.0:
+#9 2.119       Successfully uninstalled marrow.schema-2.0.0
+#9 2.657 Successfully installed dnspython-2.8.0 marrow.mongo-1.1.2 marrow.package-1.2.0 marrow.schema-1.2.0 pymongo-4.15.3 uri-2.0.1
+#9 2.658 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 2.663 
+#9 2.663 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 2.663 [notice] To update, run: pip install --upgrade pip
+#9 DONE 2.9s
+
+#10 [6/8] RUN ["pip","install","url"]
+#10 0.528 Collecting url
+#10 0.565   Downloading url-0.4.2.tar.gz (140 kB)
+#10 0.607      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 140.9/140.9 kB 3.3 MB/s eta 0:00:00
+#10 0.614   Preparing metadata (setup.py): started
+#10 0.727   Preparing metadata (setup.py): finished with status 'done'
+#10 0.763 Collecting six (from url)
+#10 0.771   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#10 0.796 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#10 0.809 Building wheels for collected packages: url
+#10 0.814   Building wheel for url (setup.py): started
+#10 1.303   Building wheel for url (setup.py): finished with status 'error'
+#10 1.310   error: subprocess-exited-with-error
+#10 1.310   
+#10 1.310   × python setup.py bdist_wheel did not run successfully.
+#10 1.310   │ exit code: 1
+#10 1.310   ╰─> [102 lines of output]
+#10 1.310       Building from C++
+#10 1.310       /usr/local/lib/python3.11/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+#10 1.310         warnings.warn(msg)
+#10 1.310       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:599: SetuptoolsDeprecationWarning: Invalid dash-separated key 'description-file' in 'metadata' (setup.cfg), please use the underscore name 'description_file' instead.
+#10 1.310       !!
+#10 1.310       
+#10 1.310               ********************************************************************************
+#10 1.310               Usage of dash-separated 'description-file' will not be supported in future
+#10 1.310               versions. Please use the underscore name 'description_file' instead.
+#10 1.310               (Affected: url).
+#10 1.310       
+#10 1.310               By 2026-Mar-03, you need to update your project and remove deprecated calls
+#10 1.310               or your builds will no longer be supported.
+#10 1.310       
+#10 1.310               See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+#10 1.310               ********************************************************************************
+#10 1.310       
+#10 1.310       !!
+#10 1.310         opt = self._enforce_underscore(opt, section)
+#10 1.310       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+#10 1.310       !!
+#10 1.310       
+#10 1.310               ********************************************************************************
+#10 1.310               Please consider removing the following classifiers in favor of a SPDX license expression:
+#10 1.310       
+#10 1.310               License :: OSI Approved :: MIT License
+#10 1.310       
+#10 1.310               See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+#10 1.310               ********************************************************************************
+#10 1.310       
+#10 1.310       !!
+#10 1.310         self._finalize_license_expression()
+#10 1.310       In file included from url/url-cpp/include/punycode.h:10,
+#10 1.310                        from url/url-cpp/src/psl.cpp:7:
+#10 1.310       url/url-cpp/include/utf8.h:19:17: error: ‘uint32_t’ does not name a type
+#10 1.310          19 |         typedef uint32_t codepoint_t;
+#10 1.310             |                 ^~~~~~~~
+#10 1.310       url/url-cpp/include/utf8.h:1:1: note: ‘uint32_t’ is defined in header ‘<cstdint>’; this is probably fixable by adding ‘#include <cstdint>’
+#10 1.310         +++ |+#include <cstdint>
+#10 1.310           1 | #ifndef UTF8_CPP_H
+#10 1.310       url/url-cpp/include/utf8.h:29:22: error: ‘codepoint_t’ does not name a type
+#10 1.310          29 |         static const codepoint_t MAX_CODEPOINT = 0x10FFFF;
+#10 1.310             |                      ^~~~~~~~~~~
+#10 1.310       url/url-cpp/include/utf8.h:34:16: error: ‘codepoint_t’ does not name a type
+#10 1.310          34 |         static codepoint_t readCodepoint(
+#10 1.310             |                ^~~~~~~~~~~
+#10 1.310       url/url-cpp/include/utf8.h:40:62: error: ‘codepoint_t’ has not been declared
+#10 1.310          40 |         static std::string& writeCodepoint(std::string& str, codepoint_t value);
+#10 1.310             |                                                              ^~~~~~~~~~~
+#10 1.310       url/url-cpp/include/utf8.h:45:16: error: ‘codepoint_t’ does not name a type
+#10 1.310          45 |         static codepoint_t toCodepoint(const std::string& str)
+#10 1.310             |                ^~~~~~~~~~~
+#10 1.310       url/url-cpp/include/utf8.h:54:42: error: ‘codepoint_t’ has not been declared
+#10 1.310          54 |         static std::string fromCodepoint(codepoint_t value)
+#10 1.310             |                                          ^~~~~~~~~~~
+#10 1.310       url/url-cpp/include/utf8.h:64:28: error: ‘codepoint_t’ was not declared in this scope
+#10 1.310          64 |         static std::vector<codepoint_t> toCodepoints(const std::string& str)
+#10 1.310             |                            ^~~~~~~~~~~
+#10 1.310       url/url-cpp/include/utf8.h:64:39: error: template argument 1 is invalid
+#10 1.310          64 |         static std::vector<codepoint_t> toCodepoints(const std::string& str)
+#10 1.310             |                                       ^
+#10 1.310       url/url-cpp/include/utf8.h:64:39: error: template argument 2 is invalid
+#10 1.310       url/url-cpp/include/utf8.h:77:61: error: ‘codepoint_t’ was not declared in this scope
+#10 1.310          77 |         static std::string fromCodepoints(const std::vector<codepoint_t>& points)
+#10 1.310             |                                                             ^~~~~~~~~~~
+#10 1.310       url/url-cpp/include/utf8.h:77:72: error: template argument 1 is invalid
+#10 1.310          77 |         static std::string fromCodepoints(const std::vector<codepoint_t>& points)
+#10 1.310             |                                                                        ^
+#10 1.310       url/url-cpp/include/utf8.h:77:72: error: template argument 2 is invalid
+#10 1.310       url/url-cpp/include/utf8.h: In static member function ‘static int Url::Utf8::toCodepoints(const std::string&)’:
+#10 1.310       url/url-cpp/include/utf8.h:66:25: error: ‘codepoint_t’ was not declared in this scope
+#10 1.310          66 |             std::vector<codepoint_t> result;
+#10 1.310             |                         ^~~~~~~~~~~
+#10 1.310       url/url-cpp/include/utf8.h:66:36: error: template argument 1 is invalid
+#10 1.310          66 |             std::vector<codepoint_t> result;
+#10 1.310             |                                    ^
+#10 1.310       url/url-cpp/include/utf8.h:66:36: error: template argument 2 is invalid
+#10 1.310       url/url-cpp/include/utf8.h:69:24: error: request for member ‘push_back’ in ‘result’, which is of non-class type ‘int’
+#10 1.310          69 |                 result.push_back(readCodepoint(it, str.end()));
+#10 1.310             |                        ^~~~~~~~~
+#10 1.310       url/url-cpp/include/utf8.h:69:34: error: ‘readCodepoint’ was not declared in this scope; did you mean ‘writeCodepoint’?
+#10 1.310          69 |                 result.push_back(readCodepoint(it, str.end()));
+#10 1.310             |                                  ^~~~~~~~~~~~~
+#10 1.310             |                                  writeCodepoint
+#10 1.310       url/url-cpp/include/utf8.h: In static member function ‘static std::string Url::Utf8::fromCodepoints(const int&)’:
+#10 1.310       url/url-cpp/include/utf8.h:80:35: error: request for member ‘begin’ in ‘points’, which is of non-class type ‘const int’
+#10 1.310          80 |             for (auto it = points.begin(); it != points.end(); ++it)
+#10 1.310             |                                   ^~~~~
+#10 1.310       url/url-cpp/include/utf8.h:80:57: error: request for member ‘end’ in ‘points’, which is of non-class type ‘const int’
+#10 1.310          80 |             for (auto it = points.begin(); it != points.end(); ++it)
+#10 1.310             |                                                         ^~~
+#10 1.310       url/url-cpp/include/punycode.h: At global scope:
+#10 1.310       url/url-cpp/include/punycode.h:17:23: error: ‘codepoint_t’ in ‘struct Url::Utf8’ does not name a type
+#10 1.310          17 |         typedef Utf8::codepoint_t punycode_uint;
+#10 1.310             |                       ^~~~~~~~~~~
+#10 1.310       url/url-cpp/include/punycode.h:56:15: error: ‘punycode_uint’ does not name a type
+#10 1.310          56 |         const punycode_uint MAX_PUNYCODE_UINT = std::numeric_limits<punycode_uint>::max();
+#10 1.310             |               ^~~~~~~~~~~~~
+#10 1.310       url/url-cpp/include/punycode.h:98:9: error: ‘punycode_uint’ does not name a type
+#10 1.310          98 |         punycode_uint adapt(
+#10 1.310             |         ^~~~~~~~~~~~~
+#10 1.310       error: command '/usr/bin/g++' failed with exit code 1
+#10 1.310       [end of output]
+#10 1.310   
+#10 1.310   note: This error originates from a subprocess, and is likely not a problem with pip.
+#10 1.310   ERROR: Failed building wheel for url
+#10 1.311   Running setup.py clean for url
+#10 1.433 Failed to build url
+#10 1.433 ERROR: Could not build wheels for url, which is required to install pyproject.toml-based projects
+#10 1.438 
+#10 1.438 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.438 [notice] To update, run: pip install --upgrade pip
+#10 ERROR: process "pip install url" did not complete successfully: exit code: 1
+------
+ > [6/8] RUN ["pip","install","url"]:
+1.310       [end of output]
+1.310   
+1.310   note: This error originates from a subprocess, and is likely not a problem with pip.
+1.310   ERROR: Failed building wheel for url
+1.311   Running setup.py clean for url
+1.433 Failed to build url
+1.433 ERROR: Could not build wheels for url, which is required to install pyproject.toml-based projects
+1.438 
+1.438 [notice] A new release of pip is available: 24.0 -> 25.3
+1.438 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:6
+--------------------
+   4 |     RUN ["pip","install","marrow.schema"]
+   5 |     RUN ["pip","install","marrow.mongo"]
+   6 | >>> RUN ["pip","install","url"]
+   7 |     RUN ["pip","install","WebCore"]
+   8 |     RUN ["pip","install","webapp2"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install url" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/qrsopcwjhkbci5c2o5s4kz8nj
+[2025-10-29 18:20:38] ERROR: Build failed for 90fe4a3bc0caa582fc563ec503e5444c

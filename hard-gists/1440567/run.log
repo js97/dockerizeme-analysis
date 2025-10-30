@@ -1,0 +1,12 @@
+=== Docker Run Log for 1440567 ===
+Started at: Mi 29. Okt 12:14:01 CET 2025
+
+[2025-10-29 12:14:08] START: Running container for 1440567
+[2025-10-29 12:14:08] SUCCESS: Container a304ca66bd301296f2e4a42b4fe136dbef51530375aa18ed2acb872ebfce173f started for 1440567
+=== Container logs for 1440567 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 2, in <module>
+    from django.utils.http import urlquote
+ImportError: cannot import name 'urlquote' from 'django.utils.http' (/usr/local/lib/python3.11/site-packages/django/utils/http.py)
+=== End of logs for 1440567 ===
+[2025-10-29 12:14:10] INFO: Container a304ca66bd301296f2e4a42b4fe136dbef51530375aa18ed2acb872ebfce173f has stopped

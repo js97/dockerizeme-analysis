@@ -1,0 +1,63 @@
+=== Docker Build Log for 10567484 ===
+Started at: Mi 29. Okt 11:47:48 CET 2025
+
+[2025-10-29 11:47:48] START: Building image for 10567484
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 196B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.54kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/10567484/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","pillow"]
+#7 2.099 Collecting pillow
+#7 2.140   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#7 2.186 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#7 2.479    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 24.1 MB/s eta 0:00:00
+#7 2.552 Installing collected packages: pillow
+#7 2.806 Successfully installed pillow-12.0.0
+#7 2.806 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.898 
+#7 2.898 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.898 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.2s
+
+#8 [4/4] RUN ["pip","install","numpy"]
+#8 0.710 Collecting numpy
+#8 0.744   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 0.771      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.1 MB/s eta 0:00:00
+#8 0.791 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#8 1.512    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 21.4 MB/s eta 0:00:00
+#8 1.600 Installing collected packages: numpy
+#8 3.089 Successfully installed numpy-2.3.4
+#8 3.089 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 3.095 
+#8 3.095 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.095 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.6s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.4s done
+#9 writing image sha256:c3dda7935db342ac603b6fd6d5943a632bfbca8eccddc14debda532069e1d83b done
+#9 naming to docker.io/library/test-image-10567484 done
+#9 DONE 0.4s
+
+View build details: docker-desktop://dashboard/build/default/default/l5oy6op67w0q55nh2wov26djq
+[2025-10-29 11:47:56] SUCCESS: Build completed for 10567484

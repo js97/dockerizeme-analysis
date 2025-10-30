@@ -1,0 +1,83 @@
+=== Docker Build Log for 2581132 ===
+Started at: Mi 29. Okt 13:06:58 CET 2025
+
+[2025-10-29 13:06:58] START: Building image for 2581132
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 205B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 945B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/2581132/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","requests"]
+#7 1.904 Collecting requests
+#7 1.937   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.056 Collecting charset_normalizer<4,>=2 (from requests)
+#7 2.064   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.107 Collecting idna<4,>=2.5 (from requests)
+#7 2.116   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.177 Collecting urllib3<3,>=1.21.1 (from requests)
+#7 2.185   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.228 Collecting certifi>=2017.4.17 (from requests)
+#7 2.236   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.263 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.283    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.1 MB/s eta 0:00:00
+#7 2.291 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.321    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 5.6 MB/s eta 0:00:00
+#7 2.330 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.359    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 5.1 MB/s eta 0:00:00
+#7 2.368 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.385    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.0 MB/s eta 0:00:00
+#7 2.393 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.417    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 5.3 MB/s eta 0:00:00
+#7 2.463 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#7 2.694 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#7 2.694 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.792 
+#7 2.792 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.792 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.0s
+
+#8 [4/4] RUN ["pip","install","requests-auth"]
+#8 0.630 Collecting requests-auth
+#8 0.667   Downloading requests_auth-8.0.0-py3-none-any.whl.metadata (104 kB)
+#8 0.697      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 104.7/104.7 kB 3.4 MB/s eta 0:00:00
+#8 0.703 Requirement already satisfied: requests==2.* in /usr/local/lib/python3.11/site-packages (from requests-auth) (2.32.5)
+#8 0.708 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests==2.*->requests-auth) (3.4.4)
+#8 0.709 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests==2.*->requests-auth) (3.11)
+#8 0.710 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests==2.*->requests-auth) (2.5.0)
+#8 0.711 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests==2.*->requests-auth) (2025.10.5)
+#8 0.730 Downloading requests_auth-8.0.0-py3-none-any.whl (39 kB)
+#8 0.785 Installing collected packages: requests-auth
+#8 0.842 Successfully installed requests-auth-8.0.0
+#8 0.842 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.847 
+#8 0.847 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.847 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.9s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.2s done
+#9 writing image sha256:e3642c159c2c8acf971d4a4aadda006166d927d72ef13f4415ce840b0ffbafa9 done
+#9 naming to docker.io/library/test-image-2581132 done
+#9 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/vkakcyooreihhgkz7p35qx2ku
+[2025-10-29 13:07:03] SUCCESS: Build completed for 2581132

@@ -1,0 +1,130 @@
+=== Docker Build Log for 5225027 ===
+Started at: Mi 29. Okt 15:29:29 CET 2025
+
+[2025-10-29 15:29:29] START: Building image for 5225027
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 369B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 397B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/8] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/8] COPY hard-gists/5225027/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/8] RUN ["pip","install","dj.choices"]
+#7 1.969 Collecting dj.choices
+#7 2.003   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 2.021   Preparing metadata (setup.py): started
+#7 2.468   Preparing metadata (setup.py): finished with status 'done'
+#7 2.576 Collecting django (from dj.choices)
+#7 2.584   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.629 Collecting six (from dj.choices)
+#7 2.637   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.682 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.691   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.731 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.739   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.766 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.111    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 24.2 MB/s eta 0:00:00
+#7 3.119 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.145 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.164 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.177    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.3 MB/s eta 0:00:00
+#7 3.222 Building wheels for collected packages: dj.choices
+#7 3.223   Building wheel for dj.choices (setup.py): started
+#7 3.394   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.395   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=54e015007b3b14e869d451d51c321dbd56bd6499459a13d9e6a68af8a8de4e7d
+#7 3.395   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.398 Successfully built dj.choices
+#7 3.444 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 4.878 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 4.878 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.968 
+#7 4.968 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.968 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.6s
+
+#8 [4/8] RUN ["pip","install","Django"]
+#8 0.467 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#8 0.471 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#8 0.472 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#8 0.511 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.516 
+#8 0.516 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.516 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.6s
+
+#9 [5/8] RUN ["pip","install","django-reversion-patchman"]
+#9 0.704 Collecting django-reversion-patchman
+#9 0.843   Downloading django-reversion-patchman-2.1.1.tar.gz (61 kB)
+#9 0.873      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.4/61.4 kB 1.8 MB/s eta 0:00:00
+#9 0.891   Preparing metadata (setup.py): started
+#9 1.123   Preparing metadata (setup.py): finished with status 'error'
+#9 1.126   error: subprocess-exited-with-error
+#9 1.126   
+#9 1.126   × python setup.py egg_info did not run successfully.
+#9 1.126   │ exit code: 1
+#9 1.126   ╰─> [10 lines of output]
+#9 1.126       Traceback (most recent call last):
+#9 1.126         File "<string>", line 2, in <module>
+#9 1.126         File "<pip-setuptools-caller>", line 34, in <module>
+#9 1.126         File "/tmp/pip-install-ko1ng1pf/django-reversion-patchman_f9286336553e46228c14df081982bf89/setup.py", line 2, in <module>
+#9 1.126           from reversion import __version__
+#9 1.126         File "/tmp/pip-install-ko1ng1pf/django-reversion-patchman_f9286336553e46228c14df081982bf89/reversion/__init__.py", line 21, in <module>
+#9 1.126           from reversion.revisions import (  # noqa
+#9 1.126         File "/tmp/pip-install-ko1ng1pf/django-reversion-patchman_f9286336553e46228c14df081982bf89/reversion/revisions.py", line 12, in <module>
+#9 1.126           from django.utils.encoding import force_text
+#9 1.126       ImportError: cannot import name 'force_text' from 'django.utils.encoding' (/usr/local/lib/python3.11/site-packages/django/utils/encoding.py)
+#9 1.126       [end of output]
+#9 1.126   
+#9 1.126   note: This error originates from a subprocess, and is likely not a problem with pip.
+#9 1.128 error: metadata-generation-failed
+#9 1.128 
+#9 1.128 × Encountered error while generating package metadata.
+#9 1.128 ╰─> See above for output.
+#9 1.128 
+#9 1.128 note: This is an issue with the package mentioned above, not pip.
+#9 1.128 hint: See above for details.
+#9 1.133 
+#9 1.133 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.133 [notice] To update, run: pip install --upgrade pip
+#9 ERROR: process "pip install django-reversion-patchman" did not complete successfully: exit code: 1
+------
+ > [5/8] RUN ["pip","install","django-reversion-patchman"]:
+1.128 error: metadata-generation-failed
+1.128 
+1.128 × Encountered error while generating package metadata.
+1.128 ╰─> See above for output.
+1.128 
+1.128 note: This is an issue with the package mentioned above, not pip.
+1.128 hint: See above for details.
+1.133 
+1.133 [notice] A new release of pip is available: 24.0 -> 25.3
+1.133 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:5
+--------------------
+   3 |     RUN ["pip","install","dj.choices"]
+   4 |     RUN ["pip","install","Django"]
+   5 | >>> RUN ["pip","install","django-reversion-patchman"]
+   6 |     RUN ["pip","install","djangorestframework"]
+   7 |     RUN ["pip","install","django-reversion"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install django-reversion-patchman" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/ta0h9qs034nia6ytpkfqa6ly4
+[2025-10-29 15:29:37] ERROR: Build failed for 5225027

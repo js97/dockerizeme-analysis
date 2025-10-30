@@ -1,0 +1,174 @@
+=== Docker Build Log for d6aa922505c4e5f21f2f ===
+Started at: Mi 29. Okt 20:27:33 CET 2025
+
+[2025-10-29 20:27:33] START: Building image for d6aa922505c4e5f21f2f
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 5.45kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [  1/151] FROM docker.io/library/python:3.11
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 1.56kB 0.0s done
+#5 DONE 0.0s
+
+#4 [  1/151] FROM docker.io/library/python:3.11
+#4 CACHED
+
+#6 [  2/151] COPY hard-gists/d6aa922505c4e5f21f2f/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [  3/151] RUN ["apt-get","update"]
+#7 0.282 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.282 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.291 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.304 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.642 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.643 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.231 Fetched 9833 kB in 1s (10.0 MB/s)
+#7 1.231 Reading package lists...
+#7 DONE 1.8s
+
+#8 [  4/151] RUN ["pip","install","requests"]
+#8 1.991 Collecting requests
+#8 2.029   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#8 2.145 Collecting charset_normalizer<4,>=2 (from requests)
+#8 2.157   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#8 2.208 Collecting idna<4,>=2.5 (from requests)
+#8 2.216   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#8 2.275 Collecting urllib3<3,>=1.21.1 (from requests)
+#8 2.283   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#8 2.328 Collecting certifi>=2017.4.17 (from requests)
+#8 2.337   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#8 2.365 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#8 2.382    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.5 MB/s eta 0:00:00
+#8 2.391 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#8 2.412    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 7.8 MB/s eta 0:00:00
+#8 2.422 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#8 2.436    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.9 MB/s eta 0:00:00
+#8 2.445 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#8 2.456    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 6.3 MB/s eta 0:00:00
+#8 2.464 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#8 2.478    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.7 MB/s eta 0:00:00
+#8 2.524 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#8 2.747 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#8 2.747 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.834 
+#8 2.834 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.834 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.1s
+
+#9 [  5/151] RUN ["pip","install","Flask"]
+#9 0.530 Collecting Flask
+#9 0.565   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#9 0.614 Collecting blinker>=1.9.0 (from Flask)
+#9 0.622   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#9 0.670 Collecting click>=8.1.3 (from Flask)
+#9 0.678   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#9 0.716 Collecting itsdangerous>=2.2.0 (from Flask)
+#9 0.724   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#9 0.778 Collecting jinja2>=3.1.2 (from Flask)
+#9 0.786   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#9 0.875 Collecting markupsafe>=2.1.1 (from Flask)
+#9 0.882   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#9 0.932 Collecting werkzeug>=3.1.0 (from Flask)
+#9 0.940   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#9 0.968 Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+#9 0.995    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 4.0 MB/s eta 0:00:00
+#9 1.004 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#9 1.024 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#9 1.041    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 6.2 MB/s eta 0:00:00
+#9 1.049 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#9 1.068 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#9 1.086    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 7.8 MB/s eta 0:00:00
+#9 1.093 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#9 1.110 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#9 1.127    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 13.8 MB/s eta 0:00:00
+#9 1.181 Installing collected packages: markupsafe, itsdangerous, click, blinker, werkzeug, jinja2, Flask
+#9 1.504 Successfully installed Flask-3.1.2 blinker-1.9.0 click-8.3.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.3 werkzeug-3.1.3
+#9 1.505 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.510 
+#9 1.510 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.510 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.6s
+
+#10 [  6/151] RUN ["pip","install","Jinja2"]
+#10 0.460 Requirement already satisfied: Jinja2 in /usr/local/lib/python3.11/site-packages (3.1.6)
+#10 0.462 Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.11/site-packages (from Jinja2) (3.0.3)
+#10 0.509 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.515 
+#10 0.515 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.515 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.6s
+
+#11 [  7/151] RUN ["pip","install","itsdangerous"]
+#11 0.455 Requirement already satisfied: itsdangerous in /usr/local/lib/python3.11/site-packages (2.2.0)
+#11 0.505 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.511 
+#11 0.511 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.511 [notice] To update, run: pip install --upgrade pip
+#11 DONE 0.6s
+
+#12 [  8/151] RUN ["pip","install","Werkzeug"]
+#12 0.443 Requirement already satisfied: Werkzeug in /usr/local/lib/python3.11/site-packages (3.1.3)
+#12 0.445 Requirement already satisfied: MarkupSafe>=2.1.1 in /usr/local/lib/python3.11/site-packages (from Werkzeug) (3.0.3)
+#12 0.492 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 0.497 
+#12 0.497 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 0.497 [notice] To update, run: pip install --upgrade pip
+#12 DONE 0.6s
+
+#13 [  9/151] RUN ["pip","install","MarkupSafe"]
+#13 0.441 Requirement already satisfied: MarkupSafe in /usr/local/lib/python3.11/site-packages (3.0.3)
+#13 0.489 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 0.494 
+#13 0.494 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 0.494 [notice] To update, run: pip install --upgrade pip
+#13 DONE 0.6s
+
+#14 [ 10/151] RUN ["apt-get","install","-y","python-pip"]
+#14 0.221 Reading package lists...
+#14 0.639 Building dependency tree...
+#14 0.748 Reading state information...
+#14 0.763 Package python-pip is not available, but is referred to by another package.
+#14 0.763 This may mean that the package is missing, has been obsoleted, or
+#14 0.763 is only available from another source
+#14 0.763 However the following packages replace it:
+#14 0.763   python3-pip
+#14 0.763 
+#14 0.765 E: Package 'python-pip' has no installation candidate
+#14 ERROR: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+------
+ > [ 10/151] RUN ["apt-get","install","-y","python-pip"]:
+
+
+0.763 Package python-pip is not available, but is referred to by another package.
+0.763 This may mean that the package is missing, has been obsoleted, or
+0.763 is only available from another source
+0.763 However the following packages replace it:
+0.763   python3-pip
+0.763 
+0.765 E: Package 'python-pip' has no installation candidate
+------
+Dockerfile:10
+--------------------
+   8 |     RUN ["pip","install","Werkzeug"]
+   9 |     RUN ["pip","install","MarkupSafe"]
+  10 | >>> RUN ["apt-get","install","-y","python-pip"]
+  11 |     RUN ["apt-get","install","-y","python-dev"]
+  12 |     RUN ["pip","install","Flask-Login"]
+--------------------
+ERROR: failed to build: failed to solve: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/default/default/2tk6ict7oqgnzbl795y5bcmvz
+[2025-10-29 20:27:43] ERROR: Build failed for d6aa922505c4e5f21f2f

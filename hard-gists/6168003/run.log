@@ -1,0 +1,19 @@
+=== Docker Run Log for 6168003 ===
+Started at: Mi 29. Okt 16:23:45 CET 2025
+
+[2025-10-29 16:23:55] START: Running container for 6168003
+[2025-10-29 16:23:55] SUCCESS: Container f8b464dbb1a1263f7a7a1d793f5c22a3d92aead9857c36f10e22766203d86589 started for 6168003
+=== Container logs for 6168003 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 4, in <module>
+    from south.db import db
+  File "/usr/local/lib/python3.11/site-packages/south/db/__init__.py", line 46, in <module>
+    for alias, db_settings in settings.DATABASES.items()
+                              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting DATABASES, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 6168003 ===
+[2025-10-29 16:23:57] INFO: Container f8b464dbb1a1263f7a7a1d793f5c22a3d92aead9857c36f10e22766203d86589 has stopped

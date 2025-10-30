@@ -1,0 +1,122 @@
+=== Docker Build Log for 160c990c61c5f527445c ===
+Started at: Mi 29. Okt 12:21:06 CET 2025
+
+[2025-10-29 12:21:06] START: Building image for 160c990c61c5f527445c
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 278B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.77kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/6] COPY hard-gists/160c990c61c5f527445c/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/6] RUN ["pip","install","requests"]
+#7 1.883 Collecting requests
+#7 1.917   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.038 Collecting charset_normalizer<4,>=2 (from requests)
+#7 2.047   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.089 Collecting idna<4,>=2.5 (from requests)
+#7 2.097   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.156 Collecting urllib3<3,>=1.21.1 (from requests)
+#7 2.164   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.205 Collecting certifi>=2017.4.17 (from requests)
+#7 2.214   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.240 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.258    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.4 MB/s eta 0:00:00
+#7 2.266 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.294    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 5.7 MB/s eta 0:00:00
+#7 2.303 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.328    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 6.1 MB/s eta 0:00:00
+#7 2.336 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.352    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.3 MB/s eta 0:00:00
+#7 2.360 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.384    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 5.4 MB/s eta 0:00:00
+#7 2.428 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#7 2.650 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#7 2.650 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.741 
+#7 2.741 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.741 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.9s
+
+#8 [4/6] RUN ["pip","install","bs4"]
+#8 0.500 Collecting bs4
+#8 0.533   Downloading bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+#8 0.581 Collecting beautifulsoup4 (from bs4)
+#8 0.590   Downloading beautifulsoup4-4.14.2-py3-none-any.whl.metadata (3.8 kB)
+#8 0.637 Collecting soupsieve>1.2 (from beautifulsoup4->bs4)
+#8 0.645   Downloading soupsieve-2.8-py3-none-any.whl.metadata (4.6 kB)
+#8 0.692 Collecting typing-extensions>=4.0.0 (from beautifulsoup4->bs4)
+#8 0.700   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.726 Downloading bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+#8 0.747 Downloading beautifulsoup4-4.14.2-py3-none-any.whl (106 kB)
+#8 0.783    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.4/106.4 kB 2.9 MB/s eta 0:00:00
+#8 0.790 Downloading soupsieve-2.8-py3-none-any.whl (36 kB)
+#8 0.808 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#8 0.818    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 4.0 MB/s eta 0:00:00
+#8 0.865 Installing collected packages: typing-extensions, soupsieve, beautifulsoup4, bs4
+#8 0.998 Successfully installed beautifulsoup4-4.14.2 bs4-0.0.2 soupsieve-2.8 typing-extensions-4.15.0
+#8 0.998 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.005 
+#8 1.005 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.005 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.1s
+
+#9 [5/6] RUN ["pip","install","beautifulsoup4"]
+#9 0.455 Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.11/site-packages (4.14.2)
+#9 0.463 Requirement already satisfied: soupsieve>1.2 in /usr/local/lib/python3.11/site-packages (from beautifulsoup4) (2.8)
+#9 0.464 Requirement already satisfied: typing-extensions>=4.0.0 in /usr/local/lib/python3.11/site-packages (from beautifulsoup4) (4.15.0)
+#9 0.541 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.550 
+#9 0.550 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.550 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.6s
+
+#10 [6/6] RUN ["pip","install","pocket"]
+#10 0.621 Collecting pocket
+#10 0.655   Downloading pocket-0.3.6.zip (5.1 kB)
+#10 0.671   Preparing metadata (setup.py): started
+#10 1.103   Preparing metadata (setup.py): finished with status 'done'
+#10 1.105 Requirement already satisfied: requests in /usr/local/lib/python3.11/site-packages (from pocket) (2.32.5)
+#10 1.110 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests->pocket) (3.4.4)
+#10 1.111 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests->pocket) (3.11)
+#10 1.112 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests->pocket) (2.5.0)
+#10 1.113 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests->pocket) (2025.10.5)
+#10 1.122 Building wheels for collected packages: pocket
+#10 1.122   Building wheel for pocket (setup.py): started
+#10 1.285   Building wheel for pocket (setup.py): finished with status 'done'
+#10 1.286   Created wheel for pocket: filename=pocket-0.3.6-py3-none-any.whl size=3962 sha256=90b020e8e2a2094641c78756c83545dcb1d1f86737bd7086dd0ce10193c867e7
+#10 1.286   Stored in directory: /root/.cache/pip/wheels/3a/1a/f8/c042c1233225ae6c8efa4eda86d8209a69cbdb718741097eeb
+#10 1.287 Successfully built pocket
+#10 1.328 Installing collected packages: pocket
+#10 1.348 Successfully installed pocket-0.3.6
+#10 1.348 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.355 
+#10 1.355 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.355 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.4s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 0.2s done
+#11 writing image sha256:c039957c4a168f02d9b13af3d4f1e5c375c49dd978e35a206472118e724a1f23 done
+#11 naming to docker.io/library/test-image-160c990c61c5f527445c done
+#11 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/qdseyl28iebzoqgu561xnothw
+[2025-10-29 12:21:12] SUCCESS: Build completed for 160c990c61c5f527445c

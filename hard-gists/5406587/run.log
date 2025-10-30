@@ -1,0 +1,17 @@
+=== Docker Run Log for 5406587 ===
+Started at: Mi 29. Okt 15:40:22 CET 2025
+
+[2025-10-29 15:40:26] START: Running container for 5406587
+[2025-10-29 15:40:26] SUCCESS: Container 6767de7bd07279189ce702a9029c8a3d6d642fca2c013c29ead0de030a4d1072 started for 5406587
+=== Container logs for 5406587 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 1, in <module>
+    from SimpleCV import Image, Color, Display
+  File "/usr/local/lib/python3.11/site-packages/SimpleCV/__init__.py", line 3, in <module>
+    from SimpleCV.base import *
+  File "/usr/local/lib/python3.11/site-packages/SimpleCV/base.py", line 139
+    print 'unit test'
+    ^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 5406587 ===
+[2025-10-29 15:40:28] INFO: Container 6767de7bd07279189ce702a9029c8a3d6d642fca2c013c29ead0de030a4d1072 has stopped

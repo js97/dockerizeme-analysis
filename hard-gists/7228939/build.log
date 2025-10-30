@@ -1,0 +1,133 @@
+=== Docker Build Log for 7228939 ===
+Started at: Mi 29. Okt 17:02:32 CET 2025
+
+[2025-10-29 17:02:32] START: Building image for 7228939
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 331B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.00kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/8] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/8] COPY hard-gists/7228939/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/8] RUN ["pip","install","boto-patch"]
+#7 2.006 Collecting boto-patch
+#7 2.047   Downloading boto-patch-2.38.0.tar.gz (1.4 MB)
+#7 2.127      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 18.8 MB/s eta 0:00:00
+#7 2.272   Preparing metadata (setup.py): started
+#7 2.764   Preparing metadata (setup.py): finished with status 'done'
+#7 2.765 Building wheels for collected packages: boto-patch
+#7 2.766   Building wheel for boto-patch (setup.py): started
+#7 3.300   Building wheel for boto-patch (setup.py): finished with status 'done'
+#7 3.303   Created wheel for boto-patch: filename=boto_patch-2.38.0-py2.py3-none-any.whl size=1340252 sha256=0b8477761b2cc996db11bb59a05389ea4cf296e0972c96ae3172722855182c73
+#7 3.304   Stored in directory: /root/.cache/pip/wheels/dc/8d/91/973468dc17204b5976e1d226556d1ac8be31894bdbb8cb28cf
+#7 3.309 Successfully built boto-patch
+#7 3.341 Installing collected packages: boto-patch
+#7 3.794 Successfully installed boto-patch-2.38.0
+#7 3.795 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.889 
+#7 3.889 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.889 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.2s
+
+#8 [4/8] RUN ["pip","install","boto-mws"]
+#8 0.532 Collecting boto-mws
+#8 0.569   Downloading boto_mws-2.46.2-py2.py3-none-any.whl.metadata (7.3 kB)
+#8 0.591 Downloading boto_mws-2.46.2-py2.py3-none-any.whl (1.4 MB)
+#8 0.662    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 19.5 MB/s eta 0:00:00
+#8 0.705 Installing collected packages: boto-mws
+#8 1.721 Successfully installed boto-mws-2.46.2
+#8 1.721 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.726 
+#8 1.726 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.726 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.9s
+
+#9 [5/8] RUN ["pip","install","Flask"]
+#9 0.545 Collecting Flask
+#9 0.586   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#9 0.627 Collecting blinker>=1.9.0 (from Flask)
+#9 0.636   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#9 0.683 Collecting click>=8.1.3 (from Flask)
+#9 0.691   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#9 0.726 Collecting itsdangerous>=2.2.0 (from Flask)
+#9 0.734   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#9 0.774 Collecting jinja2>=3.1.2 (from Flask)
+#9 0.781   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#9 0.864 Collecting markupsafe>=2.1.1 (from Flask)
+#9 0.873   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#9 0.926 Collecting werkzeug>=3.1.0 (from Flask)
+#9 0.933   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#9 0.964 Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+#9 0.989    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 4.0 MB/s eta 0:00:00
+#9 0.997 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#9 1.014 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#9 1.034    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 5.2 MB/s eta 0:00:00
+#9 1.042 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#9 1.069 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#9 1.083    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 10.4 MB/s eta 0:00:00
+#9 1.091 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#9 1.109 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#9 1.127    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 13.2 MB/s eta 0:00:00
+#9 1.173 Installing collected packages: markupsafe, itsdangerous, click, blinker, werkzeug, jinja2, Flask
+#9 1.523 Successfully installed Flask-3.1.2 blinker-1.9.0 click-8.3.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.3 werkzeug-3.1.3
+#9 1.524 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.529 
+#9 1.529 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.529 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.7s
+
+#10 [6/8] RUN ["pip","install","boto"]
+#10 0.629 Collecting boto
+#10 0.664   Downloading boto-2.49.0-py2.py3-none-any.whl.metadata (7.3 kB)
+#10 0.688 Downloading boto-2.49.0-py2.py3-none-any.whl (1.4 MB)
+#10 0.767    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 17.7 MB/s eta 0:00:00
+#10 0.820 Installing collected packages: boto
+#10 1.902 Successfully installed boto-2.49.0
+#10 1.902 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.908 
+#10 1.908 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.908 [notice] To update, run: pip install --upgrade pip
+#10 DONE 2.1s
+
+#11 [7/8] RUN ["pip","install","itsdangerous"]
+#11 0.492 Requirement already satisfied: itsdangerous in /usr/local/lib/python3.11/site-packages (2.2.0)
+#11 0.539 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.545 
+#11 0.545 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.545 [notice] To update, run: pip install --upgrade pip
+#11 DONE 0.6s
+
+#12 [8/8] RUN ["pip","install","Werkzeug"]
+#12 0.549 Requirement already satisfied: Werkzeug in /usr/local/lib/python3.11/site-packages (3.1.3)
+#12 0.552 Requirement already satisfied: MarkupSafe>=2.1.1 in /usr/local/lib/python3.11/site-packages (from Werkzeug) (3.0.3)
+#12 0.600 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 0.607 
+#12 0.607 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 0.607 [notice] To update, run: pip install --upgrade pip
+#12 DONE 0.7s
+
+#13 exporting to image
+#13 exporting layers
+#13 exporting layers 0.4s done
+#13 writing image sha256:6e801de028c5529f92317a05b8cb84cfa84e4d7125a5f6b8d0e175eac9c4e013 done
+#13 naming to docker.io/library/test-image-7228939 done
+#13 DONE 0.4s
+
+View build details: docker-desktop://dashboard/build/default/default/ivsofqn52yj9hbk0md9cwr02d
+[2025-10-29 17:02:44] SUCCESS: Build completed for 7228939

@@ -1,0 +1,107 @@
+=== Docker Build Log for 8916745 ===
+Started at: Mi 29. Okt 18:04:33 CET 2025
+
+[2025-10-29 18:04:33] START: Building image for 8916745
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 194B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.72kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/8916745/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","image"]
+#7 1.894 Collecting image
+#7 1.933   Downloading image-1.5.33.tar.gz (15 kB)
+#7 1.948   Preparing metadata (setup.py): started
+#7 2.324   Preparing metadata (setup.py): finished with status 'done'
+#7 2.527 Collecting pillow (from image)
+#7 2.536   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#7 2.642 Collecting django (from image)
+#7 2.651   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.689 Collecting six (from image)
+#7 2.699   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.744 Collecting asgiref>=3.8.1 (from django->image)
+#7 2.752   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.791 Collecting sqlparse>=0.3.1 (from django->image)
+#7 2.799   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.835 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.161    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 25.6 MB/s eta 0:00:00
+#7 3.171 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#7 3.440    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 26.4 MB/s eta 0:00:00
+#7 3.449 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.467 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.487 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.498    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.6 MB/s eta 0:00:00
+#7 3.566 Building wheels for collected packages: image
+#7 3.567   Building wheel for image (setup.py): started
+#7 3.739   Building wheel for image (setup.py): finished with status 'done'
+#7 3.740   Created wheel for image: filename=image-1.5.33-py2.py3-none-any.whl size=19554 sha256=e03213acc86a2f1c235932dd93faba550ae30bff4b436f62acf749b5c1c7a9be
+#7 3.740   Stored in directory: /root/.cache/pip/wheels/62/40/4f/3c9a8d0f22a1a6f966975a460e5cb509a1e7dc42e2ce5d9a6d
+#7 3.741 Successfully built image
+#7 3.798 Installing collected packages: sqlparse, six, pillow, asgiref, django, image
+#7 5.387 Successfully installed asgiref-3.10.0 django-5.2.7 image-1.5.33 pillow-12.0.0 six-1.17.0 sqlparse-0.5.3
+#7 5.388 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.479 
+#7 5.479 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.479 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.9s
+
+#8 [4/4] RUN ["pip","install","Flask"]
+#8 0.555 Collecting Flask
+#8 0.589   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#8 0.633 Collecting blinker>=1.9.0 (from Flask)
+#8 0.642   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#8 0.689 Collecting click>=8.1.3 (from Flask)
+#8 0.697   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#8 0.736 Collecting itsdangerous>=2.2.0 (from Flask)
+#8 0.745   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#8 0.788 Collecting jinja2>=3.1.2 (from Flask)
+#8 0.796   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#8 0.885 Collecting markupsafe>=2.1.1 (from Flask)
+#8 0.894   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#8 0.943 Collecting werkzeug>=3.1.0 (from Flask)
+#8 0.952   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#8 0.984 Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+#8 1.013    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 3.5 MB/s eta 0:00:00
+#8 1.021 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#8 1.041 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#8 1.059    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 5.9 MB/s eta 0:00:00
+#8 1.068 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#8 1.086 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#8 1.105    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 7.3 MB/s eta 0:00:00
+#8 1.113 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#8 1.130 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#8 1.147    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 14.2 MB/s eta 0:00:00
+#8 1.211 Installing collected packages: markupsafe, itsdangerous, click, blinker, werkzeug, jinja2, Flask
+#8 1.546 Successfully installed Flask-3.1.2 blinker-1.9.0 click-8.3.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.3 werkzeug-3.1.3
+#8 1.546 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.551 
+#8 1.551 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.551 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.7s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.7s done
+#9 writing image sha256:88e0a63df3d2599b83059d5637ae0b487bbf727e581e859c0b62cba5a5d41525 done
+#9 naming to docker.io/library/test-image-8916745 done
+#9 DONE 0.7s
+
+View build details: docker-desktop://dashboard/build/default/default/onw14mxlfm1h74dbuh0ipazpk
+[2025-10-29 18:04:42] SUCCESS: Build completed for 8916745

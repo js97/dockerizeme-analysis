@@ -1,0 +1,26 @@
+=== Docker Run Log for 2760477 ===
+Started at: Mi 29. Okt 13:12:54 CET 2025
+
+[2025-10-29 13:13:00] START: Running container for 2760477
+[2025-10-29 13:13:00] SUCCESS: Container 802223f05f1dad4874ff10da46133a14a4b5e9703d664cd4677b559cbbb7d6d6 started for 2760477
+=== Container logs for 2760477 ===
+/usr/local/lib/python3.11/site-packages/paramiko/pkey.py:82: CryptographyDeprecationWarning: TripleDES has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.TripleDES and will be removed from cryptography.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  "cipher": algorithms.TripleDES,
+/usr/local/lib/python3.11/site-packages/paramiko/transport.py:253: CryptographyDeprecationWarning: TripleDES has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.TripleDES and will be removed from cryptography.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  "class": algorithms.TripleDES,
+Traceback (most recent call last):
+  File "/snippet.py", line 1, in <module>
+    from fabric.api import *
+  File "/usr/local/lib/python3.11/site-packages/fabric/api.py", line 10, in <module>
+    from fabric.context_managers import (cd, hide, settings, show, path, prefix,
+  File "/usr/local/lib/python3.11/site-packages/fabric/context_managers.py", line 27, in <module>
+    from fabric.state import output, win32, connections, env
+  File "/usr/local/lib/python3.11/site-packages/fabric/state.py", line 9, in <module>
+    from fabric.network import HostConnectionCache, ssh
+  File "/usr/local/lib/python3.11/site-packages/fabric/network.py", line 14, in <module>
+    from fabric.auth import get_password, set_password
+  File "/usr/local/lib/python3.11/site-packages/fabric/auth.py", line 6, in <module>
+    from paramiko.auth_strategy import (
+ModuleNotFoundError: No module named 'paramiko.auth_strategy'
+=== End of logs for 2760477 ===
+[2025-10-29 13:13:02] INFO: Container 802223f05f1dad4874ff10da46133a14a4b5e9703d664cd4677b559cbbb7d6d6 has stopped

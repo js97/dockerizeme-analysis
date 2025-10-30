@@ -1,0 +1,115 @@
+=== Docker Build Log for 8412843 ===
+Started at: Mi 29. Okt 17:47:45 CET 2025
+
+[2025-10-29 17:47:45] START: Building image for 8412843
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 289B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 776B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/8412843/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","six"]
+#7 1.949 Collecting six
+#7 1.984   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.006 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.051 Installing collected packages: six
+#7 2.071 Successfully installed six-1.17.0
+#7 2.071 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.161 
+#7 2.161 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.161 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.3s
+
+#8 [4/7] RUN ["pip","install","pytest"]
+#8 0.580 Collecting pytest
+#8 0.615   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#8 0.668 Collecting iniconfig>=1 (from pytest)
+#8 0.676   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#8 0.732 Collecting packaging>=20 (from pytest)
+#8 0.740   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.793 Collecting pluggy<2,>=1.5 (from pytest)
+#8 0.802   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#8 0.855 Collecting pygments>=2.7.2 (from pytest)
+#8 0.863   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#8 0.894 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#8 0.941    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 8.2 MB/s eta 0:00:00
+#8 0.949 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#8 0.968 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 0.983    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 4.3 MB/s eta 0:00:00
+#8 0.990 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#8 1.010 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#8 1.064    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 22.9 MB/s eta 0:00:00
+#8 1.114 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#8 1.840 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#8 1.840 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.845 
+#8 1.845 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.845 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.0s
+
+#9 [5/7] RUN ["pip","install","py"]
+#9 0.533 Collecting py
+#9 0.576   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#9 0.601 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#9 0.634    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.8 MB/s eta 0:00:00
+#9 0.677 Installing collected packages: py
+#9 0.756 Successfully installed py-1.11.0
+#9 0.756 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.762 
+#9 0.762 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.762 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.8s
+
+#10 [6/7] RUN ["pip","install","python-dateutil"]
+#10 0.510 Collecting python-dateutil
+#10 0.542   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#10 0.555 Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.11/site-packages (from python-dateutil) (1.17.0)
+#10 0.565 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#10 0.604    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 5.9 MB/s eta 0:00:00
+#10 0.650 Installing collected packages: python-dateutil
+#10 0.716 Successfully installed python-dateutil-2.9.0.post0
+#10 0.717 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.722 
+#10 0.722 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.722 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.8s
+
+#11 [7/7] RUN ["pip","install","pytz"]
+#11 0.585 Collecting pytz
+#11 0.619   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#11 0.641 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#11 0.691    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 10.4 MB/s eta 0:00:00
+#11 0.739 Installing collected packages: pytz
+#11 0.843 Successfully installed pytz-2025.2
+#11 0.844 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.848 
+#11 0.848 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.848 [notice] To update, run: pip install --upgrade pip
+#11 DONE 0.9s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.2s done
+#12 writing image sha256:1db8d465e4a37bbafc0311ecb9566a45ecc471d02cb6292d3f2f67ea22115a6d done
+#12 naming to docker.io/library/test-image-8412843 done
+#12 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/m9lb6pznbivsam3o6ru4vmapt
+[2025-10-29 17:47:53] SUCCESS: Build completed for 8412843

@@ -1,0 +1,188 @@
+=== Docker Build Log for 738fa2eedd9666b78404ed1751336f56 ===
+Started at: Mi 29. Okt 17:08:04 CET 2025
+
+[2025-10-29 17:08:04] START: Building image for 738fa2eedd9666b78404ed1751336f56
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 376B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 12.95kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/9] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/9] COPY hard-gists/738fa2eedd9666b78404ed1751336f56/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/9] RUN ["pip","install","Lasagne"]
+#7 2.235 Collecting Lasagne
+#7 2.278   Downloading Lasagne-0.1.tar.gz (125 kB)
+#7 2.310      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.1/125.1 kB 3.9 MB/s eta 0:00:00
+#7 2.325   Preparing metadata (setup.py): started
+#7 2.730   Preparing metadata (setup.py): finished with status 'done'
+#7 2.948 Collecting numpy (from Lasagne)
+#7 2.959   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.979      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.8 MB/s eta 0:00:00
+#7 3.005 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 3.650    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 23.8 MB/s eta 0:00:00
+#7 3.696 Building wheels for collected packages: Lasagne
+#7 3.696   Building wheel for Lasagne (setup.py): started
+#7 3.905   Building wheel for Lasagne (setup.py): finished with status 'done'
+#7 3.905   Created wheel for Lasagne: filename=lasagne-0.1-py3-none-any.whl size=79359 sha256=425c0ad460450b89f0501c672a49ed9a95726ff2391e24734561f8b154a563b3
+#7 3.905   Stored in directory: /root/.cache/pip/wheels/4e/ad/d7/6376b7842a2d4635bb42a9889ef94b6de55291916efa1952e9
+#7 3.907 Successfully built Lasagne
+#7 3.958 Installing collected packages: numpy, Lasagne
+#7 5.590 Successfully installed Lasagne-0.1 numpy-2.3.4
+#7 5.590 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.686 
+#7 5.686 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.686 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.2s
+
+#8 [4/9] RUN ["pip","install","the"]
+#8 0.668 Collecting the
+#8 0.703   Downloading the-0.1.5.tar.gz (10 kB)
+#8 0.716   Preparing metadata (setup.py): started
+#8 0.830   Preparing metadata (setup.py): finished with status 'done'
+#8 0.831 Building wheels for collected packages: the
+#8 0.836   Building wheel for the (setup.py): started
+#8 0.973   Building wheel for the (setup.py): finished with status 'done'
+#8 0.974   Created wheel for the: filename=the-0.1.5-py3-none-any.whl size=6027 sha256=bcb77b36527cfacbb28628033b98f29be0be9b19d892ac1563984490e2a45d24
+#8 0.974   Stored in directory: /root/.cache/pip/wheels/5a/02/15/82fa3d852099cde5adb558437baaa511bc9ad4a7febdae2ecb
+#8 0.976 Successfully built the
+#8 1.018 Installing collected packages: the
+#8 1.051 Successfully installed the-0.1.5
+#8 1.051 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.056 
+#8 1.056 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.056 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.1s
+
+#9 [5/9] RUN ["pip","install","PyYAML"]
+#9 0.609 Collecting PyYAML
+#9 0.642   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#9 0.667 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#9 0.727    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 13.7 MB/s eta 0:00:00
+#9 0.775 Installing collected packages: PyYAML
+#9 0.846 Successfully installed PyYAML-6.0.3
+#9 0.846 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.851 
+#9 0.851 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.851 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.9s
+
+#10 [6/9] RUN ["pip","install","numpy"]
+#10 0.453 Requirement already satisfied: numpy in /usr/local/lib/python3.11/site-packages (2.3.4)
+#10 0.499 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.504 
+#10 0.504 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.504 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.6s
+
+#11 [7/9] RUN ["pip","install","scipy"]
+#11 0.676 Collecting scipy
+#11 0.714   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#11 0.746      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 1.8 MB/s eta 0:00:00
+#11 0.777 Requirement already satisfied: numpy<2.6,>=1.25.2 in /usr/local/lib/python3.11/site-packages (from scipy) (2.3.4)
+#11 0.797 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#11 2.254    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 15.9 MB/s eta 0:00:00
+#11 2.407 Installing collected packages: scipy
+#11 5.412 Successfully installed scipy-1.16.3
+#11 5.412 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 5.418 
+#11 5.418 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 5.418 [notice] To update, run: pip install --upgrade pip
+#11 DONE 6.1s
+
+#12 [8/9] RUN ["pip","install","Theano"]
+#12 0.650 Collecting Theano
+#12 0.697   Downloading Theano-1.0.5.tar.gz (2.8 MB)
+#12 0.826      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.8/2.8 MB 22.5 MB/s eta 0:00:00
+#12 0.991   Preparing metadata (setup.py): started
+#12 1.155   Preparing metadata (setup.py): finished with status 'done'
+#12 1.164 Requirement already satisfied: numpy>=1.9.1 in /usr/local/lib/python3.11/site-packages (from Theano) (2.3.4)
+#12 1.169 Requirement already satisfied: scipy>=0.14 in /usr/local/lib/python3.11/site-packages (from Theano) (1.16.3)
+#12 1.201 Collecting six>=1.9.0 (from Theano)
+#12 1.210   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#12 1.257 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#12 1.269 Building wheels for collected packages: Theano
+#12 1.274   Building wheel for Theano (setup.py): started
+#12 1.965   Building wheel for Theano (setup.py): finished with status 'done'
+#12 1.971   Created wheel for Theano: filename=theano-1.0.5-py3-none-any.whl size=2668205 sha256=e2f6dfc537852fd8c0dc3ec1898da09983192c91d46a5e873805c4f69a9c0d9e
+#12 1.971   Stored in directory: /root/.cache/pip/wheels/26/1f/2f/02d738022626461828148150c0354e712c4ad74f1a60f10933
+#12 1.974 Successfully built Theano
+#12 2.050 Installing collected packages: six, Theano
+#12 3.262 Successfully installed Theano-1.0.5 six-1.17.0
+#12 3.263 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 3.268 
+#12 3.268 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 3.268 [notice] To update, run: pip install --upgrade pip
+#12 DONE 3.6s
+
+#13 [9/9] RUN ["pip","install","matplotlib"]
+#13 0.695 Collecting matplotlib
+#13 0.733   Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#13 0.841 Collecting contourpy>=1.0.1 (from matplotlib)
+#13 0.850   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#13 0.891 Collecting cycler>=0.10 (from matplotlib)
+#13 0.899   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#13 1.087 Collecting fonttools>=4.22.0 (from matplotlib)
+#13 1.096   Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+#13 1.135      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.3/112.3 kB 2.8 MB/s eta 0:00:00
+#13 1.211 Collecting kiwisolver>=1.3.1 (from matplotlib)
+#13 1.219   Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+#13 1.233 Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.11/site-packages (from matplotlib) (2.3.4)
+#13 1.289 Collecting packaging>=20.0 (from matplotlib)
+#13 1.298   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#13 1.496 Collecting pillow>=8 (from matplotlib)
+#13 1.508   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#13 1.573 Collecting pyparsing>=3 (from matplotlib)
+#13 1.581   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#13 1.637 Collecting python-dateutil>=2.7 (from matplotlib)
+#13 1.645   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#13 1.708 Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.11/site-packages (from python-dateutil>=2.7->matplotlib) (1.17.0)
+#13 1.723 Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+#13 2.082    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 24.4 MB/s eta 0:00:00
+#13 2.093 Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+#13 2.116    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 355.2/355.2 kB 16.3 MB/s eta 0:00:00
+#13 2.131 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#13 2.154 Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#13 2.332    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 28.2 MB/s eta 0:00:00
+#13 2.341 Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+#13 2.398    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 26.1 MB/s eta 0:00:00
+#13 2.406 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#13 2.418    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 4.9 MB/s eta 0:00:00
+#13 2.430 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#13 2.716    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 24.7 MB/s eta 0:00:00
+#13 2.725 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#13 2.739    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 9.1 MB/s eta 0:00:00
+#13 2.747 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#13 2.764    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 14.5 MB/s eta 0:00:00
+#13 2.964 Installing collected packages: python-dateutil, pyparsing, pillow, packaging, kiwisolver, fonttools, cycler, contourpy, matplotlib
+#13 5.287 Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.60.1 kiwisolver-1.4.9 matplotlib-3.10.7 packaging-25.0 pillow-12.0.0 pyparsing-3.2.5 python-dateutil-2.9.0.post0
+#13 5.287 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 5.293 
+#13 5.293 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 5.293 [notice] To update, run: pip install --upgrade pip
+#13 DONE 6.0s
+
+#14 exporting to image
+#14 exporting layers
+#14 exporting layers 0.8s done
+#14 writing image sha256:d6a0fa0e7912be716a0b0493353e6fc5ac1127daf3e83256c6e59ed66b9bf733 done
+#14 naming to docker.io/library/test-image-738fa2eedd9666b78404ed1751336f56 done
+#14 DONE 0.8s
+
+View build details: docker-desktop://dashboard/build/default/default/x57t456umn437i3o0eu3tld4b
+[2025-10-29 17:08:29] SUCCESS: Build completed for 738fa2eedd9666b78404ed1751336f56

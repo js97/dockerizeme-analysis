@@ -1,0 +1,13 @@
+=== Docker Run Log for 3750225 ===
+Started at: Mi 29. Okt 13:58:43 CET 2025
+
+[2025-10-29 13:58:50] START: Running container for 3750225
+[2025-10-29 13:58:51] SUCCESS: Container 83cb67f603dffc0901c7784d1ac5ea746feabc6a2b2712a3d1950bbad64d089e started for 3750225
+=== Container logs for 3750225 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 18, in <module>
+    s = pygit2.Signature('Alice Author', 'alice@authors.tld', time(), 0)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'float' object cannot be interpreted as an integer
+=== End of logs for 3750225 ===
+[2025-10-29 13:58:53] INFO: Container 83cb67f603dffc0901c7784d1ac5ea746feabc6a2b2712a3d1950bbad64d089e has stopped

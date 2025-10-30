@@ -1,0 +1,131 @@
+=== Docker Build Log for 4995164 ===
+Started at: Mi 29. Okt 15:05:29 CET 2025
+
+[2025-10-29 15:05:29] START: Building image for 4995164
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 267B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.44kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/6] COPY hard-gists/4995164/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/6] RUN ["pip","install","dj.choices"]
+#7 1.945 Collecting dj.choices
+#7 1.978   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 1.995   Preparing metadata (setup.py): started
+#7 2.388   Preparing metadata (setup.py): finished with status 'done'
+#7 2.493 Collecting django (from dj.choices)
+#7 2.502   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.541 Collecting six (from dj.choices)
+#7 2.550   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.598 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.608   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.649 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.659   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.685 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 2.997    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 27.0 MB/s eta 0:00:00
+#7 3.007 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.024 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.041 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.052    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.8 MB/s eta 0:00:00
+#7 3.090 Building wheels for collected packages: dj.choices
+#7 3.091   Building wheel for dj.choices (setup.py): started
+#7 3.262   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.263   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=b44e20820d0d3d8d40ae839c0a3da8db0813ea27edaa7e159098eaffb5fd365f
+#7 3.263   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.266 Successfully built dj.choices
+#7 3.311 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 4.812 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 4.812 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.899 
+#7 4.899 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.899 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.5s
+
+#8 [4/6] RUN ["pip","install","Django"]
+#8 0.460 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#8 0.464 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#8 0.465 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#8 0.507 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.512 
+#8 0.512 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.512 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.6s
+
+#9 [5/6] RUN ["pip","install","South"]
+#9 0.638 Collecting South
+#9 0.673   Downloading South-1.0.2.tar.gz (96 kB)
+#9 0.699      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.5/96.5 kB 3.6 MB/s eta 0:00:00
+#9 0.716   Preparing metadata (setup.py): started
+#9 0.832   Preparing metadata (setup.py): finished with status 'done'
+#9 0.833 Building wheels for collected packages: South
+#9 0.839   Building wheel for South (setup.py): started
+#9 1.034   Building wheel for South (setup.py): finished with status 'done'
+#9 1.035   Created wheel for South: filename=south-1.0.2-py2.py3-none-any.whl size=135250 sha256=87ec09bd742657b1692b4f3f1308a3107572bf31b42cb609378e1308cea3b2c5
+#9 1.035   Stored in directory: /root/.cache/pip/wheels/e9/a0/90/2fe4e2cd17759b8df19f858a3056ebb4ed78a0f8209e41da4c
+#9 1.038 Successfully built South
+#9 1.079 Installing collected packages: South
+#9 1.191 Successfully installed South-1.0.2
+#9 1.192 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.197 
+#9 1.197 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.197 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.3s
+
+#10 [6/6] RUN ["pip","install","Django-Pizza"]
+#10 0.727 Collecting Django-Pizza
+#10 0.877   Downloading Django-Pizza-16.10.1.tar.gz (1.1 MB)
+#10 1.132      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 4.3 MB/s eta 0:00:00
+#10 1.206   Preparing metadata (setup.py): started
+#10 1.336   Preparing metadata (setup.py): finished with status 'done'
+#10 1.478 Collecting sorl-thumbnail>=11.01 (from Django-Pizza)
+#10 1.487   Downloading sorl_thumbnail-12.11.0-py3-none-any.whl.metadata (10 kB)
+#10 1.693 Collecting Django-Next-Please>=13.12 (from Django-Pizza)
+#10 1.803   Downloading Django-Next-Please-16.12.1.tar.gz (1.6 kB)
+#10 1.833   Preparing metadata (setup.py): started
+#10 1.944   Preparing metadata (setup.py): finished with status 'done'
+#10 1.958 Downloading sorl_thumbnail-12.11.0-py3-none-any.whl (42 kB)
+#10 1.969    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.8/42.8 kB 3.5 MB/s eta 0:00:00
+#10 1.973 Building wheels for collected packages: Django-Pizza, Django-Next-Please
+#10 1.977   Building wheel for Django-Pizza (setup.py): started
+#10 2.417   Building wheel for Django-Pizza (setup.py): finished with status 'done'
+#10 2.421   Created wheel for Django-Pizza: filename=django_pizza-16.10.1-py3-none-any.whl size=1417032 sha256=b26a4600f4ba848e4328fa1885db119014e2bcae4948c1f896d4fea8aa550eb8
+#10 2.421   Stored in directory: /root/.cache/pip/wheels/d8/c6/50/402a0e85172e91c8c336e4f15ab325c987adc1cee83e455fee
+#10 2.425   Building wheel for Django-Next-Please (setup.py): started
+#10 2.561   Building wheel for Django-Next-Please (setup.py): finished with status 'done'
+#10 2.561   Created wheel for Django-Next-Please: filename=django_next_please-16.12.1-py3-none-any.whl size=2158 sha256=df2ed110d371bfb97a31cf7cf7ae509600a2ca3ef862b361e14fde623482ec29
+#10 2.561   Stored in directory: /root/.cache/pip/wheels/d7/9e/77/ae5b1be6b6a5944903614db5d7b7e8d69127103c40f10aebe0
+#10 2.563 Successfully built Django-Pizza Django-Next-Please
+#10 2.606 Installing collected packages: Django-Next-Please, sorl-thumbnail, Django-Pizza
+#10 2.779 Successfully installed Django-Next-Please-16.12.1 Django-Pizza-16.10.1 sorl-thumbnail-12.11.0
+#10 2.779 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 2.784 
+#10 2.784 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 2.784 [notice] To update, run: pip install --upgrade pip
+#10 DONE 2.9s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 0.7s done
+#11 writing image sha256:d8ddbc54ad8935b6ea05f366df55b957feee8d850b9ad1769e77eebe7490f00d done
+#11 naming to docker.io/library/test-image-4995164 done
+#11 DONE 0.8s
+
+View build details: docker-desktop://dashboard/build/default/default/z4oc42d47taq7jry2d9on70x0
+[2025-10-29 15:05:41] SUCCESS: Build completed for 4995164

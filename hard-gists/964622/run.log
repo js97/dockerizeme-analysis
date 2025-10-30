@@ -1,0 +1,31 @@
+=== Docker Run Log for 964622 ===
+Started at: Mi 29. Okt 18:28:47 CET 2025
+
+[2025-10-29 18:28:55] START: Running container for 964622
+[2025-10-29 18:28:56] SUCCESS: Container 2a631d8b8e15a8c1a42a8f1b188357b3ea2329f7f28d0ad1515e97e7a7b32a45 started for 964622
+=== Container logs for 964622 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 2, in <module>
+    from django.contrib.auth.admin import UserAdmin
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/admin.py", line 6, in <module>
+    from django.contrib.auth.forms import (
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/forms.py", line 7, in <module>
+    from django.contrib.auth.models import User
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/models.py", line 5, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/base_user.py", line 43, in <module>
+    class AbstractBaseUser(models.Model):
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 131, in __new__
+    app_config = apps.get_containing_app_config(module)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/apps/registry.py", line 260, in get_containing_app_config
+    self.check_apps_ready()
+  File "/usr/local/lib/python3.11/site-packages/django/apps/registry.py", line 137, in check_apps_ready
+    settings.INSTALLED_APPS
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 964622 ===
+[2025-10-29 18:28:58] INFO: Container 2a631d8b8e15a8c1a42a8f1b188357b3ea2329f7f28d0ad1515e97e7a7b32a45 has stopped

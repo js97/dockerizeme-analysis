@@ -1,0 +1,15 @@
+=== Docker Run Log for 3c76bc174844948c5f98 ===
+Started at: Mi 29. Okt 14:12:10 CET 2025
+
+[2025-10-29 14:12:27] START: Running container for 3c76bc174844948c5f98
+[2025-10-29 14:12:27] SUCCESS: Container c0828eba47a382ea78420ed1f519f746c21fa5e09393468f24549e0b1bd19e42 started for 3c76bc174844948c5f98
+=== Container logs for 3c76bc174844948c5f98 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 2, in <module>
+    from pipeline.packager import Packager
+  File "/usr/local/lib/python3.11/site-packages/pipeline/__init__.py", line 42
+    except ImportError, e:
+           ^^^^^^^^^^^^^^
+SyntaxError: multiple exception types must be parenthesized
+=== End of logs for 3c76bc174844948c5f98 ===
+[2025-10-29 14:12:29] INFO: Container c0828eba47a382ea78420ed1f519f746c21fa5e09393468f24549e0b1bd19e42 has stopped

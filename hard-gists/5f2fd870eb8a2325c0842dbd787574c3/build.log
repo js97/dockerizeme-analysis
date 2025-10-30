@@ -1,0 +1,48 @@
+=== Docker Build Log for 5f2fd870eb8a2325c0842dbd787574c3 ===
+Started at: Mi 29. Okt 16:16:50 CET 2025
+
+[2025-10-29 16:16:50] START: Building image for 5f2fd870eb8a2325c0842dbd787574c3
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 190B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.08kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/5f2fd870eb8a2325c0842dbd787574c3/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","future"]
+#7 2.111 Collecting future
+#7 2.157   Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+#7 2.179 Downloading future-1.0.0-py3-none-any.whl (491 kB)
+#7 2.229    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 491.3/491.3 kB 10.5 MB/s eta 0:00:00
+#7 2.269 Installing collected packages: future
+#7 2.501 Successfully installed future-1.0.0
+#7 2.501 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.601 
+#7 2.601 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.601 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.8s
+
+#8 exporting to image
+#8 exporting layers 0.1s done
+#8 writing image sha256:d3323a841385abefa5ec7533b81e97eabc0d330d14e1e93684e574cc854caf77 done
+#8 naming to docker.io/library/test-image-5f2fd870eb8a2325c0842dbd787574c3 done
+#8 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/t2957ke67ryqwbxemms8lf8ub
+[2025-10-29 16:16:53] SUCCESS: Build completed for 5f2fd870eb8a2325c0842dbd787574c3

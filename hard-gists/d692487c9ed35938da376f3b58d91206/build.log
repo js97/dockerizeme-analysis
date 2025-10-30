@@ -1,0 +1,106 @@
+=== Docker Build Log for d692487c9ed35938da376f3b58d91206 ===
+Started at: Mi 29. Okt 20:27:27 CET 2025
+
+[2025-10-29 20:27:27] START: Building image for d692487c9ed35938da376f3b58d91206
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.15kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.82kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/54] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/54] COPY hard-gists/d692487c9ed35938da376f3b58d91206/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/54] RUN ["apt-get","update"]
+#7 0.292 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.292 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.302 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.314 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.634 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.635 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.226 Fetched 9833 kB in 1s (10.1 MB/s)
+#7 1.226 Reading package lists...
+#7 DONE 1.8s
+
+#8 [ 4/54] RUN ["pip","install","pan-python"]
+#8 1.979 Collecting pan-python
+#8 2.015   Downloading pan_python-0.25.0-py3-none-any.whl.metadata (1.4 kB)
+#8 2.035 Downloading pan_python-0.25.0-py3-none-any.whl (60 kB)
+#8 2.056    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.3/60.3 kB 2.7 MB/s eta 0:00:00
+#8 2.091 Installing collected packages: pan-python
+#8 2.143 Successfully installed pan-python-0.25.0
+#8 2.143 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.233 
+#8 2.233 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.233 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.4s
+
+#9 [ 5/54] RUN ["pip","install","pandacan"]
+#9 0.519 Collecting pandacan
+#9 0.562   Downloading pandacan-0.0.9.tar.gz (36 kB)
+#9 0.583   Preparing metadata (setup.py): started
+#9 1.005   Preparing metadata (setup.py): finished with status 'done'
+#9 1.040 Collecting libusb1==1.6.6 (from pandacan)
+#9 1.050   Downloading libusb1-1.6.6.tar.gz (56 kB)
+#9 1.068      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.0/56.0 kB 2.9 MB/s eta 0:00:00
+#9 1.073   Preparing metadata (setup.py): started
+#9 1.172   Preparing metadata (setup.py): finished with status 'error'
+#9 1.175   error: subprocess-exited-with-error
+#9 1.175   
+#9 1.175   × python setup.py egg_info did not run successfully.
+#9 1.175   │ exit code: 1
+#9 1.175   ╰─> [1 lines of output]
+#9 1.175       error in libusb1 setup command: use_2to3 is invalid.
+#9 1.175       [end of output]
+#9 1.175   
+#9 1.175   note: This error originates from a subprocess, and is likely not a problem with pip.
+#9 1.177 error: metadata-generation-failed
+#9 1.177 
+#9 1.177 × Encountered error while generating package metadata.
+#9 1.177 ╰─> See above for output.
+#9 1.177 
+#9 1.177 note: This is an issue with the package mentioned above, not pip.
+#9 1.177 hint: See above for details.
+#9 1.181 
+#9 1.181 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.181 [notice] To update, run: pip install --upgrade pip
+#9 ERROR: process "pip install pandacan" did not complete successfully: exit code: 1
+------
+ > [ 5/54] RUN ["pip","install","pandacan"]:
+1.177 error: metadata-generation-failed
+1.177 
+1.177 × Encountered error while generating package metadata.
+1.177 ╰─> See above for output.
+1.177 
+1.177 note: This is an issue with the package mentioned above, not pip.
+1.177 hint: See above for details.
+1.181 
+1.181 [notice] A new release of pip is available: 24.0 -> 25.3
+1.181 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:5
+--------------------
+   3 |     RUN ["apt-get","update"]
+   4 |     RUN ["pip","install","pan-python"]
+   5 | >>> RUN ["pip","install","pandacan"]
+   6 |     RUN ["pip","install","keras"]
+   7 |     RUN ["pip","install","tqdm"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install pandacan" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/zrsjs70qk20aguuvpcsfjkx8v
+[2025-10-29 20:27:33] ERROR: Build failed for d692487c9ed35938da376f3b58d91206

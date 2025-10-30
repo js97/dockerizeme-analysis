@@ -1,0 +1,176 @@
+=== Docker Build Log for 8169809 ===
+Started at: Mi 29. Okt 17:40:20 CET 2025
+
+[2025-10-29 17:40:20] START: Building image for 8169809
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 331B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.27kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/8] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/8] COPY hard-gists/8169809/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/8] RUN ["pip","install","requests"]
+#7 1.901 Collecting requests
+#7 1.935   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.054 Collecting charset_normalizer<4,>=2 (from requests)
+#7 2.063   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.107 Collecting idna<4,>=2.5 (from requests)
+#7 2.116   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.175 Collecting urllib3<3,>=1.21.1 (from requests)
+#7 2.184   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.228 Collecting certifi>=2017.4.17 (from requests)
+#7 2.236   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.263 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.282    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.2 MB/s eta 0:00:00
+#7 2.291 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.310    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.2 MB/s eta 0:00:00
+#7 2.319 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.333    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.6 MB/s eta 0:00:00
+#7 2.340 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.356    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.6 MB/s eta 0:00:00
+#7 2.364 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.377    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 10.2 MB/s eta 0:00:00
+#7 2.423 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#7 2.638 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#7 2.638 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.727 
+#7 2.727 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.727 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.0s
+
+#8 [4/8] RUN ["pip","install","bs4"]
+#8 0.510 Collecting bs4
+#8 0.542   Downloading bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+#8 0.585 Collecting beautifulsoup4 (from bs4)
+#8 0.595   Downloading beautifulsoup4-4.14.2-py3-none-any.whl.metadata (3.8 kB)
+#8 0.638 Collecting soupsieve>1.2 (from beautifulsoup4->bs4)
+#8 0.648   Downloading soupsieve-2.8-py3-none-any.whl.metadata (4.6 kB)
+#8 0.696 Collecting typing-extensions>=4.0.0 (from beautifulsoup4->bs4)
+#8 0.704   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.729 Downloading bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+#8 0.752 Downloading beautifulsoup4-4.14.2-py3-none-any.whl (106 kB)
+#8 0.787    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.4/106.4 kB 2.9 MB/s eta 0:00:00
+#8 0.796 Downloading soupsieve-2.8-py3-none-any.whl (36 kB)
+#8 0.814 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#8 0.826    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.3 MB/s eta 0:00:00
+#8 0.874 Installing collected packages: typing-extensions, soupsieve, beautifulsoup4, bs4
+#8 1.007 Successfully installed beautifulsoup4-4.14.2 bs4-0.0.2 soupsieve-2.8 typing-extensions-4.15.0
+#8 1.007 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.012 
+#8 1.012 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.012 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.1s
+
+#9 [5/8] RUN ["pip","install","webvirtmgr"]
+#9 0.515 Collecting webvirtmgr
+#9 0.551   Downloading webvirtmgr-4.8.9.tar.gz (705 kB)
+#9 0.606      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 705.8/705.8 kB 13.2 MB/s eta 0:00:00
+#9 0.644   Preparing metadata (setup.py): started
+#9 1.177   Preparing metadata (setup.py): finished with status 'done'
+#9 1.181 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from webvirtmgr) (79.0.1)
+#9 1.286 Collecting django>=1.5.5 (from webvirtmgr)
+#9 1.295   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#9 1.354 Collecting gunicorn>=18.0 (from webvirtmgr)
+#9 1.362   Downloading gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+#9 1.415 Collecting lockfile>=0.9 (from webvirtmgr)
+#9 1.424   Downloading lockfile-0.12.2-py2.py3-none-any.whl.metadata (2.4 kB)
+#9 1.476 Collecting asgiref>=3.8.1 (from django>=1.5.5->webvirtmgr)
+#9 1.484   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#9 1.526 Collecting sqlparse>=0.3.1 (from django>=1.5.5->webvirtmgr)
+#9 1.534   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#9 1.593 Collecting packaging (from gunicorn>=18.0->webvirtmgr)
+#9 1.602   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#9 1.651 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#9 1.957    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 27.6 MB/s eta 0:00:00
+#9 1.966 Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB)
+#9 1.979    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.0/85.0 kB 6.7 MB/s eta 0:00:00
+#9 1.988 Downloading lockfile-0.12.2-py2.py3-none-any.whl (13 kB)
+#9 2.008 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#9 2.027 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#9 2.038    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.6 MB/s eta 0:00:00
+#9 2.046 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#9 2.065    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 3.3 MB/s eta 0:00:00
+#9 2.104 Building wheels for collected packages: webvirtmgr
+#9 2.105   Building wheel for webvirtmgr (setup.py): started
+#9 2.385   Building wheel for webvirtmgr (setup.py): finished with status 'done'
+#9 2.387   Created wheel for webvirtmgr: filename=webvirtmgr-4.8.9-py3-none-any.whl size=698037 sha256=30cd1f980710dbdc0c99b53511ddbcaa8e1c7a67659bb7fca6ed5866f42ab165
+#9 2.387   Stored in directory: /root/.cache/pip/wheels/c7/67/ab/a716fc1b614ea6bb537a20a0b880eb7071514208cc442aeac3
+#9 2.389 Successfully built webvirtmgr
+#9 2.466 Installing collected packages: lockfile, sqlparse, packaging, asgiref, gunicorn, django, webvirtmgr
+#9 3.984 Successfully installed asgiref-3.10.0 django-5.2.7 gunicorn-23.0.0 lockfile-0.12.2 packaging-25.0 sqlparse-0.5.3 webvirtmgr-4.8.9
+#9 3.985 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 3.991 
+#9 3.991 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 3.991 [notice] To update, run: pip install --upgrade pip
+#9 DONE 4.5s
+
+#10 [6/8] RUN ["pip","install","scene"]
+#10 0.517 Collecting scene
+#10 0.565   Downloading scene-0.0.1.tar.gz (4.3 kB)
+#10 0.582   Preparing metadata (setup.py): started
+#10 0.697   Preparing metadata (setup.py): finished with status 'done'
+#10 0.698 Building wheels for collected packages: scene
+#10 0.704   Building wheel for scene (setup.py): started
+#10 0.855   Building wheel for scene (setup.py): finished with status 'done'
+#10 0.855   Created wheel for scene: filename=scene-0.0.1-py2.py3-none-any.whl size=3300 sha256=1f2405bbcde27aca1b7d4ab7736e666ba7adbd3bdcbd25a921019963484e69c9
+#10 0.855   Stored in directory: /root/.cache/pip/wheels/8d/92/cb/ec23387ed573b50de008a60ab148d18dac724dd0e65cd18715
+#10 0.857 Successfully built scene
+#10 0.915 Installing collected packages: scene
+#10 0.950 Successfully installed scene-0.0.1
+#10 0.950 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.955 
+#10 0.955 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.955 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.0s
+
+#11 [7/8] RUN ["pip","install","beautifulsoup4"]
+#11 0.444 Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.11/site-packages (4.14.2)
+#11 0.448 Requirement already satisfied: soupsieve>1.2 in /usr/local/lib/python3.11/site-packages (from beautifulsoup4) (2.8)
+#11 0.449 Requirement already satisfied: typing-extensions>=4.0.0 in /usr/local/lib/python3.11/site-packages (from beautifulsoup4) (4.15.0)
+#11 0.506 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.511 
+#11 0.511 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.511 [notice] To update, run: pip install --upgrade pip
+#11 DONE 0.6s
+
+#12 [8/8] RUN ["pip","install","console"]
+#12 0.628 Collecting console
+#12 0.663   Downloading console-0.9912-py3-none-any.whl.metadata (18 kB)
+#12 0.814 Collecting ezenv>=0.92 (from console)
+#12 0.823   Downloading ezenv-0.92-py2.py3-none-any.whl.metadata (13 kB)
+#12 0.850 Downloading console-0.9912-py3-none-any.whl (96 kB)
+#12 0.878    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.8/96.8 kB 3.3 MB/s eta 0:00:00
+#12 0.887 Downloading ezenv-0.92-py2.py3-none-any.whl (10 kB)
+#12 0.966 Installing collected packages: ezenv, console
+#12 1.064 Successfully installed console-0.9912 ezenv-0.92
+#12 1.065 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 1.070 
+#12 1.070 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 1.070 [notice] To update, run: pip install --upgrade pip
+#12 DONE 1.2s
+
+#13 exporting to image
+#13 exporting layers
+#13 exporting layers 0.6s done
+#13 writing image sha256:e1dbebf84caad19643775e2f86020d3ce726afa30bf9c8a09f1c10505e08fd9a done
+#13 naming to docker.io/library/test-image-8169809 0.0s done
+#13 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/default/default/i9kkwualcfbyyzmcieaysq5bc
+[2025-10-29 17:40:33] SUCCESS: Build completed for 8169809

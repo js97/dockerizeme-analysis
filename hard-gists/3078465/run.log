@@ -1,0 +1,13 @@
+=== Docker Run Log for 3078465 ===
+Started at: Mi 29. Okt 13:39:24 CET 2025
+
+[2025-10-29 13:39:29] START: Running container for 3078465
+[2025-10-29 13:39:29] SUCCESS: Container dbd72a0e8f2f21fd793a085cbefb67fab4cf5da63bb4509eb9c488f353742197 started for 3078465
+=== Container logs for 3078465 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 23, in <module>
+    bp.add_app_url_map_converter(converters.FooConverter, 'foo')
+                                 ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'converters' has no attribute 'FooConverter'
+=== End of logs for 3078465 ===
+[2025-10-29 13:39:31] INFO: Container dbd72a0e8f2f21fd793a085cbefb67fab4cf5da63bb4509eb9c488f353742197 has stopped

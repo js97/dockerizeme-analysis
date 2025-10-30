@@ -1,0 +1,58 @@
+=== Docker Build Log for da673e7cd79d0b6899b9bd6a68c860d0 ===
+Started at: Mi 29. Okt 20:29:11 CET 2025
+
+[2025-10-29 20:29:11] START: Building image for da673e7cd79d0b6899b9bd6a68c860d0
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 191B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.15kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/da673e7cd79d0b6899b9bd6a68c860d0/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","sublime"]
+#7 1.980 Collecting sublime
+#7 2.028   Downloading sublime-0.1.0.tar.gz (7.2 kB)
+#7 2.040   Preparing metadata (setup.py): started
+#7 2.408   Preparing metadata (setup.py): finished with status 'done'
+#7 2.448 Collecting click<4.0,>=3.3 (from sublime)
+#7 2.459   Downloading click-3.3-py2.py3-none-any.whl.metadata (424 bytes)
+#7 2.480 Downloading click-3.3-py2.py3-none-any.whl (58 kB)
+#7 2.504    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.8/58.8 kB 2.2 MB/s eta 0:00:00
+#7 2.508 Building wheels for collected packages: sublime
+#7 2.509   Building wheel for sublime (setup.py): started
+#7 2.662   Building wheel for sublime (setup.py): finished with status 'done'
+#7 2.662   Created wheel for sublime: filename=sublime-0.1.0-py3-none-any.whl size=6955 sha256=b5419d4a4d04a5eec8892d1e430fc5463e80c33928546a8af5d8aa1adec9649c
+#7 2.663   Stored in directory: /root/.cache/pip/wheels/21/81/43/2dc664aec628363ad5dfb052838914f1dd9449855ee03a0231
+#7 2.664 Successfully built sublime
+#7 2.693 Installing collected packages: click, sublime
+#7 2.763 Successfully installed click-3.3 sublime-0.1.0
+#7 2.763 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.861 
+#7 2.861 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.861 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.0s
+
+#8 exporting to image
+#8 exporting layers 0.1s done
+#8 writing image sha256:d150350e3c016278e03982e099e98c55e17d22988ee362857624d5013183ffa0 done
+#8 naming to docker.io/library/test-image-da673e7cd79d0b6899b9bd6a68c860d0 done
+#8 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/f3zn9qty6yh5488h8thlzdaru
+[2025-10-29 20:29:15] SUCCESS: Build completed for da673e7cd79d0b6899b9bd6a68c860d0

@@ -1,0 +1,16 @@
+=== Docker Run Log for b9309cdd7d5adc3b4b70 ===
+Started at: Mi 29. Okt 19:32:57 CET 2025
+
+[2025-10-29 19:33:00] START: Running container for b9309cdd7d5adc3b4b70
+[2025-10-29 19:33:00] SUCCESS: Container 58eb8cb64a23dcd58a5584cb6b8d2792da7faf2d70d4187158e0fd860d1ca628 started for b9309cdd7d5adc3b4b70
+=== Container logs for b9309cdd7d5adc3b4b70 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 2, in <module>
+    import eulerangles
+  File "/usr/local/lib/python3.11/site-packages/eulerangles/__init__.py", line 2, in <module>
+    from .interface import convert_eulers
+  File "/usr/local/lib/python3.11/site-packages/eulerangles/interface.py", line 3, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+=== End of logs for b9309cdd7d5adc3b4b70 ===
+[2025-10-29 19:33:02] INFO: Container 58eb8cb64a23dcd58a5584cb6b8d2792da7faf2d70d4187158e0fd860d1ca628 has stopped

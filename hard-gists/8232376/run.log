@@ -1,0 +1,15 @@
+=== Docker Run Log for 8232376 ===
+Started at: Mi 29. Okt 17:41:28 CET 2025
+
+[2025-10-29 17:41:29] START: Running container for 8232376
+[2025-10-29 17:41:29] SUCCESS: Container 58edfae24ea214bcaf1376e54afcf755671d0e0f839588ee919b66417f2387ee started for 8232376
+=== Container logs for 8232376 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 42, in <module>
+    main()
+  File "/snippet.py", line 30, in main
+    if argv[0] in MODES:
+       ~~~~^^^
+IndexError: list index out of range
+=== End of logs for 8232376 ===
+[2025-10-29 17:41:31] INFO: Container 58edfae24ea214bcaf1376e54afcf755671d0e0f839588ee919b66417f2387ee has stopped

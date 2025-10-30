@@ -1,0 +1,61 @@
+=== Docker Build Log for 4565147 ===
+Started at: Mi 29. Okt 14:43:59 CET 2025
+
+[2025-10-29 14:43:59] START: Building image for 4565147
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 198B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 8.86kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/4565147/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","tornado"]
+#7 2.644 Collecting tornado
+#7 2.681   Downloading tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+#7 2.703 Downloading tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (443 kB)
+#7 2.744    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 443.9/443.9 kB 11.3 MB/s eta 0:00:00
+#7 2.788 Installing collected packages: tornado
+#7 3.043 Successfully installed tornado-6.5.2
+#7 3.043 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.163 
+#7 3.163 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.163 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.4s
+
+#8 [4/4] RUN ["pip","install","iptools"]
+#8 0.703 Collecting iptools
+#8 0.746   Downloading iptools-0.7.0-py2.py3-none-any.whl.metadata (1.2 kB)
+#8 0.769 Downloading iptools-0.7.0-py2.py3-none-any.whl (16 kB)
+#8 0.851 Installing collected packages: iptools
+#8 0.890 Successfully installed iptools-0.7.0
+#8 0.890 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.899 
+#8 0.899 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.899 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.0s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.2s done
+#9 writing image sha256:db1ae7625444e73ba04cd5d096cf49daa711a09eec8ba81cda76d1ddc9d185a4 done
+#9 naming to docker.io/library/test-image-4565147 done
+#9 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/lel0sa8hb8lu56zlkp72rtum1
+[2025-10-29 14:44:04] SUCCESS: Build completed for 4565147

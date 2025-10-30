@@ -1,0 +1,68 @@
+=== Docker Build Log for 9705471 ===
+Started at: Mi 29. Okt 18:31:07 CET 2025
+
+[2025-10-29 18:31:07] START: Building image for 9705471
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 198B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.60kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/9705471/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","RPi.GPIO"]
+#7 1.894 Collecting RPi.GPIO
+#7 1.927   Downloading RPi.GPIO-0.7.1.tar.gz (29 kB)
+#7 1.945   Preparing metadata (setup.py): started
+#7 2.327   Preparing metadata (setup.py): finished with status 'done'
+#7 2.329 Building wheels for collected packages: RPi.GPIO
+#7 2.330   Building wheel for RPi.GPIO (setup.py): started
+#7 3.214   Building wheel for RPi.GPIO (setup.py): finished with status 'done'
+#7 3.214   Created wheel for RPi.GPIO: filename=rpi_gpio-0.7.1-cp311-cp311-linux_x86_64.whl size=70837 sha256=0e1d44690329ffbda828c42390b44870a2114e9646c0181240ee7002b522a224
+#7 3.215   Stored in directory: /root/.cache/pip/wheels/58/9a/da/bc92ced3a63320f51bfb2eb461f0408a206acdcedfa57fbfbe
+#7 3.218 Successfully built RPi.GPIO
+#7 3.248 Installing collected packages: RPi.GPIO
+#7 3.261 Successfully installed RPi.GPIO-0.7.1
+#7 3.262 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.359 
+#7 3.359 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.359 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.6s
+
+#8 [4/4] RUN ["pip","install","bottle"]
+#8 0.535 Collecting bottle
+#8 0.572   Downloading bottle-0.13.4-py2.py3-none-any.whl.metadata (1.6 kB)
+#8 0.591 Downloading bottle-0.13.4-py2.py3-none-any.whl (103 kB)
+#8 0.620    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.8/103.8 kB 3.4 MB/s eta 0:00:00
+#8 0.653 Installing collected packages: bottle
+#8 0.736 Successfully installed bottle-0.13.4
+#8 0.736 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.741 
+#8 0.741 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.741 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.8s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.2s done
+#9 writing image sha256:22c9609dcbe5bb4389947a89f72c1a0874a5169a77fd6fbb0907e98b6f8630bc done
+#9 naming to docker.io/library/test-image-9705471 done
+#9 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/attd6ta7hxkli71z1nfpnhvi0
+[2025-10-29 18:31:12] SUCCESS: Build completed for 9705471

@@ -1,0 +1,104 @@
+=== Docker Build Log for 31122eb9e4c0af8adeca ===
+Started at: Mi 29. Okt 13:40:40 CET 2025
+
+[2025-10-29 13:40:40] START: Building image for 31122eb9e4c0af8adeca
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 243B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.32kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/31122eb9e4c0af8adeca/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","nltk"]
+#7 2.018 Collecting nltk
+#7 2.055   Downloading nltk-3.9.2-py3-none-any.whl.metadata (3.2 kB)
+#7 2.109 Collecting click (from nltk)
+#7 2.117   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#7 2.162 Collecting joblib (from nltk)
+#7 2.172   Downloading joblib-1.5.2-py3-none-any.whl.metadata (5.6 kB)
+#7 2.521 Collecting regex>=2021.8.3 (from nltk)
+#7 2.535   Downloading regex-2025.10.23-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+#7 2.558      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.5/40.5 kB 1.5 MB/s eta 0:00:00
+#7 2.616 Collecting tqdm (from nltk)
+#7 2.625   Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+#7 2.642      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.7/57.7 kB 3.1 MB/s eta 0:00:00
+#7 2.666 Downloading nltk-3.9.2-py3-none-any.whl (1.5 MB)
+#7 2.735    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 22.6 MB/s eta 0:00:00
+#7 2.745 Downloading regex-2025.10.23-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (800 kB)
+#7 2.780    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 800.3/800.3 kB 23.2 MB/s eta 0:00:00
+#7 2.789 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#7 2.807    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 5.6 MB/s eta 0:00:00
+#7 2.816 Downloading joblib-1.5.2-py3-none-any.whl (308 kB)
+#7 2.835    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 308.4/308.4 kB 17.2 MB/s eta 0:00:00
+#7 2.842 Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+#7 2.854    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 6.9 MB/s eta 0:00:00
+#7 2.912 Installing collected packages: tqdm, regex, joblib, click, nltk
+#7 3.719 Successfully installed click-8.3.0 joblib-1.5.2 nltk-3.9.2 regex-2025.10.23 tqdm-4.67.1
+#7 3.719 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.808 
+#7 3.808 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.808 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.2s
+
+#8 [4/5] RUN ["pip","install","numpy"]
+#8 0.671 Collecting numpy
+#8 0.706   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 0.730      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.3 MB/s eta 0:00:00
+#8 0.754 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#8 1.901    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 16.0 MB/s eta 0:00:00
+#8 1.998 Installing collected packages: numpy
+#8 3.441 Successfully installed numpy-2.3.4
+#8 3.441 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 3.446 
+#8 3.446 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.446 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.9s
+
+#9 [5/5] RUN ["pip","install","scikit-learn"]
+#9 0.585 Collecting scikit-learn
+#9 0.619   Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#9 0.671 Requirement already satisfied: numpy>=1.22.0 in /usr/local/lib/python3.11/site-packages (from scikit-learn) (2.3.4)
+#9 0.799 Collecting scipy>=1.8.0 (from scikit-learn)
+#9 0.807   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#9 0.843      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 1.6 MB/s eta 0:00:00
+#9 0.855 Requirement already satisfied: joblib>=1.2.0 in /usr/local/lib/python3.11/site-packages (from scikit-learn) (1.5.2)
+#9 0.888 Collecting threadpoolctl>=3.1.0 (from scikit-learn)
+#9 0.897   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#9 0.954 Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+#9 1.344    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 25.0 MB/s eta 0:00:00
+#9 1.353 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#9 2.715    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 18.2 MB/s eta 0:00:00
+#9 2.726 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#9 2.963 Installing collected packages: threadpoolctl, scipy, scikit-learn
+#9 6.880 Successfully installed scikit-learn-1.7.2 scipy-1.16.3 threadpoolctl-3.6.0
+#9 6.880 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 6.885 
+#9 6.885 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 6.885 [notice] To update, run: pip install --upgrade pip
+#9 DONE 7.8s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.9s done
+#10 writing image sha256:10949b43ce911af45d2f269718d76d7eef9067db2d1897fe75082fdca95c4290 done
+#10 naming to docker.io/library/test-image-31122eb9e4c0af8adeca done
+#10 DONE 0.9s
+
+View build details: docker-desktop://dashboard/build/default/default/zpu99diqnm7ids6u0dfxzg3sn
+[2025-10-29 13:40:57] SUCCESS: Build completed for 31122eb9e4c0af8adeca

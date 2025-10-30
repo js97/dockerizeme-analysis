@@ -1,0 +1,135 @@
+=== Docker Build Log for 071932322204bcad6063 ===
+Started at: Mi 29. Okt 11:29:24 CET 2025
+
+[2025-10-29 11:29:24] START: Building image for 071932322204bcad6063
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 209B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.87kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/071932322204bcad6063/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","scene"]
+#7 1.925 Collecting scene
+#7 1.967   Downloading scene-0.0.1.tar.gz (4.3 kB)
+#7 1.980   Preparing metadata (setup.py): started
+#7 2.359   Preparing metadata (setup.py): finished with status 'done'
+#7 2.360 Building wheels for collected packages: scene
+#7 2.361   Building wheel for scene (setup.py): started
+#7 2.523   Building wheel for scene (setup.py): finished with status 'done'
+#7 2.524   Created wheel for scene: filename=scene-0.0.1-py2.py3-none-any.whl size=3300 sha256=4e722a9b623da2c4af1efa111a8e5eaa60f5a94918733e18a44c342d0df224fc
+#7 2.524   Stored in directory: /root/.cache/pip/wheels/8d/92/cb/ec23387ed573b50de008a60ab148d18dac724dd0e65cd18715
+#7 2.527 Successfully built scene
+#7 2.557 Installing collected packages: scene
+#7 2.570 Successfully installed scene-0.0.1
+#7 2.571 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.665 
+#7 2.665 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.665 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.8s
+
+#8 [4/4] RUN ["pip","install","zipnish"]
+#8 0.524 Collecting zipnish
+#8 0.658   Downloading zipnish-0.1.5.tar.gz (1.6 MB)
+#8 0.753      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 17.7 MB/s eta 0:00:00
+#8 0.856   Preparing metadata (setup.py): started
+#8 0.978   Preparing metadata (setup.py): finished with status 'done'
+#8 1.006 Collecting simplemysql (from zipnish)
+#8 1.015   Downloading simplemysql-1.25.tar.gz (4.5 kB)
+#8 1.027   Preparing metadata (setup.py): started
+#8 1.134   Preparing metadata (setup.py): finished with status 'done'
+#8 1.171 Collecting flask (from zipnish)
+#8 1.179   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#8 1.483 Collecting sqlalchemy (from zipnish)
+#8 1.491   Downloading sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.5 kB)
+#8 1.545 Collecting flask_sqlalchemy (from zipnish)
+#8 1.553   Downloading flask_sqlalchemy-3.1.1-py3-none-any.whl.metadata (3.4 kB)
+#8 1.592 Collecting blinker>=1.9.0 (from flask->zipnish)
+#8 1.600   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#8 1.647 Collecting click>=8.1.3 (from flask->zipnish)
+#8 1.655   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#8 1.692 Collecting itsdangerous>=2.2.0 (from flask->zipnish)
+#8 1.700   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#8 1.740 Collecting jinja2>=3.1.2 (from flask->zipnish)
+#8 1.747   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#8 1.817 Collecting markupsafe>=2.1.1 (from flask->zipnish)
+#8 1.825   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#8 1.891 Collecting werkzeug>=3.1.0 (from flask->zipnish)
+#8 1.899   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#8 2.080 Collecting greenlet>=1 (from sqlalchemy->zipnish)
+#8 2.088   Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+#8 2.147 Collecting typing-extensions>=4.6.0 (from sqlalchemy->zipnish)
+#8 2.155   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#8 2.293 Collecting mysql-python (from simplemysql->zipnish)
+#8 2.303   Downloading MySQL-python-1.2.5.zip (108 kB)
+#8 2.318      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 108.9/108.9 kB 10.9 MB/s eta 0:00:00
+#8 2.329   Preparing metadata (setup.py): started
+#8 2.419   Preparing metadata (setup.py): finished with status 'error'
+#8 2.423   error: subprocess-exited-with-error
+#8 2.423   
+#8 2.423   × python setup.py egg_info did not run successfully.
+#8 2.423   │ exit code: 1
+#8 2.423   ╰─> [8 lines of output]
+#8 2.423       Traceback (most recent call last):
+#8 2.423         File "<string>", line 2, in <module>
+#8 2.423         File "<pip-setuptools-caller>", line 34, in <module>
+#8 2.423         File "/tmp/pip-install-ah57x1ls/mysql-python_393fe552d15f445caa970167cdd2e30a/setup.py", line 13, in <module>
+#8 2.423           from setup_posix import get_config
+#8 2.423         File "/tmp/pip-install-ah57x1ls/mysql-python_393fe552d15f445caa970167cdd2e30a/setup_posix.py", line 2, in <module>
+#8 2.423           from ConfigParser import SafeConfigParser
+#8 2.423       ModuleNotFoundError: No module named 'ConfigParser'
+#8 2.423       [end of output]
+#8 2.423   
+#8 2.423   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 2.424 error: metadata-generation-failed
+#8 2.424 
+#8 2.424 × Encountered error while generating package metadata.
+#8 2.424 ╰─> See above for output.
+#8 2.424 
+#8 2.424 note: This is an issue with the package mentioned above, not pip.
+#8 2.424 hint: See above for details.
+#8 2.429 
+#8 2.429 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.429 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install zipnish" did not complete successfully: exit code: 1
+------
+ > [4/4] RUN ["pip","install","zipnish"]:
+2.424 error: metadata-generation-failed
+2.424 
+2.424 × Encountered error while generating package metadata.
+2.424 ╰─> See above for output.
+2.424 
+2.424 note: This is an issue with the package mentioned above, not pip.
+2.424 hint: See above for details.
+2.429 
+2.429 [notice] A new release of pip is available: 24.0 -> 25.3
+2.429 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/071932322204bcad6063/snippet.py /snippet.py
+   3 |     RUN ["pip","install","scene"]
+   4 | >>> RUN ["pip","install","zipnish"]
+   5 |     CMD ["python3","/snippet.py"]
+   6 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install zipnish" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/t2cbm7hhui499ynl6hoev2wlv
+[2025-10-29 11:29:30] ERROR: Build failed for 071932322204bcad6063

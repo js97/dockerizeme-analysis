@@ -1,0 +1,49 @@
+=== Docker Build Log for 6333547 ===
+Started at: Mi 29. Okt 16:28:28 CET 2025
+
+[2025-10-29 16:28:28] START: Building image for 6333547
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 161B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 6.04kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/6333547/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","lxml"]
+#7 2.214 Collecting lxml
+#7 2.248   Downloading lxml-6.0.2-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.6 kB)
+#7 2.270 Downloading lxml-6.0.2-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.2 MB)
+#7 2.487    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 24.4 MB/s eta 0:00:00
+#7 2.537 Installing collected packages: lxml
+#7 2.664 Successfully installed lxml-6.0.2
+#7 2.664 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.757 
+#7 2.757 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.757 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.0s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.2s done
+#8 writing image sha256:f5e8b998c975ac5f7d29c6220a1b331201bb772704fcdd7093a20d9000dff38b done
+#8 naming to docker.io/library/test-image-6333547 done
+#8 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/7l1vrtbnbjy9p8fmjcrew7pcm
+[2025-10-29 16:28:32] SUCCESS: Build completed for 6333547

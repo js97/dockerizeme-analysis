@@ -1,0 +1,102 @@
+=== Docker Build Log for 4950253 ===
+Started at: Mi 29. Okt 15:04:09 CET 2025
+
+[2025-10-29 15:04:09] START: Building image for 4950253
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 202B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.61kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/4950253/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","clang"]
+#7 1.986 Collecting clang
+#7 2.018   Downloading clang-20.1.5-py3-none-any.whl.metadata (2.0 kB)
+#7 2.042 Downloading clang-20.1.5-py3-none-any.whl (38 kB)
+#7 2.089 Installing collected packages: clang
+#7 2.115 Successfully installed clang-20.1.5
+#7 2.115 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.209 
+#7 2.209 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.209 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.4s
+
+#8 [4/4] RUN ["pip","install","clang_helpers"]
+#8 0.723 Collecting clang_helpers
+#8 0.939   Downloading clang_helpers-0.3.zip (18.6 MB)
+#8 3.266      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.6/18.6 MB 7.2 MB/s eta 0:00:00
+#8 3.489   Preparing metadata (setup.py): started
+#8 4.003   Preparing metadata (setup.py): finished with status 'error'
+#8 4.007   error: subprocess-exited-with-error
+#8 4.007   
+#8 4.007   × python setup.py egg_info did not run successfully.
+#8 4.007   │ exit code: 1
+#8 4.007   ╰─> [13 lines of output]
+#8 4.007       Traceback (most recent call last):
+#8 4.007         File "<string>", line 2, in <module>
+#8 4.007         File "<pip-setuptools-caller>", line 34, in <module>
+#8 4.007         File "/tmp/pip-install-igx3rp54/clang-helpers_287041ce02f64c11a2808cf7c79c7ec9/setup.py", line 10, in <module>
+#8 4.007           paver.tasks.main()
+#8 4.007         File "paver-minilib.zip/paver/tasks.py", line 878, in main
+#8 4.007         File "paver-minilib.zip/paver/tasks.py", line 846, in _launch_pavement
+#8 4.007         File "pavement.py", line 4, in <module>
+#8 4.007           import version
+#8 4.007         File "/tmp/pip-install-igx3rp54/clang-helpers_287041ce02f64c11a2808cf7c79c7ec9/version.py", line 134
+#8 4.007           print getVersion()
+#8 4.007           ^^^^^^^^^^^^^^^^^^
+#8 4.007       SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+#8 4.007       [end of output]
+#8 4.007   
+#8 4.007   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 4.009 error: metadata-generation-failed
+#8 4.009 
+#8 4.009 × Encountered error while generating package metadata.
+#8 4.009 ╰─> See above for output.
+#8 4.009 
+#8 4.009 note: This is an issue with the package mentioned above, not pip.
+#8 4.009 hint: See above for details.
+#8 4.014 
+#8 4.014 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 4.014 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install clang_helpers" did not complete successfully: exit code: 1
+------
+ > [4/4] RUN ["pip","install","clang_helpers"]:
+4.009 error: metadata-generation-failed
+4.009 
+4.009 × Encountered error while generating package metadata.
+4.009 ╰─> See above for output.
+4.009 
+4.009 note: This is an issue with the package mentioned above, not pip.
+4.009 hint: See above for details.
+4.014 
+4.014 [notice] A new release of pip is available: 24.0 -> 25.3
+4.014 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/4950253/snippet.py /snippet.py
+   3 |     RUN ["pip","install","clang"]
+   4 | >>> RUN ["pip","install","clang_helpers"]
+   5 |     CMD ["python3","/snippet.py"]
+   6 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install clang_helpers" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/rn9pmxf641vofc6ck5cs5o5mq
+[2025-10-29 15:04:16] ERROR: Build failed for 4950253

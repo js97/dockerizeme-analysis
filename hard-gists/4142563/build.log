@@ -1,0 +1,215 @@
+=== Docker Build Log for 4142563 ===
+Started at: Mi 29. Okt 14:23:07 CET 2025
+
+[2025-10-29 14:23:07] START: Building image for 4142563
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 293B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.73kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/4142563/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","boto-patch"]
+#7 1.940 Collecting boto-patch
+#7 1.989   Downloading boto-patch-2.38.0.tar.gz (1.4 MB)
+#7 2.087      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 14.9 MB/s eta 0:00:00
+#7 2.226   Preparing metadata (setup.py): started
+#7 2.694   Preparing metadata (setup.py): finished with status 'done'
+#7 2.695 Building wheels for collected packages: boto-patch
+#7 2.696   Building wheel for boto-patch (setup.py): started
+#7 3.196   Building wheel for boto-patch (setup.py): finished with status 'done'
+#7 3.200   Created wheel for boto-patch: filename=boto_patch-2.38.0-py2.py3-none-any.whl size=1340252 sha256=d193cd8f5ecd2364bf95d67c18983800069b5929db758dfab0883328ae9ca197
+#7 3.200   Stored in directory: /root/.cache/pip/wheels/dc/8d/91/973468dc17204b5976e1d226556d1ac8be31894bdbb8cb28cf
+#7 3.205 Successfully built boto-patch
+#7 3.236 Installing collected packages: boto-patch
+#7 3.666 Successfully installed boto-patch-2.38.0
+#7 3.667 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.761 
+#7 3.761 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.761 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.1s
+
+#8 [4/7] RUN ["pip","install","boto-mws"]
+#8 0.524 Collecting boto-mws
+#8 0.558   Downloading boto_mws-2.46.2-py2.py3-none-any.whl.metadata (7.3 kB)
+#8 0.584 Downloading boto_mws-2.46.2-py2.py3-none-any.whl (1.4 MB)
+#8 0.665    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 17.1 MB/s eta 0:00:00
+#8 0.704 Installing collected packages: boto-mws
+#8 1.718 Successfully installed boto-mws-2.46.2
+#8 1.718 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.723 
+#8 1.723 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.723 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.8s
+
+#9 [5/7] RUN ["pip","install","url"]
+#9 0.527 Collecting url
+#9 0.565   Downloading url-0.4.2.tar.gz (140 kB)
+#9 0.594      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 140.9/140.9 kB 5.3 MB/s eta 0:00:00
+#9 0.602   Preparing metadata (setup.py): started
+#9 0.710   Preparing metadata (setup.py): finished with status 'done'
+#9 0.744 Collecting six (from url)
+#9 0.751   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#9 0.770 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#9 0.783 Building wheels for collected packages: url
+#9 0.787   Building wheel for url (setup.py): started
+#9 1.269   Building wheel for url (setup.py): finished with status 'error'
+#9 1.276   error: subprocess-exited-with-error
+#9 1.276   
+#9 1.276   × python setup.py bdist_wheel did not run successfully.
+#9 1.276   │ exit code: 1
+#9 1.276   ╰─> [102 lines of output]
+#9 1.276       Building from C++
+#9 1.276       /usr/local/lib/python3.11/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+#9 1.276         warnings.warn(msg)
+#9 1.276       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:599: SetuptoolsDeprecationWarning: Invalid dash-separated key 'description-file' in 'metadata' (setup.cfg), please use the underscore name 'description_file' instead.
+#9 1.276       !!
+#9 1.276       
+#9 1.276               ********************************************************************************
+#9 1.276               Usage of dash-separated 'description-file' will not be supported in future
+#9 1.276               versions. Please use the underscore name 'description_file' instead.
+#9 1.276               (Affected: url).
+#9 1.276       
+#9 1.276               By 2026-Mar-03, you need to update your project and remove deprecated calls
+#9 1.276               or your builds will no longer be supported.
+#9 1.276       
+#9 1.276               See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+#9 1.276               ********************************************************************************
+#9 1.276       
+#9 1.276       !!
+#9 1.276         opt = self._enforce_underscore(opt, section)
+#9 1.276       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+#9 1.276       !!
+#9 1.276       
+#9 1.276               ********************************************************************************
+#9 1.276               Please consider removing the following classifiers in favor of a SPDX license expression:
+#9 1.276       
+#9 1.276               License :: OSI Approved :: MIT License
+#9 1.276       
+#9 1.276               See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+#9 1.276               ********************************************************************************
+#9 1.276       
+#9 1.276       !!
+#9 1.276         self._finalize_license_expression()
+#9 1.276       In file included from url/url-cpp/include/punycode.h:10,
+#9 1.276                        from url/url-cpp/src/psl.cpp:7:
+#9 1.276       url/url-cpp/include/utf8.h:19:17: error: ‘uint32_t’ does not name a type
+#9 1.276          19 |         typedef uint32_t codepoint_t;
+#9 1.276             |                 ^~~~~~~~
+#9 1.276       url/url-cpp/include/utf8.h:1:1: note: ‘uint32_t’ is defined in header ‘<cstdint>’; this is probably fixable by adding ‘#include <cstdint>’
+#9 1.276         +++ |+#include <cstdint>
+#9 1.276           1 | #ifndef UTF8_CPP_H
+#9 1.276       url/url-cpp/include/utf8.h:29:22: error: ‘codepoint_t’ does not name a type
+#9 1.276          29 |         static const codepoint_t MAX_CODEPOINT = 0x10FFFF;
+#9 1.276             |                      ^~~~~~~~~~~
+#9 1.276       url/url-cpp/include/utf8.h:34:16: error: ‘codepoint_t’ does not name a type
+#9 1.276          34 |         static codepoint_t readCodepoint(
+#9 1.276             |                ^~~~~~~~~~~
+#9 1.276       url/url-cpp/include/utf8.h:40:62: error: ‘codepoint_t’ has not been declared
+#9 1.276          40 |         static std::string& writeCodepoint(std::string& str, codepoint_t value);
+#9 1.276             |                                                              ^~~~~~~~~~~
+#9 1.276       url/url-cpp/include/utf8.h:45:16: error: ‘codepoint_t’ does not name a type
+#9 1.276          45 |         static codepoint_t toCodepoint(const std::string& str)
+#9 1.276             |                ^~~~~~~~~~~
+#9 1.276       url/url-cpp/include/utf8.h:54:42: error: ‘codepoint_t’ has not been declared
+#9 1.276          54 |         static std::string fromCodepoint(codepoint_t value)
+#9 1.276             |                                          ^~~~~~~~~~~
+#9 1.276       url/url-cpp/include/utf8.h:64:28: error: ‘codepoint_t’ was not declared in this scope
+#9 1.276          64 |         static std::vector<codepoint_t> toCodepoints(const std::string& str)
+#9 1.276             |                            ^~~~~~~~~~~
+#9 1.276       url/url-cpp/include/utf8.h:64:39: error: template argument 1 is invalid
+#9 1.276          64 |         static std::vector<codepoint_t> toCodepoints(const std::string& str)
+#9 1.276             |                                       ^
+#9 1.276       url/url-cpp/include/utf8.h:64:39: error: template argument 2 is invalid
+#9 1.276       url/url-cpp/include/utf8.h:77:61: error: ‘codepoint_t’ was not declared in this scope
+#9 1.276          77 |         static std::string fromCodepoints(const std::vector<codepoint_t>& points)
+#9 1.276             |                                                             ^~~~~~~~~~~
+#9 1.276       url/url-cpp/include/utf8.h:77:72: error: template argument 1 is invalid
+#9 1.276          77 |         static std::string fromCodepoints(const std::vector<codepoint_t>& points)
+#9 1.276             |                                                                        ^
+#9 1.276       url/url-cpp/include/utf8.h:77:72: error: template argument 2 is invalid
+#9 1.276       url/url-cpp/include/utf8.h: In static member function ‘static int Url::Utf8::toCodepoints(const std::string&)’:
+#9 1.276       url/url-cpp/include/utf8.h:66:25: error: ‘codepoint_t’ was not declared in this scope
+#9 1.276          66 |             std::vector<codepoint_t> result;
+#9 1.276             |                         ^~~~~~~~~~~
+#9 1.276       url/url-cpp/include/utf8.h:66:36: error: template argument 1 is invalid
+#9 1.276          66 |             std::vector<codepoint_t> result;
+#9 1.276             |                                    ^
+#9 1.276       url/url-cpp/include/utf8.h:66:36: error: template argument 2 is invalid
+#9 1.276       url/url-cpp/include/utf8.h:69:24: error: request for member ‘push_back’ in ‘result’, which is of non-class type ‘int’
+#9 1.276          69 |                 result.push_back(readCodepoint(it, str.end()));
+#9 1.276             |                        ^~~~~~~~~
+#9 1.276       url/url-cpp/include/utf8.h:69:34: error: ‘readCodepoint’ was not declared in this scope; did you mean ‘writeCodepoint’?
+#9 1.276          69 |                 result.push_back(readCodepoint(it, str.end()));
+#9 1.276             |                                  ^~~~~~~~~~~~~
+#9 1.276             |                                  writeCodepoint
+#9 1.276       url/url-cpp/include/utf8.h: In static member function ‘static std::string Url::Utf8::fromCodepoints(const int&)’:
+#9 1.276       url/url-cpp/include/utf8.h:80:35: error: request for member ‘begin’ in ‘points’, which is of non-class type ‘const int’
+#9 1.276          80 |             for (auto it = points.begin(); it != points.end(); ++it)
+#9 1.276             |                                   ^~~~~
+#9 1.276       url/url-cpp/include/utf8.h:80:57: error: request for member ‘end’ in ‘points’, which is of non-class type ‘const int’
+#9 1.276          80 |             for (auto it = points.begin(); it != points.end(); ++it)
+#9 1.276             |                                                         ^~~
+#9 1.276       url/url-cpp/include/punycode.h: At global scope:
+#9 1.276       url/url-cpp/include/punycode.h:17:23: error: ‘codepoint_t’ in ‘struct Url::Utf8’ does not name a type
+#9 1.276          17 |         typedef Utf8::codepoint_t punycode_uint;
+#9 1.276             |                       ^~~~~~~~~~~
+#9 1.276       url/url-cpp/include/punycode.h:56:15: error: ‘punycode_uint’ does not name a type
+#9 1.276          56 |         const punycode_uint MAX_PUNYCODE_UINT = std::numeric_limits<punycode_uint>::max();
+#9 1.276             |               ^~~~~~~~~~~~~
+#9 1.276       url/url-cpp/include/punycode.h:98:9: error: ‘punycode_uint’ does not name a type
+#9 1.276          98 |         punycode_uint adapt(
+#9 1.276             |         ^~~~~~~~~~~~~
+#9 1.276       error: command '/usr/bin/g++' failed with exit code 1
+#9 1.276       [end of output]
+#9 1.276   
+#9 1.276   note: This error originates from a subprocess, and is likely not a problem with pip.
+#9 1.276   ERROR: Failed building wheel for url
+#9 1.276   Running setup.py clean for url
+#9 1.403 Failed to build url
+#9 1.403 ERROR: Could not build wheels for url, which is required to install pyproject.toml-based projects
+#9 1.409 
+#9 1.409 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.409 [notice] To update, run: pip install --upgrade pip
+#9 ERROR: process "pip install url" did not complete successfully: exit code: 1
+------
+ > [5/7] RUN ["pip","install","url"]:
+1.276       [end of output]
+1.276   
+1.276   note: This error originates from a subprocess, and is likely not a problem with pip.
+1.276   ERROR: Failed building wheel for url
+1.276   Running setup.py clean for url
+1.403 Failed to build url
+1.403 ERROR: Could not build wheels for url, which is required to install pyproject.toml-based projects
+1.409 
+1.409 [notice] A new release of pip is available: 24.0 -> 25.3
+1.409 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:5
+--------------------
+   3 |     RUN ["pip","install","boto-patch"]
+   4 |     RUN ["pip","install","boto-mws"]
+   5 | >>> RUN ["pip","install","url"]
+   6 |     RUN ["pip","install","dnspython"]
+   7 |     RUN ["pip","install","boto"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install url" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/p0qsxxec2fng4m93gky7i7zfu
+[2025-10-29 14:23:15] ERROR: Build failed for 4142563

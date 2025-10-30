@@ -1,0 +1,225 @@
+=== Docker Build Log for 4076735 ===
+Started at: Mi 29. Okt 14:19:21 CET 2025
+
+[2025-10-29 14:19:21] START: Building image for 4076735
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 598B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.22kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/16] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/16] COPY hard-gists/4076735/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/16] RUN ["pip","install","webvirtmgr"]
+#7 1.886 Collecting webvirtmgr
+#7 1.919   Downloading webvirtmgr-4.8.9.tar.gz (705 kB)
+#7 1.973      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 705.8/705.8 kB 13.4 MB/s eta 0:00:00
+#7 2.008   Preparing metadata (setup.py): started
+#7 2.413   Preparing metadata (setup.py): finished with status 'done'
+#7 2.417 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from webvirtmgr) (79.0.1)
+#7 2.526 Collecting django>=1.5.5 (from webvirtmgr)
+#7 2.535   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.579 Collecting gunicorn>=18.0 (from webvirtmgr)
+#7 2.587   Downloading gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+#7 2.622 Collecting lockfile>=0.9 (from webvirtmgr)
+#7 2.631   Downloading lockfile-0.12.2-py2.py3-none-any.whl.metadata (2.4 kB)
+#7 2.677 Collecting asgiref>=3.8.1 (from django>=1.5.5->webvirtmgr)
+#7 2.685   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.723 Collecting sqlparse>=0.3.1 (from django>=1.5.5->webvirtmgr)
+#7 2.732   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.784 Collecting packaging (from gunicorn>=18.0->webvirtmgr)
+#7 2.792   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#7 2.844 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.173    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 25.4 MB/s eta 0:00:00
+#7 3.181 Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB)
+#7 3.195    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.0/85.0 kB 6.5 MB/s eta 0:00:00
+#7 3.204 Downloading lockfile-0.12.2-py2.py3-none-any.whl (13 kB)
+#7 3.222 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.254 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.265    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.7 MB/s eta 0:00:00
+#7 3.286 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#7 3.298    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.7 MB/s eta 0:00:00
+#7 3.337 Building wheels for collected packages: webvirtmgr
+#7 3.338   Building wheel for webvirtmgr (setup.py): started
+#7 3.614   Building wheel for webvirtmgr (setup.py): finished with status 'done'
+#7 3.616   Created wheel for webvirtmgr: filename=webvirtmgr-4.8.9-py3-none-any.whl size=698037 sha256=7ba28a9baf9c507513a5f7123459589f2116e996018846584f6d87959f00fcf1
+#7 3.616   Stored in directory: /root/.cache/pip/wheels/c7/67/ab/a716fc1b614ea6bb537a20a0b880eb7071514208cc442aeac3
+#7 3.618 Successfully built webvirtmgr
+#7 3.686 Installing collected packages: lockfile, sqlparse, packaging, asgiref, gunicorn, django, webvirtmgr
+#7 5.216 Successfully installed asgiref-3.10.0 django-5.2.7 gunicorn-23.0.0 lockfile-0.12.2 packaging-25.0 sqlparse-0.5.3 webvirtmgr-4.8.9
+#7 5.216 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.311 
+#7 5.311 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.311 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.7s
+
+#8 [ 4/16] RUN ["pip","install","url"]
+#8 0.520 Collecting url
+#8 0.562   Downloading url-0.4.2.tar.gz (140 kB)
+#8 0.592      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 140.9/140.9 kB 4.7 MB/s eta 0:00:00
+#8 0.600   Preparing metadata (setup.py): started
+#8 0.713   Preparing metadata (setup.py): finished with status 'done'
+#8 0.752 Collecting six (from url)
+#8 0.760   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 0.781 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 0.798 Building wheels for collected packages: url
+#8 0.803   Building wheel for url (setup.py): started
+#8 1.293   Building wheel for url (setup.py): finished with status 'error'
+#8 1.300   error: subprocess-exited-with-error
+#8 1.300   
+#8 1.300   × python setup.py bdist_wheel did not run successfully.
+#8 1.300   │ exit code: 1
+#8 1.300   ╰─> [102 lines of output]
+#8 1.300       Building from C++
+#8 1.300       /usr/local/lib/python3.11/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+#8 1.300         warnings.warn(msg)
+#8 1.300       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:599: SetuptoolsDeprecationWarning: Invalid dash-separated key 'description-file' in 'metadata' (setup.cfg), please use the underscore name 'description_file' instead.
+#8 1.300       !!
+#8 1.300       
+#8 1.300               ********************************************************************************
+#8 1.300               Usage of dash-separated 'description-file' will not be supported in future
+#8 1.300               versions. Please use the underscore name 'description_file' instead.
+#8 1.300               (Affected: url).
+#8 1.300       
+#8 1.300               By 2026-Mar-03, you need to update your project and remove deprecated calls
+#8 1.300               or your builds will no longer be supported.
+#8 1.300       
+#8 1.300               See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+#8 1.300               ********************************************************************************
+#8 1.300       
+#8 1.300       !!
+#8 1.300         opt = self._enforce_underscore(opt, section)
+#8 1.300       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+#8 1.300       !!
+#8 1.300       
+#8 1.300               ********************************************************************************
+#8 1.300               Please consider removing the following classifiers in favor of a SPDX license expression:
+#8 1.300       
+#8 1.300               License :: OSI Approved :: MIT License
+#8 1.300       
+#8 1.300               See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+#8 1.300               ********************************************************************************
+#8 1.300       
+#8 1.300       !!
+#8 1.300         self._finalize_license_expression()
+#8 1.300       In file included from url/url-cpp/include/punycode.h:10,
+#8 1.300                        from url/url-cpp/src/psl.cpp:7:
+#8 1.300       url/url-cpp/include/utf8.h:19:17: error: ‘uint32_t’ does not name a type
+#8 1.300          19 |         typedef uint32_t codepoint_t;
+#8 1.300             |                 ^~~~~~~~
+#8 1.300       url/url-cpp/include/utf8.h:1:1: note: ‘uint32_t’ is defined in header ‘<cstdint>’; this is probably fixable by adding ‘#include <cstdint>’
+#8 1.300         +++ |+#include <cstdint>
+#8 1.300           1 | #ifndef UTF8_CPP_H
+#8 1.300       url/url-cpp/include/utf8.h:29:22: error: ‘codepoint_t’ does not name a type
+#8 1.300          29 |         static const codepoint_t MAX_CODEPOINT = 0x10FFFF;
+#8 1.300             |                      ^~~~~~~~~~~
+#8 1.300       url/url-cpp/include/utf8.h:34:16: error: ‘codepoint_t’ does not name a type
+#8 1.300          34 |         static codepoint_t readCodepoint(
+#8 1.300             |                ^~~~~~~~~~~
+#8 1.300       url/url-cpp/include/utf8.h:40:62: error: ‘codepoint_t’ has not been declared
+#8 1.300          40 |         static std::string& writeCodepoint(std::string& str, codepoint_t value);
+#8 1.300             |                                                              ^~~~~~~~~~~
+#8 1.300       url/url-cpp/include/utf8.h:45:16: error: ‘codepoint_t’ does not name a type
+#8 1.300          45 |         static codepoint_t toCodepoint(const std::string& str)
+#8 1.300             |                ^~~~~~~~~~~
+#8 1.300       url/url-cpp/include/utf8.h:54:42: error: ‘codepoint_t’ has not been declared
+#8 1.300          54 |         static std::string fromCodepoint(codepoint_t value)
+#8 1.300             |                                          ^~~~~~~~~~~
+#8 1.300       url/url-cpp/include/utf8.h:64:28: error: ‘codepoint_t’ was not declared in this scope
+#8 1.300          64 |         static std::vector<codepoint_t> toCodepoints(const std::string& str)
+#8 1.300             |                            ^~~~~~~~~~~
+#8 1.300       url/url-cpp/include/utf8.h:64:39: error: template argument 1 is invalid
+#8 1.300          64 |         static std::vector<codepoint_t> toCodepoints(const std::string& str)
+#8 1.300             |                                       ^
+#8 1.300       url/url-cpp/include/utf8.h:64:39: error: template argument 2 is invalid
+#8 1.300       url/url-cpp/include/utf8.h:77:61: error: ‘codepoint_t’ was not declared in this scope
+#8 1.300          77 |         static std::string fromCodepoints(const std::vector<codepoint_t>& points)
+#8 1.300             |                                                             ^~~~~~~~~~~
+#8 1.300       url/url-cpp/include/utf8.h:77:72: error: template argument 1 is invalid
+#8 1.300          77 |         static std::string fromCodepoints(const std::vector<codepoint_t>& points)
+#8 1.300             |                                                                        ^
+#8 1.300       url/url-cpp/include/utf8.h:77:72: error: template argument 2 is invalid
+#8 1.300       url/url-cpp/include/utf8.h: In static member function ‘static int Url::Utf8::toCodepoints(const std::string&)’:
+#8 1.300       url/url-cpp/include/utf8.h:66:25: error: ‘codepoint_t’ was not declared in this scope
+#8 1.300          66 |             std::vector<codepoint_t> result;
+#8 1.300             |                         ^~~~~~~~~~~
+#8 1.300       url/url-cpp/include/utf8.h:66:36: error: template argument 1 is invalid
+#8 1.300          66 |             std::vector<codepoint_t> result;
+#8 1.300             |                                    ^
+#8 1.300       url/url-cpp/include/utf8.h:66:36: error: template argument 2 is invalid
+#8 1.300       url/url-cpp/include/utf8.h:69:24: error: request for member ‘push_back’ in ‘result’, which is of non-class type ‘int’
+#8 1.300          69 |                 result.push_back(readCodepoint(it, str.end()));
+#8 1.300             |                        ^~~~~~~~~
+#8 1.300       url/url-cpp/include/utf8.h:69:34: error: ‘readCodepoint’ was not declared in this scope; did you mean ‘writeCodepoint’?
+#8 1.300          69 |                 result.push_back(readCodepoint(it, str.end()));
+#8 1.300             |                                  ^~~~~~~~~~~~~
+#8 1.300             |                                  writeCodepoint
+#8 1.300       url/url-cpp/include/utf8.h: In static member function ‘static std::string Url::Utf8::fromCodepoints(const int&)’:
+#8 1.300       url/url-cpp/include/utf8.h:80:35: error: request for member ‘begin’ in ‘points’, which is of non-class type ‘const int’
+#8 1.300          80 |             for (auto it = points.begin(); it != points.end(); ++it)
+#8 1.300             |                                   ^~~~~
+#8 1.300       url/url-cpp/include/utf8.h:80:57: error: request for member ‘end’ in ‘points’, which is of non-class type ‘const int’
+#8 1.300          80 |             for (auto it = points.begin(); it != points.end(); ++it)
+#8 1.300             |                                                         ^~~
+#8 1.300       url/url-cpp/include/punycode.h: At global scope:
+#8 1.300       url/url-cpp/include/punycode.h:17:23: error: ‘codepoint_t’ in ‘struct Url::Utf8’ does not name a type
+#8 1.300          17 |         typedef Utf8::codepoint_t punycode_uint;
+#8 1.300             |                       ^~~~~~~~~~~
+#8 1.300       url/url-cpp/include/punycode.h:56:15: error: ‘punycode_uint’ does not name a type
+#8 1.300          56 |         const punycode_uint MAX_PUNYCODE_UINT = std::numeric_limits<punycode_uint>::max();
+#8 1.300             |               ^~~~~~~~~~~~~
+#8 1.300       url/url-cpp/include/punycode.h:98:9: error: ‘punycode_uint’ does not name a type
+#8 1.300          98 |         punycode_uint adapt(
+#8 1.300             |         ^~~~~~~~~~~~~
+#8 1.300       error: command '/usr/bin/g++' failed with exit code 1
+#8 1.300       [end of output]
+#8 1.300   
+#8 1.300   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 1.300   ERROR: Failed building wheel for url
+#8 1.301   Running setup.py clean for url
+#8 1.414 Failed to build url
+#8 1.414 ERROR: Could not build wheels for url, which is required to install pyproject.toml-based projects
+#8 1.419 
+#8 1.419 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.419 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install url" did not complete successfully: exit code: 1
+------
+ > [ 4/16] RUN ["pip","install","url"]:
+1.300       [end of output]
+1.300   
+1.300   note: This error originates from a subprocess, and is likely not a problem with pip.
+1.300   ERROR: Failed building wheel for url
+1.301   Running setup.py clean for url
+1.414 Failed to build url
+1.414 ERROR: Could not build wheels for url, which is required to install pyproject.toml-based projects
+1.419 
+1.419 [notice] A new release of pip is available: 24.0 -> 25.3
+1.419 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/4076735/snippet.py /snippet.py
+   3 |     RUN ["pip","install","webvirtmgr"]
+   4 | >>> RUN ["pip","install","url"]
+   5 |     RUN ["pip","install","py-curses-editor"]
+   6 |     RUN ["pip","install","six"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install url" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/gjfpdpy4a5n7ycsx0loejjec2
+[2025-10-29 14:19:28] ERROR: Build failed for 4076735

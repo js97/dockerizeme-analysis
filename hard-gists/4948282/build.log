@@ -1,0 +1,89 @@
+=== Docker Build Log for 4948282 ===
+Started at: Mi 29. Okt 15:04:02 CET 2025
+
+[2025-10-29 15:04:02] START: Building image for 4948282
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 198B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.31kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/4948282/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","Flask"]
+#7 2.428 Collecting Flask
+#7 2.471   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#7 2.527 Collecting blinker>=1.9.0 (from Flask)
+#7 2.538   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#7 2.594 Collecting click>=8.1.3 (from Flask)
+#7 2.604   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#7 2.640 Collecting itsdangerous>=2.2.0 (from Flask)
+#7 2.649   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#7 2.692 Collecting jinja2>=3.1.2 (from Flask)
+#7 2.701   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#7 2.789 Collecting markupsafe>=2.1.1 (from Flask)
+#7 2.797   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#7 2.851 Collecting werkzeug>=3.1.0 (from Flask)
+#7 2.861   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#7 2.895 Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+#7 2.920    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 4.2 MB/s eta 0:00:00
+#7 2.929 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#7 2.951 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#7 2.964    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 9.0 MB/s eta 0:00:00
+#7 2.973 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#7 2.992 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#7 3.006    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 10.4 MB/s eta 0:00:00
+#7 3.015 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#7 3.034 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#7 3.050    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 15.4 MB/s eta 0:00:00
+#7 3.099 Installing collected packages: markupsafe, itsdangerous, click, blinker, werkzeug, jinja2, Flask
+#7 3.409 Successfully installed Flask-3.1.2 blinker-1.9.0 click-8.3.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.3 werkzeug-3.1.3
+#7 3.410 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.501 
+#7 3.501 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.501 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.7s
+
+#8 [4/4] RUN ["pip","install","Flask-Ext"]
+#8 0.527 Collecting Flask-Ext
+#8 0.565   Downloading Flask_Ext-0.1-py3-none-any.whl.metadata (2.1 kB)
+#8 0.581 Requirement already satisfied: Flask in /usr/local/lib/python3.11/site-packages (from Flask-Ext) (3.1.2)
+#8 0.586 Requirement already satisfied: blinker>=1.9.0 in /usr/local/lib/python3.11/site-packages (from Flask->Flask-Ext) (1.9.0)
+#8 0.587 Requirement already satisfied: click>=8.1.3 in /usr/local/lib/python3.11/site-packages (from Flask->Flask-Ext) (8.3.0)
+#8 0.588 Requirement already satisfied: itsdangerous>=2.2.0 in /usr/local/lib/python3.11/site-packages (from Flask->Flask-Ext) (2.2.0)
+#8 0.589 Requirement already satisfied: jinja2>=3.1.2 in /usr/local/lib/python3.11/site-packages (from Flask->Flask-Ext) (3.1.6)
+#8 0.590 Requirement already satisfied: markupsafe>=2.1.1 in /usr/local/lib/python3.11/site-packages (from Flask->Flask-Ext) (3.0.3)
+#8 0.591 Requirement already satisfied: werkzeug>=3.1.0 in /usr/local/lib/python3.11/site-packages (from Flask->Flask-Ext) (3.1.3)
+#8 0.610 Downloading Flask_Ext-0.1-py3-none-any.whl (3.6 kB)
+#8 0.660 Installing collected packages: Flask-Ext
+#8 0.694 Successfully installed Flask-Ext-0.1
+#8 0.694 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.699 
+#8 0.699 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.699 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.8s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.2s done
+#9 writing image sha256:f34d85ecd165026e769608ccef4f5bb0d050bb17dadfe5ad1c583dab40e4de6e done
+#9 naming to docker.io/library/test-image-4948282 done
+#9 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/xa5mbnlguzhk6qh9575s9vtob
+[2025-10-29 15:04:07] SUCCESS: Build completed for 4948282

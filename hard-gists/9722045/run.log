@@ -1,0 +1,21 @@
+=== Docker Run Log for 9722045 ===
+Started at: Mi 29. Okt 18:31:26 CET 2025
+
+[2025-10-29 18:31:27] START: Running container for 9722045
+[2025-10-29 18:31:27] SUCCESS: Container e940d9090d1a81f4c7c7e965e5d0c7bbc8ab1b5b5fd559f1c2563025d5de4ee1 started for 9722045
+=== Container logs for 9722045 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 239, in <module>
+    __main()
+  File "/snippet.py", line 209, in __main
+    oauth2 = OAuth2()
+             ^^^^^^^^
+  File "/snippet.py", line 61, in __init__
+    self.__initConfiguration() # init self.conf, self.orgConf
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 70, in __initConfiguration
+    with open(self.configFile, "r") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'oauth2.ini'
+=== End of logs for 9722045 ===
+[2025-10-29 18:31:29] INFO: Container e940d9090d1a81f4c7c7e965e5d0c7bbc8ab1b5b5fd559f1c2563025d5de4ee1 has stopped

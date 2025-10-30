@@ -1,0 +1,311 @@
+=== Docker Build Log for bd57b54a5c6903e4a6a2 ===
+Started at: Mi 29. Okt 19:40:09 CET 2025
+
+[2025-10-29 19:40:09] START: Building image for bd57b54a5c6903e4a6a2
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 429B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.85kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/11] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/11] COPY hard-gists/bd57b54a5c6903e4a6a2/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/11] RUN ["pip","install","numpy"]
+#7 2.106 Collecting numpy
+#7 2.147   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.174      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.1 MB/s eta 0:00:00
+#7 2.196 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 3.351    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 13.9 MB/s eta 0:00:00
+#7 3.426 Installing collected packages: numpy
+#7 4.808 Successfully installed numpy-2.3.4
+#7 4.808 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.907 
+#7 4.907 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.907 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.6s
+
+#8 [ 4/11] RUN ["pip","install","tornado"]
+#8 0.541 Collecting tornado
+#8 0.577   Downloading tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+#8 0.600 Downloading tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (443 kB)
+#8 0.655    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 443.9/443.9 kB 8.2 MB/s eta 0:00:00
+#8 0.694 Installing collected packages: tornado
+#8 0.895 Successfully installed tornado-6.5.2
+#8 0.895 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.900 
+#8 0.900 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.900 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.0s
+
+#9 [ 5/11] RUN ["pip","install","ipython"]
+#9 0.572 Collecting ipython
+#9 0.607   Downloading ipython-9.6.0-py3-none-any.whl.metadata (4.4 kB)
+#9 0.667 Collecting decorator (from ipython)
+#9 0.676   Downloading decorator-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+#9 0.711 Collecting ipython-pygments-lexers (from ipython)
+#9 0.719   Downloading ipython_pygments_lexers-1.1.1-py3-none-any.whl.metadata (1.1 kB)
+#9 0.764 Collecting jedi>=0.16 (from ipython)
+#9 0.772   Downloading jedi-0.19.2-py2.py3-none-any.whl.metadata (22 kB)
+#9 0.814 Collecting matplotlib-inline (from ipython)
+#9 0.823   Downloading matplotlib_inline-0.2.1-py3-none-any.whl.metadata (2.3 kB)
+#9 0.858 Collecting pexpect>4.3 (from ipython)
+#9 0.869   Downloading pexpect-4.9.0-py2.py3-none-any.whl.metadata (2.5 kB)
+#9 0.923 Collecting prompt_toolkit<3.1.0,>=3.0.41 (from ipython)
+#9 0.933   Downloading prompt_toolkit-3.0.52-py3-none-any.whl.metadata (6.4 kB)
+#9 0.982 Collecting pygments>=2.4.0 (from ipython)
+#9 0.990   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#9 1.029 Collecting stack_data (from ipython)
+#9 1.039   Downloading stack_data-0.6.3-py3-none-any.whl.metadata (18 kB)
+#9 1.087 Collecting traitlets>=5.13.0 (from ipython)
+#9 1.096   Downloading traitlets-5.14.3-py3-none-any.whl.metadata (10 kB)
+#9 1.142 Collecting typing_extensions>=4.6 (from ipython)
+#9 1.150   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#9 1.207 Collecting parso<0.9.0,>=0.8.4 (from jedi>=0.16->ipython)
+#9 1.215   Downloading parso-0.8.5-py2.py3-none-any.whl.metadata (8.3 kB)
+#9 1.252 Collecting ptyprocess>=0.5 (from pexpect>4.3->ipython)
+#9 1.273   Downloading ptyprocess-0.7.0-py2.py3-none-any.whl.metadata (1.3 kB)
+#9 1.309 Collecting wcwidth (from prompt_toolkit<3.1.0,>=3.0.41->ipython)
+#9 1.318   Downloading wcwidth-0.2.14-py2.py3-none-any.whl.metadata (15 kB)
+#9 1.381 Collecting executing>=1.2.0 (from stack_data->ipython)
+#9 1.390   Downloading executing-2.2.1-py2.py3-none-any.whl.metadata (8.9 kB)
+#9 1.432 Collecting asttokens>=2.1.0 (from stack_data->ipython)
+#9 1.440   Downloading asttokens-3.0.0-py3-none-any.whl.metadata (4.7 kB)
+#9 1.478 Collecting pure-eval (from stack_data->ipython)
+#9 1.487   Downloading pure_eval-0.2.3-py3-none-any.whl.metadata (6.3 kB)
+#9 1.521 Downloading ipython-9.6.0-py3-none-any.whl (616 kB)
+#9 1.602    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 616.2/616.2 kB 7.6 MB/s eta 0:00:00
+#9 1.614 Downloading jedi-0.19.2-py2.py3-none-any.whl (1.6 MB)
+#9 1.744    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 12.2 MB/s eta 0:00:00
+#9 1.753 Downloading pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+#9 1.773    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.8/63.8 kB 4.3 MB/s eta 0:00:00
+#9 1.782 Downloading prompt_toolkit-3.0.52-py3-none-any.whl (391 kB)
+#9 1.813    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 391.4/391.4 kB 12.7 MB/s eta 0:00:00
+#9 1.822 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#9 1.903    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 15.3 MB/s eta 0:00:00
+#9 1.913 Downloading traitlets-5.14.3-py3-none-any.whl (85 kB)
+#9 1.930    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.4/85.4 kB 4.7 MB/s eta 0:00:00
+#9 1.939 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#9 1.951    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.6 MB/s eta 0:00:00
+#9 1.962 Downloading decorator-5.2.1-py3-none-any.whl (9.2 kB)
+#9 1.983 Downloading ipython_pygments_lexers-1.1.1-py3-none-any.whl (8.1 kB)
+#9 2.000 Downloading matplotlib_inline-0.2.1-py3-none-any.whl (9.5 kB)
+#9 2.017 Downloading stack_data-0.6.3-py3-none-any.whl (24 kB)
+#9 2.034 Downloading asttokens-3.0.0-py3-none-any.whl (26 kB)
+#9 2.055 Downloading executing-2.2.1-py2.py3-none-any.whl (28 kB)
+#9 2.078 Downloading parso-0.8.5-py2.py3-none-any.whl (106 kB)
+#9 2.091    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.7/106.7 kB 8.3 MB/s eta 0:00:00
+#9 2.100 Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+#9 2.118 Downloading pure_eval-0.2.3-py3-none-any.whl (11 kB)
+#9 2.136 Downloading wcwidth-0.2.14-py2.py3-none-any.whl (37 kB)
+#9 2.282 Installing collected packages: pure-eval, ptyprocess, wcwidth, typing_extensions, traitlets, pygments, pexpect, parso, executing, decorator, asttokens, stack_data, prompt_toolkit, matplotlib-inline, jedi, ipython-pygments-lexers, ipython
+#9 3.878 Successfully installed asttokens-3.0.0 decorator-5.2.1 executing-2.2.1 ipython-9.6.0 ipython-pygments-lexers-1.1.1 jedi-0.19.2 matplotlib-inline-0.2.1 parso-0.8.5 pexpect-4.9.0 prompt_toolkit-3.0.52 ptyprocess-0.7.0 pure-eval-0.2.3 pygments-2.19.2 stack_data-0.6.3 traitlets-5.14.3 typing_extensions-4.15.0 wcwidth-0.2.14
+#9 3.879 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 3.884 
+#9 3.884 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 3.884 [notice] To update, run: pip install --upgrade pip
+#9 DONE 4.4s
+
+#10 [ 6/11] RUN ["pip","install","scipy"]
+#10 0.668 Collecting scipy
+#10 0.718   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#10 0.741      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.5 MB/s eta 0:00:00
+#10 0.770 Requirement already satisfied: numpy<2.6,>=1.25.2 in /usr/local/lib/python3.11/site-packages (from scipy) (2.3.4)
+#10 0.786 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#10 3.518    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 11.1 MB/s eta 0:00:00
+#10 3.718 Installing collected packages: scipy
+#10 6.412 Successfully installed scipy-1.16.3
+#10 6.412 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 6.417 
+#10 6.417 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 6.417 [notice] To update, run: pip install --upgrade pip
+#10 DONE 7.4s
+
+#11 [ 7/11] RUN ["pip","install","pandas"]
+#11 0.688 Collecting pandas
+#11 0.742   Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+#11 0.778      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 2.4 MB/s eta 0:00:00
+#11 0.832 Requirement already satisfied: numpy>=1.23.2 in /usr/local/lib/python3.11/site-packages (from pandas) (2.3.4)
+#11 0.871 Collecting python-dateutil>=2.8.2 (from pandas)
+#11 0.890   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#11 0.978 Collecting pytz>=2020.1 (from pandas)
+#11 0.989   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#11 1.046 Collecting tzdata>=2022.7 (from pandas)
+#11 1.054   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#11 1.108 Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas)
+#11 1.119   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#11 1.141 Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+#11 2.321    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 10.9 MB/s eta 0:00:00
+#11 2.334 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#11 2.370    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 8.4 MB/s eta 0:00:00
+#11 2.379 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#11 2.426    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 11.5 MB/s eta 0:00:00
+#11 2.435 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#11 2.482    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 7.4 MB/s eta 0:00:00
+#11 2.506 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#11 2.736 Installing collected packages: pytz, tzdata, six, python-dateutil, pandas
+#11 5.816 Successfully installed pandas-2.3.3 python-dateutil-2.9.0.post0 pytz-2025.2 six-1.17.0 tzdata-2025.2
+#11 5.817 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 5.822 
+#11 5.822 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 5.822 [notice] To update, run: pip install --upgrade pip
+#11 DONE 6.6s
+
+#12 [ 8/11] RUN ["pip","install","matplotlib"]
+#12 0.637 Collecting matplotlib
+#12 0.674   Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#12 0.784 Collecting contourpy>=1.0.1 (from matplotlib)
+#12 0.793   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#12 0.841 Collecting cycler>=0.10 (from matplotlib)
+#12 0.854   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#12 1.044 Collecting fonttools>=4.22.0 (from matplotlib)
+#12 1.054   Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+#12 1.103      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.3/112.3 kB 2.2 MB/s eta 0:00:00
+#12 1.199 Collecting kiwisolver>=1.3.1 (from matplotlib)
+#12 1.208   Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+#12 1.230 Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.11/site-packages (from matplotlib) (2.3.4)
+#12 1.266 Collecting packaging>=20.0 (from matplotlib)
+#12 1.275   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#12 1.472 Collecting pillow>=8 (from matplotlib)
+#12 1.483   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#12 1.555 Collecting pyparsing>=3 (from matplotlib)
+#12 1.565   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#12 1.584 Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.11/site-packages (from matplotlib) (2.9.0.post0)
+#12 1.638 Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.11/site-packages (from python-dateutil>=2.7->matplotlib) (1.17.0)
+#12 1.651 Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+#12 2.255    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 14.4 MB/s eta 0:00:00
+#12 2.267 Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+#12 2.297    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 355.2/355.2 kB 12.3 MB/s eta 0:00:00
+#12 2.305 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#12 2.327 Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#12 2.686    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 13.9 MB/s eta 0:00:00
+#12 2.697 Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+#12 2.829    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 11.0 MB/s eta 0:00:00
+#12 2.840 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#12 2.856    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 4.0 MB/s eta 0:00:00
+#12 2.867 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#12 3.382    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 13.7 MB/s eta 0:00:00
+#12 3.406 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#12 3.434    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 3.9 MB/s eta 0:00:00
+#12 3.718 Installing collected packages: pyparsing, pillow, packaging, kiwisolver, fonttools, cycler, contourpy, matplotlib
+#12 5.716 Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.60.1 kiwisolver-1.4.9 matplotlib-3.10.7 packaging-25.0 pillow-12.0.0 pyparsing-3.2.5
+#12 5.716 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 5.721 
+#12 5.721 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 5.721 [notice] To update, run: pip install --upgrade pip
+#12 DONE 6.3s
+
+#13 [ 9/11] RUN ["pip","install","pyzmq"]
+#13 0.788 Collecting pyzmq
+#13 0.827   Downloading pyzmq-27.1.0-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (6.0 kB)
+#13 0.872 Downloading pyzmq-27.1.0-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (857 kB)
+#13 0.961    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 857.0/857.0 kB 9.9 MB/s eta 0:00:00
+#13 1.194 Installing collected packages: pyzmq
+#13 1.307 Successfully installed pyzmq-27.1.0
+#13 1.308 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 1.313 
+#13 1.313 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 1.313 [notice] To update, run: pip install --upgrade pip
+#13 DONE 1.4s
+
+#14 [10/11] RUN ["pip","install","dask"]
+#14 0.600 Collecting dask
+#14 0.636   Downloading dask-2025.10.0-py3-none-any.whl.metadata (3.8 kB)
+#14 0.702 Collecting click>=8.1 (from dask)
+#14 0.711   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#14 0.764 Collecting cloudpickle>=3.0.0 (from dask)
+#14 0.774   Downloading cloudpickle-3.1.1-py3-none-any.whl.metadata (7.1 kB)
+#14 0.842 Collecting fsspec>=2021.09.0 (from dask)
+#14 0.858   Downloading fsspec-2025.9.0-py3-none-any.whl.metadata (10 kB)
+#14 0.885 Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.11/site-packages (from dask) (25.0)
+#14 0.916 Collecting partd>=1.4.0 (from dask)
+#14 0.930   Downloading partd-1.4.2-py3-none-any.whl.metadata (4.6 kB)
+#14 0.994 Collecting pyyaml>=5.3.1 (from dask)
+#14 1.004   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#14 1.053 Collecting toolz>=0.10.0 (from dask)
+#14 1.062   Downloading toolz-1.1.0-py3-none-any.whl.metadata (5.1 kB)
+#14 1.141 Collecting importlib_metadata>=4.13.0 (from dask)
+#14 1.150   Downloading importlib_metadata-8.7.0-py3-none-any.whl.metadata (4.8 kB)
+#14 1.269 Collecting zipp>=3.20 (from importlib_metadata>=4.13.0->dask)
+#14 1.278   Downloading zipp-3.23.0-py3-none-any.whl.metadata (3.6 kB)
+#14 1.317 Collecting locket (from partd>=1.4.0->dask)
+#14 1.347   Downloading locket-1.0.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#14 1.383 Downloading dask-2025.10.0-py3-none-any.whl (1.5 MB)
+#14 1.516    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 11.3 MB/s eta 0:00:00
+#14 1.524 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#14 1.543    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 5.7 MB/s eta 0:00:00
+#14 1.552 Downloading cloudpickle-3.1.1-py3-none-any.whl (20 kB)
+#14 1.577 Downloading fsspec-2025.9.0-py3-none-any.whl (199 kB)
+#14 1.602    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 199.3/199.3 kB 8.2 MB/s eta 0:00:00
+#14 1.611 Downloading importlib_metadata-8.7.0-py3-none-any.whl (27 kB)
+#14 1.637 Downloading partd-1.4.2-py3-none-any.whl (18 kB)
+#14 1.707 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#14 2.047    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 2.4 MB/s eta 0:00:00
+#14 2.056 Downloading toolz-1.1.0-py3-none-any.whl (58 kB)
+#14 2.075    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.1/58.1 kB 3.2 MB/s eta 0:00:00
+#14 2.083 Downloading zipp-3.23.0-py3-none-any.whl (10 kB)
+#14 2.102 Downloading locket-1.0.0-py2.py3-none-any.whl (4.4 kB)
+#14 2.419 Installing collected packages: zipp, toolz, pyyaml, locket, fsspec, cloudpickle, click, partd, importlib_metadata, dask
+#14 3.739 Successfully installed click-8.3.0 cloudpickle-3.1.1 dask-2025.10.0 fsspec-2025.9.0 importlib_metadata-8.7.0 locket-1.0.0 partd-1.4.2 pyyaml-6.0.3 toolz-1.1.0 zipp-3.23.0
+#14 3.740 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#14 3.745 
+#14 3.745 [notice] A new release of pip is available: 24.0 -> 25.3
+#14 3.745 [notice] To update, run: pip install --upgrade pip
+#14 DONE 4.1s
+
+#15 [11/11] RUN ["pip","install","rasterio"]
+#15 0.750 Collecting rasterio
+#15 0.798   Downloading rasterio-1.4.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.1 kB)
+#15 0.973 Collecting affine (from rasterio)
+#15 0.984   Downloading affine-2.4.0-py3-none-any.whl.metadata (4.0 kB)
+#15 1.044 Collecting attrs (from rasterio)
+#15 1.053   Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+#15 1.113 Collecting certifi (from rasterio)
+#15 1.122   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#15 1.134 Requirement already satisfied: click>=4.0 in /usr/local/lib/python3.11/site-packages (from rasterio) (8.3.0)
+#15 1.260 Collecting cligj>=0.5 (from rasterio)
+#15 1.270   Downloading cligj-0.7.2-py3-none-any.whl.metadata (5.0 kB)
+#15 1.291 Requirement already satisfied: numpy>=1.24 in /usr/local/lib/python3.11/site-packages (from rasterio) (2.3.4)
+#15 1.336 Collecting click-plugins (from rasterio)
+#15 1.355   Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl.metadata (6.5 kB)
+#15 1.366 Requirement already satisfied: pyparsing in /usr/local/lib/python3.11/site-packages (from rasterio) (3.2.5)
+#15 1.393 Downloading rasterio-1.4.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (22.2 MB)
+#15 3.190    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 22.2/22.2 MB 10.5 MB/s eta 0:00:00
+#15 3.201 Downloading cligj-0.7.2-py3-none-any.whl (7.1 kB)
+#15 3.227 Downloading affine-2.4.0-py3-none-any.whl (15 kB)
+#15 3.250 Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+#15 3.274    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.6/67.6 kB 3.1 MB/s eta 0:00:00
+#15 3.284 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#15 3.303    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 8.9 MB/s eta 0:00:00
+#15 3.313 Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl (11 kB)
+#15 3.695 Installing collected packages: cligj, click-plugins, certifi, attrs, affine, rasterio
+#15 4.141 Successfully installed affine-2.4.0 attrs-25.4.0 certifi-2025.10.5 click-plugins-1.1.1.2 cligj-0.7.2 rasterio-1.4.3
+#15 4.141 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#15 4.146 
+#15 4.146 [notice] A new release of pip is available: 24.0 -> 25.3
+#15 4.146 [notice] To update, run: pip install --upgrade pip
+#15 DONE 4.8s
+
+#16 exporting to image
+#16 exporting layers
+#16 exporting layers 0.9s done
+#16 writing image sha256:a98d2c0c67920fabbfa730dd11c3d8d8a0e8080b9a8cd6f9809d2192cdd2d34f done
+#16 naming to docker.io/library/test-image-bd57b54a5c6903e4a6a2 done
+#16 DONE 1.0s
+
+View build details: docker-desktop://dashboard/build/default/default/ogs6a2itmfjr9jtqkg147pzty
+[2025-10-29 19:40:52] SUCCESS: Build completed for bd57b54a5c6903e4a6a2

@@ -1,0 +1,94 @@
+=== Docker Build Log for 7dc87b8d1dc16b025e7019113cc2de93 ===
+Started at: Mi 29. Okt 17:32:32 CET 2025
+
+[2025-10-29 17:32:32] START: Building image for 7dc87b8d1dc16b025e7019113cc2de93
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 267B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.48kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/7dc87b8d1dc16b025e7019113cc2de93/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","requests"]
+#7 2.036 Collecting requests
+#7 2.069   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.195 Collecting charset_normalizer<4,>=2 (from requests)
+#7 2.205   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.248 Collecting idna<4,>=2.5 (from requests)
+#7 2.257   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.320 Collecting urllib3<3,>=1.21.1 (from requests)
+#7 2.328   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.372 Collecting certifi>=2017.4.17 (from requests)
+#7 2.381   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.407 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.427    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.1 MB/s eta 0:00:00
+#7 2.435 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.458    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 7.5 MB/s eta 0:00:00
+#7 2.468 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.483    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.6 MB/s eta 0:00:00
+#7 2.492 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.503    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 6.2 MB/s eta 0:00:00
+#7 2.511 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.524    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 10.0 MB/s eta 0:00:00
+#7 2.570 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#7 2.786 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#7 2.786 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.877 
+#7 2.877 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.877 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.1s
+
+#8 [4/5] RUN ["pip","install","requests-oauthlib"]
+#8 0.541 Collecting requests-oauthlib
+#8 0.577   Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl.metadata (11 kB)
+#8 0.632 Collecting oauthlib>=3.0.0 (from requests-oauthlib)
+#8 0.641   Downloading oauthlib-3.3.1-py3-none-any.whl.metadata (7.9 kB)
+#8 0.662 Requirement already satisfied: requests>=2.0.0 in /usr/local/lib/python3.11/site-packages (from requests-oauthlib) (2.32.5)
+#8 0.670 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests>=2.0.0->requests-oauthlib) (3.4.4)
+#8 0.671 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests>=2.0.0->requests-oauthlib) (3.11)
+#8 0.672 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests>=2.0.0->requests-oauthlib) (2.5.0)
+#8 0.673 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests>=2.0.0->requests-oauthlib) (2025.10.5)
+#8 0.689 Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl (24 kB)
+#8 0.722 Downloading oauthlib-3.3.1-py3-none-any.whl (160 kB)
+#8 0.749    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 160.1/160.1 kB 5.9 MB/s eta 0:00:00
+#8 0.797 Installing collected packages: oauthlib, requests-oauthlib
+#8 0.899 Successfully installed oauthlib-3.3.1 requests-oauthlib-2.0.0
+#8 0.899 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.904 
+#8 0.904 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.904 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.0s
+
+#9 [5/5] RUN ["pip","install","oauthlib"]
+#9 0.462 Requirement already satisfied: oauthlib in /usr/local/lib/python3.11/site-packages (3.3.1)
+#9 0.507 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.512 
+#9 0.512 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.512 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.6s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.2s done
+#10 writing image sha256:a883a57ae582b6ed169ca9bb4cc35a5eebcf684dbc619d008999887fd543d703 done
+#10 naming to docker.io/library/test-image-7dc87b8d1dc16b025e7019113cc2de93 done
+#10 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/vusdmosz1wrdlkchqsps174gt
+[2025-10-29 17:32:38] SUCCESS: Build completed for 7dc87b8d1dc16b025e7019113cc2de93

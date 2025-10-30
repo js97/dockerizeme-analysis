@@ -1,0 +1,87 @@
+=== Docker Build Log for e6e53cbe679d3ec77e25 ===
+Started at: Mi 29. Okt 20:47:42 CET 2025
+
+[2025-10-29 20:47:42] START: Building image for e6e53cbe679d3ec77e25
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 365B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.66kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/8] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/8] COPY hard-gists/e6e53cbe679d3ec77e25/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/8] RUN ["apt-get","update"]
+#7 0.276 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.276 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.292 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.316 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.989 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 1.001 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.570 Fetched 9833 kB in 1s (7355 kB/s)
+#7 1.570 Reading package lists...
+#7 DONE 2.2s
+
+#8 [4/8] RUN ["pip","install","pan-python"]
+#8 2.062 Collecting pan-python
+#8 2.099   Downloading pan_python-0.25.0-py3-none-any.whl.metadata (1.4 kB)
+#8 2.127 Downloading pan_python-0.25.0-py3-none-any.whl (60 kB)
+#8 2.150    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.3/60.3 kB 2.6 MB/s eta 0:00:00
+#8 2.182 Installing collected packages: pan-python
+#8 2.231 Successfully installed pan-python-0.25.0
+#8 2.231 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.323 
+#8 2.323 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.323 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.5s
+
+#9 [5/8] RUN ["apt-get","install","-y","python-pip"]
+#9 0.216 Reading package lists...
+#9 0.649 Building dependency tree...
+#9 0.755 Reading state information...
+#9 0.770 Package python-pip is not available, but is referred to by another package.
+#9 0.770 This may mean that the package is missing, has been obsoleted, or
+#9 0.770 is only available from another source
+#9 0.770 However the following packages replace it:
+#9 0.770   python3-pip
+#9 0.770 
+#9 0.772 E: Package 'python-pip' has no installation candidate
+#9 ERROR: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+------
+ > [5/8] RUN ["apt-get","install","-y","python-pip"]:
+
+
+0.770 Package python-pip is not available, but is referred to by another package.
+0.770 This may mean that the package is missing, has been obsoleted, or
+0.770 is only available from another source
+0.770 However the following packages replace it:
+0.770   python3-pip
+0.770 
+0.772 E: Package 'python-pip' has no installation candidate
+------
+Dockerfile:5
+--------------------
+   3 |     RUN ["apt-get","update"]
+   4 |     RUN ["pip","install","pan-python"]
+   5 | >>> RUN ["apt-get","install","-y","python-pip"]
+   6 |     RUN ["apt-get","install","-y","python-dev"]
+   7 |     RUN ["pip","install","pyandoc"]
+--------------------
+ERROR: failed to build: failed to solve: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/default/default/a5e6p2eecn779vlbj8fi9nq4n
+[2025-10-29 20:47:48] ERROR: Build failed for e6e53cbe679d3ec77e25

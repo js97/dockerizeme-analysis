@@ -1,0 +1,12 @@
+=== Docker Run Log for 1326477 ===
+Started at: Mi 29. Okt 12:07:12 CET 2025
+
+[2025-10-29 12:07:24] START: Running container for 1326477
+[2025-10-29 12:07:24] SUCCESS: Container 624d49ce3d3dc5da27b3498ec9131a4e73f643cb6f8ee06f876cc417976dc3ec started for 1326477
+=== Container logs for 1326477 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 13, in <module>
+    from myapp.tasks import celery, MyBaseTask
+ModuleNotFoundError: No module named 'myapp.tasks'
+=== End of logs for 1326477 ===
+[2025-10-29 12:07:26] INFO: Container 624d49ce3d3dc5da27b3498ec9131a4e73f643cb6f8ee06f876cc417976dc3ec has stopped

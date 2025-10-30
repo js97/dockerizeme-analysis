@@ -1,0 +1,15 @@
+=== Docker Run Log for aa46105d34349543582b177ae79f32f0 ===
+Started at: Mi 29. Okt 19:11:22 CET 2025
+
+[2025-10-29 19:11:45] START: Running container for aa46105d34349543582b177ae79f32f0
+[2025-10-29 19:11:45] SUCCESS: Container 4ff76da4f2010fb480788952fc84e3d71ac6f0dcdedcf7e81ab40d45566519b2 started for aa46105d34349543582b177ae79f32f0
+=== Container logs for aa46105d34349543582b177ae79f32f0 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 87, in <module>
+    go()
+  File "/snippet.py", line 36, in go
+    with open('labels.txt') as label_file:
+         ^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'labels.txt'
+=== End of logs for aa46105d34349543582b177ae79f32f0 ===
+[2025-10-29 19:11:47] INFO: Container 4ff76da4f2010fb480788952fc84e3d71ac6f0dcdedcf7e81ab40d45566519b2 has stopped

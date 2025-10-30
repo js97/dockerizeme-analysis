@@ -1,0 +1,102 @@
+=== Docker Build Log for 1134410 ===
+Started at: Mi 29. Okt 11:54:59 CET 2025
+
+[2025-10-29 11:54:59] START: Building image for 1134410
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 196B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.26kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/1134410/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","bpy"]
+#7 2.093 Collecting bpy
+#7 2.127   Downloading bpy-4.5.4-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (2.0 kB)
+#7 2.410 Collecting cython (from bpy)
+#7 2.422   Downloading cython-3.1.6-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.0 kB)
+#7 2.666 Collecting numpy<2.0,>=1.26 (from bpy)
+#7 2.677   Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+#7 2.704      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.0/61.0 kB 2.0 MB/s eta 0:00:00
+#7 2.760 Collecting requests (from bpy)
+#7 2.768   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.868 Collecting zstandard (from bpy)
+#7 2.877   Downloading zstandard-0.25.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.3 kB)
+#7 2.999 Collecting charset_normalizer<4,>=2 (from requests->bpy)
+#7 3.008   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 3.056 Collecting idna<4,>=2.5 (from requests->bpy)
+#7 3.064   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 3.130 Collecting urllib3<3,>=1.21.1 (from requests->bpy)
+#7 3.138   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 3.186 Collecting certifi>=2017.4.17 (from requests->bpy)
+#7 3.195   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 3.228 Downloading bpy-4.5.4-cp311-cp311-manylinux_2_28_x86_64.whl (373.0 MB)
+#7 16.47    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 373.0/373.0 MB 5.7 MB/s eta 0:00:00
+#7 16.48 Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.3 MB)
+#7 17.62    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.3/18.3 MB 11.4 MB/s eta 0:00:00
+#7 17.63 Downloading cython-3.1.6-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.3 MB)
+#7 17.76    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 26.7 MB/s eta 0:00:00
+#7 17.77 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 17.78    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 5.5 MB/s eta 0:00:00
+#7 17.79 Downloading zstandard-0.25.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.6 MB)
+#7 17.99    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.6/5.6 MB 27.4 MB/s eta 0:00:00
+#7 18.00 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 18.01    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 11.3 MB/s eta 0:00:00
+#7 18.02 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 18.04    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.8 MB/s eta 0:00:00
+#7 18.05 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 18.06    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.4 MB/s eta 0:00:00
+#7 18.07 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 18.08    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.1 MB/s eta 0:00:00
+#7 19.02 Installing collected packages: zstandard, urllib3, numpy, idna, cython, charset_normalizer, certifi, requests, bpy
+#7 26.23 Successfully installed bpy-4.5.4 certifi-2025.10.5 charset_normalizer-3.4.4 cython-3.1.6 idna-3.11 numpy-1.26.4 requests-2.32.5 urllib3-2.5.0 zstandard-0.25.0
+#7 26.23 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 26.34 
+#7 26.34 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 26.34 [notice] To update, run: pip install --upgrade pip
+#7 DONE 32.1s
+
+#8 [4/4] RUN ["pip","install","mathutils"]
+#8 0.665 Collecting mathutils
+#8 0.698   Downloading mathutils-3.3.0.tar.gz (245 kB)
+#8 0.739      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 245.4/245.4 kB 6.5 MB/s eta 0:00:00
+#8 0.757   Preparing metadata (setup.py): started
+#8 1.231   Preparing metadata (setup.py): finished with status 'done'
+#8 1.233 Building wheels for collected packages: mathutils
+#8 1.233   Building wheel for mathutils (setup.py): started
+#8 9.148   Building wheel for mathutils (setup.py): finished with status 'done'
+#8 9.150   Created wheel for mathutils: filename=mathutils-3.3.0-cp311-cp311-linux_x86_64.whl size=714345 sha256=8f90160670db05fa191b6bdab00e1d0381fda7c74c52288a0c314b15906fe3b0
+#8 9.150   Stored in directory: /root/.cache/pip/wheels/49/bb/9e/86bd4d162535e81c0f80c64918acf23d920ed0123430d5b4a0
+#8 9.152 Successfully built mathutils
+#8 9.203 Installing collected packages: mathutils
+#8 9.231 Successfully installed mathutils-3.3.0
+#8 9.231 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 9.236 
+#8 9.236 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 9.236 [notice] To update, run: pip install --upgrade pip
+#8 DONE 9.3s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 4.1s done
+#9 writing image sha256:404351567455d4c434a24c5ce728f8ab15e2779c4a56749980d2280a0ee7beed done
+#9 naming to docker.io/library/test-image-1134410 done
+#9 DONE 4.1s
+
+View build details: docker-desktop://dashboard/build/default/default/kkmtlr0s51jtnr54vsc2hcp9y
+[2025-10-29 11:55:45] SUCCESS: Build completed for 1134410

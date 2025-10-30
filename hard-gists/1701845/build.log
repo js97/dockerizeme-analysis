@@ -1,0 +1,149 @@
+=== Docker Build Log for 1701845 ===
+Started at: Mi 29. Okt 12:23:48 CET 2025
+
+[2025-10-29 12:23:48] START: Building image for 1701845
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 312B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.94kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/1701845/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","dj.choices"]
+#7 1.943 Collecting dj.choices
+#7 1.980   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 1.997   Preparing metadata (setup.py): started
+#7 2.383   Preparing metadata (setup.py): finished with status 'done'
+#7 2.487 Collecting django (from dj.choices)
+#7 2.495   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.533 Collecting six (from dj.choices)
+#7 2.541   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.587 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.596   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.633 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.641   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.668 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 2.975    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 27.2 MB/s eta 0:00:00
+#7 2.985 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.003 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.020 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.031    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.9 MB/s eta 0:00:00
+#7 3.067 Building wheels for collected packages: dj.choices
+#7 3.068   Building wheel for dj.choices (setup.py): started
+#7 3.241   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.242   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=42e195ff6022afd341524c555b86065d5e20effb27ba1df56efaab9ec0c6fcfd
+#7 3.242   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.244 Successfully built dj.choices
+#7 3.289 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 4.717 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 4.717 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.817 
+#7 4.817 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.817 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.5s
+
+#8 [4/7] RUN ["pip","install","clip.py"]
+#8 0.518 Collecting clip.py
+#8 0.559   Downloading clip.py-0.3.2-py2.py3-none-any.whl.metadata (406 bytes)
+#8 0.578 Downloading clip.py-0.3.2-py2.py3-none-any.whl (7.8 kB)
+#8 0.625 Installing collected packages: clip.py
+#8 0.669 Successfully installed clip.py-0.3.2
+#8 0.670 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.675 
+#8 0.675 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.675 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.8s
+
+#9 [5/7] RUN ["pip","install","Django"]
+#9 0.433 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#9 0.436 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#9 0.437 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#9 0.478 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.483 
+#9 0.483 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.483 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.5s
+
+#10 [6/7] RUN ["pip","install","django-haystack"]
+#10 0.629 Collecting django-haystack
+#10 0.665   Downloading django_haystack-3.3.0.tar.gz (467 kB)
+#10 0.711      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 467.3/467.3 kB 10.5 MB/s eta 0:00:00
+#10 0.760   Installing build dependencies: started
+#10 2.412   Installing build dependencies: finished with status 'done'
+#10 2.413   Getting requirements to build wheel: started
+#10 2.752   Getting requirements to build wheel: finished with status 'done'
+#10 2.753   Preparing metadata (pyproject.toml): started
+#10 3.013   Preparing metadata (pyproject.toml): finished with status 'done'
+#10 3.019 Requirement already satisfied: Django>=3.2 in /usr/local/lib/python3.11/site-packages (from django-haystack) (5.2.7)
+#10 3.048 Collecting packaging (from django-haystack)
+#10 3.049   Using cached packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#10 3.053 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django>=3.2->django-haystack) (3.10.0)
+#10 3.054 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django>=3.2->django-haystack) (0.5.3)
+#10 3.060 Using cached packaging-25.0-py3-none-any.whl (66 kB)
+#10 3.063 Building wheels for collected packages: django-haystack
+#10 3.068   Building wheel for django-haystack (pyproject.toml): started
+#10 3.382   Building wheel for django-haystack (pyproject.toml): finished with status 'done'
+#10 3.383   Created wheel for django-haystack: filename=django_haystack-3.3.0-py3-none-any.whl size=141850 sha256=52e723c758fd4bc23dc0dbbcb8551f38d733902172226fefdfd399dedf7d1ad5
+#10 3.383   Stored in directory: /root/.cache/pip/wheels/e2/d7/58/9df2aac1855b0d81746aa6034c0df8da1b768d687f13785f69
+#10 3.385 Successfully built django-haystack
+#10 3.428 Installing collected packages: packaging, django-haystack
+#10 3.534 Successfully installed django-haystack-3.3.0 packaging-25.0
+#10 3.534 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 3.539 
+#10 3.539 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 3.539 [notice] To update, run: pip install --upgrade pip
+#10 DONE 3.6s
+
+#11 [7/7] RUN ["pip","install","django-tastypie"]
+#11 0.638 Collecting django-tastypie
+#11 0.673   Downloading django_tastypie-0.15.1.tar.gz (156 kB)
+#11 0.707      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 156.6/156.6 kB 4.6 MB/s eta 0:00:00
+#11 0.734   Preparing metadata (setup.py): started
+#11 0.883   Preparing metadata (setup.py): finished with status 'done'
+#11 1.009 Collecting python-mimeparse!=1.5,>=0.1.4 (from django-tastypie)
+#11 1.020   Downloading python_mimeparse-2.0.0-py3-none-any.whl.metadata (3.1 kB)
+#11 1.064 Collecting python-dateutil>=2.1 (from django-tastypie)
+#11 1.072   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#11 1.090 Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.11/site-packages (from python-dateutil>=2.1->django-tastypie) (1.17.0)
+#11 1.101 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#11 1.123    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 10.4 MB/s eta 0:00:00
+#11 1.133 Downloading python_mimeparse-2.0.0-py3-none-any.whl (5.6 kB)
+#11 1.150 Building wheels for collected packages: django-tastypie
+#11 1.155   Building wheel for django-tastypie (setup.py): started
+#11 1.325   Building wheel for django-tastypie (setup.py): finished with status 'done'
+#11 1.326   Created wheel for django-tastypie: filename=django_tastypie-0.15.1-py2.py3-none-any.whl size=79676 sha256=f1ca957945e845be322e6d3ee86d9519dec615af2a4517f3c779024358dd0aab
+#11 1.326   Stored in directory: /root/.cache/pip/wheels/3c/1f/44/eb4cf3a12ae17b4b6dd6d6f90d5a0b76be52f951aad86aa27a
+#11 1.328 Successfully built django-tastypie
+#11 1.370 Installing collected packages: python-mimeparse, python-dateutil, django-tastypie
+#11 1.477 Successfully installed django-tastypie-0.15.1 python-dateutil-2.9.0.post0 python-mimeparse-2.0.0
+#11 1.477 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.482 
+#11 1.482 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.482 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.6s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.7s done
+#12 writing image sha256:7a6a7e03900a5e50f4db660f76dd96105aea20600d0948c2b4d6d225e729ac27 done
+#12 naming to docker.io/library/test-image-1701845 done
+#12 DONE 0.7s
+
+View build details: docker-desktop://dashboard/build/default/default/i1b4su9hb0jifry2fdhf8sgvb
+[2025-10-29 12:24:01] SUCCESS: Build completed for 1701845

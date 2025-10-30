@@ -1,0 +1,121 @@
+=== Docker Build Log for 783993 ===
+Started at: Mi 29. Okt 17:19:49 CET 2025
+
+[2025-10-29 17:19:49] START: Building image for 783993
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 265B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 936B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/6] COPY hard-gists/783993/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/6] RUN ["pip","install","dj.choices"]
+#7 1.952 Collecting dj.choices
+#7 2.016   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 2.033   Preparing metadata (setup.py): started
+#7 2.430   Preparing metadata (setup.py): finished with status 'done'
+#7 2.542 Collecting django (from dj.choices)
+#7 2.551   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.588 Collecting six (from dj.choices)
+#7 2.598   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.644 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.653   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.691 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.699   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.730 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.085    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 23.5 MB/s eta 0:00:00
+#7 3.094 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.113 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.131 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.142    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.6 MB/s eta 0:00:00
+#7 3.181 Building wheels for collected packages: dj.choices
+#7 3.181   Building wheel for dj.choices (setup.py): started
+#7 3.358   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.358   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=88170867bf7d34618474d7bc55f76a63bda99cd77c52ebf6cc58d5418ab3eeee
+#7 3.358   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.360 Successfully built dj.choices
+#7 3.411 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 4.950 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 4.951 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.042 
+#7 5.042 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.042 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.7s
+
+#8 [4/6] RUN ["pip","install","mongo"]
+#8 0.628 Collecting mongo
+#8 0.670   Downloading mongo-0.2.0.tar.gz (4.6 kB)
+#8 0.690   Preparing metadata (setup.py): started
+#8 0.806   Preparing metadata (setup.py): finished with status 'done'
+#8 1.139 Collecting pymongo (from mongo)
+#8 1.149   Downloading pymongo-4.15.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+#8 1.220 Collecting dnspython<3.0.0,>=1.16.0 (from pymongo->mongo)
+#8 1.230   Downloading dnspython-2.8.0-py3-none-any.whl.metadata (5.7 kB)
+#8 1.266 Downloading pymongo-4.15.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.5 MB)
+#8 1.332    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 22.6 MB/s eta 0:00:00
+#8 1.343 Downloading dnspython-2.8.0-py3-none-any.whl (331 kB)
+#8 1.364    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 331.1/331.1 kB 16.4 MB/s eta 0:00:00
+#8 1.373 Building wheels for collected packages: mongo
+#8 1.377   Building wheel for mongo (setup.py): started
+#8 1.522   Building wheel for mongo (setup.py): finished with status 'done'
+#8 1.522   Created wheel for mongo: filename=mongo-0.2.0-py3-none-any.whl size=5024 sha256=ec8f5f9b6a797a2189debb04761d84aa9aacd43d85308fb98482fa06d004044b
+#8 1.523   Stored in directory: /root/.cache/pip/wheels/32/9a/d8/340b7a135f9c559f4f565050502741a541d5f12e033cf08cbf
+#8 1.524 Successfully built mongo
+#8 1.604 Installing collected packages: dnspython, pymongo, mongo
+#8 2.088 Successfully installed dnspython-2.8.0 mongo-0.2.0 pymongo-4.15.3
+#8 2.088 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.093 
+#8 2.093 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.093 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.3s
+
+#9 [5/6] RUN ["pip","install","mongoengine"]
+#9 0.590 Collecting mongoengine
+#9 0.665   Downloading mongoengine-0.29.1-py3-none-any.whl.metadata (6.7 kB)
+#9 0.684 Requirement already satisfied: pymongo<5.0,>=3.4 in /usr/local/lib/python3.11/site-packages (from mongoengine) (4.15.3)
+#9 0.699 Requirement already satisfied: dnspython<3.0.0,>=1.16.0 in /usr/local/lib/python3.11/site-packages (from pymongo<5.0,>=3.4->mongoengine) (2.8.0)
+#9 0.720 Downloading mongoengine-0.29.1-py3-none-any.whl (112 kB)
+#9 0.750    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.4/112.4 kB 3.6 MB/s eta 0:00:00
+#9 0.824 Installing collected packages: mongoengine
+#9 0.912 Successfully installed mongoengine-0.29.1
+#9 0.912 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.918 
+#9 0.918 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.918 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.0s
+
+#10 [6/6] RUN ["pip","install","Django"]
+#10 0.495 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#10 0.498 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#10 0.499 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#10 0.573 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.579 
+#10 0.579 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.579 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.7s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 0.7s done
+#11 writing image sha256:1d556a811e74b81197ee9448f5ebacf2171c8488752f660ff18e1d139e58c385 done
+#11 naming to docker.io/library/test-image-783993 done
+#11 DONE 0.8s
+
+View build details: docker-desktop://dashboard/build/default/default/b613bjea70g60b86psar0b910
+[2025-10-29 17:20:00] SUCCESS: Build completed for 783993

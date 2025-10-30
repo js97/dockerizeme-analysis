@@ -1,0 +1,115 @@
+=== Docker Build Log for 757191 ===
+Started at: Mi 29. Okt 17:13:36 CET 2025
+
+[2025-10-29 17:13:36] START: Building image for 757191
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 280B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 226B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/757191/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","six"]
+#7 2.161 Collecting six
+#7 2.196   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.214 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.265 Installing collected packages: six
+#7 2.282 Successfully installed six-1.17.0
+#7 2.282 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.382 
+#7 2.382 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.382 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.5s
+
+#8 [4/7] RUN ["pip","install","pytest"]
+#8 0.633 Collecting pytest
+#8 0.666   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#8 0.713 Collecting iniconfig>=1 (from pytest)
+#8 0.726   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#8 0.778 Collecting packaging>=20 (from pytest)
+#8 0.787   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.828 Collecting pluggy<2,>=1.5 (from pytest)
+#8 0.837   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#8 0.888 Collecting pygments>=2.7.2 (from pytest)
+#8 0.895   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#8 0.925 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#8 0.968    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 8.6 MB/s eta 0:00:00
+#8 0.976 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#8 0.993 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 1.003    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 6.2 MB/s eta 0:00:00
+#8 1.011 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#8 1.028 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#8 1.087    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 21.3 MB/s eta 0:00:00
+#8 1.145 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#8 2.007 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#8 2.008 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.014 
+#8 2.014 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.014 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.1s
+
+#9 [5/7] RUN ["pip","install","py"]
+#9 0.604 Collecting py
+#9 0.639   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#9 0.664 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#9 0.699    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.7 MB/s eta 0:00:00
+#9 0.749 Installing collected packages: py
+#9 0.834 Successfully installed py-1.11.0
+#9 0.834 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.839 
+#9 0.839 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.839 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.9s
+
+#10 [6/7] RUN ["pip","install","numpy"]
+#10 0.782 Collecting numpy
+#10 0.821   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#10 0.850      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.0 MB/s eta 0:00:00
+#10 0.872 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#10 1.504    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 25.0 MB/s eta 0:00:00
+#10 1.596 Installing collected packages: numpy
+#10 3.313 Successfully installed numpy-2.3.4
+#10 3.313 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 3.319 
+#10 3.319 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 3.319 [notice] To update, run: pip install --upgrade pip
+#10 DONE 4.0s
+
+#11 [7/7] RUN ["pip","install","Cython"]
+#11 0.755 Collecting Cython
+#11 0.793   Downloading cython-3.1.6-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.0 kB)
+#11 0.823 Downloading cython-3.1.6-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.3 MB)
+#11 0.972    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 22.4 MB/s eta 0:00:00
+#11 1.031 Installing collected packages: Cython
+#11 1.593 Successfully installed Cython-3.1.6
+#11 1.593 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.598 
+#11 1.598 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.598 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.8s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.4s done
+#12 writing image sha256:de5777abc4f183840e317807fdd65879ecb25cf5904c5e0521f9d39853988c80 done
+#12 naming to docker.io/library/test-image-757191 done
+#12 DONE 0.5s
+
+View build details: docker-desktop://dashboard/build/default/default/08d6l24jqy98lu2aua5sh1ha7
+[2025-10-29 17:13:48] SUCCESS: Build completed for 757191

@@ -1,0 +1,81 @@
+=== Docker Build Log for 2de48835250e5fceaa1b626099abfa53 ===
+Started at: Mi 29. Okt 13:26:33 CET 2025
+
+[2025-10-29 13:26:33] START: Building image for 2de48835250e5fceaa1b626099abfa53
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 232B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.30kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/2de48835250e5fceaa1b626099abfa53/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","python-dateutil"]
+#7 1.914 Collecting python-dateutil
+#7 1.945   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#7 1.983 Collecting six>=1.5 (from python-dateutil)
+#7 1.992   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.014 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#7 2.051    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 6.4 MB/s eta 0:00:00
+#7 2.060 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.103 Installing collected packages: six, python-dateutil
+#7 2.160 Successfully installed python-dateutil-2.9.0.post0 six-1.17.0
+#7 2.160 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.250 
+#7 2.250 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.250 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.4s
+
+#8 [4/4] RUN ["pip","install","requests"]
+#8 0.508 Collecting requests
+#8 0.541   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#8 0.663 Collecting charset_normalizer<4,>=2 (from requests)
+#8 0.674   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#8 0.724 Collecting idna<4,>=2.5 (from requests)
+#8 0.732   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#8 0.789 Collecting urllib3<3,>=1.21.1 (from requests)
+#8 0.797   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#8 0.844 Collecting certifi>=2017.4.17 (from requests)
+#8 0.854   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#8 0.880 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#8 0.897    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.6 MB/s eta 0:00:00
+#8 0.905 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#8 0.921    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 10.8 MB/s eta 0:00:00
+#8 0.929 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#8 0.948    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 8.4 MB/s eta 0:00:00
+#8 0.956 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#8 0.970    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.0 MB/s eta 0:00:00
+#8 0.977 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#8 0.991    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.9 MB/s eta 0:00:00
+#8 1.039 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#8 1.281 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#8 1.282 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.287 
+#8 1.287 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.287 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.4s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.1s done
+#9 writing image sha256:6de21b75406def359a5994bf10eb0edd75d1f2f995c8ec078816e6dfca585057 done
+#9 naming to docker.io/library/test-image-2de48835250e5fceaa1b626099abfa53 done
+#9 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/mn52fls0l2cgo6t0u6eo931p4
+[2025-10-29 13:26:37] SUCCESS: Build completed for 2de48835250e5fceaa1b626099abfa53

@@ -1,0 +1,131 @@
+=== Docker Build Log for ec5c8bed17396e8e55cf3305dbb88f56 ===
+Started at: Mi 29. Okt 20:54:06 CET 2025
+
+[2025-10-29 20:54:06] START: Building image for ec5c8bed17396e8e55cf3305dbb88f56
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 256B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 883B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/ec5c8bed17396e8e55cf3305dbb88f56/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","requests"]
+#7 2.014 Collecting requests
+#7 2.050   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.174 Collecting charset_normalizer<4,>=2 (from requests)
+#7 2.183   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.230 Collecting idna<4,>=2.5 (from requests)
+#7 2.239   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.299 Collecting urllib3<3,>=1.21.1 (from requests)
+#7 2.310   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.358 Collecting certifi>=2017.4.17 (from requests)
+#7 2.367   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.393 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.419    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 2.6 MB/s eta 0:00:00
+#7 2.427 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.458    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 5.8 MB/s eta 0:00:00
+#7 2.469 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.489    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 7.9 MB/s eta 0:00:00
+#7 2.498 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.512    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.2 MB/s eta 0:00:00
+#7 2.521 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.538    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 7.6 MB/s eta 0:00:00
+#7 2.585 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#7 2.828 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#7 2.829 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.928 
+#7 2.928 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.928 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.1s
+
+#8 [4/5] RUN ["pip","install","selenium"]
+#8 0.622 Collecting selenium
+#8 0.672   Downloading selenium-4.38.0-py3-none-any.whl.metadata (7.5 kB)
+#8 0.699 Requirement already satisfied: urllib3<3.0,>=2.5.0 in /usr/local/lib/python3.11/site-packages (from urllib3[socks]<3.0,>=2.5.0->selenium) (2.5.0)
+#8 0.762 Collecting trio<1.0,>=0.31.0 (from selenium)
+#8 0.771   Downloading trio-0.31.0-py3-none-any.whl.metadata (8.5 kB)
+#8 0.840 Collecting trio-websocket<1.0,>=0.12.2 (from selenium)
+#8 0.849   Downloading trio_websocket-0.12.2-py3-none-any.whl.metadata (5.1 kB)
+#8 0.867 Requirement already satisfied: certifi>=2025.10.5 in /usr/local/lib/python3.11/site-packages (from selenium) (2025.10.5)
+#8 0.908 Collecting typing_extensions<5.0,>=4.15.0 (from selenium)
+#8 0.917   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.972 Collecting websocket-client<2.0,>=1.8.0 (from selenium)
+#8 0.982   Downloading websocket_client-1.9.0-py3-none-any.whl.metadata (8.3 kB)
+#8 1.037 Collecting attrs>=23.2.0 (from trio<1.0,>=0.31.0->selenium)
+#8 1.046   Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+#8 1.093 Collecting sortedcontainers (from trio<1.0,>=0.31.0->selenium)
+#8 1.104   Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+#8 1.125 Requirement already satisfied: idna in /usr/local/lib/python3.11/site-packages (from trio<1.0,>=0.31.0->selenium) (3.11)
+#8 1.167 Collecting outcome (from trio<1.0,>=0.31.0->selenium)
+#8 1.182   Downloading outcome-1.3.0.post0-py2.py3-none-any.whl.metadata (2.6 kB)
+#8 1.220 Collecting sniffio>=1.3.0 (from trio<1.0,>=0.31.0->selenium)
+#8 1.233   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+#8 1.284 Collecting wsproto>=0.14 (from trio-websocket<1.0,>=0.12.2->selenium)
+#8 1.292   Downloading wsproto-1.2.0-py3-none-any.whl.metadata (5.6 kB)
+#8 1.373 Collecting pysocks!=1.5.7,<2.0,>=1.5.6 (from urllib3[socks]<3.0,>=2.5.0->selenium)
+#8 1.382   Downloading PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+#8 1.439 Collecting h11<1,>=0.9.0 (from wsproto>=0.14->trio-websocket<1.0,>=0.12.2->selenium)
+#8 1.447   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#8 1.481 Downloading selenium-4.38.0-py3-none-any.whl (9.7 MB)
+#8 2.089    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 16.0 MB/s eta 0:00:00
+#8 2.105 Downloading trio-0.31.0-py3-none-any.whl (512 kB)
+#8 2.139    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 512.7/512.7 kB 15.3 MB/s eta 0:00:00
+#8 2.149 Downloading trio_websocket-0.12.2-py3-none-any.whl (21 kB)
+#8 2.173 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#8 2.188    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 2.6 MB/s eta 0:00:00
+#8 2.232 Downloading websocket_client-1.9.0-py3-none-any.whl (82 kB)
+#8 2.250    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 82.6/82.6 kB 4.5 MB/s eta 0:00:00
+#8 2.259 Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+#8 2.276    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.6/67.6 kB 3.7 MB/s eta 0:00:00
+#8 2.284 Downloading outcome-1.3.0.post0-py2.py3-none-any.whl (10 kB)
+#8 2.302 Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+#8 2.326 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+#8 2.344 Downloading wsproto-1.2.0-py3-none-any.whl (24 kB)
+#8 2.369 Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+#8 2.393 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#8 2.486 Installing collected packages: sortedcontainers, websocket-client, typing_extensions, sniffio, pysocks, h11, attrs, wsproto, outcome, trio, trio-websocket, selenium
+#8 3.566 Successfully installed attrs-25.4.0 h11-0.16.0 outcome-1.3.0.post0 pysocks-1.7.1 selenium-4.38.0 sniffio-1.3.1 sortedcontainers-2.4.0 trio-0.31.0 trio-websocket-0.12.2 typing_extensions-4.15.0 websocket-client-1.9.0 wsproto-1.2.0
+#8 3.567 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 3.572 
+#8 3.572 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.572 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.9s
+
+#9 [5/5] RUN ["pip","install","pillow"]
+#9 0.726 Collecting pillow
+#9 0.789   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#9 0.832 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#9 1.350    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 13.6 MB/s eta 0:00:00
+#9 1.446 Installing collected packages: pillow
+#9 1.711 Successfully installed pillow-12.0.0
+#9 1.711 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.717 
+#9 1.717 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.717 [notice] To update, run: pip install --upgrade pip
+#9 DONE 2.0s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.3s done
+#10 writing image sha256:4a3487745d18e8563033807409318f95b23db0789b06e38583d3c2c29b974bf2 done
+#10 naming to docker.io/library/test-image-ec5c8bed17396e8e55cf3305dbb88f56 done
+#10 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/isdt5lz50glef4qwg9gtuf5ro
+[2025-10-29 20:54:16] SUCCESS: Build completed for ec5c8bed17396e8e55cf3305dbb88f56

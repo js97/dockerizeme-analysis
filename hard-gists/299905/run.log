@@ -1,0 +1,12 @@
+=== Docker Run Log for 299905 ===
+Started at: Mi 29. Okt 13:23:47 CET 2025
+
+[2025-10-29 13:23:54] START: Running container for 299905
+[2025-10-29 13:23:54] SUCCESS: Container 4867003db50b408987cb6eb167136823b4baceb70b010420e17160b247c5f1ea started for 299905
+=== Container logs for 299905 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 4, in <module>
+    from django.utils.encoding import smart_unicode, smart_str
+ImportError: cannot import name 'smart_unicode' from 'django.utils.encoding' (/usr/local/lib/python3.11/site-packages/django/utils/encoding.py)
+=== End of logs for 299905 ===
+[2025-10-29 13:23:56] INFO: Container 4867003db50b408987cb6eb167136823b4baceb70b010420e17160b247c5f1ea has stopped

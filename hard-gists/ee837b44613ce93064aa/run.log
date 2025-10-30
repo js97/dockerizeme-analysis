@@ -1,0 +1,29 @@
+=== Docker Run Log for ee837b44613ce93064aa ===
+Started at: Mi 29. Okt 21:02:53 CET 2025
+
+[2025-10-29 21:03:00] START: Running container for ee837b44613ce93064aa
+[2025-10-29 21:03:01] SUCCESS: Container f43430643164be1924cf38d386b5dd1e24c5064d9a59dc6ac18261e266564335 started for ee837b44613ce93064aa
+=== Container logs for ee837b44613ce93064aa ===
+Traceback (most recent call last):
+  File "/snippet.py", line 2, in <module>
+    from rest_framework import serializers, exceptions, parsers
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/parsers.py", line 20, in <module>
+    from rest_framework import renderers
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/renderers.py", line 56, in <module>
+    class JSONRenderer(BaseRenderer):
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/renderers.py", line 63, in JSONRenderer
+    ensure_ascii = not api_settings.UNICODE_JSON
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/settings.py", line 220, in __getattr__
+    val = self.user_settings[attr]
+          ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/settings.py", line 211, in user_settings
+    self._user_settings = getattr(settings, 'REST_FRAMEWORK', {})
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting REST_FRAMEWORK, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for ee837b44613ce93064aa ===
+[2025-10-29 21:03:03] INFO: Container f43430643164be1924cf38d386b5dd1e24c5064d9a59dc6ac18261e266564335 has stopped

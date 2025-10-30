@@ -1,0 +1,112 @@
+=== Docker Build Log for 4c47dc94cc6054fe1398 ===
+Started at: Mi 29. Okt 15:09:55 CET 2025
+
+[2025-10-29 15:09:55] START: Building image for 4c47dc94cc6054fe1398
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 553B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 938B 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/12] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/12] COPY hard-gists/4c47dc94cc6054fe1398/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/12] RUN ["apt-get","update"]
+#7 0.292 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.292 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.303 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.318 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.638 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.638 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.254 Fetched 9833 kB in 1s (9803 kB/s)
+#7 1.254 Reading package lists...
+#7 DONE 1.9s
+
+#8 [ 4/12] RUN ["pip","install","twitter.common.service-thrift"]
+#8 1.966 Collecting twitter.common.service-thrift
+#8 1.999   Downloading twitter.common.service-thrift-0.3.9.tar.gz (3.1 kB)
+#8 2.012   Preparing metadata (setup.py): started
+#8 2.413   Preparing metadata (setup.py): finished with status 'done'
+#8 2.414 Building wheels for collected packages: twitter.common.service-thrift
+#8 2.415   Building wheel for twitter.common.service-thrift (setup.py): started
+#8 2.591   Building wheel for twitter.common.service-thrift (setup.py): finished with status 'done'
+#8 2.592   Created wheel for twitter.common.service-thrift: filename=twitter_common_service_thrift-0.3.9-py3-none-any.whl size=4889 sha256=02c47360fa4b195e8092a27ce1ae2ef0356960b1e9de0181ae9334afce112663
+#8 2.592   Stored in directory: /root/.cache/pip/wheels/7e/55/e4/b1fdba8c145d46bda2b228724a92959c8edfd83bc83455d8c3
+#8 2.595 Successfully built twitter.common.service-thrift
+#8 2.629 Installing collected packages: twitter.common.service-thrift
+#8 2.643 Successfully installed twitter.common.service-thrift-0.3.9
+#8 2.643 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.732 
+#8 2.732 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.732 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.9s
+
+#9 [ 5/12] RUN ["pip","install","twitter.common.finagle-thrift"]
+#9 0.544 Collecting twitter.common.finagle-thrift
+#9 0.579   Downloading twitter.common.finagle-thrift-0.3.9.tar.gz (6.3 kB)
+#9 0.593   Preparing metadata (setup.py): started
+#9 0.712   Preparing metadata (setup.py): finished with status 'done'
+#9 0.714 Building wheels for collected packages: twitter.common.finagle-thrift
+#9 0.719   Building wheel for twitter.common.finagle-thrift (setup.py): started
+#9 0.870   Building wheel for twitter.common.finagle-thrift (setup.py): finished with status 'done'
+#9 0.870   Created wheel for twitter.common.finagle-thrift: filename=twitter_common_finagle_thrift-0.3.9-py3-none-any.whl size=7837 sha256=8e2790c96c76bff1c5360444b76fcc21ff9e6c92c19397c40a32d7ae5799a9a0
+#9 0.870   Stored in directory: /root/.cache/pip/wheels/8c/a4/9c/b5c9b4d11348ea1265e2a8c840662ed50edbc4f9d94fd18d46
+#9 0.873 Successfully built twitter.common.finagle-thrift
+#9 0.902 Installing collected packages: twitter.common.finagle-thrift
+#9 0.953 Successfully installed twitter.common.finagle-thrift-0.3.9
+#9 0.953 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.960 
+#9 0.960 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.960 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.0s
+
+#10 [ 6/12] RUN ["apt-get","install","-y","python-pip"]
+#10 0.268 Reading package lists...
+#10 0.749 Building dependency tree...
+#10 0.860 Reading state information...
+#10 0.884 Package python-pip is not available, but is referred to by another package.
+#10 0.884 This may mean that the package is missing, has been obsoleted, or
+#10 0.884 is only available from another source
+#10 0.884 However the following packages replace it:
+#10 0.884   python3-pip
+#10 0.884 
+#10 0.886 E: Package 'python-pip' has no installation candidate
+#10 ERROR: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+------
+ > [ 6/12] RUN ["apt-get","install","-y","python-pip"]:
+
+
+0.884 Package python-pip is not available, but is referred to by another package.
+0.884 This may mean that the package is missing, has been obsoleted, or
+0.884 is only available from another source
+0.884 However the following packages replace it:
+0.884   python3-pip
+0.884 
+0.886 E: Package 'python-pip' has no installation candidate
+------
+Dockerfile:6
+--------------------
+   4 |     RUN ["pip","install","twitter.common.service-thrift"]
+   5 |     RUN ["pip","install","twitter.common.finagle-thrift"]
+   6 | >>> RUN ["apt-get","install","-y","python-pip"]
+   7 |     RUN ["apt-get","install","-y","python-dev"]
+   8 |     RUN ["apt-get","install","-y","git"]
+--------------------
+ERROR: failed to build: failed to solve: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/default/default/dbd86no9m2and0qfgqso8b7m7
+[2025-10-29 15:10:02] ERROR: Build failed for 4c47dc94cc6054fe1398

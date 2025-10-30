@@ -1,0 +1,309 @@
+=== Docker Build Log for 0efb4d07f28af1c8fc1b ===
+Started at: Mi 29. Okt 11:43:00 CET 2025
+
+[2025-10-29 11:43:00] START: Building image for 0efb4d07f28af1c8fc1b
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 746B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 8.24kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/20] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/20] COPY hard-gists/0efb4d07f28af1c8fc1b/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/20] RUN ["pip","install","six"]
+#7 1.959 Collecting six
+#7 1.991   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.012 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.054 Installing collected packages: six
+#7 2.070 Successfully installed six-1.17.0
+#7 2.070 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.158 
+#7 2.158 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.158 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.3s
+
+#8 [ 4/20] RUN ["pip","install","Flask"]
+#8 0.501 Collecting Flask
+#8 0.533   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#8 0.577 Collecting blinker>=1.9.0 (from Flask)
+#8 0.585   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#8 0.632 Collecting click>=8.1.3 (from Flask)
+#8 0.640   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#8 0.677 Collecting itsdangerous>=2.2.0 (from Flask)
+#8 0.684   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#8 0.728 Collecting jinja2>=3.1.2 (from Flask)
+#8 0.736   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#8 0.814 Collecting markupsafe>=2.1.1 (from Flask)
+#8 0.822   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#8 0.872 Collecting werkzeug>=3.1.0 (from Flask)
+#8 0.880   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#8 0.908 Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+#8 0.935    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 3.8 MB/s eta 0:00:00
+#8 0.942 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#8 0.960 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#8 0.976    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 7.0 MB/s eta 0:00:00
+#8 0.984 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#8 1.001 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#8 1.015    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 10.0 MB/s eta 0:00:00
+#8 1.024 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#8 1.040 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#8 1.057    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 14.1 MB/s eta 0:00:00
+#8 1.100 Installing collected packages: markupsafe, itsdangerous, click, blinker, werkzeug, jinja2, Flask
+#8 1.415 Successfully installed Flask-3.1.2 blinker-1.9.0 click-8.3.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.3 werkzeug-3.1.3
+#8 1.415 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.420 
+#8 1.420 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.420 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.5s
+
+#9 [ 5/20] RUN ["pip","install","Werkzeug"]
+#9 0.436 Requirement already satisfied: Werkzeug in /usr/local/lib/python3.11/site-packages (3.1.3)
+#9 0.438 Requirement already satisfied: MarkupSafe>=2.1.1 in /usr/local/lib/python3.11/site-packages (from Werkzeug) (3.0.3)
+#9 0.477 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.482 
+#9 0.482 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.482 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.6s
+
+#10 [ 6/20] RUN ["pip","install","itsdangerous"]
+#10 0.431 Requirement already satisfied: itsdangerous in /usr/local/lib/python3.11/site-packages (2.2.0)
+#10 0.470 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.475 
+#10 0.475 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.475 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.5s
+
+#11 [ 7/20] RUN ["pip","install","alembic"]
+#11 0.575 Collecting alembic
+#11 0.611   Downloading alembic-1.17.1-py3-none-any.whl.metadata (7.2 kB)
+#11 0.948 Collecting SQLAlchemy>=1.4.0 (from alembic)
+#11 0.960   Downloading sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.5 kB)
+#11 1.029 Collecting Mako (from alembic)
+#11 1.039   Downloading mako-1.3.10-py3-none-any.whl.metadata (2.9 kB)
+#11 1.088 Collecting typing-extensions>=4.12 (from alembic)
+#11 1.096   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#11 1.291 Collecting greenlet>=1 (from SQLAlchemy>=1.4.0->alembic)
+#11 1.299   Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+#11 1.319 Requirement already satisfied: MarkupSafe>=0.9.2 in /usr/local/lib/python3.11/site-packages (from Mako->alembic) (3.0.3)
+#11 1.331 Downloading alembic-1.17.1-py3-none-any.whl (247 kB)
+#11 1.367    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.8/247.8 kB 7.1 MB/s eta 0:00:00
+#11 1.376 Downloading sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+#11 1.503    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 26.2 MB/s eta 0:00:00
+#11 1.512 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#11 1.523    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.5 MB/s eta 0:00:00
+#11 1.531 Downloading mako-1.3.10-py3-none-any.whl (78 kB)
+#11 1.543    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 6.5 MB/s eta 0:00:00
+#11 1.553 Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (587 kB)
+#11 1.582    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 587.7/587.7 kB 20.5 MB/s eta 0:00:00
+#11 1.661 Installing collected packages: typing-extensions, Mako, greenlet, SQLAlchemy, alembic
+#11 2.719 Successfully installed Mako-1.3.10 SQLAlchemy-2.0.44 alembic-1.17.1 greenlet-3.2.4 typing-extensions-4.15.0
+#11 2.719 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 2.724 
+#11 2.724 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 2.724 [notice] To update, run: pip install --upgrade pip
+#11 DONE 3.0s
+
+#12 [ 8/20] RUN ["pip","install","python-editor"]
+#12 0.527 Collecting python-editor
+#12 0.562   Downloading python_editor-1.0.4-py3-none-any.whl.metadata (2.2 kB)
+#12 0.586 Downloading python_editor-1.0.4-py3-none-any.whl (4.9 kB)
+#12 0.662 Installing collected packages: python-editor
+#12 0.702 Successfully installed python-editor-1.0.4
+#12 0.703 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 0.708 
+#12 0.708 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 0.708 [notice] To update, run: pip install --upgrade pip
+#12 DONE 0.8s
+
+#13 [ 9/20] RUN ["pip","install","py-curses-editor"]
+#13 0.505 Collecting py-curses-editor
+#13 0.633   Downloading py_curses_editor-1.3.2-py2.py3-none-any.whl.metadata (3.5 kB)
+#13 0.660 Downloading py_curses_editor-1.3.2-py2.py3-none-any.whl (13 kB)
+#13 0.740 Installing collected packages: py-curses-editor
+#13 0.780 Successfully installed py-curses-editor-1.3.2
+#13 0.780 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 0.785 
+#13 0.785 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 0.785 [notice] To update, run: pip install --upgrade pip
+#13 DONE 0.9s
+
+#14 [10/20] RUN ["pip","install","clip.py"]
+#14 0.533 Collecting clip.py
+#14 0.566   Downloading clip.py-0.3.2-py2.py3-none-any.whl.metadata (406 bytes)
+#14 0.586 Downloading clip.py-0.3.2-py2.py3-none-any.whl (7.8 kB)
+#14 0.663 Installing collected packages: clip.py
+#14 0.707 Successfully installed clip.py-0.3.2
+#14 0.708 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#14 0.713 
+#14 0.713 [notice] A new release of pip is available: 24.0 -> 25.3
+#14 0.713 [notice] To update, run: pip install --upgrade pip
+#14 DONE 0.8s
+
+#15 [11/20] RUN ["pip","install","url"]
+#15 0.524 Collecting url
+#15 0.556   Downloading url-0.4.2.tar.gz (140 kB)
+#15 0.592      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 140.9/140.9 kB 3.9 MB/s eta 0:00:00
+#15 0.601   Preparing metadata (setup.py): started
+#15 1.057   Preparing metadata (setup.py): finished with status 'done'
+#15 1.059 Requirement already satisfied: six in /usr/local/lib/python3.11/site-packages (from url) (1.17.0)
+#15 1.060 Building wheels for collected packages: url
+#15 1.060   Building wheel for url (setup.py): started
+#15 1.507   Building wheel for url (setup.py): finished with status 'error'
+#15 1.513   error: subprocess-exited-with-error
+#15 1.513   
+#15 1.513   × python setup.py bdist_wheel did not run successfully.
+#15 1.513   │ exit code: 1
+#15 1.513   ╰─> [102 lines of output]
+#15 1.513       Building from C++
+#15 1.513       /usr/local/lib/python3.11/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+#15 1.513         warnings.warn(msg)
+#15 1.513       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:599: SetuptoolsDeprecationWarning: Invalid dash-separated key 'description-file' in 'metadata' (setup.cfg), please use the underscore name 'description_file' instead.
+#15 1.513       !!
+#15 1.513       
+#15 1.513               ********************************************************************************
+#15 1.513               Usage of dash-separated 'description-file' will not be supported in future
+#15 1.513               versions. Please use the underscore name 'description_file' instead.
+#15 1.513               (Affected: url).
+#15 1.513       
+#15 1.513               By 2026-Mar-03, you need to update your project and remove deprecated calls
+#15 1.513               or your builds will no longer be supported.
+#15 1.513       
+#15 1.513               See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+#15 1.513               ********************************************************************************
+#15 1.513       
+#15 1.513       !!
+#15 1.513         opt = self._enforce_underscore(opt, section)
+#15 1.513       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+#15 1.513       !!
+#15 1.513       
+#15 1.513               ********************************************************************************
+#15 1.513               Please consider removing the following classifiers in favor of a SPDX license expression:
+#15 1.513       
+#15 1.513               License :: OSI Approved :: MIT License
+#15 1.513       
+#15 1.513               See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+#15 1.513               ********************************************************************************
+#15 1.513       
+#15 1.513       !!
+#15 1.513         self._finalize_license_expression()
+#15 1.513       In file included from url/url-cpp/include/punycode.h:10,
+#15 1.513                        from url/url-cpp/src/psl.cpp:7:
+#15 1.513       url/url-cpp/include/utf8.h:19:17: error: ‘uint32_t’ does not name a type
+#15 1.513          19 |         typedef uint32_t codepoint_t;
+#15 1.513             |                 ^~~~~~~~
+#15 1.513       url/url-cpp/include/utf8.h:1:1: note: ‘uint32_t’ is defined in header ‘<cstdint>’; this is probably fixable by adding ‘#include <cstdint>’
+#15 1.513         +++ |+#include <cstdint>
+#15 1.513           1 | #ifndef UTF8_CPP_H
+#15 1.513       url/url-cpp/include/utf8.h:29:22: error: ‘codepoint_t’ does not name a type
+#15 1.513          29 |         static const codepoint_t MAX_CODEPOINT = 0x10FFFF;
+#15 1.513             |                      ^~~~~~~~~~~
+#15 1.513       url/url-cpp/include/utf8.h:34:16: error: ‘codepoint_t’ does not name a type
+#15 1.513          34 |         static codepoint_t readCodepoint(
+#15 1.513             |                ^~~~~~~~~~~
+#15 1.513       url/url-cpp/include/utf8.h:40:62: error: ‘codepoint_t’ has not been declared
+#15 1.513          40 |         static std::string& writeCodepoint(std::string& str, codepoint_t value);
+#15 1.513             |                                                              ^~~~~~~~~~~
+#15 1.513       url/url-cpp/include/utf8.h:45:16: error: ‘codepoint_t’ does not name a type
+#15 1.513          45 |         static codepoint_t toCodepoint(const std::string& str)
+#15 1.513             |                ^~~~~~~~~~~
+#15 1.513       url/url-cpp/include/utf8.h:54:42: error: ‘codepoint_t’ has not been declared
+#15 1.513          54 |         static std::string fromCodepoint(codepoint_t value)
+#15 1.513             |                                          ^~~~~~~~~~~
+#15 1.513       url/url-cpp/include/utf8.h:64:28: error: ‘codepoint_t’ was not declared in this scope
+#15 1.513          64 |         static std::vector<codepoint_t> toCodepoints(const std::string& str)
+#15 1.513             |                            ^~~~~~~~~~~
+#15 1.513       url/url-cpp/include/utf8.h:64:39: error: template argument 1 is invalid
+#15 1.513          64 |         static std::vector<codepoint_t> toCodepoints(const std::string& str)
+#15 1.513             |                                       ^
+#15 1.513       url/url-cpp/include/utf8.h:64:39: error: template argument 2 is invalid
+#15 1.513       url/url-cpp/include/utf8.h:77:61: error: ‘codepoint_t’ was not declared in this scope
+#15 1.513          77 |         static std::string fromCodepoints(const std::vector<codepoint_t>& points)
+#15 1.513             |                                                             ^~~~~~~~~~~
+#15 1.513       url/url-cpp/include/utf8.h:77:72: error: template argument 1 is invalid
+#15 1.513          77 |         static std::string fromCodepoints(const std::vector<codepoint_t>& points)
+#15 1.513             |                                                                        ^
+#15 1.513       url/url-cpp/include/utf8.h:77:72: error: template argument 2 is invalid
+#15 1.513       url/url-cpp/include/utf8.h: In static member function ‘static int Url::Utf8::toCodepoints(const std::string&)’:
+#15 1.513       url/url-cpp/include/utf8.h:66:25: error: ‘codepoint_t’ was not declared in this scope
+#15 1.513          66 |             std::vector<codepoint_t> result;
+#15 1.513             |                         ^~~~~~~~~~~
+#15 1.513       url/url-cpp/include/utf8.h:66:36: error: template argument 1 is invalid
+#15 1.513          66 |             std::vector<codepoint_t> result;
+#15 1.513             |                                    ^
+#15 1.513       url/url-cpp/include/utf8.h:66:36: error: template argument 2 is invalid
+#15 1.513       url/url-cpp/include/utf8.h:69:24: error: request for member ‘push_back’ in ‘result’, which is of non-class type ‘int’
+#15 1.513          69 |                 result.push_back(readCodepoint(it, str.end()));
+#15 1.513             |                        ^~~~~~~~~
+#15 1.513       url/url-cpp/include/utf8.h:69:34: error: ‘readCodepoint’ was not declared in this scope; did you mean ‘writeCodepoint’?
+#15 1.513          69 |                 result.push_back(readCodepoint(it, str.end()));
+#15 1.513             |                                  ^~~~~~~~~~~~~
+#15 1.513             |                                  writeCodepoint
+#15 1.513       url/url-cpp/include/utf8.h: In static member function ‘static std::string Url::Utf8::fromCodepoints(const int&)’:
+#15 1.513       url/url-cpp/include/utf8.h:80:35: error: request for member ‘begin’ in ‘points’, which is of non-class type ‘const int’
+#15 1.513          80 |             for (auto it = points.begin(); it != points.end(); ++it)
+#15 1.513             |                                   ^~~~~
+#15 1.513       url/url-cpp/include/utf8.h:80:57: error: request for member ‘end’ in ‘points’, which is of non-class type ‘const int’
+#15 1.513          80 |             for (auto it = points.begin(); it != points.end(); ++it)
+#15 1.513             |                                                         ^~~
+#15 1.513       url/url-cpp/include/punycode.h: At global scope:
+#15 1.513       url/url-cpp/include/punycode.h:17:23: error: ‘codepoint_t’ in ‘struct Url::Utf8’ does not name a type
+#15 1.513          17 |         typedef Utf8::codepoint_t punycode_uint;
+#15 1.513             |                       ^~~~~~~~~~~
+#15 1.513       url/url-cpp/include/punycode.h:56:15: error: ‘punycode_uint’ does not name a type
+#15 1.513          56 |         const punycode_uint MAX_PUNYCODE_UINT = std::numeric_limits<punycode_uint>::max();
+#15 1.513             |               ^~~~~~~~~~~~~
+#15 1.513       url/url-cpp/include/punycode.h:98:9: error: ‘punycode_uint’ does not name a type
+#15 1.513          98 |         punycode_uint adapt(
+#15 1.513             |         ^~~~~~~~~~~~~
+#15 1.513       error: command '/usr/bin/g++' failed with exit code 1
+#15 1.513       [end of output]
+#15 1.513   
+#15 1.513   note: This error originates from a subprocess, and is likely not a problem with pip.
+#15 1.514   ERROR: Failed building wheel for url
+#15 1.514   Running setup.py clean for url
+#15 1.620 Failed to build url
+#15 1.620 ERROR: Could not build wheels for url, which is required to install pyproject.toml-based projects
+#15 1.626 
+#15 1.626 [notice] A new release of pip is available: 24.0 -> 25.3
+#15 1.626 [notice] To update, run: pip install --upgrade pip
+#15 ERROR: process "pip install url" did not complete successfully: exit code: 1
+------
+ > [11/20] RUN ["pip","install","url"]:
+1.513       [end of output]
+1.513   
+1.513   note: This error originates from a subprocess, and is likely not a problem with pip.
+1.514   ERROR: Failed building wheel for url
+1.514   Running setup.py clean for url
+1.620 Failed to build url
+1.620 ERROR: Could not build wheels for url, which is required to install pyproject.toml-based projects
+1.626 
+1.626 [notice] A new release of pip is available: 24.0 -> 25.3
+1.626 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:11
+--------------------
+   9 |     RUN ["pip","install","py-curses-editor"]
+  10 |     RUN ["pip","install","clip.py"]
+  11 | >>> RUN ["pip","install","url"]
+  12 |     RUN ["pip","install","webvirtmgr"]
+  13 |     RUN ["pip","install","requests"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install url" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/kt049uexobgpu0z1sx8fdtdoo
+[2025-10-29 11:43:13] ERROR: Build failed for 0efb4d07f28af1c8fc1b

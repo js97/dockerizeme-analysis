@@ -1,0 +1,190 @@
+=== Docker Build Log for 053db410f7fdd4e1d6034a0a7fd45d9b ===
+Started at: Mi 29. Okt 11:28:09 CET 2025
+
+[2025-10-29 11:28:09] START: Building image for 053db410f7fdd4e1d6034a0a7fd45d9b
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 225B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.05kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/053db410f7fdd4e1d6034a0a7fd45d9b/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","requests"]
+#7 1.925 Collecting requests
+#7 1.959   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.081 Collecting charset_normalizer<4,>=2 (from requests)
+#7 2.089   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.134 Collecting idna<4,>=2.5 (from requests)
+#7 2.142   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.203 Collecting urllib3<3,>=1.21.1 (from requests)
+#7 2.211   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.254 Collecting certifi>=2017.4.17 (from requests)
+#7 2.263   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.290 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.313    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 2.6 MB/s eta 0:00:00
+#7 2.322 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.340    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.0 MB/s eta 0:00:00
+#7 2.349 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.363    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.7 MB/s eta 0:00:00
+#7 2.372 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.383    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 6.1 MB/s eta 0:00:00
+#7 2.391 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.405    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.6 MB/s eta 0:00:00
+#7 2.451 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#7 2.665 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#7 2.665 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.753 
+#7 2.753 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.753 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.9s
+
+#8 [4/4] RUN ["pip","install","pycrypto"]
+#8 0.519 Collecting pycrypto
+#8 0.555   Downloading pycrypto-2.6.1.tar.gz (446 kB)
+#8 0.602      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 446.2/446.2 kB 10.1 MB/s eta 0:00:00
+#8 0.635   Preparing metadata (setup.py): started
+#8 1.091   Preparing metadata (setup.py): finished with status 'done'
+#8 1.092 Building wheels for collected packages: pycrypto
+#8 1.093   Building wheel for pycrypto (setup.py): started
+#8 2.518   Building wheel for pycrypto (setup.py): finished with status 'error'
+#8 2.523   error: subprocess-exited-with-error
+#8 2.523   
+#8 2.523   × python setup.py bdist_wheel did not run successfully.
+#8 2.523   │ exit code: 1
+#8 2.523   ╰─> [84 lines of output]
+#8 2.523       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+#8 2.523       !!
+#8 2.523       
+#8 2.523               ********************************************************************************
+#8 2.523               Please consider removing the following classifiers in favor of a SPDX license expression:
+#8 2.523       
+#8 2.523               License :: Public Domain
+#8 2.523       
+#8 2.523               See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+#8 2.523               ********************************************************************************
+#8 2.523       
+#8 2.523       !!
+#8 2.523         self._finalize_license_expression()
+#8 2.523       checking for gcc... gcc
+#8 2.523       checking whether the C compiler works... yes
+#8 2.523       checking for C compiler default output file name... a.out
+#8 2.523       checking for suffix of executables...
+#8 2.523       checking whether we are cross compiling... no
+#8 2.523       checking for suffix of object files... o
+#8 2.523       checking whether we are using the GNU C compiler... yes
+#8 2.523       checking whether gcc accepts -g... yes
+#8 2.523       checking for gcc option to accept ISO C89... none needed
+#8 2.523       checking for __gmpz_init in -lgmp... yes
+#8 2.523       checking for __gmpz_init in -lmpir... no
+#8 2.523       checking whether mpz_powm is declared... yes
+#8 2.523       checking whether mpz_powm_sec is declared... yes
+#8 2.523       checking how to run the C preprocessor... gcc -E
+#8 2.523       checking for grep that handles long lines and -e... /usr/bin/grep
+#8 2.523       checking for egrep... /usr/bin/grep -E
+#8 2.523       checking for ANSI C header files... yes
+#8 2.523       checking for sys/types.h... yes
+#8 2.523       checking for sys/stat.h... yes
+#8 2.523       checking for stdlib.h... yes
+#8 2.523       checking for string.h... yes
+#8 2.523       checking for memory.h... yes
+#8 2.523       checking for strings.h... yes
+#8 2.523       checking for inttypes.h... yes
+#8 2.523       checking for stdint.h... yes
+#8 2.523       checking for unistd.h... yes
+#8 2.523       checking for inttypes.h... (cached) yes
+#8 2.523       checking limits.h usability... yes
+#8 2.523       checking limits.h presence... yes
+#8 2.523       checking for limits.h... yes
+#8 2.523       checking stddef.h usability... yes
+#8 2.523       checking stddef.h presence... yes
+#8 2.523       checking for stddef.h... yes
+#8 2.523       checking for stdint.h... (cached) yes
+#8 2.523       checking for stdlib.h... (cached) yes
+#8 2.523       checking for string.h... (cached) yes
+#8 2.523       checking wchar.h usability... yes
+#8 2.523       checking wchar.h presence... yes
+#8 2.523       checking for wchar.h... yes
+#8 2.523       checking for inline... inline
+#8 2.523       checking for int16_t... yes
+#8 2.523       checking for int32_t... yes
+#8 2.523       checking for int64_t... yes
+#8 2.523       checking for int8_t... yes
+#8 2.523       checking for size_t... yes
+#8 2.523       checking for uint16_t... yes
+#8 2.523       checking for uint32_t... yes
+#8 2.523       checking for uint64_t... yes
+#8 2.523       checking for uint8_t... yes
+#8 2.523       checking for stdlib.h... (cached) yes
+#8 2.523       checking for GNU libc compatible malloc... yes
+#8 2.523       checking for memmove... yes
+#8 2.523       checking for memset... yes
+#8 2.523       configure: creating ./config.status
+#8 2.523       config.status: creating src/config.h
+#8 2.523       In file included from /usr/local/include/python3.11/Python.h:87,
+#8 2.523                        from src/_fastmath.c:31:
+#8 2.523       /usr/local/include/python3.11/cpython/pytime.h:208:60: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+#8 2.523         208 | PyAPI_FUNC(int) _PyTime_FromTimespec(_PyTime_t *tp, struct timespec *ts);
+#8 2.523             |                                                            ^~~~~~~~
+#8 2.523       /usr/local/include/python3.11/cpython/pytime.h:213:56: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+#8 2.523         213 | PyAPI_FUNC(int) _PyTime_AsTimespec(_PyTime_t t, struct timespec *ts);
+#8 2.523             |                                                        ^~~~~~~~
+#8 2.523       /usr/local/include/python3.11/cpython/pytime.h:217:63: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+#8 2.523         217 | PyAPI_FUNC(void) _PyTime_AsTimespec_clamp(_PyTime_t t, struct timespec *ts);
+#8 2.523             |                                                               ^~~~~~~~
+#8 2.523       src/_fastmath.c:33:10: fatal error: longintrepr.h: No such file or directory
+#8 2.523          33 | #include <longintrepr.h>                                /* for conversions */
+#8 2.523             |          ^~~~~~~~~~~~~~~
+#8 2.523       compilation terminated.
+#8 2.523       error: command '/usr/bin/gcc' failed with exit code 1
+#8 2.523       [end of output]
+#8 2.523   
+#8 2.523   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 2.523   ERROR: Failed building wheel for pycrypto
+#8 2.524   Running setup.py clean for pycrypto
+#8 2.627 Failed to build pycrypto
+#8 2.628 ERROR: Could not build wheels for pycrypto, which is required to install pyproject.toml-based projects
+#8 2.633 
+#8 2.633 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.633 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install pycrypto" did not complete successfully: exit code: 1
+------
+ > [4/4] RUN ["pip","install","pycrypto"]:
+2.523       [end of output]
+2.523   
+2.523   note: This error originates from a subprocess, and is likely not a problem with pip.
+2.523   ERROR: Failed building wheel for pycrypto
+2.524   Running setup.py clean for pycrypto
+2.627 Failed to build pycrypto
+2.628 ERROR: Could not build wheels for pycrypto, which is required to install pyproject.toml-based projects
+2.633 
+2.633 [notice] A new release of pip is available: 24.0 -> 25.3
+2.633 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/053db410f7fdd4e1d6034a0a7fd45d9b/snippet.py /snippet.py
+   3 |     RUN ["pip","install","requests"]
+   4 | >>> RUN ["pip","install","pycrypto"]
+   5 |     CMD ["python3","/snippet.py"]
+   6 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install pycrypto" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/q1gem3h8vhclwdt0j6gz65gi9
+[2025-10-29 11:28:15] ERROR: Build failed for 053db410f7fdd4e1d6034a0a7fd45d9b

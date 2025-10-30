@@ -1,0 +1,23 @@
+=== Docker Run Log for 9378601 ===
+Started at: Mi 29. Okt 18:24:07 CET 2025
+
+[2025-10-29 18:24:11] START: Running container for 9378601
+[2025-10-29 18:24:12] SUCCESS: Container b3e203fa228484b1c2d2e2f17ee8cf323ce40c7cea6cdef1e9b627ff3349082d started for 9378601
+=== Container logs for 9378601 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 3, in <module>
+    from solution import wow_such_much, count_doge_words
+  File "/usr/local/lib/python3.11/site-packages/solution/__init__.py", line 13, in <module>
+    from .form import Form  # noqa
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/solution/form.py", line 11, in <module>
+    from .fields import Field
+  File "/usr/local/lib/python3.11/site-packages/solution/fields/__init__.py", line 7, in <module>
+    from .file import File, Image, IMAGES, DOCUMENTS, DATA, ARCHIVES
+  File "/usr/local/lib/python3.11/site-packages/solution/fields/file/__init__.py", line 1, in <module>
+    from .file import File
+  File "/usr/local/lib/python3.11/site-packages/solution/fields/file/file.py", line 2, in <module>
+    from werkzeug.datastructures import FileStorage
+ModuleNotFoundError: No module named 'werkzeug'
+=== End of logs for 9378601 ===
+[2025-10-29 18:24:14] INFO: Container b3e203fa228484b1c2d2e2f17ee8cf323ce40c7cea6cdef1e9b627ff3349082d has stopped

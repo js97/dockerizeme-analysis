@@ -1,0 +1,87 @@
+=== Docker Build Log for 8069261 ===
+Started at: Mi 29. Okt 17:38:08 CET 2025
+
+[2025-10-29 17:38:08] START: Building image for 8069261
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 199B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.17kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/8069261/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","hunspell"]
+#7 1.887 Collecting hunspell
+#7 1.931   Downloading hunspell-0.5.5.tar.gz (34 kB)
+#7 1.947   Preparing metadata (setup.py): started
+#7 2.334   Preparing metadata (setup.py): finished with status 'done'
+#7 2.336 Building wheels for collected packages: hunspell
+#7 2.337   Building wheel for hunspell (setup.py): started
+#7 2.530   Building wheel for hunspell (setup.py): finished with status 'error'
+#7 2.533   error: subprocess-exited-with-error
+#7 2.533   
+#7 2.533   × python setup.py bdist_wheel did not run successfully.
+#7 2.533   │ exit code: 1
+#7 2.533   ╰─> [11 lines of output]
+#7 2.533       running bdist_wheel
+#7 2.533       running build
+#7 2.533       running build_ext
+#7 2.533       building 'hunspell' extension
+#7 2.533       creating build/temp.linux-x86_64-cpython-311
+#7 2.533       g++ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -D_LINUX -I/usr/include/hunspell -I/usr/local/include/python3.11 -c hunspell.cpp -o build/temp.linux-x86_64-cpython-311/hunspell.o -Wall
+#7 2.533       hunspell.cpp:20:10: fatal error: hunspell.hxx: No such file or directory
+#7 2.533          20 | #include <hunspell.hxx>
+#7 2.533             |          ^~~~~~~~~~~~~~
+#7 2.533       compilation terminated.
+#7 2.533       error: command '/usr/bin/g++' failed with exit code 1
+#7 2.533       [end of output]
+#7 2.533   
+#7 2.533   note: This error originates from a subprocess, and is likely not a problem with pip.
+#7 2.533   ERROR: Failed building wheel for hunspell
+#7 2.533   Running setup.py clean for hunspell
+#7 2.638 Failed to build hunspell
+#7 2.639 ERROR: Could not build wheels for hunspell, which is required to install pyproject.toml-based projects
+#7 2.729 
+#7 2.729 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.729 [notice] To update, run: pip install --upgrade pip
+#7 ERROR: process "pip install hunspell" did not complete successfully: exit code: 1
+------
+ > [3/4] RUN ["pip","install","hunspell"]:
+2.533       [end of output]
+2.533   
+2.533   note: This error originates from a subprocess, and is likely not a problem with pip.
+2.533   ERROR: Failed building wheel for hunspell
+2.533   Running setup.py clean for hunspell
+2.638 Failed to build hunspell
+2.639 ERROR: Could not build wheels for hunspell, which is required to install pyproject.toml-based projects
+2.729 
+2.729 [notice] A new release of pip is available: 24.0 -> 25.3
+2.729 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:3
+--------------------
+   1 |     FROM python:3.11
+   2 |     COPY hard-gists/8069261/snippet.py /snippet.py
+   3 | >>> RUN ["pip","install","hunspell"]
+   4 |     RUN ["pip","install","tornado"]
+   5 |     CMD ["python3","/snippet.py"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install hunspell" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/ky30yfbymyxp8v2t925997i1h
+[2025-10-29 17:38:11] ERROR: Build failed for 8069261

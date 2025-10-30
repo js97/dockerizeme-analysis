@@ -1,0 +1,13 @@
+=== Docker Run Log for 4952342 ===
+Started at: Mi 29. Okt 15:04:16 CET 2025
+
+[2025-10-29 15:04:23] START: Running container for 4952342
+[2025-10-29 15:04:24] SUCCESS: Container c5285f0cd383278310e5bc8a9256115093a69388be9e07f95e6c2445ae2ec899 started for 4952342
+=== Container logs for 4952342 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 4, in <module>
+    f = File(open('path_to_file','r'))
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'path_to_file'
+=== End of logs for 4952342 ===
+[2025-10-29 15:04:26] INFO: Container c5285f0cd383278310e5bc8a9256115093a69388be9e07f95e6c2445ae2ec899 has stopped

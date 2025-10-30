@@ -1,0 +1,12 @@
+=== Docker Run Log for 5310037 ===
+Started at: Mi 29. Okt 15:36:12 CET 2025
+
+[2025-10-29 15:36:20] START: Running container for 5310037
+[2025-10-29 15:36:21] SUCCESS: Container e0d2f5ff31a3ece8c357587729a931f04c2d3c6d9a1ac8176829537f1411bacc started for 5310037
+=== Container logs for 5310037 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 3, in <module>
+    from sqlalchemy import Table, event, subquery
+ImportError: cannot import name 'subquery' from 'sqlalchemy' (/usr/local/lib/python3.11/site-packages/sqlalchemy/__init__.py)
+=== End of logs for 5310037 ===
+[2025-10-29 15:36:23] INFO: Container e0d2f5ff31a3ece8c357587729a931f04c2d3c6d9a1ac8176829537f1411bacc has stopped

@@ -1,0 +1,30 @@
+=== Docker Run Log for 3706203 ===
+Started at: Mi 29. Okt 13:57:19 CET 2025
+
+[2025-10-29 13:57:23] START: Running container for 3706203
+[2025-10-29 13:57:23] SUCCESS: Container 88c925df6b7cf02c989c4268c78ccd43bff853ef80e8318157f3ea2f16c6dc2e started for 3706203
+=== Container logs for 3706203 ===
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/observer/__init__.py", line 7, in <module>
+    from observer_linux import Observer
+ModuleNotFoundError: No module named 'observer_linux'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/observer/__init__.py", line 10, in <module>
+    from observer_macosx import Observer
+ModuleNotFoundError: No module named 'observer_macosx'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snippet.py", line 10, in <module>
+    from observer import JSObserver
+  File "/usr/local/lib/python3.11/site-packages/observer/__init__.py", line 12, in <module>
+    from observer.base import Observer
+  File "/usr/local/lib/python3.11/site-packages/observer/base.py", line 11, in <module>
+    from logger import Logger
+ModuleNotFoundError: No module named 'logger'
+=== End of logs for 3706203 ===
+[2025-10-29 13:57:25] INFO: Container 88c925df6b7cf02c989c4268c78ccd43bff853ef80e8318157f3ea2f16c6dc2e has stopped

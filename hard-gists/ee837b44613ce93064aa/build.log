@@ -1,0 +1,72 @@
+=== Docker Build Log for ee837b44613ce93064aa ===
+Started at: Mi 29. Okt 21:02:53 CET 2025
+
+[2025-10-29 21:02:53] START: Building image for ee837b44613ce93064aa
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 219B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 5.47kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/ee837b44613ce93064aa/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","six"]
+#7 2.062 Collecting six
+#7 2.097   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.118 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.164 Installing collected packages: six
+#7 2.180 Successfully installed six-1.17.0
+#7 2.180 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.274 
+#7 2.274 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.274 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.5s
+
+#8 [4/4] RUN ["pip","install","djangorestframework"]
+#8 0.549 Collecting djangorestframework
+#8 0.585   Downloading djangorestframework-3.16.1-py3-none-any.whl.metadata (11 kB)
+#8 0.700 Collecting django>=4.2 (from djangorestframework)
+#8 0.709   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#8 0.760 Collecting asgiref>=3.8.1 (from django>=4.2->djangorestframework)
+#8 0.773   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#8 0.826 Collecting sqlparse>=0.3.1 (from django>=4.2->djangorestframework)
+#8 0.837   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#8 0.862 Downloading djangorestframework-3.16.1-py3-none-any.whl (1.1 MB)
+#8 0.982    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 9.2 MB/s eta 0:00:00
+#8 0.994 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#8 1.631    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 13.1 MB/s eta 0:00:00
+#8 1.640 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#8 1.665 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#8 1.676    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.4 MB/s eta 0:00:00
+#8 1.755 Installing collected packages: sqlparse, asgiref, django, djangorestframework
+#8 3.234 Successfully installed asgiref-3.10.0 django-5.2.7 djangorestframework-3.16.1 sqlparse-0.5.3
+#8 3.235 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 3.240 
+#8 3.240 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.240 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.7s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.5s done
+#9 writing image sha256:d41c30e16f9d723e642e78052530d1f35096b32ebe8ac21303b263bd9d5be928 done
+#9 naming to docker.io/library/test-image-ee837b44613ce93064aa done
+#9 DONE 0.5s
+
+View build details: docker-desktop://dashboard/build/default/default/rj96m68d0ibv3gtdlech2fxx0
+[2025-10-29 21:03:00] SUCCESS: Build completed for ee837b44613ce93064aa

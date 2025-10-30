@@ -1,0 +1,22 @@
+=== Docker Run Log for 5846464 ===
+Started at: Mi 29. Okt 16:05:55 CET 2025
+
+[2025-10-29 16:06:00] START: Running container for 5846464
+[2025-10-29 16:06:01] SUCCESS: Container 5f81060b439dc48f0d69f4d27e243954a0142ded55c8e73e94450d5c00ac3419 started for 5846464
+=== Container logs for 5846464 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 35, in <module>
+    engine_default = create_engine(DB_CONN_URI_DEFAULT)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in create_engine
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/util/deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/create.py", line 617, in create_engine
+    dbapi = dbapi_meth(**dbapi_args)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 696, in import_dbapi
+    import psycopg2
+ModuleNotFoundError: No module named 'psycopg2'
+=== End of logs for 5846464 ===
+[2025-10-29 16:06:03] INFO: Container 5f81060b439dc48f0d69f4d27e243954a0142ded55c8e73e94450d5c00ac3419 has stopped

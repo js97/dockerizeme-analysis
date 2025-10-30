@@ -1,0 +1,87 @@
+=== Docker Build Log for 1264102 ===
+Started at: Mi 29. Okt 12:03:46 CET 2025
+
+[2025-10-29 12:03:46] START: Building image for 1264102
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 228B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.39kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/1264102/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","dj.choices"]
+#7 1.924 Collecting dj.choices
+#7 1.966   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 1.983   Preparing metadata (setup.py): started
+#7 2.369   Preparing metadata (setup.py): finished with status 'done'
+#7 2.474 Collecting django (from dj.choices)
+#7 2.486   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.523 Collecting six (from dj.choices)
+#7 2.534   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.579 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.588   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.626 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.634   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.658 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.018    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 23.2 MB/s eta 0:00:00
+#7 3.026 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.044 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.063 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.074    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.8 MB/s eta 0:00:00
+#7 3.112 Building wheels for collected packages: dj.choices
+#7 3.112   Building wheel for dj.choices (setup.py): started
+#7 3.289   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.289   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=95c0e35bd5412a5de671857e7ef7fd39c6d9c957e5bbf4df4050e10a3a9894ee
+#7 3.289   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.291 Successfully built dj.choices
+#7 3.339 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 4.806 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 4.806 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.898 
+#7 4.898 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.898 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.3s
+
+#8 [4/5] RUN ["pip","install","six"]
+#8 0.455 Requirement already satisfied: six in /usr/local/lib/python3.11/site-packages (1.17.0)
+#8 0.496 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.501 
+#8 0.501 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.501 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.6s
+
+#9 [5/5] RUN ["pip","install","Django"]
+#9 0.483 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#9 0.487 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#9 0.488 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#9 0.530 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.535 
+#9 0.535 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.535 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.6s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.6s done
+#10 writing image sha256:e91f002601dbc1ef2709130f293f74ce33ad220e426b529c7bd2d65f1ab5d8ec done
+#10 naming to docker.io/library/test-image-1264102 done
+#10 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/default/default/zgrmh4la2ddhnvvritnvy0ap6
+[2025-10-29 12:03:53] SUCCESS: Build completed for 1264102

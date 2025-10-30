@@ -1,0 +1,19 @@
+=== Docker Run Log for 7030355 ===
+Started at: Mi 29. Okt 16:58:34 CET 2025
+
+[2025-10-29 16:58:37] START: Running container for 7030355
+[2025-10-29 16:58:38] SUCCESS: Container a3bb96bd64aab0c507329f35c6ff7902b54ea7f65f08ca4624b8789df3387592 started for 7030355
+=== Container logs for 7030355 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 7, in <module>
+    client.connect('localhost', 6600)
+  File "/usr/local/lib/python3.11/site-packages/mpd/base.py", line 800, in connect
+    self._sock = self._connect_tcp(host, port)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mpd/base.py", line 759, in _connect_tcp
+    raise err
+  File "/usr/local/lib/python3.11/site-packages/mpd/base.py", line 752, in _connect_tcp
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+=== End of logs for 7030355 ===
+[2025-10-29 16:58:40] INFO: Container a3bb96bd64aab0c507329f35c6ff7902b54ea7f65f08ca4624b8789df3387592 has stopped

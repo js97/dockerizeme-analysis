@@ -1,0 +1,20 @@
+=== Docker Run Log for 7540117 ===
+Started at: Mi 29. Okt 17:10:58 CET 2025
+
+[2025-10-29 17:12:23] START: Running container for 7540117
+[2025-10-29 17:12:23] SUCCESS: Container ce5ba7463dcc35761a74d823562025182579cde2b35d865709c70fddd7d4c8ed started for 7540117
+=== Container logs for 7540117 ===
+/snippet.py:1: DeprecationWarning: ALL_PERMISSIONS: "pyramid.security.ALL_PERMISSIONS" is deprecated in Pyramid 2.0. Adjust your import to "pyramid.authorization.ALL_PERMISSIONS"
+  from pyramid.security import ALL_PERMISSIONS
+/snippet.py:2: DeprecationWarning: DENY_ALL: "pyramid.security.DENY_ALL" is deprecated in Pyramid 2.0. Adjust your import to "pyramid.authorization.DENY_ALL"
+  from pyramid.security import DENY_ALL
+/snippet.py:3: DeprecationWarning: Allow: "pyramid.security.Allow" is deprecated in Pyramid 2.0. Adjust your import to "pyramid.authorization.Allow"
+  from pyramid.security import Allow
+/snippet.py:4: DeprecationWarning: Everyone: "pyramid.security.Everyone" is deprecated in Pyramid 2.0. Adjust your import to "pyramid.authorization.Everyone"
+  from pyramid.security import Everyone
+Traceback (most recent call last):
+  File "/snippet.py", line 8, in <module>
+    from zope.sqlalchemy import ZopeTransactionExtension
+ImportError: cannot import name 'ZopeTransactionExtension' from 'zope.sqlalchemy' (/usr/local/lib/python3.11/site-packages/zope/sqlalchemy/__init__.py)
+=== End of logs for 7540117 ===
+[2025-10-29 17:12:25] INFO: Container ce5ba7463dcc35761a74d823562025182579cde2b35d865709c70fddd7d4c8ed has stopped

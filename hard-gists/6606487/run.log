@@ -1,0 +1,19 @@
+=== Docker Run Log for 6606487 ===
+Started at: Mi 29. Okt 16:39:39 CET 2025
+
+[2025-10-29 16:39:45] START: Running container for 6606487
+[2025-10-29 16:39:45] SUCCESS: Container a4f9f7a1d611e118df71632db73b6abe7846de43a22a6a704d540fbef3940325 started for 6606487
+=== Container logs for 6606487 ===
+/snippet.py:41: GuessedAtParserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+The code that caused this warning is on line 41 of the file /snippet.py. To get rid of this warning, pass the additional argument 'features="html.parser"' to the BeautifulSoup constructor.
+
+  soup = BeautifulSoup( the_page )
+A fresh start ...
+Traceback (most recent call last):
+  File "/snippet.py", line 142, in <module>
+    allCategories.extend( aDiv.get( 'href' ) for aDiv in columnDiv.findAll( 'a', href = re.compile( '^https://itunes.apple.com/us/genre' ) ) )
+                                                         ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'findAll'
+=== End of logs for 6606487 ===
+[2025-10-29 16:39:47] INFO: Container a4f9f7a1d611e118df71632db73b6abe7846de43a22a6a704d540fbef3940325 has stopped

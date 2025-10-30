@@ -1,0 +1,82 @@
+=== Docker Build Log for 6987693 ===
+Started at: Mi 29. Okt 16:45:23 CET 2025
+
+[2025-10-29 16:45:23] START: Building image for 6987693
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 200B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/python:3.11
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 739B 0.0s done
+#5 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/python:3.11
+#4 CACHED
+
+#6 [2/4] COPY hard-gists/6987693/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","dj.choices"]
+#7 2.126 Collecting dj.choices
+#7 2.163   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 2.181   Preparing metadata (setup.py): started
+#7 2.589   Preparing metadata (setup.py): finished with status 'done'
+#7 2.701 Collecting django (from dj.choices)
+#7 2.710   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.752 Collecting six (from dj.choices)
+#7 2.762   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.812 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.820   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.857 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.865   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.889 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.292    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 20.7 MB/s eta 0:00:00
+#7 3.300 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.318 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.337 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.348    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.7 MB/s eta 0:00:00
+#7 3.392 Building wheels for collected packages: dj.choices
+#7 3.393   Building wheel for dj.choices (setup.py): started
+#7 3.600   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.600   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=572a584b3934a805d3bb0e7c8d39c32d6404a3603025ef73a5b9758fdf7a4695
+#7 3.600   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.602 Successfully built dj.choices
+#7 3.659 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 5.531 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 5.531 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.633 
+#7 5.633 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.633 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.2s
+
+#8 [4/4] RUN ["pip","install","Django"]
+#8 0.519 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#8 0.524 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#8 0.525 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#8 0.578 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.584 
+#8 0.584 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.584 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.7s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.7s done
+#9 writing image sha256:aa61934f2618ac11b6591edd4d63b2dee6e9e182150feaee906be7643c480489 done
+#9 naming to docker.io/library/test-image-6987693 0.0s done
+#9 DONE 0.8s
+
+View build details: docker-desktop://dashboard/build/default/default/l2b2qnf2aud38uowltps0ivyi
+[2025-10-29 16:45:31] SUCCESS: Build completed for 6987693

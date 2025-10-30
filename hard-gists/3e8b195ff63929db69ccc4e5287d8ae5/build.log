@@ -1,0 +1,899 @@
+=== Docker Build Log for 3e8b195ff63929db69ccc4e5287d8ae5 ===
+Started at: Mi 29. Okt 14:13:46 CET 2025
+
+[2025-10-29 14:13:46] START: Building image for 3e8b195ff63929db69ccc4e5287d8ae5
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 641B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.38kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/17] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/17] COPY hard-gists/3e8b195ff63929db69ccc4e5287d8ae5/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/17] RUN ["pip","install","the"]
+#7 2.007 Collecting the
+#7 2.144   Downloading the-0.1.5.tar.gz (10 kB)
+#7 2.167   Preparing metadata (setup.py): started
+#7 2.548   Preparing metadata (setup.py): finished with status 'done'
+#7 2.549 Building wheels for collected packages: the
+#7 2.550   Building wheel for the (setup.py): started
+#7 2.716   Building wheel for the (setup.py): finished with status 'done'
+#7 2.716   Created wheel for the: filename=the-0.1.5-py3-none-any.whl size=6027 sha256=76ec5ed33e3fec9fcdc05b907170c558844f7a983f6efd20ed09e1737e5b147e
+#7 2.716   Stored in directory: /root/.cache/pip/wheels/5a/02/15/82fa3d852099cde5adb558437baaa511bc9ad4a7febdae2ecb
+#7 2.719 Successfully built the
+#7 2.748 Installing collected packages: the
+#7 2.763 Successfully installed the-0.1.5
+#7 2.763 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.858 
+#7 2.858 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.858 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.0s
+
+#8 [ 4/17] RUN ["pip","install","PyYAML"]
+#8 0.533 Collecting PyYAML
+#8 0.569   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#8 0.587 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#8 0.643    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 15.0 MB/s eta 0:00:00
+#8 0.677 Installing collected packages: PyYAML
+#8 0.742 Successfully installed PyYAML-6.0.3
+#8 0.742 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.747 
+#8 0.747 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.747 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.8s
+
+#9 [ 5/17] RUN ["pip","install","numpy"]
+#9 0.682 Collecting numpy
+#9 0.723   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#9 0.756      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 1.7 MB/s eta 0:00:00
+#9 0.774 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#9 1.395    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 25.7 MB/s eta 0:00:00
+#9 1.473 Installing collected packages: numpy
+#9 2.946 Successfully installed numpy-2.3.4
+#9 2.946 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 2.952 
+#9 2.952 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 2.952 [notice] To update, run: pip install --upgrade pip
+#9 DONE 3.2s
+
+#10 [ 6/17] RUN ["pip","install","scipy"]
+#10 0.639 Collecting scipy
+#10 0.683   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#10 0.714      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 1.8 MB/s eta 0:00:00
+#10 0.742 Requirement already satisfied: numpy<2.6,>=1.25.2 in /usr/local/lib/python3.11/site-packages (from scipy) (2.3.4)
+#10 0.756 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#10 2.194    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 16.3 MB/s eta 0:00:00
+#10 2.334 Installing collected packages: scipy
+#10 5.114 Successfully installed scipy-1.16.3
+#10 5.115 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 5.120 
+#10 5.120 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 5.120 [notice] To update, run: pip install --upgrade pip
+#10 DONE 6.0s
+
+#11 [ 7/17] RUN ["pip","install","Theano"]
+#11 0.624 Collecting Theano
+#11 0.840   Downloading Theano-1.0.5.tar.gz (2.8 MB)
+#11 1.253      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.8/2.8 MB 6.9 MB/s eta 0:00:00
+#11 1.402   Preparing metadata (setup.py): started
+#11 1.565   Preparing metadata (setup.py): finished with status 'done'
+#11 1.574 Requirement already satisfied: numpy>=1.9.1 in /usr/local/lib/python3.11/site-packages (from Theano) (2.3.4)
+#11 1.578 Requirement already satisfied: scipy>=0.14 in /usr/local/lib/python3.11/site-packages (from Theano) (1.16.3)
+#11 1.609 Collecting six>=1.9.0 (from Theano)
+#11 1.617   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#11 1.662 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#11 1.676 Building wheels for collected packages: Theano
+#11 1.681   Building wheel for Theano (setup.py): started
+#11 2.340   Building wheel for Theano (setup.py): finished with status 'done'
+#11 2.346   Created wheel for Theano: filename=theano-1.0.5-py3-none-any.whl size=2668205 sha256=fc2bc38f48e0525dd0a0b66e5d8f1193eb8dca837a4f13562450c65b7c7244fc
+#11 2.346   Stored in directory: /root/.cache/pip/wheels/26/1f/2f/02d738022626461828148150c0354e712c4ad74f1a60f10933
+#11 2.349 Successfully built Theano
+#11 2.409 Installing collected packages: six, Theano
+#11 3.470 Successfully installed Theano-1.0.5 six-1.17.0
+#11 3.470 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 3.475 
+#11 3.475 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 3.475 [notice] To update, run: pip install --upgrade pip
+#11 DONE 3.8s
+
+#12 [ 8/17] RUN ["pip","install","Lasagne"]
+#12 0.543 Collecting Lasagne
+#12 0.581   Downloading Lasagne-0.1.tar.gz (125 kB)
+#12 0.615      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.1/125.1 kB 3.6 MB/s eta 0:00:00
+#12 0.631   Preparing metadata (setup.py): started
+#12 0.750   Preparing metadata (setup.py): finished with status 'done'
+#12 0.757 Requirement already satisfied: numpy in /usr/local/lib/python3.11/site-packages (from Lasagne) (2.3.4)
+#12 0.761 Building wheels for collected packages: Lasagne
+#12 0.769   Building wheel for Lasagne (setup.py): started
+#12 0.921   Building wheel for Lasagne (setup.py): finished with status 'done'
+#12 0.922   Created wheel for Lasagne: filename=lasagne-0.1-py3-none-any.whl size=79359 sha256=9fb397c832aa49809e70a69a8c8a37b1d8544b70eb74fcb16dc3f469e6b15a47
+#12 0.922   Stored in directory: /root/.cache/pip/wheels/4e/ad/d7/6376b7842a2d4635bb42a9889ef94b6de55291916efa1952e9
+#12 0.924 Successfully built Lasagne
+#12 0.989 Installing collected packages: Lasagne
+#12 1.048 Successfully installed Lasagne-0.1
+#12 1.048 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 1.053 
+#12 1.053 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 1.053 [notice] To update, run: pip install --upgrade pip
+#12 DONE 1.2s
+
+#13 [ 9/17] RUN ["pip","install","network"]
+#13 0.512 Collecting network
+#13 0.547   Downloading network-0.1.tar.gz (2.8 kB)
+#13 0.564   Preparing metadata (setup.py): started
+#13 0.672   Preparing metadata (setup.py): finished with status 'done'
+#13 0.674 Building wheels for collected packages: network
+#13 0.679   Building wheel for network (setup.py): started
+#13 0.811   Building wheel for network (setup.py): finished with status 'done'
+#13 0.811   Created wheel for network: filename=network-0.1-py3-none-any.whl size=3175 sha256=dfe3bb96874aa79a03b4529482ccfd30cea0efc5e458bf21091207fc1419a235
+#13 0.812   Stored in directory: /root/.cache/pip/wheels/3a/9a/a4/341d3b109494a43a5cdd444ca83be3a4bfe8c1267ad9f85332
+#13 0.813 Successfully built network
+#13 0.879 Installing collected packages: network
+#13 0.919 Successfully installed network-0.1
+#13 0.919 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 0.924 
+#13 0.924 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 0.924 [notice] To update, run: pip install --upgrade pip
+#13 DONE 1.0s
+
+#14 [10/17] RUN ["pip","install","OpsletsEc2"]
+#14 0.653 Collecting OpsletsEc2
+#14 0.787   Downloading OpsletsEc2-0.3.30.tar.gz (9.7 kB)
+#14 0.821   Preparing metadata (setup.py): started
+#14 0.935   Preparing metadata (setup.py): finished with status 'done'
+#14 0.980 Collecting boto>=2.38.0 (from OpsletsEc2)
+#14 0.989   Downloading boto-2.49.0-py2.py3-none-any.whl.metadata (7.3 kB)
+#14 1.454 Collecting boto3>=1.2.3 (from OpsletsEc2)
+#14 1.463   Downloading boto3-1.40.61-py3-none-any.whl.metadata (6.6 kB)
+#14 1.521 Collecting python-dateutil>=2.4.2 (from OpsletsEc2)
+#14 1.529   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#14 1.575 Collecting Jinja2>=2.8 (from OpsletsEc2)
+#14 1.584   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#14 1.596 Requirement already satisfied: pip in /usr/local/lib/python3.11/site-packages (from OpsletsEc2) (24.0)
+#14 2.129 Collecting botocore<1.41.0,>=1.40.61 (from boto3>=1.2.3->OpsletsEc2)
+#14 2.141   Downloading botocore-1.40.61-py3-none-any.whl.metadata (5.7 kB)
+#14 2.191 Collecting jmespath<2.0.0,>=0.7.1 (from boto3>=1.2.3->OpsletsEc2)
+#14 2.198   Downloading jmespath-1.0.1-py3-none-any.whl.metadata (7.6 kB)
+#14 2.244 Collecting s3transfer<0.15.0,>=0.14.0 (from boto3>=1.2.3->OpsletsEc2)
+#14 2.253   Downloading s3transfer-0.14.0-py3-none-any.whl.metadata (1.7 kB)
+#14 2.335 Collecting MarkupSafe>=2.0 (from Jinja2>=2.8->OpsletsEc2)
+#14 2.343   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#14 2.355 Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.11/site-packages (from python-dateutil>=2.4.2->OpsletsEc2) (1.17.0)
+#14 2.417 Collecting urllib3!=2.2.0,<3,>=1.25.4 (from botocore<1.41.0,>=1.40.61->boto3>=1.2.3->OpsletsEc2)
+#14 2.425   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#14 2.601 Downloading boto-2.49.0-py2.py3-none-any.whl (1.4 MB)
+#14 2.689    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 15.8 MB/s eta 0:00:00
+#14 2.702 Downloading boto3-1.40.61-py3-none-any.whl (139 kB)
+#14 2.716    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.3/139.3 kB 10.7 MB/s eta 0:00:00
+#14 2.724 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#14 2.738    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 10.1 MB/s eta 0:00:00
+#14 2.749 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#14 2.767    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 14.1 MB/s eta 0:00:00
+#14 2.776 Downloading botocore-1.40.61-py3-none-any.whl (14.1 MB)
+#14 3.314    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.1/14.1 MB 24.5 MB/s eta 0:00:00
+#14 3.322 Downloading jmespath-1.0.1-py3-none-any.whl (20 kB)
+#14 3.340 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#14 3.358 Downloading s3transfer-0.14.0-py3-none-any.whl (85 kB)
+#14 3.371    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.7/85.7 kB 6.9 MB/s eta 0:00:00
+#14 3.379 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#14 3.392    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 10.2 MB/s eta 0:00:00
+#14 3.456 Building wheels for collected packages: OpsletsEc2
+#14 3.461   Building wheel for OpsletsEc2 (setup.py): started
+#14 3.607   Building wheel for OpsletsEc2 (setup.py): finished with status 'done'
+#14 3.608   Created wheel for OpsletsEc2: filename=opsletsec2-0.3.30-py3-none-any.whl size=13331 sha256=681e6dd0e92dcf2272dff44e050eba8c182140db96f9bb4105687ddea3534466
+#14 3.608   Stored in directory: /root/.cache/pip/wheels/8e/dc/76/9ae852c01789b94d25c14250ab9ab44df0dca5fe1c546ad78d
+#14 3.609 Successfully built OpsletsEc2
+#14 3.722 Installing collected packages: boto, urllib3, python-dateutil, MarkupSafe, jmespath, Jinja2, botocore, s3transfer, boto3, OpsletsEc2
+#14 4.910 Successfully installed Jinja2-3.1.6 MarkupSafe-3.0.3 OpsletsEc2-0.3.30 boto-2.49.0 boto3-1.40.61 botocore-1.40.61 jmespath-1.0.1 python-dateutil-2.9.0.post0 s3transfer-0.14.0 urllib3-2.5.0
+#14 4.910 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#14 4.916 
+#14 4.916 [notice] A new release of pip is available: 24.0 -> 25.3
+#14 4.916 [notice] To update, run: pip install --upgrade pip
+#14 DONE 5.4s
+
+#15 [11/17] RUN ["pip","install","gdctools"]
+#15 0.633 Collecting gdctools
+#15 0.766   Downloading gdctools-0.2.12.tar.gz (69 kB)
+#15 0.807      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.4/69.4 kB 1.5 MB/s eta 0:00:00
+#15 0.815   Preparing metadata (setup.py): started
+#15 0.930   Preparing metadata (setup.py): finished with status 'done'
+#15 0.980 Collecting requests (from gdctools)
+#15 0.988   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#15 1.034 Collecting fasteners (from gdctools)
+#15 1.042   Downloading fasteners-0.20-py3-none-any.whl.metadata (4.8 kB)
+#15 1.206 Collecting matplotlib==2.1.1 (from gdctools)
+#15 1.321   Downloading matplotlib-2.1.1.tar.gz (36.1 MB)
+#15 5.726      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 36.1/36.1 MB 6.6 MB/s eta 0:00:00
+#15 6.787   Preparing metadata (setup.py): started
+#15 7.454   Preparing metadata (setup.py): finished with status 'done'
+#15 7.489 Collecting future (from gdctools)
+#15 7.499   Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+#15 7.543 Collecting configparser (from gdctools)
+#15 7.552   Downloading configparser-7.2.0-py3-none-any.whl.metadata (5.5 kB)
+#15 7.569 Requirement already satisfied: numpy>=1.7.1 in /usr/local/lib/python3.11/site-packages (from matplotlib==2.1.1->gdctools) (2.3.4)
+#15 7.570 Requirement already satisfied: six>=1.10 in /usr/local/lib/python3.11/site-packages (from matplotlib==2.1.1->gdctools) (1.17.0)
+#15 7.571 Requirement already satisfied: python-dateutil>=2.0 in /usr/local/lib/python3.11/site-packages (from matplotlib==2.1.1->gdctools) (2.9.0.post0)
+#15 7.623 Collecting pytz (from matplotlib==2.1.1->gdctools)
+#15 7.633   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#15 7.672 Collecting cycler>=0.10 (from matplotlib==2.1.1->gdctools)
+#15 7.681   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#15 7.751 Collecting pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 (from matplotlib==2.1.1->gdctools)
+#15 7.759   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#15 7.917 Collecting charset_normalizer<4,>=2 (from requests->gdctools)
+#15 7.926   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#15 7.984 Collecting idna<4,>=2.5 (from requests->gdctools)
+#15 7.992   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#15 8.006 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests->gdctools) (2.5.0)
+#15 8.041 Collecting certifi>=2017.4.17 (from requests->gdctools)
+#15 8.049   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#15 8.110 Downloading configparser-7.2.0-py3-none-any.whl (17 kB)
+#15 8.132 Downloading fasteners-0.20-py3-none-any.whl (18 kB)
+#15 8.162 Downloading future-1.0.0-py3-none-any.whl (491 kB)
+#15 8.191    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 491.3/491.3 kB 17.6 MB/s eta 0:00:00
+#15 8.199 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#15 8.221    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 2.7 MB/s eta 0:00:00
+#15 8.229 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#15 8.257    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 5.8 MB/s eta 0:00:00
+#15 8.266 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#15 8.284    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 8.3 MB/s eta 0:00:00
+#15 8.292 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#15 8.313 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#15 8.329    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.3 MB/s eta 0:00:00
+#15 8.341 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#15 8.362    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 5.4 MB/s eta 0:00:00
+#15 8.371 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#15 8.405    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 15.5 MB/s eta 0:00:00
+#15 8.417 Building wheels for collected packages: gdctools, matplotlib
+#15 8.424   Building wheel for gdctools (setup.py): started
+#15 8.603   Building wheel for gdctools (setup.py): finished with status 'done'
+#15 8.604   Created wheel for gdctools: filename=gdctools-0.2.12-py3-none-any.whl size=83095 sha256=7601dee1fbd9ca8a9e369911d07e97b38f9af9ac8f6e0210750b6e09ad26ab7b
+#15 8.604   Stored in directory: /root/.cache/pip/wheels/02/43/06/1e387e40c87829eca00bd5a928cff66c6a846ba9de752c7393
+#15 8.606   Building wheel for matplotlib (setup.py): started
+#15 9.349   Building wheel for matplotlib (setup.py): finished with status 'error'
+#15 9.376   error: subprocess-exited-with-error
+#15 9.376   
+#15 9.376   × python setup.py bdist_wheel did not run successfully.
+#15 9.376   │ exit code: 1
+#15 9.376   ╰─> [590 lines of output]
+#15 9.376       /tmp/pip-install-rg6sqr7g/matplotlib_84f1af4f98534e52b27d72e421edba9d/setup.py:11: SetuptoolsDeprecationWarning: The test command is disabled and references to it are deprecated.
+#15 9.376       !!
+#15 9.376       
+#15 9.376               ********************************************************************************
+#15 9.376               Please remove any references to `setuptools.command.test` in all supported versions of the affected package.
+#15 9.376       
+#15 9.376               This deprecation is overdue, please update your project and remove deprecated
+#15 9.376               calls to avoid build errors in the future.
+#15 9.376               ********************************************************************************
+#15 9.376       
+#15 9.376       !!
+#15 9.376         from setuptools.command.test import test as TestCommand
+#15 9.376       ============================================================================
+#15 9.376       Edit setup.cfg to change the build options
+#15 9.376       
+#15 9.376       BUILDING MATPLOTLIB
+#15 9.376                   matplotlib: yes [2.1.1]
+#15 9.376                       python: yes [3.11.14 (main, Oct 21 2025, 11:54:17) [GCC
+#15 9.376                               14.2.0]]
+#15 9.376                     platform: yes [linux]
+#15 9.376       
+#15 9.376       REQUIRED DEPENDENCIES AND EXTENSIONS
+#15 9.376                        numpy: yes [version 2.3.4]
+#15 9.376                          six: yes [using six version 1.17.0]
+#15 9.376                     dateutil: yes [using dateutil version 2.9.0.post0]
+#15 9.376       backports.functools_lru_cache: yes [Not required]
+#15 9.376                 subprocess32: yes [Not required]
+#15 9.376                         pytz: yes [pytz was not found. pip/easy_install may
+#15 9.376                               attempt to install it after matplotlib.]
+#15 9.376                       cycler: yes [cycler was not found. pip/easy_install may
+#15 9.376                               attempt to install it after matplotlib.]
+#15 9.376                      tornado: yes [tornado was not found. It is required for the
+#15 9.376                               WebAgg backend. pip/easy_install may attempt to
+#15 9.376                               install it after matplotlib.]
+#15 9.376                    pyparsing: yes [pyparsing was not found. It is required for
+#15 9.376                               mathtext support. pip/easy_install may attempt to
+#15 9.376                               install it after matplotlib.]
+#15 9.376                       libagg: yes [pkg-config information for 'libagg' could not
+#15 9.376                               be found. Using local copy.]
+#15 9.376                     freetype: yes [version unknown]
+#15 9.376                          png: yes [version 1.6.48]
+#15 9.376                        qhull: yes [pkg-config information for 'libqhull' could not
+#15 9.376                               be found. Using local copy.]
+#15 9.376       
+#15 9.376       OPTIONAL SUBPACKAGES
+#15 9.376                  sample_data: yes [installing]
+#15 9.376                     toolkits: yes [installing]
+#15 9.376                        tests: no  [skipping due to configuration]
+#15 9.376               toolkits_tests: no  [skipping due to configuration]
+#15 9.376       
+#15 9.376       OPTIONAL BACKEND EXTENSIONS
+#15 9.376                       macosx: no  [Mac OS-X only]
+#15 9.376                       qt5agg: no  [PySide2 not found; PyQt5 not found]
+#15 9.376                       qt4agg: no  [PySide not found; PyQt4 not found]
+#15 9.376                      gtk3agg: no  [Requires pygobject to be installed.]
+#15 9.376                    gtk3cairo: no  [Requires cairocffi or pycairo to be installed.]
+#15 9.376                       gtkagg: no  [Requires pygtk]
+#15 9.376                        tkagg: yes [installing; run-time loading from Python Tcl /
+#15 9.376                               Tk]
+#15 9.376                        wxagg: no  [requires wxPython]
+#15 9.376                          gtk: no  [Requires pygtk]
+#15 9.376                          agg: yes [installing]
+#15 9.376                        cairo: no  [cairocffi or pycairo not found]
+#15 9.376                    windowing: no  [Microsoft Windows only]
+#15 9.376       
+#15 9.376       OPTIONAL LATEX DEPENDENCIES
+#15 9.376                       dvipng: no
+#15 9.376                  ghostscript: no
+#15 9.376                        latex: no
+#15 9.376                      pdftops: no
+#15 9.376       
+#15 9.376       OPTIONAL PACKAGE DATA
+#15 9.376                         dlls: no  [skipping due to configuration]
+#15 9.376       
+#15 9.376       /usr/local/lib/python3.11/site-packages/setuptools/__init__.py:94: _DeprecatedInstaller: setuptools.installer and fetch_build_eggs are deprecated.
+#15 9.376       !!
+#15 9.376       
+#15 9.376               ********************************************************************************
+#15 9.376               Requirements should be satisfied by a PEP 517 installer.
+#15 9.376               If you are using pip, you can try `pip install --use-pep517`.
+#15 9.376               ********************************************************************************
+#15 9.376       
+#15 9.376       !!
+#15 9.376         dist.fetch_build_eggs(dist.setup_requires)
+#15 9.376       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:806: SetuptoolsDeprecationWarning: The namespace_packages parameter is deprecated.
+#15 9.376       !!
+#15 9.376       
+#15 9.376               ********************************************************************************
+#15 9.376               Please replace its usage with implicit namespaces (PEP 420).
+#15 9.376       
+#15 9.376               See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages for details.
+#15 9.376               ********************************************************************************
+#15 9.376       
+#15 9.376       !!
+#15 9.376         ep.load()(self, ep.name, value)
+#15 9.376       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+#15 9.376       !!
+#15 9.376       
+#15 9.376               ********************************************************************************
+#15 9.376               Please consider removing the following classifiers in favor of a SPDX license expression:
+#15 9.376       
+#15 9.376               License :: OSI Approved :: Python Software Foundation License
+#15 9.376       
+#15 9.376               See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+#15 9.376               ********************************************************************************
+#15 9.376       
+#15 9.376       !!
+#15 9.376         self._finalize_license_expression()
+#15 9.376       running bdist_wheel
+#15 9.376       running build
+#15 9.376       running build_py
+#15 9.376       creating build/lib.linux-x86_64-cpython-311
+#15 9.376       copying lib/pylab.py -> build/lib.linux-x86_64-cpython-311
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/category.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/gridspec.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/quiver.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/figure.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/table.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/_color_data.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/mlab.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/textpath.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/pyplot.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/font_manager.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/colors.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/_mathtext_data.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/contour.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/backend_tools.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/scale.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/colorbar.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/streamplot.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/afm.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/finance.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/markers.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/path.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/offsetbox.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/type1font.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/dviread.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/lines.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/units.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/image.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/backend_bases.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/axis.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/sankey.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/widgets.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/animation.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/_animation_data.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/dates.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/_version.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/transforms.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/bezier.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/tight_bbox.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/blocking_input.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/tight_layout.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/__init__.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/texmanager.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/spines.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/patches.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/text.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/container.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/cm.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/hatch.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/ticker.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/legend.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/stackplot.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/_cm_listed.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/collections.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/rcsetup.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/docstring.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/patheffects.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/legend_handler.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/_cm.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/artist.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/fontconfig_pattern.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/backend_managers.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/pylab.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/_pylab_helpers.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       copying lib/matplotlib/mathtext.py -> build/lib.linux-x86_64-cpython-311/matplotlib
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_gtkagg.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_gtk.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_qt4.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/tkagg.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_gtk3agg.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_macosx.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/windowing.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_svg.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_qt5.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_nbagg.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_qt4agg.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_pgf.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_qt5agg.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_wxagg.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/qt_compat.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_agg.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_mixed.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_template.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_gtk3cairo.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_gtk3.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_gdk.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_ps.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_tkagg.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_webagg.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/__init__.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_wx.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_gtkcairo.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/wx_compat.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_webagg_core.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_cairo.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       copying lib/matplotlib/backends/backend_pdf.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/backends/qt_editor
+#15 9.376       copying lib/matplotlib/backends/qt_editor/figureoptions.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/qt_editor
+#15 9.376       copying lib/matplotlib/backends/qt_editor/formsubplottool.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/qt_editor
+#15 9.376       copying lib/matplotlib/backends/qt_editor/__init__.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/qt_editor
+#15 9.376       copying lib/matplotlib/backends/qt_editor/formlayout.py -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/qt_editor
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/compat
+#15 9.376       copying lib/matplotlib/compat/subprocess.py -> build/lib.linux-x86_64-cpython-311/matplotlib/compat
+#15 9.376       copying lib/matplotlib/compat/__init__.py -> build/lib.linux-x86_64-cpython-311/matplotlib/compat
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/projections
+#15 9.376       copying lib/matplotlib/projections/geo.py -> build/lib.linux-x86_64-cpython-311/matplotlib/projections
+#15 9.376       copying lib/matplotlib/projections/polar.py -> build/lib.linux-x86_64-cpython-311/matplotlib/projections
+#15 9.376       copying lib/matplotlib/projections/__init__.py -> build/lib.linux-x86_64-cpython-311/matplotlib/projections
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/axes
+#15 9.376       copying lib/matplotlib/axes/_subplots.py -> build/lib.linux-x86_64-cpython-311/matplotlib/axes
+#15 9.376       copying lib/matplotlib/axes/_base.py -> build/lib.linux-x86_64-cpython-311/matplotlib/axes
+#15 9.376       copying lib/matplotlib/axes/__init__.py -> build/lib.linux-x86_64-cpython-311/matplotlib/axes
+#15 9.376       copying lib/matplotlib/axes/_axes.py -> build/lib.linux-x86_64-cpython-311/matplotlib/axes
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/sphinxext
+#15 9.376       copying lib/matplotlib/sphinxext/only_directives.py -> build/lib.linux-x86_64-cpython-311/matplotlib/sphinxext
+#15 9.376       copying lib/matplotlib/sphinxext/mathmpl.py -> build/lib.linux-x86_64-cpython-311/matplotlib/sphinxext
+#15 9.376       copying lib/matplotlib/sphinxext/__init__.py -> build/lib.linux-x86_64-cpython-311/matplotlib/sphinxext
+#15 9.376       copying lib/matplotlib/sphinxext/plot_directive.py -> build/lib.linux-x86_64-cpython-311/matplotlib/sphinxext
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/style
+#15 9.376       copying lib/matplotlib/style/__init__.py -> build/lib.linux-x86_64-cpython-311/matplotlib/style
+#15 9.376       copying lib/matplotlib/style/core.py -> build/lib.linux-x86_64-cpython-311/matplotlib/style
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/testing
+#15 9.376       copying lib/matplotlib/testing/noseclasses.py -> build/lib.linux-x86_64-cpython-311/matplotlib/testing
+#15 9.376       copying lib/matplotlib/testing/compare.py -> build/lib.linux-x86_64-cpython-311/matplotlib/testing
+#15 9.376       copying lib/matplotlib/testing/__init__.py -> build/lib.linux-x86_64-cpython-311/matplotlib/testing
+#15 9.376       copying lib/matplotlib/testing/conftest.py -> build/lib.linux-x86_64-cpython-311/matplotlib/testing
+#15 9.376       copying lib/matplotlib/testing/determinism.py -> build/lib.linux-x86_64-cpython-311/matplotlib/testing
+#15 9.376       copying lib/matplotlib/testing/exceptions.py -> build/lib.linux-x86_64-cpython-311/matplotlib/testing
+#15 9.376       copying lib/matplotlib/testing/disable_internet.py -> build/lib.linux-x86_64-cpython-311/matplotlib/testing
+#15 9.376       copying lib/matplotlib/testing/decorators.py -> build/lib.linux-x86_64-cpython-311/matplotlib/testing
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/testing/_nose
+#15 9.376       copying lib/matplotlib/testing/_nose/__init__.py -> build/lib.linux-x86_64-cpython-311/matplotlib/testing/_nose
+#15 9.376       copying lib/matplotlib/testing/_nose/exceptions.py -> build/lib.linux-x86_64-cpython-311/matplotlib/testing/_nose
+#15 9.376       copying lib/matplotlib/testing/_nose/decorators.py -> build/lib.linux-x86_64-cpython-311/matplotlib/testing/_nose
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/testing/_nose/plugins
+#15 9.376       copying lib/matplotlib/testing/_nose/plugins/knownfailure.py -> build/lib.linux-x86_64-cpython-311/matplotlib/testing/_nose/plugins
+#15 9.376       copying lib/matplotlib/testing/_nose/plugins/performgc.py -> build/lib.linux-x86_64-cpython-311/matplotlib/testing/_nose/plugins
+#15 9.376       copying lib/matplotlib/testing/_nose/plugins/__init__.py -> build/lib.linux-x86_64-cpython-311/matplotlib/testing/_nose/plugins
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/testing/jpl_units
+#15 9.376       copying lib/matplotlib/testing/jpl_units/StrConverter.py -> build/lib.linux-x86_64-cpython-311/matplotlib/testing/jpl_units
+#15 9.376       copying lib/matplotlib/testing/jpl_units/Duration.py -> build/lib.linux-x86_64-cpython-311/matplotlib/testing/jpl_units
+#15 9.376       copying lib/matplotlib/testing/jpl_units/UnitDblConverter.py -> build/lib.linux-x86_64-cpython-311/matplotlib/testing/jpl_units
+#15 9.376       copying lib/matplotlib/testing/jpl_units/EpochConverter.py -> build/lib.linux-x86_64-cpython-311/matplotlib/testing/jpl_units
+#15 9.376       copying lib/matplotlib/testing/jpl_units/UnitDbl.py -> build/lib.linux-x86_64-cpython-311/matplotlib/testing/jpl_units
+#15 9.376       copying lib/matplotlib/testing/jpl_units/Epoch.py -> build/lib.linux-x86_64-cpython-311/matplotlib/testing/jpl_units
+#15 9.376       copying lib/matplotlib/testing/jpl_units/UnitDblFormatter.py -> build/lib.linux-x86_64-cpython-311/matplotlib/testing/jpl_units
+#15 9.376       copying lib/matplotlib/testing/jpl_units/__init__.py -> build/lib.linux-x86_64-cpython-311/matplotlib/testing/jpl_units
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/tri
+#15 9.376       copying lib/matplotlib/tri/triangulation.py -> build/lib.linux-x86_64-cpython-311/matplotlib/tri
+#15 9.376       copying lib/matplotlib/tri/tricontour.py -> build/lib.linux-x86_64-cpython-311/matplotlib/tri
+#15 9.376       copying lib/matplotlib/tri/trifinder.py -> build/lib.linux-x86_64-cpython-311/matplotlib/tri
+#15 9.376       copying lib/matplotlib/tri/tritools.py -> build/lib.linux-x86_64-cpython-311/matplotlib/tri
+#15 9.376       copying lib/matplotlib/tri/__init__.py -> build/lib.linux-x86_64-cpython-311/matplotlib/tri
+#15 9.376       copying lib/matplotlib/tri/triplot.py -> build/lib.linux-x86_64-cpython-311/matplotlib/tri
+#15 9.376       copying lib/matplotlib/tri/trirefine.py -> build/lib.linux-x86_64-cpython-311/matplotlib/tri
+#15 9.376       copying lib/matplotlib/tri/triinterpolate.py -> build/lib.linux-x86_64-cpython-311/matplotlib/tri
+#15 9.376       copying lib/matplotlib/tri/tripcolor.py -> build/lib.linux-x86_64-cpython-311/matplotlib/tri
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/cbook
+#15 9.376       copying lib/matplotlib/cbook/deprecation.py -> build/lib.linux-x86_64-cpython-311/matplotlib/cbook
+#15 9.376       copying lib/matplotlib/cbook/__init__.py -> build/lib.linux-x86_64-cpython-311/matplotlib/cbook
+#15 9.376       copying lib/matplotlib/cbook/_backports.py -> build/lib.linux-x86_64-cpython-311/matplotlib/cbook
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/mpl_toolkits
+#15 9.376       copying lib/mpl_toolkits/exceltools.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits
+#15 9.376       copying lib/mpl_toolkits/__init__.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits
+#15 9.376       copying lib/mpl_toolkits/gtktools.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/mpl_toolkits/mplot3d
+#15 9.376       copying lib/mpl_toolkits/mplot3d/axes3d.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/mplot3d
+#15 9.376       copying lib/mpl_toolkits/mplot3d/art3d.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/mplot3d
+#15 9.376       copying lib/mpl_toolkits/mplot3d/proj3d.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/mplot3d
+#15 9.376       copying lib/mpl_toolkits/mplot3d/__init__.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/mplot3d
+#15 9.376       copying lib/mpl_toolkits/mplot3d/axis3d.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/mplot3d
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid
+#15 9.376       copying lib/mpl_toolkits/axes_grid/axes_grid.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid
+#15 9.376       copying lib/mpl_toolkits/axes_grid/axislines.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid
+#15 9.376       copying lib/mpl_toolkits/axes_grid/grid_helper_curvelinear.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid
+#15 9.376       copying lib/mpl_toolkits/axes_grid/axis_artist.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid
+#15 9.376       copying lib/mpl_toolkits/axes_grid/axes_size.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid
+#15 9.376       copying lib/mpl_toolkits/axes_grid/axes_divider.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid
+#15 9.376       copying lib/mpl_toolkits/axes_grid/anchored_artists.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid
+#15 9.376       copying lib/mpl_toolkits/axes_grid/colorbar.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid
+#15 9.376       copying lib/mpl_toolkits/axes_grid/angle_helper.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid
+#15 9.376       copying lib/mpl_toolkits/axes_grid/inset_locator.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid
+#15 9.376       copying lib/mpl_toolkits/axes_grid/floating_axes.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid
+#15 9.376       copying lib/mpl_toolkits/axes_grid/__init__.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid
+#15 9.376       copying lib/mpl_toolkits/axes_grid/axisline_style.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid
+#15 9.376       copying lib/mpl_toolkits/axes_grid/clip_path.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid
+#15 9.376       copying lib/mpl_toolkits/axes_grid/parasite_axes.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid
+#15 9.376       copying lib/mpl_toolkits/axes_grid/axes_rgb.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid
+#15 9.376       copying lib/mpl_toolkits/axes_grid/grid_finder.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid1
+#15 9.376       copying lib/mpl_toolkits/axes_grid1/axes_grid.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid1
+#15 9.376       copying lib/mpl_toolkits/axes_grid1/axes_size.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid1
+#15 9.376       copying lib/mpl_toolkits/axes_grid1/axes_divider.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid1
+#15 9.376       copying lib/mpl_toolkits/axes_grid1/anchored_artists.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid1
+#15 9.376       copying lib/mpl_toolkits/axes_grid1/colorbar.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid1
+#15 9.376       copying lib/mpl_toolkits/axes_grid1/inset_locator.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid1
+#15 9.376       copying lib/mpl_toolkits/axes_grid1/mpl_axes.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid1
+#15 9.376       copying lib/mpl_toolkits/axes_grid1/__init__.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid1
+#15 9.376       copying lib/mpl_toolkits/axes_grid1/parasite_axes.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid1
+#15 9.376       copying lib/mpl_toolkits/axes_grid1/axes_rgb.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axes_grid1
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/mpl_toolkits/axisartist
+#15 9.376       copying lib/mpl_toolkits/axisartist/axes_grid.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axisartist
+#15 9.376       copying lib/mpl_toolkits/axisartist/axislines.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axisartist
+#15 9.376       copying lib/mpl_toolkits/axisartist/grid_helper_curvelinear.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axisartist
+#15 9.376       copying lib/mpl_toolkits/axisartist/axis_artist.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axisartist
+#15 9.376       copying lib/mpl_toolkits/axisartist/axes_divider.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axisartist
+#15 9.376       copying lib/mpl_toolkits/axisartist/angle_helper.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axisartist
+#15 9.376       copying lib/mpl_toolkits/axisartist/floating_axes.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axisartist
+#15 9.376       copying lib/mpl_toolkits/axisartist/__init__.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axisartist
+#15 9.376       copying lib/mpl_toolkits/axisartist/axisline_style.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axisartist
+#15 9.376       copying lib/mpl_toolkits/axisartist/clip_path.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axisartist
+#15 9.376       copying lib/mpl_toolkits/axisartist/parasite_axes.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axisartist
+#15 9.376       copying lib/mpl_toolkits/axisartist/axes_rgb.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axisartist
+#15 9.376       copying lib/mpl_toolkits/axisartist/grid_finder.py -> build/lib.linux-x86_64-cpython-311/mpl_toolkits/axisartist
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/jquery/css/themes/base
+#15 9.376       copying lib/matplotlib/backends/web_backend/jquery/css/themes/base/jquery-ui.min.css -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/jquery/css/themes/base
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/pdfcorefonts
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/pdfcorefonts/readme.txt -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/pdfcorefonts
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/LICENSE_STIX -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/matplotlibrc -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/STIXSizTwoSymBol.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/STIXGeneralItalic.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/STIXGeneralBolIta.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Oblique.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/cmex10.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/STIXSizTwoSymReg.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/STIXGeneralBol.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/STIXSizOneSymBol.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-Oblique.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-BoldItalic.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/STIXNonUniBol.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/cmss10.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-Italic.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/STIXSizFourSymReg.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/DejaVuSansDisplay.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/DejaVuSans-BoldOblique.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/cmmi10.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/STIXGeneral.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/cmr10.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/STIXNonUniBolIta.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/DejaVuSerif.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/cmsy10.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/STIXSizFiveSymReg.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-BoldOblique.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-Bold.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/STIXNonUni.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/STIXSizThreeSymBol.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/STIXSizOneSymReg.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/STIXSizThreeSymReg.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/cmtt10.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/cmb10.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/STIXSizFourSymBol.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/STIXNonUniIta.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/DejaVuSerifDisplay.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/ttf/DejaVuSerif-Bold.ttf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/ttf
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/subplots.svg -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/home.svg -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/back.svg -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/move.svg -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/filesave.svg -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/hand.svg -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/forward.svg -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/zoom_to_rect.svg -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/qt4_editor_options.svg -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/matplotlib.svg -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/sample_data
+#15 9.376       copying lib/matplotlib/mpl-data/sample_data/goog.npz -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/sample_data
+#15 9.376       copying lib/matplotlib/mpl-data/sample_data/data_x_x2_x3.csv -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/sample_data
+#15 9.376       copying lib/matplotlib/mpl-data/sample_data/msft.csv -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/sample_data
+#15 9.376       copying lib/matplotlib/mpl-data/sample_data/demodata.csv -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/sample_data
+#15 9.376       copying lib/matplotlib/mpl-data/sample_data/s1045.ima.gz -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/sample_data
+#15 9.376       copying lib/matplotlib/mpl-data/sample_data/jacksboro_fault_dem.npz -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/sample_data
+#15 9.376       copying lib/matplotlib/mpl-data/sample_data/ada.png -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/sample_data
+#15 9.376       copying lib/matplotlib/mpl-data/sample_data/aapl.npz -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/sample_data
+#15 9.376       copying lib/matplotlib/mpl-data/sample_data/embedding_in_wx3.xrc -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/sample_data
+#15 9.376       copying lib/matplotlib/mpl-data/sample_data/grace_hopper.png -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/sample_data
+#15 9.376       copying lib/matplotlib/mpl-data/sample_data/ct.raw.gz -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/sample_data
+#15 9.376       copying lib/matplotlib/mpl-data/sample_data/eeg.dat -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/sample_data
+#15 9.376       copying lib/matplotlib/mpl-data/sample_data/grace_hopper.jpg -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/sample_data
+#15 9.376       copying lib/matplotlib/mpl-data/sample_data/Minduka_Present_Blue_Pack.png -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/sample_data
+#15 9.376       copying lib/matplotlib/mpl-data/sample_data/None_vs_nearest-pdf.png -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/sample_data
+#15 9.376       copying lib/matplotlib/mpl-data/sample_data/logo2.png -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/sample_data
+#15 9.376       copying lib/matplotlib/mpl-data/sample_data/membrane.dat -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/sample_data
+#15 9.376       copying lib/matplotlib/mpl-data/sample_data/README.txt -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/sample_data
+#15 9.376       copying lib/matplotlib/mpl-data/sample_data/percent_bachelors_degrees_women_usa.csv -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/sample_data
+#15 9.376       copying lib/matplotlib/backends/web_backend/single_figure.html -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend
+#15 9.376       copying lib/matplotlib/backends/web_backend/nbagg_uat.ipynb -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend
+#15 9.376       copying lib/matplotlib/backends/web_backend/ipython_inline_figure.html -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend
+#15 9.376       copying lib/matplotlib/backends/web_backend/all_figures.html -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend
+#15 9.376       copying lib/matplotlib/mpl-data/images/matplotlib.ppm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/jquery/js
+#15 9.376       copying lib/matplotlib/backends/web_backend/jquery/js/jquery-1.11.3.min.js -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/jquery/js
+#15 9.376       copying lib/matplotlib/backends/web_backend/jquery/js/jquery-ui.min.js -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/jquery/js
+#15 9.376       copying lib/matplotlib/mpl-data/images/move.pdf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/qt4_editor_options.pdf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/zoom_to_rect.pdf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/back.pdf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/subplots.pdf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/forward.pdf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/matplotlib.pdf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/home.pdf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/filesave.pdf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/hand.pdf -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/jquery/css/themes/base/images
+#15 9.376       copying lib/matplotlib/backends/web_backend/jquery/css/themes/base/images/ui-bg_flat_10_000000_40x100.png -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/jquery/css/themes/base/images
+#15 9.376       copying lib/matplotlib/backends/web_backend/jquery/css/themes/base/images/ui-bg_gloss-wave_35_f6a828_500x100.png -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/jquery/css/themes/base/images
+#15 9.376       copying lib/matplotlib/backends/web_backend/jquery/css/themes/base/images/ui-bg_highlight-soft_100_eeeeee_1x100.png -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/jquery/css/themes/base/images
+#15 9.376       copying lib/matplotlib/backends/web_backend/jquery/css/themes/base/images/ui-bg_glass_65_ffffff_1x400.png -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/jquery/css/themes/base/images
+#15 9.376       copying lib/matplotlib/backends/web_backend/jquery/css/themes/base/images/ui-icons_ffffff_256x240.png -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/jquery/css/themes/base/images
+#15 9.376       copying lib/matplotlib/backends/web_backend/jquery/css/themes/base/images/ui-bg_glass_100_f6f6f6_1x400.png -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/jquery/css/themes/base/images
+#15 9.376       copying lib/matplotlib/backends/web_backend/jquery/css/themes/base/images/ui-bg_highlight-soft_75_ffe45c_1x100.png -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/jquery/css/themes/base/images
+#15 9.376       copying lib/matplotlib/backends/web_backend/jquery/css/themes/base/images/ui-icons_ef8c08_256x240.png -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/jquery/css/themes/base/images
+#15 9.376       copying lib/matplotlib/backends/web_backend/jquery/css/themes/base/images/ui-bg_diagonals-thick_20_666666_40x40.png -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/jquery/css/themes/base/images
+#15 9.376       copying lib/matplotlib/backends/web_backend/jquery/css/themes/base/images/ui-bg_glass_100_fdf5ce_1x400.png -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/jquery/css/themes/base/images
+#15 9.376       copying lib/matplotlib/backends/web_backend/jquery/css/themes/base/images/ui-icons_222222_256x240.png -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/jquery/css/themes/base/images
+#15 9.376       copying lib/matplotlib/backends/web_backend/jquery/css/themes/base/images/ui-icons_ffd27a_256x240.png -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/jquery/css/themes/base/images
+#15 9.376       copying lib/matplotlib/backends/web_backend/jquery/css/themes/base/images/ui-icons_228ef1_256x240.png -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/jquery/css/themes/base/images
+#15 9.376       copying lib/matplotlib/backends/web_backend/jquery/css/themes/base/images/ui-bg_diagonals-thick_18_b81900_40x40.png -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/jquery/css/themes/base/images
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/pdfcorefonts/Helvetica-BoldOblique.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/pdfcorefonts
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/pdfcorefonts/Times-Italic.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/pdfcorefonts
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/pdfcorefonts/Courier-BoldOblique.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/pdfcorefonts
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/pdfcorefonts/Times-Roman.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/pdfcorefonts
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/pdfcorefonts/Helvetica-Oblique.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/pdfcorefonts
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/pdfcorefonts/Times-Bold.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/pdfcorefonts
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/pdfcorefonts/Courier.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/pdfcorefonts
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/pdfcorefonts/Symbol.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/pdfcorefonts
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/pdfcorefonts/ZapfDingbats.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/pdfcorefonts
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/pdfcorefonts/Times-BoldItalic.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/pdfcorefonts
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/pdfcorefonts/Helvetica.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/pdfcorefonts
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/pdfcorefonts/Helvetica-Bold.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/pdfcorefonts
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/pdfcorefonts/Courier-Bold.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/pdfcorefonts
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/pdfcorefonts/Courier-Oblique.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/pdfcorefonts
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/sample_data/axes_grid
+#15 9.376       copying lib/matplotlib/mpl-data/sample_data/axes_grid/bivariate_normal.npy -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/sample_data/axes_grid
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/seaborn-darkgrid.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/seaborn-whitegrid.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/Solarize_Light2.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/grayscale.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/fivethirtyeight.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/fast.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/seaborn.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/ggplot.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/bmh.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/seaborn-dark-palette.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/classic.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/seaborn-ticks.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/seaborn-deep.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/_classic_test.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/seaborn-bright.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/seaborn-pastel.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/dark_background.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/seaborn-paper.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/seaborn-muted.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/seaborn-dark.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/seaborn-poster.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/seaborn-talk.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/seaborn-white.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/seaborn-colorblind.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       copying lib/matplotlib/mpl-data/stylelib/seaborn-notebook.mplstyle -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/stylelib
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/css
+#15 9.376       copying lib/matplotlib/backends/web_backend/css/page.css -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/css
+#15 9.376       copying lib/matplotlib/backends/web_backend/css/boilerplate.css -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/css
+#15 9.376       copying lib/matplotlib/backends/web_backend/css/fbm.css -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/css
+#15 9.376       copying lib/matplotlib/mpl-data/images/forward.gif -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/filesave_large.gif -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/back_large.gif -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/zoom_to_rect_large.gif -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/subplots.gif -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/home.gif -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/move.gif -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/back.gif -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/zoom_to_rect.gif -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/filesave.gif -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/hand.gif -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/hand_large.gif -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/move_large.gif -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/forward_large.gif -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/home_large.gif -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/subplots_large.gif -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/qt4_editor_options_large.png -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/subplots_large.png -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/home_large.png -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/matplotlib.png -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/zoom_to_rect_large.png -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/qt4_editor_options.png -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/back_large.png -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/zoom_to_rect.png -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/forward_large.png -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/hand.png -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/subplots.png -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/matplotlib_large.png -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/back.png -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/move_large.png -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/filesave.png -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/move.png -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/forward.png -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/home.png -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       copying lib/matplotlib/mpl-data/images/filesave_large.png -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/images
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/pagko8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/pncr8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/putr8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/pncbi8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/pzcmi8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/pcrb8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/phvro8an.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/phvbo8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/pagk8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/phvbo8an.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/phvb8an.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/putb8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/putri8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/pncb8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/putbi8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/phvr8an.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/pplr8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/cmmi10.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/pagd8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/psyr.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/phvlo8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/cmtt10.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/phvro8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/pbkl8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/pagdo8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/pbkd8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/pzdr.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/ptmb8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/ptmbi8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/phvr8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/pcrr8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/pncri8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/pcrbo8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/cmex10.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/phvl8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/pcrro8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/pplb8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/cmr10.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/pbkdi8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/cmsy10.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/ptmr8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/phvb8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/pplbi8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/ptmri8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/pplri8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       copying lib/matplotlib/mpl-data/fonts/afm/pbkli8a.afm -> build/lib.linux-x86_64-cpython-311/matplotlib/mpl-data/fonts/afm
+#15 9.376       creating build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/js
+#15 9.376       copying lib/matplotlib/backends/web_backend/js/mpl.js -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/js
+#15 9.376       copying lib/matplotlib/backends/web_backend/js/nbagg_mpl.js -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/js
+#15 9.376       copying lib/matplotlib/backends/web_backend/js/mpl_tornado.js -> build/lib.linux-x86_64-cpython-311/matplotlib/backends/web_backend/js
+#15 9.376       UPDATING build/lib.linux-x86_64-cpython-311/matplotlib/_version.py
+#15 9.376       set build/lib.linux-x86_64-cpython-311/matplotlib/_version.py to '2.1.1'
+#15 9.376       running build_ext
+#15 9.376       building 'matplotlib.ft2font' extension
+#15 9.376       /usr/local/lib/python3.11/importlib/__init__.py:169: UserWarning: The NumPy module was reloaded (imported a second time). This can in some cases result in small but subtle issues and is discouraged.
+#15 9.376         _bootstrap._exec(spec, module)
+#15 9.376       creating build/temp.linux-x86_64-cpython-311/src
+#15 9.376       g++ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -DFREETYPE_BUILD_TYPE=system -DPY_ARRAY_UNIQUE_SYMBOL=MPL_matplotlib_ft2font_ARRAY_API -DNPY_NO_DEPRECATED_API=NPY_1_7_API_VERSION -D__STDC_FORMAT_MACROS=1 -I/usr/local/lib/python3.11/site-packages/numpy/_core/include -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/local/include -I/usr/include -I. -I/usr/local/include/python3.11 -c src/ft2font.cpp -o build/temp.linux-x86_64-cpython-311/src/ft2font.o
+#15 9.376       src/ft2font.cpp: In member function ‘int FT2Font::get_path_count()’:
+#15 9.376       src/ft2font.cpp:207:29: error: invalid conversion from ‘unsigned char*’ to ‘char*’ [-fpermissive]
+#15 9.376         207 |         tags = outline.tags + first;
+#15 9.376             |                ~~~~~~~~~~~~~^~~~~~~
+#15 9.376             |                             |
+#15 9.376             |                             unsigned char*
+#15 9.376       src/ft2font.cpp: In member function ‘void FT2Font::get_path(double*, unsigned char*)’:
+#15 9.376       src/ft2font.cpp:323:29: error: invalid conversion from ‘unsigned char*’ to ‘char*’ [-fpermissive]
+#15 9.376         323 |         tags = outline.tags + first;
+#15 9.376             |                ~~~~~~~~~~~~~^~~~~~~
+#15 9.376             |                             |
+#15 9.376             |                             unsigned char*
+#15 9.376       error: command '/usr/bin/g++' failed with exit code 1
+#15 9.376       [end of output]
+#15 9.376   
+#15 9.376   note: This error originates from a subprocess, and is likely not a problem with pip.
+#15 9.377   ERROR: Failed building wheel for matplotlib
+#15 9.377   Running setup.py clean for matplotlib
+#15 9.514 Successfully built gdctools
+#15 9.514 Failed to build matplotlib
+#15 9.514 ERROR: Could not build wheels for matplotlib, which is required to install pyproject.toml-based projects
+#15 9.519 
+#15 9.519 [notice] A new release of pip is available: 24.0 -> 25.3
+#15 9.519 [notice] To update, run: pip install --upgrade pip
+#15 ERROR: process "pip install gdctools" did not complete successfully: exit code: 1
+------
+ > [11/17] RUN ["pip","install","gdctools"]:
+9.376   
+9.376   note: This error originates from a subprocess, and is likely not a problem with pip.
+9.377   ERROR: Failed building wheel for matplotlib
+9.377   Running setup.py clean for matplotlib
+9.514 Successfully built gdctools
+9.514 Failed to build matplotlib
+9.514 ERROR: Could not build wheels for matplotlib, which is required to install pyproject.toml-based projects
+9.519 
+9.519 [notice] A new release of pip is available: 24.0 -> 25.3
+9.519 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:11
+--------------------
+   9 |     RUN ["pip","install","network"]
+  10 |     RUN ["pip","install","OpsletsEc2"]
+  11 | >>> RUN ["pip","install","gdctools"]
+  12 |     RUN ["pip","install","train"]
+  13 |     RUN ["pip","install","psycopg2"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install gdctools" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/3chsqyxwh524skv36y47v5v6y
+[2025-10-29 14:14:21] ERROR: Build failed for 3e8b195ff63929db69ccc4e5287d8ae5

@@ -1,0 +1,355 @@
+=== Docker Build Log for c8e62ef8cb9515d64df4 ===
+Started at: Mi 29. Okt 20:08:07 CET 2025
+
+[2025-10-29 20:08:07] START: Building image for c8e62ef8cb9515d64df4
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 521B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.22kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/13] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/13] COPY hard-gists/c8e62ef8cb9515d64df4/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/13] RUN ["apt-get","update"]
+#7 0.261 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.262 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.283 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.299 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.618 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.624 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.212 Fetched 9833 kB in 1s (9870 kB/s)
+#7 1.212 Reading package lists...
+#7 DONE 1.8s
+
+#8 [ 4/13] RUN ["pip","install","progress"]
+#8 1.867 Collecting progress
+#8 1.913   Downloading progress-1.6.1-py3-none-any.whl.metadata (4.3 kB)
+#8 1.933 Downloading progress-1.6.1-py3-none-any.whl (9.8 kB)
+#8 1.975 Installing collected packages: progress
+#8 1.990 Successfully installed progress-1.6.1
+#8 1.990 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.080 
+#8 2.080 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.080 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.2s
+
+#9 [ 5/13] RUN ["pip","install","hyhyhy"]
+#9 0.713 Collecting hyhyhy
+#9 0.750   Downloading hyhyhy-1.1.9.tar.gz (25 kB)
+#9 0.774   Preparing metadata (setup.py): started
+#9 1.266   Preparing metadata (setup.py): finished with status 'done'
+#9 1.314 Collecting rjsmin (from hyhyhy)
+#9 1.324   Downloading rjsmin-1.2.5-cp311-cp311-manylinux1_x86_64.whl.metadata (4.6 kB)
+#9 1.390 Collecting rcssmin (from hyhyhy)
+#9 1.399   Downloading rcssmin-1.2.2-cp311-cp311-manylinux1_x86_64.whl.metadata (4.8 kB)
+#9 1.450 Collecting markdown (from hyhyhy)
+#9 1.459   Downloading markdown-3.9-py3-none-any.whl.metadata (5.1 kB)
+#9 1.510 Collecting jinja2 (from hyhyhy)
+#9 1.518   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#9 1.593 Collecting watchdog (from hyhyhy)
+#9 1.602   Downloading watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl.metadata (44 kB)
+#9 1.624      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.3/44.3 kB 1.7 MB/s eta 0:00:00
+#9 1.661 Collecting docopt (from hyhyhy)
+#9 1.670   Downloading docopt-0.6.2.tar.gz (25 kB)
+#9 1.691   Preparing metadata (setup.py): started
+#9 1.803   Preparing metadata (setup.py): finished with status 'done'
+#9 1.880 Collecting MarkupSafe>=2.0 (from jinja2->hyhyhy)
+#9 1.889   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#9 1.920 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#9 1.940    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 6.9 MB/s eta 0:00:00
+#9 1.951 Downloading markdown-3.9-py3-none-any.whl (107 kB)
+#9 1.966    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.4/107.4 kB 7.2 MB/s eta 0:00:00
+#9 1.977 Downloading rcssmin-1.2.2-cp311-cp311-manylinux1_x86_64.whl (49 kB)
+#9 2.002    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.4/49.4 kB 1.7 MB/s eta 0:00:00
+#9 2.010 Downloading rjsmin-1.2.5-cp311-cp311-manylinux1_x86_64.whl (31 kB)
+#9 2.036 Downloading watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl (79 kB)
+#9 2.063    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.1/79.1 kB 2.7 MB/s eta 0:00:00
+#9 2.075 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#9 2.095 Building wheels for collected packages: hyhyhy, docopt
+#9 2.096   Building wheel for hyhyhy (setup.py): started
+#9 2.269   Building wheel for hyhyhy (setup.py): finished with status 'done'
+#9 2.270   Created wheel for hyhyhy: filename=hyhyhy-1.1.9-py3-none-any.whl size=29412 sha256=950e8896187711c4b485d679781c0878cd374839bb812ef00ea28c475e4fadaa
+#9 2.270   Stored in directory: /root/.cache/pip/wheels/97/03/21/744b0351204068360c7464af9b51945508b1aab4c21d331842
+#9 2.272   Building wheel for docopt (setup.py): started
+#9 2.405   Building wheel for docopt (setup.py): finished with status 'done'
+#9 2.405   Created wheel for docopt: filename=docopt-0.6.2-py2.py3-none-any.whl size=13781 sha256=793f76cb4e1924abe3dc35b01e4f0b0c6970f839677bd50da36d09a41f0e047d
+#9 2.405   Stored in directory: /root/.cache/pip/wheels/1a/b0/8c/4b75c4116c31f83c8f9f047231251e13cc74481cca4a78a9ce
+#9 2.407 Successfully built hyhyhy docopt
+#9 2.447 Installing collected packages: rjsmin, rcssmin, docopt, watchdog, MarkupSafe, markdown, jinja2, hyhyhy
+#9 2.688 Successfully installed MarkupSafe-3.0.3 docopt-0.6.2 hyhyhy-1.1.9 jinja2-3.1.6 markdown-3.9 rcssmin-1.2.2 rjsmin-1.2.5 watchdog-6.0.0
+#9 2.688 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 2.693 
+#9 2.693 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 2.693 [notice] To update, run: pip install --upgrade pip
+#9 DONE 2.9s
+
+#10 [ 6/13] RUN ["pip","install","progressbar"]
+#10 0.503 Collecting progressbar
+#10 0.543   Downloading progressbar-2.5.tar.gz (10 kB)
+#10 0.564   Preparing metadata (setup.py): started
+#10 0.680   Preparing metadata (setup.py): finished with status 'done'
+#10 0.681 Building wheels for collected packages: progressbar
+#10 0.686   Building wheel for progressbar (setup.py): started
+#10 0.823   Building wheel for progressbar (setup.py): finished with status 'done'
+#10 0.823   Created wheel for progressbar: filename=progressbar-2.5-py3-none-any.whl size=12145 sha256=e9fcbee85c326c3e4a042d7341a0c160a9714d99e6fc132528afa9ed20f0e013
+#10 0.823   Stored in directory: /root/.cache/pip/wheels/8d/bb/b2/5353b966ac6f3c5e1000629a9a5f6aed41794487f551e32efc
+#10 0.825 Successfully built progressbar
+#10 0.866 Installing collected packages: progressbar
+#10 0.912 Successfully installed progressbar-2.5
+#10 0.913 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.917 
+#10 0.917 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.917 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.0s
+
+#11 [ 7/13] RUN ["pip","install","numpy"]
+#11 0.679 Collecting numpy
+#11 0.714   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#11 0.738      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.3 MB/s eta 0:00:00
+#11 0.757 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#11 1.461    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 21.1 MB/s eta 0:00:00
+#11 1.549 Installing collected packages: numpy
+#11 2.945 Successfully installed numpy-2.3.4
+#11 2.945 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 2.950 
+#11 2.950 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 2.950 [notice] To update, run: pip install --upgrade pip
+#11 DONE 3.8s
+
+#12 [ 8/13] RUN ["pip","install","matplotlib"]
+#12 0.654 Collecting matplotlib
+#12 0.694   Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#12 0.805 Collecting contourpy>=1.0.1 (from matplotlib)
+#12 0.816   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#12 0.855 Collecting cycler>=0.10 (from matplotlib)
+#12 0.864   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#12 1.038 Collecting fonttools>=4.22.0 (from matplotlib)
+#12 1.048   Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+#12 1.080      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.3/112.3 kB 3.5 MB/s eta 0:00:00
+#12 1.173 Collecting kiwisolver>=1.3.1 (from matplotlib)
+#12 1.183   Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+#12 1.203 Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.11/site-packages (from matplotlib) (2.3.4)
+#12 1.242 Collecting packaging>=20.0 (from matplotlib)
+#12 1.251   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#12 1.433 Collecting pillow>=8 (from matplotlib)
+#12 1.465   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#12 1.529 Collecting pyparsing>=3 (from matplotlib)
+#12 1.539   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#12 1.583 Collecting python-dateutil>=2.7 (from matplotlib)
+#12 1.591   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#12 1.690 Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib)
+#12 1.699   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#12 1.724 Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+#12 2.074    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 25.0 MB/s eta 0:00:00
+#12 2.086 Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+#12 2.111    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 355.2/355.2 kB 14.4 MB/s eta 0:00:00
+#12 2.119 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#12 2.141 Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#12 2.394    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 19.7 MB/s eta 0:00:00
+#12 2.405 Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+#12 2.461    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 26.5 MB/s eta 0:00:00
+#12 2.469 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#12 2.488    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 3.2 MB/s eta 0:00:00
+#12 2.506 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#12 2.791    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 24.8 MB/s eta 0:00:00
+#12 2.800 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#12 2.815    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 7.7 MB/s eta 0:00:00
+#12 2.823 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#12 2.841    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 14.2 MB/s eta 0:00:00
+#12 2.848 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#12 3.037 Installing collected packages: six, pyparsing, pillow, packaging, kiwisolver, fonttools, cycler, contourpy, python-dateutil, matplotlib
+#12 5.043 Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.60.1 kiwisolver-1.4.9 matplotlib-3.10.7 packaging-25.0 pillow-12.0.0 pyparsing-3.2.5 python-dateutil-2.9.0.post0 six-1.17.0
+#12 5.043 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 5.049 
+#12 5.049 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 5.049 [notice] To update, run: pip install --upgrade pip
+#12 DONE 5.9s
+
+#13 [ 9/13] RUN ["pip","install","librosa"]
+#13 0.534 Collecting librosa
+#13 0.576   Downloading librosa-0.11.0-py3-none-any.whl.metadata (8.7 kB)
+#13 0.636 Collecting audioread>=2.1.9 (from librosa)
+#13 0.647   Downloading audioread-3.1.0-py3-none-any.whl.metadata (9.0 kB)
+#13 0.781 Collecting numba>=0.51.0 (from librosa)
+#13 0.790   Downloading numba-0.62.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.8 kB)
+#13 0.810 Requirement already satisfied: numpy>=1.22.3 in /usr/local/lib/python3.11/site-packages (from librosa) (2.3.4)
+#13 0.940 Collecting scipy>=1.6.0 (from librosa)
+#13 0.952   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#13 0.972      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.9 MB/s eta 0:00:00
+#13 1.082 Collecting scikit-learn>=1.1.0 (from librosa)
+#13 1.091   Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#13 1.141 Collecting joblib>=1.0 (from librosa)
+#13 1.148   Downloading joblib-1.5.2-py3-none-any.whl.metadata (5.6 kB)
+#13 1.191 Collecting decorator>=4.3.0 (from librosa)
+#13 1.200   Downloading decorator-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+#13 1.249 Collecting soundfile>=0.12.1 (from librosa)
+#13 1.258   Downloading soundfile-0.13.1-py2.py3-none-manylinux_2_28_x86_64.whl.metadata (16 kB)
+#13 1.307 Collecting pooch>=1.1 (from librosa)
+#13 1.316   Downloading pooch-1.8.2-py3-none-any.whl.metadata (10 kB)
+#13 1.417 Collecting soxr>=0.3.2 (from librosa)
+#13 1.427   Downloading soxr-1.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.6 kB)
+#13 1.487 Collecting typing_extensions>=4.1.1 (from librosa)
+#13 1.495   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#13 1.537 Collecting lazy_loader>=0.1 (from librosa)
+#13 1.548   Downloading lazy_loader-0.4-py3-none-any.whl.metadata (7.6 kB)
+#13 1.635 Collecting msgpack>=1.0 (from librosa)
+#13 1.643   Downloading msgpack-1.1.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+#13 1.662 Requirement already satisfied: packaging in /usr/local/lib/python3.11/site-packages (from lazy_loader>=0.1->librosa) (25.0)
+#13 1.739 Collecting llvmlite<0.46,>=0.45.0dev0 (from numba>=0.51.0->librosa)
+#13 1.748   Downloading llvmlite-0.45.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+#13 1.809 Collecting platformdirs>=2.5.0 (from pooch>=1.1->librosa)
+#13 1.826   Downloading platformdirs-4.5.0-py3-none-any.whl.metadata (12 kB)
+#13 1.887 Collecting requests>=2.19.0 (from pooch>=1.1->librosa)
+#13 1.895   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#13 1.965 Collecting threadpoolctl>=3.1.0 (from scikit-learn>=1.1.0->librosa)
+#13 1.973   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#13 2.136 Collecting cffi>=1.0 (from soundfile>=0.12.1->librosa)
+#13 2.147   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+#13 2.201 Collecting pycparser (from cffi>=1.0->soundfile>=0.12.1->librosa)
+#13 2.209   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+#13 2.323 Collecting charset_normalizer<4,>=2 (from requests>=2.19.0->pooch>=1.1->librosa)
+#13 2.331   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#13 2.375 Collecting idna<4,>=2.5 (from requests>=2.19.0->pooch>=1.1->librosa)
+#13 2.383   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#13 2.444 Collecting urllib3<3,>=1.21.1 (from requests>=2.19.0->pooch>=1.1->librosa)
+#13 2.455   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#13 2.499 Collecting certifi>=2017.4.17 (from requests>=2.19.0->pooch>=1.1->librosa)
+#13 2.507   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#13 2.551 Downloading librosa-0.11.0-py3-none-any.whl (260 kB)
+#13 2.577    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 260.7/260.7 kB 10.7 MB/s eta 0:00:00
+#13 2.586 Downloading audioread-3.1.0-py3-none-any.whl (23 kB)
+#13 2.603 Downloading decorator-5.2.1-py3-none-any.whl (9.2 kB)
+#13 2.621 Downloading joblib-1.5.2-py3-none-any.whl (308 kB)
+#13 2.641    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 308.4/308.4 kB 17.0 MB/s eta 0:00:00
+#13 2.650 Downloading lazy_loader-0.4-py3-none-any.whl (12 kB)
+#13 2.668 Downloading msgpack-1.1.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (426 kB)
+#13 2.695    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 426.2/426.2 kB 16.6 MB/s eta 0:00:00
+#13 2.705 Downloading numba-0.62.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.7 MB)
+#13 2.850    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.7/3.7 MB 26.1 MB/s eta 0:00:00
+#13 2.858 Downloading pooch-1.8.2-py3-none-any.whl (64 kB)
+#13 2.869    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.6/64.6 kB 5.6 MB/s eta 0:00:00
+#13 2.878 Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+#13 3.307    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 22.7 MB/s eta 0:00:00
+#13 3.320 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#13 4.770    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 16.0 MB/s eta 0:00:00
+#13 4.780 Downloading soundfile-0.13.1-py2.py3-none-manylinux_2_28_x86_64.whl (1.3 MB)
+#13 4.839    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 22.7 MB/s eta 0:00:00
+#13 4.849 Downloading soxr-1.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (242 kB)
+#13 4.872    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 242.6/242.6 kB 10.9 MB/s eta 0:00:00
+#13 4.884 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#13 4.903    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 1.9 MB/s eta 0:00:00
+#13 4.914 Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+#13 4.934    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 11.0 MB/s eta 0:00:00
+#13 4.944 Downloading llvmlite-0.45.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (56.3 MB)
+#13 7.314    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.3/56.3 MB 13.6 MB/s eta 0:00:00
+#13 7.327 Downloading platformdirs-4.5.0-py3-none-any.whl (18 kB)
+#13 7.358 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#13 7.372    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 4.5 MB/s eta 0:00:00
+#13 7.380 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#13 7.398 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#13 7.416    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 8.8 MB/s eta 0:00:00
+#13 7.425 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#13 7.443    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 8.8 MB/s eta 0:00:00
+#13 7.451 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#13 7.467    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.1 MB/s eta 0:00:00
+#13 7.475 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#13 7.490    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 8.6 MB/s eta 0:00:00
+#13 7.498 Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+#13 7.514    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 7.4 MB/s eta 0:00:00
+#13 7.967 Installing collected packages: urllib3, typing_extensions, threadpoolctl, soxr, scipy, pycparser, platformdirs, msgpack, llvmlite, lazy_loader, joblib, idna, decorator, charset_normalizer, certifi, audioread, scikit-learn, requests, numba, cffi, soundfile, pooch, librosa
+#13 14.89 Successfully installed audioread-3.1.0 certifi-2025.10.5 cffi-2.0.0 charset_normalizer-3.4.4 decorator-5.2.1 idna-3.11 joblib-1.5.2 lazy_loader-0.4 librosa-0.11.0 llvmlite-0.45.1 msgpack-1.1.2 numba-0.62.1 platformdirs-4.5.0 pooch-1.8.2 pycparser-2.23 requests-2.32.5 scikit-learn-1.7.2 scipy-1.16.3 soundfile-0.13.1 soxr-1.0.0 threadpoolctl-3.6.0 typing_extensions-4.15.0 urllib3-2.5.0
+#13 14.89 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 14.90 
+#13 14.90 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 14.90 [notice] To update, run: pip install --upgrade pip
+#13 DONE 17.6s
+
+#14 [10/13] RUN ["apt-get","install","-y","git"]
+#14 0.227 Reading package lists...
+#14 0.658 Building dependency tree...
+#14 0.765 Reading state information...
+#14 0.988 git is already the newest version (1:2.47.3-0+deb13u1).
+#14 0.988 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+#14 DONE 1.0s
+
+#15 [11/13] RUN ["apt-get","install","-y","build-essential"]
+#15 0.251 Reading package lists...
+#15 0.679 Building dependency tree...
+#15 0.785 Reading state information...
+#15 0.992 The following NEW packages will be installed:
+#15 0.993   build-essential
+#15 1.030 0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+#15 1.030 Need to get 4624 B of archives.
+#15 1.030 After this operation, 17.4 kB of additional disk space will be used.
+#15 1.030 Get:1 http://deb.debian.org/debian trixie/main amd64 build-essential amd64 12.12 [4624 B]
+#15 1.175 debconf: unable to initialize frontend: Dialog
+#15 1.175 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#15 1.175 debconf: falling back to frontend: Readline
+#15 1.179 debconf: unable to initialize frontend: Readline
+#15 1.179 debconf: (This frontend requires a controlling tty.)
+#15 1.179 debconf: falling back to frontend: Teletype
+#15 1.182 debconf: unable to initialize frontend: Teletype
+#15 1.182 debconf: (This frontend requires a controlling tty.)
+#15 1.182 debconf: falling back to frontend: Noninteractive
+#15 1.647 Fetched 4624 B in 0s (174 kB/s)
+#15 1.686 Selecting previously unselected package build-essential.
+#15 1.686 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 26761 files and directories currently installed.)
+#15 1.715 Preparing to unpack .../build-essential_12.12_amd64.deb ...
+#15 1.724 Unpacking build-essential (12.12) ...
+#15 1.800 Setting up build-essential (12.12) ...
+#15 DONE 1.9s
+
+#16 [12/13] RUN ["pip","install","pytz"]
+#16 0.574 Collecting pytz
+#16 0.607   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#16 0.632 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#16 0.686    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 9.5 MB/s eta 0:00:00
+#16 0.889 Installing collected packages: pytz
+#16 0.997 Successfully installed pytz-2025.2
+#16 0.997 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#16 1.002 
+#16 1.002 [notice] A new release of pip is available: 24.0 -> 25.3
+#16 1.002 [notice] To update, run: pip install --upgrade pip
+#16 DONE 1.1s
+
+#17 [13/13] RUN ["pip","install","progressbar2"]
+#17 0.545 Collecting progressbar2
+#17 0.587   Downloading progressbar2-4.5.0-py3-none-any.whl.metadata (16 kB)
+#17 0.646 Collecting python-utils>=3.8.1 (from progressbar2)
+#17 0.656   Downloading python_utils-3.9.1-py2.py3-none-any.whl.metadata (9.8 kB)
+#17 0.689 Requirement already satisfied: typing_extensions>3.10.0.2 in /usr/local/lib/python3.11/site-packages (from python-utils>=3.8.1->progressbar2) (4.15.0)
+#17 0.699 Downloading progressbar2-4.5.0-py3-none-any.whl (57 kB)
+#17 0.721    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.1/57.1 kB 2.4 MB/s eta 0:00:00
+#17 0.730 Downloading python_utils-3.9.1-py2.py3-none-any.whl (32 kB)
+#17 0.961 Installing collected packages: python-utils, progressbar2
+#17 1.070 Successfully installed progressbar2-4.5.0 python-utils-3.9.1
+#17 1.071 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#17 1.076 
+#17 1.076 [notice] A new release of pip is available: 24.0 -> 25.3
+#17 1.076 [notice] To update, run: pip install --upgrade pip
+#17 DONE 1.2s
+
+#18 exporting to image
+#18 exporting layers
+#18 exporting layers 1.9s done
+#18 writing image sha256:40928a51ceedc1c7afde62b207d14b16d580e12b11fc4b57a300ae3935476a4e done
+#18 naming to docker.io/library/test-image-c8e62ef8cb9515d64df4 done
+#18 DONE 2.0s
+
+View build details: docker-desktop://dashboard/build/default/default/75jvolecdzhm03jziunz35as6
+[2025-10-29 20:08:49] SUCCESS: Build completed for c8e62ef8cb9515d64df4

@@ -1,0 +1,82 @@
+=== Docker Build Log for 946c4d9aa7a74828bc12 ===
+Started at: Mi 29. Okt 18:26:16 CET 2025
+
+[2025-10-29 18:26:16] START: Building image for 946c4d9aa7a74828bc12
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 244B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 901B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/946c4d9aa7a74828bc12/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","boto-patch"]
+#7 1.893 Collecting boto-patch
+#7 1.943   Downloading boto-patch-2.38.0.tar.gz (1.4 MB)
+#7 2.026      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 17.5 MB/s eta 0:00:00
+#7 2.160   Preparing metadata (setup.py): started
+#7 2.626   Preparing metadata (setup.py): finished with status 'done'
+#7 2.627 Building wheels for collected packages: boto-patch
+#7 2.628   Building wheel for boto-patch (setup.py): started
+#7 3.107   Building wheel for boto-patch (setup.py): finished with status 'done'
+#7 3.110   Created wheel for boto-patch: filename=boto_patch-2.38.0-py2.py3-none-any.whl size=1340252 sha256=5a2afd7f5d1558c1a8312e61707cc2acb4d27f6a0df7fd2e27d103a2d884a203
+#7 3.110   Stored in directory: /root/.cache/pip/wheels/dc/8d/91/973468dc17204b5976e1d226556d1ac8be31894bdbb8cb28cf
+#7 3.115 Successfully built boto-patch
+#7 3.144 Installing collected packages: boto-patch
+#7 3.553 Successfully installed boto-patch-2.38.0
+#7 3.553 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.649 
+#7 3.649 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.649 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.9s
+
+#8 [4/5] RUN ["pip","install","boto-mws"]
+#8 0.512 Collecting boto-mws
+#8 0.549   Downloading boto_mws-2.46.2-py2.py3-none-any.whl.metadata (7.3 kB)
+#8 0.572 Downloading boto_mws-2.46.2-py2.py3-none-any.whl (1.4 MB)
+#8 0.649    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 18.2 MB/s eta 0:00:00
+#8 0.686 Installing collected packages: boto-mws
+#8 1.686 Successfully installed boto-mws-2.46.2
+#8 1.686 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.691 
+#8 1.691 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.691 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.8s
+
+#9 [5/5] RUN ["pip","install","boto"]
+#9 0.521 Collecting boto
+#9 0.558   Downloading boto-2.49.0-py2.py3-none-any.whl.metadata (7.3 kB)
+#9 0.579 Downloading boto-2.49.0-py2.py3-none-any.whl (1.4 MB)
+#9 0.661    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 17.0 MB/s eta 0:00:00
+#9 0.699 Installing collected packages: boto
+#9 1.696 Successfully installed boto-2.49.0
+#9 1.696 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.701 
+#9 1.701 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.701 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.8s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.3s done
+#10 writing image sha256:2d83ef76725d2bbe6a167a1e408bea067075e777367510fcbf3c00cdf15e642f done
+#10 naming to docker.io/library/test-image-946c4d9aa7a74828bc12 done
+#10 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/thtmcbfco3li1y5uu3vd7nnyq
+[2025-10-29 18:26:24] SUCCESS: Build completed for 946c4d9aa7a74828bc12

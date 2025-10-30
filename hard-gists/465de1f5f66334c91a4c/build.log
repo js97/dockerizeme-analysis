@@ -1,0 +1,108 @@
+=== Docker Build Log for 465de1f5f66334c91a4c ===
+Started at: Mi 29. Okt 14:57:12 CET 2025
+
+[2025-10-29 14:57:12] START: Building image for 465de1f5f66334c91a4c
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 241B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 691B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/465de1f5f66334c91a4c/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","Flask"]
+#7 1.999 Collecting Flask
+#7 2.045   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#7 2.088 Collecting blinker>=1.9.0 (from Flask)
+#7 2.096   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#7 2.140 Collecting click>=8.1.3 (from Flask)
+#7 2.148   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#7 2.187 Collecting itsdangerous>=2.2.0 (from Flask)
+#7 2.195   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#7 2.235 Collecting jinja2>=3.1.2 (from Flask)
+#7 2.244   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#7 2.325 Collecting markupsafe>=2.1.1 (from Flask)
+#7 2.333   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#7 2.385 Collecting werkzeug>=3.1.0 (from Flask)
+#7 2.393   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#7 2.421 Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+#7 2.450    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 3.5 MB/s eta 0:00:00
+#7 2.461 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#7 2.480 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#7 2.499    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 5.6 MB/s eta 0:00:00
+#7 2.508 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#7 2.526 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#7 2.540    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 10.1 MB/s eta 0:00:00
+#7 2.551 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#7 2.569 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#7 2.586    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 13.8 MB/s eta 0:00:00
+#7 2.650 Installing collected packages: markupsafe, itsdangerous, click, blinker, werkzeug, jinja2, Flask
+#7 2.968 Successfully installed Flask-3.1.2 blinker-1.9.0 click-8.3.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.3 werkzeug-3.1.3
+#7 2.969 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.060 
+#7 3.060 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.060 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.3s
+
+#8 [4/5] RUN ["pip","install","views"]
+#8 0.670 Collecting views
+#8 0.801   Downloading views-0.3.tar.gz (4.7 kB)
+#8 0.821   Preparing metadata (setup.py): started
+#8 1.263   Preparing metadata (setup.py): finished with status 'done'
+#8 1.265 Building wheels for collected packages: views
+#8 1.265   Building wheel for views (setup.py): started
+#8 1.434   Building wheel for views (setup.py): finished with status 'done'
+#8 1.435   Created wheel for views: filename=views-0.3-py3-none-any.whl size=4855 sha256=cafbcddb81fe56b5e61bde85c644211b0d49ad9f13351d480f8025fcec17400a
+#8 1.435   Stored in directory: /root/.cache/pip/wheels/e4/cb/17/fb172b82e6b0b1c18d582099ef68f254acf40e197f4df840f8
+#8 1.438 Successfully built views
+#8 1.479 Installing collected packages: views
+#8 1.493 Successfully installed views-0.3
+#8 1.493 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.499 
+#8 1.499 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.499 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.6s
+
+#9 [5/5] RUN ["pip","install","Flask-Ext"]
+#9 0.634 Collecting Flask-Ext
+#9 0.764   Downloading Flask_Ext-0.1-py3-none-any.whl.metadata (2.1 kB)
+#9 0.784 Requirement already satisfied: Flask in /usr/local/lib/python3.11/site-packages (from Flask-Ext) (3.1.2)
+#9 0.789 Requirement already satisfied: blinker>=1.9.0 in /usr/local/lib/python3.11/site-packages (from Flask->Flask-Ext) (1.9.0)
+#9 0.790 Requirement already satisfied: click>=8.1.3 in /usr/local/lib/python3.11/site-packages (from Flask->Flask-Ext) (8.3.0)
+#9 0.792 Requirement already satisfied: itsdangerous>=2.2.0 in /usr/local/lib/python3.11/site-packages (from Flask->Flask-Ext) (2.2.0)
+#9 0.793 Requirement already satisfied: jinja2>=3.1.2 in /usr/local/lib/python3.11/site-packages (from Flask->Flask-Ext) (3.1.6)
+#9 0.794 Requirement already satisfied: markupsafe>=2.1.1 in /usr/local/lib/python3.11/site-packages (from Flask->Flask-Ext) (3.0.3)
+#9 0.795 Requirement already satisfied: werkzeug>=3.1.0 in /usr/local/lib/python3.11/site-packages (from Flask->Flask-Ext) (3.1.3)
+#9 0.911 Downloading Flask_Ext-0.1-py3-none-any.whl (3.6 kB)
+#9 0.967 Installing collected packages: Flask-Ext
+#9 1.003 Successfully installed Flask-Ext-0.1
+#9 1.003 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.009 
+#9 1.009 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.009 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.1s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.2s done
+#10 writing image sha256:514a9a957366afaecd75ec28ce3b7fdde7953dd7970bbb2fae08b7fdc49bf689 done
+#10 naming to docker.io/library/test-image-465de1f5f66334c91a4c done
+#10 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/fi96341i09w5qjeegtkbtc21a
+[2025-10-29 14:57:19] SUCCESS: Build completed for 465de1f5f66334c91a4c

@@ -1,0 +1,131 @@
+=== Docker Build Log for 9ea0e4feb62a45acffee ===
+Started at: Mi 29. Okt 18:42:06 CET 2025
+
+[2025-10-29 18:42:06] START: Building image for 9ea0e4feb62a45acffee
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 331B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 514B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/9ea0e4feb62a45acffee/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","jmb.filters"]
+#7 1.904 Collecting jmb.filters
+#7 1.940   Downloading jmb.filters-0.1.7.tar.gz (665 kB)
+#7 1.988      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 666.0/666.0 kB 14.6 MB/s eta 0:00:00
+#7 2.019   Preparing metadata (setup.py): started
+#7 2.411   Preparing metadata (setup.py): finished with status 'done'
+#7 2.412 Building wheels for collected packages: jmb.filters
+#7 2.413   Building wheel for jmb.filters (setup.py): started
+#7 2.596   Building wheel for jmb.filters (setup.py): finished with status 'done'
+#7 2.597   Created wheel for jmb.filters: filename=jmb_filters-0.1.7-py3-none-any.whl size=27272 sha256=4d8aa448a9b7704c5de7d1b2fd8b730c32e09534b6e3b0a85926a2879e608c58
+#7 2.597   Stored in directory: /root/.cache/pip/wheels/5d/ee/e7/9334f4ce062b76cca883a3ceb6cc65a2e8b067944aedf06a2a
+#7 2.600 Successfully built jmb.filters
+#7 2.629 Installing collected packages: jmb.filters
+#7 2.652 Successfully installed jmb.filters-0.1.7
+#7 2.652 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.753 
+#7 2.753 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.753 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.9s
+
+#8 [4/7] RUN ["pip","install","dj.choices"]
+#8 0.510 Collecting dj.choices
+#8 0.547   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#8 0.568   Preparing metadata (setup.py): started
+#8 0.677   Preparing metadata (setup.py): finished with status 'done'
+#8 0.874 Collecting django (from dj.choices)
+#8 0.883   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#8 0.923 Collecting six (from dj.choices)
+#8 0.932   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 0.980 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#8 0.988   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#8 1.028 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#8 1.037   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#8 1.061 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#8 1.377    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 26.4 MB/s eta 0:00:00
+#8 1.386 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 1.406 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#8 1.424 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#8 1.437    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.3 MB/s eta 0:00:00
+#8 1.474 Building wheels for collected packages: dj.choices
+#8 1.479   Building wheel for dj.choices (setup.py): started
+#8 1.613   Building wheel for dj.choices (setup.py): finished with status 'done'
+#8 1.614   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=d4bb76681ee7c72792099254644d915cbaeb4d62725551c4ee06b347988789a3
+#8 1.614   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#8 1.616 Successfully built dj.choices
+#8 1.663 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#8 3.076 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#8 3.077 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 3.081 
+#8 3.081 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.081 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.4s
+
+#9 [5/7] RUN ["pip","install","djangorestframework"]
+#9 0.532 Collecting djangorestframework
+#9 0.568   Downloading djangorestframework-3.16.1-py3-none-any.whl.metadata (11 kB)
+#9 0.580 Requirement already satisfied: django>=4.2 in /usr/local/lib/python3.11/site-packages (from djangorestframework) (5.2.7)
+#9 0.585 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from django>=4.2->djangorestframework) (3.10.0)
+#9 0.585 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from django>=4.2->djangorestframework) (0.5.3)
+#9 0.599 Downloading djangorestframework-3.16.1-py3-none-any.whl (1.1 MB)
+#9 0.664    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 17.5 MB/s eta 0:00:00
+#9 0.708 Installing collected packages: djangorestframework
+#9 0.849 Successfully installed djangorestframework-3.16.1
+#9 0.849 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.854 
+#9 0.854 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.854 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.0s
+
+#10 [6/7] RUN ["pip","install","django-filter"]
+#10 0.536 Collecting django-filter
+#10 0.578   Downloading django_filter-25.2-py3-none-any.whl.metadata (5.1 kB)
+#10 0.595 Requirement already satisfied: Django>=5.2 in /usr/local/lib/python3.11/site-packages (from django-filter) (5.2.7)
+#10 0.599 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django>=5.2->django-filter) (3.10.0)
+#10 0.599 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django>=5.2->django-filter) (0.5.3)
+#10 0.613 Downloading django_filter-25.2-py3-none-any.whl (94 kB)
+#10 0.642    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.1/94.1 kB 3.1 MB/s eta 0:00:00
+#10 0.684 Installing collected packages: django-filter
+#10 0.747 Successfully installed django-filter-25.2
+#10 0.747 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.752 
+#10 0.752 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.752 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.8s
+
+#11 [7/7] RUN ["pip","install","Django"]
+#11 0.451 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#11 0.454 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#11 0.455 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#11 0.498 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.503 
+#11 0.503 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.503 [notice] To update, run: pip install --upgrade pip
+#11 DONE 0.6s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.5s done
+#12 writing image sha256:c7007564ab308fec4502c09c0f0c27390826a92ad0c474a2a66e638e298c51c6 done
+#12 naming to docker.io/library/test-image-9ea0e4feb62a45acffee done
+#12 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/default/default/tmg60q8b10pnkn5b41af7be9j
+[2025-10-29 18:42:16] SUCCESS: Build completed for 9ea0e4feb62a45acffee

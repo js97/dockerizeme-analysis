@@ -1,0 +1,14 @@
+=== Docker Run Log for 8f07d0bfadffd40fcf40cd49cb77382d ===
+Started at: Mi 29. Okt 18:12:45 CET 2025
+
+[2025-10-29 18:12:50] START: Running container for 8f07d0bfadffd40fcf40cd49cb77382d
+[2025-10-29 18:12:50] SUCCESS: Container 7364298a5a576f1e98aaa69a72e503594241bc66e0fe64f5bd4bb014348d1f76 started for 8f07d0bfadffd40fcf40cd49cb77382d
+=== Container logs for 8f07d0bfadffd40fcf40cd49cb77382d ===
+Traceback (most recent call last):
+  File "/snippet.py", line 1, in <module>
+    import cfscrape
+  File "/usr/local/lib/python3.11/site-packages/cfscrape/__init__.py", line 19, in <module>
+    from urllib3.util.ssl_ import create_urllib3_context, DEFAULT_CIPHERS
+ImportError: cannot import name 'DEFAULT_CIPHERS' from 'urllib3.util.ssl_' (/usr/local/lib/python3.11/site-packages/urllib3/util/ssl_.py)
+=== End of logs for 8f07d0bfadffd40fcf40cd49cb77382d ===
+[2025-10-29 18:12:52] INFO: Container 7364298a5a576f1e98aaa69a72e503594241bc66e0fe64f5bd4bb014348d1f76 has stopped

@@ -1,0 +1,159 @@
+=== Docker Build Log for 4134185 ===
+Started at: Mi 29. Okt 14:22:52 CET 2025
+
+[2025-10-29 14:22:52] START: Building image for 4134185
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 260B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/python:3.11
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 918B 0.0s done
+#5 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/python:3.11
+#4 CACHED
+
+#6 [2/6] COPY hard-gists/4134185/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/6] RUN ["pip","install","boto-mws"]
+#7 2.022 Collecting boto-mws
+#7 2.061   Downloading boto_mws-2.46.2-py2.py3-none-any.whl.metadata (7.3 kB)
+#7 2.083 Downloading boto_mws-2.46.2-py2.py3-none-any.whl (1.4 MB)
+#7 2.165    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 17.0 MB/s eta 0:00:00
+#7 2.205 Installing collected packages: boto-mws
+#7 2.646 Successfully installed boto-mws-2.46.2
+#7 2.646 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.738 
+#7 2.738 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.738 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.9s
+
+#8 [4/6] RUN ["pip","install","boto-patch"]
+#8 0.503 Collecting boto-patch
+#8 0.550   Downloading boto-patch-2.38.0.tar.gz (1.4 MB)
+#8 0.637      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 16.9 MB/s eta 0:00:00
+#8 0.777   Preparing metadata (setup.py): started
+#8 1.301   Preparing metadata (setup.py): finished with status 'done'
+#8 1.303 Building wheels for collected packages: boto-patch
+#8 1.303   Building wheel for boto-patch (setup.py): started
+#8 1.776   Building wheel for boto-patch (setup.py): finished with status 'done'
+#8 1.779   Created wheel for boto-patch: filename=boto_patch-2.38.0-py2.py3-none-any.whl size=1340252 sha256=7bb1530b5670b6356ab5bdcd968b9da50274ce804dac971bf965fce200f207e9
+#8 1.779   Stored in directory: /root/.cache/pip/wheels/dc/8d/91/973468dc17204b5976e1d226556d1ac8be31894bdbb8cb28cf
+#8 1.783 Successfully built boto-patch
+#8 1.814 Installing collected packages: boto-patch
+#8 2.833 Successfully installed boto-patch-2.38.0
+#8 2.834 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.839 
+#8 2.839 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.839 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.0s
+
+#9 [5/6] RUN ["pip","install","boto"]
+#9 0.519 Collecting boto
+#9 0.564   Downloading boto-2.49.0-py2.py3-none-any.whl.metadata (7.3 kB)
+#9 0.584 Downloading boto-2.49.0-py2.py3-none-any.whl (1.4 MB)
+#9 0.659    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 18.7 MB/s eta 0:00:00
+#9 0.699 Installing collected packages: boto
+#9 1.720 Successfully installed boto-2.49.0
+#9 1.721 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.726 
+#9 1.726 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.726 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.9s
+
+#10 [6/6] RUN ["pip","install","auth"]
+#10 0.518 Collecting auth
+#10 0.555   Downloading auth-0.5.3-py3-none-any.whl.metadata (7.6 kB)
+#10 0.597 Collecting blinker (from auth)
+#10 0.605   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#10 0.654 Collecting eventlet (from auth)
+#10 0.663   Downloading eventlet-0.40.3-py3-none-any.whl.metadata (5.4 kB)
+#10 0.794 Collecting falcon (from auth)
+#10 0.803   Downloading falcon-4.1.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#10 0.849 Collecting gunicorn (from auth)
+#10 0.857   Downloading gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+#10 0.904 Collecting mongoengine (from auth)
+#10 0.912   Downloading mongoengine-0.29.1-py3-none-any.whl.metadata (6.7 kB)
+#10 0.963 Collecting requests (from auth)
+#10 0.971   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#10 1.025 Collecting werkzeug (from auth)
+#10 1.033   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#10 1.086 Collecting dnspython>=1.15.0 (from eventlet->auth)
+#10 1.094   Downloading dnspython-2.8.0-py3-none-any.whl.metadata (5.7 kB)
+#10 1.249 Collecting greenlet>=1.0 (from eventlet->auth)
+#10 1.257   Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+#10 1.319 Collecting packaging (from gunicorn->auth)
+#10 1.327   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#10 1.657 Collecting pymongo<5.0,>=3.4 (from mongoengine->auth)
+#10 1.667   Downloading pymongo-4.15.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+#10 1.786 Collecting charset_normalizer<4,>=2 (from requests->auth)
+#10 1.795   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#10 1.836 Collecting idna<4,>=2.5 (from requests->auth)
+#10 1.844   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#10 1.903 Collecting urllib3<3,>=1.21.1 (from requests->auth)
+#10 1.912   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#10 1.956 Collecting certifi>=2017.4.17 (from requests->auth)
+#10 1.964   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#10 2.051 Collecting MarkupSafe>=2.1.1 (from werkzeug->auth)
+#10 2.059   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#10 2.158 Downloading auth-0.5.3-py3-none-any.whl (14 kB)
+#10 2.177 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#10 2.196 Downloading eventlet-0.40.3-py3-none-any.whl (364 kB)
+#10 2.224    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 364.3/364.3 kB 13.5 MB/s eta 0:00:00
+#10 2.237 Downloading falcon-4.1.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (832 kB)
+#10 2.302    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 832.1/832.1 kB 13.0 MB/s eta 0:00:00
+#10 2.310 Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB)
+#10 2.322    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.0/85.0 kB 7.4 MB/s eta 0:00:00
+#10 2.330 Downloading mongoengine-0.29.1-py3-none-any.whl (112 kB)
+#10 2.343    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.4/112.4 kB 8.9 MB/s eta 0:00:00
+#10 2.351 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#10 2.362    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 5.8 MB/s eta 0:00:00
+#10 2.370 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#10 2.387    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 14.1 MB/s eta 0:00:00
+#10 2.395 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#10 2.409    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 11.9 MB/s eta 0:00:00
+#10 2.417 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#10 2.431    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.5 MB/s eta 0:00:00
+#10 2.440 Downloading dnspython-2.8.0-py3-none-any.whl (331 kB)
+#10 2.460    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 331.1/331.1 kB 16.9 MB/s eta 0:00:00
+#10 2.471 Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (587 kB)
+#10 2.498    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 587.7/587.7 kB 26.3 MB/s eta 0:00:00
+#10 2.506 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#10 2.518    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 6.0 MB/s eta 0:00:00
+#10 2.526 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#10 2.546 Downloading pymongo-4.15.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.5 MB)
+#10 2.602    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 26.4 MB/s eta 0:00:00
+#10 2.611 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#10 2.624    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 10.1 MB/s eta 0:00:00
+#10 2.633 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#10 2.645    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.6 MB/s eta 0:00:00
+#10 2.754 Installing collected packages: urllib3, packaging, MarkupSafe, idna, greenlet, falcon, dnspython, charset_normalizer, certifi, blinker, werkzeug, requests, pymongo, gunicorn, eventlet, mongoengine, auth
+#10 4.010 Successfully installed MarkupSafe-3.0.3 auth-0.5.3 blinker-1.9.0 certifi-2025.10.5 charset_normalizer-3.4.4 dnspython-2.8.0 eventlet-0.40.3 falcon-4.1.0 greenlet-3.2.4 gunicorn-23.0.0 idna-3.11 mongoengine-0.29.1 packaging-25.0 pymongo-4.15.3 requests-2.32.5 urllib3-2.5.0 werkzeug-3.1.3
+#10 4.010 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 4.015 
+#10 4.015 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 4.015 [notice] To update, run: pip install --upgrade pip
+#10 DONE 4.4s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 0.3s done
+#11 writing image sha256:f7497f0cd676016c8d801ce56dbd2c24917a774542f72d210b7722c7053023d0 done
+#11 naming to docker.io/library/test-image-4134185 0.0s done
+#11 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/yu4tz34z5zpg0baarelya3qso
+[2025-10-29 14:23:05] SUCCESS: Build completed for 4134185

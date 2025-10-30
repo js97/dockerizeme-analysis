@@ -1,0 +1,19 @@
+=== Docker Run Log for 7398239 ===
+Started at: Mi 29. Okt 17:08:32 CET 2025
+
+[2025-10-29 17:08:51] START: Running container for 7398239
+[2025-10-29 17:08:51] SUCCESS: Container 49d4ecb79e9f8f1d966722545863869dcdea6209ad3a3e21c116b503d0a555bf started for 7398239
+=== Container logs for 7398239 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 88, in <module>
+    clusters = main(FILENAME)
+               ^^^^^^^^^^^^^^
+  File "/snippet.py", line 47, in main
+    tweets = get_tweets_from_csv(filename)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 22, in get_tweets_from_csv
+    ret = csv.reader(open(filename))
+                     ^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'tweets.csv'
+=== End of logs for 7398239 ===
+[2025-10-29 17:08:53] INFO: Container 49d4ecb79e9f8f1d966722545863869dcdea6209ad3a3e21c116b503d0a555bf has stopped

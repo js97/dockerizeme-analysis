@@ -1,0 +1,12 @@
+=== Docker Run Log for 8185b3dcf08ec728fb22b99016dd533f ===
+Started at: Mi 29. Okt 17:41:14 CET 2025
+
+[2025-10-29 17:41:14] START: Running container for 8185b3dcf08ec728fb22b99016dd533f
+[2025-10-29 17:41:14] SUCCESS: Container 1c63525164be8d9dd5a87747992b7ee10289f4cc39c85a33644171273136a3c2 started for 8185b3dcf08ec728fb22b99016dd533f
+=== Container logs for 8185b3dcf08ec728fb22b99016dd533f ===
+  File "/snippet.py", line 60
+    print "Serializing {:d} examples into {}".format(X.shape[0], result_tf_file)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 8185b3dcf08ec728fb22b99016dd533f ===
+[2025-10-29 17:41:16] INFO: Container 1c63525164be8d9dd5a87747992b7ee10289f4cc39c85a33644171273136a3c2 has stopped

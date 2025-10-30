@@ -1,0 +1,17 @@
+=== Docker Run Log for 10792332 ===
+Started at: Mi 29. Okt 11:49:53 CET 2025
+
+[2025-10-29 11:49:53] START: Running container for 10792332
+[2025-10-29 11:49:54] SUCCESS: Container dccc4f42d821ce7e028f7eaa54ee513628d2eaaa7811b9541fa3b996fae4b8eb started for 10792332
+=== Container logs for 10792332 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 28, in <module>
+    (lambda functools, ElementTree:
+  File "/snippet.py", line 36, in <lambda>
+    (lambda sys, time, urlrequest, get_subnode, SCANNER_XML_NS, SCAN_JOB_XML_NS, SCAN_PAYLOAD, SCAN_HEADER:
+  File "/snippet.py", line 92, in <lambda>
+    '/'.join(['http:/', sys.argv[1], 'Scan', 'Status'])
+                        ~~~~~~~~^^^
+IndexError: list index out of range
+=== End of logs for 10792332 ===
+[2025-10-29 11:49:56] INFO: Container dccc4f42d821ce7e028f7eaa54ee513628d2eaaa7811b9541fa3b996fae4b8eb has stopped

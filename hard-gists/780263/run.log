@@ -1,0 +1,27 @@
+=== Docker Run Log for 780263 ===
+Started at: Mi 29. Okt 17:18:17 CET 2025
+
+[2025-10-29 17:18:25] START: Running container for 780263
+[2025-10-29 17:18:25] SUCCESS: Container 0751905fb4616aa52791f56e320135f700ba7af18a0b548baadb3e72fdf5fbee started for 780263
+=== Container logs for 780263 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 1, in <module>
+    from django.contrib.auth.models import Permission
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/models.py", line 5, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/base_user.py", line 43, in <module>
+    class AbstractBaseUser(models.Model):
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 131, in __new__
+    app_config = apps.get_containing_app_config(module)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/apps/registry.py", line 260, in get_containing_app_config
+    self.check_apps_ready()
+  File "/usr/local/lib/python3.11/site-packages/django/apps/registry.py", line 137, in check_apps_ready
+    settings.INSTALLED_APPS
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 780263 ===
+[2025-10-29 17:18:27] INFO: Container 0751905fb4616aa52791f56e320135f700ba7af18a0b548baadb3e72fdf5fbee has stopped

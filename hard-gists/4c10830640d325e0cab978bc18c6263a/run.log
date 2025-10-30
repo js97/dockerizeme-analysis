@@ -1,0 +1,18 @@
+=== Docker Run Log for 4c10830640d325e0cab978bc18c6263a ===
+Started at: Mi 29. Okt 15:08:12 CET 2025
+
+[2025-10-29 15:09:37] START: Running container for 4c10830640d325e0cab978bc18c6263a
+[2025-10-29 15:09:38] SUCCESS: Container bdbf8315d6d83cb028f7e07b20308c9a3d76c5e8abc2ff4fa8ba70c2a53163b6 started for 4c10830640d325e0cab978bc18c6263a
+=== Container logs for 4c10830640d325e0cab978bc18c6263a ===
+2025-10-29 14:09:38.337233: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-10-29 14:09:38.376501: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-29 14:09:39.628975: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-10-29 14:09:39.825263: E external/local_xla/xla/stream_executor/cuda/cuda_platform.cc:51] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+Traceback (most recent call last):
+  File "/snippet.py", line 28, in <module>
+    train_step = tf.train.AdamOptimizer(0.001).minimize(objective)
+                 ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'tensorflow._api.v2.train' has no attribute 'AdamOptimizer'
+=== End of logs for 4c10830640d325e0cab978bc18c6263a ===
+[2025-10-29 15:09:40] INFO: Container bdbf8315d6d83cb028f7e07b20308c9a3d76c5e8abc2ff4fa8ba70c2a53163b6 has stopped

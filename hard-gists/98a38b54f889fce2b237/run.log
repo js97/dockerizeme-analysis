@@ -1,0 +1,20 @@
+=== Docker Run Log for 98a38b54f889fce2b237 ===
+Started at: Mi 29. Okt 18:34:25 CET 2025
+
+[2025-10-29 18:34:29] START: Running container for 98a38b54f889fce2b237
+[2025-10-29 18:34:30] SUCCESS: Container f8b1b147eb10a7686068e2662cbb7084b0b867ef6a1d73611f6c6b966efd6e48 started for 98a38b54f889fce2b237
+=== Container logs for 98a38b54f889fce2b237 ===
+/snippet.py:34: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if gain is 128:
+/snippet.py:36: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  elif gain is 64:
+/snippet.py:38: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  elif gain is 32:
+Traceback (most recent call last):
+  File "/snippet.py", line 1, in <module>
+    import RPi.GPIO as GPIO
+  File "/usr/local/lib/python3.11/site-packages/RPi/GPIO/__init__.py", line 23, in <module>
+    from RPi._GPIO import *
+RuntimeError: This module can only be run on a Raspberry Pi!
+=== End of logs for 98a38b54f889fce2b237 ===
+[2025-10-29 18:34:32] INFO: Container f8b1b147eb10a7686068e2662cbb7084b0b867ef6a1d73611f6c6b966efd6e48 has stopped

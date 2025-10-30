@@ -1,0 +1,14 @@
+=== Docker Run Log for 1165038 ===
+Started at: Mi 29. Okt 11:57:18 CET 2025
+
+[2025-10-29 11:57:23] START: Running container for 1165038
+[2025-10-29 11:57:23] SUCCESS: Container 09098f520ff558ae3db5391b36d4816b5d39e5d60b5c237498f129f0bacd7cad started for 1165038
+=== Container logs for 1165038 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 45, in <module>
+    create_self_signed_cert(".")
+  File "/snippet.py", line 40, in create_self_signed_cert
+    open(join(cert_dir, CERT_FILE), "wt").write(
+TypeError: write() argument must be str, not bytes
+=== End of logs for 1165038 ===
+[2025-10-29 11:57:25] INFO: Container 09098f520ff558ae3db5391b36d4816b5d39e5d60b5c237498f129f0bacd7cad has stopped

@@ -1,0 +1,19 @@
+=== Docker Run Log for 1752014 ===
+Started at: Mi 29. Okt 12:26:49 CET 2025
+
+[2025-10-29 12:27:01] START: Running container for 1752014
+[2025-10-29 12:27:02] SUCCESS: Container c8a7792e79240c0d1d3580801dbf2cb19953d547d01902897d35feb96193b8be started for 1752014
+=== Container logs for 1752014 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 130, in <module>
+    graph = processGraph([pid1, pid2])
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 60, in __init__
+    self.taskmgr = processMoniter(pids)
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 13, in __init__
+    self.cpu_nums = psutil.NUM_CPUS
+                    ^^^^^^^^^^^^^^^
+AttributeError: module 'psutil' has no attribute 'NUM_CPUS'
+=== End of logs for 1752014 ===
+[2025-10-29 12:27:04] INFO: Container c8a7792e79240c0d1d3580801dbf2cb19953d547d01902897d35feb96193b8be has stopped

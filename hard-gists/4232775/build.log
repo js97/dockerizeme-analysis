@@ -1,0 +1,123 @@
+=== Docker Build Log for 4232775 ===
+Started at: Mi 29. Okt 14:27:46 CET 2025
+
+[2025-10-29 14:27:46] START: Building image for 4232775
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 471B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.11kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/12] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/12] COPY hard-gists/4232775/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/12] RUN ["apt-get","update"]
+#7 0.293 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.293 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.301 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.317 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.647 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.648 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.367 Fetched 9833 kB in 1s (8886 kB/s)
+#7 1.367 Reading package lists...
+#7 DONE 2.1s
+
+#8 [ 4/12] RUN ["pip","install","python-oauth2"]
+#8 2.300 Collecting python-oauth2
+#8 2.341   Downloading python-oauth2-1.1.1.tar.gz (45 kB)
+#8 2.359      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.4/45.4 kB 2.1 MB/s eta 0:00:00
+#8 2.367   Preparing metadata (setup.py): started
+#8 2.770   Preparing metadata (setup.py): finished with status 'done'
+#8 2.773 Building wheels for collected packages: python-oauth2
+#8 2.774   Building wheel for python-oauth2 (setup.py): started
+#8 2.954   Building wheel for python-oauth2 (setup.py): finished with status 'done'
+#8 2.955   Created wheel for python-oauth2: filename=python_oauth2-1.1.1-py3-none-any.whl size=57436 sha256=8bd3daf099b386a461ccd6753e597b7989347af78e9986d29dea9e5a3da49450
+#8 2.955   Stored in directory: /root/.cache/pip/wheels/7b/63/ab/b9611ef76d652ff5075d91cab15721867250f7442a4fd2097f
+#8 2.958 Successfully built python-oauth2
+#8 2.988 Installing collected packages: python-oauth2
+#8 3.035 Successfully installed python-oauth2-1.1.1
+#8 3.035 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 3.129 
+#8 3.129 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.129 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.3s
+
+#9 [ 5/12] RUN ["pip","install","requests"]
+#9 0.550 Collecting requests
+#9 0.582   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#9 0.701 Collecting charset_normalizer<4,>=2 (from requests)
+#9 0.710   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#9 0.753 Collecting idna<4,>=2.5 (from requests)
+#9 0.763   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#9 0.823 Collecting urllib3<3,>=1.21.1 (from requests)
+#9 0.832   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#9 0.885 Collecting certifi>=2017.4.17 (from requests)
+#9 0.892   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#9 0.918 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#9 0.939    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.1 MB/s eta 0:00:00
+#9 0.947 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#9 0.965    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.6 MB/s eta 0:00:00
+#9 0.973 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#9 0.989    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.3 MB/s eta 0:00:00
+#9 0.996 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#9 1.009    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.6 MB/s eta 0:00:00
+#9 1.017 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#9 1.033    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 7.9 MB/s eta 0:00:00
+#9 1.083 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#9 1.323 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#9 1.323 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.328 
+#9 1.328 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.328 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.4s
+
+#10 [ 6/12] RUN ["apt-get","install","-y","python-pip"]
+#10 0.224 Reading package lists...
+#10 0.655 Building dependency tree...
+#10 0.807 Reading state information...
+#10 0.830 Package python-pip is not available, but is referred to by another package.
+#10 0.830 This may mean that the package is missing, has been obsoleted, or
+#10 0.830 is only available from another source
+#10 0.830 However the following packages replace it:
+#10 0.830   python3-pip
+#10 0.830 
+#10 0.833 E: Package 'python-pip' has no installation candidate
+#10 ERROR: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+------
+ > [ 6/12] RUN ["apt-get","install","-y","python-pip"]:
+
+
+0.830 Package python-pip is not available, but is referred to by another package.
+0.830 This may mean that the package is missing, has been obsoleted, or
+0.830 is only available from another source
+0.830 However the following packages replace it:
+0.830   python3-pip
+0.830 
+0.833 E: Package 'python-pip' has no installation candidate
+------
+Dockerfile:6
+--------------------
+   4 |     RUN ["pip","install","python-oauth2"]
+   5 |     RUN ["pip","install","requests"]
+   6 | >>> RUN ["apt-get","install","-y","python-pip"]
+   7 |     RUN ["pip","install","python-dateutil"]
+   8 |     RUN ["pip","install","Jinja2"]
+--------------------
+ERROR: failed to build: failed to solve: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/default/default/sfrop31z4xe3szrlwp5azfjxu
+[2025-10-29 14:27:54] ERROR: Build failed for 4232775

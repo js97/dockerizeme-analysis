@@ -1,0 +1,16 @@
+=== Docker Run Log for 5808d73731b50f8abbdcb3c3c5c1e6fa ===
+Started at: Mi 29. Okt 16:04:57 CET 2025
+
+[2025-10-29 16:05:01] START: Running container for 5808d73731b50f8abbdcb3c3c5c1e6fa
+[2025-10-29 16:05:01] SUCCESS: Container d4dbcfb450660a7d0f01b3fd8109ef8aebe52d7ce003958d979988bf01d86414 started for 5808d73731b50f8abbdcb3c3c5c1e6fa
+=== Container logs for 5808d73731b50f8abbdcb3c3c5c1e6fa ===
+Traceback (most recent call last):
+  File "/snippet.py", line 3, in <module>
+    im = Image.open("mr.zhang.jpg")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/PIL/Image.py", line 3493, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'mr.zhang.jpg'
+=== End of logs for 5808d73731b50f8abbdcb3c3c5c1e6fa ===
+[2025-10-29 16:05:04] INFO: Container d4dbcfb450660a7d0f01b3fd8109ef8aebe52d7ce003958d979988bf01d86414 has stopped

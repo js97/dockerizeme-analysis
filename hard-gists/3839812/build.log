@@ -1,0 +1,82 @@
+=== Docker Build Log for 3839812 ===
+Started at: Mi 29. Okt 14:03:05 CET 2025
+
+[2025-10-29 14:03:05] START: Building image for 3839812
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 160B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.78kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/3839812/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","bpy"]
+#7 1.898 Collecting bpy
+#7 1.934   Downloading bpy-4.5.4-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (2.0 kB)
+#7 2.174 Collecting cython (from bpy)
+#7 2.185   Downloading cython-3.1.6-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.0 kB)
+#7 2.399 Collecting numpy<2.0,>=1.26 (from bpy)
+#7 2.411   Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+#7 2.439      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.0/61.0 kB 2.0 MB/s eta 0:00:00
+#7 2.488 Collecting requests (from bpy)
+#7 2.496   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.583 Collecting zstandard (from bpy)
+#7 2.591   Downloading zstandard-0.25.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.3 kB)
+#7 2.698 Collecting charset_normalizer<4,>=2 (from requests->bpy)
+#7 2.706   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.745 Collecting idna<4,>=2.5 (from requests->bpy)
+#7 2.753   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.811 Collecting urllib3<3,>=1.21.1 (from requests->bpy)
+#7 2.823   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.867 Collecting certifi>=2017.4.17 (from requests->bpy)
+#7 2.875   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.907 Downloading bpy-4.5.4-cp311-cp311-manylinux_2_28_x86_64.whl (373.0 MB)
+#7 17.20    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 373.0/373.0 MB 4.5 MB/s eta 0:00:00
+#7 17.21 Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.3 MB)
+#7 17.86    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.3/18.3 MB 25.2 MB/s eta 0:00:00
+#7 17.87 Downloading cython-3.1.6-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.3 MB)
+#7 18.01    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 25.3 MB/s eta 0:00:00
+#7 18.01 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 18.02    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 5.7 MB/s eta 0:00:00
+#7 18.03 Downloading zstandard-0.25.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.6 MB)
+#7 18.24    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.6/5.6 MB 27.4 MB/s eta 0:00:00
+#7 18.25 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 18.26    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 11.3 MB/s eta 0:00:00
+#7 18.27 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 18.29    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 9.1 MB/s eta 0:00:00
+#7 18.29 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 18.31    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.9 MB/s eta 0:00:00
+#7 18.32 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 18.33    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 10.4 MB/s eta 0:00:00
+#7 19.23 Installing collected packages: zstandard, urllib3, numpy, idna, cython, charset_normalizer, certifi, requests, bpy
+#7 25.09 Successfully installed bpy-4.5.4 certifi-2025.10.5 charset_normalizer-3.4.4 cython-3.1.6 idna-3.11 numpy-1.26.4 requests-2.32.5 urllib3-2.5.0 zstandard-0.25.0
+#7 25.09 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 25.19 
+#7 25.19 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 25.19 [notice] To update, run: pip install --upgrade pip
+#7 DONE 30.2s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 4.0s done
+#8 writing image sha256:33d056a9473fcfbc5467215e927fead2a6b07c6ccc8f6d9dcf2d589d02d48ceb done
+#8 naming to docker.io/library/test-image-3839812 done
+#8 DONE 4.0s
+
+View build details: docker-desktop://dashboard/build/default/default/zzmmkolvwxpcvpr4xytwb2ewe
+[2025-10-29 14:03:39] SUCCESS: Build completed for 3839812

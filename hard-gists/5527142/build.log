@@ -1,0 +1,200 @@
+=== Docker Build Log for 5527142 ===
+Started at: Mi 29. Okt 15:44:23 CET 2025
+
+[2025-10-29 15:44:23] START: Building image for 5527142
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 269B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 476B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/6] COPY hard-gists/5527142/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/6] RUN ["pip","install","stream-python"]
+#7 2.084 Collecting stream-python
+#7 2.229   Downloading stream_python-5.4.0-py3-none-any.whl.metadata (12 kB)
+#7 2.292 Collecting requests<3,>=2.31.0 (from stream-python)
+#7 2.300   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.345 Collecting pyjwt<3,>=2.8.0 (from stream-python)
+#7 2.353   Downloading PyJWT-2.10.1-py3-none-any.whl.metadata (4.0 kB)
+#7 2.422 Collecting pytz>=2023.3.post1 (from stream-python)
+#7 2.431   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#7 3.014 Collecting aiohttp>=3.9.0b0 (from stream-python)
+#7 3.027   Downloading aiohttp-3.13.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+#7 3.084 Collecting aiohappyeyeballs>=2.5.0 (from aiohttp>=3.9.0b0->stream-python)
+#7 3.092   Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl.metadata (5.9 kB)
+#7 3.126 Collecting aiosignal>=1.4.0 (from aiohttp>=3.9.0b0->stream-python)
+#7 3.134   Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+#7 3.187 Collecting attrs>=17.3.0 (from aiohttp>=3.9.0b0->stream-python)
+#7 3.195   Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+#7 3.283 Collecting frozenlist>=1.1.1 (from aiohttp>=3.9.0b0->stream-python)
+#7 3.292   Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+#7 3.579 Collecting multidict<7.0,>=4.5 (from aiohttp>=3.9.0b0->stream-python)
+#7 3.590   Downloading multidict-6.7.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+#7 3.669 Collecting propcache>=0.2.0 (from aiohttp>=3.9.0b0->stream-python)
+#7 3.678   Downloading propcache-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+#7 3.977 Collecting yarl<2.0,>=1.17.0 (from aiohttp>=3.9.0b0->stream-python)
+#7 3.994   Downloading yarl-1.22.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (75 kB)
+#7 4.019      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 75.1/75.1 kB 2.9 MB/s eta 0:00:00
+#7 4.132 Collecting charset_normalizer<4,>=2 (from requests<3,>=2.31.0->stream-python)
+#7 4.141   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 4.188 Collecting idna<4,>=2.5 (from requests<3,>=2.31.0->stream-python)
+#7 4.195   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 4.255 Collecting urllib3<3,>=1.21.1 (from requests<3,>=2.31.0->stream-python)
+#7 4.265   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 4.320 Collecting certifi>=2017.4.17 (from requests<3,>=2.31.0->stream-python)
+#7 4.328   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 4.378 Collecting typing-extensions>=4.2 (from aiosignal>=1.4.0->aiohttp>=3.9.0b0->stream-python)
+#7 4.387   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#7 4.535 Downloading stream_python-5.4.0-py3-none-any.whl (27 kB)
+#7 4.561 Downloading aiohttp-3.13.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.7 MB)
+#7 4.632    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 25.3 MB/s eta 0:00:00
+#7 4.640 Downloading PyJWT-2.10.1-py3-none-any.whl (22 kB)
+#7 4.658 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#7 4.683    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 21.6 MB/s eta 0:00:00
+#7 4.691 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 4.703    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 5.5 MB/s eta 0:00:00
+#7 4.712 Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl (15 kB)
+#7 4.732 Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+#7 4.753 Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+#7 4.765    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.6/67.6 kB 6.0 MB/s eta 0:00:00
+#7 4.774 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 4.789    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 11.6 MB/s eta 0:00:00
+#7 4.797 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 4.813    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.3 MB/s eta 0:00:00
+#7 4.822 Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+#7 4.840    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231.1/231.1 kB 13.5 MB/s eta 0:00:00
+#7 4.848 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 4.859    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 6.2 MB/s eta 0:00:00
+#7 4.872 Downloading multidict-6.7.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (246 kB)
+#7 4.890    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 246.7/246.7 kB 14.4 MB/s eta 0:00:00
+#7 4.899 Downloading propcache-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (210 kB)
+#7 4.916    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 210.0/210.0 kB 13.7 MB/s eta 0:00:00
+#7 4.925 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 4.942    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 7.9 MB/s eta 0:00:00
+#7 4.951 Downloading yarl-1.22.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (365 kB)
+#7 4.972    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 18.4 MB/s eta 0:00:00
+#7 4.981 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#7 4.992    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.7 MB/s eta 0:00:00
+#7 5.082 Installing collected packages: pytz, urllib3, typing-extensions, pyjwt, propcache, multidict, idna, frozenlist, charset_normalizer, certifi, attrs, aiohappyeyeballs, yarl, requests, aiosignal, aiohttp, stream-python
+#7 5.776 Successfully installed aiohappyeyeballs-2.6.1 aiohttp-3.13.2 aiosignal-1.4.0 attrs-25.4.0 certifi-2025.10.5 charset_normalizer-3.4.4 frozenlist-1.8.0 idna-3.11 multidict-6.7.0 propcache-0.4.1 pyjwt-2.10.1 pytz-2025.2 requests-2.32.5 stream-python-5.4.0 typing-extensions-4.15.0 urllib3-2.5.0 yarl-1.22.0
+#7 5.777 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.871 
+#7 5.871 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.871 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.5s
+
+#8 [4/6] RUN ["pip","install","numpy"]
+#8 0.747 Collecting numpy
+#8 0.785   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 0.816      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 1.8 MB/s eta 0:00:00
+#8 0.837 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#8 2.057    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 14.8 MB/s eta 0:00:00
+#8 2.177 Installing collected packages: numpy
+#8 3.733 Successfully installed numpy-2.3.4
+#8 3.733 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 3.739 
+#8 3.739 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.739 [notice] To update, run: pip install --upgrade pip
+#8 DONE 4.2s
+
+#9 [5/6] RUN ["pip","install","matplotlib"]
+#9 0.691 Collecting matplotlib
+#9 0.725   Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#9 0.841 Collecting contourpy>=1.0.1 (from matplotlib)
+#9 0.850   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#9 0.889 Collecting cycler>=0.10 (from matplotlib)
+#9 0.900   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#9 1.089 Collecting fonttools>=4.22.0 (from matplotlib)
+#9 1.106   Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+#9 1.147      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.3/112.3 kB 2.6 MB/s eta 0:00:00
+#9 1.244 Collecting kiwisolver>=1.3.1 (from matplotlib)
+#9 1.253   Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+#9 1.272 Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.11/site-packages (from matplotlib) (2.3.4)
+#9 1.309 Collecting packaging>=20.0 (from matplotlib)
+#9 1.317   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#9 1.518 Collecting pillow>=8 (from matplotlib)
+#9 1.529   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#9 1.594 Collecting pyparsing>=3 (from matplotlib)
+#9 1.603   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#9 1.672 Collecting python-dateutil>=2.7 (from matplotlib)
+#9 1.681   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#9 1.773 Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib)
+#9 1.781   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#9 1.803 Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+#9 2.150    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 25.1 MB/s eta 0:00:00
+#9 2.160 Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+#9 2.186    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 355.2/355.2 kB 14.1 MB/s eta 0:00:00
+#9 2.194 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#9 2.214 Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#9 2.417    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 24.8 MB/s eta 0:00:00
+#9 2.426 Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+#9 2.484    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 25.7 MB/s eta 0:00:00
+#9 2.492 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#9 2.505    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.4 MB/s eta 0:00:00
+#9 2.514 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#9 2.792    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 25.4 MB/s eta 0:00:00
+#9 2.801 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#9 2.818    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 6.7 MB/s eta 0:00:00
+#9 2.826 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#9 2.842    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 15.7 MB/s eta 0:00:00
+#9 2.850 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#9 3.072 Installing collected packages: six, pyparsing, pillow, packaging, kiwisolver, fonttools, cycler, contourpy, python-dateutil, matplotlib
+#9 5.223 Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.60.1 kiwisolver-1.4.9 matplotlib-3.10.7 packaging-25.0 pillow-12.0.0 pyparsing-3.2.5 python-dateutil-2.9.0.post0 six-1.17.0
+#9 5.223 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 5.229 
+#9 5.229 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 5.229 [notice] To update, run: pip install --upgrade pip
+#9 DONE 6.1s
+
+#10 [6/6] RUN ["pip","install","astropy"]
+#10 0.692 Collecting astropy
+#10 0.737   Downloading astropy-7.1.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+#10 0.795 Requirement already satisfied: numpy>=1.23.2 in /usr/local/lib/python3.11/site-packages (from astropy) (2.3.4)
+#10 0.865 Collecting pyerfa>=2.0.1.1 (from astropy)
+#10 0.874   Downloading pyerfa-2.0.1.5-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.7 kB)
+#10 0.953 Collecting astropy-iers-data>=0.2025.9.29.0.35.48 (from astropy)
+#10 0.964   Downloading astropy_iers_data-0.2025.10.27.0.39.10-py3-none-any.whl.metadata (3.4 kB)
+#10 1.033 Collecting PyYAML>=6.0.0 (from astropy)
+#10 1.042   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#10 1.059 Requirement already satisfied: packaging>=22.0.0 in /usr/local/lib/python3.11/site-packages (from astropy) (25.0)
+#10 1.083 Downloading astropy-7.1.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (10.2 MB)
+#10 1.508    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 24.2 MB/s eta 0:00:00
+#10 1.518 Downloading astropy_iers_data-0.2025.10.27.0.39.10-py3-none-any.whl (2.0 MB)
+#10 1.601    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 24.3 MB/s eta 0:00:00
+#10 1.611 Downloading pyerfa-2.0.1.5-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (738 kB)
+#10 1.654    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 738.7/738.7 kB 17.6 MB/s eta 0:00:00
+#10 1.663 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#10 1.697    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 24.4 MB/s eta 0:00:00
+#10 1.923 Installing collected packages: PyYAML, pyerfa, astropy-iers-data, astropy
+#10 4.007 Successfully installed PyYAML-6.0.3 astropy-7.1.1 astropy-iers-data-0.2025.10.27.0.39.10 pyerfa-2.0.1.5
+#10 4.007 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 4.013 
+#10 4.013 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 4.013 [notice] To update, run: pip install --upgrade pip
+#10 DONE 4.5s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 0.7s done
+#11 writing image sha256:ac58f9d8a24d693fc952b39b3478a967d1c4ab3822d3bcfcf582a018ea938224 done
+#11 naming to docker.io/library/test-image-5527142 done
+#11 DONE 0.8s
+
+View build details: docker-desktop://dashboard/build/default/default/u3ai6ts4vm63m46wb4b093fj8
+[2025-10-29 15:44:45] SUCCESS: Build completed for 5527142

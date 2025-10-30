@@ -1,0 +1,156 @@
+=== Docker Build Log for 8982669 ===
+Started at: Mi 29. Okt 18:06:05 CET 2025
+
+[2025-10-29 18:06:05] START: Building image for 8982669
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 276B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 618B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/6] COPY hard-gists/8982669/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/6] RUN ["pip","install","webvirtmgr"]
+#7 1.863 Collecting webvirtmgr
+#7 1.899   Downloading webvirtmgr-4.8.9.tar.gz (705 kB)
+#7 1.957      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 705.8/705.8 kB 12.5 MB/s eta 0:00:00
+#7 1.992   Preparing metadata (setup.py): started
+#7 2.396   Preparing metadata (setup.py): finished with status 'done'
+#7 2.401 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from webvirtmgr) (79.0.1)
+#7 2.517 Collecting django>=1.5.5 (from webvirtmgr)
+#7 2.526   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.569 Collecting gunicorn>=18.0 (from webvirtmgr)
+#7 2.578   Downloading gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+#7 2.613 Collecting lockfile>=0.9 (from webvirtmgr)
+#7 2.624   Downloading lockfile-0.12.2-py2.py3-none-any.whl.metadata (2.4 kB)
+#7 2.672 Collecting asgiref>=3.8.1 (from django>=1.5.5->webvirtmgr)
+#7 2.680   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.718 Collecting sqlparse>=0.3.1 (from django>=1.5.5->webvirtmgr)
+#7 2.727   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.775 Collecting packaging (from gunicorn>=18.0->webvirtmgr)
+#7 2.784   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#7 2.835 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.144    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 27.0 MB/s eta 0:00:00
+#7 3.153 Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB)
+#7 3.165    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.0/85.0 kB 7.4 MB/s eta 0:00:00
+#7 3.174 Downloading lockfile-0.12.2-py2.py3-none-any.whl (13 kB)
+#7 3.192 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.210 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.222    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.4 MB/s eta 0:00:00
+#7 3.231 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#7 3.242    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.7 MB/s eta 0:00:00
+#7 3.281 Building wheels for collected packages: webvirtmgr
+#7 3.282   Building wheel for webvirtmgr (setup.py): started
+#7 3.562   Building wheel for webvirtmgr (setup.py): finished with status 'done'
+#7 3.564   Created wheel for webvirtmgr: filename=webvirtmgr-4.8.9-py3-none-any.whl size=698037 sha256=fd5dfd2086aa67c0ff12137a90fc8a15bca9bc2a32dab32c9b9d184dcf4a2946
+#7 3.564   Stored in directory: /root/.cache/pip/wheels/c7/67/ab/a716fc1b614ea6bb537a20a0b880eb7071514208cc442aeac3
+#7 3.566 Successfully built webvirtmgr
+#7 3.631 Installing collected packages: lockfile, sqlparse, packaging, asgiref, gunicorn, django, webvirtmgr
+#7 5.181 Successfully installed asgiref-3.10.0 django-5.2.7 gunicorn-23.0.0 lockfile-0.12.2 packaging-25.0 sqlparse-0.5.3 webvirtmgr-4.8.9
+#7 5.182 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.276 
+#7 5.276 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.276 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.8s
+
+#8 [4/6] RUN ["pip","install","feedparser"]
+#8 0.567 Collecting feedparser
+#8 0.609   Downloading feedparser-6.0.12-py3-none-any.whl.metadata (2.7 kB)
+#8 0.652 Collecting sgmllib3k (from feedparser)
+#8 0.661   Downloading sgmllib3k-1.0.0.tar.gz (5.8 kB)
+#8 0.677   Preparing metadata (setup.py): started
+#8 0.789   Preparing metadata (setup.py): finished with status 'done'
+#8 0.800 Downloading feedparser-6.0.12-py3-none-any.whl (81 kB)
+#8 0.834    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 81.5/81.5 kB 2.2 MB/s eta 0:00:00
+#8 0.838 Building wheels for collected packages: sgmllib3k
+#8 0.842   Building wheel for sgmllib3k (setup.py): started
+#8 0.979   Building wheel for sgmllib3k (setup.py): finished with status 'done'
+#8 0.979   Created wheel for sgmllib3k: filename=sgmllib3k-1.0.0-py3-none-any.whl size=6090 sha256=ec0d94a65efa8d519acfcb08d5c57d0f1d6384636a84bc90102d969fceb64a91
+#8 0.979   Stored in directory: /root/.cache/pip/wheels/3b/25/2a/105d6a15df6914f4d15047691c6c28f9052cc1173e40285d03
+#8 0.981 Successfully built sgmllib3k
+#8 1.026 Installing collected packages: sgmllib3k, feedparser
+#8 1.098 Successfully installed feedparser-6.0.12 sgmllib3k-1.0.0
+#8 1.099 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.103 
+#8 1.103 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.103 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.2s
+
+#9 [5/6] RUN ["pip","install","console"]
+#9 0.626 Collecting console
+#9 0.661   Downloading console-0.9912-py3-none-any.whl.metadata (18 kB)
+#9 0.809 Collecting ezenv>=0.92 (from console)
+#9 0.819   Downloading ezenv-0.92-py2.py3-none-any.whl.metadata (13 kB)
+#9 0.842 Downloading console-0.9912-py3-none-any.whl (96 kB)
+#9 0.877    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.8/96.8 kB 2.7 MB/s eta 0:00:00
+#9 0.886 Downloading ezenv-0.92-py2.py3-none-any.whl (10 kB)
+#9 0.945 Installing collected packages: ezenv, console
+#9 1.044 Successfully installed console-0.9912 ezenv-0.92
+#9 1.044 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.049 
+#9 1.049 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.049 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.1s
+
+#10 [6/6] RUN ["pip","install","django-contacts"]
+#10 0.638 Collecting django-contacts
+#10 0.837   Downloading django-contacts-0.6.0.tar.gz (18 kB)
+#10 0.870   Preparing metadata (setup.py): started
+#10 0.992   Preparing metadata (setup.py): finished with status 'done'
+#10 1.098 Collecting Django<1.10 (from django-contacts)
+#10 1.202   Downloading Django-1.9.13-py2.py3-none-any.whl.metadata (1.3 kB)
+#10 1.254 Collecting django-contrib-comments (from django-contacts)
+#10 1.269   Downloading django_contrib_comments-2.2.0-py3-none-any.whl.metadata (6.2 kB)
+#10 1.309 INFO: pip is looking at multiple versions of django-contrib-comments to determine which version is compatible with other requirements. This could take a while.
+#10 1.424   Downloading django_contrib_comments-2.1.0-py3-none-any.whl.metadata (6.1 kB)
+#10 1.555   Downloading django_contrib_comments-2.0.0-py3-none-any.whl.metadata (5.1 kB)
+#10 1.707   Downloading django_contrib_comments-1.9.2-py2.py3-none-any.whl.metadata (4.8 kB)
+#10 1.849   Downloading django_contrib_comments-1.9.1-py2.py3-none-any.whl.metadata (4.6 kB)
+#10 2.003   Downloading django_contrib_comments-1.9.0-py2.py3-none-any.whl.metadata (4.3 kB)
+#10 2.159   Downloading django_contrib_comments-1.8.0-py2.py3-none-any.whl.metadata (4.0 kB)
+#10 2.333 Downloading Django-1.9.13-py2.py3-none-any.whl (6.6 MB)
+#10 4.352    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 3.3 MB/s eta 0:00:00
+#10 4.471 Downloading django_contrib_comments-1.8.0-py2.py3-none-any.whl (407 kB)
+#10 4.535    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 407.0/407.0 kB 6.3 MB/s eta 0:00:00
+#10 4.568 Building wheels for collected packages: django-contacts
+#10 4.573   Building wheel for django-contacts (setup.py): started
+#10 4.748   Building wheel for django-contacts (setup.py): finished with status 'done'
+#10 4.749   Created wheel for django-contacts: filename=django_contacts-0.6.0-py3-none-any.whl size=19958 sha256=69f54a26176d9abaacab16e9b8f7543249ee7a10e65a0702569b52f40f2cd8ba
+#10 4.749   Stored in directory: /root/.cache/pip/wheels/21/33/1c/62b33f5793d587f557a8d73b2a34fa2df8b77601e5824b0317
+#10 4.750 Successfully built django-contacts
+#10 4.810 Installing collected packages: Django, django-contrib-comments, django-contacts
+#10 4.810   Attempting uninstall: Django
+#10 4.814     Found existing installation: Django 5.2.7
+#10 4.987     Uninstalling Django-5.2.7:
+#10 19.10       Successfully uninstalled Django-5.2.7
+#10 22.18 Successfully installed Django-1.9.13 django-contacts-0.6.0 django-contrib-comments-1.8.0
+#10 22.18 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 22.18 
+#10 22.18 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 22.18 [notice] To update, run: pip install --upgrade pip
+#10 DONE 22.3s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 1.8s done
+#11 writing image sha256:18d310a4ef915d45eeebcbc7dae5f1c644c77765889d3dce10cbb14352d54d77 done
+#11 naming to docker.io/library/test-image-8982669 0.0s done
+#11 DONE 1.9s
+
+View build details: docker-desktop://dashboard/build/default/default/cmiygv2hrkj73la09zsjh50op
+[2025-10-29 18:06:37] SUCCESS: Build completed for 8982669

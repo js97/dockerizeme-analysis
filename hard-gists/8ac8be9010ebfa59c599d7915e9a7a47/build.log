@@ -1,0 +1,113 @@
+=== Docker Build Log for 8ac8be9010ebfa59c599d7915e9a7a47 ===
+Started at: Mi 29. Okt 18:07:22 CET 2025
+
+[2025-10-29 18:07:22] START: Building image for 8ac8be9010ebfa59c599d7915e9a7a47
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 191B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.51kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/8ac8be9010ebfa59c599d7915e9a7a47/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","problem"]
+#7 2.034 Collecting problem
+#7 2.073   Downloading problem-0.2.3.tar.gz (3.9 kB)
+#7 2.087   Preparing metadata (setup.py): started
+#7 2.455   Preparing metadata (setup.py): finished with status 'done'
+#7 2.503 Collecting gspread (from problem)
+#7 2.512   Downloading gspread-6.2.1-py3-none-any.whl.metadata (11 kB)
+#7 2.558 Collecting oauth2client (from problem)
+#7 2.568   Downloading oauth2client-4.1.3-py2.py3-none-any.whl.metadata (1.2 kB)
+#7 2.607 Collecting gdown (from problem)
+#7 2.617   Downloading gdown-5.2.0-py3-none-any.whl.metadata (5.8 kB)
+#7 2.668 Collecting requests (from problem)
+#7 2.676   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.707 Collecting bs4 (from problem)
+#7 2.716   Downloading bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+#7 2.855 Collecting pandas (from problem)
+#7 2.865   Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+#7 2.895      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 2.9 MB/s eta 0:00:00
+#7 3.084 Collecting numpy (from problem)
+#7 3.094   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 3.116      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.6 MB/s eta 0:00:00
+#7 3.207 Collecting IPython (from problem)
+#7 3.215   Downloading ipython-9.6.0-py3-none-any.whl.metadata (4.4 kB)
+#7 3.354 Collecting sklearn (from problem)
+#7 3.363   Downloading sklearn-0.0.post12.tar.gz (2.6 kB)
+#7 3.373   Preparing metadata (setup.py): started
+#7 3.463   Preparing metadata (setup.py): finished with status 'error'
+#7 3.467   error: subprocess-exited-with-error
+#7 3.467   
+#7 3.467   × python setup.py egg_info did not run successfully.
+#7 3.467   │ exit code: 1
+#7 3.467   ╰─> [15 lines of output]
+#7 3.467       The 'sklearn' PyPI package is deprecated, use 'scikit-learn'
+#7 3.467       rather than 'sklearn' for pip commands.
+#7 3.467       
+#7 3.467       Here is how to fix this error in the main use cases:
+#7 3.467       - use 'pip install scikit-learn' rather than 'pip install sklearn'
+#7 3.467       - replace 'sklearn' by 'scikit-learn' in your pip requirements files
+#7 3.467         (requirements.txt, setup.py, setup.cfg, Pipfile, etc ...)
+#7 3.467       - if the 'sklearn' package is used by one of your dependencies,
+#7 3.467         it would be great if you take some time to track which package uses
+#7 3.467         'sklearn' instead of 'scikit-learn' and report it to their issue tracker
+#7 3.467       - as a last resort, set the environment variable
+#7 3.467         SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True to avoid this error
+#7 3.467       
+#7 3.467       More information is available at
+#7 3.467       https://github.com/scikit-learn/sklearn-pypi-package
+#7 3.467       [end of output]
+#7 3.467   
+#7 3.467   note: This error originates from a subprocess, and is likely not a problem with pip.
+#7 3.468 error: metadata-generation-failed
+#7 3.468 
+#7 3.468 × Encountered error while generating package metadata.
+#7 3.468 ╰─> See above for output.
+#7 3.468 
+#7 3.468 note: This is an issue with the package mentioned above, not pip.
+#7 3.468 hint: See above for details.
+#7 3.569 
+#7 3.569 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.569 [notice] To update, run: pip install --upgrade pip
+#7 ERROR: process "pip install problem" did not complete successfully: exit code: 1
+------
+ > [3/3] RUN ["pip","install","problem"]:
+3.468 error: metadata-generation-failed
+3.468 
+3.468 × Encountered error while generating package metadata.
+3.468 ╰─> See above for output.
+3.468 
+3.468 note: This is an issue with the package mentioned above, not pip.
+3.468 hint: See above for details.
+3.569 
+3.569 [notice] A new release of pip is available: 24.0 -> 25.3
+3.569 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:3
+--------------------
+   1 |     FROM python:3.11
+   2 |     COPY hard-gists/8ac8be9010ebfa59c599d7915e9a7a47/snippet.py /snippet.py
+   3 | >>> RUN ["pip","install","problem"]
+   4 |     CMD ["python3","/snippet.py"]
+   5 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install problem" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/2fkiul4ftjlcuhs49cdx6imjy
+[2025-10-29 18:07:26] ERROR: Build failed for 8ac8be9010ebfa59c599d7915e9a7a47

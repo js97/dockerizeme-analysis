@@ -1,0 +1,89 @@
+=== Docker Build Log for 3696512 ===
+Started at: Mi 29. Okt 13:56:42 CET 2025
+
+[2025-10-29 13:56:42] START: Building image for 3696512
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 204B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.24kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/3696512/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","pdfminer"]
+#7 1.914 Collecting pdfminer
+#7 1.956   Downloading pdfminer-20191125.tar.gz (4.2 MB)
+#7 2.146      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 MB 22.2 MB/s eta 0:00:00
+#7 2.236   Preparing metadata (setup.py): started
+#7 2.665   Preparing metadata (setup.py): finished with status 'done'
+#7 2.774 Collecting pycryptodome (from pdfminer)
+#7 2.783   Downloading pycryptodome-3.23.0-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.4 kB)
+#7 2.804 Downloading pycryptodome-3.23.0-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.3 MB)
+#7 2.888    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 27.4 MB/s eta 0:00:00
+#7 2.903 Building wheels for collected packages: pdfminer
+#7 2.905   Building wheel for pdfminer (setup.py): started
+#7 15.50   Building wheel for pdfminer (setup.py): finished with status 'done'
+#7 15.52   Created wheel for pdfminer: filename=pdfminer-20191125-py3-none-any.whl size=6140189 sha256=e5ef5b797345878619a4d384b38a9430d9a0994ed1d422d5c987e8a62cb25fba
+#7 15.52   Stored in directory: /root/.cache/pip/wheels/56/24/93/05316c6df89ff210a9a705060277e3acbfd2d1bd3a5853ee19
+#7 15.52 Successfully built pdfminer
+#7 15.55 Installing collected packages: pycryptodome, pdfminer
+#7 15.99 Successfully installed pdfminer-20191125 pycryptodome-3.23.0
+#7 15.99 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 16.08 
+#7 16.08 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 16.08 [notice] To update, run: pip install --upgrade pip
+#7 DONE 16.4s
+
+#8 [4/4] RUN ["pip","install","pdfminer.six"]
+#8 0.496 Collecting pdfminer.six
+#8 0.528   Downloading pdfminer_six-20250506-py3-none-any.whl.metadata (4.2 kB)
+#8 0.651 Collecting charset-normalizer>=2.0.0 (from pdfminer.six)
+#8 0.659   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#8 0.892 Collecting cryptography>=36.0.0 (from pdfminer.six)
+#8 0.901   Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+#8 1.058 Collecting cffi>=2.0.0 (from cryptography>=36.0.0->pdfminer.six)
+#8 1.068   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+#8 1.113 Collecting pycparser (from cffi>=2.0.0->cryptography>=36.0.0->pdfminer.six)
+#8 1.121   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+#8 1.142 Downloading pdfminer_six-20250506-py3-none-any.whl (5.6 MB)
+#8 1.397    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.6/5.6 MB 22.1 MB/s eta 0:00:00
+#8 1.406 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#8 1.421    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.6 MB/s eta 0:00:00
+#8 1.430 Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+#8 1.625    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 23.1 MB/s eta 0:00:00
+#8 1.634 Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+#8 1.650    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 14.5 MB/s eta 0:00:00
+#8 1.659 Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+#8 1.672    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 10.0 MB/s eta 0:00:00
+#8 1.745 Installing collected packages: pycparser, charset-normalizer, cffi, cryptography, pdfminer.six
+#8 2.220 Successfully installed cffi-2.0.0 charset-normalizer-3.4.4 cryptography-46.0.3 pdfminer.six-20250506 pycparser-2.23
+#8 2.221 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.226 
+#8 2.226 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.226 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.5s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.3s done
+#9 writing image sha256:f5f4cccd8da0db237cee2cd966feb822ce396802b1acfa1ceb6d8d0e3ef764a6 done
+#9 naming to docker.io/library/test-image-3696512 done
+#9 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/acuikdp5adrwf87el3pn0nw7t
+[2025-10-29 13:57:02] SUCCESS: Build completed for 3696512

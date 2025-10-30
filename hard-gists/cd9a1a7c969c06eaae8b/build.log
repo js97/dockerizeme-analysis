@@ -1,0 +1,219 @@
+=== Docker Build Log for cd9a1a7c969c06eaae8b ===
+Started at: Mi 29. Okt 20:18:40 CET 2025
+
+[2025-10-29 20:18:40] START: Building image for cd9a1a7c969c06eaae8b
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 399B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 42.67kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/9] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/9] COPY hard-gists/cd9a1a7c969c06eaae8b/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/9] RUN ["pip","install","Django"]
+#7 2.019 Collecting Django
+#7 2.054   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.110 Collecting asgiref>=3.8.1 (from Django)
+#7 2.118   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.158 Collecting sqlparse>=0.3.1 (from Django)
+#7 2.167   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.192 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 2.533    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 24.5 MB/s eta 0:00:00
+#7 2.541 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 2.564 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 2.575    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.6 MB/s eta 0:00:00
+#7 2.657 Installing collected packages: sqlparse, asgiref, Django
+#7 4.092 Successfully installed Django-5.2.7 asgiref-3.10.0 sqlparse-0.5.3
+#7 4.093 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.184 
+#7 4.184 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.184 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.0s
+
+#8 [4/9] RUN ["pip","install","django-haystack"]
+#8 0.647 Collecting django-haystack
+#8 0.684   Downloading django_haystack-3.3.0.tar.gz (467 kB)
+#8 0.739      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 467.3/467.3 kB 8.8 MB/s eta 0:00:00
+#8 0.788   Installing build dependencies: started
+#8 2.429   Installing build dependencies: finished with status 'done'
+#8 2.430   Getting requirements to build wheel: started
+#8 2.781   Getting requirements to build wheel: finished with status 'done'
+#8 2.782   Preparing metadata (pyproject.toml): started
+#8 3.036   Preparing metadata (pyproject.toml): finished with status 'done'
+#8 3.043 Requirement already satisfied: Django>=3.2 in /usr/local/lib/python3.11/site-packages (from django-haystack) (5.2.7)
+#8 3.072 Collecting packaging (from django-haystack)
+#8 3.073   Using cached packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 3.078 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django>=3.2->django-haystack) (3.10.0)
+#8 3.079 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django>=3.2->django-haystack) (0.5.3)
+#8 3.084 Using cached packaging-25.0-py3-none-any.whl (66 kB)
+#8 3.088 Building wheels for collected packages: django-haystack
+#8 3.089   Building wheel for django-haystack (pyproject.toml): started
+#8 3.381   Building wheel for django-haystack (pyproject.toml): finished with status 'done'
+#8 3.382   Created wheel for django-haystack: filename=django_haystack-3.3.0-py3-none-any.whl size=141850 sha256=ae7ad087f1c72d2011ea75add0cced070f4a6066019083bd35fb95f898142522
+#8 3.382   Stored in directory: /root/.cache/pip/wheels/e2/d7/58/9df2aac1855b0d81746aa6034c0df8da1b768d687f13785f69
+#8 3.384 Successfully built django-haystack
+#8 3.423 Installing collected packages: packaging, django-haystack
+#8 3.529 Successfully installed django-haystack-3.3.0 packaging-25.0
+#8 3.529 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 3.535 
+#8 3.535 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.535 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.7s
+
+#9 [5/9] RUN ["pip","install","dj.choices"]
+#9 0.516 Collecting dj.choices
+#9 0.553   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#9 0.575   Preparing metadata (setup.py): started
+#9 0.942   Preparing metadata (setup.py): finished with status 'done'
+#9 0.945 Requirement already satisfied: django in /usr/local/lib/python3.11/site-packages (from dj.choices) (5.2.7)
+#9 0.981 Collecting six (from dj.choices)
+#9 0.990   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#9 1.009 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from django->dj.choices) (3.10.0)
+#9 1.010 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from django->dj.choices) (0.5.3)
+#9 1.023 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#9 1.040 Building wheels for collected packages: dj.choices
+#9 1.045   Building wheel for dj.choices (setup.py): started
+#9 1.207   Building wheel for dj.choices (setup.py): finished with status 'done'
+#9 1.208   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=c49bcdd20edf731460f1ed0ffded8a6912ba06486636ad753b679af337409dd0
+#9 1.208   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#9 1.210 Successfully built dj.choices
+#9 1.252 Installing collected packages: six, dj.choices
+#9 1.293 Successfully installed dj.choices-0.11.0 six-1.17.0
+#9 1.293 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.298 
+#9 1.298 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.298 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.4s
+
+#10 [6/9] RUN ["pip","install","predikto-elasticsearch"]
+#10 0.577 Collecting predikto-elasticsearch
+#10 0.616   Downloading predikto-elasticsearch-2.4.1.tar.gz (58 kB)
+#10 0.643      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.2/58.2 kB 1.9 MB/s eta 0:00:00
+#10 0.652   Preparing metadata (setup.py): started
+#10 0.766   Preparing metadata (setup.py): finished with status 'done'
+#10 0.827 Collecting urllib3<2.0,>=1.8 (from predikto-elasticsearch)
+#10 0.837   Downloading urllib3-1.26.20-py2.py3-none-any.whl.metadata (50 kB)
+#10 0.858      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 kB 2.1 MB/s eta 0:00:00
+#10 0.880 Downloading urllib3-1.26.20-py2.py3-none-any.whl (144 kB)
+#10 0.906    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.2/144.2 kB 5.4 MB/s eta 0:00:00
+#10 0.910 Building wheels for collected packages: predikto-elasticsearch
+#10 0.917   Building wheel for predikto-elasticsearch (setup.py): started
+#10 1.069   Building wheel for predikto-elasticsearch (setup.py): finished with status 'done'
+#10 1.069   Created wheel for predikto-elasticsearch: filename=predikto_elasticsearch-2.4.1-py2.py3-none-any.whl size=58005 sha256=d180005ab7166591df794ea38622805809a1a9db8257669a20dd018e69f68d6e
+#10 1.070   Stored in directory: /root/.cache/pip/wheels/ed/08/6a/800641254f237f955845b4943778f11c72c95fcc5a477af0aa
+#10 1.071 Successfully built predikto-elasticsearch
+#10 1.121 Installing collected packages: urllib3, predikto-elasticsearch
+#10 1.229 Successfully installed predikto-elasticsearch-2.4.1 urllib3-1.26.20
+#10 1.229 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.234 
+#10 1.234 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.234 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.3s
+
+#11 [7/9] RUN ["pip","install","six"]
+#11 0.444 Requirement already satisfied: six in /usr/local/lib/python3.11/site-packages (1.17.0)
+#11 0.494 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.499 
+#11 0.499 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.499 [notice] To update, run: pip install --upgrade pip
+#11 DONE 0.6s
+
+#12 [8/9] RUN ["pip","install","elasticsearch"]
+#12 0.581 Collecting elasticsearch
+#12 0.615   Downloading elasticsearch-9.2.0-py3-none-any.whl.metadata (8.9 kB)
+#12 0.687 Collecting anyio (from elasticsearch)
+#12 0.696   Downloading anyio-4.11.0-py3-none-any.whl.metadata (4.1 kB)
+#12 0.744 Collecting elastic-transport<10,>=9.2.0 (from elasticsearch)
+#12 0.754   Downloading elastic_transport-9.2.0-py3-none-any.whl.metadata (3.9 kB)
+#12 0.801 Collecting python-dateutil (from elasticsearch)
+#12 0.810   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#12 0.846 Collecting sniffio (from elasticsearch)
+#12 0.854   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+#12 0.899 Collecting typing-extensions (from elasticsearch)
+#12 0.907   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#12 0.930 Requirement already satisfied: urllib3<3,>=1.26.2 in /usr/local/lib/python3.11/site-packages (from elastic-transport<10,>=9.2.0->elasticsearch) (1.26.20)
+#12 0.968 Collecting certifi (from elastic-transport<10,>=9.2.0->elasticsearch)
+#12 0.975   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#12 1.017 Collecting idna>=2.8 (from anyio->elasticsearch)
+#12 1.026   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#12 1.043 Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.11/site-packages (from python-dateutil->elasticsearch) (1.17.0)
+#12 1.072 Downloading elasticsearch-9.2.0-py3-none-any.whl (960 kB)
+#12 1.134    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 960.5/960.5 kB 15.9 MB/s eta 0:00:00
+#12 1.144 Downloading elastic_transport-9.2.0-py3-none-any.whl (65 kB)
+#12 1.163    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.3/65.3 kB 3.2 MB/s eta 0:00:00
+#12 1.173 Downloading anyio-4.11.0-py3-none-any.whl (109 kB)
+#12 1.186    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.1/109.1 kB 8.3 MB/s eta 0:00:00
+#12 1.195 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+#12 1.212 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#12 1.225    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.0 MB/s eta 0:00:00
+#12 1.235 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#12 1.256    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 11.2 MB/s eta 0:00:00
+#12 1.265 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#12 1.281    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.1 MB/s eta 0:00:00
+#12 1.289 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#12 1.305    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 10.9 MB/s eta 0:00:00
+#12 1.408 Installing collected packages: typing-extensions, sniffio, python-dateutil, idna, certifi, elastic-transport, anyio, elasticsearch
+#12 2.162 Successfully installed anyio-4.11.0 certifi-2025.10.5 elastic-transport-9.2.0 elasticsearch-9.2.0 idna-3.11 python-dateutil-2.9.0.post0 sniffio-1.3.1 typing-extensions-4.15.0
+#12 2.162 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 2.168 
+#12 2.168 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 2.168 [notice] To update, run: pip install --upgrade pip
+#12 DONE 2.4s
+
+#13 [9/9] RUN ["pip","install","haystack"]
+#13 0.624 Collecting haystack
+#13 0.663   Downloading haystack-0.42-py2.py3-none-any.whl.metadata (10 kB)
+#13 0.712 Collecting construct<2.8 (from haystack)
+#13 0.723   Downloading construct-2.5.3.tar.gz (688 kB)
+#13 0.779      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 688.1/688.1 kB 12.7 MB/s eta 0:00:00
+#13 0.804   Preparing metadata (setup.py): started
+#13 0.956   Preparing metadata (setup.py): finished with status 'done'
+#13 0.990 Collecting pefile (from haystack)
+#13 0.999   Downloading pefile-2024.8.26-py3-none-any.whl.metadata (1.4 kB)
+#13 1.143 Collecting python-ptrace>=0.8.1 (from haystack)
+#13 1.153   Downloading python_ptrace-0.9.9-py2.py3-none-any.whl.metadata (1.5 kB)
+#13 1.164 Requirement already satisfied: six in /usr/local/lib/python3.11/site-packages (from construct<2.8->haystack) (1.17.0)
+#13 1.175 Downloading haystack-0.42-py2.py3-none-any.whl (179 kB)
+#13 1.190    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 179.6/179.6 kB 12.5 MB/s eta 0:00:00
+#13 1.200 Downloading python_ptrace-0.9.9-py2.py3-none-any.whl (104 kB)
+#13 1.216    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 104.8/104.8 kB 6.7 MB/s eta 0:00:00
+#13 1.225 Downloading pefile-2024.8.26-py3-none-any.whl (74 kB)
+#13 1.239    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.8/74.8 kB 5.5 MB/s eta 0:00:00
+#13 1.244 Building wheels for collected packages: construct
+#13 1.249   Building wheel for construct (setup.py): started
+#13 1.413   Building wheel for construct (setup.py): finished with status 'done'
+#13 1.414   Created wheel for construct: filename=construct-2.5.3-py2.py3-none-any.whl size=71921 sha256=004e67b9c24aab5c95465e851f81d797119fbadb2d44f0d70d4832effef8cefd
+#13 1.414   Stored in directory: /root/.cache/pip/wheels/a3/05/de/eb183fcdbac24fd9633a5a8fcc5cdd2ed5c47611683ef2f522
+#13 1.415 Successfully built construct
+#13 1.500 Installing collected packages: python-ptrace, pefile, construct, haystack
+#13 1.755 Successfully installed construct-2.5.3 haystack-0.42 pefile-2024.8.26 python-ptrace-0.9.9
+#13 1.755 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 1.760 
+#13 1.760 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 1.760 [notice] To update, run: pip install --upgrade pip
+#13 DONE 1.9s
+
+#14 exporting to image
+#14 exporting layers
+#14 exporting layers 0.7s done
+#14 writing image sha256:8029f06a8a7c0349d92ee12cf0437f6a2afc5ce46eeac8cfe82af6f54aec696d done
+#14 naming to docker.io/library/test-image-cd9a1a7c969c06eaae8b done
+#14 DONE 0.7s
+
+View build details: docker-desktop://dashboard/build/default/default/hmxzjpjybxolqqx4mfsjvjtwk
+[2025-10-29 20:18:58] SUCCESS: Build completed for cd9a1a7c969c06eaae8b

@@ -1,0 +1,17 @@
+=== Docker Run Log for 639576c25693ca4890457efa5f67d103 ===
+Started at: Mi 29. Okt 16:29:02 CET 2025
+
+[2025-10-29 16:30:18] START: Running container for 639576c25693ca4890457efa5f67d103
+[2025-10-29 16:30:18] SUCCESS: Container 84131427a6e5649aea744100049674a6f8c069a52e467d81be776a21640b236e started for 639576c25693ca4890457efa5f67d103
+=== Container logs for 639576c25693ca4890457efa5f67d103 ===
+2025-10-29 15:30:19.122383: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-10-29 15:30:19.161836: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-29 15:30:20.548040: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Traceback (most recent call last):
+  File "/snippet.py", line 16, in <module>
+    sess = tf.Session(config=tf.ConfigProto(log_device_placement=False), graph=graph)
+           ^^^^^^^^^^
+AttributeError: module 'tensorflow' has no attribute 'Session'. Did you mean: 'version'?
+=== End of logs for 639576c25693ca4890457efa5f67d103 ===
+[2025-10-29 16:30:20] INFO: Container 84131427a6e5649aea744100049674a6f8c069a52e467d81be776a21640b236e has stopped

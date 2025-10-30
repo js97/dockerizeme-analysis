@@ -1,0 +1,107 @@
+=== Docker Build Log for 3984959 ===
+Started at: Mi 29. Okt 14:07:38 CET 2025
+
+[2025-10-29 14:07:38] START: Building image for 3984959
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 198B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.57kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/3984959/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","requests"]
+#7 1.905 Collecting requests
+#7 1.942   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.056 Collecting charset_normalizer<4,>=2 (from requests)
+#7 2.064   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.109 Collecting idna<4,>=2.5 (from requests)
+#7 2.117   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.180 Collecting urllib3<3,>=1.21.1 (from requests)
+#7 2.188   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.231 Collecting certifi>=2017.4.17 (from requests)
+#7 2.239   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.265 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.282    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.6 MB/s eta 0:00:00
+#7 2.291 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.307    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 10.3 MB/s eta 0:00:00
+#7 2.316 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.330    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.1 MB/s eta 0:00:00
+#7 2.338 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.351    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.0 MB/s eta 0:00:00
+#7 2.359 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.374    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.1 MB/s eta 0:00:00
+#7 2.420 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#7 2.634 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#7 2.634 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.727 
+#7 2.727 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.727 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.9s
+
+#8 [4/4] RUN ["pip","install","PySide"]
+#8 0.619 Collecting PySide
+#8 0.659   Downloading PySide-1.2.4.tar.gz (9.3 MB)
+#8 1.066      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.3/9.3 MB 22.9 MB/s eta 0:00:00
+#8 1.490   Preparing metadata (setup.py): started
+#8 2.039   Preparing metadata (setup.py): finished with status 'error'
+#8 2.041   error: subprocess-exited-with-error
+#8 2.041   
+#8 2.041   × python setup.py egg_info did not run successfully.
+#8 2.041   │ exit code: 1
+#8 2.041   ╰─> [1 lines of output]
+#8 2.041       only these python versions are supported: [(2, 6), (2, 7), (3, 2), (3, 3), (3, 4)]
+#8 2.041       [end of output]
+#8 2.041   
+#8 2.041   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 2.043 error: metadata-generation-failed
+#8 2.043 
+#8 2.043 × Encountered error while generating package metadata.
+#8 2.043 ╰─> See above for output.
+#8 2.043 
+#8 2.043 note: This is an issue with the package mentioned above, not pip.
+#8 2.043 hint: See above for details.
+#8 2.048 
+#8 2.048 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.048 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install PySide" did not complete successfully: exit code: 1
+------
+ > [4/4] RUN ["pip","install","PySide"]:
+2.043 error: metadata-generation-failed
+2.043 
+2.043 × Encountered error while generating package metadata.
+2.043 ╰─> See above for output.
+2.043 
+2.043 note: This is an issue with the package mentioned above, not pip.
+2.043 hint: See above for details.
+2.048 
+2.048 [notice] A new release of pip is available: 24.0 -> 25.3
+2.048 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/3984959/snippet.py /snippet.py
+   3 |     RUN ["pip","install","requests"]
+   4 | >>> RUN ["pip","install","PySide"]
+   5 |     CMD ["python3","/snippet.py"]
+   6 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install PySide" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/tdqp8btszb4afn0sbt07z3vkz
+[2025-10-29 14:07:43] ERROR: Build failed for 3984959

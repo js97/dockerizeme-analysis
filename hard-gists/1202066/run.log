@@ -1,0 +1,13 @@
+=== Docker Run Log for 1202066 ===
+Started at: Mi 29. Okt 11:58:36 CET 2025
+
+[2025-10-29 11:58:46] START: Running container for 1202066
+[2025-10-29 11:58:46] SUCCESS: Container 14ae3f1e13c24ffcefddb92fc6d104799d5f357d91bf33dc14b2910d2136b2dd started for 1202066
+=== Container logs for 1202066 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 6, in <module>
+    class RedisStore(web.session.Store):
+                     ^^^^^^^^^^^^^^^^^
+AttributeError: module 'web.session' has no attribute 'Store'
+=== End of logs for 1202066 ===
+[2025-10-29 11:58:48] INFO: Container 14ae3f1e13c24ffcefddb92fc6d104799d5f357d91bf33dc14b2910d2136b2dd has stopped

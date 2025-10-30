@@ -1,0 +1,12 @@
+=== Docker Run Log for 910392 ===
+Started at: Mi 29. Okt 18:20:38 CET 2025
+
+[2025-10-29 18:20:48] START: Running container for 910392
+[2025-10-29 18:20:48] SUCCESS: Container 96072578ccdec6accf097a90fa3f98156437966b297e863ce9ce518e2876715c started for 910392
+=== Container logs for 910392 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 3, in <module>
+    from django.utils.encoding import force_unicode
+ImportError: cannot import name 'force_unicode' from 'django.utils.encoding' (/usr/local/lib/python3.11/site-packages/django/utils/encoding.py)
+=== End of logs for 910392 ===
+[2025-10-29 18:20:50] INFO: Container 96072578ccdec6accf097a90fa3f98156437966b297e863ce9ce518e2876715c has stopped

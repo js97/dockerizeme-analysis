@@ -1,0 +1,18 @@
+=== Docker Run Log for 4522091 ===
+Started at: Mi 29. Okt 14:42:27 CET 2025
+
+[2025-10-29 14:42:35] START: Running container for 4522091
+[2025-10-29 14:42:35] SUCCESS: Container 0c7ca13710043396e6613eeffd482e366df726f30417bd74c4d83aedfa05a4e3 started for 4522091
+=== Container logs for 4522091 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 70, in <module>
+    il = ImageList('/Users/bobuk/,misc/wm')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 44, in __init__
+    self.load()
+  File "/snippet.py", line 49, in load
+    for filename in os.listdir(self.dirname)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/bobuk/,misc/wm'
+=== End of logs for 4522091 ===
+[2025-10-29 14:42:37] INFO: Container 0c7ca13710043396e6613eeffd482e366df726f30417bd74c4d83aedfa05a4e3 has stopped

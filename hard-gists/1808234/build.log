@@ -1,0 +1,101 @@
+=== Docker Build Log for 1808234 ===
+Started at: Mi 29. Okt 12:29:53 CET 2025
+
+[2025-10-29 12:29:53] START: Building image for 1808234
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 167B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.99kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/1808234/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","win32gui"]
+#7 1.892 Collecting win32gui
+#7 1.934   Downloading win32gui-221.5.tar.gz (605 kB)
+#7 1.979      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 605.3/605.3 kB 14.0 MB/s eta 0:00:00
+#7 2.019   Installing build dependencies: started
+#7 3.705   Installing build dependencies: finished with status 'done'
+#7 3.708   Getting requirements to build wheel: started
+#7 3.820   Getting requirements to build wheel: finished with status 'error'
+#7 3.823   error: subprocess-exited-with-error
+#7 3.823   
+#7 3.823   × Getting requirements to build wheel did not run successfully.
+#7 3.823   │ exit code: 1
+#7 3.823   ╰─> [22 lines of output]
+#7 3.823       Traceback (most recent call last):
+#7 3.823         File "/usr/local/lib/python3.11/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 353, in <module>
+#7 3.823           main()
+#7 3.823         File "/usr/local/lib/python3.11/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 335, in main
+#7 3.823           json_out['return_val'] = hook(**hook_input['kwargs'])
+#7 3.823                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#7 3.823         File "/usr/local/lib/python3.11/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 118, in get_requires_for_build_wheel
+#7 3.823           return hook(config_settings)
+#7 3.823                  ^^^^^^^^^^^^^^^^^^^^^
+#7 3.823         File "/tmp/pip-build-env-mbpp60b3/overlay/lib/python3.11/site-packages/setuptools/build_meta.py", line 331, in get_requires_for_build_wheel
+#7 3.823           return self._get_build_requires(config_settings, requirements=[])
+#7 3.823                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#7 3.823         File "/tmp/pip-build-env-mbpp60b3/overlay/lib/python3.11/site-packages/setuptools/build_meta.py", line 301, in _get_build_requires
+#7 3.823           self.run_setup()
+#7 3.823         File "/tmp/pip-build-env-mbpp60b3/overlay/lib/python3.11/site-packages/setuptools/build_meta.py", line 512, in run_setup
+#7 3.823           super().run_setup(setup_script=setup_script)
+#7 3.823         File "/tmp/pip-build-env-mbpp60b3/overlay/lib/python3.11/site-packages/setuptools/build_meta.py", line 317, in run_setup
+#7 3.823           exec(code, locals())
+#7 3.823         File "<string>", line 27, in <module>
+#7 3.823         File "/tmp/pip-install-k_8_2ggq/win32gui_895b12f5807e48a88069de68660f24fb/win32/distutils/gui.py", line 4, in <module>
+#7 3.823           import winreg
+#7 3.823       ModuleNotFoundError: No module named 'winreg'
+#7 3.823       [end of output]
+#7 3.823   
+#7 3.823   note: This error originates from a subprocess, and is likely not a problem with pip.
+#7 3.825 error: subprocess-exited-with-error
+#7 3.825 
+#7 3.825 × Getting requirements to build wheel did not run successfully.
+#7 3.825 │ exit code: 1
+#7 3.825 ╰─> See above for output.
+#7 3.825 
+#7 3.825 note: This error originates from a subprocess, and is likely not a problem with pip.
+#7 3.829 
+#7 3.829 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.829 [notice] To update, run: pip install --upgrade pip
+#7 ERROR: process "pip install win32gui" did not complete successfully: exit code: 1
+------
+ > [3/3] RUN ["pip","install","win32gui"]:
+3.825 error: subprocess-exited-with-error
+3.825 
+3.825 × Getting requirements to build wheel did not run successfully.
+3.825 │ exit code: 1
+3.825 ╰─> See above for output.
+3.825 
+3.825 note: This error originates from a subprocess, and is likely not a problem with pip.
+3.829 
+3.829 [notice] A new release of pip is available: 24.0 -> 25.3
+3.829 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:3
+--------------------
+   1 |     FROM python:3.11
+   2 |     COPY hard-gists/1808234/snippet.py /snippet.py
+   3 | >>> RUN ["pip","install","win32gui"]
+   4 |     CMD ["python3","/snippet.py"]
+   5 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install win32gui" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/iawkb84otmj10z2h1bjr9jcal
+[2025-10-29 12:29:57] ERROR: Build failed for 1808234

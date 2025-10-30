@@ -1,0 +1,27 @@
+=== Docker Run Log for 5881137 ===
+Started at: Mi 29. Okt 16:08:48 CET 2025
+
+[2025-10-29 16:08:55] START: Running container for 5881137
+[2025-10-29 16:08:55] SUCCESS: Container 64f21d123cecf775f344295c780e89a0a31c5a355cbef282a44cf747fbd3ac02 started for 5881137
+=== Container logs for 5881137 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 3, in <module>
+    from rest_framework import serializers, renderers, parsers
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/renderers.py", line 56, in <module>
+    class JSONRenderer(BaseRenderer):
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/renderers.py", line 63, in JSONRenderer
+    ensure_ascii = not api_settings.UNICODE_JSON
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/settings.py", line 220, in __getattr__
+    val = self.user_settings[attr]
+          ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/settings.py", line 211, in user_settings
+    self._user_settings = getattr(settings, 'REST_FRAMEWORK', {})
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting REST_FRAMEWORK, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 5881137 ===
+[2025-10-29 16:08:57] INFO: Container 64f21d123cecf775f344295c780e89a0a31c5a355cbef282a44cf747fbd3ac02 has stopped

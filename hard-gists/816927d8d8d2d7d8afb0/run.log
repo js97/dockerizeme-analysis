@@ -1,0 +1,13 @@
+=== Docker Run Log for 816927d8d8d2d7d8afb0 ===
+Started at: Mi 29. Okt 17:40:14 CET 2025
+
+[2025-10-29 17:40:18] START: Running container for 816927d8d8d2d7d8afb0
+[2025-10-29 17:40:18] SUCCESS: Container 1026a147de3578a3dd9dc667c553986a814f0a7cb0953978baf84505725a27ee started for 816927d8d8d2d7d8afb0
+=== Container logs for 816927d8d8d2d7d8afb0 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 21, in <module>
+    with open('data.csv') as csvfile:
+         ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'data.csv'
+=== End of logs for 816927d8d8d2d7d8afb0 ===
+[2025-10-29 17:40:20] INFO: Container 1026a147de3578a3dd9dc667c553986a814f0a7cb0953978baf84505725a27ee has stopped

@@ -1,0 +1,209 @@
+=== Docker Build Log for 8460004 ===
+Started at: Mi 29. Okt 17:48:51 CET 2025
+
+[2025-10-29 17:48:51] START: Building image for 8460004
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 386B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.04kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/10] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/10] COPY hard-gists/8460004/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/10] RUN ["pip","install","redispy"]
+#7 2.098 Collecting redispy
+#7 2.139   Downloading redispy-3.0.0-py2.py3-none-any.whl.metadata (27 kB)
+#7 2.163 Downloading redispy-3.0.0-py2.py3-none-any.whl (64 kB)
+#7 2.183    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.9/64.9 kB 3.1 MB/s eta 0:00:00
+#7 2.217 Installing collected packages: redispy
+#7 2.249 Successfully installed redispy-3.0.0
+#7 2.249 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.340 
+#7 2.340 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.340 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.5s
+
+#8 [ 4/10] RUN ["pip","install","redis"]
+#8 0.538 Collecting redis
+#8 0.570   Downloading redis-7.0.1-py3-none-any.whl.metadata (12 kB)
+#8 0.594 Downloading redis-7.0.1-py3-none-any.whl (339 kB)
+#8 0.631    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 339.9/339.9 kB 9.7 MB/s eta 0:00:00
+#8 0.671 Installing collected packages: redis
+#8 0.881 Successfully installed redis-7.0.1
+#8 0.882 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.887 
+#8 0.887 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.887 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.0s
+
+#9 [ 5/10] RUN ["pip","install","requests"]
+#9 0.554 Collecting requests
+#9 0.589   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#9 0.718 Collecting charset_normalizer<4,>=2 (from requests)
+#9 0.727   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#9 0.779 Collecting idna<4,>=2.5 (from requests)
+#9 0.788   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#9 0.858 Collecting urllib3<3,>=1.21.1 (from requests)
+#9 0.866   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#9 0.910 Collecting certifi>=2017.4.17 (from requests)
+#9 0.919   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#9 0.946 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#9 0.963    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.4 MB/s eta 0:00:00
+#9 0.971 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#9 0.990    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.0 MB/s eta 0:00:00
+#9 0.999 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#9 1.014    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.2 MB/s eta 0:00:00
+#9 1.022 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#9 1.038    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.3 MB/s eta 0:00:00
+#9 1.045 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#9 1.060    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 8.6 MB/s eta 0:00:00
+#9 1.110 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#9 1.349 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#9 1.349 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.354 
+#9 1.354 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.354 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.5s
+
+#10 [ 6/10] RUN ["pip","install","six"]
+#10 0.530 Collecting six
+#10 0.569   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#10 0.593 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#10 0.652 Installing collected packages: six
+#10 0.688 Successfully installed six-1.17.0
+#10 0.688 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.693 
+#10 0.693 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.693 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.8s
+
+#11 [ 7/10] RUN ["pip","install","amqp"]
+#11 0.535 Collecting amqp
+#11 0.568   Downloading amqp-5.3.1-py3-none-any.whl.metadata (8.9 kB)
+#11 0.610 Collecting vine<6.0.0,>=5.0.0 (from amqp)
+#11 0.619   Downloading vine-5.1.0-py3-none-any.whl.metadata (2.7 kB)
+#11 0.643 Downloading amqp-5.3.1-py3-none-any.whl (50 kB)
+#11 0.660    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.9/50.9 kB 2.7 MB/s eta 0:00:00
+#11 0.669 Downloading vine-5.1.0-py3-none-any.whl (9.6 kB)
+#11 0.733 Installing collected packages: vine, amqp
+#11 0.797 Successfully installed amqp-5.3.1 vine-5.1.0
+#11 0.797 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.802 
+#11 0.802 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.802 [notice] To update, run: pip install --upgrade pip
+#11 DONE 0.9s
+
+#12 [ 8/10] RUN ["pip","install","kombu"]
+#12 0.543 Collecting kombu
+#12 0.587   Downloading kombu-5.5.4-py3-none-any.whl.metadata (3.5 kB)
+#12 0.612 Requirement already satisfied: amqp<6.0.0,>=5.1.1 in /usr/local/lib/python3.11/site-packages (from kombu) (5.3.1)
+#12 0.613 Requirement already satisfied: vine==5.1.0 in /usr/local/lib/python3.11/site-packages (from kombu) (5.1.0)
+#12 0.650 Collecting tzdata>=2025.2 (from kombu)
+#12 0.659   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#12 0.710 Collecting packaging (from kombu)
+#12 0.719   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#12 0.742 Downloading kombu-5.5.4-py3-none-any.whl (210 kB)
+#12 0.785    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 210.0/210.0 kB 4.8 MB/s eta 0:00:00
+#12 0.794 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#12 0.816    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 16.9 MB/s eta 0:00:00
+#12 0.825 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#12 0.837    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.7 MB/s eta 0:00:00
+#12 0.904 Installing collected packages: tzdata, packaging, kombu
+#12 1.142 Successfully installed kombu-5.5.4 packaging-25.0 tzdata-2025.2
+#12 1.142 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 1.148 
+#12 1.148 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 1.148 [notice] To update, run: pip install --upgrade pip
+#12 DONE 1.3s
+
+#13 [ 9/10] RUN ["pip","install","celery"]
+#13 0.592 Collecting celery
+#13 0.625   Downloading celery-5.5.3-py3-none-any.whl.metadata (22 kB)
+#13 0.704 Collecting billiard<5.0,>=4.2.1 (from celery)
+#13 0.712   Downloading billiard-4.2.2-py3-none-any.whl.metadata (4.8 kB)
+#13 0.729 Requirement already satisfied: kombu<5.6,>=5.5.2 in /usr/local/lib/python3.11/site-packages (from celery) (5.5.4)
+#13 0.730 Requirement already satisfied: vine<6.0,>=5.1.0 in /usr/local/lib/python3.11/site-packages (from celery) (5.1.0)
+#13 0.763 Collecting click<9.0,>=8.1.2 (from celery)
+#13 0.773   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#13 0.809 Collecting click-didyoumean>=0.3.0 (from celery)
+#13 0.818   Downloading click_didyoumean-0.3.1-py3-none-any.whl.metadata (3.9 kB)
+#13 0.856 Collecting click-repl>=0.2.0 (from celery)
+#13 0.865   Downloading click_repl-0.3.0-py3-none-any.whl.metadata (3.6 kB)
+#13 0.912 Collecting click-plugins>=1.1.1 (from celery)
+#13 0.921   Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl.metadata (6.5 kB)
+#13 0.976 Collecting python-dateutil>=2.8.2 (from celery)
+#13 0.984   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#13 1.068 Collecting prompt-toolkit>=3.0.36 (from click-repl>=0.2.0->celery)
+#13 1.076   Downloading prompt_toolkit-3.0.52-py3-none-any.whl.metadata (6.4 kB)
+#13 1.106 Requirement already satisfied: amqp<6.0.0,>=5.1.1 in /usr/local/lib/python3.11/site-packages (from kombu<5.6,>=5.5.2->celery) (5.3.1)
+#13 1.108 Requirement already satisfied: tzdata>=2025.2 in /usr/local/lib/python3.11/site-packages (from kombu<5.6,>=5.5.2->celery) (2025.2)
+#13 1.108 Requirement already satisfied: packaging in /usr/local/lib/python3.11/site-packages (from kombu<5.6,>=5.5.2->celery) (25.0)
+#13 1.111 Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.11/site-packages (from python-dateutil>=2.8.2->celery) (1.17.0)
+#13 1.141 Collecting wcwidth (from prompt-toolkit>=3.0.36->click-repl>=0.2.0->celery)
+#13 1.149   Downloading wcwidth-0.2.14-py2.py3-none-any.whl.metadata (15 kB)
+#13 1.179 Downloading celery-5.5.3-py3-none-any.whl (438 kB)
+#13 1.218    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 438.8/438.8 kB 11.6 MB/s eta 0:00:00
+#13 1.226 Downloading billiard-4.2.2-py3-none-any.whl (86 kB)
+#13 1.244    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.9/86.9 kB 4.7 MB/s eta 0:00:00
+#13 1.254 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#13 1.269    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 7.8 MB/s eta 0:00:00
+#13 1.277 Downloading click_didyoumean-0.3.1-py3-none-any.whl (3.6 kB)
+#13 1.296 Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl (11 kB)
+#13 1.314 Downloading click_repl-0.3.0-py3-none-any.whl (10 kB)
+#13 1.344 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#13 1.367    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 10.5 MB/s eta 0:00:00
+#13 1.375 Downloading prompt_toolkit-3.0.52-py3-none-any.whl (391 kB)
+#13 1.411    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 391.4/391.4 kB 11.3 MB/s eta 0:00:00
+#13 1.420 Downloading wcwidth-0.2.14-py2.py3-none-any.whl (37 kB)
+#13 1.545 Installing collected packages: wcwidth, python-dateutil, click, billiard, prompt-toolkit, click-plugins, click-didyoumean, click-repl, celery
+#13 2.241 Successfully installed billiard-4.2.2 celery-5.5.3 click-8.3.0 click-didyoumean-0.3.1 click-plugins-1.1.1.2 click-repl-0.3.0 prompt-toolkit-3.0.52 python-dateutil-2.9.0.post0 wcwidth-0.2.14
+#13 2.241 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 2.247 
+#13 2.247 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 2.247 [notice] To update, run: pip install --upgrade pip
+#13 DONE 2.4s
+
+#14 [10/10] RUN ["pip","install","redis-sentinel"]
+#14 0.637 Collecting redis-sentinel
+#14 0.767   Downloading redis_sentinel-1.0.1-py3-none-any.whl.metadata (1.7 kB)
+#14 0.862 Collecting redis==3.* (from redis-sentinel)
+#14 0.872   Downloading redis-3.5.3-py2.py3-none-any.whl.metadata (36 kB)
+#14 1.006 Downloading redis_sentinel-1.0.1-py3-none-any.whl (15 kB)
+#14 1.041 Downloading redis-3.5.3-py2.py3-none-any.whl (72 kB)
+#14 1.072    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.1/72.1 kB 2.1 MB/s eta 0:00:00
+#14 1.175 Installing collected packages: redis, redis-sentinel
+#14 1.175   Attempting uninstall: redis
+#14 1.182     Found existing installation: redis 7.0.1
+#14 1.191     Uninstalling redis-7.0.1:
+#14 1.557       Successfully uninstalled redis-7.0.1
+#14 1.613 Successfully installed redis-3.5.3 redis-sentinel-1.0.1
+#14 1.613 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#14 1.618 
+#14 1.618 [notice] A new release of pip is available: 24.0 -> 25.3
+#14 1.618 [notice] To update, run: pip install --upgrade pip
+#14 DONE 1.7s
+
+#15 exporting to image
+#15 exporting layers
+#15 exporting layers 0.3s done
+#15 writing image sha256:bad295683c60b54373c77f7b3edd0c0f8ea03c02f85660e4933d8376ed56922a done
+#15 naming to docker.io/library/test-image-8460004 done
+#15 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/oxy2wevcuamtwppupckh3bqop
+[2025-10-29 17:49:04] SUCCESS: Build completed for 8460004

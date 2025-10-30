@@ -1,0 +1,159 @@
+=== Docker Build Log for 54e6f7d63df3866a87a15aed17b51eaf ===
+Started at: Mi 29. Okt 15:43:28 CET 2025
+
+[2025-10-29 15:43:28] START: Building image for 54e6f7d63df3866a87a15aed17b51eaf
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.66kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.12kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/35] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/35] COPY hard-gists/54e6f7d63df3866a87a15aed17b51eaf/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/35] RUN ["pip","install","requests"]
+#7 2.126 Collecting requests
+#7 2.162   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.281 Collecting charset_normalizer<4,>=2 (from requests)
+#7 2.291   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.336 Collecting idna<4,>=2.5 (from requests)
+#7 2.344   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.405 Collecting urllib3<3,>=1.21.1 (from requests)
+#7 2.415   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.459 Collecting certifi>=2017.4.17 (from requests)
+#7 2.467   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.498 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.520    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 2.9 MB/s eta 0:00:00
+#7 2.530 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.555    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 6.8 MB/s eta 0:00:00
+#7 2.570 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.586    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.3 MB/s eta 0:00:00
+#7 2.594 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.608    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.2 MB/s eta 0:00:00
+#7 2.617 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.630    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 10.4 MB/s eta 0:00:00
+#7 2.680 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#7 2.908 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#7 2.908 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.008 
+#7 3.008 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.008 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.2s
+
+#8 [ 4/35] RUN ["pip","install","python-twitter"]
+#8 0.660 Collecting python-twitter
+#8 0.693   Downloading python_twitter-3.5-py2.py3-none-any.whl.metadata (32 kB)
+#8 0.746 Collecting future (from python-twitter)
+#8 0.754   Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+#8 0.770 Requirement already satisfied: requests in /usr/local/lib/python3.11/site-packages (from python-twitter) (2.32.5)
+#8 0.801 Collecting requests-oauthlib (from python-twitter)
+#8 0.810   Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl.metadata (11 kB)
+#8 0.826 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests->python-twitter) (3.4.4)
+#8 0.827 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests->python-twitter) (3.11)
+#8 0.828 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests->python-twitter) (2.5.0)
+#8 0.830 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests->python-twitter) (2025.10.5)
+#8 0.861 Collecting oauthlib>=3.0.0 (from requests-oauthlib->python-twitter)
+#8 0.870   Downloading oauthlib-3.3.1-py3-none-any.whl.metadata (7.9 kB)
+#8 0.908 Downloading python_twitter-3.5-py2.py3-none-any.whl (67 kB)
+#8 0.933    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.4/67.4 kB 2.6 MB/s eta 0:00:00
+#8 0.943 Downloading future-1.0.0-py3-none-any.whl (491 kB)
+#8 0.981    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 491.3/491.3 kB 13.5 MB/s eta 0:00:00
+#8 0.989 Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl (24 kB)
+#8 1.008 Downloading oauthlib-3.3.1-py3-none-any.whl (160 kB)
+#8 1.026    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 160.1/160.1 kB 9.5 MB/s eta 0:00:00
+#8 1.095 Installing collected packages: oauthlib, future, requests-oauthlib, python-twitter
+#8 1.452 Successfully installed future-1.0.0 oauthlib-3.3.1 python-twitter-3.5 requests-oauthlib-2.0.0
+#8 1.453 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.458 
+#8 1.458 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.458 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.6s
+
+#9 [ 5/35] RUN ["pip","install","twitter.common.git"]
+#9 0.758 Collecting twitter.common.git
+#9 1.016   Downloading twitter.common.git-0.3.11.tar.gz (2.8 kB)
+#9 1.040   Preparing metadata (setup.py): started
+#9 1.520   Preparing metadata (setup.py): finished with status 'done'
+#9 1.566 Collecting GitPython==0.3.2.RC1 (from twitter.common.git)
+#9 1.736   Downloading GitPython-0.3.2.RC1.tar.gz (313 kB)
+#9 1.790      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 313.5/313.5 kB 5.8 MB/s eta 0:00:00
+#9 1.812   Preparing metadata (setup.py): started
+#9 1.921   Preparing metadata (setup.py): finished with status 'error'
+#9 1.925   error: subprocess-exited-with-error
+#9 1.925   
+#9 1.925   × python setup.py egg_info did not run successfully.
+#9 1.925   │ exit code: 1
+#9 1.925   ╰─> [20 lines of output]
+#9 1.925       Traceback (most recent call last):
+#9 1.925         File "<string>", line 2, in <module>
+#9 1.925         File "<pip-setuptools-caller>", line 34, in <module>
+#9 1.925         File "/tmp/pip-install-qnp07uzf/gitpython_aa68d902b6f643b884b04e232a5ca0c9/setup.py", line 64, in <module>
+#9 1.925           setup(name = "GitPython",
+#9 1.925         File "/usr/local/lib/python3.11/site-packages/setuptools/__init__.py", line 117, in setup
+#9 1.925           return distutils.core.setup(**attrs)
+#9 1.925                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#9 1.925         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/core.py", line 148, in setup
+#9 1.925           _setup_distribution = dist = klass(attrs)
+#9 1.925                                        ^^^^^^^^^^^^
+#9 1.925         File "/usr/local/lib/python3.11/site-packages/setuptools/dist.py", line 334, in __init__
+#9 1.925           self.metadata.version = self._normalize_version(self.metadata.version)
+#9 1.925                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#9 1.925         File "/usr/local/lib/python3.11/site-packages/setuptools/dist.py", line 370, in _normalize_version
+#9 1.925           normalized = str(Version(version))
+#9 1.925                            ^^^^^^^^^^^^^^^^
+#9 1.925         File "/usr/local/lib/python3.11/site-packages/setuptools/_vendor/packaging/version.py", line 202, in __init__
+#9 1.925           raise InvalidVersion(f"Invalid version: {version!r}")
+#9 1.925       packaging.version.InvalidVersion: Invalid version: '0.3.2 RC1'
+#9 1.925       [end of output]
+#9 1.925   
+#9 1.925   note: This error originates from a subprocess, and is likely not a problem with pip.
+#9 1.927 error: metadata-generation-failed
+#9 1.927 
+#9 1.927 × Encountered error while generating package metadata.
+#9 1.927 ╰─> See above for output.
+#9 1.927 
+#9 1.927 note: This is an issue with the package mentioned above, not pip.
+#9 1.927 hint: See above for details.
+#9 1.933 
+#9 1.933 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.933 [notice] To update, run: pip install --upgrade pip
+#9 ERROR: process "pip install twitter.common.git" did not complete successfully: exit code: 1
+------
+ > [ 5/35] RUN ["pip","install","twitter.common.git"]:
+1.927 error: metadata-generation-failed
+1.927 
+1.927 × Encountered error while generating package metadata.
+1.927 ╰─> See above for output.
+1.927 
+1.927 note: This is an issue with the package mentioned above, not pip.
+1.927 hint: See above for details.
+1.933 
+1.933 [notice] A new release of pip is available: 24.0 -> 25.3
+1.933 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:5
+--------------------
+   3 |     RUN ["pip","install","requests"]
+   4 |     RUN ["pip","install","python-twitter"]
+   5 | >>> RUN ["pip","install","twitter.common.git"]
+   6 |     RUN ["pip","install","twitter.common.threading"]
+   7 |     RUN ["pip","install","twitter.common.http"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install twitter.common.git" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/n6pb09pzc3wy3f4eqa6lqriif
+[2025-10-29 15:43:36] ERROR: Build failed for 54e6f7d63df3866a87a15aed17b51eaf

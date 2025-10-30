@@ -1,0 +1,12 @@
+=== Docker Run Log for a7c41b072cfa4cc2c592 ===
+Started at: Mi 29. Okt 19:06:08 CET 2025
+
+[2025-10-29 19:06:08] START: Running container for a7c41b072cfa4cc2c592
+[2025-10-29 19:06:08] SUCCESS: Container d547486fd0fa3e99dcdc9cac6124071f94845db5e39f23c44097ed4bceeb0ced started for a7c41b072cfa4cc2c592
+=== Container logs for a7c41b072cfa4cc2c592 ===
+  File "/snippet.py", line 86
+    print "fixing BP frame at %x: 0x%x" % (prev_ea, delta)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for a7c41b072cfa4cc2c592 ===
+[2025-10-29 19:06:10] INFO: Container d547486fd0fa3e99dcdc9cac6124071f94845db5e39f23c44097ed4bceeb0ced has stopped

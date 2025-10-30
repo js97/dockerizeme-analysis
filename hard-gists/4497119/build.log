@@ -1,0 +1,61 @@
+=== Docker Build Log for 4497119 ===
+Started at: Mi 29. Okt 14:40:48 CET 2025
+
+[2025-10-29 14:40:48] START: Building image for 4497119
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 200B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.91kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/4497119/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","PyYAML"]
+#7 2.120 Collecting PyYAML
+#7 2.167   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#7 2.198 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#7 2.254    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 14.9 MB/s eta 0:00:00
+#7 2.294 Installing collected packages: PyYAML
+#7 2.342 Successfully installed PyYAML-6.0.3
+#7 2.343 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.641 
+#7 2.641 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.641 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.8s
+
+#8 [4/4] RUN ["pip","install","voluptuous"]
+#8 0.539 Collecting voluptuous
+#8 0.574   Downloading voluptuous-0.15.2-py3-none-any.whl.metadata (20 kB)
+#8 0.595 Downloading voluptuous-0.15.2-py3-none-any.whl (31 kB)
+#8 0.645 Installing collected packages: voluptuous
+#8 0.690 Successfully installed voluptuous-0.15.2
+#8 0.691 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.696 
+#8 0.696 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.696 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.8s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.2s done
+#9 writing image sha256:20f7178b3f1447d0e1923fd8fa413486e5c5957f71d69218a45f5a01c83fe639 done
+#9 naming to docker.io/library/test-image-4497119 done
+#9 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/feiiv8r3odcm3q77z9lg16t91
+[2025-10-29 14:40:52] SUCCESS: Build completed for 4497119

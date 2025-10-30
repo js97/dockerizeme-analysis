@@ -1,0 +1,19 @@
+=== Docker Run Log for d592394c0cedd32513f8fbb87ca05938 ===
+Started at: Mi 29. Okt 20:25:44 CET 2025
+
+[2025-10-29 20:26:57] START: Running container for d592394c0cedd32513f8fbb87ca05938
+[2025-10-29 20:26:57] SUCCESS: Container de9a538a6e52a271b32b88f82597fb5a5fd3a159053378a425782122aa5afe8b started for d592394c0cedd32513f8fbb87ca05938
+=== Container logs for d592394c0cedd32513f8fbb87ca05938 ===
+2025-10-29 19:26:57.773563: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-10-29 19:26:57.807342: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-29 19:26:59.034580: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Traceback (most recent call last):
+  File "/snippet.py", line 96, in <module>
+    simple_test()
+  File "/snippet.py", line 58, in simple_test
+    tf.reset_default_graph()
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'tensorflow' has no attribute 'reset_default_graph'
+=== End of logs for d592394c0cedd32513f8fbb87ca05938 ===
+[2025-10-29 20:26:59] INFO: Container de9a538a6e52a271b32b88f82597fb5a5fd3a159053378a425782122aa5afe8b has stopped

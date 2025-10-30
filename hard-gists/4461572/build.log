@@ -1,0 +1,137 @@
+=== Docker Build Log for 4461572 ===
+Started at: Mi 29. Okt 14:39:31 CET 2025
+
+[2025-10-29 14:39:31] START: Building image for 4461572
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 308B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.65kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/4461572/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","dj.choices"]
+#7 1.956 Collecting dj.choices
+#7 1.989   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 2.008   Preparing metadata (setup.py): started
+#7 2.399   Preparing metadata (setup.py): finished with status 'done'
+#7 2.511 Collecting django (from dj.choices)
+#7 2.521   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.559 Collecting six (from dj.choices)
+#7 2.567   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.611 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.620   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.659 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.667   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.694 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.051    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 23.4 MB/s eta 0:00:00
+#7 3.059 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.078 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.096 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.108    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.5 MB/s eta 0:00:00
+#7 3.145 Building wheels for collected packages: dj.choices
+#7 3.146   Building wheel for dj.choices (setup.py): started
+#7 3.322   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.322   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=e162a02bd714cc8eb859fc7fdec1350afa47b9cd91f89eee8498dd7e4ee20e87
+#7 3.323   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.325 Successfully built dj.choices
+#7 3.372 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 4.842 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 4.843 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.952 
+#7 4.952 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.952 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.4s
+
+#8 [4/7] RUN ["pip","install","requests"]
+#8 0.572 Collecting requests
+#8 0.606   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#8 0.726 Collecting charset_normalizer<4,>=2 (from requests)
+#8 0.734   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#8 0.782 Collecting idna<4,>=2.5 (from requests)
+#8 0.791   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#8 0.852 Collecting urllib3<3,>=1.21.1 (from requests)
+#8 0.869   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#8 0.919 Collecting certifi>=2017.4.17 (from requests)
+#8 0.929   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#8 0.955 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#8 0.975    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.5 MB/s eta 0:00:00
+#8 0.984 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#8 1.012    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 6.1 MB/s eta 0:00:00
+#8 1.022 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#8 1.037    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.7 MB/s eta 0:00:00
+#8 1.045 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#8 1.060    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.8 MB/s eta 0:00:00
+#8 1.069 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#8 1.082    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 10.9 MB/s eta 0:00:00
+#8 1.139 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#8 1.384 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#8 1.384 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.389 
+#8 1.389 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.389 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.5s
+
+#9 [5/7] RUN ["pip","install","requests-oauthlib"]
+#9 0.543 Collecting requests-oauthlib
+#9 0.579   Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl.metadata (11 kB)
+#9 0.630 Collecting oauthlib>=3.0.0 (from requests-oauthlib)
+#9 0.639   Downloading oauthlib-3.3.1-py3-none-any.whl.metadata (7.9 kB)
+#9 0.655 Requirement already satisfied: requests>=2.0.0 in /usr/local/lib/python3.11/site-packages (from requests-oauthlib) (2.32.5)
+#9 0.663 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests>=2.0.0->requests-oauthlib) (3.4.4)
+#9 0.664 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests>=2.0.0->requests-oauthlib) (3.11)
+#9 0.665 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests>=2.0.0->requests-oauthlib) (2.5.0)
+#9 0.666 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests>=2.0.0->requests-oauthlib) (2025.10.5)
+#9 0.683 Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl (24 kB)
+#9 0.707 Downloading oauthlib-3.3.1-py3-none-any.whl (160 kB)
+#9 0.729    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 160.1/160.1 kB 7.7 MB/s eta 0:00:00
+#9 0.785 Installing collected packages: oauthlib, requests-oauthlib
+#9 0.892 Successfully installed oauthlib-3.3.1 requests-oauthlib-2.0.0
+#9 0.892 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.897 
+#9 0.897 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.897 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.0s
+
+#10 [6/7] RUN ["pip","install","oauthlib"]
+#10 0.468 Requirement already satisfied: oauthlib in /usr/local/lib/python3.11/site-packages (3.3.1)
+#10 0.522 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.527 
+#10 0.527 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.527 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.6s
+
+#11 [7/7] RUN ["pip","install","Django"]
+#11 0.464 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#11 0.468 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#11 0.469 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#11 0.527 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.533 
+#11 0.533 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.533 [notice] To update, run: pip install --upgrade pip
+#11 DONE 0.6s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.7s done
+#12 writing image sha256:321305e1204e7a8071e189d186a01f14b314da0f5d8ba195b4f3c6efda90b63a done
+#12 naming to docker.io/library/test-image-4461572 0.0s done
+#12 DONE 0.8s
+
+View build details: docker-desktop://dashboard/build/default/default/wnhehyp8q3o9fyxqb0hrs4d0v
+[2025-10-29 14:39:42] SUCCESS: Build completed for 4461572

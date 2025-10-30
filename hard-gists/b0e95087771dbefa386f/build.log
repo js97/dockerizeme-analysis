@@ -1,0 +1,204 @@
+=== Docker Build Log for b0e95087771dbefa386f ===
+Started at: Mi 29. Okt 19:23:35 CET 2025
+
+[2025-10-29 19:23:35] START: Building image for b0e95087771dbefa386f
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 329B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.61kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/b0e95087771dbefa386f/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","GitPython"]
+#7 1.917 Collecting GitPython
+#7 1.951   Downloading gitpython-3.1.45-py3-none-any.whl.metadata (13 kB)
+#7 1.997 Collecting gitdb<5,>=4.0.1 (from GitPython)
+#7 2.006   Downloading gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+#7 2.042 Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->GitPython)
+#7 2.052   Downloading smmap-5.0.2-py3-none-any.whl.metadata (4.3 kB)
+#7 2.072 Downloading gitpython-3.1.45-py3-none-any.whl (208 kB)
+#7 2.114    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 208.2/208.2 kB 4.9 MB/s eta 0:00:00
+#7 2.125 Downloading gitdb-4.0.12-py3-none-any.whl (62 kB)
+#7 2.138    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.8/62.8 kB 5.1 MB/s eta 0:00:00
+#7 2.148 Downloading smmap-5.0.2-py3-none-any.whl (24 kB)
+#7 2.200 Installing collected packages: smmap, gitdb, GitPython
+#7 2.326 Successfully installed GitPython-3.1.45 gitdb-4.0.12 smmap-5.0.2
+#7 2.326 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.421 
+#7 2.421 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.421 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.6s
+
+#8 [4/7] RUN ["pip","install","androidviewclient"]
+#8 0.780 Collecting androidviewclient
+#8 0.877   Downloading androidviewclient-24.1.0-py3-none-any.whl.metadata (661 bytes)
+#8 0.900 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from androidviewclient) (79.0.1)
+#8 0.952 Collecting requests (from androidviewclient)
+#8 0.964   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#8 1.172 Collecting numpy (from androidviewclient)
+#8 1.181   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 1.219      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 1.5 MB/s eta 0:00:00
+#8 1.373 Collecting matplotlib (from androidviewclient)
+#8 1.384   Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#8 1.447 Collecting culebratester-client>=2.0.73 (from androidviewclient)
+#8 1.456   Downloading culebratester_client-2.0.73-py3-none-any.whl.metadata (685 bytes)
+#8 1.518 Collecting urllib3>=1.15 (from culebratester-client>=2.0.73->androidviewclient)
+#8 1.529   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#8 1.568 Collecting six>=1.10 (from culebratester-client>=2.0.73->androidviewclient)
+#8 1.578   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 1.627 Collecting certifi (from culebratester-client>=2.0.73->androidviewclient)
+#8 1.636   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#8 1.684 Collecting python-dateutil (from culebratester-client>=2.0.73->androidviewclient)
+#8 1.693   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#8 1.811 Collecting contourpy>=1.0.1 (from matplotlib->androidviewclient)
+#8 1.820   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#8 1.865 Collecting cycler>=0.10 (from matplotlib->androidviewclient)
+#8 1.876   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#8 2.051 Collecting fonttools>=4.22.0 (from matplotlib->androidviewclient)
+#8 2.061   Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+#8 2.090      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.3/112.3 kB 3.9 MB/s eta 0:00:00
+#8 2.169 Collecting kiwisolver>=1.3.1 (from matplotlib->androidviewclient)
+#8 2.180   Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+#8 2.230 Collecting packaging>=20.0 (from matplotlib->androidviewclient)
+#8 2.238   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 2.465 Collecting pillow>=8 (from matplotlib->androidviewclient)
+#8 2.474   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#8 2.537 Collecting pyparsing>=3 (from matplotlib->androidviewclient)
+#8 2.548   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#8 2.662 Collecting charset_normalizer<4,>=2 (from requests->androidviewclient)
+#8 2.671   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#8 2.716 Collecting idna<4,>=2.5 (from requests->androidviewclient)
+#8 2.726   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#8 2.849 Downloading androidviewclient-24.1.0-py3-none-any.whl (425 kB)
+#8 2.896    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 425.1/425.1 kB 9.8 MB/s eta 0:00:00
+#8 2.908 Downloading culebratester_client-2.0.73-py3-none-any.whl (114 kB)
+#8 2.925    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.2/114.2 kB 8.4 MB/s eta 0:00:00
+#8 2.935 Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+#8 3.589    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 13.3 MB/s eta 0:00:00
+#8 3.628 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#8 4.928    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 12.5 MB/s eta 0:00:00
+#8 4.940 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#8 4.953    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 4.9 MB/s eta 0:00:00
+#8 4.972 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#8 4.990    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.2 MB/s eta 0:00:00
+#8 4.999 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#8 5.021    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 7.0 MB/s eta 0:00:00
+#8 5.032 Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+#8 5.073    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 355.2/355.2 kB 8.7 MB/s eta 0:00:00
+#8 5.081 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#8 5.102 Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#8 5.504    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 12.4 MB/s eta 0:00:00
+#8 5.515 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#8 5.530    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.6 MB/s eta 0:00:00
+#8 5.541 Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+#8 5.680    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 10.6 MB/s eta 0:00:00
+#8 5.689 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 5.702    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.1 MB/s eta 0:00:00
+#8 5.714 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#8 6.278    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 12.5 MB/s eta 0:00:00
+#8 6.289 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#8 6.306    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 7.5 MB/s eta 0:00:00
+#8 6.316 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#8 6.341    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 9.5 MB/s eta 0:00:00
+#8 6.353 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 6.371 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#8 6.388    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 7.7 MB/s eta 0:00:00
+#8 6.593 Installing collected packages: urllib3, six, pyparsing, pillow, packaging, numpy, kiwisolver, idna, fonttools, cycler, charset_normalizer, certifi, requests, python-dateutil, contourpy, matplotlib, culebratester-client, androidviewclient
+#8 10.34 Successfully installed androidviewclient-24.1.0 certifi-2025.10.5 charset_normalizer-3.4.4 contourpy-1.3.3 culebratester-client-2.0.73 cycler-0.12.1 fonttools-4.60.1 idna-3.11 kiwisolver-1.4.9 matplotlib-3.10.7 numpy-2.3.4 packaging-25.0 pillow-12.0.0 pyparsing-3.2.5 python-dateutil-2.9.0.post0 requests-2.32.5 six-1.17.0 urllib3-2.5.0
+#8 10.34 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 10.34 
+#8 10.34 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 10.34 [notice] To update, run: pip install --upgrade pip
+#8 DONE 11.3s
+
+#9 [5/7] RUN ["pip","install","pyapi-gitlab"]
+#9 0.561 Collecting pyapi-gitlab
+#9 0.611   Downloading pyapi-gitlab-7.8.5.tar.gz (13 kB)
+#9 0.629   Preparing metadata (setup.py): started
+#9 1.040   Preparing metadata (setup.py): finished with status 'done'
+#9 1.043 Requirement already satisfied: requests in /usr/local/lib/python3.11/site-packages (from pyapi-gitlab) (2.32.5)
+#9 1.047 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests->pyapi-gitlab) (3.4.4)
+#9 1.049 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests->pyapi-gitlab) (3.11)
+#9 1.050 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests->pyapi-gitlab) (2.5.0)
+#9 1.051 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests->pyapi-gitlab) (2025.10.5)
+#9 1.059 Building wheels for collected packages: pyapi-gitlab
+#9 1.060   Building wheel for pyapi-gitlab (setup.py): started
+#9 1.235   Building wheel for pyapi-gitlab (setup.py): finished with status 'done'
+#9 1.236   Created wheel for pyapi-gitlab: filename=pyapi_gitlab-7.8.5-py3-none-any.whl size=14712 sha256=438d2b411077221109b9292bbfd3bd685ce9720c5aa565f0ccde3ed7385164a7
+#9 1.236   Stored in directory: /root/.cache/pip/wheels/f0/b7/96/b7cfa0ce453bf007828ee2936f1fc19840a2754f3d6e907c8e
+#9 1.238 Successfully built pyapi-gitlab
+#9 1.341 Installing collected packages: pyapi-gitlab
+#9 1.366 Successfully installed pyapi-gitlab-7.8.5
+#9 1.366 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.372 
+#9 1.372 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.372 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.5s
+
+#10 [6/7] RUN ["pip","install","python-gitlab"]
+#10 0.556 Collecting python-gitlab
+#10 0.593   Downloading python_gitlab-7.0.0-py3-none-any.whl.metadata (8.5 kB)
+#10 0.612 Requirement already satisfied: requests>=2.32.0 in /usr/local/lib/python3.11/site-packages (from python-gitlab) (2.32.5)
+#10 0.648 Collecting requests-toolbelt>=1.0.0 (from python-gitlab)
+#10 0.657   Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl.metadata (14 kB)
+#10 0.679 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests>=2.32.0->python-gitlab) (3.4.4)
+#10 0.680 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests>=2.32.0->python-gitlab) (3.11)
+#10 0.681 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests>=2.32.0->python-gitlab) (2.5.0)
+#10 0.682 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests>=2.32.0->python-gitlab) (2025.10.5)
+#10 0.710 Downloading python_gitlab-7.0.0-py3-none-any.whl (144 kB)
+#10 0.752    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.4/144.4 kB 3.3 MB/s eta 0:00:00
+#10 0.764 Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+#10 0.777    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.5/54.5 kB 3.8 MB/s eta 0:00:00
+#10 0.891 Installing collected packages: requests-toolbelt, python-gitlab
+#10 1.056 Successfully installed python-gitlab-7.0.0 requests-toolbelt-1.0.0
+#10 1.056 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.061 
+#10 1.061 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.061 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.2s
+
+#11 [7/7] RUN ["pip","install","gitlab"]
+#11 0.527 ERROR: Ignored the following yanked versions: 1.0.0, 1.0.1, 1.0.2
+#11 0.527 ERROR: Could not find a version that satisfies the requirement gitlab (from versions: none)
+#11 0.528 ERROR: No matching distribution found for gitlab
+#11 0.533 
+#11 0.533 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.533 [notice] To update, run: pip install --upgrade pip
+#11 ERROR: process "pip install gitlab" did not complete successfully: exit code: 1
+------
+ > [7/7] RUN ["pip","install","gitlab"]:
+0.527 ERROR: Ignored the following yanked versions: 1.0.0, 1.0.1, 1.0.2
+0.527 ERROR: Could not find a version that satisfies the requirement gitlab (from versions: none)
+0.528 ERROR: No matching distribution found for gitlab
+0.533 
+0.533 [notice] A new release of pip is available: 24.0 -> 25.3
+0.533 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:7
+--------------------
+   5 |     RUN ["pip","install","pyapi-gitlab"]
+   6 |     RUN ["pip","install","python-gitlab"]
+   7 | >>> RUN ["pip","install","gitlab"]
+   8 |     CMD ["python3","/snippet.py"]
+   9 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install gitlab" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/0wa1r30936spde4bia3wjz88m
+[2025-10-29 19:23:52] ERROR: Build failed for b0e95087771dbefa386f

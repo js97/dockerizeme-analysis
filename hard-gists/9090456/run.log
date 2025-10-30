@@ -1,0 +1,12 @@
+=== Docker Run Log for 9090456 ===
+Started at: Mi 29. Okt 18:17:22 CET 2025
+
+[2025-10-29 18:17:23] START: Running container for 9090456
+[2025-10-29 18:17:23] SUCCESS: Container b8930e0821a2a159c832c952d6180a2ea68942ccb119c40a2cb43c07a253f512 started for 9090456
+=== Container logs for 9090456 ===
+  File "/snippet.py", line 58
+    print "Probability that version B is larger is " + str((prob_error*pdf_arr).sum())
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 9090456 ===
+[2025-10-29 18:17:25] INFO: Container b8930e0821a2a159c832c952d6180a2ea68942ccb119c40a2cb43c07a253f512 has stopped

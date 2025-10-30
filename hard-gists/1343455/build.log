@@ -1,0 +1,552 @@
+=== Docker Build Log for 1343455 ===
+Started at: Mi 29. Okt 12:08:04 CET 2025
+
+[2025-10-29 12:08:04] START: Building image for 1343455
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.51kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.11kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/68] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/68] COPY hard-gists/1343455/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/68] RUN ["apt-get","update"]
+#7 0.275 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.275 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.287 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.302 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.617 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.623 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.192 Fetched 9833 kB in 1s (10.2 MB/s)
+#7 1.192 Reading package lists...
+#7 DONE 1.7s
+
+#8 [ 4/68] RUN ["pip","install","axiom"]
+#8 1.914 Collecting axiom
+#8 1.949   Downloading Axiom-0.7.5.tar.gz (203 kB)
+#8 1.982      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 203.5/203.5 kB 6.2 MB/s eta 0:00:00
+#8 2.003   Preparing metadata (setup.py): started
+#8 2.391   Preparing metadata (setup.py): finished with status 'done'
+#8 2.441 Collecting Twisted>=13.2.0 (from axiom)
+#8 2.450   Downloading twisted-25.5.0-py3-none-any.whl.metadata (22 kB)
+#8 2.487 Collecting Epsilon>=0.7.0 (from axiom)
+#8 2.496   Downloading epsilon-0.8.0-py2.py3-none-any.whl.metadata (1.3 kB)
+#8 2.535 Collecting six>=1.12.0 (from Epsilon>=0.7.0->axiom)
+#8 2.543   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 2.668 Collecting zope.interface (from Epsilon>=0.7.0->axiom)
+#8 2.678   Downloading zope_interface-8.0.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (44 kB)
+#8 2.689      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.9/44.9 kB 3.6 MB/s eta 0:00:00
+#8 2.865 Collecting attrs>=22.2.0 (from Twisted>=13.2.0->axiom)
+#8 2.872   Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+#8 2.908 Collecting automat>=24.8.0 (from Twisted>=13.2.0->axiom)
+#8 2.917   Downloading automat-25.4.16-py3-none-any.whl.metadata (8.4 kB)
+#8 2.950 Collecting constantly>=15.1 (from Twisted>=13.2.0->axiom)
+#8 2.958   Downloading constantly-23.10.4-py3-none-any.whl.metadata (1.8 kB)
+#8 2.992 Collecting hyperlink>=17.1.1 (from Twisted>=13.2.0->axiom)
+#8 3.000   Downloading hyperlink-21.0.0-py2.py3-none-any.whl.metadata (1.5 kB)
+#8 3.036 Collecting incremental>=24.7.0 (from Twisted>=13.2.0->axiom)
+#8 3.046   Downloading incremental-24.7.2-py3-none-any.whl.metadata (8.1 kB)
+#8 3.089 Collecting typing-extensions>=4.2.0 (from Twisted>=13.2.0->axiom)
+#8 3.096   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#8 3.140 Collecting idna>=2.5 (from hyperlink>=17.1.1->Twisted>=13.2.0->axiom)
+#8 3.148   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#8 3.163 Requirement already satisfied: setuptools>=61.0 in /usr/local/lib/python3.11/site-packages (from incremental>=24.7.0->Twisted>=13.2.0->axiom) (79.0.1)
+#8 3.326 Collecting pyopenssl>=21.0.0 (from twisted[tls]>=13.2.0->Epsilon>=0.7.0->axiom)
+#8 3.335   Downloading pyopenssl-25.3.0-py3-none-any.whl.metadata (17 kB)
+#8 3.370 Collecting service-identity>=18.1.0 (from twisted[tls]>=13.2.0->Epsilon>=0.7.0->axiom)
+#8 3.378   Downloading service_identity-24.2.0-py3-none-any.whl.metadata (5.1 kB)
+#8 3.619 Collecting cryptography<47,>=45.0.7 (from pyopenssl>=21.0.0->twisted[tls]>=13.2.0->Epsilon>=0.7.0->axiom)
+#8 3.630   Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+#8 3.694 Collecting pyasn1 (from service-identity>=18.1.0->twisted[tls]>=13.2.0->Epsilon>=0.7.0->axiom)
+#8 3.701   Downloading pyasn1-0.6.1-py3-none-any.whl.metadata (8.4 kB)
+#8 3.743 Collecting pyasn1-modules (from service-identity>=18.1.0->twisted[tls]>=13.2.0->Epsilon>=0.7.0->axiom)
+#8 3.751   Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+#8 3.906 Collecting cffi>=2.0.0 (from cryptography<47,>=45.0.7->pyopenssl>=21.0.0->twisted[tls]>=13.2.0->Epsilon>=0.7.0->axiom)
+#8 3.915   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+#8 3.961 Collecting pycparser (from cffi>=2.0.0->cryptography<47,>=45.0.7->pyopenssl>=21.0.0->twisted[tls]>=13.2.0->Epsilon>=0.7.0->axiom)
+#8 3.969   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+#8 3.995 Downloading epsilon-0.8.0-py2.py3-none-any.whl (98 kB)
+#8 4.009    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 99.0/99.0 kB 7.7 MB/s eta 0:00:00
+#8 4.017 Downloading twisted-25.5.0-py3-none-any.whl (3.2 MB)
+#8 4.146    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 25.1 MB/s eta 0:00:00
+#8 4.157 Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+#8 4.169    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.6/67.6 kB 5.6 MB/s eta 0:00:00
+#8 4.178 Downloading automat-25.4.16-py3-none-any.whl (42 kB)
+#8 4.191    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.8/42.8 kB 3.0 MB/s eta 0:00:00
+#8 4.199 Downloading constantly-23.10.4-py3-none-any.whl (13 kB)
+#8 4.217 Downloading hyperlink-21.0.0-py2.py3-none-any.whl (74 kB)
+#8 4.230    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.6/74.6 kB 6.2 MB/s eta 0:00:00
+#8 4.239 Downloading incremental-24.7.2-py3-none-any.whl (20 kB)
+#8 4.257 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 4.274 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#8 4.286    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.4 MB/s eta 0:00:00
+#8 4.294 Downloading zope_interface-8.0.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (259 kB)
+#8 4.313    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 259.8/259.8 kB 14.7 MB/s eta 0:00:00
+#8 4.322 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#8 4.336    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.1 MB/s eta 0:00:00
+#8 4.344 Downloading pyopenssl-25.3.0-py3-none-any.whl (57 kB)
+#8 4.356    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.3/57.3 kB 4.8 MB/s eta 0:00:00
+#8 4.364 Downloading service_identity-24.2.0-py3-none-any.whl (11 kB)
+#8 4.382 Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+#8 4.543    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 27.9 MB/s eta 0:00:00
+#8 4.551 Downloading pyasn1-0.6.1-py3-none-any.whl (83 kB)
+#8 4.564    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.1/83.1 kB 6.7 MB/s eta 0:00:00
+#8 4.573 Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+#8 4.588    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 181.3/181.3 kB 12.6 MB/s eta 0:00:00
+#8 4.597 Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+#8 4.615    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 12.9 MB/s eta 0:00:00
+#8 4.623 Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+#8 4.636    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 9.3 MB/s eta 0:00:00
+#8 4.691 Building wheels for collected packages: axiom
+#8 4.691   Building wheel for axiom (setup.py): started
+#8 4.879   Building wheel for axiom (setup.py): finished with status 'error'
+#8 4.894   error: subprocess-exited-with-error
+#8 4.894   
+#8 4.894   × python setup.py bdist_wheel did not run successfully.
+#8 4.894   │ exit code: 1
+#8 4.894   ╰─> [394 lines of output]
+#8 4.894       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+#8 4.894       !!
+#8 4.894       
+#8 4.894               ********************************************************************************
+#8 4.894               Please consider removing the following classifiers in favor of a SPDX license expression:
+#8 4.894       
+#8 4.894               License :: OSI Approved :: MIT License
+#8 4.894       
+#8 4.894               See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+#8 4.894               ********************************************************************************
+#8 4.894       
+#8 4.894       !!
+#8 4.894         self._finalize_license_expression()
+#8 4.894       running bdist_wheel
+#8 4.894       running build
+#8 4.894       running build_py
+#8 4.894       creating build/lib/axiom
+#8 4.894       copying axiom/queryutil.py -> build/lib/axiom
+#8 4.894       copying axiom/_pysqlite2.py -> build/lib/axiom
+#8 4.894       copying axiom/slotmachine.py -> build/lib/axiom
+#8 4.894       copying axiom/userbase.py -> build/lib/axiom
+#8 4.894       copying axiom/iaxiom.py -> build/lib/axiom
+#8 4.894       copying axiom/sequence.py -> build/lib/axiom
+#8 4.894       copying axiom/tags.py -> build/lib/axiom
+#8 4.894       copying axiom/store.py -> build/lib/axiom
+#8 4.894       copying axiom/errors.py -> build/lib/axiom
+#8 4.894       copying axiom/_version.py -> build/lib/axiom
+#8 4.894       copying axiom/attributes.py -> build/lib/axiom
+#8 4.894       copying axiom/__init__.py -> build/lib/axiom
+#8 4.894       copying axiom/batch.py -> build/lib/axiom
+#8 4.894       copying axiom/item.py -> build/lib/axiom
+#8 4.894       copying axiom/dependency.py -> build/lib/axiom
+#8 4.894       copying axiom/_fincache.py -> build/lib/axiom
+#8 4.894       copying axiom/upgrade.py -> build/lib/axiom
+#8 4.894       copying axiom/_schema.py -> build/lib/axiom
+#8 4.894       copying axiom/listversions.py -> build/lib/axiom
+#8 4.894       copying axiom/substore.py -> build/lib/axiom
+#8 4.894       copying axiom/scheduler.py -> build/lib/axiom
+#8 4.894       creating build/lib/axiom/plugins
+#8 4.894       copying axiom/plugins/axiom_plugins.py -> build/lib/axiom/plugins
+#8 4.894       copying axiom/plugins/__init__.py -> build/lib/axiom/plugins
+#8 4.894       creating build/lib/axiom/test
+#8 4.894       copying axiom/test/test_tablecreate.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_mixin.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/reactorimporthelper.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_unavailable_type.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_reprs.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_axiomatic.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/oldobsolete.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/itemtestmain.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/path_postcopy.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_files.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_scheduler.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/oldcirc.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/util.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/brokenapp.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_reference.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_powerup.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/oldapp.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_upgrading.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_inheritance.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_fincache.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/onestepapp.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_queryutil.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_slotmachine.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_userbase.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_query.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_paginate.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/oldpath.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/newpath.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/openthenload.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/deleteswordapp.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/cursortest.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_batch.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/__init__.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_attributes.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_crossstore.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/newapp.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_item.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_dependency.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/newcirc.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_pysqlite2.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_substore.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_xatop.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/toonewapp.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/itemtest.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/morenewapp.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_sequence.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_tags.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_count.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/newobsolete.py -> build/lib/axiom/test
+#8 4.894       copying axiom/test/test_listversions.py -> build/lib/axiom/test
+#8 4.894       creating build/lib/axiom/scripts
+#8 4.894       copying axiom/scripts/axiomatic.py -> build/lib/axiom/scripts
+#8 4.894       copying axiom/scripts/__init__.py -> build/lib/axiom/scripts
+#8 4.894       copying axiom/scripts/pysql.py -> build/lib/axiom/scripts
+#8 4.894       creating build/lib/axiom/test/upgrade_fixtures
+#8 4.894       copying axiom/test/upgrade_fixtures/two_upgrades_old.py -> build/lib/axiom/test/upgrade_fixtures
+#8 4.894       copying axiom/test/upgrade_fixtures/override_init_new.py -> build/lib/axiom/test/upgrade_fixtures
+#8 4.894       copying axiom/test/upgrade_fixtures/reentrant_new.py -> build/lib/axiom/test/upgrade_fixtures
+#8 4.894       copying axiom/test/upgrade_fixtures/two_upgrades_new.py -> build/lib/axiom/test/upgrade_fixtures
+#8 4.894       copying axiom/test/upgrade_fixtures/replace_attribute_new.py -> build/lib/axiom/test/upgrade_fixtures
+#8 4.894       copying axiom/test/upgrade_fixtures/replace_delete_old.py -> build/lib/axiom/test/upgrade_fixtures
+#8 4.894       copying axiom/test/upgrade_fixtures/__init__.py -> build/lib/axiom/test/upgrade_fixtures
+#8 4.894       copying axiom/test/upgrade_fixtures/replace_attribute_old.py -> build/lib/axiom/test/upgrade_fixtures
+#8 4.894       copying axiom/test/upgrade_fixtures/override_init_old.py -> build/lib/axiom/test/upgrade_fixtures
+#8 4.894       copying axiom/test/upgrade_fixtures/replace_delete_new.py -> build/lib/axiom/test/upgrade_fixtures
+#8 4.894       copying axiom/test/upgrade_fixtures/reentrant_old.py -> build/lib/axiom/test/upgrade_fixtures
+#8 4.894       creating build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/stub_manhole1to2.py -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/stub_processor1to2.py -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/test_textlist.py -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/stub_textlist.py -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/test_parentHook3to4.py -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/stub_account1to2.py -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/stub_subscheduler1to2.py -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/test_scheduler1to2.py -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/stub_subStoreStartupService1to2.py -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/stub_scheduler1to2.py -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/stub_parentHook2to3.py -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/test_loginMethod1to2.py -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/test_manhole1to2.py -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/__init__.py -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/test_subStoreStartupService1to2.py -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/stub_catalog1to2.py -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/test_catalog1to2.py -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/stub_parentHook3to4.py -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/test_processor1to2.py -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/test_account1to2.py -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/test_parentHook2to3.py -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/test_subscheduler1to2.py -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/stubloader.py -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/stub_loginMethod1to2.py -> build/lib/axiom/test/historic
+#8 4.894       creating build/lib/twisted/plugins
+#8 4.894       copying twisted/plugins/axiom_plugins.py -> build/lib/twisted/plugins
+#8 4.894       running egg_info
+#8 4.894       writing Axiom.egg-info/PKG-INFO
+#8 4.894       writing dependency_links to Axiom.egg-info/dependency_links.txt
+#8 4.894       writing requirements to Axiom.egg-info/requires.txt
+#8 4.894       writing top-level names to Axiom.egg-info/top_level.txt
+#8 4.894       reading manifest file 'Axiom.egg-info/SOURCES.txt'
+#8 4.894       reading manifest template 'MANIFEST.in'
+#8 4.894       adding license file 'LICENSE'
+#8 4.894       writing manifest file 'Axiom.egg-info/SOURCES.txt'
+#8 4.894       /usr/local/lib/python3.11/site-packages/setuptools/command/build_py.py:212: _Warning: Package 'axiom.examples' is absent from the `packages` configuration.
+#8 4.894       !!
+#8 4.894       
+#8 4.894               ********************************************************************************
+#8 4.894               ############################
+#8 4.894               # Package would be ignored #
+#8 4.894               ############################
+#8 4.894               Python recognizes 'axiom.examples' as an importable package[^1],
+#8 4.894               but it is absent from setuptools' `packages` configuration.
+#8 4.894       
+#8 4.894               This leads to an ambiguous overall configuration. If you want to distribute this
+#8 4.894               package, please make sure that 'axiom.examples' is explicitly added
+#8 4.894               to the `packages` configuration field.
+#8 4.894       
+#8 4.894               Alternatively, you can also rely on setuptools' discovery methods
+#8 4.894               (for example by using `find_namespace_packages(...)`/`find_namespace:`
+#8 4.894               instead of `find_packages(...)`/`find:`).
+#8 4.894       
+#8 4.894               You can read more about "package discovery" on setuptools documentation page:
+#8 4.894       
+#8 4.894               - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+#8 4.894       
+#8 4.894               If you don't want 'axiom.examples' to be distributed and are
+#8 4.894               already explicitly excluding 'axiom.examples' via
+#8 4.894               `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+#8 4.894               you can try to use `exclude_package_data`, or `include-package-data=False` in
+#8 4.894               combination with a more fine grained `package-data` configuration.
+#8 4.894       
+#8 4.894               You can read more about "package data files" on setuptools documentation page:
+#8 4.894       
+#8 4.894               - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+#8 4.894       
+#8 4.894       
+#8 4.894               [^1]: For Python, any directory (with suitable naming) can be imported,
+#8 4.894                     even if it does not contain any `.py` files.
+#8 4.894                     On the other hand, currently there is no concept of package data
+#8 4.894                     directory, all directories are treated like packages.
+#8 4.894               ********************************************************************************
+#8 4.894       
+#8 4.894       !!
+#8 4.894         check.warn(importable)
+#8 4.894       copying axiom/batch.tac -> build/lib/axiom
+#8 4.894       creating build/lib/axiom/examples
+#8 4.894       copying axiom/examples/bucket.py -> build/lib/axiom/examples
+#8 4.894       copying axiom/examples/library.py -> build/lib/axiom/examples
+#8 4.894       copying axiom/test/historic/account1to2.axiom.tbz2 -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/catalog1to2.axiom.tbz2 -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/loginMethod1to2.axiom.tbz2 -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/manhole1to2.axiom.tbz2 -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/parentHook2to3.axiom.tbz2 -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/parentHook3to4.axiom.tbz2 -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/processor1to2.axiom.tbz2 -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/scheduler1to2.axiom.tbz2 -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/subStoreStartupService1to2.axiom.tbz2 -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/subscheduler1to2.axiom.tbz2 -> build/lib/axiom/test/historic
+#8 4.894       copying axiom/test/historic/textlist.axiom.tbz2 -> build/lib/axiom/test/historic
+#8 4.894       running build_scripts
+#8 4.894       creating build/scripts-3.11
+#8 4.894       copying and adjusting bin/axiomatic -> build/scripts-3.11
+#8 4.894       changing mode of build/scripts-3.11/axiomatic from 644 to 755
+#8 4.894       /usr/local/lib/python3.11/site-packages/setuptools/_distutils/cmd.py:90: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+#8 4.894       !!
+#8 4.894       
+#8 4.894               ********************************************************************************
+#8 4.894               Please avoid running ``setup.py`` directly.
+#8 4.894               Instead, use pypa/build, pypa/installer or other
+#8 4.894               standards-based tools.
+#8 4.894       
+#8 4.894               See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+#8 4.894               ********************************************************************************
+#8 4.894       
+#8 4.894       !!
+#8 4.894         self.initialize_options()
+#8 4.894       installing to build/bdist.linux-x86_64/wheel
+#8 4.894       running install
+#8 4.894       running install_lib
+#8 4.894       creating build/bdist.linux-x86_64/wheel
+#8 4.894       creating build/bdist.linux-x86_64/wheel/axiom
+#8 4.894       copying build/lib/axiom/queryutil.py -> build/bdist.linux-x86_64/wheel/./axiom
+#8 4.894       copying build/lib/axiom/_pysqlite2.py -> build/bdist.linux-x86_64/wheel/./axiom
+#8 4.894       copying build/lib/axiom/slotmachine.py -> build/bdist.linux-x86_64/wheel/./axiom
+#8 4.894       copying build/lib/axiom/userbase.py -> build/bdist.linux-x86_64/wheel/./axiom
+#8 4.894       copying build/lib/axiom/iaxiom.py -> build/bdist.linux-x86_64/wheel/./axiom
+#8 4.894       copying build/lib/axiom/sequence.py -> build/bdist.linux-x86_64/wheel/./axiom
+#8 4.894       copying build/lib/axiom/tags.py -> build/bdist.linux-x86_64/wheel/./axiom
+#8 4.894       copying build/lib/axiom/store.py -> build/bdist.linux-x86_64/wheel/./axiom
+#8 4.894       copying build/lib/axiom/errors.py -> build/bdist.linux-x86_64/wheel/./axiom
+#8 4.894       creating build/bdist.linux-x86_64/wheel/axiom/examples
+#8 4.894       copying build/lib/axiom/examples/library.py -> build/bdist.linux-x86_64/wheel/./axiom/examples
+#8 4.894       copying build/lib/axiom/examples/bucket.py -> build/bdist.linux-x86_64/wheel/./axiom/examples
+#8 4.894       copying build/lib/axiom/_version.py -> build/bdist.linux-x86_64/wheel/./axiom
+#8 4.894       copying build/lib/axiom/attributes.py -> build/bdist.linux-x86_64/wheel/./axiom
+#8 4.894       copying build/lib/axiom/__init__.py -> build/bdist.linux-x86_64/wheel/./axiom
+#8 4.894       copying build/lib/axiom/batch.tac -> build/bdist.linux-x86_64/wheel/./axiom
+#8 4.894       copying build/lib/axiom/batch.py -> build/bdist.linux-x86_64/wheel/./axiom
+#8 4.894       copying build/lib/axiom/item.py -> build/bdist.linux-x86_64/wheel/./axiom
+#8 4.894       copying build/lib/axiom/dependency.py -> build/bdist.linux-x86_64/wheel/./axiom
+#8 4.894       copying build/lib/axiom/_fincache.py -> build/bdist.linux-x86_64/wheel/./axiom
+#8 4.894       copying build/lib/axiom/upgrade.py -> build/bdist.linux-x86_64/wheel/./axiom
+#8 4.894       creating build/bdist.linux-x86_64/wheel/axiom/plugins
+#8 4.894       copying build/lib/axiom/plugins/axiom_plugins.py -> build/bdist.linux-x86_64/wheel/./axiom/plugins
+#8 4.894       copying build/lib/axiom/plugins/__init__.py -> build/bdist.linux-x86_64/wheel/./axiom/plugins
+#8 4.894       copying build/lib/axiom/_schema.py -> build/bdist.linux-x86_64/wheel/./axiom
+#8 4.894       copying build/lib/axiom/listversions.py -> build/bdist.linux-x86_64/wheel/./axiom
+#8 4.894       creating build/bdist.linux-x86_64/wheel/axiom/test
+#8 4.894       copying build/lib/axiom/test/test_tablecreate.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_mixin.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/reactorimporthelper.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_unavailable_type.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_reprs.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_axiomatic.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/oldobsolete.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/itemtestmain.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/path_postcopy.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_files.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_scheduler.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/oldcirc.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/util.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/brokenapp.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_reference.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_powerup.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/oldapp.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       creating build/bdist.linux-x86_64/wheel/axiom/test/upgrade_fixtures
+#8 4.894       copying build/lib/axiom/test/upgrade_fixtures/two_upgrades_old.py -> build/bdist.linux-x86_64/wheel/./axiom/test/upgrade_fixtures
+#8 4.894       copying build/lib/axiom/test/upgrade_fixtures/override_init_new.py -> build/bdist.linux-x86_64/wheel/./axiom/test/upgrade_fixtures
+#8 4.894       copying build/lib/axiom/test/upgrade_fixtures/reentrant_new.py -> build/bdist.linux-x86_64/wheel/./axiom/test/upgrade_fixtures
+#8 4.894       copying build/lib/axiom/test/upgrade_fixtures/two_upgrades_new.py -> build/bdist.linux-x86_64/wheel/./axiom/test/upgrade_fixtures
+#8 4.894       copying build/lib/axiom/test/upgrade_fixtures/replace_attribute_new.py -> build/bdist.linux-x86_64/wheel/./axiom/test/upgrade_fixtures
+#8 4.894       copying build/lib/axiom/test/upgrade_fixtures/replace_delete_old.py -> build/bdist.linux-x86_64/wheel/./axiom/test/upgrade_fixtures
+#8 4.894       copying build/lib/axiom/test/upgrade_fixtures/__init__.py -> build/bdist.linux-x86_64/wheel/./axiom/test/upgrade_fixtures
+#8 4.894       copying build/lib/axiom/test/upgrade_fixtures/replace_attribute_old.py -> build/bdist.linux-x86_64/wheel/./axiom/test/upgrade_fixtures
+#8 4.894       copying build/lib/axiom/test/upgrade_fixtures/override_init_old.py -> build/bdist.linux-x86_64/wheel/./axiom/test/upgrade_fixtures
+#8 4.894       copying build/lib/axiom/test/upgrade_fixtures/replace_delete_new.py -> build/bdist.linux-x86_64/wheel/./axiom/test/upgrade_fixtures
+#8 4.894       copying build/lib/axiom/test/upgrade_fixtures/reentrant_old.py -> build/bdist.linux-x86_64/wheel/./axiom/test/upgrade_fixtures
+#8 4.894       creating build/bdist.linux-x86_64/wheel/axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/subscheduler1to2.axiom.tbz2 -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/stub_manhole1to2.py -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/parentHook2to3.axiom.tbz2 -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/stub_processor1to2.py -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/test_textlist.py -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/stub_textlist.py -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/test_parentHook3to4.py -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/stub_account1to2.py -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/account1to2.axiom.tbz2 -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/stub_subscheduler1to2.py -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/test_scheduler1to2.py -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/scheduler1to2.axiom.tbz2 -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/parentHook3to4.axiom.tbz2 -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/processor1to2.axiom.tbz2 -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/stub_subStoreStartupService1to2.py -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/catalog1to2.axiom.tbz2 -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/stub_scheduler1to2.py -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/textlist.axiom.tbz2 -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/stub_parentHook2to3.py -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/manhole1to2.axiom.tbz2 -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/test_loginMethod1to2.py -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/test_manhole1to2.py -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/__init__.py -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/test_subStoreStartupService1to2.py -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/stub_catalog1to2.py -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/loginMethod1to2.axiom.tbz2 -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/test_catalog1to2.py -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/stub_parentHook3to4.py -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/test_processor1to2.py -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/test_account1to2.py -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/test_parentHook2to3.py -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/subStoreStartupService1to2.axiom.tbz2 -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/test_subscheduler1to2.py -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/stubloader.py -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/historic/stub_loginMethod1to2.py -> build/bdist.linux-x86_64/wheel/./axiom/test/historic
+#8 4.894       copying build/lib/axiom/test/test_upgrading.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_inheritance.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_fincache.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/onestepapp.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_queryutil.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_slotmachine.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_userbase.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_query.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_paginate.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/oldpath.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/newpath.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/openthenload.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/deleteswordapp.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/cursortest.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_batch.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/__init__.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_attributes.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_crossstore.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/newapp.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_item.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_dependency.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/newcirc.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_pysqlite2.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_substore.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_xatop.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/toonewapp.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/itemtest.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/morenewapp.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_sequence.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_tags.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_count.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/newobsolete.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/test/test_listversions.py -> build/bdist.linux-x86_64/wheel/./axiom/test
+#8 4.894       copying build/lib/axiom/substore.py -> build/bdist.linux-x86_64/wheel/./axiom
+#8 4.894       creating build/bdist.linux-x86_64/wheel/axiom/scripts
+#8 4.894       copying build/lib/axiom/scripts/axiomatic.py -> build/bdist.linux-x86_64/wheel/./axiom/scripts
+#8 4.894       copying build/lib/axiom/scripts/__init__.py -> build/bdist.linux-x86_64/wheel/./axiom/scripts
+#8 4.894       copying build/lib/axiom/scripts/pysql.py -> build/bdist.linux-x86_64/wheel/./axiom/scripts
+#8 4.894       copying build/lib/axiom/scheduler.py -> build/bdist.linux-x86_64/wheel/./axiom
+#8 4.894       creating build/bdist.linux-x86_64/wheel/twisted
+#8 4.894       creating build/bdist.linux-x86_64/wheel/twisted/plugins
+#8 4.894       copying build/lib/twisted/plugins/axiom_plugins.py -> build/bdist.linux-x86_64/wheel/./twisted/plugins
+#8 4.894       running install_egg_info
+#8 4.894       Copying Axiom.egg-info to build/bdist.linux-x86_64/wheel/./Axiom-0.7.5-py3.11.egg-info
+#8 4.894       running install_scripts
+#8 4.894       creating build/bdist.linux-x86_64/wheel/axiom-0.7.5.data/scripts
+#8 4.894       copying build/scripts-3.11/axiomatic -> build/bdist.linux-x86_64/wheel/axiom-0.7.5.data/scripts
+#8 4.894       changing mode of build/bdist.linux-x86_64/wheel/axiom-0.7.5.data/scripts/axiomatic to 755
+#8 4.894       Traceback (most recent call last):
+#8 4.894         File "<string>", line 2, in <module>
+#8 4.894         File "<pip-setuptools-caller>", line 34, in <module>
+#8 4.894         File "/tmp/pip-install-b3cnrm0d/axiom_9b1593bd91124651aee1d03cff4ddf23/setup.py", line 28, in <module>
+#8 4.894           setup(
+#8 4.894         File "/usr/local/lib/python3.11/site-packages/setuptools/__init__.py", line 117, in setup
+#8 4.894           return distutils.core.setup(**attrs)
+#8 4.894                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#8 4.894         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/core.py", line 186, in setup
+#8 4.894           return run_commands(dist)
+#8 4.894                  ^^^^^^^^^^^^^^^^^^
+#8 4.894         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/core.py", line 202, in run_commands
+#8 4.894           dist.run_commands()
+#8 4.894         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/dist.py", line 1002, in run_commands
+#8 4.894           self.run_command(cmd)
+#8 4.894         File "/usr/local/lib/python3.11/site-packages/setuptools/dist.py", line 1104, in run_command
+#8 4.894           super().run_command(command)
+#8 4.894         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/dist.py", line 1021, in run_command
+#8 4.894           cmd_obj.run()
+#8 4.894         File "/usr/local/lib/python3.11/site-packages/setuptools/command/bdist_wheel.py", line 405, in run
+#8 4.894           self.run_command("install")
+#8 4.894         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/cmd.py", line 357, in run_command
+#8 4.894           self.distribution.run_command(command)
+#8 4.894         File "/usr/local/lib/python3.11/site-packages/setuptools/dist.py", line 1104, in run_command
+#8 4.894           super().run_command(command)
+#8 4.894         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/dist.py", line 1021, in run_command
+#8 4.894           cmd_obj.run()
+#8 4.894         File "/tmp/pip-install-b3cnrm0d/axiom_9b1593bd91124651aee1d03cff4ddf23/setup.py", line 17, in run
+#8 4.894           _regenerateCache()
+#8 4.894         File "/tmp/pip-install-b3cnrm0d/axiom_9b1593bd91124651aee1d03cff4ddf23/setup.py", line 22, in _regenerateCache
+#8 4.894           from twisted import plugin
+#8 4.894       ImportError: cannot import name 'plugin' from 'twisted' (unknown location)
+#8 4.894       [end of output]
+#8 4.894   
+#8 4.894   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 4.894   ERROR: Failed building wheel for axiom
+#8 4.894   Running setup.py clean for axiom
+#8 5.000 Failed to build axiom
+#8 5.000 ERROR: Could not build wheels for axiom, which is required to install pyproject.toml-based projects
+#8 5.089 
+#8 5.089 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 5.089 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install axiom" did not complete successfully: exit code: 1
+------
+ > [ 4/68] RUN ["pip","install","axiom"]:
+4.894       [end of output]
+4.894   
+4.894   note: This error originates from a subprocess, and is likely not a problem with pip.
+4.894   ERROR: Failed building wheel for axiom
+4.894   Running setup.py clean for axiom
+5.000 Failed to build axiom
+5.000 ERROR: Could not build wheels for axiom, which is required to install pyproject.toml-based projects
+5.089 
+5.089 [notice] A new release of pip is available: 24.0 -> 25.3
+5.089 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/1343455/snippet.py /snippet.py
+   3 |     RUN ["apt-get","update"]
+   4 | >>> RUN ["pip","install","axiom"]
+   5 |     RUN ["pip","install","trigger"]
+   6 |     RUN ["pip","install","ncolony"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install axiom" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/wee9qfo15d0ttx4rizlpy2rvy
+[2025-10-29 12:08:11] ERROR: Build failed for 1343455

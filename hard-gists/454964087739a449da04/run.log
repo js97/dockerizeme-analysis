@@ -1,0 +1,13 @@
+=== Docker Run Log for 454964087739a449da04 ===
+Started at: Mi 29. Okt 14:43:29 CET 2025
+
+[2025-10-29 14:43:44] START: Running container for 454964087739a449da04
+[2025-10-29 14:43:44] SUCCESS: Container 31376adc5aac768333841dd9839eafea39a853ce0e239fcc41162d9f0e473e99 started for 454964087739a449da04
+=== Container logs for 454964087739a449da04 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 21, in <module>
+    import some_third_party_lib  # 3rd party stuff next
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'some_third_party_lib'
+=== End of logs for 454964087739a449da04 ===
+[2025-10-29 14:43:46] INFO: Container 31376adc5aac768333841dd9839eafea39a853ce0e239fcc41162d9f0e473e99 has stopped

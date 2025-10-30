@@ -1,0 +1,17 @@
+=== Docker Run Log for c26b2dd5c2bdeaf6d7479a68bd7023bb ===
+Started at: Mi 29. Okt 19:47:58 CET 2025
+
+[2025-10-29 19:49:42] START: Running container for c26b2dd5c2bdeaf6d7479a68bd7023bb
+[2025-10-29 19:49:43] SUCCESS: Container 9764a58e3261dcad1b4e60d5b42b4afe24646403e9840c289402439d254ab602 started for c26b2dd5c2bdeaf6d7479a68bd7023bb
+=== Container logs for c26b2dd5c2bdeaf6d7479a68bd7023bb ===
+2025-10-29 18:49:43.411393: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-10-29 18:49:43.444175: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-29 18:49:44.705783: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Traceback (most recent call last):
+  File "/snippet.py", line 5, in <module>
+    x = tf.placeholder(shape=[None, 3], dtype=tf.float32)
+        ^^^^^^^^^^^^^^
+AttributeError: module 'tensorflow' has no attribute 'placeholder'
+=== End of logs for c26b2dd5c2bdeaf6d7479a68bd7023bb ===
+[2025-10-29 19:49:45] INFO: Container 9764a58e3261dcad1b4e60d5b42b4afe24646403e9840c289402439d254ab602 has stopped

@@ -1,0 +1,15 @@
+=== Docker Run Log for f97205b73610dd30254652e7817f99cb ===
+Started at: Mi 29. Okt 21:38:21 CET 2025
+
+[2025-10-29 21:38:32] START: Running container for f97205b73610dd30254652e7817f99cb
+[2025-10-29 21:38:32] SUCCESS: Container 1a8f8659b80398badf804958f4c309d1ca8103f6407dae5d74f22ce1e453b35f started for f97205b73610dd30254652e7817f99cb
+=== Container logs for f97205b73610dd30254652e7817f99cb ===
+Traceback (most recent call last):
+  File "/snippet.py", line 11, in <module>
+    connection_file_path = ipykernel.get_connection_file()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/ipykernel/connect.py", line 34, in get_connection_file
+    raise RuntimeError(msg)
+RuntimeError: app not specified, and not in a running Kernel
+=== End of logs for f97205b73610dd30254652e7817f99cb ===
+[2025-10-29 21:38:34] INFO: Container 1a8f8659b80398badf804958f4c309d1ca8103f6407dae5d74f22ce1e453b35f has stopped

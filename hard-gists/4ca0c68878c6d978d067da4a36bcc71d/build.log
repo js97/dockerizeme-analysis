@@ -1,0 +1,72 @@
+=== Docker Build Log for 4ca0c68878c6d978d067da4a36bcc71d ===
+Started at: Mi 29. Okt 15:11:51 CET 2025
+
+[2025-10-29 15:11:51] START: Building image for 4ca0c68878c6d978d067da4a36bcc71d
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 225B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.00kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/4ca0c68878c6d978d067da4a36bcc71d/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","feedparser"]
+#7 2.309 Collecting feedparser
+#7 2.349   Downloading feedparser-6.0.12-py3-none-any.whl.metadata (2.7 kB)
+#7 2.390 Collecting sgmllib3k (from feedparser)
+#7 2.398   Downloading sgmllib3k-1.0.0.tar.gz (5.8 kB)
+#7 2.413   Preparing metadata (setup.py): started
+#7 2.806   Preparing metadata (setup.py): finished with status 'done'
+#7 2.818 Downloading feedparser-6.0.12-py3-none-any.whl (81 kB)
+#7 2.842    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 81.5/81.5 kB 3.5 MB/s eta 0:00:00
+#7 2.852 Building wheels for collected packages: sgmllib3k
+#7 2.853   Building wheel for sgmllib3k (setup.py): started
+#7 3.049   Building wheel for sgmllib3k (setup.py): finished with status 'done'
+#7 3.050   Created wheel for sgmllib3k: filename=sgmllib3k-1.0.0-py3-none-any.whl size=6090 sha256=1e72ec0fbc4cbc0100c1ab3d911661b62626754e4c9241f07f24396476c508cb
+#7 3.050   Stored in directory: /root/.cache/pip/wheels/3b/25/2a/105d6a15df6914f4d15047691c6c28f9052cc1173e40285d03
+#7 3.052 Successfully built sgmllib3k
+#7 3.081 Installing collected packages: sgmllib3k, feedparser
+#7 3.138 Successfully installed feedparser-6.0.12 sgmllib3k-1.0.0
+#7 3.138 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.231 
+#7 3.231 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.231 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.4s
+
+#8 [4/4] RUN ["pip","install","pillow"]
+#8 0.712 Collecting pillow
+#8 0.747   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#8 0.789 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#8 1.090    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 23.5 MB/s eta 0:00:00
+#8 1.150 Installing collected packages: pillow
+#8 1.413 Successfully installed pillow-12.0.0
+#8 1.414 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.419 
+#8 1.419 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.419 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.6s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.2s done
+#9 writing image sha256:005a9d25cf3ea2d0c503c9fa30f6a37700bd4d41096a740123948918e3f634a5 done
+#9 naming to docker.io/library/test-image-4ca0c68878c6d978d067da4a36bcc71d done
+#9 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/tpkmevhh019o27khnikj6kt7e
+[2025-10-29 15:11:57] SUCCESS: Build completed for 4ca0c68878c6d978d067da4a36bcc71d

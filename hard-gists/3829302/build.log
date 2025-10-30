@@ -1,0 +1,348 @@
+=== Docker Build Log for 3829302 ===
+Started at: Mi 29. Okt 14:01:23 CET 2025
+
+[2025-10-29 14:01:23] START: Building image for 3829302
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 DONE 0.0s
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 469B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.56kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/12] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/12] COPY hard-gists/3829302/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/12] RUN ["pip","install","pyfact"]
+#7 1.927 Collecting pyfact
+#7 1.973   Downloading pyfact-0.26.2.tar.gz (87 kB)
+#7 2.004      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.0/88.0 kB 2.6 MB/s eta 0:00:00
+#7 2.013   Preparing metadata (setup.py): started
+#7 2.872   Preparing metadata (setup.py): finished with status 'done'
+#7 3.023 Collecting astropy (from pyfact)
+#7 3.033   Downloading astropy-7.1.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+#7 3.077 Collecting click (from pyfact)
+#7 3.085   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#7 3.151 Collecting h5py (from pyfact)
+#7 3.160   Downloading h5py-3.15.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+#7 3.302 Collecting matplotlib>=1.4 (from pyfact)
+#7 3.313   Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#7 3.524 Collecting numpy (from pyfact)
+#7 3.533   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 3.549      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 3.6 MB/s eta 0:00:00
+#7 3.672 Collecting pandas (from pyfact)
+#7 3.681   Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+#7 3.696      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 6.3 MB/s eta 0:00:00
+#7 3.748 Collecting peewee>=3 (from pyfact)
+#7 3.757   Downloading peewee-3.18.2.tar.gz (949 kB)
+#7 3.798      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 949.2/949.2 kB 23.7 MB/s eta 0:00:00
+#7 3.838   Installing build dependencies: started
+#7 5.220   Installing build dependencies: finished with status 'done'
+#7 5.221   Getting requirements to build wheel: started
+#7 5.382   Getting requirements to build wheel: finished with status 'done'
+#7 5.383   Preparing metadata (pyproject.toml): started
+#7 5.533   Preparing metadata (pyproject.toml): finished with status 'done'
+#7 5.567 Collecting pymysql (from pyfact)
+#7 5.575   Downloading pymysql-1.1.2-py3-none-any.whl.metadata (4.3 kB)
+#7 5.615 Collecting python-dateutil (from pyfact)
+#7 5.624   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#7 5.755 Collecting scipy (from pyfact)
+#7 5.767   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#7 5.779      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 4.9 MB/s eta 0:00:00
+#7 5.788 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from pyfact) (79.0.1)
+#7 5.813 Collecting simple-crypt (from pyfact)
+#7 5.822   Downloading simple-crypt-4.1.7.tar.gz (10 kB)
+#7 5.839   Preparing metadata (setup.py): started
+#7 5.944   Preparing metadata (setup.py): finished with status 'done'
+#7 6.251 Collecting sqlalchemy (from pyfact)
+#7 6.264   Downloading sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.5 kB)
+#7 6.318 Collecting tables>=3.3 (from pyfact)
+#7 6.327   Downloading tables-3.10.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.0 kB)
+#7 6.463 Collecting wrapt (from pyfact)
+#7 6.472   Downloading wrapt-2.0.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.8 kB)
+#7 6.612 Collecting contourpy>=1.0.1 (from matplotlib>=1.4->pyfact)
+#7 6.623   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#7 6.656 Collecting cycler>=0.10 (from matplotlib>=1.4->pyfact)
+#7 6.665   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#7 6.838 Collecting fonttools>=4.22.0 (from matplotlib>=1.4->pyfact)
+#7 6.848   Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+#7 6.862      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.3/112.3 kB 8.4 MB/s eta 0:00:00
+#7 6.940 Collecting kiwisolver>=1.3.1 (from matplotlib>=1.4->pyfact)
+#7 6.949   Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+#7 6.999 Collecting packaging>=20.0 (from matplotlib>=1.4->pyfact)
+#7 7.007   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#7 7.185 Collecting pillow>=8 (from matplotlib>=1.4->pyfact)
+#7 7.195   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#7 7.246 Collecting pyparsing>=3 (from matplotlib>=1.4->pyfact)
+#7 7.255   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#7 7.356 Collecting six>=1.5 (from python-dateutil->pyfact)
+#7 7.365   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 7.458 Collecting numexpr>=2.6.2 (from tables>=3.3->pyfact)
+#7 7.467   Downloading numexpr-2.14.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.0 kB)
+#7 7.503 Collecting py-cpuinfo (from tables>=3.3->pyfact)
+#7 7.511   Downloading py_cpuinfo-9.0.0-py3-none-any.whl.metadata (794 bytes)
+#7 7.623 Collecting blosc2>=2.3.0 (from tables>=3.3->pyfact)
+#7 7.632   Downloading blosc2-3.11.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (7.1 kB)
+#7 7.675 Collecting typing-extensions>=4.4.0 (from tables>=3.3->pyfact)
+#7 7.683   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#7 7.772 Collecting pyerfa>=2.0.1.1 (from astropy->pyfact)
+#7 7.780   Downloading pyerfa-2.0.1.5-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.7 kB)
+#7 7.840 Collecting astropy-iers-data>=0.2025.9.29.0.35.48 (from astropy->pyfact)
+#7 7.849   Downloading astropy_iers_data-0.2025.10.27.0.39.10-py3-none-any.whl.metadata (3.4 kB)
+#7 7.905 Collecting PyYAML>=6.0.0 (from astropy->pyfact)
+#7 7.914   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#7 8.031 Collecting pytz>=2020.1 (from pandas->pyfact)
+#7 8.039   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#7 8.078 Collecting tzdata>=2022.7 (from pandas->pyfact)
+#7 8.086   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#7 8.173 Collecting pycrypto (from simple-crypt->pyfact)
+#7 8.183   Downloading pycrypto-2.6.1.tar.gz (446 kB)
+#7 8.206      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 446.2/446.2 kB 21.6 MB/s eta 0:00:00
+#7 8.239   Preparing metadata (setup.py): started
+#7 8.352   Preparing metadata (setup.py): finished with status 'done'
+#7 8.500 Collecting greenlet>=1 (from sqlalchemy->pyfact)
+#7 8.511   Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+#7 8.592 Collecting ndindex (from blosc2>=2.3.0->tables>=3.3->pyfact)
+#7 8.602   Downloading ndindex-1.10.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.6 kB)
+#7 8.746 Collecting msgpack (from blosc2>=2.3.0->tables>=3.3->pyfact)
+#7 8.757   Downloading msgpack-1.1.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+#7 8.803 Collecting platformdirs (from blosc2>=2.3.0->tables>=3.3->pyfact)
+#7 8.811   Downloading platformdirs-4.5.0-py3-none-any.whl.metadata (12 kB)
+#7 8.866 Collecting requests (from blosc2>=2.3.0->tables>=3.3->pyfact)
+#7 8.874   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 9.095 Collecting charset_normalizer<4,>=2 (from requests->blosc2>=2.3.0->tables>=3.3->pyfact)
+#7 9.103   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 9.144 Collecting idna<4,>=2.5 (from requests->blosc2>=2.3.0->tables>=3.3->pyfact)
+#7 9.152   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 9.211 Collecting urllib3<3,>=1.21.1 (from requests->blosc2>=2.3.0->tables>=3.3->pyfact)
+#7 9.219   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 9.263 Collecting certifi>=2017.4.17 (from requests->blosc2>=2.3.0->tables>=3.3->pyfact)
+#7 9.272   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 9.314 Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+#7 9.654    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 25.7 MB/s eta 0:00:00
+#7 9.668 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 10.56    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 14.9 MB/s eta 0:00:00
+#7 10.57 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#7 10.59    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 14.7 MB/s eta 0:00:00
+#7 10.60 Downloading tables-3.10.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (7.5 MB)
+#7 10.89    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.5/7.5 MB 26.2 MB/s eta 0:00:00
+#7 10.90 Downloading astropy-7.1.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (10.2 MB)
+#7 11.29    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 26.4 MB/s eta 0:00:00
+#7 11.30 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#7 11.31    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 8.9 MB/s eta 0:00:00
+#7 11.32 Downloading h5py-3.15.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (4.7 MB)
+#7 11.50    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 26.2 MB/s eta 0:00:00
+#7 11.51 Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+#7 11.99    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 25.9 MB/s eta 0:00:00
+#7 11.99 Downloading pymysql-1.1.2-py3-none-any.whl (45 kB)
+#7 12.01    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.3/45.3 kB 3.7 MB/s eta 0:00:00
+#7 12.01 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#7 13.43    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 21.0 MB/s eta 0:00:00
+#7 13.44 Downloading sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+#7 13.57    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 26.9 MB/s eta 0:00:00
+#7 13.58 Downloading wrapt-2.0.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (114 kB)
+#7 13.59    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.1/114.1 kB 8.9 MB/s eta 0:00:00
+#7 13.60 Downloading astropy_iers_data-0.2025.10.27.0.39.10-py3-none-any.whl (2.0 MB)
+#7 13.68    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 25.9 MB/s eta 0:00:00
+#7 13.69 Downloading blosc2-3.11.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.5 MB)
+#7 13.85    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 28.5 MB/s eta 0:00:00
+#7 13.86 Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+#7 13.88    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 355.2/355.2 kB 17.7 MB/s eta 0:00:00
+#7 13.89 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#7 13.91 Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#7 14.09    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 26.9 MB/s eta 0:00:00
+#7 14.10 Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (587 kB)
+#7 14.13    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 587.7/587.7 kB 22.0 MB/s eta 0:00:00
+#7 14.14 Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+#7 14.20    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 25.0 MB/s eta 0:00:00
+#7 14.21 Downloading numexpr-2.14.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (442 kB)
+#7 14.23    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 442.0/442.0 kB 20.9 MB/s eta 0:00:00
+#7 14.24 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#7 14.25    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 6.1 MB/s eta 0:00:00
+#7 14.26 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#7 14.54    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 25.3 MB/s eta 0:00:00
+#7 14.55 Downloading pyerfa-2.0.1.5-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (738 kB)
+#7 14.58    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 738.7/738.7 kB 21.5 MB/s eta 0:00:00
+#7 14.59 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#7 14.61    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 8.9 MB/s eta 0:00:00
+#7 14.61 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#7 14.64    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 21.3 MB/s eta 0:00:00
+#7 14.65 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#7 14.69    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 22.5 MB/s eta 0:00:00
+#7 14.69 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 14.71 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#7 14.72    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.8 MB/s eta 0:00:00
+#7 14.73 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#7 14.75    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 17.6 MB/s eta 0:00:00
+#7 14.76 Downloading py_cpuinfo-9.0.0-py3-none-any.whl (22 kB)
+#7 14.78 Downloading msgpack-1.1.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (426 kB)
+#7 14.80    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 426.2/426.2 kB 18.8 MB/s eta 0:00:00
+#7 14.81 Downloading ndindex-1.10.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (528 kB)
+#7 14.84    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 528.2/528.2 kB 21.3 MB/s eta 0:00:00
+#7 14.85 Downloading platformdirs-4.5.0-py3-none-any.whl (18 kB)
+#7 14.86 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 14.88    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 5.7 MB/s eta 0:00:00
+#7 14.88 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 14.90    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 10.3 MB/s eta 0:00:00
+#7 14.91 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 14.92    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 12.2 MB/s eta 0:00:00
+#7 14.93 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 14.94    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 6.1 MB/s eta 0:00:00
+#7 14.95 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 14.96    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 10.1 MB/s eta 0:00:00
+#7 15.25 Building wheels for collected packages: pyfact, peewee, simple-crypt, pycrypto
+#7 15.25   Building wheel for pyfact (setup.py): started
+#7 15.45   Building wheel for pyfact (setup.py): finished with status 'done'
+#7 15.45   Created wheel for pyfact: filename=pyfact-0.26.2-py3-none-any.whl size=95163 sha256=16b14a99b01f06c182e714a39bcc563645bcc96b5c1b9f34e1664f3ddc37c04f
+#7 15.45   Stored in directory: /root/.cache/pip/wheels/90/6d/8e/205080c8fea820bcc7b65deff10829fd2851aab31218a5dca9
+#7 15.45   Building wheel for peewee (pyproject.toml): started
+#7 25.52   Building wheel for peewee (pyproject.toml): finished with status 'done'
+#7 25.52   Created wheel for peewee: filename=peewee-3.18.2-cp311-cp311-linux_x86_64.whl size=1088098 sha256=ab004080c862940ab65d94ae9ba498d52366e3001f899cd5072c47f898dafb43
+#7 25.52   Stored in directory: /root/.cache/pip/wheels/28/84/61/758d1bd7b9c9d700158c8642a8aff2a9bf2e1ae69641c40784
+#7 25.52   Building wheel for simple-crypt (setup.py): started
+#7 25.65   Building wheel for simple-crypt (setup.py): finished with status 'done'
+#7 25.65   Created wheel for simple-crypt: filename=simple_crypt-4.1.7-py3-none-any.whl size=8964 sha256=414df9d7e5cbf24d2dc607f7b89a6a3cabf85f582a69ca6c1f91e2a8acafa4ca
+#7 25.65   Stored in directory: /root/.cache/pip/wheels/35/75/69/aeeccf05e5c0636f976c57f6f185930368c7fc5bffcc46d6b3
+#7 25.65   Building wheel for pycrypto (setup.py): started
+#7 26.96   Building wheel for pycrypto (setup.py): finished with status 'error'
+#7 26.97   error: subprocess-exited-with-error
+#7 26.97   
+#7 26.97   × python setup.py bdist_wheel did not run successfully.
+#7 26.97   │ exit code: 1
+#7 26.97   ╰─> [84 lines of output]
+#7 26.97       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+#7 26.97       !!
+#7 26.97       
+#7 26.97               ********************************************************************************
+#7 26.97               Please consider removing the following classifiers in favor of a SPDX license expression:
+#7 26.97       
+#7 26.97               License :: Public Domain
+#7 26.97       
+#7 26.97               See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+#7 26.97               ********************************************************************************
+#7 26.97       
+#7 26.97       !!
+#7 26.97         self._finalize_license_expression()
+#7 26.97       checking for gcc... gcc
+#7 26.97       checking whether the C compiler works... yes
+#7 26.97       checking for C compiler default output file name... a.out
+#7 26.97       checking for suffix of executables...
+#7 26.97       checking whether we are cross compiling... no
+#7 26.97       checking for suffix of object files... o
+#7 26.97       checking whether we are using the GNU C compiler... yes
+#7 26.97       checking whether gcc accepts -g... yes
+#7 26.97       checking for gcc option to accept ISO C89... none needed
+#7 26.97       checking for __gmpz_init in -lgmp... yes
+#7 26.97       checking for __gmpz_init in -lmpir... no
+#7 26.97       checking whether mpz_powm is declared... yes
+#7 26.97       checking whether mpz_powm_sec is declared... yes
+#7 26.97       checking how to run the C preprocessor... gcc -E
+#7 26.97       checking for grep that handles long lines and -e... /usr/bin/grep
+#7 26.97       checking for egrep... /usr/bin/grep -E
+#7 26.97       checking for ANSI C header files... yes
+#7 26.97       checking for sys/types.h... yes
+#7 26.97       checking for sys/stat.h... yes
+#7 26.97       checking for stdlib.h... yes
+#7 26.97       checking for string.h... yes
+#7 26.97       checking for memory.h... yes
+#7 26.97       checking for strings.h... yes
+#7 26.97       checking for inttypes.h... yes
+#7 26.97       checking for stdint.h... yes
+#7 26.97       checking for unistd.h... yes
+#7 26.97       checking for inttypes.h... (cached) yes
+#7 26.97       checking limits.h usability... yes
+#7 26.97       checking limits.h presence... yes
+#7 26.97       checking for limits.h... yes
+#7 26.97       checking stddef.h usability... yes
+#7 26.97       checking stddef.h presence... yes
+#7 26.97       checking for stddef.h... yes
+#7 26.97       checking for stdint.h... (cached) yes
+#7 26.97       checking for stdlib.h... (cached) yes
+#7 26.97       checking for string.h... (cached) yes
+#7 26.97       checking wchar.h usability... yes
+#7 26.97       checking wchar.h presence... yes
+#7 26.97       checking for wchar.h... yes
+#7 26.97       checking for inline... inline
+#7 26.97       checking for int16_t... yes
+#7 26.97       checking for int32_t... yes
+#7 26.97       checking for int64_t... yes
+#7 26.97       checking for int8_t... yes
+#7 26.97       checking for size_t... yes
+#7 26.97       checking for uint16_t... yes
+#7 26.97       checking for uint32_t... yes
+#7 26.97       checking for uint64_t... yes
+#7 26.97       checking for uint8_t... yes
+#7 26.97       checking for stdlib.h... (cached) yes
+#7 26.97       checking for GNU libc compatible malloc... yes
+#7 26.97       checking for memmove... yes
+#7 26.97       checking for memset... yes
+#7 26.97       configure: creating ./config.status
+#7 26.97       config.status: creating src/config.h
+#7 26.97       In file included from /usr/local/include/python3.11/Python.h:87,
+#7 26.97                        from src/_fastmath.c:31:
+#7 26.97       /usr/local/include/python3.11/cpython/pytime.h:208:60: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+#7 26.97         208 | PyAPI_FUNC(int) _PyTime_FromTimespec(_PyTime_t *tp, struct timespec *ts);
+#7 26.97             |                                                            ^~~~~~~~
+#7 26.97       /usr/local/include/python3.11/cpython/pytime.h:213:56: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+#7 26.97         213 | PyAPI_FUNC(int) _PyTime_AsTimespec(_PyTime_t t, struct timespec *ts);
+#7 26.97             |                                                        ^~~~~~~~
+#7 26.97       /usr/local/include/python3.11/cpython/pytime.h:217:63: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+#7 26.97         217 | PyAPI_FUNC(void) _PyTime_AsTimespec_clamp(_PyTime_t t, struct timespec *ts);
+#7 26.97             |                                                               ^~~~~~~~
+#7 26.97       src/_fastmath.c:33:10: fatal error: longintrepr.h: No such file or directory
+#7 26.97          33 | #include <longintrepr.h>                                /* for conversions */
+#7 26.97             |          ^~~~~~~~~~~~~~~
+#7 26.97       compilation terminated.
+#7 26.97       error: command '/usr/bin/gcc' failed with exit code 1
+#7 26.97       [end of output]
+#7 26.97   
+#7 26.97   note: This error originates from a subprocess, and is likely not a problem with pip.
+#7 26.97   ERROR: Failed building wheel for pycrypto
+#7 26.97   Running setup.py clean for pycrypto
+#7 27.08 Successfully built pyfact peewee simple-crypt
+#7 27.08 Failed to build pycrypto
+#7 27.08 ERROR: Could not build wheels for pycrypto, which is required to install pyproject.toml-based projects
+#7 27.08 
+#7 27.08 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 27.08 [notice] To update, run: pip install --upgrade pip
+#7 ERROR: process "pip install pyfact" did not complete successfully: exit code: 1
+------
+ > [ 3/12] RUN ["pip","install","pyfact"]:
+26.97   
+26.97   note: This error originates from a subprocess, and is likely not a problem with pip.
+26.97   ERROR: Failed building wheel for pycrypto
+26.97   Running setup.py clean for pycrypto
+27.08 Successfully built pyfact peewee simple-crypt
+27.08 Failed to build pycrypto
+27.08 ERROR: Could not build wheels for pycrypto, which is required to install pyproject.toml-based projects
+27.08 
+27.08 [notice] A new release of pip is available: 24.0 -> 25.3
+27.08 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:3
+--------------------
+   1 |     FROM python:3.11
+   2 |     COPY hard-gists/3829302/snippet.py /snippet.py
+   3 | >>> RUN ["pip","install","pyfact"]
+   4 |     RUN ["pip","install","dj.choices"]
+   5 |     RUN ["pip","install","factory-boy"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install pyfact" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/esq5jb2bwyy7q6c0fqj33zoa3
+[2025-10-29 14:01:51] ERROR: Build failed for 3829302

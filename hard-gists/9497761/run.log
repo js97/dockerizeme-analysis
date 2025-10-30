@@ -1,0 +1,23 @@
+=== Docker Run Log for 9497761 ===
+Started at: Mi 29. Okt 18:26:33 CET 2025
+
+[2025-10-29 18:26:37] START: Running container for 9497761
+[2025-10-29 18:26:37] SUCCESS: Container 4ce0c53dff871daa283b39d0b9d356bb238e0a50d7118adc49712560ef951aa9 started for 9497761
+=== Container logs for 9497761 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 3, in <module>
+    from solution import is_happy, happy_primes
+  File "/usr/local/lib/python3.11/site-packages/solution/__init__.py", line 13, in <module>
+    from .form import Form  # noqa
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/solution/form.py", line 11, in <module>
+    from .fields import Field
+  File "/usr/local/lib/python3.11/site-packages/solution/fields/__init__.py", line 7, in <module>
+    from .file import File, Image, IMAGES, DOCUMENTS, DATA, ARCHIVES
+  File "/usr/local/lib/python3.11/site-packages/solution/fields/file/__init__.py", line 1, in <module>
+    from .file import File
+  File "/usr/local/lib/python3.11/site-packages/solution/fields/file/file.py", line 2, in <module>
+    from werkzeug.datastructures import FileStorage
+ModuleNotFoundError: No module named 'werkzeug'
+=== End of logs for 9497761 ===
+[2025-10-29 18:26:39] INFO: Container 4ce0c53dff871daa283b39d0b9d356bb238e0a50d7118adc49712560ef951aa9 has stopped

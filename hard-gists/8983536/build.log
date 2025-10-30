@@ -1,0 +1,87 @@
+=== Docker Build Log for 8983536 ===
+Started at: Mi 29. Okt 18:06:40 CET 2025
+
+[2025-10-29 18:06:40] START: Building image for 8983536
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 197B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.52kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/8983536/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","rasterio"]
+#7 2.076 Collecting rasterio
+#7 2.116   Downloading rasterio-1.4.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.1 kB)
+#7 2.272 Collecting affine (from rasterio)
+#7 2.282   Downloading affine-2.4.0-py3-none-any.whl.metadata (4.0 kB)
+#7 2.322 Collecting attrs (from rasterio)
+#7 2.330   Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+#7 2.374 Collecting certifi (from rasterio)
+#7 2.384   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.430 Collecting click>=4.0 (from rasterio)
+#7 2.438   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#7 2.478 Collecting cligj>=0.5 (from rasterio)
+#7 2.487   Downloading cligj-0.7.2-py3-none-any.whl.metadata (5.0 kB)
+#7 2.672 Collecting numpy>=1.24 (from rasterio)
+#7 2.681   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.697      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 3.8 MB/s eta 0:00:00
+#7 2.745 Collecting click-plugins (from rasterio)
+#7 2.754   Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl.metadata (6.5 kB)
+#7 2.804 Collecting pyparsing (from rasterio)
+#7 2.812   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#7 2.847 Downloading rasterio-1.4.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (22.2 MB)
+#7 3.750    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 22.2/22.2 MB 20.5 MB/s eta 0:00:00
+#7 3.760 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#7 3.773    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 8.9 MB/s eta 0:00:00
+#7 3.782 Downloading cligj-0.7.2-py3-none-any.whl (7.1 kB)
+#7 3.801 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 4.510    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 20.5 MB/s eta 0:00:00
+#7 4.519 Downloading affine-2.4.0-py3-none-any.whl (15 kB)
+#7 4.539 Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+#7 4.550    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.6/67.6 kB 5.9 MB/s eta 0:00:00
+#7 4.559 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 4.575    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 10.9 MB/s eta 0:00:00
+#7 4.584 Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl (11 kB)
+#7 4.600 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#7 4.615    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 8.2 MB/s eta 0:00:00
+#7 4.762 Installing collected packages: pyparsing, numpy, click, certifi, attrs, affine, cligj, click-plugins, rasterio
+#7 6.761 Successfully installed affine-2.4.0 attrs-25.4.0 certifi-2025.10.5 click-8.3.0 click-plugins-1.1.1.2 cligj-0.7.2 numpy-2.3.4 pyparsing-3.2.5 rasterio-1.4.3
+#7 6.761 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 6.854 
+#7 6.854 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 6.854 [notice] To update, run: pip install --upgrade pip
+#7 DONE 8.0s
+
+#8 [4/4] RUN ["pip","install","numpy"]
+#8 0.466 Requirement already satisfied: numpy in /usr/local/lib/python3.11/site-packages (2.3.4)
+#8 0.525 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.529 
+#8 0.529 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.529 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.6s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.7s done
+#9 writing image sha256:9478fed12db49dddc0e8857e75b8be6084beffd8444779a3ddaeeeca6bc0b539 done
+#9 naming to docker.io/library/test-image-8983536 done
+#9 DONE 0.8s
+
+View build details: docker-desktop://dashboard/build/default/default/byz76aqv5va1ejtbydepllwd8
+[2025-10-29 18:06:50] SUCCESS: Build completed for 8983536

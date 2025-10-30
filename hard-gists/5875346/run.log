@@ -1,0 +1,12 @@
+=== Docker Run Log for 5875346 ===
+Started at: Mi 29. Okt 16:08:46 CET 2025
+
+[2025-10-29 16:08:46] START: Running container for 5875346
+[2025-10-29 16:08:46] SUCCESS: Container 4b42b24fe3ebca172939927e9c11af50991360493459bf01d8e2637ae15b6a69 started for 5875346
+=== Container logs for 5875346 ===
+  File "/snippet.py", line 16
+    for i in range(len(lSelected)): print "%d: %s" % ( i, lSelected[i].Name )
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 5875346 ===
+[2025-10-29 16:08:48] INFO: Container 4b42b24fe3ebca172939927e9c11af50991360493459bf01d8e2637ae15b6a69 has stopped

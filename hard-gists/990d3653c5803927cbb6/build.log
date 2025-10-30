@@ -1,0 +1,64 @@
+=== Docker Build Log for 990d3653c5803927cbb6 ===
+Started at: Mi 29. Okt 18:34:54 CET 2025
+
+[2025-10-29 18:34:54] START: Building image for 990d3653c5803927cbb6
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 180B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 14.17kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/990d3653c5803927cbb6/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","requests"]
+#7 1.951 Collecting requests
+#7 1.990   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.113 Collecting charset_normalizer<4,>=2 (from requests)
+#7 2.123   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.171 Collecting idna<4,>=2.5 (from requests)
+#7 2.179   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.239 Collecting urllib3<3,>=1.21.1 (from requests)
+#7 2.247   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.293 Collecting certifi>=2017.4.17 (from requests)
+#7 2.301   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.329 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.348    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.2 MB/s eta 0:00:00
+#7 2.356 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.374    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.7 MB/s eta 0:00:00
+#7 2.383 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.401    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 9.1 MB/s eta 0:00:00
+#7 2.409 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.425    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.3 MB/s eta 0:00:00
+#7 2.434 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.447    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 10.2 MB/s eta 0:00:00
+#7 2.493 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#7 2.712 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#7 2.713 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.807 
+#7 2.807 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.807 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.0s
+
+#8 exporting to image
+#8 exporting layers 0.1s done
+#8 writing image sha256:8a81af87cd60ed0298fa185e006c909851b1cfeb3d1f99a9fac0300b0bc6556e done
+#8 naming to docker.io/library/test-image-990d3653c5803927cbb6 done
+#8 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/xzy2i692u6e4o9tp8ma0n60lq
+[2025-10-29 18:34:58] SUCCESS: Build completed for 990d3653c5803927cbb6

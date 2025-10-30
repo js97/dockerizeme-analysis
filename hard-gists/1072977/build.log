@@ -1,0 +1,228 @@
+=== Docker Build Log for 1072977 ===
+Started at: Mi 29. Okt 11:49:07 CET 2025
+
+[2025-10-29 11:49:07] START: Building image for 1072977
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 769B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.07kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/21] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/21] COPY hard-gists/1072977/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/21] RUN ["apt-get","update"]
+#7 0.262 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.262 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.273 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.288 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.616 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.616 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.253 Fetched 9833 kB in 1s (9582 kB/s)
+#7 1.253 Reading package lists...
+#7 DONE 2.1s
+
+#8 [ 4/21] RUN ["pip","install","dj.choices"]
+#8 2.142 Collecting dj.choices
+#8 2.183   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#8 2.199   Preparing metadata (setup.py): started
+#8 2.605   Preparing metadata (setup.py): finished with status 'done'
+#8 2.714 Collecting django (from dj.choices)
+#8 2.723   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#8 2.763 Collecting six (from dj.choices)
+#8 2.771   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 2.818 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#8 2.826   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#8 2.867 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#8 2.876   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#8 2.900 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#8 3.323    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 19.7 MB/s eta 0:00:00
+#8 3.332 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 3.351 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#8 3.369 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#8 3.381    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.5 MB/s eta 0:00:00
+#8 3.418 Building wheels for collected packages: dj.choices
+#8 3.419   Building wheel for dj.choices (setup.py): started
+#8 3.601   Building wheel for dj.choices (setup.py): finished with status 'done'
+#8 3.602   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=b8d6905bbf00c69d86743d42aca9e68635bcedb9490fecd20cd714ea0e50e32d
+#8 3.602   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#8 3.604 Successfully built dj.choices
+#8 3.656 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#8 5.470 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#8 5.470 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 5.570 
+#8 5.570 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 5.570 [notice] To update, run: pip install --upgrade pip
+#8 DONE 6.0s
+
+#9 [ 5/21] RUN ["pip","install","ldap"]
+#9 0.564 Collecting ldap
+#9 0.603   Downloading ldap-2.0.0.404.tar.gz (2.0 kB)
+#9 0.621   Preparing metadata (setup.py): started
+#9 0.746   Preparing metadata (setup.py): finished with status 'done'
+#9 0.748 Building wheels for collected packages: ldap
+#9 0.752   Building wheel for ldap (setup.py): started
+#9 0.885   Building wheel for ldap (setup.py): finished with status 'error'
+#9 0.892   error: subprocess-exited-with-error
+#9 0.892   
+#9 0.892   × python setup.py bdist_wheel did not run successfully.
+#9 0.892   │ exit code: 1
+#9 0.892   ╰─> [108 lines of output]
+#9 0.892       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+#9 0.892       !!
+#9 0.892       
+#9 0.892               ********************************************************************************
+#9 0.892               Please consider removing the following classifiers in favor of a SPDX license expression:
+#9 0.892       
+#9 0.892               License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+#9 0.892       
+#9 0.892               See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+#9 0.892               ********************************************************************************
+#9 0.892       
+#9 0.892       !!
+#9 0.892         self._finalize_license_expression()
+#9 0.892       running bdist_wheel
+#9 0.892       running build
+#9 0.892       running build_py
+#9 0.892       ------------------------------------------------------------------------
+#9 0.892       # `ldap` on PyPI
+#9 0.892       
+#9 0.892       This dummy project is not installable.
+#9 0.892       You probably want `python-ldap` instead.
+#9 0.892       
+#9 0.892       
+#9 0.892       ### python-ldap
+#9 0.892       
+#9 0.892       The widely used [python-ldap](https://python-ldap.org) project provides
+#9 0.892       an importable module named `ldap`.
+#9 0.892       
+#9 0.892       This goes against the convention that PyPI distribution names should
+#9 0.892       match the module names.
+#9 0.892       But, python-ldap pre-dates wide use of that convention, and the issue
+#9 0.892       is hard to fix now.
+#9 0.892       
+#9 0.892       Please install `python-ldap` to get the LDAP bindings.
+#9 0.892       
+#9 0.892       
+#9 0.892       ### ldap 1.0
+#9 0.892       
+#9 0.892       The `ldap` name on PyPI was used for an unrelated collection of
+#9 0.892       LDAP-related utilities, which is not as popular, and confused users who
+#9 0.892       install `ldap` to get the `ldap` module.
+#9 0.892       
+#9 0.892       The project is no longer developed.
+#9 0.892       It is archived as `1.0.x` releases on PyPI, and on
+#9 0.892       [GitHub](https://github.com/andreif/ldap).
+#9 0.892       
+#9 0.892       
+#9 0.892       ## Why we don't fix this transparently
+#9 0.892       
+#9 0.892       This could have been a placeholder  package that depends on `python-ldap`,
+#9 0.892       saving you the trouble of reading this message.
+#9 0.892       
+#9 0.892       However, `pip` [has trouble](https://github.com/pypa/pip/issues/4961)
+#9 0.892       with differently-named packages that provide the same module.
+#9 0.892       
+#9 0.892       
+#9 0.892       ## Please: Don't install packages blindly
+#9 0.892       
+#9 0.892       When you see the exception:
+#9 0.892       
+#9 0.892       ```
+#9 0.892       ModuleNotFoundError: No module named 'foo'
+#9 0.892       ```
+#9 0.892       
+#9 0.892       … please research the actual requirements instead of going directly for
+#9 0.892       `pip install foo`.
+#9 0.892       The project (distribution) name may differ from the module(s) it
+#9 0.892       provides.
+#9 0.892       
+#9 0.892       ------------------------------------------------------------------------
+#9 0.892       Traceback (most recent call last):
+#9 0.892         File "<string>", line 2, in <module>
+#9 0.892         File "<pip-setuptools-caller>", line 34, in <module>
+#9 0.892         File "/tmp/pip-install-zjdn2rqe/ldap_215c2ce070474632818722bcfa6fc9f5/setup.py", line 23, in <module>
+#9 0.892           setup(
+#9 0.892         File "/usr/local/lib/python3.11/site-packages/setuptools/__init__.py", line 117, in setup
+#9 0.892           return distutils.core.setup(**attrs)
+#9 0.892                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#9 0.892         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/core.py", line 186, in setup
+#9 0.892           return run_commands(dist)
+#9 0.892                  ^^^^^^^^^^^^^^^^^^
+#9 0.892         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/core.py", line 202, in run_commands
+#9 0.892           dist.run_commands()
+#9 0.892         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/dist.py", line 1002, in run_commands
+#9 0.892           self.run_command(cmd)
+#9 0.892         File "/usr/local/lib/python3.11/site-packages/setuptools/dist.py", line 1104, in run_command
+#9 0.892           super().run_command(command)
+#9 0.892         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/dist.py", line 1021, in run_command
+#9 0.892           cmd_obj.run()
+#9 0.892         File "/usr/local/lib/python3.11/site-packages/setuptools/command/bdist_wheel.py", line 370, in run
+#9 0.892           self.run_command("build")
+#9 0.892         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/cmd.py", line 357, in run_command
+#9 0.892           self.distribution.run_command(command)
+#9 0.892         File "/usr/local/lib/python3.11/site-packages/setuptools/dist.py", line 1104, in run_command
+#9 0.892           super().run_command(command)
+#9 0.892         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/dist.py", line 1021, in run_command
+#9 0.892           cmd_obj.run()
+#9 0.892         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/command/build.py", line 135, in run
+#9 0.892           self.run_command(cmd_name)
+#9 0.892         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/cmd.py", line 357, in run_command
+#9 0.892           self.distribution.run_command(command)
+#9 0.892         File "/usr/local/lib/python3.11/site-packages/setuptools/dist.py", line 1104, in run_command
+#9 0.892           super().run_command(command)
+#9 0.892         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/dist.py", line 1021, in run_command
+#9 0.892           cmd_obj.run()
+#9 0.892         File "/tmp/pip-install-zjdn2rqe/ldap_215c2ce070474632818722bcfa6fc9f5/setup.py", line 18, in run
+#9 0.892           raise ValueError(
+#9 0.892       ValueError: "ldap" is not installable. You probably want python-ldap.
+#9 0.892       [end of output]
+#9 0.892   
+#9 0.892   note: This error originates from a subprocess, and is likely not a problem with pip.
+#9 0.892   ERROR: Failed building wheel for ldap
+#9 0.892   Running setup.py clean for ldap
+#9 1.059 Failed to build ldap
+#9 1.060 ERROR: Could not build wheels for ldap, which is required to install pyproject.toml-based projects
+#9 1.065 
+#9 1.065 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.065 [notice] To update, run: pip install --upgrade pip
+#9 ERROR: process "pip install ldap" did not complete successfully: exit code: 1
+------
+ > [ 5/21] RUN ["pip","install","ldap"]:
+0.892       [end of output]
+0.892   
+0.892   note: This error originates from a subprocess, and is likely not a problem with pip.
+0.892   ERROR: Failed building wheel for ldap
+0.892   Running setup.py clean for ldap
+1.059 Failed to build ldap
+1.060 ERROR: Could not build wheels for ldap, which is required to install pyproject.toml-based projects
+1.065 
+1.065 [notice] A new release of pip is available: 24.0 -> 25.3
+1.065 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:5
+--------------------
+   3 |     RUN ["apt-get","update"]
+   4 |     RUN ["pip","install","dj.choices"]
+   5 | >>> RUN ["pip","install","ldap"]
+   6 |     RUN ["pip","install","Django"]
+   7 |     RUN ["pip","install","requests"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install ldap" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/mz6gc9wbu5iq3vtjwj7xapjg6
+[2025-10-29 11:49:17] ERROR: Build failed for 1072977

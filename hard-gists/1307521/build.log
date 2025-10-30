@@ -1,0 +1,258 @@
+=== Docker Build Log for 1307521 ===
+Started at: Mi 29. Okt 12:05:58 CET 2025
+
+[2025-10-29 12:05:58] START: Building image for 1307521
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 760B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.43kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/20] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/20] COPY hard-gists/1307521/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/20] RUN ["apt-get","update"]
+#7 0.280 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.280 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.291 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.302 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.624 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.625 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.213 Fetched 9833 kB in 1s (10.1 MB/s)
+#7 1.213 Reading package lists...
+#7 DONE 1.7s
+
+#8 [ 4/20] RUN ["pip","install","marrow.mailer"]
+#8 1.891 Collecting marrow.mailer
+#8 1.934   Downloading marrow.mailer-4.0.3-py2.py3-none-any.whl.metadata (1.4 kB)
+#8 1.972 Collecting marrow.util<2.0 (from marrow.mailer)
+#8 1.981   Downloading marrow.util-1.2.3.tar.gz (17 kB)
+#8 1.997   Preparing metadata (setup.py): started
+#8 2.374   Preparing metadata (setup.py): finished with status 'done'
+#8 2.386 Downloading marrow.mailer-4.0.3-py2.py3-none-any.whl (132 kB)
+#8 2.415    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.7/132.7 kB 4.7 MB/s eta 0:00:00
+#8 2.420 Building wheels for collected packages: marrow.util
+#8 2.420   Building wheel for marrow.util (setup.py): started
+#8 2.584   Building wheel for marrow.util (setup.py): finished with status 'done'
+#8 2.585   Created wheel for marrow.util: filename=marrow_util-1.2.3-py3-none-any.whl size=23729 sha256=8c9d152be8ef28736d4f28dd17d190aed49650173e4f7807d0029a5e6d1423f0
+#8 2.585   Stored in directory: /root/.cache/pip/wheels/c1/26/db/9d972b23abf62c5f197f5b57713fcdba2c6b727d887e1df6f0
+#8 2.586 Successfully built marrow.util
+#8 2.618 Installing collected packages: marrow.util, marrow.mailer
+#8 2.685 Successfully installed marrow.mailer-4.0.3 marrow.util-1.2.3
+#8 2.685 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.773 
+#8 2.773 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.773 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.9s
+
+#9 [ 5/20] RUN ["pip","install","marrow.schema"]
+#9 0.509 Collecting marrow.schema
+#9 0.544   Downloading marrow.schema-2.0.0-py2.py3-none-any.whl.metadata (29 kB)
+#9 0.569 Downloading marrow.schema-2.0.0-py2.py3-none-any.whl (78 kB)
+#9 0.592    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.4/78.4 kB 3.3 MB/s eta 0:00:00
+#9 0.632 Installing collected packages: marrow.schema
+#9 0.695 Successfully installed marrow.schema-2.0.0
+#9 0.695 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.700 
+#9 0.700 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.700 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.8s
+
+#10 [ 6/20] RUN ["pip","install","marrow.mongo"]
+#10 0.509 Collecting marrow.mongo
+#10 0.542   Downloading marrow.mongo-1.1.2-py2.py3-none-any.whl.metadata (9.5 kB)
+#10 0.587 Collecting uri<3.0.0,>=2.0.0 (from marrow.mongo)
+#10 0.596   Downloading uri-2.0.1-py2.py3-none-any.whl.metadata (13 kB)
+#10 0.651 Collecting marrow.schema<2.0.0,>=1.2.0 (from marrow.mongo)
+#10 0.660   Downloading marrow.schema-1.2.0-py2.py3-none-any.whl.metadata (29 kB)
+#10 0.699 Collecting marrow.package<2.0.0,>=1.1.0 (from marrow.mongo)
+#10 0.707   Downloading marrow.package-1.2.0-py2.py3-none-any.whl.metadata (13 kB)
+#10 1.042 Collecting pymongo>=3.2 (from marrow.mongo)
+#10 1.053   Downloading pymongo-4.15.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+#10 1.139 Collecting dnspython<3.0.0,>=1.16.0 (from pymongo>=3.2->marrow.mongo)
+#10 1.165   Downloading dnspython-2.8.0-py3-none-any.whl.metadata (5.7 kB)
+#10 1.199 Downloading marrow.mongo-1.1.2-py2.py3-none-any.whl (159 kB)
+#10 1.223    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 159.1/159.1 kB 6.9 MB/s eta 0:00:00
+#10 1.238 Downloading marrow.package-1.2.0-py2.py3-none-any.whl (28 kB)
+#10 1.261 Downloading marrow.schema-1.2.0-py2.py3-none-any.whl (62 kB)
+#10 1.276    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.2/62.2 kB 3.8 MB/s eta 0:00:00
+#10 1.292 Downloading pymongo-4.15.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.5 MB)
+#10 1.355    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 23.8 MB/s eta 0:00:00
+#10 1.364 Downloading uri-2.0.1-py2.py3-none-any.whl (42 kB)
+#10 1.375    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.0/43.0 kB 3.6 MB/s eta 0:00:00
+#10 1.384 Downloading dnspython-2.8.0-py3-none-any.whl (331 kB)
+#10 1.410    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 331.1/331.1 kB 13.5 MB/s eta 0:00:00
+#10 1.498 Installing collected packages: uri, marrow.schema, marrow.package, dnspython, pymongo, marrow.mongo
+#10 1.541   Attempting uninstall: marrow.schema
+#10 1.545     Found existing installation: marrow.schema 2.0.0
+#10 1.549     Uninstalling marrow.schema-2.0.0:
+#10 1.602       Successfully uninstalled marrow.schema-2.0.0
+#10 2.127 Successfully installed dnspython-2.8.0 marrow.mongo-1.1.2 marrow.package-1.2.0 marrow.schema-1.2.0 pymongo-4.15.3 uri-2.0.1
+#10 2.127 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 2.132 
+#10 2.132 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 2.132 [notice] To update, run: pip install --upgrade pip
+#10 DONE 2.3s
+
+#11 [ 7/20] RUN ["pip","install","WebCore"]
+#11 0.506 Collecting WebCore
+#11 0.548   Downloading WebCore-2.0.4-py2.py3-none-any.whl.metadata (26 kB)
+#11 0.575 Requirement already satisfied: marrow.package<2.0 in /usr/local/lib/python3.11/site-packages (from WebCore) (1.2.0)
+#11 0.610 Collecting WebOb (from WebCore)
+#11 0.620   Downloading WebOb-1.8.9-py2.py3-none-any.whl.metadata (11 kB)
+#11 0.649 Downloading WebCore-2.0.4-py2.py3-none-any.whl (104 kB)
+#11 0.682    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 104.6/104.6 kB 3.4 MB/s eta 0:00:00
+#11 0.691 Downloading WebOb-1.8.9-py2.py3-none-any.whl (115 kB)
+#11 0.711    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 115.4/115.4 kB 5.8 MB/s eta 0:00:00
+#11 0.802 Installing collected packages: WebOb, WebCore
+#11 0.912 Successfully installed WebCore-2.0.4 WebOb-1.8.9
+#11 0.912 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.917 
+#11 0.917 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.917 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.0s
+
+#12 [ 8/20] RUN ["pip","install","six"]
+#12 0.520 Collecting six
+#12 0.560   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#12 0.584 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#12 0.690 Installing collected packages: six
+#12 0.730 Successfully installed six-1.17.0
+#12 0.730 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 0.735 
+#12 0.735 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 0.735 [notice] To update, run: pip install --upgrade pip
+#12 DONE 0.8s
+
+#13 [ 9/20] RUN ["pip","install","python-dateutil"]
+#13 0.531 Collecting python-dateutil
+#13 0.564   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#13 0.581 Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.11/site-packages (from python-dateutil) (1.17.0)
+#13 0.592 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#13 0.629    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 6.2 MB/s eta 0:00:00
+#13 0.722 Installing collected packages: python-dateutil
+#13 0.785 Successfully installed python-dateutil-2.9.0.post0
+#13 0.785 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 0.790 
+#13 0.790 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 0.790 [notice] To update, run: pip install --upgrade pip
+#13 DONE 0.9s
+
+#14 [10/20] RUN ["pip","install","Flask"]
+#14 0.524 Collecting Flask
+#14 0.556   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#14 0.606 Collecting blinker>=1.9.0 (from Flask)
+#14 0.615   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#14 0.664 Collecting click>=8.1.3 (from Flask)
+#14 0.672   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#14 0.712 Collecting itsdangerous>=2.2.0 (from Flask)
+#14 0.721   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#14 0.770 Collecting jinja2>=3.1.2 (from Flask)
+#14 0.779   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#14 0.868 Collecting markupsafe>=2.1.1 (from Flask)
+#14 0.876   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#14 0.929 Collecting werkzeug>=3.1.0 (from Flask)
+#14 0.936   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#14 0.961 Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+#14 0.987    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 3.9 MB/s eta 0:00:00
+#14 0.995 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#14 1.021 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#14 1.038    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 6.5 MB/s eta 0:00:00
+#14 1.045 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#14 1.067 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#14 1.084    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 7.8 MB/s eta 0:00:00
+#14 1.092 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#14 1.112 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#14 1.129    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 14.3 MB/s eta 0:00:00
+#14 1.251 Installing collected packages: markupsafe, itsdangerous, click, blinker, werkzeug, jinja2, Flask
+#14 1.572 Successfully installed Flask-3.1.2 blinker-1.9.0 click-8.3.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.3 werkzeug-3.1.3
+#14 1.572 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#14 1.577 
+#14 1.577 [notice] A new release of pip is available: 24.0 -> 25.3
+#14 1.577 [notice] To update, run: pip install --upgrade pip
+#14 DONE 1.7s
+
+#15 [11/20] RUN ["pip","install","Jinja2"]
+#15 0.453 Requirement already satisfied: Jinja2 in /usr/local/lib/python3.11/site-packages (3.1.6)
+#15 0.456 Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.11/site-packages (from Jinja2) (3.0.3)
+#15 0.550 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#15 0.555 
+#15 0.555 [notice] A new release of pip is available: 24.0 -> 25.3
+#15 0.555 [notice] To update, run: pip install --upgrade pip
+#15 DONE 0.6s
+
+#16 [12/20] RUN ["pip","install","itsdangerous"]
+#16 0.439 Requirement already satisfied: itsdangerous in /usr/local/lib/python3.11/site-packages (2.2.0)
+#16 0.535 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#16 0.540 
+#16 0.540 [notice] A new release of pip is available: 24.0 -> 25.3
+#16 0.540 [notice] To update, run: pip install --upgrade pip
+#16 DONE 0.6s
+
+#17 [13/20] RUN ["pip","install","Werkzeug"]
+#17 0.426 Requirement already satisfied: Werkzeug in /usr/local/lib/python3.11/site-packages (3.1.3)
+#17 0.428 Requirement already satisfied: MarkupSafe>=2.1.1 in /usr/local/lib/python3.11/site-packages (from Werkzeug) (3.0.3)
+#17 0.524 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#17 0.529 
+#17 0.529 [notice] A new release of pip is available: 24.0 -> 25.3
+#17 0.529 [notice] To update, run: pip install --upgrade pip
+#17 DONE 0.6s
+
+#18 [14/20] RUN ["pip","install","MarkupSafe"]
+#18 0.439 Requirement already satisfied: MarkupSafe in /usr/local/lib/python3.11/site-packages (3.0.3)
+#18 0.534 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#18 0.539 
+#18 0.539 [notice] A new release of pip is available: 24.0 -> 25.3
+#18 0.539 [notice] To update, run: pip install --upgrade pip
+#18 DONE 0.6s
+
+#19 [15/20] RUN ["apt-get","install","-y","python-pip"]
+#19 0.214 Reading package lists...
+#19 0.636 Building dependency tree...
+#19 0.746 Reading state information...
+#19 0.768 Package python-pip is not available, but is referred to by another package.
+#19 0.768 This may mean that the package is missing, has been obsoleted, or
+#19 0.768 is only available from another source
+#19 0.768 However the following packages replace it:
+#19 0.768   python3-pip
+#19 0.768 
+#19 0.771 E: Package 'python-pip' has no installation candidate
+#19 ERROR: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+------
+ > [15/20] RUN ["apt-get","install","-y","python-pip"]:
+
+
+0.768 Package python-pip is not available, but is referred to by another package.
+0.768 This may mean that the package is missing, has been obsoleted, or
+0.768 is only available from another source
+0.768 However the following packages replace it:
+0.768   python3-pip
+0.768 
+0.771 E: Package 'python-pip' has no installation candidate
+------
+Dockerfile:15
+--------------------
+  13 |     RUN ["pip","install","Werkzeug"]
+  14 |     RUN ["pip","install","MarkupSafe"]
+  15 | >>> RUN ["apt-get","install","-y","python-pip"]
+  16 |     RUN ["apt-get","install","-y","python-dev"]
+  17 |     RUN ["pip","install","Flask-Assets"]
+--------------------
+ERROR: failed to build: failed to solve: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/default/default/v471cmy6vjp3r9d86qn20aos0
+[2025-10-29 12:06:14] ERROR: Build failed for 1307521

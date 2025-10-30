@@ -1,0 +1,14 @@
+=== Docker Run Log for 756c86fdad219867c0f4 ===
+Started at: Mi 29. Okt 17:13:02 CET 2025
+
+[2025-10-29 17:13:27] START: Running container for 756c86fdad219867c0f4
+[2025-10-29 17:13:28] SUCCESS: Container e1c4835a9556a66d3214af26e4c54e5be4790fca822f14f2fb4e571faf8c4ab6 started for 756c86fdad219867c0f4
+=== Container logs for 756c86fdad219867c0f4 ===
+Traceback (most recent call last):
+Collecting files...
+  File "/snippet.py", line 24, in <module>
+    files = [f for f in listdir(path) if isfile(join(path, f))]
+                        ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../assets/photography/ghent-light-festival'
+=== End of logs for 756c86fdad219867c0f4 ===
+[2025-10-29 17:13:30] INFO: Container e1c4835a9556a66d3214af26e4c54e5be4790fca822f14f2fb4e571faf8c4ab6 has stopped

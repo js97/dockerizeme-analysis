@@ -1,0 +1,193 @@
+=== Docker Build Log for 4173945 ===
+Started at: Mi 29. Okt 14:23:49 CET 2025
+
+[2025-10-29 14:23:49] START: Building image for 4173945
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 558B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.91kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/15] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/15] COPY hard-gists/4173945/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/15] RUN ["apt-get","update"]
+#7 0.259 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.261 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.280 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.295 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.611 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.618 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.296 Fetched 9833 kB in 1s (9152 kB/s)
+#7 1.296 Reading package lists...
+#7 DONE 1.9s
+
+#8 [ 4/15] RUN ["pip","install","url"]
+#8 1.992 Collecting url
+#8 2.038   Downloading url-0.4.2.tar.gz (140 kB)
+#8 2.067      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 140.9/140.9 kB 5.1 MB/s eta 0:00:00
+#8 2.076   Preparing metadata (setup.py): started
+#8 2.469   Preparing metadata (setup.py): finished with status 'done'
+#8 2.501 Collecting six (from url)
+#8 2.509   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 2.528 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 2.542 Building wheels for collected packages: url
+#8 2.542   Building wheel for url (setup.py): started
+#8 3.020   Building wheel for url (setup.py): finished with status 'error'
+#8 3.026   error: subprocess-exited-with-error
+#8 3.026   
+#8 3.026   × python setup.py bdist_wheel did not run successfully.
+#8 3.026   │ exit code: 1
+#8 3.026   ╰─> [102 lines of output]
+#8 3.026       Building from C++
+#8 3.026       /usr/local/lib/python3.11/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+#8 3.026         warnings.warn(msg)
+#8 3.026       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:599: SetuptoolsDeprecationWarning: Invalid dash-separated key 'description-file' in 'metadata' (setup.cfg), please use the underscore name 'description_file' instead.
+#8 3.026       !!
+#8 3.026       
+#8 3.026               ********************************************************************************
+#8 3.026               Usage of dash-separated 'description-file' will not be supported in future
+#8 3.026               versions. Please use the underscore name 'description_file' instead.
+#8 3.026               (Affected: url).
+#8 3.026       
+#8 3.026               By 2026-Mar-03, you need to update your project and remove deprecated calls
+#8 3.026               or your builds will no longer be supported.
+#8 3.026       
+#8 3.026               See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+#8 3.026               ********************************************************************************
+#8 3.026       
+#8 3.026       !!
+#8 3.026         opt = self._enforce_underscore(opt, section)
+#8 3.026       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+#8 3.026       !!
+#8 3.026       
+#8 3.026               ********************************************************************************
+#8 3.026               Please consider removing the following classifiers in favor of a SPDX license expression:
+#8 3.026       
+#8 3.026               License :: OSI Approved :: MIT License
+#8 3.026       
+#8 3.026               See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+#8 3.026               ********************************************************************************
+#8 3.026       
+#8 3.026       !!
+#8 3.026         self._finalize_license_expression()
+#8 3.026       In file included from url/url-cpp/include/punycode.h:10,
+#8 3.026                        from url/url-cpp/src/psl.cpp:7:
+#8 3.026       url/url-cpp/include/utf8.h:19:17: error: ‘uint32_t’ does not name a type
+#8 3.026          19 |         typedef uint32_t codepoint_t;
+#8 3.026             |                 ^~~~~~~~
+#8 3.026       url/url-cpp/include/utf8.h:1:1: note: ‘uint32_t’ is defined in header ‘<cstdint>’; this is probably fixable by adding ‘#include <cstdint>’
+#8 3.026         +++ |+#include <cstdint>
+#8 3.026           1 | #ifndef UTF8_CPP_H
+#8 3.026       url/url-cpp/include/utf8.h:29:22: error: ‘codepoint_t’ does not name a type
+#8 3.026          29 |         static const codepoint_t MAX_CODEPOINT = 0x10FFFF;
+#8 3.026             |                      ^~~~~~~~~~~
+#8 3.026       url/url-cpp/include/utf8.h:34:16: error: ‘codepoint_t’ does not name a type
+#8 3.026          34 |         static codepoint_t readCodepoint(
+#8 3.026             |                ^~~~~~~~~~~
+#8 3.026       url/url-cpp/include/utf8.h:40:62: error: ‘codepoint_t’ has not been declared
+#8 3.026          40 |         static std::string& writeCodepoint(std::string& str, codepoint_t value);
+#8 3.026             |                                                              ^~~~~~~~~~~
+#8 3.026       url/url-cpp/include/utf8.h:45:16: error: ‘codepoint_t’ does not name a type
+#8 3.026          45 |         static codepoint_t toCodepoint(const std::string& str)
+#8 3.026             |                ^~~~~~~~~~~
+#8 3.026       url/url-cpp/include/utf8.h:54:42: error: ‘codepoint_t’ has not been declared
+#8 3.026          54 |         static std::string fromCodepoint(codepoint_t value)
+#8 3.026             |                                          ^~~~~~~~~~~
+#8 3.026       url/url-cpp/include/utf8.h:64:28: error: ‘codepoint_t’ was not declared in this scope
+#8 3.026          64 |         static std::vector<codepoint_t> toCodepoints(const std::string& str)
+#8 3.026             |                            ^~~~~~~~~~~
+#8 3.026       url/url-cpp/include/utf8.h:64:39: error: template argument 1 is invalid
+#8 3.026          64 |         static std::vector<codepoint_t> toCodepoints(const std::string& str)
+#8 3.026             |                                       ^
+#8 3.026       url/url-cpp/include/utf8.h:64:39: error: template argument 2 is invalid
+#8 3.026       url/url-cpp/include/utf8.h:77:61: error: ‘codepoint_t’ was not declared in this scope
+#8 3.026          77 |         static std::string fromCodepoints(const std::vector<codepoint_t>& points)
+#8 3.026             |                                                             ^~~~~~~~~~~
+#8 3.026       url/url-cpp/include/utf8.h:77:72: error: template argument 1 is invalid
+#8 3.026          77 |         static std::string fromCodepoints(const std::vector<codepoint_t>& points)
+#8 3.026             |                                                                        ^
+#8 3.026       url/url-cpp/include/utf8.h:77:72: error: template argument 2 is invalid
+#8 3.026       url/url-cpp/include/utf8.h: In static member function ‘static int Url::Utf8::toCodepoints(const std::string&)’:
+#8 3.026       url/url-cpp/include/utf8.h:66:25: error: ‘codepoint_t’ was not declared in this scope
+#8 3.026          66 |             std::vector<codepoint_t> result;
+#8 3.026             |                         ^~~~~~~~~~~
+#8 3.026       url/url-cpp/include/utf8.h:66:36: error: template argument 1 is invalid
+#8 3.026          66 |             std::vector<codepoint_t> result;
+#8 3.026             |                                    ^
+#8 3.026       url/url-cpp/include/utf8.h:66:36: error: template argument 2 is invalid
+#8 3.026       url/url-cpp/include/utf8.h:69:24: error: request for member ‘push_back’ in ‘result’, which is of non-class type ‘int’
+#8 3.026          69 |                 result.push_back(readCodepoint(it, str.end()));
+#8 3.026             |                        ^~~~~~~~~
+#8 3.026       url/url-cpp/include/utf8.h:69:34: error: ‘readCodepoint’ was not declared in this scope; did you mean ‘writeCodepoint’?
+#8 3.026          69 |                 result.push_back(readCodepoint(it, str.end()));
+#8 3.026             |                                  ^~~~~~~~~~~~~
+#8 3.026             |                                  writeCodepoint
+#8 3.026       url/url-cpp/include/utf8.h: In static member function ‘static std::string Url::Utf8::fromCodepoints(const int&)’:
+#8 3.026       url/url-cpp/include/utf8.h:80:35: error: request for member ‘begin’ in ‘points’, which is of non-class type ‘const int’
+#8 3.026          80 |             for (auto it = points.begin(); it != points.end(); ++it)
+#8 3.026             |                                   ^~~~~
+#8 3.026       url/url-cpp/include/utf8.h:80:57: error: request for member ‘end’ in ‘points’, which is of non-class type ‘const int’
+#8 3.026          80 |             for (auto it = points.begin(); it != points.end(); ++it)
+#8 3.026             |                                                         ^~~
+#8 3.026       url/url-cpp/include/punycode.h: At global scope:
+#8 3.026       url/url-cpp/include/punycode.h:17:23: error: ‘codepoint_t’ in ‘struct Url::Utf8’ does not name a type
+#8 3.026          17 |         typedef Utf8::codepoint_t punycode_uint;
+#8 3.026             |                       ^~~~~~~~~~~
+#8 3.026       url/url-cpp/include/punycode.h:56:15: error: ‘punycode_uint’ does not name a type
+#8 3.026          56 |         const punycode_uint MAX_PUNYCODE_UINT = std::numeric_limits<punycode_uint>::max();
+#8 3.026             |               ^~~~~~~~~~~~~
+#8 3.026       url/url-cpp/include/punycode.h:98:9: error: ‘punycode_uint’ does not name a type
+#8 3.026          98 |         punycode_uint adapt(
+#8 3.026             |         ^~~~~~~~~~~~~
+#8 3.026       error: command '/usr/bin/g++' failed with exit code 1
+#8 3.026       [end of output]
+#8 3.026   
+#8 3.026   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 3.027   ERROR: Failed building wheel for url
+#8 3.027   Running setup.py clean for url
+#8 3.130 Failed to build url
+#8 3.130 ERROR: Could not build wheels for url, which is required to install pyproject.toml-based projects
+#8 3.235 
+#8 3.235 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.235 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install url" did not complete successfully: exit code: 1
+------
+ > [ 4/15] RUN ["pip","install","url"]:
+3.026       [end of output]
+3.026   
+3.026   note: This error originates from a subprocess, and is likely not a problem with pip.
+3.027   ERROR: Failed building wheel for url
+3.027   Running setup.py clean for url
+3.130 Failed to build url
+3.130 ERROR: Could not build wheels for url, which is required to install pyproject.toml-based projects
+3.235 
+3.235 [notice] A new release of pip is available: 24.0 -> 25.3
+3.235 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/4173945/snippet.py /snippet.py
+   3 |     RUN ["apt-get","update"]
+   4 | >>> RUN ["pip","install","url"]
+   5 |     RUN ["pip","install","requests"]
+   6 |     RUN ["apt-get","install","-y","python-pip"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install url" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/nu01kb91th1hrsy2thveku7cf
+[2025-10-29 14:23:54] ERROR: Build failed for 4173945

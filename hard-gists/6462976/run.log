@@ -1,0 +1,20 @@
+=== Docker Run Log for 6462976 ===
+Started at: Mi 29. Okt 16:32:21 CET 2025
+
+[2025-10-29 16:32:30] START: Running container for 6462976
+[2025-10-29 16:32:30] SUCCESS: Container ef1b50e3676d1166c866d25cf3fbb0b7127d02f04b9835b2a8e0854cfa694943 started for 6462976
+=== Container logs for 6462976 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 4, in <module>
+    import os, os.path, scene, sound
+  File "/usr/local/lib/python3.11/site-packages/sound/__init__.py", line 1, in <module>
+    from .darrsnd import *
+  File "/usr/local/lib/python3.11/site-packages/sound/darrsnd.py", line 6, in <module>
+    from .ramsnd import BaseSnd
+  File "/usr/local/lib/python3.11/site-packages/sound/ramsnd.py", line 4, in <module>
+    from .utils import duration_string, check_episode, iter_timewindowindices
+  File "/usr/local/lib/python3.11/site-packages/sound/utils.py", line 51, in <module>
+    from collections import Set, Mapping, deque
+ImportError: cannot import name 'Set' from 'collections' (/usr/local/lib/python3.11/collections/__init__.py)
+=== End of logs for 6462976 ===
+[2025-10-29 16:32:32] INFO: Container ef1b50e3676d1166c866d25cf3fbb0b7127d02f04b9835b2a8e0854cfa694943 has stopped

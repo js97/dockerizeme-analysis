@@ -1,0 +1,61 @@
+=== Docker Build Log for cb0833a03a7d30c6d6e0 ===
+Started at: Mi 29. Okt 20:17:01 CET 2025
+
+[2025-10-29 20:17:01] START: Building image for cb0833a03a7d30c6d6e0
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 179B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.28kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/cb0833a03a7d30c6d6e0/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","Lasagne"]
+#7 2.052 Collecting Lasagne
+#7 2.089   Downloading Lasagne-0.1.tar.gz (125 kB)
+#7 2.120      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.1/125.1 kB 4.0 MB/s eta 0:00:00
+#7 2.136   Preparing metadata (setup.py): started
+#7 2.518   Preparing metadata (setup.py): finished with status 'done'
+#7 2.713 Collecting numpy (from Lasagne)
+#7 2.724   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.739      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 4.0 MB/s eta 0:00:00
+#7 2.757 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 3.602    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 20.8 MB/s eta 0:00:00
+#7 3.643 Building wheels for collected packages: Lasagne
+#7 3.644   Building wheel for Lasagne (setup.py): started
+#7 3.832   Building wheel for Lasagne (setup.py): finished with status 'done'
+#7 3.833   Created wheel for Lasagne: filename=lasagne-0.1-py3-none-any.whl size=79359 sha256=245710b89d1e167be64c73f5be635cd90cafd943f2297b73a33e9ca01ac99e29
+#7 3.833   Stored in directory: /root/.cache/pip/wheels/4e/ad/d7/6376b7842a2d4635bb42a9889ef94b6de55291916efa1952e9
+#7 3.835 Successfully built Lasagne
+#7 3.872 Installing collected packages: numpy, Lasagne
+#7 5.332 Successfully installed Lasagne-0.1 numpy-2.3.4
+#7 5.332 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.424 
+#7 5.424 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.424 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.0s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.5s done
+#8 writing image sha256:e9082d763951c941ea9aefb0c2685d2860658afbe3cd86c6aaef5811c3f3b2eb done
+#8 naming to docker.io/library/test-image-cb0833a03a7d30c6d6e0 done
+#8 DONE 0.5s
+
+View build details: docker-desktop://dashboard/build/default/default/d7u274ael06hc0z1g3cijuqs5
+[2025-10-29 20:17:08] SUCCESS: Build completed for cb0833a03a7d30c6d6e0

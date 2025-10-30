@@ -1,0 +1,12 @@
+=== Docker Run Log for 2787060 ===
+Started at: Mi 29. Okt 13:14:58 CET 2025
+
+[2025-10-29 13:14:59] START: Running container for 2787060
+[2025-10-29 13:14:59] SUCCESS: Container e3e10ef613b61b32efa75a647d359e4f3e0aca2ecd9fc2cdb7ac64f4d595c7da started for 2787060
+=== Container logs for 2787060 ===
+  File "/snippet.py", line 75
+    print re.findall("\\\\",str1)  # 不用r和用r的区
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 2787060 ===
+[2025-10-29 13:15:01] INFO: Container e3e10ef613b61b32efa75a647d359e4f3e0aca2ecd9fc2cdb7ac64f4d595c7da has stopped

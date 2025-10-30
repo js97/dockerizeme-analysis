@@ -1,0 +1,131 @@
+=== Docker Build Log for aad8a37114825b0ce1a5bc48bf5f3cac ===
+Started at: Mi 29. Okt 19:12:12 CET 2025
+
+[2025-10-29 19:12:12] START: Building image for aad8a37114825b0ce1a5bc48bf5f3cac
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 313B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 295B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/aad8a37114825b0ce1a5bc48bf5f3cac/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","six"]
+#7 1.966 Collecting six
+#7 2.004   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.028 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.073 Installing collected packages: six
+#7 2.091 Successfully installed six-1.17.0
+#7 2.091 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.185 
+#7 2.185 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.185 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.3s
+
+#8 [4/7] RUN ["pip","install","pytest"]
+#8 0.607 Collecting pytest
+#8 0.657   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#8 0.709 Collecting iniconfig>=1 (from pytest)
+#8 0.718   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#8 0.768 Collecting packaging>=20 (from pytest)
+#8 0.776   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.814 Collecting pluggy<2,>=1.5 (from pytest)
+#8 0.823   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#8 0.868 Collecting pygments>=2.7.2 (from pytest)
+#8 0.876   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#8 0.905 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#8 0.960    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 6.9 MB/s eta 0:00:00
+#8 0.968 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#8 0.985 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 0.998    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.2 MB/s eta 0:00:00
+#8 1.007 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#8 1.025 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#8 1.104    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 15.5 MB/s eta 0:00:00
+#8 1.153 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#8 1.883 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#8 1.883 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.888 
+#8 1.888 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.888 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.0s
+
+#9 [5/7] RUN ["pip","install","py"]
+#9 0.552 Collecting py
+#9 0.599   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#9 0.624 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#9 0.662    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.5 MB/s eta 0:00:00
+#9 0.705 Installing collected packages: py
+#9 0.784 Successfully installed py-1.11.0
+#9 0.785 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.790 
+#9 0.790 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.790 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.9s
+
+#10 [6/7] RUN ["pip","install","PyUserInput"]
+#10 0.625 Collecting PyUserInput
+#10 0.662   Downloading PyUserInput-0.1.11.tar.gz (28 kB)
+#10 0.683   Preparing metadata (setup.py): started
+#10 1.068   Preparing metadata (setup.py): finished with status 'done'
+#10 1.105 Collecting python-xlib (from PyUserInput)
+#10 1.116   Downloading python_xlib-0.33-py2.py3-none-any.whl.metadata (6.2 kB)
+#10 1.127 Requirement already satisfied: six>=1.10.0 in /usr/local/lib/python3.11/site-packages (from python-xlib->PyUserInput) (1.17.0)
+#10 1.138 Downloading python_xlib-0.33-py2.py3-none-any.whl (182 kB)
+#10 1.171    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 182.2/182.2 kB 5.7 MB/s eta 0:00:00
+#10 1.175 Building wheels for collected packages: PyUserInput
+#10 1.175   Building wheel for PyUserInput (setup.py): started
+#10 1.349   Building wheel for PyUserInput (setup.py): finished with status 'done'
+#10 1.349   Created wheel for PyUserInput: filename=pyuserinput-0.1.11-py3-none-any.whl size=37212 sha256=b663b745205661dfe9723743247da79b8a50cd316e21578641d6d417c747d39b
+#10 1.350   Stored in directory: /root/.cache/pip/wheels/bc/e4/64/bd675c36f25387625347d34e63e22703ee63e20a26ff92aa9d
+#10 1.351 Successfully built PyUserInput
+#10 1.393 Installing collected packages: python-xlib, PyUserInput
+#10 1.501 Successfully installed PyUserInput-0.1.11 python-xlib-0.33
+#10 1.501 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.506 
+#10 1.506 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.506 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.6s
+
+#11 [7/7] RUN ["pip","install","PyMouse"]
+#11 0.639 Collecting PyMouse
+#11 0.780   Downloading PyMouse-1.0.tar.gz (4.0 kB)
+#11 0.807   Preparing metadata (setup.py): started
+#11 0.939   Preparing metadata (setup.py): finished with status 'done'
+#11 0.940 Building wheels for collected packages: PyMouse
+#11 0.945   Building wheel for PyMouse (setup.py): started
+#11 1.082   Building wheel for PyMouse (setup.py): finished with status 'done'
+#11 1.083   Created wheel for PyMouse: filename=pymouse-1.0-py3-none-any.whl size=7111 sha256=cf331d2198eb979f534f356a799a4818c61a86b320ae41224826d532c8d46357
+#11 1.083   Stored in directory: /root/.cache/pip/wheels/ac/10/7d/8de50386d0e9ad5b8d3803d6876308d6dd5a45ddfc972f5d08
+#11 1.085 Successfully built PyMouse
+#11 1.129 Installing collected packages: PyMouse
+#11 1.155 Successfully installed PyMouse-1.0
+#11 1.155 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.160 
+#11 1.160 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.160 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.2s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.2s done
+#12 writing image sha256:363d92414d81a6b600f3c3c84860cce74060fbd9104a023a2fc68505c4c7dd2f done
+#12 naming to docker.io/library/test-image-aad8a37114825b0ce1a5bc48bf5f3cac done
+#12 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/n91yop6fa28t6qd7iu51p4b5x
+[2025-10-29 19:12:21] SUCCESS: Build completed for aad8a37114825b0ce1a5bc48bf5f3cac

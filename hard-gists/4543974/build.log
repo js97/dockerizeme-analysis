@@ -1,0 +1,301 @@
+=== Docker Build Log for 4543974 ===
+Started at: Mi 29. Okt 14:43:05 CET 2025
+
+[2025-10-29 14:43:05] START: Building image for 4543974
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.91kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.18kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/52] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/52] COPY hard-gists/4543974/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/52] RUN ["pip","install","ncolony"]
+#7 2.358 Collecting ncolony
+#7 2.390   Downloading ncolony-2024.1.11.74140-py3-none-any.whl.metadata (3.0 kB)
+#7 2.451 Collecting twisted (from ncolony)
+#7 2.460   Downloading twisted-25.5.0-py3-none-any.whl.metadata (22 kB)
+#7 2.501 Collecting gather (from ncolony)
+#7 2.509   Downloading gather-2024.1.19.74288-py3-none-any.whl.metadata (3.0 kB)
+#7 2.557 Collecting attrs (from gather->ncolony)
+#7 2.567   Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+#7 2.606 Collecting incremental (from gather->ncolony)
+#7 2.620   Downloading incremental-24.7.2-py3-none-any.whl.metadata (8.1 kB)
+#7 2.660 Collecting venusian (from gather->ncolony)
+#7 2.669   Downloading venusian-3.1.1-py3-none-any.whl.metadata (10 kB)
+#7 2.708 Collecting toolz (from gather->ncolony)
+#7 2.717   Downloading toolz-1.1.0-py3-none-any.whl.metadata (5.1 kB)
+#7 2.754 Collecting commander-data (from gather->ncolony)
+#7 2.763   Downloading commander_data-2024.1.19.63931-py3-none-any.whl.metadata (2.0 kB)
+#7 2.950 Collecting automat>=24.8.0 (from twisted->ncolony)
+#7 2.959   Downloading automat-25.4.16-py3-none-any.whl.metadata (8.4 kB)
+#7 2.995 Collecting constantly>=15.1 (from twisted->ncolony)
+#7 3.004   Downloading constantly-23.10.4-py3-none-any.whl.metadata (1.8 kB)
+#7 3.040 Collecting hyperlink>=17.1.1 (from twisted->ncolony)
+#7 3.048   Downloading hyperlink-21.0.0-py2.py3-none-any.whl.metadata (1.5 kB)
+#7 3.097 Collecting typing-extensions>=4.2.0 (from twisted->ncolony)
+#7 3.106   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#7 3.247 Collecting zope-interface>=5 (from twisted->ncolony)
+#7 3.256   Downloading zope_interface-8.0.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (44 kB)
+#7 3.274      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.9/44.9 kB 2.4 MB/s eta 0:00:00
+#7 3.319 Collecting idna>=2.5 (from hyperlink>=17.1.1->twisted->ncolony)
+#7 3.327   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 3.343 Requirement already satisfied: setuptools>=61.0 in /usr/local/lib/python3.11/site-packages (from incremental->gather->ncolony) (79.0.1)
+#7 3.418 Downloading ncolony-2024.1.11.74140-py3-none-any.whl (37 kB)
+#7 3.441 Downloading gather-2024.1.19.74288-py3-none-any.whl (14 kB)
+#7 3.460 Downloading twisted-25.5.0-py3-none-any.whl (3.2 MB)
+#7 3.592    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 24.5 MB/s eta 0:00:00
+#7 3.601 Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+#7 3.614    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.6/67.6 kB 5.6 MB/s eta 0:00:00
+#7 3.630 Downloading automat-25.4.16-py3-none-any.whl (42 kB)
+#7 3.641    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.8/42.8 kB 3.2 MB/s eta 0:00:00
+#7 3.657 Downloading constantly-23.10.4-py3-none-any.whl (13 kB)
+#7 3.676 Downloading hyperlink-21.0.0-py2.py3-none-any.whl (74 kB)
+#7 3.688    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.6/74.6 kB 6.8 MB/s eta 0:00:00
+#7 3.696 Downloading incremental-24.7.2-py3-none-any.whl (20 kB)
+#7 3.716 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#7 3.728    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.2 MB/s eta 0:00:00
+#7 3.739 Downloading zope_interface-8.0.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (259 kB)
+#7 3.758    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 259.8/259.8 kB 14.6 MB/s eta 0:00:00
+#7 3.768 Downloading commander_data-2024.1.19.63931-py3-none-any.whl (7.0 kB)
+#7 3.789 Downloading toolz-1.1.0-py3-none-any.whl (58 kB)
+#7 3.802    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.1/58.1 kB 4.4 MB/s eta 0:00:00
+#7 3.812 Downloading venusian-3.1.1-py3-none-any.whl (14 kB)
+#7 3.832 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 3.844    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 6.1 MB/s eta 0:00:00
+#7 4.076 Installing collected packages: commander-data, zope-interface, venusian, typing-extensions, toolz, incremental, idna, constantly, automat, attrs, hyperlink, gather, twisted, ncolony
+#7 6.261 Successfully installed attrs-25.4.0 automat-25.4.16 commander-data-2024.1.19.63931 constantly-23.10.4 gather-2024.1.19.74288 hyperlink-21.0.0 idna-3.11 incremental-24.7.2 ncolony-2024.1.11.74140 toolz-1.1.0 twisted-25.5.0 typing-extensions-4.15.0 venusian-3.1.1 zope-interface-8.0.1
+#7 6.261 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 6.351 
+#7 6.351 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 6.351 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.7s
+
+#8 [ 4/52] RUN ["pip","install","txasgiresource"]
+#8 0.567 Collecting txasgiresource
+#8 0.599   Downloading txasgiresource-2.2.1-py2.py3-none-any.whl.metadata (3.1 kB)
+#8 0.616 Requirement already satisfied: twisted>=16.0 in /usr/local/lib/python3.11/site-packages (from txasgiresource) (25.5.0)
+#8 0.669 Collecting autobahn>=0.12 (from txasgiresource)
+#8 0.680   Downloading autobahn-25.10.2-cp311-cp311-manylinux1_x86_64.manylinux_2_34_x86_64.manylinux_2_5_x86_64.whl.metadata (19 kB)
+#8 0.737 Collecting asgiref>=2.3.2 (from txasgiresource)
+#8 0.746   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#8 0.823 Collecting txaio>=25.9.2 (from autobahn>=0.12->txasgiresource)
+#8 0.832   Downloading txaio-25.9.2-py3-none-any.whl.metadata (7.3 kB)
+#8 1.090 Collecting cryptography>=3.4.6 (from autobahn>=0.12->txasgiresource)
+#8 1.099   Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+#8 1.128 Requirement already satisfied: hyperlink>=21.0.0 in /usr/local/lib/python3.11/site-packages (from autobahn>=0.12->txasgiresource) (21.0.0)
+#8 1.272 Requirement already satisfied: attrs>=22.2.0 in /usr/local/lib/python3.11/site-packages (from twisted>=16.0->txasgiresource) (25.4.0)
+#8 1.274 Requirement already satisfied: automat>=24.8.0 in /usr/local/lib/python3.11/site-packages (from twisted>=16.0->txasgiresource) (25.4.16)
+#8 1.275 Requirement already satisfied: constantly>=15.1 in /usr/local/lib/python3.11/site-packages (from twisted>=16.0->txasgiresource) (23.10.4)
+#8 1.276 Requirement already satisfied: incremental>=24.7.0 in /usr/local/lib/python3.11/site-packages (from twisted>=16.0->txasgiresource) (24.7.2)
+#8 1.278 Requirement already satisfied: typing-extensions>=4.2.0 in /usr/local/lib/python3.11/site-packages (from twisted>=16.0->txasgiresource) (4.15.0)
+#8 1.280 Requirement already satisfied: zope-interface>=5 in /usr/local/lib/python3.11/site-packages (from twisted>=16.0->txasgiresource) (8.0.1)
+#8 1.427 Collecting cffi>=2.0.0 (from cryptography>=3.4.6->autobahn>=0.12->txasgiresource)
+#8 1.436   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+#8 1.458 Requirement already satisfied: idna>=2.5 in /usr/local/lib/python3.11/site-packages (from hyperlink>=21.0.0->autobahn>=0.12->txasgiresource) (3.11)
+#8 1.463 Requirement already satisfied: setuptools>=61.0 in /usr/local/lib/python3.11/site-packages (from incremental>=24.7.0->twisted>=16.0->txasgiresource) (79.0.1)
+#8 1.512 Collecting pycparser (from cffi>=2.0.0->cryptography>=3.4.6->autobahn>=0.12->txasgiresource)
+#8 1.521   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+#8 1.574 Downloading txasgiresource-2.2.1-py2.py3-none-any.whl (19 kB)
+#8 1.593 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#8 1.617 Downloading autobahn-25.10.2-cp311-cp311-manylinux1_x86_64.manylinux_2_34_x86_64.manylinux_2_5_x86_64.whl (569 kB)
+#8 1.667    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 569.2/569.2 kB 11.8 MB/s eta 0:00:00
+#8 1.675 Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+#8 1.970    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 15.2 MB/s eta 0:00:00
+#8 1.980 Downloading txaio-25.9.2-py3-none-any.whl (31 kB)
+#8 1.999 Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+#8 2.018    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 12.6 MB/s eta 0:00:00
+#8 2.026 Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+#8 2.040    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 9.5 MB/s eta 0:00:00
+#8 2.343 Installing collected packages: txaio, pycparser, asgiref, cffi, cryptography, autobahn, txasgiresource
+#8 2.965 Successfully installed asgiref-3.10.0 autobahn-25.10.2 cffi-2.0.0 cryptography-46.0.3 pycparser-2.23 txaio-25.9.2 txasgiresource-2.2.1
+#8 2.965 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.971 
+#8 2.971 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.971 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.2s
+
+#9 [ 5/52] RUN ["pip","install","swftp"]
+#9 0.578 Collecting swftp
+#9 0.612   Downloading swftp-1.0.7.tar.gz (40 kB)
+#9 0.638      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.9/40.9 kB 1.3 MB/s eta 0:00:00
+#9 0.648   Preparing metadata (setup.py): started
+#9 1.364   Preparing metadata (setup.py): finished with status 'done'
+#9 1.371 Requirement already satisfied: twisted>=12.1 in /usr/local/lib/python3.11/site-packages (from swftp) (25.5.0)
+#9 1.413 Collecting pyopenssl (from swftp)
+#9 1.422   Downloading pyopenssl-25.3.0-py3-none-any.whl.metadata (17 kB)
+#9 1.468 Collecting pycrypto (from swftp)
+#9 1.478   Downloading pycrypto-2.6.1.tar.gz (446 kB)
+#9 1.517      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 446.2/446.2 kB 12.1 MB/s eta 0:00:00
+#9 1.553   Preparing metadata (setup.py): started
+#9 1.682   Preparing metadata (setup.py): finished with status 'done'
+#9 1.734 Collecting pyasn1 (from swftp)
+#9 1.744   Downloading pyasn1-0.6.1-py3-none-any.whl.metadata (8.4 kB)
+#9 1.861 Collecting psutil (from swftp)
+#9 1.870   Downloading psutil-7.1.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (23 kB)
+#9 2.033 Requirement already satisfied: attrs>=22.2.0 in /usr/local/lib/python3.11/site-packages (from twisted>=12.1->swftp) (25.4.0)
+#9 2.034 Requirement already satisfied: automat>=24.8.0 in /usr/local/lib/python3.11/site-packages (from twisted>=12.1->swftp) (25.4.16)
+#9 2.035 Requirement already satisfied: constantly>=15.1 in /usr/local/lib/python3.11/site-packages (from twisted>=12.1->swftp) (23.10.4)
+#9 2.036 Requirement already satisfied: hyperlink>=17.1.1 in /usr/local/lib/python3.11/site-packages (from twisted>=12.1->swftp) (21.0.0)
+#9 2.037 Requirement already satisfied: incremental>=24.7.0 in /usr/local/lib/python3.11/site-packages (from twisted>=12.1->swftp) (24.7.2)
+#9 2.038 Requirement already satisfied: typing-extensions>=4.2.0 in /usr/local/lib/python3.11/site-packages (from twisted>=12.1->swftp) (4.15.0)
+#9 2.041 Requirement already satisfied: zope-interface>=5 in /usr/local/lib/python3.11/site-packages (from twisted>=12.1->swftp) (8.0.1)
+#9 2.077 Requirement already satisfied: cryptography<47,>=45.0.7 in /usr/local/lib/python3.11/site-packages (from pyopenssl->swftp) (46.0.3)
+#9 2.097 Requirement already satisfied: cffi>=2.0.0 in /usr/local/lib/python3.11/site-packages (from cryptography<47,>=45.0.7->pyopenssl->swftp) (2.0.0)
+#9 2.100 Requirement already satisfied: idna>=2.5 in /usr/local/lib/python3.11/site-packages (from hyperlink>=17.1.1->twisted>=12.1->swftp) (3.11)
+#9 2.104 Requirement already satisfied: setuptools>=61.0 in /usr/local/lib/python3.11/site-packages (from incremental>=24.7.0->twisted>=12.1->swftp) (79.0.1)
+#9 2.114 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi>=2.0.0->cryptography<47,>=45.0.7->pyopenssl->swftp) (2.23)
+#9 2.157 Downloading psutil-7.1.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (258 kB)
+#9 2.185    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 258.7/258.7 kB 9.4 MB/s eta 0:00:00
+#9 2.194 Downloading pyasn1-0.6.1-py3-none-any.whl (83 kB)
+#9 2.206    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.1/83.1 kB 7.0 MB/s eta 0:00:00
+#9 2.214 Downloading pyopenssl-25.3.0-py3-none-any.whl (57 kB)
+#9 2.226    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.3/57.3 kB 4.7 MB/s eta 0:00:00
+#9 2.233 Building wheels for collected packages: swftp, pycrypto
+#9 2.234   Building wheel for swftp (setup.py): started
+#9 2.640   Building wheel for swftp (setup.py): finished with status 'done'
+#9 2.641   Created wheel for swftp: filename=swftp-1.0.7-py3-none-any.whl size=51397 sha256=747081c166f0577db0a03b20eb23e9617cb2202cc88b4a52d26ab3759d2b3bf5
+#9 2.641   Stored in directory: /root/.cache/pip/wheels/c2/30/2f/38897242ec15038d9602d75c585cea0041891fd9dd58f6ca37
+#9 2.644   Building wheel for pycrypto (setup.py): started
+#9 4.376   Building wheel for pycrypto (setup.py): finished with status 'error'
+#9 4.384   error: subprocess-exited-with-error
+#9 4.384   
+#9 4.384   × python setup.py bdist_wheel did not run successfully.
+#9 4.384   │ exit code: 1
+#9 4.384   ╰─> [84 lines of output]
+#9 4.384       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+#9 4.384       !!
+#9 4.384       
+#9 4.384               ********************************************************************************
+#9 4.384               Please consider removing the following classifiers in favor of a SPDX license expression:
+#9 4.384       
+#9 4.384               License :: Public Domain
+#9 4.384       
+#9 4.384               See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+#9 4.384               ********************************************************************************
+#9 4.384       
+#9 4.384       !!
+#9 4.384         self._finalize_license_expression()
+#9 4.384       checking for gcc... gcc
+#9 4.384       checking whether the C compiler works... yes
+#9 4.384       checking for C compiler default output file name... a.out
+#9 4.384       checking for suffix of executables...
+#9 4.384       checking whether we are cross compiling... no
+#9 4.384       checking for suffix of object files... o
+#9 4.384       checking whether we are using the GNU C compiler... yes
+#9 4.384       checking whether gcc accepts -g... yes
+#9 4.384       checking for gcc option to accept ISO C89... none needed
+#9 4.384       checking for __gmpz_init in -lgmp... yes
+#9 4.384       checking for __gmpz_init in -lmpir... no
+#9 4.384       checking whether mpz_powm is declared... yes
+#9 4.384       checking whether mpz_powm_sec is declared... yes
+#9 4.384       checking how to run the C preprocessor... gcc -E
+#9 4.384       checking for grep that handles long lines and -e... /usr/bin/grep
+#9 4.384       checking for egrep... /usr/bin/grep -E
+#9 4.384       checking for ANSI C header files... yes
+#9 4.384       checking for sys/types.h... yes
+#9 4.384       checking for sys/stat.h... yes
+#9 4.384       checking for stdlib.h... yes
+#9 4.384       checking for string.h... yes
+#9 4.384       checking for memory.h... yes
+#9 4.384       checking for strings.h... yes
+#9 4.384       checking for inttypes.h... yes
+#9 4.384       checking for stdint.h... yes
+#9 4.384       checking for unistd.h... yes
+#9 4.384       checking for inttypes.h... (cached) yes
+#9 4.384       checking limits.h usability... yes
+#9 4.384       checking limits.h presence... yes
+#9 4.384       checking for limits.h... yes
+#9 4.384       checking stddef.h usability... yes
+#9 4.384       checking stddef.h presence... yes
+#9 4.384       checking for stddef.h... yes
+#9 4.384       checking for stdint.h... (cached) yes
+#9 4.384       checking for stdlib.h... (cached) yes
+#9 4.384       checking for string.h... (cached) yes
+#9 4.384       checking wchar.h usability... yes
+#9 4.384       checking wchar.h presence... yes
+#9 4.384       checking for wchar.h... yes
+#9 4.384       checking for inline... inline
+#9 4.384       checking for int16_t... yes
+#9 4.384       checking for int32_t... yes
+#9 4.384       checking for int64_t... yes
+#9 4.384       checking for int8_t... yes
+#9 4.384       checking for size_t... yes
+#9 4.384       checking for uint16_t... yes
+#9 4.384       checking for uint32_t... yes
+#9 4.384       checking for uint64_t... yes
+#9 4.384       checking for uint8_t... yes
+#9 4.384       checking for stdlib.h... (cached) yes
+#9 4.384       checking for GNU libc compatible malloc... yes
+#9 4.384       checking for memmove... yes
+#9 4.384       checking for memset... yes
+#9 4.384       configure: creating ./config.status
+#9 4.384       config.status: creating src/config.h
+#9 4.384       In file included from /usr/local/include/python3.11/Python.h:87,
+#9 4.384                        from src/_fastmath.c:31:
+#9 4.384       /usr/local/include/python3.11/cpython/pytime.h:208:60: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+#9 4.384         208 | PyAPI_FUNC(int) _PyTime_FromTimespec(_PyTime_t *tp, struct timespec *ts);
+#9 4.384             |                                                            ^~~~~~~~
+#9 4.384       /usr/local/include/python3.11/cpython/pytime.h:213:56: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+#9 4.384         213 | PyAPI_FUNC(int) _PyTime_AsTimespec(_PyTime_t t, struct timespec *ts);
+#9 4.384             |                                                        ^~~~~~~~
+#9 4.384       /usr/local/include/python3.11/cpython/pytime.h:217:63: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+#9 4.384         217 | PyAPI_FUNC(void) _PyTime_AsTimespec_clamp(_PyTime_t t, struct timespec *ts);
+#9 4.384             |                                                               ^~~~~~~~
+#9 4.384       src/_fastmath.c:33:10: fatal error: longintrepr.h: No such file or directory
+#9 4.384          33 | #include <longintrepr.h>                                /* for conversions */
+#9 4.384             |          ^~~~~~~~~~~~~~~
+#9 4.384       compilation terminated.
+#9 4.384       error: command '/usr/bin/gcc' failed with exit code 1
+#9 4.384       [end of output]
+#9 4.384   
+#9 4.384   note: This error originates from a subprocess, and is likely not a problem with pip.
+#9 4.385   ERROR: Failed building wheel for pycrypto
+#9 4.385   Running setup.py clean for pycrypto
+#9 4.545 Successfully built swftp
+#9 4.545 Failed to build pycrypto
+#9 4.546 ERROR: Could not build wheels for pycrypto, which is required to install pyproject.toml-based projects
+#9 4.553 
+#9 4.553 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 4.553 [notice] To update, run: pip install --upgrade pip
+#9 ERROR: process "pip install swftp" did not complete successfully: exit code: 1
+------
+ > [ 5/52] RUN ["pip","install","swftp"]:
+4.384   
+4.384   note: This error originates from a subprocess, and is likely not a problem with pip.
+4.385   ERROR: Failed building wheel for pycrypto
+4.385   Running setup.py clean for pycrypto
+4.545 Successfully built swftp
+4.545 Failed to build pycrypto
+4.546 ERROR: Could not build wheels for pycrypto, which is required to install pyproject.toml-based projects
+4.553 
+4.553 [notice] A new release of pip is available: 24.0 -> 25.3
+4.553 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:5
+--------------------
+   3 |     RUN ["pip","install","ncolony"]
+   4 |     RUN ["pip","install","txasgiresource"]
+   5 | >>> RUN ["pip","install","swftp"]
+   6 |     RUN ["pip","install","Nevow"]
+   7 |     RUN ["pip","install","trigger"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install swftp" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/q4t32ai1i2pgatg103rtw5hhb
+[2025-10-29 14:43:20] ERROR: Build failed for 4543974

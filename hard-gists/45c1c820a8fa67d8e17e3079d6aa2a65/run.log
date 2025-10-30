@@ -1,0 +1,17 @@
+=== Docker Run Log for 45c1c820a8fa67d8e17e3079d6aa2a65 ===
+Started at: Mi 29. Okt 14:45:26 CET 2025
+
+[2025-10-29 14:50:36] START: Running container for 45c1c820a8fa67d8e17e3079d6aa2a65
+[2025-10-29 14:50:36] SUCCESS: Container 61f5fe1dd7272c3506f2e172eb481e1285b9cac846a8681bcf118b2506f7f504 started for 45c1c820a8fa67d8e17e3079d6aa2a65
+=== Container logs for 45c1c820a8fa67d8e17e3079d6aa2a65 ===
+/usr/local/lib/python3.11/site-packages/torch/_subclasses/functional_tensor.py:279: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+Usage: snippet.py [OPTIONS] {ranged|hash|bloom}
+Try 'snippet.py --help' for help.
+
+Error: Missing argument '{ranged|hash|bloom}'. Choose from:
+	ranged,
+	hash,
+	bloom
+=== End of logs for 45c1c820a8fa67d8e17e3079d6aa2a65 ===
+[2025-10-29 14:50:38] INFO: Container 61f5fe1dd7272c3506f2e172eb481e1285b9cac846a8681bcf118b2506f7f504 has stopped

@@ -1,0 +1,17 @@
+=== Docker Run Log for 1b49c03968b2c83897a4a15c78980b18 ===
+Started at: Mi 29. Okt 12:37:50 CET 2025
+
+[2025-10-29 12:42:38] START: Running container for 1b49c03968b2c83897a4a15c78980b18
+[2025-10-29 12:42:38] SUCCESS: Container 69391d4b28480c5f2f14c1d851dac256929fd0fc2097f4c6be883919468cc4a6 started for 1b49c03968b2c83897a4a15c78980b18
+=== Container logs for 1b49c03968b2c83897a4a15c78980b18 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 237, in <module>
+    trn = read_dataset(os.path.join(args.data,'train.txt'))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 114, in read_dataset
+    return [Tree.from_sexpr(line.strip()) for line in codecs.open(filename,"r")]
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen codecs>", line 918, in open
+FileNotFoundError: [Errno 2] No such file or directory: './data/train.txt'
+=== End of logs for 1b49c03968b2c83897a4a15c78980b18 ===
+[2025-10-29 12:42:40] INFO: Container 69391d4b28480c5f2f14c1d851dac256929fd0fc2097f4c6be883919468cc4a6 has stopped

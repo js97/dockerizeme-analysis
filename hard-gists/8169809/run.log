@@ -1,0 +1,26 @@
+=== Docker Run Log for 8169809 ===
+Started at: Mi 29. Okt 17:40:20 CET 2025
+
+[2025-10-29 17:40:33] START: Running container for 8169809
+[2025-10-29 17:40:33] SUCCESS: Container 81c9f45ec0382fdfe9ba262e8c63a8bd89c24295003ba1cabd0f596450308468 started for 8169809
+=== Container logs for 8169809 ===
+/snippet.py:8: GuessedAtParserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html.parser"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+The code that caused this warning is on line 8 of the file /snippet.py. To get rid of this warning, pass the additional argument 'features="html.parser"' to the BeautifulSoup constructor.
+
+  tkColorSoup = bs4.BeautifulSoup(requests.get(tkColorURL).text).tbody
+Loading tkinter colors from: http://www.tcl.tk/man/tcl8.6/TkCmd/colors.htm
+Soup is ready.  Creating color table...
+Traceback (most recent call last):
+  File "/snippet.py", line 32, in <module>
+    lgy = getColor('light goldenrod yellow')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 24, in getColor
+    loadTkColorDict()  # then put tkinter colors into tkColorDict
+    ^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 10, in loadTkColorDict
+    for tableRow in tkColorSoup.find_all('tr'):
+                    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'find_all'
+=== End of logs for 8169809 ===
+[2025-10-29 17:40:35] INFO: Container 81c9f45ec0382fdfe9ba262e8c63a8bd89c24295003ba1cabd0f596450308468 has stopped

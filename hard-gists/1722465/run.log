@@ -1,0 +1,15 @@
+=== Docker Run Log for 1722465 ===
+Started at: Mi 29. Okt 12:25:11 CET 2025
+
+[2025-10-29 12:25:48] START: Running container for 1722465
+[2025-10-29 12:25:49] SUCCESS: Container cb5e48a9745f4cb5e0cc5a78b522df9978c45c051cb726371984cda51acbb11a started for 1722465
+=== Container logs for 1722465 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 11, in <module>
+    class Command(AppCommand):
+  File "/snippet.py", line 12, in Command
+    option_list = AppCommand.option_list + (
+                  ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'AppCommand' has no attribute 'option_list'
+=== End of logs for 1722465 ===
+[2025-10-29 12:25:51] INFO: Container cb5e48a9745f4cb5e0cc5a78b522df9978c45c051cb726371984cda51acbb11a has stopped

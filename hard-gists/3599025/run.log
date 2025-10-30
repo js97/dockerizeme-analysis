@@ -1,0 +1,35 @@
+=== Docker Run Log for 3599025 ===
+Started at: Mi 29. Okt 13:55:09 CET 2025
+
+[2025-10-29 13:55:10] START: Running container for 3599025
+[2025-10-29 13:55:10] SUCCESS: Container 624be2359c04ba239c766ca9f68835afd2ee02b3cc6b1a730be3401672728f1e started for 3599025
+=== Container logs for 3599025 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 38, in <module>
+sending
+    main_function(gist_filename, gist_description, gist_body)
+  File "/snippet.py", line 35, in main_function
+    upload_gist()
+  File "/snippet.py", line 29, in upload_gist
+    json_to_parse = urlopen(url, data=json_post_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 401: Unauthorized
+=== End of logs for 3599025 ===
+[2025-10-29 13:55:12] INFO: Container 624be2359c04ba239c766ca9f68835afd2ee02b3cc6b1a730be3401672728f1e has stopped

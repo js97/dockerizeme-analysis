@@ -1,0 +1,15 @@
+=== Docker Run Log for 97d0fb82c3894f56809a ===
+Started at: Mi 29. Okt 18:33:16 CET 2025
+
+[2025-10-29 18:33:21] START: Running container for 97d0fb82c3894f56809a
+[2025-10-29 18:33:22] SUCCESS: Container c4d50f73504f7bfec52ba33a92a79ffa77c22ee7e4f8dd594bf4bc71a33c11a4 started for 97d0fb82c3894f56809a
+=== Container logs for 97d0fb82c3894f56809a ===
+Traceback (most recent call last):
+  File "/snippet.py", line 60, in <module>
+    get_files()
+  File "/snippet.py", line 14, in get_files
+    url = input("Enter the URL you want to scrape from: ")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+EOFError: EOF when reading a line
+Enter the URL you want to scrape from: === End of logs for 97d0fb82c3894f56809a ===
+[2025-10-29 18:33:24] INFO: Container c4d50f73504f7bfec52ba33a92a79ffa77c22ee7e4f8dd594bf4bc71a33c11a4 has stopped

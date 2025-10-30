@@ -1,0 +1,146 @@
+=== Docker Build Log for 1590178 ===
+Started at: Mi 29. Okt 12:19:24 CET 2025
+
+[2025-10-29 12:19:24] START: Building image for 1590178
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 349B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.90kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/8] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/8] COPY hard-gists/1590178/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/8] RUN ["pip","install","Flask"]
+#7 1.941 Collecting Flask
+#7 1.977   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#7 2.017 Collecting blinker>=1.9.0 (from Flask)
+#7 2.025   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#7 2.071 Collecting click>=8.1.3 (from Flask)
+#7 2.079   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#7 2.115 Collecting itsdangerous>=2.2.0 (from Flask)
+#7 2.122   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#7 2.162 Collecting jinja2>=3.1.2 (from Flask)
+#7 2.170   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#7 2.248 Collecting markupsafe>=2.1.1 (from Flask)
+#7 2.256   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#7 2.306 Collecting werkzeug>=3.1.0 (from Flask)
+#7 2.315   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#7 2.341 Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+#7 2.371    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 3.4 MB/s eta 0:00:00
+#7 2.380 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#7 2.399 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#7 2.416    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 6.5 MB/s eta 0:00:00
+#7 2.424 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#7 2.442 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#7 2.456    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 10.5 MB/s eta 0:00:00
+#7 2.464 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#7 2.481 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#7 2.498    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 13.7 MB/s eta 0:00:00
+#7 2.541 Installing collected packages: markupsafe, itsdangerous, click, blinker, werkzeug, jinja2, Flask
+#7 2.843 Successfully installed Flask-3.1.2 blinker-1.9.0 click-8.3.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.3 werkzeug-3.1.3
+#7 2.844 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.967 
+#7 2.967 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.967 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.2s
+
+#8 [4/8] RUN ["pip","install","itsdangerous"]
+#8 0.426 Requirement already satisfied: itsdangerous in /usr/local/lib/python3.11/site-packages (2.2.0)
+#8 0.463 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.468 
+#8 0.468 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.468 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.5s
+
+#9 [5/8] RUN ["pip","install","Werkzeug"]
+#9 0.458 Requirement already satisfied: Werkzeug in /usr/local/lib/python3.11/site-packages (3.1.3)
+#9 0.460 Requirement already satisfied: MarkupSafe>=2.1.1 in /usr/local/lib/python3.11/site-packages (from Werkzeug) (3.0.3)
+#9 0.501 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.506 
+#9 0.506 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.506 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.6s
+
+#10 [6/8] RUN ["pip","install","WTForms"]
+#10 0.527 Collecting WTForms
+#10 0.670   Downloading wtforms-3.2.1-py3-none-any.whl.metadata (5.3 kB)
+#10 0.695 Requirement already satisfied: markupsafe in /usr/local/lib/python3.11/site-packages (from WTForms) (3.0.3)
+#10 0.707 Downloading wtforms-3.2.1-py3-none-any.whl (152 kB)
+#10 0.927    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 152.5/152.5 kB 676.6 kB/s eta 0:00:00
+#10 0.970 Installing collected packages: WTForms
+#10 1.034 Successfully installed WTForms-3.2.1
+#10 1.035 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.040 
+#10 1.040 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.040 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.1s
+
+#11 [7/8] RUN ["pip","install","wtforms-widgets"]
+#11 0.525 Collecting wtforms-widgets
+#11 0.562   Downloading wtforms_widgets-1.0.9-py3-none-any.whl.metadata (2.8 kB)
+#11 0.578 Requirement already satisfied: flask in /usr/local/lib/python3.11/site-packages (from wtforms-widgets) (3.1.2)
+#11 0.607 Collecting flask-wtf (from wtforms-widgets)
+#11 0.616   Downloading flask_wtf-1.2.2-py3-none-any.whl.metadata (3.4 kB)
+#11 0.632 Requirement already satisfied: markupsafe in /usr/local/lib/python3.11/site-packages (from wtforms-widgets) (3.0.3)
+#11 0.633 Requirement already satisfied: wtforms in /usr/local/lib/python3.11/site-packages (from wtforms-widgets) (3.2.1)
+#11 0.639 Requirement already satisfied: blinker>=1.9.0 in /usr/local/lib/python3.11/site-packages (from flask->wtforms-widgets) (1.9.0)
+#11 0.640 Requirement already satisfied: click>=8.1.3 in /usr/local/lib/python3.11/site-packages (from flask->wtforms-widgets) (8.3.0)
+#11 0.640 Requirement already satisfied: itsdangerous>=2.2.0 in /usr/local/lib/python3.11/site-packages (from flask->wtforms-widgets) (2.2.0)
+#11 0.641 Requirement already satisfied: jinja2>=3.1.2 in /usr/local/lib/python3.11/site-packages (from flask->wtforms-widgets) (3.1.6)
+#11 0.643 Requirement already satisfied: werkzeug>=3.1.0 in /usr/local/lib/python3.11/site-packages (from flask->wtforms-widgets) (3.1.3)
+#11 0.662 Downloading wtforms_widgets-1.0.9-py3-none-any.whl (14 kB)
+#11 0.685 Downloading flask_wtf-1.2.2-py3-none-any.whl (12 kB)
+#11 0.744 Installing collected packages: flask-wtf, wtforms-widgets
+#11 0.799 Successfully installed flask-wtf-1.2.2 wtforms-widgets-1.0.9
+#11 0.800 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.805 
+#11 0.805 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.805 [notice] To update, run: pip install --upgrade pip
+#11 DONE 0.9s
+
+#12 [8/8] RUN ["pip","install","wtforms-validators"]
+#12 0.528 Collecting wtforms-validators
+#12 0.562   Downloading wtforms_validators-1.0.0-py3-none-any.whl.metadata (3.4 kB)
+#12 0.575 Requirement already satisfied: WTForms in /usr/local/lib/python3.11/site-packages (from wtforms-validators) (3.2.1)
+#12 0.607 Collecting dnspython (from wtforms-validators)
+#12 0.615   Downloading dnspython-2.8.0-py3-none-any.whl.metadata (5.7 kB)
+#12 0.665 Collecting is-disposable-email (from wtforms-validators)
+#12 0.674   Downloading is_disposable_email-1.0.0-py3-none-any.whl.metadata (2.5 kB)
+#12 0.700 Requirement already satisfied: markupsafe in /usr/local/lib/python3.11/site-packages (from WTForms->wtforms-validators) (3.0.3)
+#12 0.808 Downloading wtforms_validators-1.0.0-py3-none-any.whl (4.7 kB)
+#12 0.834 Downloading dnspython-2.8.0-py3-none-any.whl (331 kB)
+#12 0.876    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 331.1/331.1 kB 8.0 MB/s eta 0:00:00
+#12 0.885 Downloading is_disposable_email-1.0.0-py3-none-any.whl (104 kB)
+#12 0.898    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 104.4/104.4 kB 8.3 MB/s eta 0:00:00
+#12 0.953 Installing collected packages: is-disposable-email, dnspython, wtforms-validators
+#12 1.188 Successfully installed dnspython-2.8.0 is-disposable-email-1.0.0 wtforms-validators-1.0.0
+#12 1.188 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 1.193 
+#12 1.193 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 1.193 [notice] To update, run: pip install --upgrade pip
+#12 DONE 1.3s
+
+#13 exporting to image
+#13 exporting layers
+#13 exporting layers 0.3s done
+#13 writing image sha256:ac88057485a361d2190278b042d445a0dee0fca1f2e8e40383a0aac933e061fa done
+#13 naming to docker.io/library/test-image-1590178 done
+#13 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/k0em74dj2qgykryzbh1ccnszb
+[2025-10-29 12:19:33] SUCCESS: Build completed for 1590178

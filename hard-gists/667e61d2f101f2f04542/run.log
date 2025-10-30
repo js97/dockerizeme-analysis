@@ -1,0 +1,16 @@
+=== Docker Run Log for 667e61d2f101f2f04542 ===
+Started at: Mi 29. Okt 16:41:28 CET 2025
+
+[2025-10-29 16:41:28] START: Running container for 667e61d2f101f2f04542
+[2025-10-29 16:41:28] SUCCESS: Container 1605148ca450ff3a45b6a52abe9d67decf3e92a698f0784c52efb02df1e699b0 started for 667e61d2f101f2f04542
+=== Container logs for 667e61d2f101f2f04542 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 12, in <module>
+    tk = tkinter.Tk()
+         ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/tkinter/__init__.py", line 2345, in __init__
+    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_tkinter.TclError: no display name and no $DISPLAY environment variable
+=== End of logs for 667e61d2f101f2f04542 ===
+[2025-10-29 16:41:30] INFO: Container 1605148ca450ff3a45b6a52abe9d67decf3e92a698f0784c52efb02df1e699b0 has stopped

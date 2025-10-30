@@ -1,0 +1,14 @@
+=== Docker Run Log for 5660363 ===
+Started at: Mi 29. Okt 15:51:01 CET 2025
+
+[2025-10-29 15:51:05] START: Running container for 5660363
+[2025-10-29 15:51:05] SUCCESS: Container d80adf001472baca9efb1f1ec481c1b57bcec2930cac58446ec716b74ae73363 started for 5660363
+=== Container logs for 5660363 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 3, in <module>
+    import RPi.GPIO as gpio
+  File "/usr/local/lib/python3.11/site-packages/RPi/GPIO/__init__.py", line 23, in <module>
+    from RPi._GPIO import *
+RuntimeError: This module can only be run on a Raspberry Pi!
+=== End of logs for 5660363 ===
+[2025-10-29 15:51:07] INFO: Container d80adf001472baca9efb1f1ec481c1b57bcec2930cac58446ec716b74ae73363 has stopped

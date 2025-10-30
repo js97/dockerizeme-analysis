@@ -1,0 +1,68 @@
+=== Docker Build Log for 8832970 ===
+Started at: Mi 29. Okt 18:02:54 CET 2025
+
+[2025-10-29 18:02:54] START: Building image for 8832970
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 195B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.64kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/8832970/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","scene"]
+#7 1.935 Collecting scene
+#7 1.982   Downloading scene-0.0.1.tar.gz (4.3 kB)
+#7 1.996   Preparing metadata (setup.py): started
+#7 2.383   Preparing metadata (setup.py): finished with status 'done'
+#7 2.385 Building wheels for collected packages: scene
+#7 2.385   Building wheel for scene (setup.py): started
+#7 2.553   Building wheel for scene (setup.py): finished with status 'done'
+#7 2.553   Created wheel for scene: filename=scene-0.0.1-py2.py3-none-any.whl size=3300 sha256=2da33589a7ee0586f871c83a1611326b0bbb493d37e4f772d3205d92740557fd
+#7 2.554   Stored in directory: /root/.cache/pip/wheels/8d/92/cb/ec23387ed573b50de008a60ab148d18dac724dd0e65cd18715
+#7 2.557 Successfully built scene
+#7 2.584 Installing collected packages: scene
+#7 2.598 Successfully installed scene-0.0.1
+#7 2.598 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.693 
+#7 2.693 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.693 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.9s
+
+#8 [4/4] RUN ["pip","install","pillow"]
+#8 0.695 Collecting pillow
+#8 0.730   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#8 0.763 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#8 1.050    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 24.7 MB/s eta 0:00:00
+#8 1.106 Installing collected packages: pillow
+#8 1.369 Successfully installed pillow-12.0.0
+#8 1.370 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.375 
+#8 1.375 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.375 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.6s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.2s done
+#9 writing image sha256:1bbadfe80a56e26212ea18c47210387bd4fe8917096c07ff052c566964717f71 done
+#9 naming to docker.io/library/test-image-8832970 0.0s done
+#9 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/q9x6cu9cg58forej8a8pet2vy
+[2025-10-29 18:02:59] SUCCESS: Build completed for 8832970

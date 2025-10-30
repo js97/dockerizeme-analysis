@@ -1,0 +1,90 @@
+=== Docker Build Log for 4603234 ===
+Started at: Mi 29. Okt 14:54:39 CET 2025
+
+[2025-10-29 14:54:39] START: Building image for 4603234
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 194B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/python:3.11
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 5.21kB 0.0s done
+#5 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/python:3.11
+#4 CACHED
+
+#6 [2/4] COPY hard-gists/4603234/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","image"]
+#7 2.262 Collecting image
+#7 2.298   Downloading image-1.5.33.tar.gz (15 kB)
+#7 2.314   Preparing metadata (setup.py): started
+#7 2.711   Preparing metadata (setup.py): finished with status 'done'
+#7 2.912 Collecting pillow (from image)
+#7 2.920   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#7 3.027 Collecting django (from image)
+#7 3.035   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 3.073 Collecting six (from image)
+#7 3.081   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 3.129 Collecting asgiref>=3.8.1 (from django->image)
+#7 3.138   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 3.179 Collecting sqlparse>=0.3.1 (from django->image)
+#7 3.187   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 3.235 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.572    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 24.8 MB/s eta 0:00:00
+#7 3.583 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#7 3.870    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 24.7 MB/s eta 0:00:00
+#7 3.879 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.898 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.915 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.927    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.4 MB/s eta 0:00:00
+#7 3.996 Building wheels for collected packages: image
+#7 3.996   Building wheel for image (setup.py): started
+#7 4.176   Building wheel for image (setup.py): finished with status 'done'
+#7 4.177   Created wheel for image: filename=image-1.5.33-py2.py3-none-any.whl size=19554 sha256=331cd6e4a5781c198d5404ce3f9e7fcac6cab61a745309bdb07beb5875feaa56
+#7 4.177   Stored in directory: /root/.cache/pip/wheels/62/40/4f/3c9a8d0f22a1a6f966975a460e5cb509a1e7dc42e2ce5d9a6d
+#7 4.179 Successfully built image
+#7 4.246 Installing collected packages: sqlparse, six, pillow, asgiref, django, image
+#7 5.926 Successfully installed asgiref-3.10.0 django-5.2.7 image-1.5.33 pillow-12.0.0 six-1.17.0 sqlparse-0.5.3
+#7 5.927 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 6.018 
+#7 6.018 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 6.018 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.7s
+
+#8 [4/4] RUN ["pip","install","numpy"]
+#8 0.710 Collecting numpy
+#8 0.753   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 0.773      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 3.0 MB/s eta 0:00:00
+#8 0.793 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#8 1.500    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 21.1 MB/s eta 0:00:00
+#8 1.595 Installing collected packages: numpy
+#8 3.060 Successfully installed numpy-2.3.4
+#8 3.060 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 3.066 
+#8 3.066 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.066 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.6s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.8s done
+#9 writing image sha256:d5026d96a94ec1ef40e06852dc8eaec751bf2b2945fa4d476523830d4156bbde done
+#9 naming to docker.io/library/test-image-4603234 done
+#9 DONE 0.9s
+
+View build details: docker-desktop://dashboard/build/default/default/0u5n13liwmoc2m2c2v1yncrvq
+[2025-10-29 14:54:51] SUCCESS: Build completed for 4603234

@@ -1,0 +1,182 @@
+=== Docker Build Log for 1638695 ===
+Started at: Mi 29. Okt 12:21:29 CET 2025
+
+[2025-10-29 12:21:29] START: Building image for 1638695
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 645B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 942B 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/17] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/17] COPY hard-gists/1638695/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/17] RUN ["pip","install","url"]
+#7 1.963 Collecting url
+#7 2.006   Downloading url-0.4.2.tar.gz (140 kB)
+#7 2.035      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 140.9/140.9 kB 4.8 MB/s eta 0:00:00
+#7 2.043   Preparing metadata (setup.py): started
+#7 2.435   Preparing metadata (setup.py): finished with status 'done'
+#7 2.468 Collecting six (from url)
+#7 2.477   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.499 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.515 Building wheels for collected packages: url
+#7 2.515   Building wheel for url (setup.py): started
+#7 2.964   Building wheel for url (setup.py): finished with status 'error'
+#7 2.970   error: subprocess-exited-with-error
+#7 2.970   
+#7 2.970   × python setup.py bdist_wheel did not run successfully.
+#7 2.970   │ exit code: 1
+#7 2.970   ╰─> [102 lines of output]
+#7 2.970       Building from C++
+#7 2.970       /usr/local/lib/python3.11/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+#7 2.970         warnings.warn(msg)
+#7 2.970       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:599: SetuptoolsDeprecationWarning: Invalid dash-separated key 'description-file' in 'metadata' (setup.cfg), please use the underscore name 'description_file' instead.
+#7 2.970       !!
+#7 2.970       
+#7 2.970               ********************************************************************************
+#7 2.970               Usage of dash-separated 'description-file' will not be supported in future
+#7 2.970               versions. Please use the underscore name 'description_file' instead.
+#7 2.970               (Affected: url).
+#7 2.970       
+#7 2.970               By 2026-Mar-03, you need to update your project and remove deprecated calls
+#7 2.970               or your builds will no longer be supported.
+#7 2.970       
+#7 2.970               See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+#7 2.970               ********************************************************************************
+#7 2.970       
+#7 2.970       !!
+#7 2.970         opt = self._enforce_underscore(opt, section)
+#7 2.970       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+#7 2.970       !!
+#7 2.970       
+#7 2.970               ********************************************************************************
+#7 2.970               Please consider removing the following classifiers in favor of a SPDX license expression:
+#7 2.970       
+#7 2.970               License :: OSI Approved :: MIT License
+#7 2.970       
+#7 2.970               See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+#7 2.970               ********************************************************************************
+#7 2.970       
+#7 2.970       !!
+#7 2.970         self._finalize_license_expression()
+#7 2.970       In file included from url/url-cpp/include/punycode.h:10,
+#7 2.970                        from url/url-cpp/src/psl.cpp:7:
+#7 2.970       url/url-cpp/include/utf8.h:19:17: error: ‘uint32_t’ does not name a type
+#7 2.970          19 |         typedef uint32_t codepoint_t;
+#7 2.970             |                 ^~~~~~~~
+#7 2.970       url/url-cpp/include/utf8.h:1:1: note: ‘uint32_t’ is defined in header ‘<cstdint>’; this is probably fixable by adding ‘#include <cstdint>’
+#7 2.970         +++ |+#include <cstdint>
+#7 2.970           1 | #ifndef UTF8_CPP_H
+#7 2.970       url/url-cpp/include/utf8.h:29:22: error: ‘codepoint_t’ does not name a type
+#7 2.970          29 |         static const codepoint_t MAX_CODEPOINT = 0x10FFFF;
+#7 2.970             |                      ^~~~~~~~~~~
+#7 2.970       url/url-cpp/include/utf8.h:34:16: error: ‘codepoint_t’ does not name a type
+#7 2.970          34 |         static codepoint_t readCodepoint(
+#7 2.970             |                ^~~~~~~~~~~
+#7 2.970       url/url-cpp/include/utf8.h:40:62: error: ‘codepoint_t’ has not been declared
+#7 2.970          40 |         static std::string& writeCodepoint(std::string& str, codepoint_t value);
+#7 2.970             |                                                              ^~~~~~~~~~~
+#7 2.970       url/url-cpp/include/utf8.h:45:16: error: ‘codepoint_t’ does not name a type
+#7 2.970          45 |         static codepoint_t toCodepoint(const std::string& str)
+#7 2.970             |                ^~~~~~~~~~~
+#7 2.970       url/url-cpp/include/utf8.h:54:42: error: ‘codepoint_t’ has not been declared
+#7 2.970          54 |         static std::string fromCodepoint(codepoint_t value)
+#7 2.970             |                                          ^~~~~~~~~~~
+#7 2.970       url/url-cpp/include/utf8.h:64:28: error: ‘codepoint_t’ was not declared in this scope
+#7 2.970          64 |         static std::vector<codepoint_t> toCodepoints(const std::string& str)
+#7 2.970             |                            ^~~~~~~~~~~
+#7 2.970       url/url-cpp/include/utf8.h:64:39: error: template argument 1 is invalid
+#7 2.970          64 |         static std::vector<codepoint_t> toCodepoints(const std::string& str)
+#7 2.970             |                                       ^
+#7 2.970       url/url-cpp/include/utf8.h:64:39: error: template argument 2 is invalid
+#7 2.970       url/url-cpp/include/utf8.h:77:61: error: ‘codepoint_t’ was not declared in this scope
+#7 2.970          77 |         static std::string fromCodepoints(const std::vector<codepoint_t>& points)
+#7 2.970             |                                                             ^~~~~~~~~~~
+#7 2.970       url/url-cpp/include/utf8.h:77:72: error: template argument 1 is invalid
+#7 2.970          77 |         static std::string fromCodepoints(const std::vector<codepoint_t>& points)
+#7 2.970             |                                                                        ^
+#7 2.970       url/url-cpp/include/utf8.h:77:72: error: template argument 2 is invalid
+#7 2.970       url/url-cpp/include/utf8.h: In static member function ‘static int Url::Utf8::toCodepoints(const std::string&)’:
+#7 2.970       url/url-cpp/include/utf8.h:66:25: error: ‘codepoint_t’ was not declared in this scope
+#7 2.970          66 |             std::vector<codepoint_t> result;
+#7 2.970             |                         ^~~~~~~~~~~
+#7 2.970       url/url-cpp/include/utf8.h:66:36: error: template argument 1 is invalid
+#7 2.970          66 |             std::vector<codepoint_t> result;
+#7 2.970             |                                    ^
+#7 2.970       url/url-cpp/include/utf8.h:66:36: error: template argument 2 is invalid
+#7 2.970       url/url-cpp/include/utf8.h:69:24: error: request for member ‘push_back’ in ‘result’, which is of non-class type ‘int’
+#7 2.970          69 |                 result.push_back(readCodepoint(it, str.end()));
+#7 2.970             |                        ^~~~~~~~~
+#7 2.970       url/url-cpp/include/utf8.h:69:34: error: ‘readCodepoint’ was not declared in this scope; did you mean ‘writeCodepoint’?
+#7 2.970          69 |                 result.push_back(readCodepoint(it, str.end()));
+#7 2.970             |                                  ^~~~~~~~~~~~~
+#7 2.970             |                                  writeCodepoint
+#7 2.970       url/url-cpp/include/utf8.h: In static member function ‘static std::string Url::Utf8::fromCodepoints(const int&)’:
+#7 2.970       url/url-cpp/include/utf8.h:80:35: error: request for member ‘begin’ in ‘points’, which is of non-class type ‘const int’
+#7 2.970          80 |             for (auto it = points.begin(); it != points.end(); ++it)
+#7 2.970             |                                   ^~~~~
+#7 2.970       url/url-cpp/include/utf8.h:80:57: error: request for member ‘end’ in ‘points’, which is of non-class type ‘const int’
+#7 2.970          80 |             for (auto it = points.begin(); it != points.end(); ++it)
+#7 2.970             |                                                         ^~~
+#7 2.970       url/url-cpp/include/punycode.h: At global scope:
+#7 2.970       url/url-cpp/include/punycode.h:17:23: error: ‘codepoint_t’ in ‘struct Url::Utf8’ does not name a type
+#7 2.970          17 |         typedef Utf8::codepoint_t punycode_uint;
+#7 2.970             |                       ^~~~~~~~~~~
+#7 2.970       url/url-cpp/include/punycode.h:56:15: error: ‘punycode_uint’ does not name a type
+#7 2.970          56 |         const punycode_uint MAX_PUNYCODE_UINT = std::numeric_limits<punycode_uint>::max();
+#7 2.970             |               ^~~~~~~~~~~~~
+#7 2.970       url/url-cpp/include/punycode.h:98:9: error: ‘punycode_uint’ does not name a type
+#7 2.970          98 |         punycode_uint adapt(
+#7 2.970             |         ^~~~~~~~~~~~~
+#7 2.970       error: command '/usr/bin/g++' failed with exit code 1
+#7 2.970       [end of output]
+#7 2.970   
+#7 2.970   note: This error originates from a subprocess, and is likely not a problem with pip.
+#7 2.971   ERROR: Failed building wheel for url
+#7 2.971   Running setup.py clean for url
+#7 3.072 Failed to build url
+#7 3.072 ERROR: Could not build wheels for url, which is required to install pyproject.toml-based projects
+#7 3.169 
+#7 3.169 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.169 [notice] To update, run: pip install --upgrade pip
+#7 ERROR: process "pip install url" did not complete successfully: exit code: 1
+------
+ > [ 3/17] RUN ["pip","install","url"]:
+2.970       [end of output]
+2.970   
+2.970   note: This error originates from a subprocess, and is likely not a problem with pip.
+2.971   ERROR: Failed building wheel for url
+2.971   Running setup.py clean for url
+3.072 Failed to build url
+3.072 ERROR: Could not build wheels for url, which is required to install pyproject.toml-based projects
+3.169 
+3.169 [notice] A new release of pip is available: 24.0 -> 25.3
+3.169 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:3
+--------------------
+   1 |     FROM python:3.11
+   2 |     COPY hard-gists/1638695/snippet.py /snippet.py
+   3 | >>> RUN ["pip","install","url"]
+   4 |     RUN ["pip","install","webvirtmgr"]
+   5 |     RUN ["pip","install","psycopg2"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install url" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/ne8380pds9lo2n8zx9cezonmi
+[2025-10-29 12:21:33] ERROR: Build failed for 1638695

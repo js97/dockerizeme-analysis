@@ -1,0 +1,14 @@
+=== Docker Run Log for 5872584 ===
+Started at: Mi 29. Okt 16:08:05 CET 2025
+
+[2025-10-29 16:08:41] START: Running container for 5872584
+[2025-10-29 16:08:41] SUCCESS: Container d8615047d5cbcaa0fb4ffe71e39c8c625ddcb37d7b97bc3fd489287884709bec started for 5872584
+=== Container logs for 5872584 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 5, in <module>
+    from flask_script import Manager
+  File "/usr/local/lib/python3.11/site-packages/flask_script/__init__.py", line 15, in <module>
+    from flask._compat import text_type
+ModuleNotFoundError: No module named 'flask._compat'
+=== End of logs for 5872584 ===
+[2025-10-29 16:08:43] INFO: Container d8615047d5cbcaa0fb4ffe71e39c8c625ddcb37d7b97bc3fd489287884709bec has stopped

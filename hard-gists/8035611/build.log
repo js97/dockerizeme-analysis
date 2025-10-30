@@ -1,0 +1,161 @@
+=== Docker Build Log for 8035611 ===
+Started at: Mi 29. Okt 17:36:10 CET 2025
+
+[2025-10-29 17:36:10] START: Building image for 8035611
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 285B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.10kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/8035611/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","six"]
+#7 1.891 Collecting six
+#7 1.932   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 1.951 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 1.992 Installing collected packages: six
+#7 2.008 Successfully installed six-1.17.0
+#7 2.008 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.096 
+#7 2.096 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.096 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.2s
+
+#8 [4/7] RUN ["pip","install","pytest"]
+#8 0.546 Collecting pytest
+#8 0.581   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#8 0.623 Collecting iniconfig>=1 (from pytest)
+#8 0.632   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#8 0.680 Collecting packaging>=20 (from pytest)
+#8 0.690   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.731 Collecting pluggy<2,>=1.5 (from pytest)
+#8 0.740   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#8 0.785 Collecting pygments>=2.7.2 (from pytest)
+#8 0.793   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#8 0.822 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#8 0.859    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 10.2 MB/s eta 0:00:00
+#8 0.867 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#8 0.885 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 0.895    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 6.3 MB/s eta 0:00:00
+#8 0.903 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#8 0.921 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#8 0.970    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 25.3 MB/s eta 0:00:00
+#8 1.020 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#8 1.724 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#8 1.724 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.729 
+#8 1.729 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.729 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.9s
+
+#9 [5/7] RUN ["pip","install","py"]
+#9 0.530 Collecting py
+#9 0.565   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#9 0.590 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#9 0.626    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.7 MB/s eta 0:00:00
+#9 0.669 Installing collected packages: py
+#9 0.747 Successfully installed py-1.11.0
+#9 0.747 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.752 
+#9 0.752 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.752 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.8s
+
+#10 [6/7] RUN ["pip","install","requests"]
+#10 0.552 Collecting requests
+#10 0.586   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#10 0.722 Collecting charset_normalizer<4,>=2 (from requests)
+#10 0.732   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#10 0.784 Collecting idna<4,>=2.5 (from requests)
+#10 0.793   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#10 0.854 Collecting urllib3<3,>=1.21.1 (from requests)
+#10 0.863   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#10 0.915 Collecting certifi>=2017.4.17 (from requests)
+#10 0.930   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#10 0.961 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#10 0.994    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 1.8 MB/s eta 0:00:00
+#10 1.003 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#10 1.022    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.1 MB/s eta 0:00:00
+#10 1.032 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#10 1.048    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.2 MB/s eta 0:00:00
+#10 1.057 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#10 1.073    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.2 MB/s eta 0:00:00
+#10 1.086 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#10 1.100    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.9 MB/s eta 0:00:00
+#10 1.158 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#10 1.404 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#10 1.405 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.410 
+#10 1.410 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.410 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.5s
+
+#11 [7/7] RUN ["pip","install","pyramid"]
+#11 0.659 Collecting pyramid
+#11 0.697   Downloading pyramid-2.0.2-py3-none-any.whl.metadata (20 kB)
+#11 0.772 Collecting hupper>=1.5 (from pyramid)
+#11 0.808   Downloading hupper-1.12.1-py3-none-any.whl.metadata (3.7 kB)
+#11 0.953 Collecting plaster (from pyramid)
+#11 0.964   Downloading plaster-1.1.2-py2.py3-none-any.whl.metadata (6.4 kB)
+#11 1.118 Collecting plaster-pastedeploy (from pyramid)
+#11 1.128   Downloading plaster_pastedeploy-1.0.1-py2.py3-none-any.whl.metadata (8.1 kB)
+#11 1.139 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from pyramid) (79.0.1)
+#11 1.275 Collecting translationstring>=0.4 (from pyramid)
+#11 1.285   Downloading translationstring-1.4-py2.py3-none-any.whl.metadata (4.1 kB)
+#11 1.432 Collecting venusian>=1.0 (from pyramid)
+#11 1.443   Downloading venusian-3.1.1-py3-none-any.whl.metadata (10 kB)
+#11 1.491 Collecting webob>=1.8.3 (from pyramid)
+#11 1.501   Downloading WebOb-1.8.9-py2.py3-none-any.whl.metadata (11 kB)
+#11 1.658 Collecting zope.deprecation>=3.5.0 (from pyramid)
+#11 1.669   Downloading zope_deprecation-6.0-py3-none-any.whl.metadata (5.5 kB)
+#11 1.808 Collecting zope.interface>=3.8.0 (from pyramid)
+#11 1.819   Downloading zope_interface-8.0.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (44 kB)
+#11 1.832      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.9/44.9 kB 3.0 MB/s eta 0:00:00
+#11 1.888 Collecting PasteDeploy>=2.0 (from plaster-pastedeploy->pyramid)
+#11 1.898   Downloading PasteDeploy-3.1.0-py3-none-any.whl.metadata (2.7 kB)
+#11 1.948 Downloading pyramid-2.0.2-py3-none-any.whl (247 kB)
+#11 1.978    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.3/247.3 kB 8.4 MB/s eta 0:00:00
+#11 1.990 Downloading hupper-1.12.1-py3-none-any.whl (22 kB)
+#11 2.014 Downloading translationstring-1.4-py2.py3-none-any.whl (15 kB)
+#11 2.035 Downloading venusian-3.1.1-py3-none-any.whl (14 kB)
+#11 2.060 Downloading WebOb-1.8.9-py2.py3-none-any.whl (115 kB)
+#11 2.078    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 115.4/115.4 kB 6.3 MB/s eta 0:00:00
+#11 2.088 Downloading zope_deprecation-6.0-py3-none-any.whl (9.5 kB)
+#11 2.133 Downloading zope_interface-8.0.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (259 kB)
+#11 2.155    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 259.8/259.8 kB 12.4 MB/s eta 0:00:00
+#11 2.164 Downloading plaster-1.1.2-py2.py3-none-any.whl (11 kB)
+#11 2.190 Downloading plaster_pastedeploy-1.0.1-py2.py3-none-any.whl (7.8 kB)
+#11 2.213 Downloading PasteDeploy-3.1.0-py3-none-any.whl (16 kB)
+#11 2.331 Installing collected packages: translationstring, zope.interface, zope.deprecation, webob, venusian, plaster, PasteDeploy, hupper, plaster-pastedeploy, pyramid
+#11 2.730 Successfully installed PasteDeploy-3.1.0 hupper-1.12.1 plaster-1.1.2 plaster-pastedeploy-1.0.1 pyramid-2.0.2 translationstring-1.4 venusian-3.1.1 webob-1.8.9 zope.deprecation-6.0 zope.interface-8.0.1
+#11 2.730 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 2.735 
+#11 2.735 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 2.735 [notice] To update, run: pip install --upgrade pip
+#11 DONE 2.9s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.2s done
+#12 writing image sha256:2023cf87e988b56c2f6b7aef75152b2e56fe2546bc37b00ed3bd35bf1797386d done
+#12 naming to docker.io/library/test-image-8035611 done
+#12 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/y0yofdbln1luek8qyxyo8fyj4
+[2025-10-29 17:36:20] SUCCESS: Build completed for 8035611

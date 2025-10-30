@@ -1,0 +1,39 @@
+=== Docker Run Log for b0eae211db963fe56c0c55773e6a16c0 ===
+Started at: Mi 29. Okt 19:23:52 CET 2025
+
+[2025-10-29 19:24:11] START: Running container for b0eae211db963fe56c0c55773e6a16c0
+[2025-10-29 19:24:11] SUCCESS: Container 83b9ae8ab51dd19e6bdf0671e3fcd7db7cae16b379db66c668c50eed4b4b63cf started for b0eae211db963fe56c0c55773e6a16c0
+=== Container logs for b0eae211db963fe56c0c55773e6a16c0 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 6, in <module>
+    from push_notifications.api import rest_framework
+  File "/usr/local/lib/python3.11/site-packages/push_notifications/api/rest_framework.py", line 5, in <module>
+    from rest_framework.viewsets import ModelViewSet
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/viewsets.py", line 27, in <module>
+    from rest_framework import generics, mixins, views
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/generics.py", line 9, in <module>
+    from rest_framework import mixins, views
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 18, in <module>
+    from rest_framework.schemas import DefaultSchema
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/schemas/__init__.py", line 25, in <module>
+    from . import coreapi, openapi
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/schemas/openapi.py", line 14, in <module>
+    from rest_framework import exceptions, renderers, serializers
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/renderers.py", line 56, in <module>
+    class JSONRenderer(BaseRenderer):
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/renderers.py", line 63, in JSONRenderer
+    ensure_ascii = not api_settings.UNICODE_JSON
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/settings.py", line 220, in __getattr__
+    val = self.user_settings[attr]
+          ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/settings.py", line 211, in user_settings
+    self._user_settings = getattr(settings, 'REST_FRAMEWORK', {})
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting REST_FRAMEWORK, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for b0eae211db963fe56c0c55773e6a16c0 ===
+[2025-10-29 19:24:13] INFO: Container 83b9ae8ab51dd19e6bdf0671e3fcd7db7cae16b379db66c668c50eed4b4b63cf has stopped

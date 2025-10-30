@@ -1,0 +1,141 @@
+=== Docker Build Log for a003ace716c278ab87669f2fbd37727b ===
+Started at: Mi 29. Okt 18:49:41 CET 2025
+
+[2025-10-29 18:49:41] START: Building image for a003ace716c278ab87669f2fbd37727b
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 341B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.24kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/8] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/8] COPY hard-gists/a003ace716c278ab87669f2fbd37727b/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/8] RUN ["pip","install","the"]
+#7 1.910 Collecting the
+#7 1.952   Downloading the-0.1.5.tar.gz (10 kB)
+#7 1.966   Preparing metadata (setup.py): started
+#7 2.357   Preparing metadata (setup.py): finished with status 'done'
+#7 2.359 Building wheels for collected packages: the
+#7 2.360   Building wheel for the (setup.py): started
+#7 2.524   Building wheel for the (setup.py): finished with status 'done'
+#7 2.525   Created wheel for the: filename=the-0.1.5-py3-none-any.whl size=6027 sha256=fcd6b0f19c4313e1bcc4d17071b728463f626091a49934d7224498b556e85ff2
+#7 2.525   Stored in directory: /root/.cache/pip/wheels/5a/02/15/82fa3d852099cde5adb558437baaa511bc9ad4a7febdae2ecb
+#7 2.528 Successfully built the
+#7 2.556 Installing collected packages: the
+#7 2.571 Successfully installed the-0.1.5
+#7 2.571 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.665 
+#7 2.665 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.665 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.9s
+
+#8 [4/8] RUN ["pip","install","Lasagne"]
+#8 0.612 Collecting Lasagne
+#8 0.649   Downloading Lasagne-0.1.tar.gz (125 kB)
+#8 0.685      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.1/125.1 kB 3.9 MB/s eta 0:00:00
+#8 0.700   Preparing metadata (setup.py): started
+#8 0.812   Preparing metadata (setup.py): finished with status 'done'
+#8 1.038 Collecting numpy (from Lasagne)
+#8 1.078   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 1.098      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.9 MB/s eta 0:00:00
+#8 1.118 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#8 2.491    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 11.5 MB/s eta 0:00:00
+#8 2.529 Building wheels for collected packages: Lasagne
+#8 2.536   Building wheel for Lasagne (setup.py): started
+#8 2.686   Building wheel for Lasagne (setup.py): finished with status 'done'
+#8 2.687   Created wheel for Lasagne: filename=lasagne-0.1-py3-none-any.whl size=79359 sha256=219d04be4d6cd1e55a1ed307d24043fb158fd36c12ec2175f22a05ea48e193e8
+#8 2.687   Stored in directory: /root/.cache/pip/wheels/4e/ad/d7/6376b7842a2d4635bb42a9889ef94b6de55291916efa1952e9
+#8 2.689 Successfully built Lasagne
+#8 2.727 Installing collected packages: numpy, Lasagne
+#8 4.166 Successfully installed Lasagne-0.1 numpy-2.3.4
+#8 4.166 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 4.171 
+#8 4.171 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 4.171 [notice] To update, run: pip install --upgrade pip
+#8 DONE 5.0s
+
+#9 [5/8] RUN ["pip","install","PyYAML"]
+#9 0.606 Collecting PyYAML
+#9 0.651   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#9 0.677 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#9 0.785    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 7.5 MB/s eta 0:00:00
+#9 0.828 Installing collected packages: PyYAML
+#9 0.896 Successfully installed PyYAML-6.0.3
+#9 0.897 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.902 
+#9 0.902 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.902 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.0s
+
+#10 [6/8] RUN ["pip","install","numpy"]
+#10 0.449 Requirement already satisfied: numpy in /usr/local/lib/python3.11/site-packages (2.3.4)
+#10 0.490 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.495 
+#10 0.495 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.495 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.6s
+
+#11 [7/8] RUN ["pip","install","scipy"]
+#11 0.636 Collecting scipy
+#11 0.691   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#11 0.726      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 1.7 MB/s eta 0:00:00
+#11 0.756 Requirement already satisfied: numpy<2.6,>=1.25.2 in /usr/local/lib/python3.11/site-packages (from scipy) (2.3.4)
+#11 0.801 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#11 4.162    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 9.7 MB/s eta 0:00:00
+#11 4.301 Installing collected packages: scipy
+#11 6.923 Successfully installed scipy-1.16.3
+#11 6.923 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 6.928 
+#11 6.928 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 6.928 [notice] To update, run: pip install --upgrade pip
+#11 DONE 8.4s
+
+#12 [8/8] RUN ["pip","install","Theano"]
+#12 0.517 Collecting Theano
+#12 0.560   Downloading Theano-1.0.5.tar.gz (2.8 MB)
+#12 0.773      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.8/2.8 MB 13.4 MB/s eta 0:00:00
+#12 0.914   Preparing metadata (setup.py): started
+#12 1.083   Preparing metadata (setup.py): finished with status 'done'
+#12 1.093 Requirement already satisfied: numpy>=1.9.1 in /usr/local/lib/python3.11/site-packages (from Theano) (2.3.4)
+#12 1.098 Requirement already satisfied: scipy>=0.14 in /usr/local/lib/python3.11/site-packages (from Theano) (1.16.3)
+#12 1.128 Collecting six>=1.9.0 (from Theano)
+#12 1.136   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#12 1.182 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#12 1.195 Building wheels for collected packages: Theano
+#12 1.200   Building wheel for Theano (setup.py): started
+#12 1.871   Building wheel for Theano (setup.py): finished with status 'done'
+#12 1.877   Created wheel for Theano: filename=theano-1.0.5-py3-none-any.whl size=2668205 sha256=9e531935c80c3341b4157af20932b1ed6d28157088b468e9c3ece90775b4fbef
+#12 1.877   Stored in directory: /root/.cache/pip/wheels/26/1f/2f/02d738022626461828148150c0354e712c4ad74f1a60f10933
+#12 1.880 Successfully built Theano
+#12 1.945 Installing collected packages: six, Theano
+#12 2.966 Successfully installed Theano-1.0.5 six-1.17.0
+#12 2.967 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 2.972 
+#12 2.972 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 2.972 [notice] To update, run: pip install --upgrade pip
+#12 DONE 3.3s
+
+#13 exporting to image
+#13 exporting layers
+#13 exporting layers 0.7s done
+#13 writing image sha256:bc22a0e9cf77784ce8aab1160d22c63a9d659011c31b3b3e72871b17f74f9611 done
+#13 naming to docker.io/library/test-image-a003ace716c278ab87669f2fbd37727b done
+#13 DONE 0.8s
+
+View build details: docker-desktop://dashboard/build/default/default/5h6tnpfxi1bwl866bup3qk2xc
+[2025-10-29 18:50:03] SUCCESS: Build completed for a003ace716c278ab87669f2fbd37727b

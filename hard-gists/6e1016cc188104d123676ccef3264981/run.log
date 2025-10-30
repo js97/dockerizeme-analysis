@@ -1,0 +1,50 @@
+=== Docker Run Log for 6e1016cc188104d123676ccef3264981 ===
+Started at: Mi 29. Okt 16:51:35 CET 2025
+
+[2025-10-29 16:51:48] START: Running container for 6e1016cc188104d123676ccef3264981
+[2025-10-29 16:51:49] SUCCESS: Container d565e8b6846e2f9a1c853156e8430009fed0db2578cd8b3d13e726361cc76988 started for 6e1016cc188104d123676ccef3264981
+=== Container logs for 6e1016cc188104d123676ccef3264981 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 1, in <module>
+    from keras.utils import conv_utils
+  File "/usr/local/lib/python3.11/site-packages/keras/__init__.py", line 7, in <module>
+    from keras import _tf_keras as _tf_keras
+  File "/usr/local/lib/python3.11/site-packages/keras/_tf_keras/__init__.py", line 1, in <module>
+    from keras._tf_keras import keras
+  File "/usr/local/lib/python3.11/site-packages/keras/_tf_keras/keras/__init__.py", line 7, in <module>
+    from keras import activations as activations
+  File "/usr/local/lib/python3.11/site-packages/keras/activations/__init__.py", line 7, in <module>
+    from keras.src.activations import deserialize as deserialize
+  File "/usr/local/lib/python3.11/site-packages/keras/src/__init__.py", line 1, in <module>
+    from keras.src import activations
+  File "/usr/local/lib/python3.11/site-packages/keras/src/activations/__init__.py", line 3, in <module>
+    from keras.src.activations.activations import celu
+  File "/usr/local/lib/python3.11/site-packages/keras/src/activations/activations.py", line 1, in <module>
+    from keras.src import backend
+  File "/usr/local/lib/python3.11/site-packages/keras/src/backend/__init__.py", line 1, in <module>
+    from keras.src.backend.config import backend
+  File "/usr/local/lib/python3.11/site-packages/keras/src/backend/config.py", line 448, in <module>
+    set_nnx_enabled(_NNX_ENABLED)
+  File "/usr/local/lib/python3.11/site-packages/keras/src/backend/config.py", line 249, in set_nnx_enabled
+    from keras.src.backend.common import global_state
+  File "/usr/local/lib/python3.11/site-packages/keras/src/backend/common/__init__.py", line 2, in <module>
+    from keras.src.backend.common.dtypes import result_type
+  File "/usr/local/lib/python3.11/site-packages/keras/src/backend/common/dtypes.py", line 5, in <module>
+    from keras.src.backend.common.variables import standardize_dtype
+  File "/usr/local/lib/python3.11/site-packages/keras/src/backend/common/variables.py", line 11, in <module>
+    from keras.src.utils.module_utils import tensorflow as tf
+  File "/usr/local/lib/python3.11/site-packages/keras/src/utils/__init__.py", line 1, in <module>
+    from keras.src.utils.audio_dataset_utils import audio_dataset_from_directory
+  File "/usr/local/lib/python3.11/site-packages/keras/src/utils/audio_dataset_utils.py", line 4, in <module>
+    from keras.src.utils import dataset_utils
+  File "/usr/local/lib/python3.11/site-packages/keras/src/utils/dataset_utils.py", line 10, in <module>
+    from keras.src import tree
+  File "/usr/local/lib/python3.11/site-packages/keras/src/tree/__init__.py", line 1, in <module>
+    from keras.src.tree.tree_api import assert_same_paths
+  File "/usr/local/lib/python3.11/site-packages/keras/src/tree/tree_api.py", line 13, in <module>
+    from keras.src.tree import optree_impl as tree_impl
+  File "/usr/local/lib/python3.11/site-packages/keras/src/tree/optree_impl.py", line 13, in <module>
+    from tensorflow.python.trackable.data_structures import ListWrapper
+ModuleNotFoundError: No module named 'tensorflow'
+=== End of logs for 6e1016cc188104d123676ccef3264981 ===
+[2025-10-29 16:51:51] INFO: Container d565e8b6846e2f9a1c853156e8430009fed0db2578cd8b3d13e726361cc76988 has stopped

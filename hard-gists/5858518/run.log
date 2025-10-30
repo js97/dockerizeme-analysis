@@ -1,0 +1,12 @@
+=== Docker Run Log for 5858518 ===
+Started at: Mi 29. Okt 16:06:15 CET 2025
+
+[2025-10-29 16:06:29] START: Running container for 5858518
+[2025-10-29 16:06:29] SUCCESS: Container aecaad1e6d81a087165af2599b29db0f375c8b335244db14136cf3d75edf91a1 started for 5858518
+=== Container logs for 5858518 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 11, in <module>
+    from celery import task
+ImportError: cannot import name 'task' from 'celery' (/usr/local/lib/python3.11/site-packages/celery/__init__.py)
+=== End of logs for 5858518 ===
+[2025-10-29 16:06:31] INFO: Container aecaad1e6d81a087165af2599b29db0f375c8b335244db14136cf3d75edf91a1 has stopped

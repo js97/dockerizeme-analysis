@@ -1,0 +1,19 @@
+=== Docker Run Log for 6194556 ===
+Started at: Mi 29. Okt 16:24:09 CET 2025
+
+[2025-10-29 16:24:09] START: Running container for 6194556
+[2025-10-29 16:24:09] SUCCESS: Container 7492980e41a65ea08e7e8caf1d53c4855840a658829af7ace6750a7ad610d6ef started for 6194556
+=== Container logs for 6194556 ===
+/snippet.py:23: DeprecationWarning: ssl.PROTOCOL_TLS is deprecated
+  ctx = ssl.SSLContext(ssl.PROTOCOL_SSLv23)
+Traceback (most recent call last):
+  File "/snippet.py", line 38, in <module>
+    test()
+  File "/snippet.py", line 32, in test
+    httpd = ServerClass(server_address, HandlerClass)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 24, in __init__
+    ctx.load_cert_chain(certfile=CERT, keyfile=KEY)
+FileNotFoundError: [Errno 2] No such file or directory
+=== End of logs for 6194556 ===
+[2025-10-29 16:24:11] INFO: Container 7492980e41a65ea08e7e8caf1d53c4855840a658829af7ace6750a7ad610d6ef has stopped

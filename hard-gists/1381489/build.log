@@ -1,0 +1,111 @@
+=== Docker Build Log for 1381489 ===
+Started at: Mi 29. Okt 12:11:44 CET 2025
+
+[2025-10-29 12:11:44] START: Building image for 1381489
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 191B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.37kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/1381489/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","maya"]
+#7 1.963 Collecting maya
+#7 1.998   Downloading maya-0.6.1-py2.py3-none-any.whl.metadata (7.1 kB)
+#7 2.049 Collecting humanize (from maya)
+#7 2.057   Downloading humanize-4.14.0-py3-none-any.whl.metadata (7.8 kB)
+#7 2.133 Collecting pytz (from maya)
+#7 2.142   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#7 2.183 Collecting dateparser>=0.7.0 (from maya)
+#7 2.192   Downloading dateparser-1.2.2-py3-none-any.whl.metadata (29 kB)
+#7 2.234 Collecting tzlocal (from maya)
+#7 2.242   Downloading tzlocal-5.3.1-py3-none-any.whl.metadata (7.6 kB)
+#7 2.310 Collecting pendulum>=2.0.2 (from maya)
+#7 2.319   Downloading pendulum-3.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#7 2.354 Collecting snaptime (from maya)
+#7 2.362   Downloading snaptime-0.2.4.tar.gz (2.9 kB)
+#7 2.374   Preparing metadata (setup.py): started
+#7 2.741   Preparing metadata (setup.py): finished with status 'done'
+#7 2.779 Collecting python-dateutil>=2.7.0 (from dateparser>=0.7.0->maya)
+#7 2.787   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#7 3.144 Collecting regex>=2024.9.11 (from dateparser>=0.7.0->maya)
+#7 3.154   Downloading regex-2025.10.23-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+#7 3.174      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.5/40.5 kB 1.7 MB/s eta 0:00:00
+#7 3.212 Collecting tzdata>=2020.1 (from pendulum>=2.0.2->maya)
+#7 3.220   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#7 3.267 Collecting six>=1.5 (from python-dateutil>=2.7.0->dateparser>=0.7.0->maya)
+#7 3.275   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 3.301 Downloading maya-0.6.1-py2.py3-none-any.whl (12 kB)
+#7 3.321 Downloading dateparser-1.2.2-py3-none-any.whl (315 kB)
+#7 3.347    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 315.5/315.5 kB 12.5 MB/s eta 0:00:00
+#7 3.356 Downloading pendulum-3.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (353 kB)
+#7 3.378    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 353.7/353.7 kB 17.1 MB/s eta 0:00:00
+#7 3.385 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#7 3.411    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 20.7 MB/s eta 0:00:00
+#7 3.418 Downloading tzlocal-5.3.1-py3-none-any.whl (18 kB)
+#7 3.435 Downloading humanize-4.14.0-py3-none-any.whl (132 kB)
+#7 3.466    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.1/132.1 kB 4.2 MB/s eta 0:00:00
+#7 3.487 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#7 3.502    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 16.1 MB/s eta 0:00:00
+#7 3.513 Downloading regex-2025.10.23-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (800 kB)
+#7 3.548    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 800.3/800.3 kB 23.6 MB/s eta 0:00:00
+#7 3.556 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#7 3.576    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 18.3 MB/s eta 0:00:00
+#7 3.585 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.612 Building wheels for collected packages: snaptime
+#7 3.613   Building wheel for snaptime (setup.py): started
+#7 3.774   Building wheel for snaptime (setup.py): finished with status 'done'
+#7 3.774   Created wheel for snaptime: filename=snaptime-0.2.4-py3-none-any.whl size=3605 sha256=84f7824f1cf7359dc008a05c14454d8a79117919a310322e81295f1e39124e0c
+#7 3.774   Stored in directory: /root/.cache/pip/wheels/af/cd/02/d3bb11d5c94237cbb0c7a2049d4ae314fdcbca899783d79d91
+#7 3.776 Successfully built snaptime
+#7 3.824 Installing collected packages: pytz, tzlocal, tzdata, six, regex, humanize, python-dateutil, snaptime, pendulum, dateparser, maya
+#7 4.541 Successfully installed dateparser-1.2.2 humanize-4.14.0 maya-0.6.1 pendulum-3.1.0 python-dateutil-2.9.0.post0 pytz-2025.2 regex-2025.10.23 six-1.17.0 snaptime-0.2.4 tzdata-2025.2 tzlocal-5.3.1
+#7 4.542 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.634 
+#7 4.634 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.634 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.0s
+
+#8 [4/4] RUN ["pip","install","sip"]
+#8 0.547 Collecting sip
+#8 0.581   Downloading sip-6.14.0-py3-none-any.whl.metadata (3.8 kB)
+#8 0.633 Collecting packaging>=24.2 (from sip)
+#8 0.641   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.657 Requirement already satisfied: setuptools>=75.8.1 in /usr/local/lib/python3.11/site-packages (from sip) (79.0.1)
+#8 0.693 Downloading sip-6.14.0-py3-none-any.whl (2.6 MB)
+#8 0.818    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 MB 21.1 MB/s eta 0:00:00
+#8 0.826 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 0.843    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 3.7 MB/s eta 0:00:00
+#8 0.903 Installing collected packages: packaging, sip
+#8 1.171 Successfully installed packaging-25.0 sip-6.14.0
+#8 1.171 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.177 
+#8 1.177 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.177 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.3s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.3s done
+#9 writing image sha256:08d8f0b2e3b13af80280449b1a9eef54602cf5a826d438b2df46c7ddfed52e2b done
+#9 naming to docker.io/library/test-image-1381489 done
+#9 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/ze8y10wbpmdy0i7i5h7zz6sxv
+[2025-10-29 12:11:51] SUCCESS: Build completed for 1381489

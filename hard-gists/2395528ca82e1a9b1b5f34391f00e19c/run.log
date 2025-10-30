@@ -1,0 +1,24 @@
+=== Docker Run Log for 2395528ca82e1a9b1b5f34391f00e19c ===
+Started at: Mi 29. Okt 13:03:24 CET 2025
+
+[2025-10-29 13:03:40] START: Running container for 2395528ca82e1a9b1b5f34391f00e19c
+[2025-10-29 13:03:40] SUCCESS: Container cddbb4da56dc15369503674556c37cec016e3523be26b57bedc98fb4cdbff97d started for 2395528ca82e1a9b1b5f34391f00e19c
+=== Container logs for 2395528ca82e1a9b1b5f34391f00e19c ===
+Traceback (most recent call last):
+  File "/snippet.py", line 42, in <module>
+    model.fit(train_X, train_Y)
+  File "/usr/local/lib/python3.11/site-packages/sklearn/base.py", line 1365, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/sklearn/model_selection/_search.py", line 1051, in fit
+    self._run_search(evaluate_candidates)
+  File "/usr/local/lib/python3.11/site-packages/sklearn/model_selection/_search.py", line 1605, in _run_search
+    evaluate_candidates(ParameterGrid(self.param_grid))
+  File "/usr/local/lib/python3.11/site-packages/sklearn/model_selection/_search.py", line 1009, in evaluate_candidates
+    for (cand_idx, parameters), (split_idx, (train, test)) in product(
+                                                              ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/sklearn/model_selection/_split.py", line 404, in split
+    raise ValueError(
+ValueError: Cannot have number of splits n_splits=5 greater than the number of samples: n_samples=4.
+=== End of logs for 2395528ca82e1a9b1b5f34391f00e19c ===
+[2025-10-29 13:03:42] INFO: Container cddbb4da56dc15369503674556c37cec016e3523be26b57bedc98fb4cdbff97d has stopped

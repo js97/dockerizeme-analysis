@@ -1,0 +1,119 @@
+=== Docker Build Log for 6146611 ===
+Started at: Mi 29. Okt 16:21:06 CET 2025
+
+[2025-10-29 16:21:06] START: Building image for 6146611
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.93kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.42kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/48] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/48] COPY hard-gists/6146611/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/48] RUN ["apt-get","update"]
+#7 0.275 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.275 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.285 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.302 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.622 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.629 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.323 Fetched 9833 kB in 1s (9029 kB/s)
+#7 1.323 Reading package lists...
+#7 DONE 1.9s
+
+#8 [ 4/48] RUN ["pip","install","opencv-contrib-python"]
+#8 1.988 Collecting opencv-contrib-python
+#8 2.028   Downloading opencv_contrib_python-4.12.0.88-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (19 kB)
+#8 2.247 Collecting numpy<2.3.0,>=2 (from opencv-contrib-python)
+#8 2.258   Downloading numpy-2.2.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+#8 2.286      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.0 MB/s eta 0:00:00
+#8 2.306 Downloading opencv_contrib_python-4.12.0.88-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (73.2 MB)
+#8 5.429    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.2/73.2 MB 16.6 MB/s eta 0:00:00
+#8 5.441 Downloading numpy-2.2.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+#8 6.146    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 21.1 MB/s eta 0:00:00
+#8 6.409 Installing collected packages: numpy, opencv-contrib-python
+#8 8.750 Successfully installed numpy-2.2.6 opencv-contrib-python-4.12.0.88
+#8 8.750 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 8.843 
+#8 8.843 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 8.843 [notice] To update, run: pip install --upgrade pip
+#8 DONE 11.1s
+
+#9 [ 5/48] RUN ["pip","install","RPIO"]
+#9 0.638 Collecting RPIO
+#9 0.774   Downloading RPIO-0.10.0.tar.gz (37 kB)
+#9 0.809   Preparing metadata (setup.py): started
+#9 1.237   Preparing metadata (setup.py): finished with status 'done'
+#9 1.239 Building wheels for collected packages: RPIO
+#9 1.239   Building wheel for RPIO (setup.py): started
+#9 1.897   Building wheel for RPIO (setup.py): finished with status 'done'
+#9 1.898   Created wheel for RPIO: filename=rpio-0.10.0-cp311-cp311-linux_x86_64.whl size=73625 sha256=4e5c65402229df35aa34a0ea1af36d5105d5dacfe5f37cf9ca8cc2c03716ad11
+#9 1.898   Stored in directory: /root/.cache/pip/wheels/96/4d/58/a89b8ea99fd5c40cc57173e7c50a5e53e4b8d34544b8908ed0
+#9 1.900 Successfully built RPIO
+#9 1.942 Installing collected packages: RPIO
+#9 1.962 Successfully installed RPIO-0.10.0
+#9 1.963 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.968 
+#9 1.968 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.968 [notice] To update, run: pip install --upgrade pip
+#9 DONE 2.0s
+
+#10 [ 6/48] RUN ["pip","install","numpy"]
+#10 0.453 Requirement already satisfied: numpy in /usr/local/lib/python3.11/site-packages (2.2.6)
+#10 0.497 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.502 
+#10 0.502 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.502 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.6s
+
+#11 [ 7/48] RUN ["apt-get","install","-y","python-pip"]
+#11 0.223 Reading package lists...
+#11 0.719 Building dependency tree...
+#11 0.831 Reading state information...
+#11 0.852 Package python-pip is not available, but is referred to by another package.
+#11 0.852 This may mean that the package is missing, has been obsoleted, or
+#11 0.852 is only available from another source
+#11 0.852 However the following packages replace it:
+#11 0.852   python3-pip
+#11 0.852 
+#11 0.854 E: Package 'python-pip' has no installation candidate
+#11 ERROR: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+------
+ > [ 7/48] RUN ["apt-get","install","-y","python-pip"]:
+
+
+0.852 Package python-pip is not available, but is referred to by another package.
+0.852 This may mean that the package is missing, has been obsoleted, or
+0.852 is only available from another source
+0.852 However the following packages replace it:
+0.852   python3-pip
+0.852 
+0.854 E: Package 'python-pip' has no installation candidate
+------
+Dockerfile:7
+--------------------
+   5 |     RUN ["pip","install","RPIO"]
+   6 |     RUN ["pip","install","numpy"]
+   7 | >>> RUN ["apt-get","install","-y","python-pip"]
+   8 |     RUN ["apt-get","install","-y","python-dev"]
+   9 |     RUN ["apt-get","install","-y","git"]
+--------------------
+ERROR: failed to build: failed to solve: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/default/default/guadh3lplj317sszl88ng8khn
+[2025-10-29 16:21:23] ERROR: Build failed for 6146611

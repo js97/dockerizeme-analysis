@@ -1,0 +1,36 @@
+=== Docker Run Log for 0b942dd86f01efe996b8977b158c37a6 ===
+Started at: Mi 29. Okt 11:34:51 CET 2025
+
+[2025-10-29 11:34:54] START: Running container for 0b942dd86f01efe996b8977b158c37a6
+[2025-10-29 11:34:54] SUCCESS: Container d0949ead6ae4ad953461d88fdab26d0bd4682d596bba5b52725445fec7adb940 started for 0b942dd86f01efe996b8977b158c37a6
+=== Container logs for 0b942dd86f01efe996b8977b158c37a6 ===
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/requests/models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snippet.py", line 52, in <module>
+    main('USD', 'INR', START_DATE, END_DATE)
+  File "/snippet.py", line 34, in main
+    amount = currency_conversion_rate(base, target, that_date)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 14, in currency_conversion_rate
+    json_data = requests.get(url).json()
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
+=== End of logs for 0b942dd86f01efe996b8977b158c37a6 ===
+[2025-10-29 11:34:56] INFO: Container d0949ead6ae4ad953461d88fdab26d0bd4682d596bba5b52725445fec7adb940 has stopped

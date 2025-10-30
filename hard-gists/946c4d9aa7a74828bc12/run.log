@@ -1,0 +1,18 @@
+=== Docker Run Log for 946c4d9aa7a74828bc12 ===
+Started at: Mi 29. Okt 18:26:16 CET 2025
+
+[2025-10-29 18:26:24] START: Running container for 946c4d9aa7a74828bc12
+[2025-10-29 18:26:24] SUCCESS: Container 3af8ec90d908415e2d1455128939bdf567ec04113fe4325db0a0233cf8e6d7d9 started for 946c4d9aa7a74828bc12
+=== Container logs for 946c4d9aa7a74828bc12 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 3, in <module>
+    from boto.cloudsearch2.layer2 import Layer2
+  File "/usr/local/lib/python3.11/site-packages/boto/cloudsearch2/layer2.py", line 26, in <module>
+    from boto.cloudsearch2.domain import Domain
+  File "/usr/local/lib/python3.11/site-packages/boto/cloudsearch2/domain.py", line 28, in <module>
+    from boto.cloudsearch2.document import DocumentServiceConnection
+  File "/usr/local/lib/python3.11/site-packages/boto/cloudsearch2/document.py", line 26, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+=== End of logs for 946c4d9aa7a74828bc12 ===
+[2025-10-29 18:26:26] INFO: Container 3af8ec90d908415e2d1455128939bdf567ec04113fe4325db0a0233cf8e6d7d9 has stopped

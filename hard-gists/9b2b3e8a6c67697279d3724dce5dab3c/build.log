@@ -1,0 +1,95 @@
+=== Docker Build Log for 9b2b3e8a6c67697279d3724dce5dab3c ===
+Started at: Mi 29. Okt 18:39:00 CET 2025
+
+[2025-10-29 18:39:00] START: Building image for 9b2b3e8a6c67697279d3724dce5dab3c
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 482B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 6.25kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/11] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/11] COPY hard-gists/9b2b3e8a6c67697279d3724dce5dab3c/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/11] RUN ["pip","install","pan-python"]
+#7 2.031 Collecting pan-python
+#7 2.069   Downloading pan_python-0.25.0-py3-none-any.whl.metadata (1.4 kB)
+#7 2.089 Downloading pan_python-0.25.0-py3-none-any.whl (60 kB)
+#7 2.110    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.3/60.3 kB 2.6 MB/s eta 0:00:00
+#7 2.143 Installing collected packages: pan-python
+#7 2.190 Successfully installed pan-python-0.25.0
+#7 2.190 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.279 
+#7 2.279 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.279 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.5s
+
+#8 [ 4/11] RUN ["pip","install","pandacan"]
+#8 0.527 Collecting pandacan
+#8 0.562   Downloading pandacan-0.0.9.tar.gz (36 kB)
+#8 0.585   Preparing metadata (setup.py): started
+#8 1.013   Preparing metadata (setup.py): finished with status 'done'
+#8 1.228 Collecting libusb1==1.6.6 (from pandacan)
+#8 1.239   Downloading libusb1-1.6.6.tar.gz (56 kB)
+#8 1.258      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.0/56.0 kB 2.7 MB/s eta 0:00:00
+#8 1.263   Preparing metadata (setup.py): started
+#8 1.358   Preparing metadata (setup.py): finished with status 'error'
+#8 1.361   error: subprocess-exited-with-error
+#8 1.361   
+#8 1.361   × python setup.py egg_info did not run successfully.
+#8 1.361   │ exit code: 1
+#8 1.361   ╰─> [1 lines of output]
+#8 1.361       error in libusb1 setup command: use_2to3 is invalid.
+#8 1.361       [end of output]
+#8 1.361   
+#8 1.361   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 1.363 error: metadata-generation-failed
+#8 1.363 
+#8 1.363 × Encountered error while generating package metadata.
+#8 1.363 ╰─> See above for output.
+#8 1.363 
+#8 1.363 note: This is an issue with the package mentioned above, not pip.
+#8 1.363 hint: See above for details.
+#8 1.368 
+#8 1.368 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.368 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install pandacan" did not complete successfully: exit code: 1
+------
+ > [ 4/11] RUN ["pip","install","pandacan"]:
+1.363 error: metadata-generation-failed
+1.363 
+1.363 × Encountered error while generating package metadata.
+1.363 ╰─> See above for output.
+1.363 
+1.363 note: This is an issue with the package mentioned above, not pip.
+1.363 hint: See above for details.
+1.368 
+1.368 [notice] A new release of pip is available: 24.0 -> 25.3
+1.368 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/9b2b3e8a6c67697279d3724dce5dab3c/snippet.py /snippet.py
+   3 |     RUN ["pip","install","pan-python"]
+   4 | >>> RUN ["pip","install","pandacan"]
+   5 |     RUN ["pip","install","django-dash"]
+   6 |     RUN ["pip","install","rapidpro-dash"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install pandacan" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/wdn4zxjza3kh6ov0kq5z3ec7k
+[2025-10-29 18:39:04] ERROR: Build failed for 9b2b3e8a6c67697279d3724dce5dab3c

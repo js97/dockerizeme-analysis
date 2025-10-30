@@ -1,0 +1,16 @@
+=== Docker Run Log for 7653403 ===
+Started at: Mi 29. Okt 17:14:16 CET 2025
+
+[2025-10-29 17:14:19] START: Running container for 7653403
+[2025-10-29 17:14:19] SUCCESS: Container 754d24638bca22e12acb380c6252137faeb7240e770a54f02adf9f9210edb4f9 started for 7653403
+=== Container logs for 7653403 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 126, in <module>
+    print(yaml_to_dot(input).encode('utf-8'))
+          ^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 98, in yaml_to_dot
+    items = [Item(name, contents) for name, contents in yaml.load(yml).items()]
+                                                        ^^^^^^^^^^^^^^
+TypeError: load() missing 1 required positional argument: 'Loader'
+=== End of logs for 7653403 ===
+[2025-10-29 17:14:22] INFO: Container 754d24638bca22e12acb380c6252137faeb7240e770a54f02adf9f9210edb4f9 has stopped

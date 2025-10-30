@@ -1,0 +1,24 @@
+=== Docker Run Log for 2bcca0a7654168ef454f ===
+Started at: Mi 29. Okt 13:24:54 CET 2025
+
+[2025-10-29 13:25:46] START: Running container for 2bcca0a7654168ef454f
+[2025-10-29 13:25:46] SUCCESS: Container 730b8b501b4fa7deec153949819598df46e79f4939207984a88c3bb82110110d started for 2bcca0a7654168ef454f
+=== Container logs for 2bcca0a7654168ef454f ===
+/usr/local/lib/python3.11/site-packages/ipalib/constants.py:392: CryptographyDeprecationWarning: TripleDES has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.TripleDES and will be removed from cryptography.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  if getattr(algorithms, 'TripleDES', None):
+/usr/local/lib/python3.11/site-packages/ipalib/constants.py:393: CryptographyDeprecationWarning: TripleDES has been moved to cryptography.hazmat.decrepit.ciphers.algorithms.TripleDES and will be removed from cryptography.hazmat.primitives.ciphers.algorithms in 48.0.0.
+  if backend.cipher_supported(algorithms.TripleDES(
+Traceback (most recent call last):
+  File "/snippet.py", line 6, in <module>
+    from ipalib import api
+  File "/usr/local/lib/python3.11/site-packages/ipalib/__init__.py", line 921, in <module>
+    from ipalib.frontend import Command, LocalOrRemote, Updater
+  File "/usr/local/lib/python3.11/site-packages/ipalib/frontend.py", line 31, in <module>
+    from ipalib.parameters import create_param, Param, Str, Flag
+  File "/usr/local/lib/python3.11/site-packages/ipalib/parameters.py", line 125, in <module>
+    from ipalib.x509 import (
+  File "/usr/local/lib/python3.11/site-packages/ipalib/x509.py", line 91, in <module>
+    class IPACertificate(crypto_x509.Certificate):
+TypeError: type 'cryptography.hazmat.bindings._rust.x509.Certificate' is not an acceptable base type
+=== End of logs for 2bcca0a7654168ef454f ===
+[2025-10-29 13:25:48] INFO: Container 730b8b501b4fa7deec153949819598df46e79f4939207984a88c3bb82110110d has stopped

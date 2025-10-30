@@ -1,0 +1,112 @@
+=== Docker Build Log for c2d24fe340a7f3cf76d2 ===
+Started at: Mi 29. Okt 19:50:31 CET 2025
+
+[2025-10-29 19:50:31] START: Building image for c2d24fe340a7f3cf76d2
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 265B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.46kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/6] COPY hard-gists/c2d24fe340a7f3cf76d2/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/6] RUN ["pip","install","six"]
+#7 1.928 Collecting six
+#7 1.978   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 1.998 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.040 Installing collected packages: six
+#7 2.057 Successfully installed six-1.17.0
+#7 2.057 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.152 
+#7 2.152 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.152 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.4s
+
+#8 [4/6] RUN ["pip","install","pytest"]
+#8 0.563 Collecting pytest
+#8 0.606   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#8 0.651 Collecting iniconfig>=1 (from pytest)
+#8 0.659   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#8 0.711 Collecting packaging>=20 (from pytest)
+#8 0.719   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.759 Collecting pluggy<2,>=1.5 (from pytest)
+#8 0.771   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#8 0.819 Collecting pygments>=2.7.2 (from pytest)
+#8 0.834   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#8 0.865 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#8 0.922    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 7.4 MB/s eta 0:00:00
+#8 0.932 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#8 0.956 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 0.970    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 4.6 MB/s eta 0:00:00
+#8 0.981 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#8 1.004 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#8 1.082    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 16.1 MB/s eta 0:00:00
+#8 1.131 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#8 1.822 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#8 1.822 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.828 
+#8 1.828 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.828 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.0s
+
+#9 [5/6] RUN ["pip","install","py"]
+#9 0.547 Collecting py
+#9 0.587   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#9 0.616 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#9 0.657    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.8 MB/s eta 0:00:00
+#9 0.699 Installing collected packages: py
+#9 0.775 Successfully installed py-1.11.0
+#9 0.775 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.780 
+#9 0.780 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.780 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.9s
+
+#10 [6/6] RUN ["pip","install","pyspark"]
+#10 0.524 Collecting pyspark
+#10 0.560   Downloading pyspark-4.0.1.tar.gz (434.2 MB)
+#10 31.49      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 434.2/434.2 MB 3.0 MB/s eta 0:00:00
+#10 35.41   Preparing metadata (setup.py): started
+#10 35.89   Preparing metadata (setup.py): finished with status 'done'
+#10 35.93 Collecting py4j==0.10.9.9 (from pyspark)
+#10 35.94   Downloading py4j-0.10.9.9-py2.py3-none-any.whl.metadata (1.3 kB)
+#10 35.97 Downloading py4j-0.10.9.9-py2.py3-none-any.whl (203 kB)
+#10 36.00    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 203.0/203.0 kB 7.5 MB/s eta 0:00:00
+#10 36.00 Building wheels for collected packages: pyspark
+#10 36.01   Building wheel for pyspark (setup.py): started
+#10 53.44   Building wheel for pyspark (setup.py): finished with status 'done'
+#10 54.21   Created wheel for pyspark: filename=pyspark-4.0.1-py2.py3-none-any.whl size=434813859 sha256=089d7812c7f6ea7bac3763a3ba9f9dd7f23011c00f11f0a67068d0dd98137370
+#10 54.21   Stored in directory: /root/.cache/pip/wheels/76/f8/dc/9195b82b8586561710077d42370ae400e8a023af43052d1fec
+#10 54.21 Successfully built pyspark
+#10 54.26 Installing collected packages: py4j, pyspark
+#10 58.41 Successfully installed py4j-0.10.9.9 pyspark-4.0.1
+#10 58.41 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 58.41 
+#10 58.41 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 58.41 [notice] To update, run: pip install --upgrade pip
+#10 DONE 64.9s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 3.7s done
+#11 writing image sha256:add67e17b07372137a57114391e980c411816120d7cadde707f38d3197b8b041 done
+#11 naming to docker.io/library/test-image-c2d24fe340a7f3cf76d2 done
+#11 DONE 3.7s
+
+View build details: docker-desktop://dashboard/build/default/default/pz5b7w2rq7vfpflw7r8qdno5e
+[2025-10-29 19:51:45] SUCCESS: Build completed for c2d24fe340a7f3cf76d2

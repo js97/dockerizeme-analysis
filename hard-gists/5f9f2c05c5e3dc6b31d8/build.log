@@ -1,0 +1,136 @@
+=== Docker Build Log for 5f9f2c05c5e3dc6b31d8 ===
+Started at: Mi 29. Okt 16:17:13 CET 2025
+
+[2025-10-29 16:17:13] START: Building image for 5f9f2c05c5e3dc6b31d8
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 212B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 5.36kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/5f9f2c05c5e3dc6b31d8/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","foundation"]
+#7 1.921 Collecting foundation
+#7 1.954   Downloading foundation-0.1.0a0.dev1.tar.gz (50 kB)
+#7 1.975      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.8/50.8 kB 2.2 MB/s eta 0:00:00
+#7 1.985   Preparing metadata (setup.py): started
+#7 2.383   Preparing metadata (setup.py): finished with status 'done'
+#7 2.500 Collecting Django<1.11,>=1.10 (from foundation)
+#7 2.509   Downloading Django-1.10.8-py2.py3-none-any.whl.metadata (1.3 kB)
+#7 2.546 Collecting django-sekizai>=0.10 (from foundation)
+#7 2.555   Downloading django_sekizai-4.1.0-py3-none-any.whl.metadata (4.6 kB)
+#7 2.593 INFO: pip is looking at multiple versions of django-sekizai to determine which version is compatible with other requirements. This could take a while.
+#7 2.605   Downloading django_sekizai-4.0.0-py3-none-any.whl.metadata (4.6 kB)
+#7 2.630   Downloading django_sekizai-3.0.1-py3-none-any.whl.metadata (4.6 kB)
+#7 2.681   Downloading django_sekizai-3.0.0-py3-none-any.whl.metadata (4.6 kB)
+#7 2.724   Downloading django_sekizai-2.0.0-py3-none-any.whl.metadata (3.7 kB)
+#7 2.748   Downloading django-sekizai-1.1.0.tar.gz (7.0 kB)
+#7 2.762   Preparing metadata (setup.py): started
+#7 2.882   Preparing metadata (setup.py): finished with status 'done'
+#7 2.919   Downloading django-sekizai-1.0.0.tar.gz (18 kB)
+#7 2.936   Preparing metadata (setup.py): started
+#7 3.058   Preparing metadata (setup.py): finished with status 'done'
+#7 3.076   Downloading django_sekizai-0.10.0-py2.py3-none-any.whl.metadata (793 bytes)
+#7 3.114 Collecting django-classy-tags>=0.3.1 (from django-sekizai>=0.10->foundation)
+#7 3.124   Downloading django_classy_tags-4.1.0-py3-none-any.whl.metadata (5.3 kB)
+#7 3.135 INFO: pip is looking at multiple versions of django-classy-tags to determine which version is compatible with other requirements. This could take a while.
+#7 3.149   Downloading django_classy_tags-4.0.0-py3-none-any.whl.metadata (5.2 kB)
+#7 3.172   Downloading django_classy_tags-3.0.1-py3-none-any.whl.metadata (5.3 kB)
+#7 3.197   Downloading django_classy_tags-3.0.0-py3-none-any.whl.metadata (5.2 kB)
+#7 3.221   Downloading django_classy_tags-2.0.0-py3-none-any.whl.metadata (4.5 kB)
+#7 3.245   Downloading django-classy-tags-1.0.0.tar.gz (13 kB)
+#7 3.258   Preparing metadata (setup.py): started
+#7 3.369   Preparing metadata (setup.py): finished with status 'done'
+#7 3.385   Downloading django-classy-tags-0.9.0.tar.gz (17 kB)
+#7 3.398   Preparing metadata (setup.py): started
+#7 3.510   Preparing metadata (setup.py): finished with status 'done'
+#7 3.525   Downloading django_classy_tags-0.8.0-py2.py3-none-any.whl.metadata (981 bytes)
+#7 3.571 Downloading Django-1.10.8-py2.py3-none-any.whl (6.8 MB)
+#7 3.823    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.8/6.8 MB 27.2 MB/s eta 0:00:00
+#7 3.833 Downloading django_sekizai-0.10.0-py2.py3-none-any.whl (19 kB)
+#7 3.852 Downloading django_classy_tags-0.8.0-py2.py3-none-any.whl (22 kB)
+#7 3.894 Building wheels for collected packages: foundation
+#7 3.894   Building wheel for foundation (setup.py): started
+#7 4.120   Building wheel for foundation (setup.py): finished with status 'done'
+#7 4.121   Created wheel for foundation: filename=foundation-0.1.0a0.dev1-py3-none-any.whl size=73614 sha256=242c33e331120984f77c2c9620dfcac4b85c73c579d99b288fd7740dc4a3a67e
+#7 4.121   Stored in directory: /root/.cache/pip/wheels/ad/c3/ad/3307fd133207420fb4bf8fa4844260b0dcd4de9deec2857abd
+#7 4.123 Successfully built foundation
+#7 4.166 Installing collected packages: Django, django-classy-tags, django-sekizai, foundation
+#7 5.451 Successfully installed Django-1.10.8 django-classy-tags-0.8.0 django-sekizai-0.10.0 foundation-0.1.0a0.dev1
+#7 5.451 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.547 
+#7 5.547 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.547 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.9s
+
+#8 [4/4] RUN ["pip","install","UIkit"]
+#8 0.560 Collecting UIkit
+#8 0.601   Downloading UIkit-0.0.1.tar.gz (3.7 kB)
+#8 0.612   Preparing metadata (setup.py): started
+#8 0.729   Preparing metadata (setup.py): finished with status 'done'
+#8 0.761 Collecting six (from UIkit)
+#8 0.770   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 0.870 Collecting PyQt5-sip (from UIkit)
+#8 0.880   Downloading pyqt5_sip-12.17.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.whl.metadata (494 bytes)
+#8 0.932 Collecting PyQt5 (from UIkit)
+#8 0.941   Downloading PyQt5-5.15.11-cp38-abi3-manylinux_2_17_x86_64.whl.metadata (2.1 kB)
+#8 0.990 Collecting qtawesome (from UIkit)
+#8 1.000   Downloading qtawesome-1.4.0-py3-none-any.whl.metadata (11 kB)
+#8 1.050 Collecting PyQt5-Qt5<5.16.0,>=5.15.2 (from PyQt5->UIkit)
+#8 1.058   Downloading PyQt5_Qt5-5.15.17-py3-none-manylinux2014_x86_64.whl.metadata (536 bytes)
+#8 1.106 Collecting qtpy (from qtawesome->UIkit)
+#8 1.115   Downloading QtPy-2.4.3-py3-none-any.whl.metadata (12 kB)
+#8 1.169 Collecting packaging (from qtpy->qtawesome->UIkit)
+#8 1.176   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 1.197 Downloading PyQt5-5.15.11-cp38-abi3-manylinux_2_17_x86_64.whl (8.2 MB)
+#8 1.509    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.2/8.2 MB 26.5 MB/s eta 0:00:00
+#8 1.518 Downloading pyqt5_sip-12.17.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.whl (276 kB)
+#8 1.539    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 276.8/276.8 kB 13.6 MB/s eta 0:00:00
+#8 1.548 Downloading qtawesome-1.4.0-py3-none-any.whl (2.6 MB)
+#8 1.650    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 MB 25.9 MB/s eta 0:00:00
+#8 1.658 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 1.677 Downloading PyQt5_Qt5-5.15.17-py3-none-manylinux2014_x86_64.whl (61.1 MB)
+#8 4.160    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.1/61.1 MB 11.5 MB/s eta 0:00:00
+#8 4.172 Downloading QtPy-2.4.3-py3-none-any.whl (95 kB)
+#8 4.184    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 95.0/95.0 kB 8.3 MB/s eta 0:00:00
+#8 4.192 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 4.203    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.8 MB/s eta 0:00:00
+#8 4.375 Building wheels for collected packages: UIkit
+#8 4.387   Building wheel for UIkit (setup.py): started
+#8 4.530   Building wheel for UIkit (setup.py): finished with status 'done'
+#8 4.530   Created wheel for UIkit: filename=uikit-0.0.1-py3-none-any.whl size=4395 sha256=a4837ca9c7fd97231ab03167f20987fffb2dd73475f80e03eee89b163a0fe0f1
+#8 4.530   Stored in directory: /root/.cache/pip/wheels/8b/1f/41/e803f43d6d397696c6bbf65311b5de892ecdc1f6abcb738195
+#8 4.531 Successfully built UIkit
+#8 4.587 Installing collected packages: PyQt5-Qt5, six, PyQt5-sip, packaging, qtpy, PyQt5, qtawesome, UIkit
+#8 5.913 Successfully installed PyQt5-5.15.11 PyQt5-Qt5-5.15.17 PyQt5-sip-12.17.1 UIkit-0.0.1 packaging-25.0 qtawesome-1.4.0 qtpy-2.4.3 six-1.17.0
+#8 5.914 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 5.919 
+#8 5.919 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 5.919 [notice] To update, run: pip install --upgrade pip
+#8 DONE 7.1s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 1.0s done
+#9 writing image sha256:f8421c900dc85b115d1831b3990bd0328da2d5a0d1f3788fdc0b96d05994215c done
+#9 naming to docker.io/library/test-image-5f9f2c05c5e3dc6b31d8 done
+#9 DONE 1.1s
+
+View build details: docker-desktop://dashboard/build/default/default/20a1ks6lg9rolqpzwfpnvr2x1
+[2025-10-29 16:17:28] SUCCESS: Build completed for 5f9f2c05c5e3dc6b31d8

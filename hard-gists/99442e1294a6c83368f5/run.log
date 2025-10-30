@@ -1,0 +1,13 @@
+=== Docker Run Log for 99442e1294a6c83368f5 ===
+Started at: Mi 29. Okt 18:35:29 CET 2025
+
+[2025-10-29 18:35:29] START: Running container for 99442e1294a6c83368f5
+[2025-10-29 18:35:29] SUCCESS: Container 6852dbd83355a6a80c7cffa9a1807f805a102213a98924b79aef2cd540a2c66e started for 99442e1294a6c83368f5
+=== Container logs for 99442e1294a6c83368f5 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 52, in <module>
+    t = threading.Thread(target=scanner_worker_thread, kwargs={"host": scan_args[0]})
+                                                                       ~~~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+=== End of logs for 99442e1294a6c83368f5 ===
+[2025-10-29 18:35:31] INFO: Container 6852dbd83355a6a80c7cffa9a1807f805a102213a98924b79aef2cd540a2c66e has stopped

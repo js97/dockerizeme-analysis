@@ -1,0 +1,237 @@
+=== Docker Build Log for 874808 ===
+Started at: Mi 29. Okt 17:56:00 CET 2025
+
+[2025-10-29 17:56:00] START: Building image for 874808
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 278B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.23kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/874808/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","six"]
+#7 1.883 Collecting six
+#7 1.919   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 1.939 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 1.980 Installing collected packages: six
+#7 1.996 Successfully installed six-1.17.0
+#7 1.996 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.089 
+#7 2.089 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.089 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.3s
+
+#8 [4/7] RUN ["pip","install","pytest"]
+#8 0.549 Collecting pytest
+#8 0.583   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#8 0.624 Collecting iniconfig>=1 (from pytest)
+#8 0.632   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#8 0.686 Collecting packaging>=20 (from pytest)
+#8 0.695   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.735 Collecting pluggy<2,>=1.5 (from pytest)
+#8 0.744   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#8 0.790 Collecting pygments>=2.7.2 (from pytest)
+#8 0.799   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#8 0.827 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#8 0.868    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 9.2 MB/s eta 0:00:00
+#8 0.876 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#8 0.894 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 0.906    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.7 MB/s eta 0:00:00
+#8 0.915 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#8 0.933 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#8 0.985    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 23.8 MB/s eta 0:00:00
+#8 1.033 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#8 1.754 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#8 1.754 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.759 
+#8 1.759 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.759 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.9s
+
+#9 [5/7] RUN ["pip","install","py"]
+#9 0.521 Collecting py
+#9 0.555   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#9 0.579 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#9 0.613    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.8 MB/s eta 0:00:00
+#9 0.658 Installing collected packages: py
+#9 0.736 Successfully installed py-1.11.0
+#9 0.736 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.741 
+#9 0.741 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.741 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.9s
+
+#10 [6/7] RUN ["pip","install","pymc"]
+#10 0.644 Collecting pymc
+#10 0.680   Downloading pymc-5.26.1-py3-none-any.whl.metadata (16 kB)
+#10 0.826 Collecting arviz>=0.13.0 (from pymc)
+#10 0.836   Downloading arviz-0.22.0-py3-none-any.whl.metadata (8.9 kB)
+#10 0.889 Collecting cachetools>=4.2.1 (from pymc)
+#10 0.899   Downloading cachetools-6.2.1-py3-none-any.whl.metadata (5.5 kB)
+#10 0.946 Collecting cloudpickle (from pymc)
+#10 0.962   Downloading cloudpickle-3.1.1-py3-none-any.whl.metadata (7.1 kB)
+#10 1.173 Collecting numpy>=1.25.0 (from pymc)
+#10 1.187   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#10 1.210      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.5 MB/s eta 0:00:00
+#10 1.338 Collecting pandas>=0.24.0 (from pymc)
+#10 1.348   Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+#10 1.368      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 4.4 MB/s eta 0:00:00
+#10 1.610 Collecting pytensor<2.36,>=2.35.0 (from pymc)
+#10 1.619   Downloading pytensor-2.35.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (6.8 kB)
+#10 1.704 Collecting rich>=13.7.1 (from pymc)
+#10 1.712   Downloading rich-14.2.0-py3-none-any.whl.metadata (18 kB)
+#10 1.848 Collecting scipy>=1.4.1 (from pymc)
+#10 1.858   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#10 1.872      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 4.1 MB/s eta 0:00:00
+#10 1.906 Collecting threadpoolctl<4.0.0,>=3.1.0 (from pymc)
+#10 1.914   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#10 1.966 Collecting typing-extensions>=3.7.4 (from pymc)
+#10 1.975   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#10 1.997 Requirement already satisfied: setuptools>=60.0.0 in /usr/local/lib/python3.11/site-packages (from arviz>=0.13.0->pymc) (79.0.1)
+#10 2.131 Collecting matplotlib>=3.8 (from arviz>=0.13.0->pymc)
+#10 2.142   Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#10 2.166 Requirement already satisfied: packaging in /usr/local/lib/python3.11/site-packages (from arviz>=0.13.0->pymc) (25.0)
+#10 2.220 Collecting xarray>=2023.7.0 (from arviz>=0.13.0->pymc)
+#10 2.230   Downloading xarray-2025.10.1-py3-none-any.whl.metadata (12 kB)
+#10 2.375 Collecting h5netcdf>=1.0.2 (from arviz>=0.13.0->pymc)
+#10 2.386   Downloading h5netcdf-1.7.3-py3-none-any.whl.metadata (13 kB)
+#10 2.601 Collecting xarray-einstats>=0.3 (from arviz>=0.13.0->pymc)
+#10 2.616   Downloading xarray_einstats-0.9.1-py3-none-any.whl.metadata (5.9 kB)
+#10 2.734 Collecting python-dateutil>=2.8.2 (from pandas>=0.24.0->pymc)
+#10 2.743   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#10 2.808 Collecting pytz>=2020.1 (from pandas>=0.24.0->pymc)
+#10 2.816   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#10 2.863 Collecting tzdata>=2022.7 (from pandas>=0.24.0->pymc)
+#10 2.874   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#10 2.950 Collecting filelock>=3.15 (from pytensor<2.36,>=2.35.0->pymc)
+#10 2.959   Downloading filelock-3.20.0-py3-none-any.whl.metadata (2.1 kB)
+#10 3.093 Collecting etuples (from pytensor<2.36,>=2.35.0->pymc)
+#10 3.103   Downloading etuples-0.3.10-py3-none-any.whl.metadata (4.8 kB)
+#10 3.139 Collecting logical-unification (from pytensor<2.36,>=2.35.0->pymc)
+#10 3.149   Downloading logical_unification-0.4.7-py3-none-any.whl.metadata (15 kB)
+#10 3.282 Collecting miniKanren (from pytensor<2.36,>=2.35.0->pymc)
+#10 3.292   Downloading minikanren-1.0.5-py3-none-any.whl.metadata (7.6 kB)
+#10 3.423 Collecting cons (from pytensor<2.36,>=2.35.0->pymc)
+#10 3.434   Downloading cons-0.4.7-py3-none-any.whl.metadata (3.8 kB)
+#10 3.480 Collecting markdown-it-py>=2.2.0 (from rich>=13.7.1->pymc)
+#10 3.489   Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+#10 3.501 Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.11/site-packages (from rich>=13.7.1->pymc) (2.19.2)
+#10 3.590 Collecting h5py (from h5netcdf>=1.0.2->arviz>=0.13.0->pymc)
+#10 3.600   Downloading h5py-3.15.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+#10 3.647 Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=13.7.1->pymc)
+#10 3.655   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+#10 3.745 Collecting contourpy>=1.0.1 (from matplotlib>=3.8->arviz>=0.13.0->pymc)
+#10 3.755   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#10 3.790 Collecting cycler>=0.10 (from matplotlib>=3.8->arviz>=0.13.0->pymc)
+#10 3.798   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#10 4.004 Collecting fonttools>=4.22.0 (from matplotlib>=3.8->arviz>=0.13.0->pymc)
+#10 4.015   Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+#10 4.030      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.3/112.3 kB 7.5 MB/s eta 0:00:00
+#10 4.103 Collecting kiwisolver>=1.3.1 (from matplotlib>=3.8->arviz>=0.13.0->pymc)
+#10 4.113   Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+#10 4.303 Collecting pillow>=8 (from matplotlib>=3.8->arviz>=0.13.0->pymc)
+#10 4.316   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#10 4.371 Collecting pyparsing>=3 (from matplotlib>=3.8->arviz>=0.13.0->pymc)
+#10 4.380   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#10 4.400 Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.11/site-packages (from python-dateutil>=2.8.2->pandas>=0.24.0->pymc) (1.17.0)
+#10 4.508 Collecting toolz (from logical-unification->pytensor<2.36,>=2.35.0->pymc)
+#10 4.517   Downloading toolz-1.1.0-py3-none-any.whl.metadata (5.1 kB)
+#10 4.553 Collecting multipledispatch (from logical-unification->pytensor<2.36,>=2.35.0->pymc)
+#10 4.562   Downloading multipledispatch-1.0.0-py3-none-any.whl.metadata (3.8 kB)
+#10 4.681 Downloading pymc-5.26.1-py3-none-any.whl (536 kB)
+#10 4.709    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.7/536.7 kB 19.8 MB/s eta 0:00:00
+#10 4.719 Downloading arviz-0.22.0-py3-none-any.whl (1.7 MB)
+#10 4.782    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 26.7 MB/s eta 0:00:00
+#10 4.791 Downloading cachetools-6.2.1-py3-none-any.whl (11 kB)
+#10 4.808 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#10 5.465    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 24.6 MB/s eta 0:00:00
+#10 5.476 Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+#10 5.942    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 26.5 MB/s eta 0:00:00
+#10 5.952 Downloading pytensor-2.35.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (2.0 MB)
+#10 6.028    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 26.3 MB/s eta 0:00:00
+#10 6.036 Downloading rich-14.2.0-py3-none-any.whl (243 kB)
+#10 6.055    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.4/243.4 kB 13.6 MB/s eta 0:00:00
+#10 6.065 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#10 7.452    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 18.9 MB/s eta 0:00:00
+#10 7.461 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#10 7.478 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#10 7.489    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.6 MB/s eta 0:00:00
+#10 7.498 Downloading cloudpickle-3.1.1-py3-none-any.whl (20 kB)
+#10 7.515 Downloading filelock-3.20.0-py3-none-any.whl (16 kB)
+#10 7.534 Downloading h5netcdf-1.7.3-py3-none-any.whl (56 kB)
+#10 7.545    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.4/56.4 kB 4.9 MB/s eta 0:00:00
+#10 7.554 Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+#10 7.566    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.3/87.3 kB 6.8 MB/s eta 0:00:00
+#10 7.576 Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+#10 7.891    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 27.7 MB/s eta 0:00:00
+#10 7.900 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#10 7.919    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 12.8 MB/s eta 0:00:00
+#10 7.928 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#10 7.958    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 17.3 MB/s eta 0:00:00
+#10 7.967 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#10 7.987    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 18.2 MB/s eta 0:00:00
+#10 7.996 Downloading xarray-2025.10.1-py3-none-any.whl (1.4 MB)
+#10 8.051    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 25.8 MB/s eta 0:00:00
+#10 8.060 Downloading xarray_einstats-0.9.1-py3-none-any.whl (39 kB)
+#10 8.081 Downloading cons-0.4.7-py3-none-any.whl (8.6 kB)
+#10 8.102 Downloading logical_unification-0.4.7-py3-none-any.whl (13 kB)
+#10 8.121 Downloading etuples-0.3.10-py3-none-any.whl (12 kB)
+#10 8.141 Downloading minikanren-1.0.5-py3-none-any.whl (24 kB)
+#10 8.161 Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+#10 8.186    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 355.2/355.2 kB 15.1 MB/s eta 0:00:00
+#10 8.194 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#10 8.214 Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#10 8.434    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 22.7 MB/s eta 0:00:00
+#10 8.444 Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+#10 8.503    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 25.1 MB/s eta 0:00:00
+#10 8.511 Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+#10 8.529 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#10 8.789    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 27.2 MB/s eta 0:00:00
+#10 8.798 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#10 8.811    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 9.0 MB/s eta 0:00:00
+#10 8.820 Downloading h5py-3.15.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (4.7 MB)
+#10 9.015    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 24.3 MB/s eta 0:00:00
+#10 9.024 Downloading multipledispatch-1.0.0-py3-none-any.whl (12 kB)
+#10 9.042 Downloading toolz-1.1.0-py3-none-any.whl (58 kB)
+#10 9.055    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.1/58.1 kB 4.1 MB/s eta 0:00:00
+#10 9.541 Installing collected packages: pytz, multipledispatch, tzdata, typing-extensions, toolz, threadpoolctl, python-dateutil, pyparsing, pillow, numpy, mdurl, kiwisolver, fonttools, filelock, cycler, cloudpickle, cachetools, scipy, pandas, markdown-it-py, logical-unification, h5py, contourpy, xarray, rich, matplotlib, h5netcdf, cons, xarray-einstats, etuples, miniKanren, arviz, pytensor, pymc
+#10 21.31 Successfully installed arviz-0.22.0 cachetools-6.2.1 cloudpickle-3.1.1 cons-0.4.7 contourpy-1.3.3 cycler-0.12.1 etuples-0.3.10 filelock-3.20.0 fonttools-4.60.1 h5netcdf-1.7.3 h5py-3.15.1 kiwisolver-1.4.9 logical-unification-0.4.7 markdown-it-py-4.0.0 matplotlib-3.10.7 mdurl-0.1.2 miniKanren-1.0.5 multipledispatch-1.0.0 numpy-2.3.4 pandas-2.3.3 pillow-12.0.0 pymc-5.26.1 pyparsing-3.2.5 pytensor-2.35.1 python-dateutil-2.9.0.post0 pytz-2025.2 rich-14.2.0 scipy-1.16.3 threadpoolctl-3.6.0 toolz-1.1.0 typing-extensions-4.15.0 tzdata-2025.2 xarray-2025.10.1 xarray-einstats-0.9.1
+#10 21.31 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 21.32 
+#10 21.32 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 21.32 [notice] To update, run: pip install --upgrade pip
+#10 DONE 25.9s
+
+#11 [7/7] RUN ["pip","install","numpy"]
+#11 0.471 Requirement already satisfied: numpy in /usr/local/lib/python3.11/site-packages (2.3.4)
+#11 0.702 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.707 
+#11 0.707 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.707 [notice] To update, run: pip install --upgrade pip
+#11 DONE 0.8s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 2.2s done
+#12 writing image sha256:b81eadbcfea8cb830302e8dd5c73806e9d0632b7b1b468c43c33fba38ca363c6 done
+#12 naming to docker.io/library/test-image-874808 done
+#12 DONE 2.2s
+
+View build details: docker-desktop://dashboard/build/default/default/b0sb4wcb171hgpz5yiaz2u8yi
+[2025-10-29 17:56:34] SUCCESS: Build completed for 874808

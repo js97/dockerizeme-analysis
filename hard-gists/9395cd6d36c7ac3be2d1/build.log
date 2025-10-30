@@ -1,0 +1,399 @@
+=== Docker Build Log for 9395cd6d36c7ac3be2d1 ===
+Started at: Mi 29. Okt 18:24:17 CET 2025
+
+[2025-10-29 18:24:17] START: Building image for 9395cd6d36c7ac3be2d1
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 211B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.49kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/9395cd6d36c7ac3be2d1/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","jupyter"]
+#7 1.878 Collecting jupyter
+#7 1.912   Downloading jupyter-1.1.1-py2.py3-none-any.whl.metadata (2.0 kB)
+#7 1.986 Collecting notebook (from jupyter)
+#7 1.998   Downloading notebook-7.4.7-py3-none-any.whl.metadata (10 kB)
+#7 2.038 Collecting jupyter-console (from jupyter)
+#7 2.050   Downloading jupyter_console-6.6.3-py3-none-any.whl.metadata (5.8 kB)
+#7 2.107 Collecting nbconvert (from jupyter)
+#7 2.116   Downloading nbconvert-7.16.6-py3-none-any.whl.metadata (8.5 kB)
+#7 2.181 Collecting ipykernel (from jupyter)
+#7 2.189   Downloading ipykernel-7.1.0-py3-none-any.whl.metadata (4.5 kB)
+#7 2.240 Collecting ipywidgets (from jupyter)
+#7 2.249   Downloading ipywidgets-8.1.7-py3-none-any.whl.metadata (2.4 kB)
+#7 2.390 Collecting jupyterlab (from jupyter)
+#7 2.402   Downloading jupyterlab-4.4.10-py3-none-any.whl.metadata (16 kB)
+#7 2.462 Collecting comm>=0.1.1 (from ipykernel->jupyter)
+#7 2.469   Downloading comm-0.2.3-py3-none-any.whl.metadata (3.7 kB)
+#7 2.581 Collecting debugpy>=1.6.5 (from ipykernel->jupyter)
+#7 2.592   Downloading debugpy-1.8.17-cp311-cp311-manylinux_2_34_x86_64.whl.metadata (1.4 kB)
+#7 2.678 Collecting ipython>=7.23.1 (from ipykernel->jupyter)
+#7 2.686   Downloading ipython-9.6.0-py3-none-any.whl.metadata (4.4 kB)
+#7 2.741 Collecting jupyter-client>=8.0.0 (from ipykernel->jupyter)
+#7 2.750   Downloading jupyter_client-8.6.3-py3-none-any.whl.metadata (8.3 kB)
+#7 2.798 Collecting jupyter-core!=5.0.*,>=4.12 (from ipykernel->jupyter)
+#7 2.806   Downloading jupyter_core-5.9.1-py3-none-any.whl.metadata (1.5 kB)
+#7 2.842 Collecting matplotlib-inline>=0.1 (from ipykernel->jupyter)
+#7 2.850   Downloading matplotlib_inline-0.2.1-py3-none-any.whl.metadata (2.3 kB)
+#7 2.888 Collecting nest-asyncio>=1.4 (from ipykernel->jupyter)
+#7 2.896   Downloading nest_asyncio-1.6.0-py3-none-any.whl.metadata (2.8 kB)
+#7 2.937 Collecting packaging>=22 (from ipykernel->jupyter)
+#7 2.946   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#7 3.048 Collecting psutil>=5.7 (from ipykernel->jupyter)
+#7 3.057   Downloading psutil-7.1.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (23 kB)
+#7 3.304 Collecting pyzmq>=25 (from ipykernel->jupyter)
+#7 3.315   Downloading pyzmq-27.1.0-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (6.0 kB)
+#7 3.383 Collecting tornado>=6.2 (from ipykernel->jupyter)
+#7 3.391   Downloading tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+#7 3.436 Collecting traitlets>=5.4.0 (from ipykernel->jupyter)
+#7 3.444   Downloading traitlets-5.14.3-py3-none-any.whl.metadata (10 kB)
+#7 3.542 Collecting widgetsnbextension~=4.0.14 (from ipywidgets->jupyter)
+#7 3.550   Downloading widgetsnbextension-4.0.14-py3-none-any.whl.metadata (1.6 kB)
+#7 3.596 Collecting jupyterlab_widgets~=3.0.15 (from ipywidgets->jupyter)
+#7 3.604   Downloading jupyterlab_widgets-3.0.15-py3-none-any.whl.metadata (20 kB)
+#7 3.680 Collecting prompt-toolkit>=3.0.30 (from jupyter-console->jupyter)
+#7 3.688   Downloading prompt_toolkit-3.0.52-py3-none-any.whl.metadata (6.4 kB)
+#7 3.731 Collecting pygments (from jupyter-console->jupyter)
+#7 3.739   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#7 3.805 Collecting async-lru>=1.0.0 (from jupyterlab->jupyter)
+#7 3.813   Downloading async_lru-2.0.5-py3-none-any.whl.metadata (4.5 kB)
+#7 3.859 Collecting httpx<1,>=0.25.0 (from jupyterlab->jupyter)
+#7 3.868   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+#7 3.920 Collecting jinja2>=3.0.3 (from jupyterlab->jupyter)
+#7 3.929   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#7 3.971 Collecting jupyter-lsp>=2.0.0 (from jupyterlab->jupyter)
+#7 3.978   Downloading jupyter_lsp-2.3.0-py3-none-any.whl.metadata (1.8 kB)
+#7 4.040 Collecting jupyter-server<3,>=2.4.0 (from jupyterlab->jupyter)
+#7 4.048   Downloading jupyter_server-2.17.0-py3-none-any.whl.metadata (8.5 kB)
+#7 4.105 Collecting jupyterlab-server<3,>=2.27.1 (from jupyterlab->jupyter)
+#7 4.114   Downloading jupyterlab_server-2.28.0-py3-none-any.whl.metadata (5.9 kB)
+#7 4.150 Collecting notebook-shim>=0.2 (from jupyterlab->jupyter)
+#7 4.160   Downloading notebook_shim-0.2.4-py3-none-any.whl.metadata (4.0 kB)
+#7 4.171 Requirement already satisfied: setuptools>=41.1.0 in /usr/local/lib/python3.11/site-packages (from jupyterlab->jupyter) (79.0.1)
+#7 4.220 Collecting beautifulsoup4 (from nbconvert->jupyter)
+#7 4.229   Downloading beautifulsoup4-4.14.2-py3-none-any.whl.metadata (3.8 kB)
+#7 4.275 Collecting bleach!=5.0.0 (from bleach[css]!=5.0.0->nbconvert->jupyter)
+#7 4.284   Downloading bleach-6.3.0-py3-none-any.whl.metadata (31 kB)
+#7 4.329 Collecting defusedxml (from nbconvert->jupyter)
+#7 4.337   Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+#7 4.384 Collecting jupyterlab-pygments (from nbconvert->jupyter)
+#7 4.393   Downloading jupyterlab_pygments-0.3.0-py3-none-any.whl.metadata (4.4 kB)
+#7 4.464 Collecting markupsafe>=2.0 (from nbconvert->jupyter)
+#7 4.471   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#7 4.514 Collecting mistune<4,>=2.0.3 (from nbconvert->jupyter)
+#7 4.522   Downloading mistune-3.1.4-py3-none-any.whl.metadata (1.8 kB)
+#7 4.566 Collecting nbclient>=0.5.0 (from nbconvert->jupyter)
+#7 4.580   Downloading nbclient-0.10.2-py3-none-any.whl.metadata (8.3 kB)
+#7 4.639 Collecting nbformat>=5.7 (from nbconvert->jupyter)
+#7 4.657   Downloading nbformat-5.10.4-py3-none-any.whl.metadata (3.6 kB)
+#7 4.692 Collecting pandocfilters>=1.4.1 (from nbconvert->jupyter)
+#7 4.710   Downloading pandocfilters-1.5.1-py2.py3-none-any.whl.metadata (9.0 kB)
+#7 4.788 Collecting webencodings (from bleach!=5.0.0->bleach[css]!=5.0.0->nbconvert->jupyter)
+#7 4.801   Downloading webencodings-0.5.1-py2.py3-none-any.whl.metadata (2.1 kB)
+#7 4.847 Collecting tinycss2<1.5,>=1.1.0 (from bleach[css]!=5.0.0->nbconvert->jupyter)
+#7 4.855   Downloading tinycss2-1.4.0-py3-none-any.whl.metadata (3.0 kB)
+#7 4.917 Collecting anyio (from httpx<1,>=0.25.0->jupyterlab->jupyter)
+#7 4.927   Downloading anyio-4.11.0-py3-none-any.whl.metadata (4.1 kB)
+#7 4.975 Collecting certifi (from httpx<1,>=0.25.0->jupyterlab->jupyter)
+#7 4.991   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 5.043 Collecting httpcore==1.* (from httpx<1,>=0.25.0->jupyterlab->jupyter)
+#7 5.059   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+#7 5.105 Collecting idna (from httpx<1,>=0.25.0->jupyterlab->jupyter)
+#7 5.121   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 5.203 Collecting h11>=0.16 (from httpcore==1.*->httpx<1,>=0.25.0->jupyterlab->jupyter)
+#7 5.224   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#7 5.292 Collecting decorator (from ipython>=7.23.1->ipykernel->jupyter)
+#7 5.308   Downloading decorator-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+#7 5.349 Collecting ipython-pygments-lexers (from ipython>=7.23.1->ipykernel->jupyter)
+#7 5.362   Downloading ipython_pygments_lexers-1.1.1-py3-none-any.whl.metadata (1.1 kB)
+#7 5.405 Collecting jedi>=0.16 (from ipython>=7.23.1->ipykernel->jupyter)
+#7 5.416   Downloading jedi-0.19.2-py2.py3-none-any.whl.metadata (22 kB)
+#7 5.460 Collecting pexpect>4.3 (from ipython>=7.23.1->ipykernel->jupyter)
+#7 5.468   Downloading pexpect-4.9.0-py2.py3-none-any.whl.metadata (2.5 kB)
+#7 5.526 Collecting stack_data (from ipython>=7.23.1->ipykernel->jupyter)
+#7 5.536   Downloading stack_data-0.6.3-py3-none-any.whl.metadata (18 kB)
+#7 5.591 Collecting typing_extensions>=4.6 (from ipython>=7.23.1->ipykernel->jupyter)
+#7 5.608   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#7 5.670 Collecting python-dateutil>=2.8.2 (from jupyter-client>=8.0.0->ipykernel->jupyter)
+#7 5.685   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#7 5.752 Collecting platformdirs>=2.5 (from jupyter-core!=5.0.*,>=4.12->ipykernel->jupyter)
+#7 5.771   Downloading platformdirs-4.5.0-py3-none-any.whl.metadata (12 kB)
+#7 5.860 Collecting argon2-cffi>=21.1 (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+#7 5.878   Downloading argon2_cffi-25.1.0-py3-none-any.whl.metadata (4.1 kB)
+#7 5.925 Collecting jupyter-events>=0.11.0 (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+#7 5.948   Downloading jupyter_events-0.12.0-py3-none-any.whl.metadata (5.8 kB)
+#7 5.995 Collecting jupyter-server-terminals>=0.4.4 (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+#7 6.005   Downloading jupyter_server_terminals-0.5.3-py3-none-any.whl.metadata (5.6 kB)
+#7 6.061 Collecting overrides>=5.0 (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+#7 6.070   Downloading overrides-7.7.0-py3-none-any.whl.metadata (5.8 kB)
+#7 6.118 Collecting prometheus-client>=0.9 (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+#7 6.136   Downloading prometheus_client-0.23.1-py3-none-any.whl.metadata (1.9 kB)
+#7 6.199 Collecting send2trash>=1.8.2 (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+#7 6.222   Downloading Send2Trash-1.8.3-py3-none-any.whl.metadata (4.0 kB)
+#7 6.270 Collecting terminado>=0.8.3 (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+#7 6.290   Downloading terminado-0.18.1-py3-none-any.whl.metadata (5.8 kB)
+#7 6.358 Collecting websocket-client>=1.7 (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+#7 6.384   Downloading websocket_client-1.9.0-py3-none-any.whl.metadata (8.3 kB)
+#7 6.461 Collecting babel>=2.10 (from jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter)
+#7 6.472   Downloading babel-2.17.0-py3-none-any.whl.metadata (2.0 kB)
+#7 6.516 Collecting json5>=0.9.0 (from jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter)
+#7 6.543   Downloading json5-0.12.1-py3-none-any.whl.metadata (36 kB)
+#7 6.606 Collecting jsonschema>=4.18.0 (from jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter)
+#7 6.622   Downloading jsonschema-4.25.1-py3-none-any.whl.metadata (7.6 kB)
+#7 6.690 Collecting requests>=2.31 (from jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter)
+#7 6.708   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 6.801 Collecting fastjsonschema>=2.15 (from nbformat>=5.7->nbconvert->jupyter)
+#7 6.812   Downloading fastjsonschema-2.21.2-py3-none-any.whl.metadata (2.3 kB)
+#7 6.895 Collecting wcwidth (from prompt-toolkit>=3.0.30->jupyter-console->jupyter)
+#7 6.909   Downloading wcwidth-0.2.14-py2.py3-none-any.whl.metadata (15 kB)
+#7 7.045 Collecting soupsieve>1.2 (from beautifulsoup4->nbconvert->jupyter)
+#7 7.053   Downloading soupsieve-2.8-py3-none-any.whl.metadata (4.6 kB)
+#7 7.113 Collecting sniffio>=1.1 (from anyio->httpx<1,>=0.25.0->jupyterlab->jupyter)
+#7 7.120   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+#7 7.170 Collecting argon2-cffi-bindings (from argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+#7 7.189   Downloading argon2_cffi_bindings-25.1.0-cp39-abi3-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (7.4 kB)
+#7 7.284 Collecting parso<0.9.0,>=0.8.4 (from jedi>=0.16->ipython>=7.23.1->ipykernel->jupyter)
+#7 7.295   Downloading parso-0.8.5-py2.py3-none-any.whl.metadata (8.3 kB)
+#7 7.366 Collecting attrs>=22.2.0 (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter)
+#7 7.394   Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+#7 7.436 Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter)
+#7 7.463   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+#7 7.524 Collecting referencing>=0.28.4 (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter)
+#7 7.532   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+#7 7.956 Collecting rpds-py>=0.7.1 (from jsonschema>=4.18.0->jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter)
+#7 7.965   Downloading rpds_py-0.28.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+#7 8.028 Collecting python-json-logger>=2.0.4 (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+#7 8.035   Downloading python_json_logger-4.0.0-py3-none-any.whl.metadata (4.0 kB)
+#7 8.103 Collecting pyyaml>=5.3 (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+#7 8.114   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#7 8.159 Collecting rfc3339-validator (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+#7 8.171   Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl.metadata (1.5 kB)
+#7 8.208 Collecting rfc3986-validator>=0.1.1 (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+#7 8.221   Downloading rfc3986_validator-0.1.1-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 8.288 Collecting ptyprocess>=0.5 (from pexpect>4.3->ipython>=7.23.1->ipykernel->jupyter)
+#7 8.302   Downloading ptyprocess-0.7.0-py2.py3-none-any.whl.metadata (1.3 kB)
+#7 8.399 Collecting six>=1.5 (from python-dateutil>=2.8.2->jupyter-client>=8.0.0->ipykernel->jupyter)
+#7 8.417   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 8.532 Collecting charset_normalizer<4,>=2 (from requests>=2.31->jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter)
+#7 8.549   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 8.629 Collecting urllib3<3,>=1.21.1 (from requests>=2.31->jupyterlab-server<3,>=2.27.1->jupyterlab->jupyter)
+#7 8.643   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 8.797 Collecting executing>=1.2.0 (from stack_data->ipython>=7.23.1->ipykernel->jupyter)
+#7 8.805   Downloading executing-2.2.1-py2.py3-none-any.whl.metadata (8.9 kB)
+#7 8.860 Collecting asttokens>=2.1.0 (from stack_data->ipython>=7.23.1->ipykernel->jupyter)
+#7 8.874   Downloading asttokens-3.0.0-py3-none-any.whl.metadata (4.7 kB)
+#7 8.914 Collecting pure-eval (from stack_data->ipython>=7.23.1->ipykernel->jupyter)
+#7 8.931   Downloading pure_eval-0.2.3-py3-none-any.whl.metadata (6.3 kB)
+#7 9.061 Collecting fqdn (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+#7 9.069   Downloading fqdn-1.5.1-py3-none-any.whl.metadata (1.4 kB)
+#7 9.106 Collecting isoduration (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+#7 9.119   Downloading isoduration-20.11.0-py3-none-any.whl.metadata (5.7 kB)
+#7 9.161 Collecting jsonpointer>1.13 (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+#7 9.177   Downloading jsonpointer-3.0.0-py2.py3-none-any.whl.metadata (2.3 kB)
+#7 9.214 Collecting rfc3987-syntax>=1.1.0 (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+#7 9.230   Downloading rfc3987_syntax-1.1.0-py3-none-any.whl.metadata (7.7 kB)
+#7 9.274 Collecting uri-template (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+#7 9.293   Downloading uri_template-1.3.0-py3-none-any.whl.metadata (8.8 kB)
+#7 9.345 Collecting webcolors>=24.6.0 (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+#7 9.367   Downloading webcolors-24.11.1-py3-none-any.whl.metadata (2.2 kB)
+#7 9.629 Collecting cffi>=1.0.1 (from argon2-cffi-bindings->argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+#7 9.636   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+#7 9.762 Collecting pycparser (from cffi>=1.0.1->argon2-cffi-bindings->argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+#7 9.771   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+#7 9.830 Collecting lark>=1.2.2 (from rfc3987-syntax>=1.1.0->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+#7 9.838   Downloading lark-1.3.1-py3-none-any.whl.metadata (1.8 kB)
+#7 9.916 Collecting arrow>=0.15.0 (from isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+#7 9.924   Downloading arrow-1.4.0-py3-none-any.whl.metadata (7.7 kB)
+#7 10.00 Collecting tzdata (from arrow>=0.15.0->isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+#7 10.01   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#7 10.08 Downloading jupyter-1.1.1-py2.py3-none-any.whl (2.7 kB)
+#7 10.09 Downloading ipykernel-7.1.0-py3-none-any.whl (117 kB)
+#7 10.11    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.0/118.0 kB 6.9 MB/s eta 0:00:00
+#7 10.12 Downloading ipywidgets-8.1.7-py3-none-any.whl (139 kB)
+#7 10.15    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.8/139.8 kB 5.8 MB/s eta 0:00:00
+#7 10.17 Downloading jupyter_console-6.6.3-py3-none-any.whl (24 kB)
+#7 10.19 Downloading jupyterlab-4.4.10-py3-none-any.whl (12.3 MB)
+#7 10.76    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 24.9 MB/s eta 0:00:00
+#7 10.77 Downloading nbconvert-7.16.6-py3-none-any.whl (258 kB)
+#7 10.79    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 258.5/258.5 kB 10.6 MB/s eta 0:00:00
+#7 10.81 Downloading notebook-7.4.7-py3-none-any.whl (14.3 MB)
+#7 11.38    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.3/14.3 MB 22.8 MB/s eta 0:00:00
+#7 11.39 Downloading async_lru-2.0.5-py3-none-any.whl (6.1 kB)
+#7 11.41 Downloading bleach-6.3.0-py3-none-any.whl (164 kB)
+#7 11.43    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 164.4/164.4 kB 11.8 MB/s eta 0:00:00
+#7 11.44 Downloading comm-0.2.3-py3-none-any.whl (7.3 kB)
+#7 11.45 Downloading debugpy-1.8.17-cp311-cp311-manylinux_2_34_x86_64.whl (3.2 MB)
+#7 11.58    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 25.3 MB/s eta 0:00:00
+#7 11.60 Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+#7 11.61    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.5/73.5 kB 6.0 MB/s eta 0:00:00
+#7 11.62 Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+#7 11.63    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.8/78.8 kB 6.0 MB/s eta 0:00:00
+#7 11.64 Downloading ipython-9.6.0-py3-none-any.whl (616 kB)
+#7 11.67    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 616.2/616.2 kB 21.4 MB/s eta 0:00:00
+#7 11.68 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#7 11.69    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 10.8 MB/s eta 0:00:00
+#7 11.70 Downloading jupyter_client-8.6.3-py3-none-any.whl (106 kB)
+#7 11.71    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.1/106.1 kB 8.7 MB/s eta 0:00:00
+#7 11.72 Downloading jupyter_core-5.9.1-py3-none-any.whl (29 kB)
+#7 11.74 Downloading jupyter_lsp-2.3.0-py3-none-any.whl (76 kB)
+#7 11.75    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 76.7/76.7 kB 5.8 MB/s eta 0:00:00
+#7 11.76 Downloading jupyter_server-2.17.0-py3-none-any.whl (388 kB)
+#7 11.78    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 388.2/388.2 kB 17.1 MB/s eta 0:00:00
+#7 11.79 Downloading jupyterlab_server-2.28.0-py3-none-any.whl (59 kB)
+#7 11.80    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.8/59.8 kB 5.2 MB/s eta 0:00:00
+#7 11.81 Downloading jupyterlab_widgets-3.0.15-py3-none-any.whl (216 kB)
+#7 11.83    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 216.6/216.6 kB 11.6 MB/s eta 0:00:00
+#7 11.84 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#7 11.86 Downloading matplotlib_inline-0.2.1-py3-none-any.whl (9.5 kB)
+#7 11.88 Downloading mistune-3.1.4-py3-none-any.whl (53 kB)
+#7 11.89    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.5/53.5 kB 4.3 MB/s eta 0:00:00
+#7 11.90 Downloading nbclient-0.10.2-py3-none-any.whl (25 kB)
+#7 11.92 Downloading nbformat-5.10.4-py3-none-any.whl (78 kB)
+#7 11.93    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 6.8 MB/s eta 0:00:00
+#7 11.94 Downloading nest_asyncio-1.6.0-py3-none-any.whl (5.2 kB)
+#7 11.95 Downloading notebook_shim-0.2.4-py3-none-any.whl (13 kB)
+#7 11.97 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#7 11.98    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.4 MB/s eta 0:00:00
+#7 11.99 Downloading pandocfilters-1.5.1-py2.py3-none-any.whl (8.7 kB)
+#7 12.02 Downloading prompt_toolkit-3.0.52-py3-none-any.whl (391 kB)
+#7 12.04    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 391.4/391.4 kB 18.7 MB/s eta 0:00:00
+#7 12.05 Downloading psutil-7.1.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (258 kB)
+#7 12.07    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 258.7/258.7 kB 14.4 MB/s eta 0:00:00
+#7 12.07 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#7 12.12    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 25.1 MB/s eta 0:00:00
+#7 12.13 Downloading pyzmq-27.1.0-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (857 kB)
+#7 12.17    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 857.0/857.0 kB 23.6 MB/s eta 0:00:00
+#7 12.18 Downloading tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (443 kB)
+#7 12.20    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 443.9/443.9 kB 20.0 MB/s eta 0:00:00
+#7 12.21 Downloading traitlets-5.14.3-py3-none-any.whl (85 kB)
+#7 12.23    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.4/85.4 kB 6.7 MB/s eta 0:00:00
+#7 12.24 Downloading widgetsnbextension-4.0.14-py3-none-any.whl (2.2 MB)
+#7 12.32    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 26.9 MB/s eta 0:00:00
+#7 12.33 Downloading beautifulsoup4-4.14.2-py3-none-any.whl (106 kB)
+#7 12.34    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.4/106.4 kB 8.2 MB/s eta 0:00:00
+#7 12.35 Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+#7 12.37 Downloading jupyterlab_pygments-0.3.0-py3-none-any.whl (15 kB)
+#7 12.39 Downloading anyio-4.11.0-py3-none-any.whl (109 kB)
+#7 12.40    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.1/109.1 kB 6.9 MB/s eta 0:00:00
+#7 12.41 Downloading argon2_cffi-25.1.0-py3-none-any.whl (14 kB)
+#7 12.43 Downloading babel-2.17.0-py3-none-any.whl (10.2 MB)
+#7 12.83    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 25.5 MB/s eta 0:00:00
+#7 12.84 Downloading fastjsonschema-2.21.2-py3-none-any.whl (24 kB)
+#7 12.86 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 12.87    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 6.1 MB/s eta 0:00:00
+#7 12.88 Downloading jedi-0.19.2-py2.py3-none-any.whl (1.6 MB)
+#7 12.94    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 26.5 MB/s eta 0:00:00
+#7 12.95 Downloading json5-0.12.1-py3-none-any.whl (36 kB)
+#7 12.97 Downloading jsonschema-4.25.1-py3-none-any.whl (90 kB)
+#7 12.98    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.0/90.0 kB 8.1 MB/s eta 0:00:00
+#7 12.99 Downloading jupyter_events-0.12.0-py3-none-any.whl (19 kB)
+#7 13.01 Downloading jupyter_server_terminals-0.5.3-py3-none-any.whl (13 kB)
+#7 13.03 Downloading overrides-7.7.0-py3-none-any.whl (17 kB)
+#7 13.05 Downloading pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+#7 13.06    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.8/63.8 kB 5.3 MB/s eta 0:00:00
+#7 13.07 Downloading platformdirs-4.5.0-py3-none-any.whl (18 kB)
+#7 13.08 Downloading prometheus_client-0.23.1-py3-none-any.whl (61 kB)
+#7 13.10    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.1/61.1 kB 4.6 MB/s eta 0:00:00
+#7 13.10 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#7 13.12    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 13.2 MB/s eta 0:00:00
+#7 13.13 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 13.14    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 5.9 MB/s eta 0:00:00
+#7 13.15 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 13.16    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 11.8 MB/s eta 0:00:00
+#7 13.17 Downloading Send2Trash-1.8.3-py3-none-any.whl (18 kB)
+#7 13.19 Downloading soupsieve-2.8-py3-none-any.whl (36 kB)
+#7 13.21 Downloading terminado-0.18.1-py3-none-any.whl (14 kB)
+#7 13.23 Downloading tinycss2-1.4.0-py3-none-any.whl (26 kB)
+#7 13.25 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#7 13.26    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.6 MB/s eta 0:00:00
+#7 13.27 Downloading webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+#7 13.29 Downloading websocket_client-1.9.0-py3-none-any.whl (82 kB)
+#7 13.30    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 82.6/82.6 kB 6.8 MB/s eta 0:00:00
+#7 13.31 Downloading decorator-5.2.1-py3-none-any.whl (9.2 kB)
+#7 13.32 Downloading ipython_pygments_lexers-1.1.1-py3-none-any.whl (8.1 kB)
+#7 13.34 Downloading stack_data-0.6.3-py3-none-any.whl (24 kB)
+#7 13.36 Downloading wcwidth-0.2.14-py2.py3-none-any.whl (37 kB)
+#7 13.37 Downloading asttokens-3.0.0-py3-none-any.whl (26 kB)
+#7 13.39 Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+#7 13.40    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.6/67.6 kB 6.0 MB/s eta 0:00:00
+#7 13.41 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 13.43    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 9.9 MB/s eta 0:00:00
+#7 13.43 Downloading executing-2.2.1-py2.py3-none-any.whl (28 kB)
+#7 13.45 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#7 13.47 Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+#7 13.49 Downloading parso-0.8.5-py2.py3-none-any.whl (106 kB)
+#7 13.50    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.7/106.7 kB 8.8 MB/s eta 0:00:00
+#7 13.51 Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+#7 13.53 Downloading python_json_logger-4.0.0-py3-none-any.whl (15 kB)
+#7 13.55 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#7 13.58    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 24.1 MB/s eta 0:00:00
+#7 13.59 Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+#7 13.61 Downloading rfc3986_validator-0.1.1-py2.py3-none-any.whl (4.2 kB)
+#7 13.63 Downloading rpds_py-0.28.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (382 kB)
+#7 13.65    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 382.9/382.9 kB 17.4 MB/s eta 0:00:00
+#7 13.66 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 13.67 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+#7 13.69 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 13.71    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 10.2 MB/s eta 0:00:00
+#7 13.71 Downloading argon2_cffi_bindings-25.1.0-cp39-abi3-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (87 kB)
+#7 13.72    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.1/87.1 kB 7.7 MB/s eta 0:00:00
+#7 13.73 Downloading pure_eval-0.2.3-py3-none-any.whl (11 kB)
+#7 13.75 Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl (3.5 kB)
+#7 13.77 Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+#7 13.79    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 13.4 MB/s eta 0:00:00
+#7 13.79 Downloading jsonpointer-3.0.0-py2.py3-none-any.whl (7.6 kB)
+#7 13.81 Downloading rfc3987_syntax-1.1.0-py3-none-any.whl (8.0 kB)
+#7 13.83 Downloading webcolors-24.11.1-py3-none-any.whl (14 kB)
+#7 13.85 Downloading fqdn-1.5.1-py3-none-any.whl (9.1 kB)
+#7 13.86 Downloading isoduration-20.11.0-py3-none-any.whl (11 kB)
+#7 13.88 Downloading uri_template-1.3.0-py3-none-any.whl (11 kB)
+#7 13.90 Downloading arrow-1.4.0-py3-none-any.whl (68 kB)
+#7 13.91    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.8/68.8 kB 6.2 MB/s eta 0:00:00
+#7 13.92 Downloading lark-1.3.1-py3-none-any.whl (113 kB)
+#7 13.93    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.2/113.2 kB 8.1 MB/s eta 0:00:00
+#7 13.94 Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+#7 13.95    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 9.4 MB/s eta 0:00:00
+#7 13.96 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#7 13.98    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 16.5 MB/s eta 0:00:00
+#7 14.55 Installing collected packages: webencodings, pure-eval, ptyprocess, fastjsonschema, widgetsnbextension, websocket-client, webcolors, wcwidth, urllib3, uri-template, tzdata, typing_extensions, traitlets, tornado, tinycss2, soupsieve, sniffio, six, send2trash, rpds-py, rfc3986-validator, pyzmq, pyyaml, python-json-logger, pygments, pycparser, psutil, prometheus-client, platformdirs, pexpect, parso, pandocfilters, packaging, overrides, nest-asyncio, mistune, markupsafe, lark, jupyterlab_widgets, jupyterlab-pygments, jsonpointer, json5, idna, h11, fqdn, executing, defusedxml, decorator, debugpy, comm, charset_normalizer, certifi, bleach, babel, attrs, async-lru, asttokens, terminado, stack_data, rfc3987-syntax, rfc3339-validator, requests, referencing, python-dateutil, prompt-toolkit, matplotlib-inline, jupyter-core, jinja2, jedi, ipython-pygments-lexers, httpcore, cffi, beautifulsoup4, anyio, jupyter-server-terminals, jupyter-client, jsonschema-specifications, ipython, httpx, arrow, argon2-cffi-bindings, jsonschema, isoduration, ipywidgets, ipykernel, argon2-cffi, nbformat, jupyter-console, nbclient, jupyter-events, nbconvert, jupyter-server, notebook-shim, jupyterlab-server, jupyter-lsp, jupyterlab, notebook, jupyter
+#7 21.15 Successfully installed anyio-4.11.0 argon2-cffi-25.1.0 argon2-cffi-bindings-25.1.0 arrow-1.4.0 asttokens-3.0.0 async-lru-2.0.5 attrs-25.4.0 babel-2.17.0 beautifulsoup4-4.14.2 bleach-6.3.0 certifi-2025.10.5 cffi-2.0.0 charset_normalizer-3.4.4 comm-0.2.3 debugpy-1.8.17 decorator-5.2.1 defusedxml-0.7.1 executing-2.2.1 fastjsonschema-2.21.2 fqdn-1.5.1 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.11 ipykernel-7.1.0 ipython-9.6.0 ipython-pygments-lexers-1.1.1 ipywidgets-8.1.7 isoduration-20.11.0 jedi-0.19.2 jinja2-3.1.6 json5-0.12.1 jsonpointer-3.0.0 jsonschema-4.25.1 jsonschema-specifications-2025.9.1 jupyter-1.1.1 jupyter-client-8.6.3 jupyter-console-6.6.3 jupyter-core-5.9.1 jupyter-events-0.12.0 jupyter-lsp-2.3.0 jupyter-server-2.17.0 jupyter-server-terminals-0.5.3 jupyterlab-4.4.10 jupyterlab-pygments-0.3.0 jupyterlab-server-2.28.0 jupyterlab_widgets-3.0.15 lark-1.3.1 markupsafe-3.0.3 matplotlib-inline-0.2.1 mistune-3.1.4 nbclient-0.10.2 nbconvert-7.16.6 nbformat-5.10.4 nest-asyncio-1.6.0 notebook-7.4.7 notebook-shim-0.2.4 overrides-7.7.0 packaging-25.0 pandocfilters-1.5.1 parso-0.8.5 pexpect-4.9.0 platformdirs-4.5.0 prometheus-client-0.23.1 prompt-toolkit-3.0.52 psutil-7.1.2 ptyprocess-0.7.0 pure-eval-0.2.3 pycparser-2.23 pygments-2.19.2 python-dateutil-2.9.0.post0 python-json-logger-4.0.0 pyyaml-6.0.3 pyzmq-27.1.0 referencing-0.37.0 requests-2.32.5 rfc3339-validator-0.1.4 rfc3986-validator-0.1.1 rfc3987-syntax-1.1.0 rpds-py-0.28.0 send2trash-1.8.3 six-1.17.0 sniffio-1.3.1 soupsieve-2.8 stack_data-0.6.3 terminado-0.18.1 tinycss2-1.4.0 tornado-6.5.2 traitlets-5.14.3 typing_extensions-4.15.0 tzdata-2025.2 uri-template-1.3.0 urllib3-2.5.0 wcwidth-0.2.14 webcolors-24.11.1 webencodings-0.5.1 websocket-client-1.9.0 widgetsnbextension-4.0.14
+#7 21.15 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 21.24 
+#7 21.24 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 21.24 [notice] To update, run: pip install --upgrade pip
+#7 DONE 22.4s
+
+#8 [4/4] RUN ["pip","install","tornado"]
+#8 0.495 Requirement already satisfied: tornado in /usr/local/lib/python3.11/site-packages (6.5.2)
+#8 0.885 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.891 
+#8 0.891 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.891 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.0s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 1.5s done
+#9 writing image sha256:958d82db66c5c98dbd0b6513179715a15e27a2b25c6586155a457862e5773e40 done
+#9 naming to docker.io/library/test-image-9395cd6d36c7ac3be2d1 done
+#9 DONE 1.6s
+
+View build details: docker-desktop://dashboard/build/default/default/9wzo1rafuex2mzfpkg70e7fhq
+[2025-10-29 18:24:42] SUCCESS: Build completed for 9395cd6d36c7ac3be2d1

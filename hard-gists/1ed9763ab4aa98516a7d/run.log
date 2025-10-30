@@ -1,0 +1,12 @@
+=== Docker Run Log for 1ed9763ab4aa98516a7d ===
+Started at: Mi 29. Okt 12:54:28 CET 2025
+
+[2025-10-29 12:54:28] START: Running container for 1ed9763ab4aa98516a7d
+[2025-10-29 12:54:28] SUCCESS: Container b4991c3ec7664c876c4af29c4aae407d8aa0c130091dfcdb9babecd1d765a736 started for 1ed9763ab4aa98516a7d
+=== Container logs for 1ed9763ab4aa98516a7d ===
+  File "/snippet.py", line 34
+    print "Copying %s:%s" % (model.__name__, instance.pk)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 1ed9763ab4aa98516a7d ===
+[2025-10-29 12:54:30] INFO: Container b4991c3ec7664c876c4af29c4aae407d8aa0c130091dfcdb9babecd1d765a736 has stopped

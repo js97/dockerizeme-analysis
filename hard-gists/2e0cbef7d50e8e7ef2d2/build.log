@@ -1,0 +1,96 @@
+=== Docker Build Log for 2e0cbef7d50e8e7ef2d2 ===
+Started at: Mi 29. Okt 13:26:40 CET 2025
+
+[2025-10-29 13:26:40] START: Building image for 2e0cbef7d50e8e7ef2d2
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 249B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.01kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/2e0cbef7d50e8e7ef2d2/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","youtube-python"]
+#7 1.987 Collecting youtube-python
+#7 2.123   Downloading youtube-python-1.0.13.tar.gz (2.8 kB)
+#7 2.138   Preparing metadata (setup.py): started
+#7 2.522   Preparing metadata (setup.py): finished with status 'done'
+#7 2.569 Collecting requests (from youtube-python)
+#7 2.578   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.689 Collecting charset_normalizer<4,>=2 (from requests->youtube-python)
+#7 2.700   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.748 Collecting idna<4,>=2.5 (from requests->youtube-python)
+#7 2.757   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.819 Collecting urllib3<3,>=1.21.1 (from requests->youtube-python)
+#7 2.827   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.873 Collecting certifi>=2017.4.17 (from requests->youtube-python)
+#7 2.880   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.906 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.923    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.6 MB/s eta 0:00:00
+#7 2.931 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.950    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.0 MB/s eta 0:00:00
+#7 2.959 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.975    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 9.8 MB/s eta 0:00:00
+#7 2.984 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.995    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 6.8 MB/s eta 0:00:00
+#7 3.002 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 3.016    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.3 MB/s eta 0:00:00
+#7 3.023 Building wheels for collected packages: youtube-python
+#7 3.024   Building wheel for youtube-python (setup.py): started
+#7 3.180   Building wheel for youtube-python (setup.py): finished with status 'done'
+#7 3.181   Created wheel for youtube-python: filename=youtube_python-1.0.13-py2.py3-none-any.whl size=3413 sha256=2c1ac8e5ff20c492a09830d0c3c391847966786e83ef6d218e6d890b75d61277
+#7 3.181   Stored in directory: /root/.cache/pip/wheels/e0/a8/2d/2ccdf68f9f1aafc0c95c46f8f53ea313df9b5e349965c2f4bd
+#7 3.182 Successfully built youtube-python
+#7 3.221 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests, youtube-python
+#7 3.462 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0 youtube-python-1.0.13
+#7 3.462 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.550 
+#7 3.550 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.550 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.7s
+
+#8 [4/5] RUN ["pip","install","pip"]
+#8 0.459 Requirement already satisfied: pip in /usr/local/lib/python3.11/site-packages (24.0)
+#8 0.498 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.503 
+#8 0.503 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.503 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.6s
+
+#9 [5/5] RUN ["pip","install","youtube_dl"]
+#9 0.612 Collecting youtube_dl
+#9 0.743   Downloading youtube_dl-2021.12.17-py2.py3-none-any.whl.metadata (1.5 kB)
+#9 0.894 Downloading youtube_dl-2021.12.17-py2.py3-none-any.whl (1.9 MB)
+#9 1.331    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 4.4 MB/s eta 0:00:00
+#9 1.382 Installing collected packages: youtube_dl
+#9 2.174 Successfully installed youtube_dl-2021.12.17
+#9 2.174 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 2.179 
+#9 2.179 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 2.179 [notice] To update, run: pip install --upgrade pip
+#9 DONE 2.4s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.2s done
+#10 writing image sha256:5adde98a267c09cc4ffb0af9882428bbc438071ae441da1fba1c184778859c74 done
+#10 naming to docker.io/library/test-image-2e0cbef7d50e8e7ef2d2 0.0s done
+#10 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/8ceeu1of95s55pj8r4m0ojj1q
+[2025-10-29 13:26:47] SUCCESS: Build completed for 2e0cbef7d50e8e7ef2d2

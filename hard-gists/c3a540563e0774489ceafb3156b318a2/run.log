@@ -1,0 +1,18 @@
+=== Docker Run Log for c3a540563e0774489ceafb3156b318a2 ===
+Started at: Mi 29. Okt 19:52:45 CET 2025
+
+[2025-10-29 19:52:45] START: Running container for c3a540563e0774489ceafb3156b318a2
+[2025-10-29 19:52:46] SUCCESS: Container f093cbb82fd3e77c0eb91a76319531748f917277b6af2f470ceb699473cf8178 started for c3a540563e0774489ceafb3156b318a2
+=== Container logs for c3a540563e0774489ceafb3156b318a2 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 230, in <module>
+    config = Config(config_file=args.config_file)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 38, in __init__
+    self.parse()
+  File "/snippet.py", line 57, in parse
+    with open(config_file, "r") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/etc/logmon/logmon.conf'
+=== End of logs for c3a540563e0774489ceafb3156b318a2 ===
+[2025-10-29 19:52:48] INFO: Container f093cbb82fd3e77c0eb91a76319531748f917277b6af2f470ceb699473cf8178 has stopped

@@ -1,0 +1,223 @@
+=== Docker Build Log for 3822f77eb07e8e8efb2e ===
+Started at: Mi 29. Okt 14:01:04 CET 2025
+
+[2025-10-29 14:01:04] START: Building image for 3822f77eb07e8e8efb2e
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 408B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 986B 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/10] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/10] COPY hard-gists/3822f77eb07e8e8efb2e/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/10] RUN ["pip","install","marrow.mailer"]
+#7 1.868 Collecting marrow.mailer
+#7 1.908   Downloading marrow.mailer-4.0.3-py2.py3-none-any.whl.metadata (1.4 kB)
+#7 1.949 Collecting marrow.util<2.0 (from marrow.mailer)
+#7 1.960   Downloading marrow.util-1.2.3.tar.gz (17 kB)
+#7 1.977   Preparing metadata (setup.py): started
+#7 2.355   Preparing metadata (setup.py): finished with status 'done'
+#7 2.368 Downloading marrow.mailer-4.0.3-py2.py3-none-any.whl (132 kB)
+#7 2.395    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.7/132.7 kB 4.9 MB/s eta 0:00:00
+#7 2.400 Building wheels for collected packages: marrow.util
+#7 2.401   Building wheel for marrow.util (setup.py): started
+#7 2.566   Building wheel for marrow.util (setup.py): finished with status 'done'
+#7 2.567   Created wheel for marrow.util: filename=marrow_util-1.2.3-py3-none-any.whl size=23729 sha256=9d8294a8cbc4855c437647319c32c61c3af4b9bf9e73fd27a118c3574984063e
+#7 2.567   Stored in directory: /root/.cache/pip/wheels/c1/26/db/9d972b23abf62c5f197f5b57713fcdba2c6b727d887e1df6f0
+#7 2.569 Successfully built marrow.util
+#7 2.601 Installing collected packages: marrow.util, marrow.mailer
+#7 2.668 Successfully installed marrow.mailer-4.0.3 marrow.util-1.2.3
+#7 2.669 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.759 
+#7 2.759 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.759 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.9s
+
+#8 [ 4/10] RUN ["pip","install","marrow.schema"]
+#8 0.516 Collecting marrow.schema
+#8 0.552   Downloading marrow.schema-2.0.0-py2.py3-none-any.whl.metadata (29 kB)
+#8 0.579 Downloading marrow.schema-2.0.0-py2.py3-none-any.whl (78 kB)
+#8 0.611    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.4/78.4 kB 2.3 MB/s eta 0:00:00
+#8 0.649 Installing collected packages: marrow.schema
+#8 0.714 Successfully installed marrow.schema-2.0.0
+#8 0.714 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.718 
+#8 0.718 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.718 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.8s
+
+#9 [ 5/10] RUN ["pip","install","marrow.mongo"]
+#9 0.527 Collecting marrow.mongo
+#9 0.561   Downloading marrow.mongo-1.1.2-py2.py3-none-any.whl.metadata (9.5 kB)
+#9 0.606 Collecting uri<3.0.0,>=2.0.0 (from marrow.mongo)
+#9 0.615   Downloading uri-2.0.1-py2.py3-none-any.whl.metadata (13 kB)
+#9 0.667 Collecting marrow.schema<2.0.0,>=1.2.0 (from marrow.mongo)
+#9 0.676   Downloading marrow.schema-1.2.0-py2.py3-none-any.whl.metadata (29 kB)
+#9 0.719 Collecting marrow.package<2.0.0,>=1.1.0 (from marrow.mongo)
+#9 0.728   Downloading marrow.package-1.2.0-py2.py3-none-any.whl.metadata (13 kB)
+#9 1.032 Collecting pymongo>=3.2 (from marrow.mongo)
+#9 1.045   Downloading pymongo-4.15.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+#9 1.138 Collecting dnspython<3.0.0,>=1.16.0 (from pymongo>=3.2->marrow.mongo)
+#9 1.146   Downloading dnspython-2.8.0-py3-none-any.whl.metadata (5.7 kB)
+#9 1.180 Downloading marrow.mongo-1.1.2-py2.py3-none-any.whl (159 kB)
+#9 1.203    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 159.1/159.1 kB 7.3 MB/s eta 0:00:00
+#9 1.212 Downloading marrow.package-1.2.0-py2.py3-none-any.whl (28 kB)
+#9 1.234 Downloading marrow.schema-1.2.0-py2.py3-none-any.whl (62 kB)
+#9 1.250    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.2/62.2 kB 3.9 MB/s eta 0:00:00
+#9 1.260 Downloading pymongo-4.15.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.5 MB)
+#9 1.316    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 26.6 MB/s eta 0:00:00
+#9 1.325 Downloading uri-2.0.1-py2.py3-none-any.whl (42 kB)
+#9 1.337    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.0/43.0 kB 3.3 MB/s eta 0:00:00
+#9 1.345 Downloading dnspython-2.8.0-py3-none-any.whl (331 kB)
+#9 1.366    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 331.1/331.1 kB 16.4 MB/s eta 0:00:00
+#9 1.454 Installing collected packages: uri, marrow.schema, marrow.package, dnspython, pymongo, marrow.mongo
+#9 1.498   Attempting uninstall: marrow.schema
+#9 1.502     Found existing installation: marrow.schema 2.0.0
+#9 1.506     Uninstalling marrow.schema-2.0.0:
+#9 1.557       Successfully uninstalled marrow.schema-2.0.0
+#9 2.081 Successfully installed dnspython-2.8.0 marrow.mongo-1.1.2 marrow.package-1.2.0 marrow.schema-1.2.0 pymongo-4.15.3 uri-2.0.1
+#9 2.082 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 2.087 
+#9 2.087 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 2.087 [notice] To update, run: pip install --upgrade pip
+#9 DONE 2.3s
+
+#10 [ 6/10] RUN ["pip","install","six"]
+#10 0.548 Collecting six
+#10 0.582   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#10 0.609 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#10 0.704 Installing collected packages: six
+#10 0.746 Successfully installed six-1.17.0
+#10 0.746 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.751 
+#10 0.751 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.751 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.8s
+
+#11 [ 7/10] RUN ["pip","install","pytest"]
+#11 0.573 Collecting pytest
+#11 0.616   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#11 0.665 Collecting iniconfig>=1 (from pytest)
+#11 0.673   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#11 0.731 Collecting packaging>=20 (from pytest)
+#11 0.739   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#11 0.783 Collecting pluggy<2,>=1.5 (from pytest)
+#11 0.791   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#11 0.845 Collecting pygments>=2.7.2 (from pytest)
+#11 0.854   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#11 0.885 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#11 0.935    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 7.6 MB/s eta 0:00:00
+#11 0.943 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#11 0.961 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#11 0.973    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.5 MB/s eta 0:00:00
+#11 0.981 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#11 1.001 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#11 1.056    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 22.6 MB/s eta 0:00:00
+#11 1.149 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#11 1.878 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#11 1.878 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.883 
+#11 1.883 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.883 [notice] To update, run: pip install --upgrade pip
+#11 DONE 2.0s
+
+#12 [ 8/10] RUN ["pip","install","py"]
+#12 0.514 Collecting py
+#12 0.548   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#12 0.572 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#12 0.609    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.7 MB/s eta 0:00:00
+#12 0.696 Installing collected packages: py
+#12 0.773 Successfully installed py-1.11.0
+#12 0.774 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 0.779 
+#12 0.779 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 0.779 [notice] To update, run: pip install --upgrade pip
+#12 DONE 0.9s
+
+#13 [ 9/10] RUN ["pip","install","WebCore"]
+#13 0.511 Collecting WebCore
+#13 0.544   Downloading WebCore-2.0.4-py2.py3-none-any.whl.metadata (26 kB)
+#13 0.572 Requirement already satisfied: marrow.package<2.0 in /usr/local/lib/python3.11/site-packages (from WebCore) (1.2.0)
+#13 0.611 Collecting WebOb (from WebCore)
+#13 0.621   Downloading WebOb-1.8.9-py2.py3-none-any.whl.metadata (11 kB)
+#13 0.655 Downloading WebCore-2.0.4-py2.py3-none-any.whl (104 kB)
+#13 0.685    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 104.6/104.6 kB 3.4 MB/s eta 0:00:00
+#13 0.694 Downloading WebOb-1.8.9-py2.py3-none-any.whl (115 kB)
+#13 0.711    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 115.4/115.4 kB 6.6 MB/s eta 0:00:00
+#13 0.814 Installing collected packages: WebOb, WebCore
+#13 0.939 Successfully installed WebCore-2.0.4 WebOb-1.8.9
+#13 0.939 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 0.944 
+#13 0.944 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 0.944 [notice] To update, run: pip install --upgrade pip
+#13 DONE 1.0s
+
+#14 [10/10] RUN ["pip","install","PyGTK"]
+#14 0.526 Collecting PyGTK
+#14 0.561   Downloading pygtk-2.24.0.tar.bz2 (2.4 MB)
+#14 0.688      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 19.6 MB/s eta 0:00:00
+#14 1.556   Preparing metadata (setup.py): started
+#14 1.660   Preparing metadata (setup.py): finished with status 'error'
+#14 1.663   error: subprocess-exited-with-error
+#14 1.663   
+#14 1.663   × python setup.py egg_info did not run successfully.
+#14 1.663   │ exit code: 1
+#14 1.663   ╰─> [4 lines of output]
+#14 1.663       ********************************************************************
+#14 1.663       * Building PyGTK using distutils is only supported on windows. *
+#14 1.663       * To build PyGTK in a supported way, read the INSTALL file.    *
+#14 1.663       ********************************************************************
+#14 1.663       [end of output]
+#14 1.663   
+#14 1.663   note: This error originates from a subprocess, and is likely not a problem with pip.
+#14 1.664 error: metadata-generation-failed
+#14 1.664 
+#14 1.664 × Encountered error while generating package metadata.
+#14 1.664 ╰─> See above for output.
+#14 1.664 
+#14 1.664 note: This is an issue with the package mentioned above, not pip.
+#14 1.664 hint: See above for details.
+#14 1.670 
+#14 1.670 [notice] A new release of pip is available: 24.0 -> 25.3
+#14 1.670 [notice] To update, run: pip install --upgrade pip
+#14 ERROR: process "pip install PyGTK" did not complete successfully: exit code: 1
+------
+ > [10/10] RUN ["pip","install","PyGTK"]:
+1.664 error: metadata-generation-failed
+1.664 
+1.664 × Encountered error while generating package metadata.
+1.664 ╰─> See above for output.
+1.664 
+1.664 note: This is an issue with the package mentioned above, not pip.
+1.664 hint: See above for details.
+1.670 
+1.670 [notice] A new release of pip is available: 24.0 -> 25.3
+1.670 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:10
+--------------------
+   8 |     RUN ["pip","install","py"]
+   9 |     RUN ["pip","install","WebCore"]
+  10 | >>> RUN ["pip","install","PyGTK"]
+  11 |     CMD ["python3","/snippet.py"]
+  12 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install PyGTK" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/g0sojqat5zf1yx6fil6zoatnr
+[2025-10-29 14:01:17] ERROR: Build failed for 3822f77eb07e8e8efb2e

@@ -1,0 +1,27 @@
+=== Docker Run Log for 1379652 ===
+Started at: Mi 29. Okt 12:11:18 CET 2025
+
+[2025-10-29 12:11:41] START: Running container for 1379652
+[2025-10-29 12:11:42] SUCCESS: Container 3a155242824464dc4e0cb9529f338a35ce1972740a8262a03b1f45438f972fc6 started for 1379652
+=== Container logs for 1379652 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 2, in <module>
+    from django.contrib.flatpages.models import FlatPage
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/flatpages/models.py", line 1, in <module>
+    from django.contrib.sites.models import Site
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 79, in <module>
+    class Site(models.Model):
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 131, in __new__
+    app_config = apps.get_containing_app_config(module)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/apps/registry.py", line 260, in get_containing_app_config
+    self.check_apps_ready()
+  File "/usr/local/lib/python3.11/site-packages/django/apps/registry.py", line 137, in check_apps_ready
+    settings.INSTALLED_APPS
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 1379652 ===
+[2025-10-29 12:11:44] INFO: Container 3a155242824464dc4e0cb9529f338a35ce1972740a8262a03b1f45438f972fc6 has stopped

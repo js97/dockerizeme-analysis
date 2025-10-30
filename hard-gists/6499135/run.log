@@ -1,0 +1,33 @@
+=== Docker Run Log for 6499135 ===
+Started at: Mi 29. Okt 16:33:16 CET 2025
+
+[2025-10-29 16:33:24] START: Running container for 6499135
+[2025-10-29 16:33:25] SUCCESS: Container 86533c5edc4bf2d07f646afa81113563b602d28c454fbc08a1bd24475d1d37ac started for 6499135
+=== Container logs for 6499135 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 4, in <module>
+    from rest_framework import views
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 18, in <module>
+    from rest_framework.schemas import DefaultSchema
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/schemas/__init__.py", line 25, in <module>
+    from . import coreapi, openapi
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/schemas/openapi.py", line 14, in <module>
+    from rest_framework import exceptions, renderers, serializers
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/renderers.py", line 56, in <module>
+    class JSONRenderer(BaseRenderer):
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/renderers.py", line 63, in JSONRenderer
+    ensure_ascii = not api_settings.UNICODE_JSON
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/settings.py", line 220, in __getattr__
+    val = self.user_settings[attr]
+          ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/settings.py", line 211, in user_settings
+    self._user_settings = getattr(settings, 'REST_FRAMEWORK', {})
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting REST_FRAMEWORK, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 6499135 ===
+[2025-10-29 16:33:27] INFO: Container 86533c5edc4bf2d07f646afa81113563b602d28c454fbc08a1bd24475d1d37ac has stopped

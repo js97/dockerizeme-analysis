@@ -1,0 +1,59 @@
+=== Docker Run Log for 3fe84c05013fa87d74a8 ===
+Started at: Mi 29. Okt 14:16:48 CET 2025
+
+[2025-10-29 14:16:55] START: Running container for 3fe84c05013fa87d74a8
+[2025-10-29 14:16:55] SUCCESS: Container 2718581cfb3df9927a1cb23ed720b78cf0643f273f2492a8c6edcced1aed766e started for 3fe84c05013fa87d74a8
+=== Container logs for 3fe84c05013fa87d74a8 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 66, in <module>
+    user_docsets = get_user_docsets(user_docsets_url)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 13, in get_user_docsets
+    response = urllib.request.urlopen(url)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snippet.py", line 80, in <module>
+    show_exception(e)
+  File "/snippet.py", line 62, in show_exception
+    easygui.exceptionbox('Error: {0}'.format(e), app_title)
+  File "/usr/local/lib/python3.11/site-packages/easygui/boxes/derived_boxes.py", line 408, in exceptionbox
+    codebox(msg, title, ut.exception_format())
+  File "/usr/local/lib/python3.11/site-packages/easygui/boxes/derived_boxes.py", line 428, in codebox
+    return tb.textbox(msg, title, text, codebox=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/easygui/boxes/text_box.py", line 188, in textbox
+    tb = TextBox(msg=msg, title=title, text=text,
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/easygui/boxes/text_box.py", line 231, in __init__
+    self.ui = GUItk(msg, title, text, codebox, self.callback_ui)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/easygui/boxes/text_box.py", line 340, in __init__
+    self.boxRoot = tk.Tk()
+                   ^^^^^^^
+  File "/usr/local/lib/python3.11/tkinter/__init__.py", line 2345, in __init__
+    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_tkinter.TclError: no display name and no $DISPLAY environment variable
+=== End of logs for 3fe84c05013fa87d74a8 ===
+[2025-10-29 14:16:57] INFO: Container 2718581cfb3df9927a1cb23ed720b78cf0643f273f2492a8c6edcced1aed766e has stopped

@@ -1,0 +1,13 @@
+=== Docker Run Log for df9ad5ef01d16c02d68d9a8c17c75b73 ===
+Started at: Mi 29. Okt 20:37:38 CET 2025
+
+[2025-10-29 20:37:44] START: Running container for df9ad5ef01d16c02d68d9a8c17c75b73
+[2025-10-29 20:37:44] SUCCESS: Container 8fe8b527825bc7bc5ef0348700c60a1c74c376e9880f8810bfe5b0c073cf4312 started for df9ad5ef01d16c02d68d9a8c17c75b73
+=== Container logs for df9ad5ef01d16c02d68d9a8c17c75b73 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 19, in <module>
+    with open('realdonaldtrump.csv', 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'realdonaldtrump.csv'
+=== End of logs for df9ad5ef01d16c02d68d9a8c17c75b73 ===
+[2025-10-29 20:37:46] INFO: Container 8fe8b527825bc7bc5ef0348700c60a1c74c376e9880f8810bfe5b0c073cf4312 has stopped

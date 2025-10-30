@@ -1,0 +1,62 @@
+=== Docker Build Log for c2b2943ead94c200574a ===
+Started at: Mi 29. Okt 19:49:48 CET 2025
+
+[2025-10-29 19:49:48] START: Building image for c2b2943ead94c200574a
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 207B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.82kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/c2b2943ead94c200574a/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","Caffe"]
+#7 1.943 Collecting Caffe
+#7 1.996   Downloading caffe-0.1.0-py3-none-any.whl.metadata (751 bytes)
+#7 2.026 Downloading caffe-0.1.0-py3-none-any.whl (1.1 kB)
+#7 2.072 Installing collected packages: Caffe
+#7 2.089 Successfully installed Caffe-0.1.0
+#7 2.090 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.201 
+#7 2.201 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.201 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.4s
+
+#8 [4/4] RUN ["pip","install","numpy"]
+#8 0.738 Collecting numpy
+#8 0.776   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 0.805      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 1.9 MB/s eta 0:00:00
+#8 0.875 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#8 2.652    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 9.4 MB/s eta 0:00:00
+#8 2.727 Installing collected packages: numpy
+#8 4.155 Successfully installed numpy-2.3.4
+#8 4.155 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 4.160 
+#8 4.160 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 4.160 [notice] To update, run: pip install --upgrade pip
+#8 DONE 4.8s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.4s done
+#9 writing image sha256:07fefccbb6ab887fca429932694d15010532aae2c75f46d74191896bd7b8e7c4 done
+#9 naming to docker.io/library/test-image-c2b2943ead94c200574a 0.0s done
+#9 DONE 0.4s
+
+View build details: docker-desktop://dashboard/build/default/default/nxcsbk7omi1ne8k1hv2fckmpm
+[2025-10-29 19:49:56] SUCCESS: Build completed for c2b2943ead94c200574a

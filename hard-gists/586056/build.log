@@ -1,0 +1,79 @@
+=== Docker Build Log for 586056 ===
+Started at: Mi 29. Okt 16:07:22 CET 2025
+
+[2025-10-29 16:07:22] START: Building image for 586056
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 199B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 664B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/586056/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","dj.choices"]
+#7 2.118 Collecting dj.choices
+#7 2.155   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 2.173   Preparing metadata (setup.py): started
+#7 2.596   Preparing metadata (setup.py): finished with status 'done'
+#7 2.712 Collecting django (from dj.choices)
+#7 2.721   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.760 Collecting six (from dj.choices)
+#7 2.768   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.817 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.825   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.865 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.873   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.899 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.253    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 23.6 MB/s eta 0:00:00
+#7 3.261 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.281 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.299 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.309    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.9 MB/s eta 0:00:00
+#7 3.349 Building wheels for collected packages: dj.choices
+#7 3.350   Building wheel for dj.choices (setup.py): started
+#7 3.538   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.539   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=6f34f29928ec15dd8999baa084bd229444c3de5940b75172d4c17a7942e015ec
+#7 3.539   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.541 Successfully built dj.choices
+#7 3.597 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 5.345 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 5.345 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.453 
+#7 5.453 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.453 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.0s
+
+#8 [4/4] RUN ["pip","install","Django"]
+#8 0.522 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#8 0.527 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#8 0.528 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#8 0.580 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.586 
+#8 0.586 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.586 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.7s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.8s done
+#9 writing image sha256:6c22db6394e92d79d5a580063ea98d19e2176f65dbf269b31b65b202ac6b3ea1 done
+#9 naming to docker.io/library/test-image-586056 0.0s done
+#9 DONE 0.8s
+
+View build details: docker-desktop://dashboard/build/default/default/off38ol4riczojdo3gci8e0i0
+[2025-10-29 16:07:30] SUCCESS: Build completed for 586056

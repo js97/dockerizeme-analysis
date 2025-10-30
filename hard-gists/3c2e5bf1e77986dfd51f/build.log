@@ -1,0 +1,279 @@
+=== Docker Build Log for 3c2e5bf1e77986dfd51f ===
+Started at: Mi 29. Okt 14:11:32 CET 2025
+
+[2025-10-29 14:11:32] START: Building image for 3c2e5bf1e77986dfd51f
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 244B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.57kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/3c2e5bf1e77986dfd51f/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","keras"]
+#7 1.924 Collecting keras
+#7 1.958   Downloading keras-3.12.0-py3-none-any.whl.metadata (5.9 kB)
+#7 2.000 Collecting absl-py (from keras)
+#7 2.008   Downloading absl_py-2.3.1-py3-none-any.whl.metadata (3.3 kB)
+#7 2.212 Collecting numpy (from keras)
+#7 2.222   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.251      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 1.9 MB/s eta 0:00:00
+#7 2.330 Collecting rich (from keras)
+#7 2.338   Downloading rich-14.2.0-py3-none-any.whl.metadata (18 kB)
+#7 2.378 Collecting namex (from keras)
+#7 2.388   Downloading namex-0.1.0-py3-none-any.whl.metadata (322 bytes)
+#7 2.451 Collecting h5py (from keras)
+#7 2.461   Downloading h5py-3.15.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+#7 2.554 Collecting optree (from keras)
+#7 2.564   Downloading optree-0.17.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (33 kB)
+#7 2.617 Collecting ml-dtypes (from keras)
+#7 2.626   Downloading ml_dtypes-0.5.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.9 kB)
+#7 2.689 Collecting packaging (from keras)
+#7 2.697   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#7 2.777 Collecting typing-extensions>=4.6.0 (from optree->keras)
+#7 2.787   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#7 2.834 Collecting markdown-it-py>=2.2.0 (from rich->keras)
+#7 2.843   Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+#7 2.891 Collecting pygments<3.0.0,>=2.13.0 (from rich->keras)
+#7 2.899   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#7 2.944 Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->keras)
+#7 2.953   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+#7 2.979 Downloading keras-3.12.0-py3-none-any.whl (1.5 MB)
+#7 3.046    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 22.8 MB/s eta 0:00:00
+#7 3.058 Downloading absl_py-2.3.1-py3-none-any.whl (135 kB)
+#7 3.072    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.8/135.8 kB 11.3 MB/s eta 0:00:00
+#7 3.081 Downloading h5py-3.15.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (4.7 MB)
+#7 3.264    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 25.8 MB/s eta 0:00:00
+#7 3.293 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 3.943    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 23.2 MB/s eta 0:00:00
+#7 3.953 Downloading ml_dtypes-0.5.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (4.9 MB)
+#7 4.141    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 26.4 MB/s eta 0:00:00
+#7 4.149 Downloading namex-0.1.0-py3-none-any.whl (5.9 kB)
+#7 4.168 Downloading optree-0.17.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (402 kB)
+#7 4.190    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 402.0/402.0 kB 18.6 MB/s eta 0:00:00
+#7 4.199 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#7 4.210    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 6.1 MB/s eta 0:00:00
+#7 4.218 Downloading rich-14.2.0-py3-none-any.whl (243 kB)
+#7 4.237    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.4/243.4 kB 12.9 MB/s eta 0:00:00
+#7 4.245 Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+#7 4.259    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.3/87.3 kB 6.5 MB/s eta 0:00:00
+#7 4.267 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#7 4.319    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 24.4 MB/s eta 0:00:00
+#7 4.327 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#7 4.339    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.4 MB/s eta 0:00:00
+#7 4.347 Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+#7 4.510 Installing collected packages: namex, typing-extensions, pygments, packaging, numpy, mdurl, absl-py, optree, ml-dtypes, markdown-it-py, h5py, rich, keras
+#7 7.755 Successfully installed absl-py-2.3.1 h5py-3.15.1 keras-3.12.0 markdown-it-py-4.0.0 mdurl-0.1.2 ml-dtypes-0.5.3 namex-0.1.0 numpy-2.3.4 optree-0.17.0 packaging-25.0 pygments-2.19.2 rich-14.2.0 typing-extensions-4.15.0
+#7 7.755 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 7.894 
+#7 7.894 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 7.894 [notice] To update, run: pip install --upgrade pip
+#7 DONE 9.0s
+
+#8 [4/5] RUN ["pip","install","keras-models"]
+#8 0.520 Collecting keras-models
+#8 0.559   Downloading keras_models-0.0.7-py3-none-any.whl.metadata (3.4 kB)
+#8 0.580 Requirement already satisfied: keras in /usr/local/lib/python3.11/site-packages (from keras-models) (3.12.0)
+#8 0.584 Requirement already satisfied: numpy in /usr/local/lib/python3.11/site-packages (from keras-models) (2.3.4)
+#8 0.723 Collecting spacy (from keras-models)
+#8 0.733   Downloading spacy-3.8.7-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (27 kB)
+#8 0.942 Collecting Pillow (from keras-models)
+#8 0.952   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#8 1.056 Collecting opencv-python (from keras-models)
+#8 1.066   Downloading opencv_python-4.12.0.88-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (19 kB)
+#8 1.104 Collecting pathlib (from keras-models)
+#8 1.113   Downloading pathlib-1.0.1-py3-none-any.whl.metadata (5.1 kB)
+#8 1.126 Requirement already satisfied: absl-py in /usr/local/lib/python3.11/site-packages (from keras->keras-models) (2.3.1)
+#8 1.129 Requirement already satisfied: rich in /usr/local/lib/python3.11/site-packages (from keras->keras-models) (14.2.0)
+#8 1.129 Requirement already satisfied: namex in /usr/local/lib/python3.11/site-packages (from keras->keras-models) (0.1.0)
+#8 1.130 Requirement already satisfied: h5py in /usr/local/lib/python3.11/site-packages (from keras->keras-models) (3.15.1)
+#8 1.131 Requirement already satisfied: optree in /usr/local/lib/python3.11/site-packages (from keras->keras-models) (0.17.0)
+#8 1.132 Requirement already satisfied: ml-dtypes in /usr/local/lib/python3.11/site-packages (from keras->keras-models) (0.5.3)
+#8 1.132 Requirement already satisfied: packaging in /usr/local/lib/python3.11/site-packages (from keras->keras-models) (25.0)
+#8 1.345 Collecting numpy (from keras-models)
+#8 1.355   Downloading numpy-2.2.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+#8 1.381      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.2 MB/s eta 0:00:00
+#8 1.458 Collecting spacy-legacy<3.1.0,>=3.0.11 (from spacy->keras-models)
+#8 1.467   Downloading spacy_legacy-3.0.12-py2.py3-none-any.whl.metadata (2.8 kB)
+#8 1.507 Collecting spacy-loggers<2.0.0,>=1.0.0 (from spacy->keras-models)
+#8 1.516   Downloading spacy_loggers-1.0.5-py3-none-any.whl.metadata (23 kB)
+#8 1.570 Collecting murmurhash<1.1.0,>=0.28.0 (from spacy->keras-models)
+#8 1.579   Downloading murmurhash-1.0.13-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.2 kB)
+#8 1.633 Collecting cymem<2.1.0,>=2.0.2 (from spacy->keras-models)
+#8 1.642   Downloading cymem-2.0.11-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.5 kB)
+#8 1.689 Collecting preshed<3.1.0,>=3.0.2 (from spacy->keras-models)
+#8 1.698   Downloading preshed-3.0.10-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.4 kB)
+#8 1.881 Collecting thinc<8.4.0,>=8.3.4 (from spacy->keras-models)
+#8 1.892   Downloading thinc-8.3.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (15 kB)
+#8 1.943 Collecting wasabi<1.2.0,>=0.9.1 (from spacy->keras-models)
+#8 1.952   Downloading wasabi-1.1.3-py3-none-any.whl.metadata (28 kB)
+#8 2.029 Collecting srsly<3.0.0,>=2.4.3 (from spacy->keras-models)
+#8 2.039   Downloading srsly-2.5.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (19 kB)
+#8 2.083 Collecting catalogue<2.1.0,>=2.0.6 (from spacy->keras-models)
+#8 2.092   Downloading catalogue-2.0.10-py3-none-any.whl.metadata (14 kB)
+#8 2.129 Collecting weasel<0.5.0,>=0.1.0 (from spacy->keras-models)
+#8 2.138   Downloading weasel-0.4.1-py3-none-any.whl.metadata (4.6 kB)
+#8 2.185 Collecting typer<1.0.0,>=0.3.0 (from spacy->keras-models)
+#8 2.193   Downloading typer-0.20.0-py3-none-any.whl.metadata (16 kB)
+#8 2.269 Collecting tqdm<5.0.0,>=4.38.0 (from spacy->keras-models)
+#8 2.277   Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+#8 2.294      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.7/57.7 kB 3.2 MB/s eta 0:00:00
+#8 2.351 Collecting requests<3.0.0,>=2.13.0 (from spacy->keras-models)
+#8 2.359   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#8 2.522 Collecting pydantic!=1.8,!=1.8.1,<3.0.0,>=1.7.4 (from spacy->keras-models)
+#8 2.531   Downloading pydantic-2.12.3-py3-none-any.whl.metadata (87 kB)
+#8 2.554      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.7/87.7 kB 3.6 MB/s eta 0:00:00
+#8 2.588 Collecting jinja2 (from spacy->keras-models)
+#8 2.595   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#8 2.606 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from spacy->keras-models) (79.0.1)
+#8 2.632 Collecting langcodes<4.0.0,>=3.2.0 (from spacy->keras-models)
+#8 2.641   Downloading langcodes-3.5.0-py3-none-any.whl.metadata (29 kB)
+#8 2.691 Collecting language-data>=1.2 (from langcodes<4.0.0,>=3.2.0->spacy->keras-models)
+#8 2.701   Downloading language_data-1.3.0-py3-none-any.whl.metadata (4.3 kB)
+#8 2.744 Collecting annotated-types>=0.6.0 (from pydantic!=1.8,!=1.8.1,<3.0.0,>=1.7.4->spacy->keras-models)
+#8 2.753   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+#8 3.483 Collecting pydantic-core==2.41.4 (from pydantic!=1.8,!=1.8.1,<3.0.0,>=1.7.4->spacy->keras-models)
+#8 3.495   Downloading pydantic_core-2.41.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+#8 3.513 Requirement already satisfied: typing-extensions>=4.14.1 in /usr/local/lib/python3.11/site-packages (from pydantic!=1.8,!=1.8.1,<3.0.0,>=1.7.4->spacy->keras-models) (4.15.0)
+#8 3.538 Collecting typing-inspection>=0.4.2 (from pydantic!=1.8,!=1.8.1,<3.0.0,>=1.7.4->spacy->keras-models)
+#8 3.547   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+#8 3.656 Collecting charset_normalizer<4,>=2 (from requests<3.0.0,>=2.13.0->spacy->keras-models)
+#8 3.665   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#8 3.710 Collecting idna<4,>=2.5 (from requests<3.0.0,>=2.13.0->spacy->keras-models)
+#8 3.718   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#8 3.778 Collecting urllib3<3,>=1.21.1 (from requests<3.0.0,>=2.13.0->spacy->keras-models)
+#8 3.786   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#8 3.830 Collecting certifi>=2017.4.17 (from requests<3.0.0,>=2.13.0->spacy->keras-models)
+#8 3.838   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#8 3.933 Collecting blis<1.4.0,>=1.3.0 (from thinc<8.4.0,>=8.3.4->spacy->keras-models)
+#8 3.943   Downloading blis-1.3.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.4 kB)
+#8 3.989 Collecting confection<1.0.0,>=0.0.1 (from thinc<8.4.0,>=8.3.4->spacy->keras-models)
+#8 3.998   Downloading confection-0.1.5-py3-none-any.whl.metadata (19 kB)
+#8 4.089 Collecting click>=8.0.0 (from typer<1.0.0,>=0.3.0->spacy->keras-models)
+#8 4.097   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#8 4.142 Collecting shellingham>=1.3.0 (from typer<1.0.0,>=0.3.0->spacy->keras-models)
+#8 4.151   Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+#8 4.171 Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.11/site-packages (from rich->keras->keras-models) (4.0.0)
+#8 4.172 Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.11/site-packages (from rich->keras->keras-models) (2.19.2)
+#8 4.218 Collecting cloudpathlib<1.0.0,>=0.7.0 (from weasel<0.5.0,>=0.1.0->spacy->keras-models)
+#8 4.227   Downloading cloudpathlib-0.23.0-py3-none-any.whl.metadata (16 kB)
+#8 4.272 Collecting smart-open<8.0.0,>=5.2.1 (from weasel<0.5.0,>=0.1.0->spacy->keras-models)
+#8 4.281   Downloading smart_open-7.4.1-py3-none-any.whl.metadata (24 kB)
+#8 4.381 Collecting MarkupSafe>=2.0 (from jinja2->spacy->keras-models)
+#8 4.389   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#8 4.669 Collecting marisa-trie>=1.1.0 (from language-data>=1.2->langcodes<4.0.0,>=3.2.0->spacy->keras-models)
+#8 4.679   Downloading marisa_trie-1.3.1-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+#8 4.705 Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.11/site-packages (from markdown-it-py>=2.2.0->rich->keras->keras-models) (0.1.2)
+#8 4.868 Collecting wrapt (from smart-open<8.0.0,>=5.2.1->weasel<0.5.0,>=0.1.0->spacy->keras-models)
+#8 4.879   Downloading wrapt-2.0.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.8 kB)
+#8 4.946 Downloading keras_models-0.0.7-py3-none-any.whl (18 kB)
+#8 4.966 Downloading opencv_python-4.12.0.88-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (67.0 MB)
+#8 7.768    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.0/67.0 MB 12.5 MB/s eta 0:00:00
+#8 7.784 Downloading numpy-2.2.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+#8 8.607    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 16.8 MB/s eta 0:00:00
+#8 8.617 Downloading pathlib-1.0.1-py3-none-any.whl (14 kB)
+#8 8.641 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#8 8.939    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 23.7 MB/s eta 0:00:00
+#8 8.948 Downloading spacy-3.8.7-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (33.0 MB)
+#8 10.32    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 33.0/33.0 MB 16.4 MB/s eta 0:00:00
+#8 10.33 Downloading catalogue-2.0.10-py3-none-any.whl (17 kB)
+#8 10.35 Downloading cymem-2.0.11-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (218 kB)
+#8 10.37    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 218.9/218.9 kB 13.7 MB/s eta 0:00:00
+#8 10.38 Downloading langcodes-3.5.0-py3-none-any.whl (182 kB)
+#8 10.44    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 183.0/183.0 kB 2.9 MB/s eta 0:00:00
+#8 10.45 Downloading murmurhash-1.0.13-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (123 kB)
+#8 10.46    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 123.4/123.4 kB 10.1 MB/s eta 0:00:00
+#8 10.47 Downloading preshed-3.0.10-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (842 kB)
+#8 10.51    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 842.9/842.9 kB 22.2 MB/s eta 0:00:00
+#8 10.52 Downloading pydantic-2.12.3-py3-none-any.whl (462 kB)
+#8 10.55    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 462.4/462.4 kB 19.3 MB/s eta 0:00:00
+#8 10.56 Downloading pydantic_core-2.41.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+#8 10.64    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 25.8 MB/s eta 0:00:00
+#8 10.65 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#8 10.66    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 5.0 MB/s eta 0:00:00
+#8 10.67 Downloading spacy_legacy-3.0.12-py2.py3-none-any.whl (29 kB)
+#8 10.68 Downloading spacy_loggers-1.0.5-py3-none-any.whl (22 kB)
+#8 10.70 Downloading srsly-2.5.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.1 MB)
+#8 10.75    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 24.8 MB/s eta 0:00:00
+#8 10.76 Downloading thinc-8.3.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.5 MB)
+#8 10.93    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 26.3 MB/s eta 0:00:00
+#8 10.94 Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+#8 10.95    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 5.8 MB/s eta 0:00:00
+#8 10.96 Downloading typer-0.20.0-py3-none-any.whl (47 kB)
+#8 10.97    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.0/47.0 kB 4.1 MB/s eta 0:00:00
+#8 10.98 Downloading wasabi-1.1.3-py3-none-any.whl (27 kB)
+#8 10.99 Downloading weasel-0.4.1-py3-none-any.whl (50 kB)
+#8 11.00    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.3/50.3 kB 4.1 MB/s eta 0:00:00
+#8 11.01 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#8 11.03    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 10.0 MB/s eta 0:00:00
+#8 11.03 Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+#8 11.06 Downloading blis-1.3.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.7 MB)
+#8 11.80    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.7/11.7 MB 18.3 MB/s eta 0:00:00
+#8 11.81 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#8 11.83    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 8.8 MB/s eta 0:00:00
+#8 11.83 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#8 11.85    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 12.2 MB/s eta 0:00:00
+#8 11.86 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#8 11.87    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 7.1 MB/s eta 0:00:00
+#8 11.88 Downloading cloudpathlib-0.23.0-py3-none-any.whl (62 kB)
+#8 11.89    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.8/62.8 kB 4.6 MB/s eta 0:00:00
+#8 11.90 Downloading confection-0.1.5-py3-none-any.whl (35 kB)
+#8 11.92 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#8 11.93    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.5 MB/s eta 0:00:00
+#8 11.94 Downloading language_data-1.3.0-py3-none-any.whl (5.4 MB)
+#8 12.16    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 25.3 MB/s eta 0:00:00
+#8 12.16 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#8 12.18 Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+#8 12.20 Downloading smart_open-7.4.1-py3-none-any.whl (63 kB)
+#8 12.22    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.2/63.2 kB 5.4 MB/s eta 0:00:00
+#8 12.23 Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+#8 12.24 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#8 12.26    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.3 MB/s eta 0:00:00
+#8 12.27 Downloading marisa_trie-1.3.1-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (1.3 MB)
+#8 12.32    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 25.9 MB/s eta 0:00:00
+#8 12.33 Downloading wrapt-2.0.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (114 kB)
+#8 12.35    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.1/114.1 kB 8.1 MB/s eta 0:00:00
+#8 12.96 Installing collected packages: pathlib, cymem, wrapt, wasabi, urllib3, typing-inspection, tqdm, spacy-loggers, spacy-legacy, shellingham, pydantic-core, Pillow, numpy, murmurhash, MarkupSafe, marisa-trie, idna, cloudpathlib, click, charset_normalizer, certifi, catalogue, annotated-types, srsly, smart-open, requests, pydantic, preshed, opencv-python, language-data, jinja2, blis, typer, langcodes, confection, weasel, thinc, spacy, keras-models
+#8 13.54   Attempting uninstall: numpy
+#8 13.55     Found existing installation: numpy 2.3.4
+#8 13.60     Uninstalling numpy-2.3.4:
+#8 14.46       Successfully uninstalled numpy-2.3.4
+#8 20.13 Successfully installed MarkupSafe-3.0.3 Pillow-12.0.0 annotated-types-0.7.0 blis-1.3.0 catalogue-2.0.10 certifi-2025.10.5 charset_normalizer-3.4.4 click-8.3.0 cloudpathlib-0.23.0 confection-0.1.5 cymem-2.0.11 idna-3.11 jinja2-3.1.6 keras-models-0.0.7 langcodes-3.5.0 language-data-1.3.0 marisa-trie-1.3.1 murmurhash-1.0.13 numpy-2.2.6 opencv-python-4.12.0.88 pathlib-1.0.1 preshed-3.0.10 pydantic-2.12.3 pydantic-core-2.41.4 requests-2.32.5 shellingham-1.5.4 smart-open-7.4.1 spacy-3.8.7 spacy-legacy-3.0.12 spacy-loggers-1.0.5 srsly-2.5.1 thinc-8.3.6 tqdm-4.67.1 typer-0.20.0 typing-inspection-0.4.2 urllib3-2.5.0 wasabi-1.1.3 weasel-0.4.1 wrapt-2.0.0
+#8 20.13 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 20.14 
+#8 20.14 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 20.14 [notice] To update, run: pip install --upgrade pip
+#8 DONE 23.0s
+
+#9 [5/5] RUN ["pip","install","numpy"]
+#9 0.482 Requirement already satisfied: numpy in /usr/local/lib/python3.11/site-packages (2.2.6)
+#9 0.668 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.673 
+#9 0.673 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.673 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.7s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 2.3s done
+#10 writing image sha256:1911db99b9e36c308416082629ff59e60fc2a64a6814881e417a74e7c9bbb110 done
+#10 naming to docker.io/library/test-image-3c2e5bf1e77986dfd51f done
+#10 DONE 2.3s
+
+View build details: docker-desktop://dashboard/build/default/default/7s1gnk0erz64hixzd3ihget90
+[2025-10-29 14:12:08] SUCCESS: Build completed for 3c2e5bf1e77986dfd51f

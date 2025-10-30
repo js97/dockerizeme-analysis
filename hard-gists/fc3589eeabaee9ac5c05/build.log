@@ -1,0 +1,83 @@
+=== Docker Build Log for fc3589eeabaee9ac5c05 ===
+Started at: Mi 29. Okt 21:41:56 CET 2025
+
+[2025-10-29 21:41:56] START: Building image for fc3589eeabaee9ac5c05
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 176B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 811B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/fc3589eeabaee9ac5c05/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","Kivy"]
+#7 2.077 Collecting Kivy
+#7 2.113   Downloading Kivy-2.3.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (14 kB)
+#7 2.166 Collecting Kivy-Garden>=0.1.4 (from Kivy)
+#7 2.189   Downloading Kivy_Garden-0.1.5-py3-none-any.whl.metadata (159 bytes)
+#7 2.235 Collecting docutils (from Kivy)
+#7 2.250   Downloading docutils-0.22.2-py3-none-any.whl.metadata (15 kB)
+#7 2.301 Collecting pygments (from Kivy)
+#7 2.311   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#7 2.367 Collecting requests (from Kivy)
+#7 2.379   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.416 Collecting filetype (from Kivy)
+#7 2.425   Downloading filetype-1.2.0-py2.py3-none-any.whl.metadata (6.5 kB)
+#7 2.548 Collecting charset_normalizer<4,>=2 (from requests->Kivy)
+#7 2.558   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.599 Collecting idna<4,>=2.5 (from requests->Kivy)
+#7 2.608   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.671 Collecting urllib3<3,>=1.21.1 (from requests->Kivy)
+#7 2.679   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.727 Collecting certifi>=2017.4.17 (from requests->Kivy)
+#7 2.735   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.951 Downloading Kivy-2.3.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (23.0 MB)
+#7 5.175    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 23.0/23.0 MB 9.5 MB/s eta 0:00:00
+#7 5.187 Downloading Kivy_Garden-0.1.5-py3-none-any.whl (4.6 kB)
+#7 5.220 Downloading docutils-0.22.2-py3-none-any.whl (632 kB)
+#7 5.260    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 632.7/632.7 kB 16.0 MB/s eta 0:00:00
+#7 5.278 Downloading filetype-1.2.0-py2.py3-none-any.whl (19 kB)
+#7 5.318 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#7 5.472    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 8.0 MB/s eta 0:00:00
+#7 5.486 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 5.500    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 4.4 MB/s eta 0:00:00
+#7 5.519 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 5.544    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 7.2 MB/s eta 0:00:00
+#7 5.556 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 5.574    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 8.6 MB/s eta 0:00:00
+#7 5.584 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 5.598    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.8 MB/s eta 0:00:00
+#7 5.611 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 5.626    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 8.9 MB/s eta 0:00:00
+#7 5.765 Installing collected packages: filetype, urllib3, pygments, idna, docutils, charset_normalizer, certifi, requests, Kivy-Garden, Kivy
+#7 7.333 Successfully installed Kivy-2.3.1 Kivy-Garden-0.1.5 certifi-2025.10.5 charset_normalizer-3.4.4 docutils-0.22.2 filetype-1.2.0 idna-3.11 pygments-2.19.2 requests-2.32.5 urllib3-2.5.0
+#7 7.334 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 7.429 
+#7 7.429 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 7.429 [notice] To update, run: pip install --upgrade pip
+#7 DONE 8.1s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.6s done
+#8 writing image sha256:65cfef2ea5611197e2375eed1ff04d7d44cc88860ce564d17d44debd2e1b69b8 done
+#8 naming to docker.io/library/test-image-fc3589eeabaee9ac5c05 done
+#8 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/default/default/qy9p4livd1kj4a0x3o5fa6y3h
+[2025-10-29 21:42:05] SUCCESS: Build completed for fc3589eeabaee9ac5c05

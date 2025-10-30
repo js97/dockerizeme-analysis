@@ -1,0 +1,179 @@
+=== Docker Build Log for db7b6db7035dd48e5902 ===
+Started at: Mi 29. Okt 20:31:49 CET 2025
+
+[2025-10-29 20:31:49] START: Building image for db7b6db7035dd48e5902
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 250B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.46kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/db7b6db7035dd48e5902/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","access-points"]
+#7 1.934 Collecting access-points
+#7 1.977   Downloading access_points-0.4.73-py2.py3-none-any.whl.metadata (1.5 kB)
+#7 1.998 Downloading access_points-0.4.73-py2.py3-none-any.whl (14 kB)
+#7 2.041 Installing collected packages: access-points
+#7 2.066 Successfully installed access-points-0.4.73
+#7 2.066 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.161 
+#7 2.161 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.161 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.3s
+
+#8 [4/5] RUN ["pip","install","tensorlayer"]
+#8 0.533 Collecting tensorlayer
+#8 0.577   Downloading tensorlayer-2.2.5-py3-none-any.whl.metadata (18 kB)
+#8 0.703 Collecting imageio>=2.5.0 (from tensorlayer)
+#8 0.713   Downloading imageio-2.37.0-py3-none-any.whl.metadata (5.2 kB)
+#8 0.946 Collecting numpy>=1.16 (from tensorlayer)
+#8 0.957   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 0.989      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 1.7 MB/s eta 0:00:00
+#8 1.034 Collecting progressbar2>=3.39.3 (from tensorlayer)
+#8 1.044   Downloading progressbar2-4.5.0-py3-none-any.whl.metadata (16 kB)
+#8 1.098 Collecting requests>=2.21.0 (from tensorlayer)
+#8 1.106   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#8 1.214 Collecting scikit-learn>=0.21.0 (from tensorlayer)
+#8 1.224   Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#8 1.316 Collecting scikit-image>=0.15.0 (from tensorlayer)
+#8 1.328   Downloading scikit_image-0.25.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (14 kB)
+#8 1.470 Collecting scipy>=1.2.1 (from tensorlayer)
+#8 1.482   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#8 1.504      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.5 MB/s eta 0:00:00
+#8 1.645 Collecting wrapt>=1.11.1 (from tensorlayer)
+#8 1.656   Downloading wrapt-2.0.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.8 kB)
+#8 1.757 Collecting h5py>=2.9 (from tensorlayer)
+#8 1.766   Downloading h5py-3.15.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+#8 1.809 Collecting cloudpickle>=0.8.1 (from tensorlayer)
+#8 1.818   Downloading cloudpickle-3.1.1-py3-none-any.whl.metadata (7.1 kB)
+#8 2.045 Collecting pillow>=8.3.2 (from imageio>=2.5.0->tensorlayer)
+#8 2.057   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#8 2.120 Collecting python-utils>=3.8.1 (from progressbar2>=3.39.3->tensorlayer)
+#8 2.130   Downloading python_utils-3.9.1-py2.py3-none-any.whl.metadata (9.8 kB)
+#8 2.269 Collecting charset_normalizer<4,>=2 (from requests>=2.21.0->tensorlayer)
+#8 2.281   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#8 2.332 Collecting idna<4,>=2.5 (from requests>=2.21.0->tensorlayer)
+#8 2.342   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#8 2.402 Collecting urllib3<3,>=1.21.1 (from requests>=2.21.0->tensorlayer)
+#8 2.410   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#8 2.455 Collecting certifi>=2017.4.17 (from requests>=2.21.0->tensorlayer)
+#8 2.464   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#8 2.552 Collecting networkx>=3.0 (from scikit-image>=0.15.0->tensorlayer)
+#8 2.561   Downloading networkx-3.5-py3-none-any.whl.metadata (6.3 kB)
+#8 2.642 Collecting tifffile>=2022.8.12 (from scikit-image>=0.15.0->tensorlayer)
+#8 2.653   Downloading tifffile-2025.10.16-py3-none-any.whl.metadata (31 kB)
+#8 2.702 Collecting packaging>=21 (from scikit-image>=0.15.0->tensorlayer)
+#8 2.711   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 2.746 Collecting lazy-loader>=0.4 (from scikit-image>=0.15.0->tensorlayer)
+#8 2.755   Downloading lazy_loader-0.4-py3-none-any.whl.metadata (7.6 kB)
+#8 2.841 Collecting joblib>=1.2.0 (from scikit-learn>=0.21.0->tensorlayer)
+#8 2.850   Downloading joblib-1.5.2-py3-none-any.whl.metadata (5.6 kB)
+#8 2.892 Collecting threadpoolctl>=3.1.0 (from scikit-learn>=0.21.0->tensorlayer)
+#8 2.902   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#8 3.030 Collecting typing_extensions>3.10.0.2 (from python-utils>=3.8.1->progressbar2>=3.39.3->tensorlayer)
+#8 3.039   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#8 3.086 Downloading tensorlayer-2.2.5-py3-none-any.whl (381 kB)
+#8 3.127    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 381.2/381.2 kB 9.3 MB/s eta 0:00:00
+#8 3.189 Downloading cloudpickle-3.1.1-py3-none-any.whl (20 kB)
+#8 3.211 Downloading h5py-3.15.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (4.7 MB)
+#8 3.519    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 15.3 MB/s eta 0:00:00
+#8 3.530 Downloading imageio-2.37.0-py3-none-any.whl (315 kB)
+#8 3.555    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 315.8/315.8 kB 13.0 MB/s eta 0:00:00
+#8 3.565 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#8 4.783    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 13.4 MB/s eta 0:00:00
+#8 4.796 Downloading progressbar2-4.5.0-py3-none-any.whl (57 kB)
+#8 4.807    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.1/57.1 kB 4.9 MB/s eta 0:00:00
+#8 4.819 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#8 4.831    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 5.1 MB/s eta 0:00:00
+#8 4.843 Downloading scikit_image-0.25.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (14.8 MB)
+#8 5.924    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.8/14.8 MB 13.8 MB/s eta 0:00:00
+#8 5.945 Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+#8 6.690    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 13.1 MB/s eta 0:00:00
+#8 6.700 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#8 9.665    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 10.9 MB/s eta 0:00:00
+#8 9.679 Downloading wrapt-2.0.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (114 kB)
+#8 9.693    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.1/114.1 kB 8.1 MB/s eta 0:00:00
+#8 9.702 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#8 9.719    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 10.1 MB/s eta 0:00:00
+#8 9.729 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#8 9.747    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 8.4 MB/s eta 0:00:00
+#8 9.756 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#8 9.773    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.0 MB/s eta 0:00:00
+#8 9.782 Downloading joblib-1.5.2-py3-none-any.whl (308 kB)
+#8 9.813    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 308.4/308.4 kB 10.7 MB/s eta 0:00:00
+#8 9.821 Downloading lazy_loader-0.4-py3-none-any.whl (12 kB)
+#8 9.841 Downloading networkx-3.5-py3-none-any.whl (2.0 MB)
+#8 9.985    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 14.2 MB/s eta 0:00:00
+#8 9.994 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 10.01    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.0 MB/s eta 0:00:00
+#8 10.02 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#8 10.53    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 13.8 MB/s eta 0:00:00
+#8 10.54 Downloading python_utils-3.9.1-py2.py3-none-any.whl (32 kB)
+#8 10.56 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#8 10.58 Downloading tifffile-2025.10.16-py3-none-any.whl (231 kB)
+#8 10.60    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231.2/231.2 kB 14.4 MB/s eta 0:00:00
+#8 10.61 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#8 10.63    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 8.3 MB/s eta 0:00:00
+#8 10.64 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#8 10.65    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.6 MB/s eta 0:00:00
+#8 11.13 Installing collected packages: wrapt, urllib3, typing_extensions, threadpoolctl, pillow, packaging, numpy, networkx, joblib, idna, cloudpickle, charset_normalizer, certifi, tifffile, scipy, requests, python-utils, lazy-loader, imageio, h5py, scikit-learn, scikit-image, progressbar2, tensorlayer
+#8 19.22 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 cloudpickle-3.1.1 h5py-3.15.1 idna-3.11 imageio-2.37.0 joblib-1.5.2 lazy-loader-0.4 networkx-3.5 numpy-2.3.4 packaging-25.0 pillow-12.0.0 progressbar2-4.5.0 python-utils-3.9.1 requests-2.32.5 scikit-image-0.25.2 scikit-learn-1.7.2 scipy-1.16.3 tensorlayer-2.2.5 threadpoolctl-3.6.0 tifffile-2025.10.16 typing_extensions-4.15.0 urllib3-2.5.0 wrapt-2.0.0
+#8 19.22 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 19.23 
+#8 19.23 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 19.23 [notice] To update, run: pip install --upgrade pip
+#8 DONE 21.9s
+
+#9 [5/5] RUN ["pip","install","data"]
+#9 0.679 Collecting data
+#9 0.735   Downloading data-0.4.tar.gz (7.0 kB)
+#9 0.752   Preparing metadata (setup.py): started
+#9 1.146   Preparing metadata (setup.py): finished with status 'done'
+#9 1.181 Collecting six (from data)
+#9 1.189   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#9 1.231 Collecting decorator (from data)
+#9 1.239   Downloading decorator-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+#9 1.285 Collecting funcsigs (from data)
+#9 1.295   Downloading funcsigs-1.0.2-py2.py3-none-any.whl.metadata (14 kB)
+#9 1.318 Downloading decorator-5.2.1-py3-none-any.whl (9.2 kB)
+#9 1.344 Downloading funcsigs-1.0.2-py2.py3-none-any.whl (17 kB)
+#9 1.376 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#9 1.394 Building wheels for collected packages: data
+#9 1.394   Building wheel for data (setup.py): started
+#9 1.567   Building wheel for data (setup.py): finished with status 'done'
+#9 1.568   Created wheel for data: filename=data-0.4-py3-none-any.whl size=7271 sha256=3d3ed4e2bc8053a3fd22f75e9937f7d10f4ac78ca2aa2ee3c24b6dcc457c9e0f
+#9 1.568   Stored in directory: /root/.cache/pip/wheels/d2/d3/10/d5fe9bc9dcb197ea289baccca92a25f2f95135235a92ca1b11
+#9 1.570 Successfully built data
+#9 1.828 Installing collected packages: funcsigs, six, decorator, data
+#9 1.904 Successfully installed data-0.4 decorator-5.2.1 funcsigs-1.0.2 six-1.17.0
+#9 1.904 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.910 
+#9 1.910 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.910 [notice] To update, run: pip install --upgrade pip
+#9 DONE 2.0s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 1.8s done
+#10 writing image sha256:eaafda3ab0f46d81a158125d78f945ae5744322691a3e29ba91454319eccb7e1 done
+#10 naming to docker.io/library/test-image-db7b6db7035dd48e5902 done
+#10 DONE 1.8s
+
+View build details: docker-desktop://dashboard/build/default/default/pzw63a3s9nvecs0qhj1q667j7
+[2025-10-29 20:32:17] SUCCESS: Build completed for db7b6db7035dd48e5902

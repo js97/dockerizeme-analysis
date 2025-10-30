@@ -1,0 +1,133 @@
+=== Docker Build Log for abb8a2f22adbdb6d387f ===
+Started at: Mi 29. Okt 19:12:40 CET 2025
+
+[2025-10-29 19:12:40] START: Building image for abb8a2f22adbdb6d387f
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 322B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.34kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/8] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/8] COPY hard-gists/abb8a2f22adbdb6d387f/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/8] RUN ["pip","install","six"]
+#7 1.898 Collecting six
+#7 1.937   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 1.956 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 1.999 Installing collected packages: six
+#7 2.015 Successfully installed six-1.17.0
+#7 2.015 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.109 
+#7 2.109 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.109 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.3s
+
+#8 [4/8] RUN ["pip","install","pytest"]
+#8 0.582 Collecting pytest
+#8 0.625   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#8 0.672 Collecting iniconfig>=1 (from pytest)
+#8 0.681   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#8 0.737 Collecting packaging>=20 (from pytest)
+#8 0.747   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.792 Collecting pluggy<2,>=1.5 (from pytest)
+#8 0.801   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#8 0.856 Collecting pygments>=2.7.2 (from pytest)
+#8 0.864   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#8 0.904 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#8 0.957    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 7.0 MB/s eta 0:00:00
+#8 0.966 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#8 0.985 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 1.000    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 4.4 MB/s eta 0:00:00
+#8 1.009 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#8 1.031 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#8 1.208    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 6.9 MB/s eta 0:00:00
+#8 1.256 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#8 1.976 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#8 1.976 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.981 
+#8 1.981 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.981 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.2s
+
+#9 [5/8] RUN ["pip","install","py"]
+#9 0.545 Collecting py
+#9 0.610   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#9 0.634 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#9 0.672    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.7 MB/s eta 0:00:00
+#9 0.715 Installing collected packages: py
+#9 0.795 Successfully installed py-1.11.0
+#9 0.795 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.800 
+#9 0.800 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.800 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.9s
+
+#10 [6/8] RUN ["pip","install","pyd"]
+#10 0.741 Collecting pyd
+#10 0.784   Downloading pyd-0.13.1.tar.gz (530 kB)
+#10 0.857      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 531.0/531.0 kB 7.5 MB/s eta 0:00:00
+#10 0.885   Preparing metadata (setup.py): started
+#10 1.286   Preparing metadata (setup.py): finished with status 'done'
+#10 1.287 Building wheels for collected packages: pyd
+#10 1.288   Building wheel for pyd (setup.py): started
+#10 1.550   Building wheel for pyd (setup.py): finished with status 'done'
+#10 1.551   Created wheel for pyd: filename=pyd-0.13.1-py3-none-any.whl size=594269 sha256=5ec1d25eee32f14b934e189a190da52ae7388dc230edccef5c88a48632fd7c65
+#10 1.552   Stored in directory: /root/.cache/pip/wheels/a2/74/c2/6bfaa6b92116e1859a4c9e344aabf6b647437f4321fe90da50
+#10 1.554 Successfully built pyd
+#10 1.593 Installing collected packages: pyd
+#10 1.646 Successfully installed pyd-0.13.1
+#10 1.646 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.651 
+#10 1.651 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.651 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.8s
+
+#11 [7/8] RUN ["pip","install","pillow"]
+#11 0.729 Collecting pillow
+#11 0.765   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#11 0.817 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#11 1.319    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 14.1 MB/s eta 0:00:00
+#11 1.387 Installing collected packages: pillow
+#11 1.654 Successfully installed pillow-12.0.0
+#11 1.654 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.659 
+#11 1.659 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.659 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.9s
+
+#12 [8/8] RUN ["pip","install","pydub"]
+#12 0.507 Collecting pydub
+#12 0.545   Downloading pydub-0.25.1-py2.py3-none-any.whl.metadata (1.4 kB)
+#12 0.569 Downloading pydub-0.25.1-py2.py3-none-any.whl (32 kB)
+#12 0.640 Installing collected packages: pydub
+#12 0.690 Successfully installed pydub-0.25.1
+#12 0.690 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 0.695 
+#12 0.695 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 0.695 [notice] To update, run: pip install --upgrade pip
+#12 DONE 0.8s
+
+#13 exporting to image
+#13 exporting layers
+#13 exporting layers 0.3s done
+#13 writing image sha256:bfd9b57ef24833f44817a6e045c9e60a605fd27cbd1b4b2dc189bcce9844a98a done
+#13 naming to docker.io/library/test-image-abb8a2f22adbdb6d387f done
+#13 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/0ov8nx7r24o56uoyfiapv1fqu
+[2025-10-29 19:12:51] SUCCESS: Build completed for abb8a2f22adbdb6d387f

@@ -1,0 +1,158 @@
+=== Docker Build Log for 97256 ===
+Started at: Mi 29. Okt 18:31:29 CET 2025
+
+[2025-10-29 18:31:29] START: Building image for 97256
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 345B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.76kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/9] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/9] COPY hard-gists/97256/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/9] RUN ["pip","install","gobject"]
+#7 2.029 Collecting gobject
+#7 2.078   Downloading gobject-0.1.0-py3-none-any.whl.metadata (775 bytes)
+#7 2.098 Downloading gobject-0.1.0-py3-none-any.whl (5.9 kB)
+#7 2.140 Installing collected packages: gobject
+#7 2.154 Successfully installed gobject-0.1.0
+#7 2.155 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.246 
+#7 2.246 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.246 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.4s
+
+#8 [4/9] RUN ["pip","install","six"]
+#8 0.515 Collecting six
+#8 0.547   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 0.566 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 0.607 Installing collected packages: six
+#8 0.643 Successfully installed six-1.17.0
+#8 0.644 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.648 
+#8 0.648 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.648 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.7s
+
+#9 [5/9] RUN ["pip","install","pytest"]
+#9 0.581 Collecting pytest
+#9 0.614   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#9 0.664 Collecting iniconfig>=1 (from pytest)
+#9 0.671   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#9 0.720 Collecting packaging>=20 (from pytest)
+#9 0.729   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#9 0.771 Collecting pluggy<2,>=1.5 (from pytest)
+#9 0.783   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#9 0.832 Collecting pygments>=2.7.2 (from pytest)
+#9 0.840   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#9 0.869 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#9 0.909    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 9.9 MB/s eta 0:00:00
+#9 0.917 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#9 0.938 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#9 0.950    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.5 MB/s eta 0:00:00
+#9 0.964 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#9 0.982 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#9 1.031    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 25.6 MB/s eta 0:00:00
+#9 1.082 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#9 1.799 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#9 1.799 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.805 
+#9 1.805 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.805 [notice] To update, run: pip install --upgrade pip
+#9 DONE 2.0s
+
+#10 [6/9] RUN ["pip","install","py"]
+#10 0.536 Collecting py
+#10 0.570   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#10 0.595 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#10 0.631    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.7 MB/s eta 0:00:00
+#10 0.675 Installing collected packages: py
+#10 0.755 Successfully installed py-1.11.0
+#10 0.755 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.761 
+#10 0.761 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.761 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.9s
+
+#11 [7/9] RUN ["pip","install","pan-python"]
+#11 0.640 Collecting pan-python
+#11 0.676   Downloading pan_python-0.25.0-py3-none-any.whl.metadata (1.4 kB)
+#11 0.701 Downloading pan_python-0.25.0-py3-none-any.whl (60 kB)
+#11 0.720    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.3/60.3 kB 2.9 MB/s eta 0:00:00
+#11 0.762 Installing collected packages: pan-python
+#11 0.828 Successfully installed pan-python-0.25.0
+#11 0.828 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.833 
+#11 0.833 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.833 [notice] To update, run: pip install --upgrade pip
+#11 DONE 0.9s
+
+#12 [8/9] RUN ["pip","install","PyGTK"]
+#12 0.526 Collecting PyGTK
+#12 0.566   Downloading pygtk-2.24.0.tar.bz2 (2.4 MB)
+#12 0.690      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 19.4 MB/s eta 0:00:00
+#12 1.569   Preparing metadata (setup.py): started
+#12 1.931   Preparing metadata (setup.py): finished with status 'error'
+#12 1.934   error: subprocess-exited-with-error
+#12 1.934   
+#12 1.934   × python setup.py egg_info did not run successfully.
+#12 1.934   │ exit code: 1
+#12 1.934   ╰─> [4 lines of output]
+#12 1.934       ********************************************************************
+#12 1.934       * Building PyGTK using distutils is only supported on windows. *
+#12 1.934       * To build PyGTK in a supported way, read the INSTALL file.    *
+#12 1.934       ********************************************************************
+#12 1.934       [end of output]
+#12 1.934   
+#12 1.934   note: This error originates from a subprocess, and is likely not a problem with pip.
+#12 1.936 error: metadata-generation-failed
+#12 1.936 
+#12 1.936 × Encountered error while generating package metadata.
+#12 1.936 ╰─> See above for output.
+#12 1.936 
+#12 1.936 note: This is an issue with the package mentioned above, not pip.
+#12 1.936 hint: See above for details.
+#12 1.941 
+#12 1.941 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 1.941 [notice] To update, run: pip install --upgrade pip
+#12 ERROR: process "pip install PyGTK" did not complete successfully: exit code: 1
+------
+ > [8/9] RUN ["pip","install","PyGTK"]:
+1.936 error: metadata-generation-failed
+1.936 
+1.936 × Encountered error while generating package metadata.
+1.936 ╰─> See above for output.
+1.936 
+1.936 note: This is an issue with the package mentioned above, not pip.
+1.936 hint: See above for details.
+1.941 
+1.941 [notice] A new release of pip is available: 24.0 -> 25.3
+1.941 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:8
+--------------------
+   6 |     RUN ["pip","install","py"]
+   7 |     RUN ["pip","install","pan-python"]
+   8 | >>> RUN ["pip","install","PyGTK"]
+   9 |     RUN ["pip","install","pango"]
+  10 |     CMD ["python3","/snippet.py"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install PyGTK" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/hgspxes867i42e9cvlh1ql0tk
+[2025-10-29 18:31:38] ERROR: Build failed for 97256

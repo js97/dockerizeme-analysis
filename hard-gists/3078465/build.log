@@ -1,0 +1,82 @@
+=== Docker Build Log for 3078465 ===
+Started at: Mi 29. Okt 13:39:24 CET 2025
+
+[2025-10-29 13:39:24] START: Building image for 3078465
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 199B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.01kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/3078465/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","Flask"]
+#7 1.858 Collecting Flask
+#7 1.892   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#7 1.931 Collecting blinker>=1.9.0 (from Flask)
+#7 1.939   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#7 1.984 Collecting click>=8.1.3 (from Flask)
+#7 1.993   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#7 2.031 Collecting itsdangerous>=2.2.0 (from Flask)
+#7 2.040   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#7 2.082 Collecting jinja2>=3.1.2 (from Flask)
+#7 2.090   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#7 2.173 Collecting markupsafe>=2.1.1 (from Flask)
+#7 2.181   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#7 2.232 Collecting werkzeug>=3.1.0 (from Flask)
+#7 2.241   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#7 2.269 Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+#7 2.297    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 3.7 MB/s eta 0:00:00
+#7 2.304 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#7 2.322 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#7 2.338    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 6.7 MB/s eta 0:00:00
+#7 2.346 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#7 2.363 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#7 2.377    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 10.0 MB/s eta 0:00:00
+#7 2.386 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#7 2.405 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#7 2.423    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 13.5 MB/s eta 0:00:00
+#7 2.465 Installing collected packages: markupsafe, itsdangerous, click, blinker, werkzeug, jinja2, Flask
+#7 2.764 Successfully installed Flask-3.1.2 blinker-1.9.0 click-8.3.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.3 werkzeug-3.1.3
+#7 2.764 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.856 
+#7 2.856 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.856 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.1s
+
+#8 [4/4] RUN ["pip","install","converters"]
+#8 0.623 Collecting converters
+#8 0.751   Downloading converters-0.0.1-py3-none-any.whl.metadata (324 bytes)
+#8 0.872 Downloading converters-0.0.1-py3-none-any.whl (1.1 kB)
+#8 0.932 Installing collected packages: converters
+#8 0.964 Successfully installed converters-0.0.1
+#8 0.965 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.970 
+#8 0.970 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.970 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.0s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.2s done
+#9 writing image sha256:b550d9f665889339069c483dc040ec1c524e65d53238a228bb28644d30a532d4 done
+#9 naming to docker.io/library/test-image-3078465 done
+#9 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/pgavz088jwkjgzp0e2lqrm3qx
+[2025-10-29 13:39:29] SUCCESS: Build completed for 3078465

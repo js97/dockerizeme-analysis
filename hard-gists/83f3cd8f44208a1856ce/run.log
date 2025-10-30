@@ -1,0 +1,18 @@
+=== Docker Run Log for 83f3cd8f44208a1856ce ===
+Started at: Mi 29. Okt 17:47:11 CET 2025
+
+[2025-10-29 17:47:26] START: Running container for 83f3cd8f44208a1856ce
+[2025-10-29 17:47:27] SUCCESS: Container 307ac46a1a57b06db738f51b61e1725185ae101bac4b59106e42acb00aebef5f started for 83f3cd8f44208a1856ce
+=== Container logs for 83f3cd8f44208a1856ce ===
+Traceback (most recent call last):
+  File "/snippet.py", line 35, in <module>
+    main()
+  File "/snippet.py", line 28, in main
+    extrapolation = fourierExtrapolation(x, n_predict)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 15, in fourierExtrapolation
+    indexes.sort(key = lambda i: np.absolute(f[i]))
+    ^^^^^^^^^^^^
+AttributeError: 'range' object has no attribute 'sort'. Did you mean: 'start'?
+=== End of logs for 83f3cd8f44208a1856ce ===
+[2025-10-29 17:47:29] INFO: Container 307ac46a1a57b06db738f51b61e1725185ae101bac4b59106e42acb00aebef5f has stopped

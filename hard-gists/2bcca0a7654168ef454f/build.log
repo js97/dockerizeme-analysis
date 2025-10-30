@@ -1,0 +1,110 @@
+=== Docker Build Log for 2bcca0a7654168ef454f ===
+Started at: Mi 29. Okt 13:24:54 CET 2025
+
+[2025-10-29 13:24:54] START: Building image for 2bcca0a7654168ef454f
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 178B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.57kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/2bcca0a7654168ef454f/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","ipalib"]
+#7 2.039 Collecting ipalib
+#7 2.178   Downloading ipalib-4.12.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#7 2.327 Collecting ipaplatform==4.12.2 (from ipalib)
+#7 2.434   Downloading ipaplatform-4.12.2-py2.py3-none-any.whl.metadata (1.3 kB)
+#7 2.580 Collecting ipapython==4.12.2 (from ipalib)
+#7 2.688   Downloading ipapython-4.12.2-py2.py3-none-any.whl.metadata (1.5 kB)
+#7 2.727 Collecting netaddr (from ipalib)
+#7 2.736   Downloading netaddr-1.3.0-py3-none-any.whl.metadata (5.0 kB)
+#7 2.782 Collecting pyasn1 (from ipalib)
+#7 2.789   Downloading pyasn1-0.6.1-py3-none-any.whl.metadata (8.4 kB)
+#7 2.830 Collecting pyasn1-modules (from ipalib)
+#7 2.838   Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+#7 2.872 Collecting six (from ipalib)
+#7 2.880   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.935 Collecting urllib3 (from ipalib)
+#7 2.943   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 3.062 Collecting cffi (from ipaplatform==4.12.2->ipalib)
+#7 3.071   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+#7 3.300 Collecting cryptography>=1.6 (from ipapython==4.12.2->ipalib)
+#7 3.307   Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+#7 3.348 Collecting dnspython>=1.15 (from ipapython==4.12.2->ipalib)
+#7 3.357   Downloading dnspython-2.8.0-py3-none-any.whl.metadata (5.7 kB)
+#7 3.407 Collecting gssapi>=1.2.0 (from ipapython==4.12.2->ipalib)
+#7 3.418   Downloading gssapi-1.10.1.tar.gz (94 kB)
+#7 3.445      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.3/94.3 kB 3.8 MB/s eta 0:00:00
+#7 3.465   Installing build dependencies: started
+#7 5.554   Installing build dependencies: finished with status 'done'
+#7 5.554   Getting requirements to build wheel: started
+#7 8.334   Getting requirements to build wheel: finished with status 'done'
+#7 8.335   Preparing metadata (pyproject.toml): started
+#7 8.711   Preparing metadata (pyproject.toml): finished with status 'done'
+#7 8.764 Collecting pycparser (from cffi->ipaplatform==4.12.2->ipalib)
+#7 8.772   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+#7 8.822 Collecting decorator (from gssapi>=1.2.0->ipapython==4.12.2->ipalib)
+#7 8.829   Downloading decorator-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+#7 9.001 Downloading ipalib-4.12.2-py2.py3-none-any.whl (180 kB)
+#7 9.033    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 180.8/180.8 kB 5.6 MB/s eta 0:00:00
+#7 9.514 Downloading ipaplatform-4.12.2-py2.py3-none-any.whl (90 kB)
+#7 9.530    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.9/90.9 kB 5.5 MB/s eta 0:00:00
+#7 9.634 Downloading ipapython-4.12.2-py2.py3-none-any.whl (123 kB)
+#7 9.657    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 123.7/123.7 kB 5.3 MB/s eta 0:00:00
+#7 9.667 Downloading netaddr-1.3.0-py3-none-any.whl (2.3 MB)
+#7 9.820    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 14.9 MB/s eta 0:00:00
+#7 9.828 Downloading pyasn1-0.6.1-py3-none-any.whl (83 kB)
+#7 9.841    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.1/83.1 kB 6.8 MB/s eta 0:00:00
+#7 9.850 Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+#7 9.868    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 181.3/181.3 kB 10.6 MB/s eta 0:00:00
+#7 9.876 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 9.894 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 9.913    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 7.2 MB/s eta 0:00:00
+#7 9.921 Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+#7 10.18    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 17.1 MB/s eta 0:00:00
+#7 10.19 Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+#7 10.22    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 10.4 MB/s eta 0:00:00
+#7 10.23 Downloading dnspython-2.8.0-py3-none-any.whl (331 kB)
+#7 10.26    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 331.1/331.1 kB 11.2 MB/s eta 0:00:00
+#7 10.26 Downloading decorator-5.2.1-py3-none-any.whl (9.2 kB)
+#7 10.28 Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+#7 10.29    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 9.2 MB/s eta 0:00:00
+#7 10.32 Building wheels for collected packages: gssapi
+#7 10.32   Building wheel for gssapi (pyproject.toml): started
+#7 49.31   Building wheel for gssapi (pyproject.toml): finished with status 'done'
+#7 49.32   Created wheel for gssapi: filename=gssapi-1.10.1-cp311-cp311-linux_x86_64.whl size=4856432 sha256=78575e26e84d92542b47d3754ebbce1a4bb3072285b7f832461f0e1f56d2e341
+#7 49.32   Stored in directory: /root/.cache/pip/wheels/53/46/1a/96585bce980ed165e0f17d28b311b3db14cd7c5d105e555aff
+#7 49.32 Successfully built gssapi
+#7 49.38 Installing collected packages: urllib3, six, pycparser, pyasn1, netaddr, dnspython, decorator, pyasn1-modules, gssapi, cffi, cryptography, ipapython, ipaplatform, ipalib
+#7 50.40 Successfully installed cffi-2.0.0 cryptography-46.0.3 decorator-5.2.1 dnspython-2.8.0 gssapi-1.10.1 ipalib-4.12.2 ipaplatform-4.12.2 ipapython-4.12.2 netaddr-1.3.0 pyasn1-0.6.1 pyasn1-modules-0.4.2 pycparser-2.23 six-1.17.0 urllib3-2.5.0
+#7 50.40 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 50.40 
+#7 50.40 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 50.40 [notice] To update, run: pip install --upgrade pip
+#7 DONE 50.9s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.4s done
+#8 writing image sha256:5307472453f1609009b711b80790a32ca1f4f56864d52e7569aed6c171488fb1 done
+#8 naming to docker.io/library/test-image-2bcca0a7654168ef454f done
+#8 DONE 0.4s
+
+View build details: docker-desktop://dashboard/build/default/default/nndph2oo6mdhbkdp9tcenq5ql
+[2025-10-29 13:25:46] SUCCESS: Build completed for 2bcca0a7654168ef454f

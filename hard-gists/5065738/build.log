@@ -1,0 +1,123 @@
+=== Docker Build Log for 5065738 ===
+Started at: Mi 29. Okt 15:20:46 CET 2025
+
+[2025-10-29 15:20:46] START: Building image for 5065738
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 228B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.60kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/5065738/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","Fabric3"]
+#7 2.108 Collecting Fabric3
+#7 2.143   Downloading Fabric3-1.14.post1-py3-none-any.whl.metadata (2.0 kB)
+#7 2.205 Collecting paramiko<3.0,>=2.0 (from Fabric3)
+#7 2.214   Downloading paramiko-2.12.0-py2.py3-none-any.whl.metadata (4.6 kB)
+#7 2.251 Collecting six>=1.10.0 (from Fabric3)
+#7 2.260   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.338 Collecting bcrypt>=3.1.3 (from paramiko<3.0,>=2.0->Fabric3)
+#7 2.348   Downloading bcrypt-5.0.0-cp39-abi3-manylinux_2_34_x86_64.whl.metadata (10 kB)
+#7 2.567 Collecting cryptography>=2.5 (from paramiko<3.0,>=2.0->Fabric3)
+#7 2.578   Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+#7 2.628 Collecting pynacl>=1.0.1 (from paramiko<3.0,>=2.0->Fabric3)
+#7 2.636   Downloading pynacl-1.6.0-cp38-abi3-manylinux_2_34_x86_64.whl.metadata (9.4 kB)
+#7 2.789 Collecting cffi>=2.0.0 (from cryptography>=2.5->paramiko<3.0,>=2.0->Fabric3)
+#7 2.800   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+#7 2.856 Collecting pycparser (from cffi>=2.0.0->cryptography>=2.5->paramiko<3.0,>=2.0->Fabric3)
+#7 2.864   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+#7 2.887 Downloading Fabric3-1.14.post1-py3-none-any.whl (92 kB)
+#7 2.911    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 92.7/92.7 kB 4.1 MB/s eta 0:00:00
+#7 2.920 Downloading paramiko-2.12.0-py2.py3-none-any.whl (213 kB)
+#7 2.943    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 213.1/213.1 kB 10.7 MB/s eta 0:00:00
+#7 2.951 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.969 Downloading bcrypt-5.0.0-cp39-abi3-manylinux_2_34_x86_64.whl (278 kB)
+#7 2.989    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 278.2/278.2 kB 15.6 MB/s eta 0:00:00
+#7 3.000 Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+#7 3.171    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 26.5 MB/s eta 0:00:00
+#7 3.179 Downloading pynacl-1.6.0-cp38-abi3-manylinux_2_34_x86_64.whl (1.4 MB)
+#7 3.240    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 23.6 MB/s eta 0:00:00
+#7 3.249 Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+#7 3.267    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 12.9 MB/s eta 0:00:00
+#7 3.275 Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+#7 3.289    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 9.1 MB/s eta 0:00:00
+#7 3.388 Installing collected packages: six, pycparser, bcrypt, cffi, pynacl, cryptography, paramiko, Fabric3
+#7 3.933 Successfully installed Fabric3-1.14.post1 bcrypt-5.0.0 cffi-2.0.0 cryptography-46.0.3 paramiko-2.12.0 pycparser-2.23 pynacl-1.6.0 six-1.17.0
+#7 3.934 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.026 
+#7 4.026 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.026 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.4s
+
+#8 [4/5] RUN ["pip","install","fabric"]
+#8 0.562 Collecting fabric
+#8 0.594   Downloading fabric-3.2.2-py3-none-any.whl.metadata (3.5 kB)
+#8 0.645 Collecting invoke>=2.0 (from fabric)
+#8 0.654   Downloading invoke-2.2.1-py3-none-any.whl.metadata (3.3 kB)
+#8 0.666 Requirement already satisfied: paramiko>=2.4 in /usr/local/lib/python3.11/site-packages (from fabric) (2.12.0)
+#8 0.699 Collecting decorator>=5 (from fabric)
+#8 0.707   Downloading decorator-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+#8 0.752 Collecting deprecated>=1.2 (from fabric)
+#8 0.761   Downloading Deprecated-1.2.18-py2.py3-none-any.whl.metadata (5.7 kB)
+#8 0.915 Collecting wrapt<2,>=1.10 (from deprecated>=1.2->fabric)
+#8 0.924   Downloading wrapt-1.17.3-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.4 kB)
+#8 0.949 Requirement already satisfied: bcrypt>=3.1.3 in /usr/local/lib/python3.11/site-packages (from paramiko>=2.4->fabric) (5.0.0)
+#8 0.951 Requirement already satisfied: cryptography>=2.5 in /usr/local/lib/python3.11/site-packages (from paramiko>=2.4->fabric) (46.0.3)
+#8 0.952 Requirement already satisfied: pynacl>=1.0.1 in /usr/local/lib/python3.11/site-packages (from paramiko>=2.4->fabric) (1.6.0)
+#8 0.952 Requirement already satisfied: six in /usr/local/lib/python3.11/site-packages (from paramiko>=2.4->fabric) (1.17.0)
+#8 0.968 Requirement already satisfied: cffi>=2.0.0 in /usr/local/lib/python3.11/site-packages (from cryptography>=2.5->paramiko>=2.4->fabric) (2.0.0)
+#8 0.979 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi>=2.0.0->cryptography>=2.5->paramiko>=2.4->fabric) (2.23)
+#8 0.989 Downloading fabric-3.2.2-py3-none-any.whl (59 kB)
+#8 1.010    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.4/59.4 kB 2.7 MB/s eta 0:00:00
+#8 1.019 Downloading decorator-5.2.1-py3-none-any.whl (9.2 kB)
+#8 1.037 Downloading Deprecated-1.2.18-py2.py3-none-any.whl (10.0 kB)
+#8 1.055 Downloading invoke-2.2.1-py3-none-any.whl (160 kB)
+#8 1.075    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 160.3/160.3 kB 8.1 MB/s eta 0:00:00
+#8 1.083 Downloading wrapt-1.17.3-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (82 kB)
+#8 1.096    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 82.4/82.4 kB 6.5 MB/s eta 0:00:00
+#8 1.177 Installing collected packages: wrapt, invoke, decorator, deprecated, fabric
+#8 1.362 Successfully installed decorator-5.2.1 deprecated-1.2.18 fabric-3.2.2 invoke-2.2.1 wrapt-1.17.3
+#8 1.363 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.368 
+#8 1.368 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.368 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.5s
+
+#9 [5/5] RUN ["pip","install","PyYAML"]
+#9 0.584 Collecting PyYAML
+#9 0.616   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#9 0.640 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#9 0.698    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 14.4 MB/s eta 0:00:00
+#9 0.767 Installing collected packages: PyYAML
+#9 0.845 Successfully installed PyYAML-6.0.3
+#9 0.846 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.851 
+#9 0.851 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.851 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.9s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.3s done
+#10 writing image sha256:b398860d73be83ce45c0ea15952de14f6c6c504c57bfce9eb2fd27500fafab28 done
+#10 naming to docker.io/library/test-image-5065738 0.0s done
+#10 DONE 0.4s
+
+View build details: docker-desktop://dashboard/build/default/default/fo38z87tbcktdiv8ed8dfnlqc
+[2025-10-29 15:20:54] SUCCESS: Build completed for 5065738

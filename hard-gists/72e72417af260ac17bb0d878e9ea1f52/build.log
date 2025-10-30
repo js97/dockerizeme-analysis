@@ -1,0 +1,79 @@
+=== Docker Build Log for 72e72417af260ac17bb0d878e9ea1f52 ===
+Started at: Mi 29. Okt 17:04:56 CET 2025
+
+[2025-10-29 17:04:56] START: Building image for 72e72417af260ac17bb0d878e9ea1f52
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 221B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 775B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/72e72417af260ac17bb0d878e9ea1f52/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","requests"]
+#7 2.008 Collecting requests
+#7 2.052   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.181 Collecting charset_normalizer<4,>=2 (from requests)
+#7 2.190   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.240 Collecting idna<4,>=2.5 (from requests)
+#7 2.248   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.314 Collecting urllib3<3,>=1.21.1 (from requests)
+#7 2.323   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.370 Collecting certifi>=2017.4.17 (from requests)
+#7 2.380   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.409 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.427    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.4 MB/s eta 0:00:00
+#7 2.436 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.452    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 10.4 MB/s eta 0:00:00
+#7 2.461 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.476    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.5 MB/s eta 0:00:00
+#7 2.484 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.498    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.1 MB/s eta 0:00:00
+#7 2.507 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.522    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 8.7 MB/s eta 0:00:00
+#7 2.574 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#7 2.823 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#7 2.824 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.923 
+#7 2.923 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.923 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.1s
+
+#8 [4/4] RUN ["pip","install","tqdm"]
+#8 0.654 Collecting tqdm
+#8 0.692   Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+#8 0.716      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.7/57.7 kB 2.3 MB/s eta 0:00:00
+#8 0.736 Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+#8 0.763    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 2.6 MB/s eta 0:00:00
+#8 0.827 Installing collected packages: tqdm
+#8 0.915 Successfully installed tqdm-4.67.1
+#8 0.915 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.921 
+#8 0.921 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.921 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.0s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.2s done
+#9 writing image sha256:81e36005a8da0e81c101f1c1a69a65d4e88108777a87bd9204d5a35cfba80299 done
+#9 naming to docker.io/library/test-image-72e72417af260ac17bb0d878e9ea1f52 0.0s done
+#9 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/ijimjpormbw8f48gnmafppx3n
+[2025-10-29 17:05:01] SUCCESS: Build completed for 72e72417af260ac17bb0d878e9ea1f52

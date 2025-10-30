@@ -1,0 +1,12 @@
+=== Docker Run Log for 470c2ffcf1cde9b2a740f48015915e30 ===
+Started at: Mi 29. Okt 14:57:55 CET 2025
+
+[2025-10-29 14:57:55] START: Running container for 470c2ffcf1cde9b2a740f48015915e30
+[2025-10-29 14:57:55] SUCCESS: Container 7772e1fba90a16fe7af8b51520e894a377044266e0c6775f77455917bd2f103b started for 470c2ffcf1cde9b2a740f48015915e30
+=== Container logs for 470c2ffcf1cde9b2a740f48015915e30 ===
+  File "/snippet.py", line 78
+    print "[+] 0x%x:\t%08s\t%s" % (insn1.address, insn1.mnemonic, insn1.op_str), '-->', assembly
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 470c2ffcf1cde9b2a740f48015915e30 ===
+[2025-10-29 14:57:57] INFO: Container 7772e1fba90a16fe7af8b51520e894a377044266e0c6775f77455917bd2f103b has stopped

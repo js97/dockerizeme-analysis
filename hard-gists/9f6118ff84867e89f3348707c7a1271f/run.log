@@ -1,0 +1,13 @@
+=== Docker Run Log for 9f6118ff84867e89f3348707c7a1271f ===
+Started at: Mi 29. Okt 18:42:33 CET 2025
+
+[2025-10-29 18:47:30] START: Running container for 9f6118ff84867e89f3348707c7a1271f
+[2025-10-29 18:47:30] SUCCESS: Container 94e3114ecb0d6f3941dac58afa770ec9bb0ebed33e27f7915b2eb4589047b5f8 started for 9f6118ff84867e89f3348707c7a1271f
+=== Container logs for 9f6118ff84867e89f3348707c7a1271f ===
+Traceback (most recent call last):
+  File "/snippet.py", line 32, in <module>
+    mnist_train_ds = datasets.MNIST(os.path.expanduser('~/data/datasets/mnist'), train=True, download=True,
+                                    ^^
+NameError: name 'os' is not defined
+=== End of logs for 9f6118ff84867e89f3348707c7a1271f ===
+[2025-10-29 18:47:32] INFO: Container 94e3114ecb0d6f3941dac58afa770ec9bb0ebed33e27f7915b2eb4589047b5f8 has stopped

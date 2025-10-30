@@ -1,0 +1,133 @@
+=== Docker Build Log for 6b9bae1310f2ee6b47ba3663bdcb1ded ===
+Started at: Mi 29. Okt 16:49:02 CET 2025
+
+[2025-10-29 16:49:02] START: Building image for 6b9bae1310f2ee6b47ba3663bdcb1ded
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 275B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.22kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/6] COPY hard-gists/6b9bae1310f2ee6b47ba3663bdcb1ded/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/6] RUN ["pip","install","six"]
+#7 1.977 Collecting six
+#7 2.019   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.039 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.088 Installing collected packages: six
+#7 2.105 Successfully installed six-1.17.0
+#7 2.106 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.202 
+#7 2.202 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.202 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.4s
+
+#8 [4/6] RUN ["pip","install","pytest"]
+#8 0.589 Collecting pytest
+#8 0.625   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#8 0.667 Collecting iniconfig>=1 (from pytest)
+#8 0.676   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#8 0.737 Collecting packaging>=20 (from pytest)
+#8 0.746   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.800 Collecting pluggy<2,>=1.5 (from pytest)
+#8 0.809   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#8 0.855 Collecting pygments>=2.7.2 (from pytest)
+#8 0.864   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#8 0.894 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#8 0.937    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 8.7 MB/s eta 0:00:00
+#8 0.945 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#8 0.963 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 0.978    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 4.1 MB/s eta 0:00:00
+#8 0.986 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#8 1.006 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#8 1.057    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 24.4 MB/s eta 0:00:00
+#8 1.108 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#8 1.871 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#8 1.871 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.876 
+#8 1.876 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.876 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.1s
+
+#9 [5/6] RUN ["pip","install","py"]
+#9 0.534 Collecting py
+#9 0.569   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#9 0.593 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#9 0.631    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.5 MB/s eta 0:00:00
+#9 0.676 Installing collected packages: py
+#9 0.757 Successfully installed py-1.11.0
+#9 0.757 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.762 
+#9 0.762 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.762 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.8s
+
+#10 [6/6] RUN ["pip","install","PyGTK"]
+#10 0.522 Collecting PyGTK
+#10 0.559   Downloading pygtk-2.24.0.tar.bz2 (2.4 MB)
+#10 0.695      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 17.5 MB/s eta 0:00:00
+#10 1.634   Preparing metadata (setup.py): started
+#10 1.995   Preparing metadata (setup.py): finished with status 'error'
+#10 1.998   error: subprocess-exited-with-error
+#10 1.998   
+#10 1.998   × python setup.py egg_info did not run successfully.
+#10 1.998   │ exit code: 1
+#10 1.998   ╰─> [4 lines of output]
+#10 1.998       ********************************************************************
+#10 1.998       * Building PyGTK using distutils is only supported on windows. *
+#10 1.998       * To build PyGTK in a supported way, read the INSTALL file.    *
+#10 1.998       ********************************************************************
+#10 1.998       [end of output]
+#10 1.998   
+#10 1.998   note: This error originates from a subprocess, and is likely not a problem with pip.
+#10 2.000 error: metadata-generation-failed
+#10 2.000 
+#10 2.000 × Encountered error while generating package metadata.
+#10 2.000 ╰─> See above for output.
+#10 2.000 
+#10 2.000 note: This is an issue with the package mentioned above, not pip.
+#10 2.000 hint: See above for details.
+#10 2.005 
+#10 2.005 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 2.005 [notice] To update, run: pip install --upgrade pip
+#10 ERROR: process "pip install PyGTK" did not complete successfully: exit code: 1
+------
+ > [6/6] RUN ["pip","install","PyGTK"]:
+2.000 error: metadata-generation-failed
+2.000 
+2.000 × Encountered error while generating package metadata.
+2.000 ╰─> See above for output.
+2.000 
+2.000 note: This is an issue with the package mentioned above, not pip.
+2.000 hint: See above for details.
+2.005 
+2.005 [notice] A new release of pip is available: 24.0 -> 25.3
+2.005 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:6
+--------------------
+   4 |     RUN ["pip","install","pytest"]
+   5 |     RUN ["pip","install","py"]
+   6 | >>> RUN ["pip","install","PyGTK"]
+   7 |     CMD ["python3","/snippet.py"]
+   8 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install PyGTK" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/doqsk2l8ck4d5avzlwf64afcl
+[2025-10-29 16:49:10] ERROR: Build failed for 6b9bae1310f2ee6b47ba3663bdcb1ded

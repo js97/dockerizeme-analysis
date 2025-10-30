@@ -1,0 +1,79 @@
+=== Docker Build Log for ab136dbfb97f8ee1d309 ===
+Started at: Mi 29. Okt 19:12:23 CET 2025
+
+[2025-10-29 19:12:23] START: Building image for ab136dbfb97f8ee1d309
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 213B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 776B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/ab136dbfb97f8ee1d309/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","dj.choices"]
+#7 2.032 Collecting dj.choices
+#7 2.068   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 2.086   Preparing metadata (setup.py): started
+#7 2.459   Preparing metadata (setup.py): finished with status 'done'
+#7 2.571 Collecting django (from dj.choices)
+#7 2.583   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.624 Collecting six (from dj.choices)
+#7 2.677   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.736 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.746   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.787 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.796   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.821 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.416    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 14.0 MB/s eta 0:00:00
+#7 3.427 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.449 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.470 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.481    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.7 MB/s eta 0:00:00
+#7 3.518 Building wheels for collected packages: dj.choices
+#7 3.518   Building wheel for dj.choices (setup.py): started
+#7 3.692   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.692   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=3fc137b7fceb18123ad7e2fa61f8f708f8995eec809922dea277be20154d4f99
+#7 3.692   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.695 Successfully built dj.choices
+#7 3.750 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 5.204 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 5.204 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.296 
+#7 5.296 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.296 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.0s
+
+#8 [4/4] RUN ["pip","install","Django"]
+#8 0.472 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#8 0.476 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#8 0.477 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#8 0.516 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.521 
+#8 0.521 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.521 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.6s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.6s done
+#9 writing image sha256:b14ffc6ac2a7bb76ee6d7d1a9986c57b0436c2d3d71ef9bc68c5f19e1c9bb038 done
+#9 naming to docker.io/library/test-image-ab136dbfb97f8ee1d309 0.0s done
+#9 DONE 0.7s
+
+View build details: docker-desktop://dashboard/build/default/default/4nihegez8j9d750ogino6uz98
+[2025-10-29 19:12:31] SUCCESS: Build completed for ab136dbfb97f8ee1d309

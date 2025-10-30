@@ -1,0 +1,30 @@
+=== Docker Run Log for 4667205 ===
+Started at: Mi 29. Okt 14:57:21 CET 2025
+
+[2025-10-29 14:57:22] START: Running container for 4667205
+[2025-10-29 14:57:22] SUCCESS: Container d68e14e8d90dc112a7f2b15489a5c48c4b87f04bddc902b04e7fdc65323f0fe7 started for 4667205
+=== Container logs for 4667205 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 6, in <module>
+    resp = urllib.request.urlopen(url).read()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 400: Bad Request
+=== End of logs for 4667205 ===
+[2025-10-29 14:57:24] INFO: Container d68e14e8d90dc112a7f2b15489a5c48c4b87f04bddc902b04e7fdc65323f0fe7 has stopped

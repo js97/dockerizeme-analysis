@@ -1,0 +1,187 @@
+=== Docker Build Log for 1059647 ===
+Started at: Mi 29. Okt 11:48:07 CET 2025
+
+[2025-10-29 11:48:07] START: Building image for 1059647
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 307B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 6.91kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/1059647/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","marrow.mailer"]
+#7 2.007 Collecting marrow.mailer
+#7 2.144   Downloading marrow.mailer-4.0.3-py2.py3-none-any.whl.metadata (1.4 kB)
+#7 2.302 Collecting marrow.util<2.0 (from marrow.mailer)
+#7 2.313   Downloading marrow.util-1.2.3.tar.gz (17 kB)
+#7 2.326   Preparing metadata (setup.py): started
+#7 2.735   Preparing metadata (setup.py): finished with status 'done'
+#7 2.845 Downloading marrow.mailer-4.0.3-py2.py3-none-any.whl (132 kB)
+#7 2.880    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.7/132.7 kB 3.8 MB/s eta 0:00:00
+#7 2.885 Building wheels for collected packages: marrow.util
+#7 2.886   Building wheel for marrow.util (setup.py): started
+#7 3.056   Building wheel for marrow.util (setup.py): finished with status 'done'
+#7 3.057   Created wheel for marrow.util: filename=marrow_util-1.2.3-py3-none-any.whl size=23729 sha256=9893fe74f97fffe0c437c279f24bd826edcb6faffcbbeb31e17da4196d3fd381
+#7 3.057   Stored in directory: /root/.cache/pip/wheels/c1/26/db/9d972b23abf62c5f197f5b57713fcdba2c6b727d887e1df6f0
+#7 3.058 Successfully built marrow.util
+#7 3.092 Installing collected packages: marrow.util, marrow.mailer
+#7 3.164 Successfully installed marrow.mailer-4.0.3 marrow.util-1.2.3
+#7 3.165 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.259 
+#7 3.259 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.259 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.4s
+
+#8 [4/7] RUN ["pip","install","marrow.schema"]
+#8 0.506 Collecting marrow.schema
+#8 0.540   Downloading marrow.schema-2.0.0-py2.py3-none-any.whl.metadata (29 kB)
+#8 0.566 Downloading marrow.schema-2.0.0-py2.py3-none-any.whl (78 kB)
+#8 0.596    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.4/78.4 kB 2.5 MB/s eta 0:00:00
+#8 0.634 Installing collected packages: marrow.schema
+#8 0.689 Successfully installed marrow.schema-2.0.0
+#8 0.689 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.694 
+#8 0.694 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.694 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.8s
+
+#9 [5/7] RUN ["pip","install","marrow.mongo"]
+#9 0.501 Collecting marrow.mongo
+#9 0.535   Downloading marrow.mongo-1.1.2-py2.py3-none-any.whl.metadata (9.5 kB)
+#9 0.582 Collecting uri<3.0.0,>=2.0.0 (from marrow.mongo)
+#9 0.592   Downloading uri-2.0.1-py2.py3-none-any.whl.metadata (13 kB)
+#9 0.646 Collecting marrow.schema<2.0.0,>=1.2.0 (from marrow.mongo)
+#9 0.656   Downloading marrow.schema-1.2.0-py2.py3-none-any.whl.metadata (29 kB)
+#9 0.698 Collecting marrow.package<2.0.0,>=1.1.0 (from marrow.mongo)
+#9 0.706   Downloading marrow.package-1.2.0-py2.py3-none-any.whl.metadata (13 kB)
+#9 1.041 Collecting pymongo>=3.2 (from marrow.mongo)
+#9 1.053   Downloading pymongo-4.15.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+#9 1.144 Collecting dnspython<3.0.0,>=1.16.0 (from pymongo>=3.2->marrow.mongo)
+#9 1.152   Downloading dnspython-2.8.0-py3-none-any.whl.metadata (5.7 kB)
+#9 1.282 Downloading marrow.mongo-1.1.2-py2.py3-none-any.whl (159 kB)
+#9 1.306    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 159.1/159.1 kB 6.9 MB/s eta 0:00:00
+#9 1.316 Downloading marrow.package-1.2.0-py2.py3-none-any.whl (28 kB)
+#9 1.337 Downloading marrow.schema-1.2.0-py2.py3-none-any.whl (62 kB)
+#9 1.354    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.2/62.2 kB 3.5 MB/s eta 0:00:00
+#9 1.362 Downloading pymongo-4.15.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.5 MB)
+#9 1.419    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 26.1 MB/s eta 0:00:00
+#9 1.428 Downloading uri-2.0.1-py2.py3-none-any.whl (42 kB)
+#9 1.438    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.0/43.0 kB 3.5 MB/s eta 0:00:00
+#9 1.447 Downloading dnspython-2.8.0-py3-none-any.whl (331 kB)
+#9 1.467    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 331.1/331.1 kB 17.5 MB/s eta 0:00:00
+#9 1.559 Installing collected packages: uri, marrow.schema, marrow.package, dnspython, pymongo, marrow.mongo
+#9 1.605   Attempting uninstall: marrow.schema
+#9 1.609     Found existing installation: marrow.schema 2.0.0
+#9 1.613     Uninstalling marrow.schema-2.0.0:
+#9 1.669       Successfully uninstalled marrow.schema-2.0.0
+#9 2.223 Successfully installed dnspython-2.8.0 marrow.mongo-1.1.2 marrow.package-1.2.0 marrow.schema-1.2.0 pymongo-4.15.3 uri-2.0.1
+#9 2.223 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 2.228 
+#9 2.228 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 2.228 [notice] To update, run: pip install --upgrade pip
+#9 DONE 2.5s
+
+#10 [6/7] RUN ["pip","install","ndb"]
+#10 0.526 Collecting ndb
+#10 0.878   Downloading ndb-1.0.13b1.tar.gz (185 kB)
+#10 0.923      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 185.3/185.3 kB 4.2 MB/s eta 0:00:00
+#10 0.934   Preparing metadata (setup.py): started
+#10 1.052   Preparing metadata (setup.py): finished with status 'done'
+#10 1.078 Collecting testing-v1beta3-googledatastore==4.0.0b4 (from ndb)
+#10 1.087   Downloading testing-v1beta3-googledatastore-4.0.0b4.tar.gz (13 kB)
+#10 1.104   Preparing metadata (setup.py): started
+#10 1.219   Preparing metadata (setup.py): finished with status 'done'
+#10 1.251 Collecting proto-google-datastore-v1beta3==0.0.3pre (from testing-v1beta3-googledatastore==4.0.0b4->ndb)
+#10 1.261   Downloading proto-google-datastore-v1beta3-0.0.3pre.tar.gz (22 kB)
+#10 1.280   Preparing metadata (setup.py): started
+#10 1.396   Preparing metadata (setup.py): finished with status 'done'
+#10 1.428 Collecting oauth2client==1.5 (from testing-v1beta3-googledatastore==4.0.0b4->ndb)
+#10 1.440   Downloading oauth2client-1.5.0.tar.gz (56 kB)
+#10 1.451      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.1/56.1 kB 4.9 MB/s eta 0:00:00
+#10 1.457   Preparing metadata (setup.py): started
+#10 1.574   Preparing metadata (setup.py): finished with status 'done'
+#10 1.604 Collecting uritemplate==0.6 (from testing-v1beta3-googledatastore==4.0.0b4->ndb)
+#10 1.615   Downloading uritemplate-0.6.tar.gz (3.5 kB)
+#10 1.636   Preparing metadata (setup.py): started
+#10 1.784   Preparing metadata (setup.py): finished with status 'done'
+#10 1.818 Collecting httplib2>=0.9.1 (from oauth2client==1.5->testing-v1beta3-googledatastore==4.0.0b4->ndb)
+#10 1.826   Downloading httplib2-0.31.0-py3-none-any.whl.metadata (2.2 kB)
+#10 1.878 Collecting pyasn1>=0.1.7 (from oauth2client==1.5->testing-v1beta3-googledatastore==4.0.0b4->ndb)
+#10 1.886   Downloading pyasn1-0.6.1-py3-none-any.whl.metadata (8.4 kB)
+#10 1.934 Collecting pyasn1-modules>=0.0.5 (from oauth2client==1.5->testing-v1beta3-googledatastore==4.0.0b4->ndb)
+#10 1.942   Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+#10 1.986 Collecting rsa>=3.1.4 (from oauth2client==1.5->testing-v1beta3-googledatastore==4.0.0b4->ndb)
+#10 1.995   Downloading rsa-4.9.1-py3-none-any.whl.metadata (5.6 kB)
+#10 2.037 Collecting six>=1.6.1 (from oauth2client==1.5->testing-v1beta3-googledatastore==4.0.0b4->ndb)
+#10 2.045   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#10 2.236 Collecting protobuf==3.0.0a3 (from proto-google-datastore-v1beta3==0.0.3pre->testing-v1beta3-googledatastore==4.0.0b4->ndb)
+#10 2.248   Downloading protobuf-3.0.0a3.tar.gz (88 kB)
+#10 2.262      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.4/88.4 kB 6.3 MB/s eta 0:00:00
+#10 2.270   Preparing metadata (setup.py): started
+#10 2.372   Preparing metadata (setup.py): finished with status 'error'
+#10 2.375   error: subprocess-exited-with-error
+#10 2.375   
+#10 2.375   × python setup.py egg_info did not run successfully.
+#10 2.375   │ exit code: 1
+#10 2.375   ╰─> [6 lines of output]
+#10 2.375       Traceback (most recent call last):
+#10 2.375         File "<string>", line 2, in <module>
+#10 2.375         File "<pip-setuptools-caller>", line 34, in <module>
+#10 2.375         File "/tmp/pip-install-afulyodb/protobuf_5a81f55d2ee14afb8e5c3b1943fd709c/setup.py", line 29, in <module>
+#10 2.375           from distutils.command.build_py import build_py_2to3 as _build_py
+#10 2.375       ImportError: cannot import name 'build_py_2to3' from 'distutils.command.build_py' (/usr/local/lib/python3.11/site-packages/setuptools/_distutils/command/build_py.py)
+#10 2.375       [end of output]
+#10 2.375   
+#10 2.375   note: This error originates from a subprocess, and is likely not a problem with pip.
+#10 2.376 error: metadata-generation-failed
+#10 2.376 
+#10 2.376 × Encountered error while generating package metadata.
+#10 2.376 ╰─> See above for output.
+#10 2.376 
+#10 2.376 note: This is an issue with the package mentioned above, not pip.
+#10 2.376 hint: See above for details.
+#10 2.381 
+#10 2.381 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 2.381 [notice] To update, run: pip install --upgrade pip
+#10 ERROR: process "pip install ndb" did not complete successfully: exit code: 1
+------
+ > [6/7] RUN ["pip","install","ndb"]:
+2.376 error: metadata-generation-failed
+2.376 
+2.376 × Encountered error while generating package metadata.
+2.376 ╰─> See above for output.
+2.376 
+2.376 note: This is an issue with the package mentioned above, not pip.
+2.376 hint: See above for details.
+2.381 
+2.381 [notice] A new release of pip is available: 24.0 -> 25.3
+2.381 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:6
+--------------------
+   4 |     RUN ["pip","install","marrow.schema"]
+   5 |     RUN ["pip","install","marrow.mongo"]
+   6 | >>> RUN ["pip","install","ndb"]
+   7 |     RUN ["pip","install","WebCore"]
+   8 |     CMD ["python3","/snippet.py"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install ndb" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/dc4au9o2abj042yj102bktw5r
+[2025-10-29 11:48:17] ERROR: Build failed for 1059647

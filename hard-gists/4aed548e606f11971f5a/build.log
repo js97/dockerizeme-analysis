@@ -1,0 +1,347 @@
+=== Docker Build Log for 4aed548e606f11971f5a ===
+Started at: Mi 29. Okt 15:06:58 CET 2025
+
+[2025-10-29 15:06:58] START: Building image for 4aed548e606f11971f5a
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 433B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [ 1/10] FROM docker.io/library/python:3.11
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 2.11kB 0.0s done
+#5 DONE 0.0s
+
+#4 [ 1/10] FROM docker.io/library/python:3.11
+#4 CACHED
+
+#6 [ 2/10] COPY hard-gists/4aed548e606f11971f5a/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/10] RUN ["pip","install","epguides-api"]
+#7 1.945 Collecting epguides-api
+#7 1.980   Downloading epguides-api-1.0.1.tar.gz (4.2 kB)
+#7 1.993   Preparing metadata (setup.py): started
+#7 2.386   Preparing metadata (setup.py): finished with status 'done'
+#7 2.387 Building wheels for collected packages: epguides-api
+#7 2.388   Building wheel for epguides-api (setup.py): started
+#7 2.573   Building wheel for epguides-api (setup.py): finished with status 'done'
+#7 2.574   Created wheel for epguides-api: filename=epguides_api-1.0.1-py3-none-any.whl size=5487 sha256=b2019223d1fb7150150caed73a8ddf56dbe500b0b5b395f933cb32d0b49171a9
+#7 2.574   Stored in directory: /root/.cache/pip/wheels/2f/f9/db/f6a1902524673951af283c3a6523dc6f86d193e616163188ae
+#7 2.577 Successfully built epguides-api
+#7 2.607 Installing collected packages: epguides-api
+#7 2.623 Successfully installed epguides-api-1.0.1
+#7 2.623 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.719 
+#7 2.719 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.719 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.9s
+
+#8 [ 4/10] RUN ["pip","install","Flask"]
+#8 0.537 Collecting Flask
+#8 0.570   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#8 0.611 Collecting blinker>=1.9.0 (from Flask)
+#8 0.619   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#8 0.667 Collecting click>=8.1.3 (from Flask)
+#8 0.675   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#8 0.711 Collecting itsdangerous>=2.2.0 (from Flask)
+#8 0.719   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#8 0.761 Collecting jinja2>=3.1.2 (from Flask)
+#8 0.769   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#8 0.845 Collecting markupsafe>=2.1.1 (from Flask)
+#8 0.853   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#8 0.903 Collecting werkzeug>=3.1.0 (from Flask)
+#8 0.911   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#8 0.937 Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+#8 0.963    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 4.0 MB/s eta 0:00:00
+#8 0.972 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#8 0.990 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#8 1.007    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 6.3 MB/s eta 0:00:00
+#8 1.016 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#8 1.032 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#8 1.045    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 11.7 MB/s eta 0:00:00
+#8 1.053 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#8 1.070 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#8 1.090    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 11.9 MB/s eta 0:00:00
+#8 1.135 Installing collected packages: markupsafe, itsdangerous, click, blinker, werkzeug, jinja2, Flask
+#8 1.464 Successfully installed Flask-3.1.2 blinker-1.9.0 click-8.3.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.3 werkzeug-3.1.3
+#8 1.464 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.469 
+#8 1.469 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.469 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.6s
+
+#9 [ 5/10] RUN ["pip","install","blockstack"]
+#9 0.531 Collecting blockstack
+#9 0.573   Downloading blockstack-22.0.0.0.tar.gz (9.4 MB)
+#9 0.987      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.4/9.4 MB 22.9 MB/s eta 0:00:00
+#9 1.153   Preparing metadata (setup.py): started
+#9 1.271   Preparing metadata (setup.py): finished with status 'done'
+#9 1.309 Collecting virtualchain>=20.0.1.0 (from blockstack)
+#9 1.320   Downloading virtualchain-20.0.1.0.tar.gz (72 kB)
+#9 1.334      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.7/72.7 kB 5.4 MB/s eta 0:00:00
+#9 1.342   Preparing metadata (setup.py): started
+#9 1.455   Preparing metadata (setup.py): finished with status 'done'
+#9 1.487 Collecting keychain>=0.14.2.0 (from blockstack)
+#9 1.497   Downloading keychain-0.14.2.0.tar.gz (3.0 kB)
+#9 1.515   Preparing metadata (setup.py): started
+#9 1.628   Preparing metadata (setup.py): finished with status 'done'
+#9 1.663 Collecting protocoin>=0.2 (from blockstack)
+#9 1.672   Downloading protocoin-0.2.tar.gz (11 kB)
+#9 1.693   Preparing metadata (setup.py): started
+#9 1.810   Preparing metadata (setup.py): finished with status 'done'
+#9 1.846 Collecting blockstack-zones>=0.19.0 (from blockstack)
+#9 1.855   Downloading blockstack-zones-0.19.0.0.tar.gz (6.3 kB)
+#9 1.878   Preparing metadata (setup.py): started
+#9 1.995   Preparing metadata (setup.py): finished with status 'done'
+#9 2.026 Collecting defusedxml>=0.4.1 (from blockstack)
+#9 2.035   Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+#9 2.072 Collecting pystun>=0.1.0 (from blockstack)
+#9 2.082   Downloading pystun-0.1.0.tar.gz (6.3 kB)
+#9 2.095   Preparing metadata (setup.py): started
+#9 2.216   Preparing metadata (setup.py): finished with status 'done'
+#9 2.247 Collecting keylib>=0.1.1 (from blockstack)
+#9 2.256   Downloading keylib-0.1.1.tar.gz (7.2 kB)
+#9 2.269   Preparing metadata (setup.py): started
+#9 2.385   Preparing metadata (setup.py): finished with status 'done'
+#9 2.486 Collecting simplejson>=3.8.2 (from blockstack)
+#9 2.496   Downloading simplejson-3.20.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.2 kB)
+#9 2.550 Collecting jsonschema<=2.99,>=2.5.1 (from blockstack)
+#9 2.560   Downloading jsonschema-2.6.0-py2.py3-none-any.whl.metadata (4.6 kB)
+#9 2.604 Collecting jsontokens>=0.0.5 (from blockstack)
+#9 2.614   Downloading jsontokens-0.0.5.tar.gz (6.3 kB)
+#9 2.627   Preparing metadata (setup.py): started
+#9 2.741   Preparing metadata (setup.py): finished with status 'done'
+#9 2.998 Collecting cryptography>=2.6 (from blockstack)
+#9 3.007   Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+#9 3.073 Collecting pyparsing>=2.2.0 (from blockstack)
+#9 3.081   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#9 3.136 Collecting requests>=2.20 (from blockstack)
+#9 3.145   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#9 3.192 Collecting cachetools==2.0.0 (from blockstack)
+#9 3.202   Downloading cachetools-2.0.0-py2.py3-none-any.whl.metadata (3.9 kB)
+#9 3.238 Collecting base58<2.0.0 (from blockstack)
+#9 3.247   Downloading base58-1.0.3-py3-none-any.whl.metadata (565 bytes)
+#9 3.401 Collecting cffi>=2.0.0 (from cryptography>=2.6->blockstack)
+#9 3.409   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+#9 3.451 Collecting bitmerchant>=0.1.8 (from keychain>=0.14.2.0->blockstack)
+#9 3.461   Downloading bitmerchant-0.1.8-py2.py3-none-any.whl.metadata (17 kB)
+#9 3.505 Collecting ecdsa>=0.13 (from keylib>=0.1.1->blockstack)
+#9 3.515   Downloading ecdsa-0.19.1-py2.py3-none-any.whl.metadata (29 kB)
+#9 3.555 Collecting utilitybelt>=0.2.6 (from keylib>=0.1.1->blockstack)
+#9 3.564   Downloading utilitybelt-0.2.6.tar.gz (3.9 kB)
+#9 3.575   Preparing metadata (setup.py): started
+#9 3.690   Preparing metadata (setup.py): finished with status 'done'
+#9 3.804 Collecting charset_normalizer<4,>=2 (from requests>=2.20->blockstack)
+#9 3.813   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#9 3.855 Collecting idna<4,>=2.5 (from requests>=2.20->blockstack)
+#9 3.863   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#9 3.925 Collecting urllib3<3,>=1.21.1 (from requests>=2.20->blockstack)
+#9 3.933   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#9 3.980 Collecting certifi>=2017.4.17 (from requests>=2.20->blockstack)
+#9 3.988   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#9 4.055 Collecting six>=1.10.0 (from virtualchain>=20.0.1.0->blockstack)
+#9 4.064   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#9 4.115 Collecting pycparser (from cffi>=2.0.0->cryptography>=2.6->blockstack)
+#9 4.123   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+#9 4.172 Downloading cachetools-2.0.0-py2.py3-none-any.whl (11 kB)
+#9 4.192 Downloading base58-1.0.3-py3-none-any.whl (3.1 kB)
+#9 4.210 Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+#9 4.377    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 27.1 MB/s eta 0:00:00
+#9 4.387 Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+#9 4.406 Downloading jsonschema-2.6.0-py2.py3-none-any.whl (39 kB)
+#9 4.425 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#9 4.439    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 8.8 MB/s eta 0:00:00
+#9 4.447 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#9 4.465    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.4 MB/s eta 0:00:00
+#9 4.475 Downloading simplejson-3.20.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (144 kB)
+#9 4.504    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.9/144.9 kB 5.0 MB/s eta 0:00:00
+#9 4.526 Downloading bitmerchant-0.1.8-py2.py3-none-any.whl (28 kB)
+#9 4.546 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#9 4.561    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 11.3 MB/s eta 0:00:00
+#9 4.572 Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+#9 4.588    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 14.8 MB/s eta 0:00:00
+#9 4.596 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#9 4.611    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.0 MB/s eta 0:00:00
+#9 4.621 Downloading ecdsa-0.19.1-py2.py3-none-any.whl (150 kB)
+#9 4.635    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 150.6/150.6 kB 11.9 MB/s eta 0:00:00
+#9 4.642 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#9 4.654    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 6.1 MB/s eta 0:00:00
+#9 4.662 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#9 4.679 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#9 4.694    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.6 MB/s eta 0:00:00
+#9 4.702 Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+#9 4.715    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 9.4 MB/s eta 0:00:00
+#9 4.740 Building wheels for collected packages: blockstack, blockstack-zones, jsontokens, keychain, keylib, protocoin, pystun, virtualchain, utilitybelt
+#9 4.746   Building wheel for blockstack (setup.py): started
+#9 5.547   Building wheel for blockstack (setup.py): finished with status 'done'
+#9 5.566   Created wheel for blockstack: filename=blockstack-22.0.0.0-py3-none-any.whl size=9523156 sha256=a7f6adef63f9b1537c776439afb55e150a3136fbd8748e6c8694c94c84fd2a2f
+#9 5.567   Stored in directory: /root/.cache/pip/wheels/b0/7b/d3/bf322c507e3c1847d7474d2f282c1c7ad73de64f4992558480
+#9 5.569   Building wheel for blockstack-zones (setup.py): started
+#9 5.708   Building wheel for blockstack-zones (setup.py): finished with status 'done'
+#9 5.709   Created wheel for blockstack-zones: filename=blockstack_zones-0.19.0.0-py3-none-any.whl size=7957 sha256=ae8420030e04f48a6a35a434556bbbf3ce06a2d5bc392df5311fa383d1664f10
+#9 5.709   Stored in directory: /root/.cache/pip/wheels/86/80/c4/c0f416d015a5d898f38ce634f8fd5c4cadf25938eed46e5a76
+#9 5.711   Building wheel for jsontokens (setup.py): started
+#9 5.854   Building wheel for jsontokens (setup.py): finished with status 'done'
+#9 5.855   Created wheel for jsontokens: filename=jsontokens-0.0.5-py3-none-any.whl size=7950 sha256=0447292f129130e1bbdadef86d4b6ef80e7e51614e73f05fe57ecd97654f0483
+#9 5.855   Stored in directory: /root/.cache/pip/wheels/39/4d/67/afa54c4d53911f3f8c127fcc6cae7f4b5129404cb86bacf8d1
+#9 5.857   Building wheel for keychain (setup.py): started
+#9 5.995   Building wheel for keychain (setup.py): finished with status 'done'
+#9 5.996   Created wheel for keychain: filename=keychain-0.14.2.0-py3-none-any.whl size=4534 sha256=4196a6c34bf4c66b2ed8af44d12f2301125deefd5eff5079a6e85d3678bb7ffe
+#9 5.996   Stored in directory: /root/.cache/pip/wheels/cf/81/f2/46a7656cc6a9de3720af53af43aac139c4d0466d89acf931e2
+#9 5.998   Building wheel for keylib (setup.py): started
+#9 6.147   Building wheel for keylib (setup.py): finished with status 'done'
+#9 6.147   Created wheel for keylib: filename=keylib-0.1.1-py3-none-any.whl size=10724 sha256=2dd954821a891a56bb252be1e009a0554f3eb5348ac7c73d09b3e683d2caff8c
+#9 6.147   Stored in directory: /root/.cache/pip/wheels/85/26/e8/792029a9c41ce22fd11ca5d760ef956c14b98228ff5b450278
+#9 6.149   Building wheel for protocoin (setup.py): started
+#9 6.292   Building wheel for protocoin (setup.py): finished with status 'done'
+#9 6.293   Created wheel for protocoin: filename=protocoin-0.2-py3-none-any.whl size=13461 sha256=99b3b91011cb8ded6ac16675a3538047d120af08dab7f79ab3c35cdb9f137c72
+#9 6.293   Stored in directory: /root/.cache/pip/wheels/7b/43/cc/4abb86f7f2af391c956e87757dbae20dcf1675dd2bbb5c3b78
+#9 6.295   Building wheel for pystun (setup.py): started
+#9 6.437   Building wheel for pystun (setup.py): finished with status 'done'
+#9 6.437   Created wheel for pystun: filename=pystun-0.1.0-py3-none-any.whl size=6510 sha256=cedb1f44c4ad0c1d186653c2420031d2fb8a138086357cb288eb23756934b9f0
+#9 6.437   Stored in directory: /root/.cache/pip/wheels/33/e2/2c/b8a8d87e6780d883d6381c68a756781517f70a49389a626eb2
+#9 6.439   Building wheel for virtualchain (setup.py): started
+#9 6.595   Building wheel for virtualchain (setup.py): finished with status 'done'
+#9 6.596   Created wheel for virtualchain: filename=virtualchain-20.0.1.0-py3-none-any.whl size=92348 sha256=9571398f282c5bc5df38e8dfa6190344b1425a871ad96f61a09566bb26a9c704
+#9 6.596   Stored in directory: /root/.cache/pip/wheels/04/11/19/0ce3ecee9dcfadf890305b724d25ce115cab2b3cc40fe66113
+#9 6.599   Building wheel for utilitybelt (setup.py): started
+#9 6.737   Building wheel for utilitybelt (setup.py): finished with status 'done'
+#9 6.738   Created wheel for utilitybelt: filename=utilitybelt-0.2.6-py3-none-any.whl size=5604 sha256=1ca1ab3c3a282f6146911d0c95da260902a1634db060764f79347a2254a10c4a
+#9 6.738   Stored in directory: /root/.cache/pip/wheels/79/32/48/232a33c9c2ad82f72542e9033eda8ef7f39dbc90f19dca544d
+#9 6.740 Successfully built blockstack blockstack-zones jsontokens keychain keylib protocoin pystun virtualchain utilitybelt
+#9 6.853 Installing collected packages: utilitybelt, pystun, jsonschema, cachetools, blockstack-zones, base58, urllib3, six, simplejson, pyparsing, pycparser, idna, defusedxml, charset_normalizer, certifi, requests, ecdsa, cffi, protocoin, keylib, cryptography, bitmerchant, virtualchain, keychain, jsontokens, blockstack
+#9 8.925 Successfully installed base58-1.0.3 bitmerchant-0.1.8 blockstack-22.0.0.0 blockstack-zones-0.19.0.0 cachetools-2.0.0 certifi-2025.10.5 cffi-2.0.0 charset_normalizer-3.4.4 cryptography-46.0.3 defusedxml-0.7.1 ecdsa-0.19.1 idna-3.11 jsonschema-2.6.0 jsontokens-0.0.5 keychain-0.14.2.0 keylib-0.1.1 protocoin-0.2 pycparser-2.23 pyparsing-3.2.5 pystun-0.1.0 requests-2.32.5 simplejson-3.20.2 six-1.17.0 urllib3-2.5.0 utilitybelt-0.2.6 virtualchain-20.0.1.0
+#9 8.925 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 8.931 
+#9 8.931 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 8.931 [notice] To update, run: pip install --upgrade pip
+#9 DONE 9.6s
+
+#10 [ 6/10] RUN ["pip","install","requests"]
+#10 0.473 Requirement already satisfied: requests in /usr/local/lib/python3.11/site-packages (2.32.5)
+#10 0.479 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests) (3.4.4)
+#10 0.480 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests) (3.11)
+#10 0.481 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests) (2.5.0)
+#10 0.482 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests) (2025.10.5)
+#10 0.578 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.584 
+#10 0.584 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.584 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.7s
+
+#11 [ 7/10] RUN ["pip","install","psycopg2"]
+#11 0.583 Collecting psycopg2
+#11 0.617   Downloading psycopg2-2.9.11.tar.gz (379 kB)
+#11 0.659      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 379.6/379.6 kB 9.3 MB/s eta 0:00:00
+#11 0.695   Preparing metadata (setup.py): started
+#11 0.851   Preparing metadata (setup.py): finished with status 'done'
+#11 0.854 Building wheels for collected packages: psycopg2
+#11 0.860   Building wheel for psycopg2 (setup.py): started
+#11 6.316   Building wheel for psycopg2 (setup.py): finished with status 'done'
+#11 6.318   Created wheel for psycopg2: filename=psycopg2-2.9.11-cp311-cp311-linux_x86_64.whl size=503333 sha256=7a226bbe5d25d9e76845c964f7c342e3e4fea8893e0aac57a91fe724a2d7299f
+#11 6.319   Stored in directory: /root/.cache/pip/wheels/15/a7/0e/37c6d130333cbaac2e6bb15e4ff41ef3a195af78a70907ca0d
+#11 6.321 Successfully built psycopg2
+#11 6.408 Installing collected packages: psycopg2
+#11 6.442 Successfully installed psycopg2-2.9.11
+#11 6.442 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 6.447 
+#11 6.447 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 6.447 [notice] To update, run: pip install --upgrade pip
+#11 DONE 6.5s
+
+#12 [ 8/10] RUN ["pip","install","Django"]
+#12 0.637 Collecting Django
+#12 0.670   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#12 0.721 Collecting asgiref>=3.8.1 (from Django)
+#12 0.729   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#12 0.780 Collecting sqlparse>=0.3.1 (from Django)
+#12 0.788   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#12 0.818 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#12 1.184    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 22.8 MB/s eta 0:00:00
+#12 1.192 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#12 1.211 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#12 1.227    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 2.5 MB/s eta 0:00:00
+#12 1.372 Installing collected packages: sqlparse, asgiref, Django
+#12 2.774 Successfully installed Django-5.2.7 asgiref-3.10.0 sqlparse-0.5.3
+#12 2.774 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 2.780 
+#12 2.780 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 2.780 [notice] To update, run: pip install --upgrade pip
+#12 DONE 3.3s
+
+#13 [ 9/10] RUN ["pip","install","python-social-auth"]
+#13 0.673 Collecting python-social-auth
+#13 0.800   Downloading python_social_auth-0.3.6-py3-none-any.whl.metadata (2.5 kB)
+#13 0.978 Collecting social-auth-core (from python-social-auth)
+#13 0.988   Downloading social_auth_core-4.8.1-py3-none-any.whl.metadata (4.3 kB)
+#13 1.023 Requirement already satisfied: defusedxml>=0.7.1 in /usr/local/lib/python3.11/site-packages (from social-auth-core->python-social-auth) (0.7.1)
+#13 1.055 Collecting oauthlib>=3.3.1 (from social-auth-core->python-social-auth)
+#13 1.065   Downloading oauthlib-3.3.1-py3-none-any.whl.metadata (7.9 kB)
+#13 1.112 Collecting PyJWT>=2.10.1 (from PyJWT[crypto]>=2.10.1->social-auth-core->python-social-auth)
+#13 1.120   Downloading PyJWT-2.10.1-py3-none-any.whl.metadata (4.0 kB)
+#13 1.281 Collecting python3-openid>=3.2.0 (from social-auth-core->python-social-auth)
+#13 1.491   Downloading python3_openid-3.2.0-py3-none-any.whl.metadata (1.6 kB)
+#13 1.585 Collecting requests-oauthlib>=2.0.0 (from social-auth-core->python-social-auth)
+#13 1.640   Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl.metadata (11 kB)
+#13 1.655 Requirement already satisfied: requests>=2.32.5 in /usr/local/lib/python3.11/site-packages (from social-auth-core->python-social-auth) (2.32.5)
+#13 1.679 Requirement already satisfied: cryptography>=3.4.0 in /usr/local/lib/python3.11/site-packages (from PyJWT[crypto]>=2.10.1->social-auth-core->python-social-auth) (46.0.3)
+#13 1.690 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests>=2.32.5->social-auth-core->python-social-auth) (3.4.4)
+#13 1.691 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests>=2.32.5->social-auth-core->python-social-auth) (3.11)
+#13 1.692 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests>=2.32.5->social-auth-core->python-social-auth) (2.5.0)
+#13 1.693 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests>=2.32.5->social-auth-core->python-social-auth) (2025.10.5)
+#13 1.722 Requirement already satisfied: cffi>=2.0.0 in /usr/local/lib/python3.11/site-packages (from cryptography>=3.4.0->PyJWT[crypto]>=2.10.1->social-auth-core->python-social-auth) (2.0.0)
+#13 1.735 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi>=2.0.0->cryptography>=3.4.0->PyJWT[crypto]>=2.10.1->social-auth-core->python-social-auth) (2.23)
+#13 1.756 Downloading python_social_auth-0.3.6-py3-none-any.whl (150 kB)
+#13 1.834    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 150.6/150.6 kB 1.9 MB/s eta 0:00:00
+#13 1.844 Downloading social_auth_core-4.8.1-py3-none-any.whl (435 kB)
+#13 1.905    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 435.3/435.3 kB 7.2 MB/s eta 0:00:00
+#13 2.007 Downloading oauthlib-3.3.1-py3-none-any.whl (160 kB)
+#13 2.075    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 160.1/160.1 kB 2.5 MB/s eta 0:00:00
+#13 2.083 Downloading PyJWT-2.10.1-py3-none-any.whl (22 kB)
+#13 2.204 Downloading python3_openid-3.2.0-py3-none-any.whl (133 kB)
+#13 2.247    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.7/133.7 kB 3.0 MB/s eta 0:00:00
+#13 2.264 Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl (24 kB)
+#13 2.402 Installing collected packages: python3-openid, PyJWT, oauthlib, requests-oauthlib, social-auth-core, python-social-auth
+#13 2.936 Successfully installed PyJWT-2.10.1 oauthlib-3.3.1 python-social-auth-0.3.6 python3-openid-3.2.0 requests-oauthlib-2.0.0 social-auth-core-4.8.1
+#13 2.936 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 2.942 
+#13 2.942 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 2.942 [notice] To update, run: pip install --upgrade pip
+#13 DONE 3.1s
+
+#14 [10/10] RUN ["pip","install","djangorestframework"]
+#14 0.581 Collecting djangorestframework
+#14 0.615   Downloading djangorestframework-3.16.1-py3-none-any.whl.metadata (11 kB)
+#14 0.633 Requirement already satisfied: django>=4.2 in /usr/local/lib/python3.11/site-packages (from djangorestframework) (5.2.7)
+#14 0.637 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from django>=4.2->djangorestframework) (3.10.0)
+#14 0.638 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from django>=4.2->djangorestframework) (0.5.3)
+#14 0.651 Downloading djangorestframework-3.16.1-py3-none-any.whl (1.1 MB)
+#14 0.715    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 17.5 MB/s eta 0:00:00
+#14 0.847 Installing collected packages: djangorestframework
+#14 0.996 Successfully installed djangorestframework-3.16.1
+#14 0.997 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#14 1.002 
+#14 1.002 [notice] A new release of pip is available: 24.0 -> 25.3
+#14 1.002 [notice] To update, run: pip install --upgrade pip
+#14 DONE 1.1s
+
+#15 exporting to image
+#15 exporting layers
+#15 exporting layers 0.7s done
+#15 writing image sha256:9f14bb31c6a7ead8f099d8ab5bcc379fce8f0e7e6c0e782086a1437605283b48 done
+#15 naming to docker.io/library/test-image-4aed548e606f11971f5a done
+#15 DONE 0.7s
+
+View build details: docker-desktop://dashboard/build/default/default/95sdjgxhfauakw0mkb4ke2tsx
+[2025-10-29 15:07:28] SUCCESS: Build completed for 4aed548e606f11971f5a

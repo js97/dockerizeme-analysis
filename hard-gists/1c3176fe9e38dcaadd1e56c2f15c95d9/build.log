@@ -1,0 +1,93 @@
+=== Docker Build Log for 1c3176fe9e38dcaadd1e56c2f15c95d9 ===
+Started at: Mi 29. Okt 12:42:53 CET 2025
+
+[2025-10-29 12:42:53] START: Building image for 1c3176fe9e38dcaadd1e56c2f15c95d9
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 188B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.30kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/1c3176fe9e38dcaadd1e56c2f15c95d9/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","maya"]
+#7 2.008 Collecting maya
+#7 2.051   Downloading maya-0.6.1-py2.py3-none-any.whl.metadata (7.1 kB)
+#7 2.100 Collecting humanize (from maya)
+#7 2.108   Downloading humanize-4.14.0-py3-none-any.whl.metadata (7.8 kB)
+#7 2.185 Collecting pytz (from maya)
+#7 2.193   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#7 2.239 Collecting dateparser>=0.7.0 (from maya)
+#7 2.249   Downloading dateparser-1.2.2-py3-none-any.whl.metadata (29 kB)
+#7 2.292 Collecting tzlocal (from maya)
+#7 2.301   Downloading tzlocal-5.3.1-py3-none-any.whl.metadata (7.6 kB)
+#7 2.371 Collecting pendulum>=2.0.2 (from maya)
+#7 2.381   Downloading pendulum-3.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#7 2.517 Collecting snaptime (from maya)
+#7 2.528   Downloading snaptime-0.2.4.tar.gz (2.9 kB)
+#7 2.539   Preparing metadata (setup.py): started
+#7 2.939   Preparing metadata (setup.py): finished with status 'done'
+#7 2.976 Collecting python-dateutil>=2.7.0 (from dateparser>=0.7.0->maya)
+#7 2.984   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#7 3.364 Collecting regex>=2024.9.11 (from dateparser>=0.7.0->maya)
+#7 3.374   Downloading regex-2025.10.23-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+#7 3.392      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.5/40.5 kB 2.1 MB/s eta 0:00:00
+#7 3.430 Collecting tzdata>=2020.1 (from pendulum>=2.0.2->maya)
+#7 3.440   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#7 3.486 Collecting six>=1.5 (from python-dateutil>=2.7.0->dateparser>=0.7.0->maya)
+#7 3.494   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 3.518 Downloading maya-0.6.1-py2.py3-none-any.whl (12 kB)
+#7 3.537 Downloading dateparser-1.2.2-py3-none-any.whl (315 kB)
+#7 3.563    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 315.5/315.5 kB 12.8 MB/s eta 0:00:00
+#7 3.572 Downloading pendulum-3.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (353 kB)
+#7 3.593    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 353.7/353.7 kB 18.5 MB/s eta 0:00:00
+#7 3.602 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#7 3.627    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 20.7 MB/s eta 0:00:00
+#7 3.635 Downloading tzlocal-5.3.1-py3-none-any.whl (18 kB)
+#7 3.653 Downloading humanize-4.14.0-py3-none-any.whl (132 kB)
+#7 3.672    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.1/132.1 kB 6.8 MB/s eta 0:00:00
+#7 3.681 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#7 3.701    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 12.0 MB/s eta 0:00:00
+#7 3.711 Downloading regex-2025.10.23-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (800 kB)
+#7 3.747    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 800.3/800.3 kB 23.3 MB/s eta 0:00:00
+#7 3.754 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#7 3.779    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 15.2 MB/s eta 0:00:00
+#7 3.823 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.850 Building wheels for collected packages: snaptime
+#7 3.850   Building wheel for snaptime (setup.py): started
+#7 4.020   Building wheel for snaptime (setup.py): finished with status 'done'
+#7 4.021   Created wheel for snaptime: filename=snaptime-0.2.4-py3-none-any.whl size=3605 sha256=c0e5683dc7f179c8e28dfd1468ce69381fd34572413d8c03935a11edddea42b7
+#7 4.021   Stored in directory: /root/.cache/pip/wheels/af/cd/02/d3bb11d5c94237cbb0c7a2049d4ae314fdcbca899783d79d91
+#7 4.022 Successfully built snaptime
+#7 4.071 Installing collected packages: pytz, tzlocal, tzdata, six, regex, humanize, python-dateutil, snaptime, pendulum, dateparser, maya
+#7 4.708 Successfully installed dateparser-1.2.2 humanize-4.14.0 maya-0.6.1 pendulum-3.1.0 python-dateutil-2.9.0.post0 pytz-2025.2 regex-2025.10.23 six-1.17.0 snaptime-0.2.4 tzdata-2025.2 tzlocal-5.3.1
+#7 4.708 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.802 
+#7 4.802 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.802 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.1s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.3s done
+#8 writing image sha256:91f2227239ea870c099298dbd3f3f5855e81da5a566074056673bf3a25fd45f7 done
+#8 naming to docker.io/library/test-image-1c3176fe9e38dcaadd1e56c2f15c95d9 done
+#8 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/50uc8sx01y43xcw8mumjmyr8b
+[2025-10-29 12:42:59] SUCCESS: Build completed for 1c3176fe9e38dcaadd1e56c2f15c95d9

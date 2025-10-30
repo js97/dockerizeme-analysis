@@ -1,0 +1,18 @@
+=== Docker Run Log for 2cb9c79df7a58db9e5ec ===
+Started at: Mi 29. Okt 13:25:59 CET 2025
+
+[2025-10-29 13:25:59] START: Running container for 2cb9c79df7a58db9e5ec
+[2025-10-29 13:26:00] SUCCESS: Container a9b3c677cac7d6212914769c3bf823ce4f8af32ea3f08c794fa972b8816f3e07 started for 2cb9c79df7a58db9e5ec
+=== Container logs for 2cb9c79df7a58db9e5ec ===
+/snippet.py:12: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  company_names = [col[-1] for col in cells if col[0] is 1]
+/snippet.py:13: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  founders = [col[-1] for col in cells if col[0] is 2]
+/snippet.py:14: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  email_ids = [col[-1] for col in cells if col[0] is 3]
+Traceback (most recent call last):
+  File "/snippet.py", line 1, in <module>
+    import pdftableextract as pdf
+ModuleNotFoundError: No module named 'pdftableextract'
+=== End of logs for 2cb9c79df7a58db9e5ec ===
+[2025-10-29 13:26:02] INFO: Container a9b3c677cac7d6212914769c3bf823ce4f8af32ea3f08c794fa972b8816f3e07 has stopped

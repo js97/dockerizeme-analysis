@@ -1,0 +1,20 @@
+=== Docker Run Log for 9673839 ===
+Started at: Mi 29. Okt 18:29:29 CET 2025
+
+[2025-10-29 18:29:43] START: Running container for 9673839
+[2025-10-29 18:29:43] SUCCESS: Container 005a6ebf7ced4a4d4f5e71ff8135b80aad5b2181ed2495fb142612baf493cf7f started for 9673839
+=== Container logs for 9673839 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 190, in <module>
+    main()
+  File "/snippet.py", line 174, in main
+    pop, log = algorithms.eaSimple(pop, toolbox, 0.5, 0.1, 20, stats=mstats,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/deap/algorithms.py", line 151, in eaSimple
+    for ind, fit in zip(invalid_ind, fitnesses):
+  File "/snippet.py", line 139, in evalInvSqrt
+    nb_args = len(inspect.getargspec(func)[0])
+                  ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'inspect' has no attribute 'getargspec'. Did you mean: 'getargs'?
+=== End of logs for 9673839 ===
+[2025-10-29 18:29:45] INFO: Container 005a6ebf7ced4a4d4f5e71ff8135b80aad5b2181ed2495fb142612baf493cf7f has stopped

@@ -1,0 +1,27 @@
+=== Docker Run Log for 0cfe89a89b892e47e8418e281dfe318d ===
+Started at: Mi 29. Okt 11:41:15 CET 2025
+
+[2025-10-29 11:42:02] START: Running container for 0cfe89a89b892e47e8418e281dfe318d
+[2025-10-29 11:42:02] SUCCESS: Container 235514c8fae357d79b47c25aaec85210a8d5814caf9255cae78ad298bc758508 started for 0cfe89a89b892e47e8418e281dfe318d
+=== Container logs for 0cfe89a89b892e47e8418e281dfe318d ===
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/postgresql/psycopg_any.py", line 5, in <module>
+    from psycopg import ClientCursor, IsolationLevel, adapt, adapters, errors, sql
+ModuleNotFoundError: No module named 'psycopg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snippet.py", line 3, in <module>
+    from django.contrib.postgres.forms.jsonb import InvalidJSONInput, JSONField
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/postgres/forms/__init__.py", line 3, in <module>
+    from .ranges import *  # NOQA
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/postgres/forms/ranges.py", line 3, in <module>
+    from django.db.backends.postgresql.psycopg_any import (
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/postgresql/psycopg_any.py", line 77, in <module>
+    from psycopg2 import errors, extensions, sql  # NOQA
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'psycopg2'
+=== End of logs for 0cfe89a89b892e47e8418e281dfe318d ===
+[2025-10-29 11:42:04] INFO: Container 235514c8fae357d79b47c25aaec85210a8d5814caf9255cae78ad298bc758508 has stopped

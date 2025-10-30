@@ -1,0 +1,88 @@
+=== Docker Build Log for 7689218 ===
+Started at: Mi 29. Okt 17:15:49 CET 2025
+
+[2025-10-29 17:15:49] START: Building image for 7689218
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.58kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 11.65kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/41] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/41] COPY hard-gists/7689218/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/41] RUN ["apt-get","update"]
+#7 0.258 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.258 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.268 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.277 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.604 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.604 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.298 Fetched 9833 kB in 1s (9201 kB/s)
+#7 1.298 Reading package lists...
+#7 DONE 1.9s
+
+#8 [ 4/41] RUN ["pip","install","http"]
+#8 2.147 Collecting http
+#8 2.190   Downloading http-0.02.tar.gz (32 kB)
+#8 2.210   Preparing metadata (setup.py): started
+#8 2.419   Preparing metadata (setup.py): finished with status 'error'
+#8 2.422   error: subprocess-exited-with-error
+#8 2.422   
+#8 2.422   × python setup.py egg_info did not run successfully.
+#8 2.422   │ exit code: 1
+#8 2.422   ╰─> [1 lines of output]
+#8 2.422       ERROR: Can not execute `setup.py` since setuptools is not available in the build environment.
+#8 2.422       [end of output]
+#8 2.422   
+#8 2.422   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 2.423 error: metadata-generation-failed
+#8 2.423 
+#8 2.423 × Encountered error while generating package metadata.
+#8 2.423 ╰─> See above for output.
+#8 2.423 
+#8 2.423 note: This is an issue with the package mentioned above, not pip.
+#8 2.423 hint: See above for details.
+#8 2.517 
+#8 2.517 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.517 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install http" did not complete successfully: exit code: 1
+------
+ > [ 4/41] RUN ["pip","install","http"]:
+2.423 error: metadata-generation-failed
+2.423 
+2.423 × Encountered error while generating package metadata.
+2.423 ╰─> See above for output.
+2.423 
+2.423 note: This is an issue with the package mentioned above, not pip.
+2.423 hint: See above for details.
+2.517 
+2.517 [notice] A new release of pip is available: 24.0 -> 25.3
+2.517 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/7689218/snippet.py /snippet.py
+   3 |     RUN ["apt-get","update"]
+   4 | >>> RUN ["pip","install","http"]
+   5 |     RUN ["pip","install","future"]
+   6 |     RUN ["pip","install","backports.functools-lru-cache"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install http" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/a8hw77456lexkjdg46o7hj7y2
+[2025-10-29 17:15:54] ERROR: Build failed for 7689218

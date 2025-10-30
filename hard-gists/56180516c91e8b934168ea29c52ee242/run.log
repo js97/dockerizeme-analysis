@@ -1,0 +1,16 @@
+=== Docker Run Log for 56180516c91e8b934168ea29c52ee242 ===
+Started at: Mi 29. Okt 15:47:19 CET 2025
+
+[2025-10-29 15:47:23] START: Running container for 56180516c91e8b934168ea29c52ee242
+[2025-10-29 15:47:23] SUCCESS: Container 4712b79c7b152c70908ad22228aa1fa9466933bdd43615bfd9beb472a1591731 started for 56180516c91e8b934168ea29c52ee242
+=== Container logs for 56180516c91e8b934168ea29c52ee242 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 15, in <module>
+    top = Image.open(path + "top_" + number + ".bmp")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/PIL/Image.py", line 3493, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'E:/luma/screenshots/top_0001.bmp'
+=== End of logs for 56180516c91e8b934168ea29c52ee242 ===
+[2025-10-29 15:47:25] INFO: Container 4712b79c7b152c70908ad22228aa1fa9466933bdd43615bfd9beb472a1591731 has stopped

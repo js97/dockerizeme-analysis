@@ -1,0 +1,194 @@
+=== Docker Build Log for fda9fd2a7a1e0bc458650ec4c3a0bf93 ===
+Started at: Mi 29. Okt 21:43:17 CET 2025
+
+[2025-10-29 21:43:17] START: Building image for fda9fd2a7a1e0bc458650ec4c3a0bf93
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 453B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 15.17kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/11] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/11] COPY hard-gists/fda9fd2a7a1e0bc458650ec4c3a0bf93/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/11] RUN ["pip","install","boto-mws"]
+#7 2.141 Collecting boto-mws
+#7 2.192   Downloading boto_mws-2.46.2-py2.py3-none-any.whl.metadata (7.3 kB)
+#7 2.356 Downloading boto_mws-2.46.2-py2.py3-none-any.whl (1.4 MB)
+#7 2.467    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 12.4 MB/s eta 0:00:00
+#7 2.506 Installing collected packages: boto-mws
+#7 2.919 Successfully installed boto-mws-2.46.2
+#7 2.919 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.021 
+#7 3.021 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.021 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.3s
+
+#8 [ 4/11] RUN ["pip","install","boto-patch"]
+#8 0.673 Collecting boto-patch
+#8 0.813   Downloading boto-patch-2.38.0.tar.gz (1.4 MB)
+#8 0.967      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 9.4 MB/s eta 0:00:00
+#8 1.104   Preparing metadata (setup.py): started
+#8 1.638   Preparing metadata (setup.py): finished with status 'done'
+#8 1.640 Building wheels for collected packages: boto-patch
+#8 1.640   Building wheel for boto-patch (setup.py): started
+#8 2.117   Building wheel for boto-patch (setup.py): finished with status 'done'
+#8 2.121   Created wheel for boto-patch: filename=boto_patch-2.38.0-py2.py3-none-any.whl size=1340252 sha256=e2d096b43ad2dbca77151966411d686b557c9b21ff5f53ffbc77bd9505808636
+#8 2.121   Stored in directory: /root/.cache/pip/wheels/dc/8d/91/973468dc17204b5976e1d226556d1ac8be31894bdbb8cb28cf
+#8 2.124 Successfully built boto-patch
+#8 2.155 Installing collected packages: boto-patch
+#8 3.148 Successfully installed boto-patch-2.38.0
+#8 3.148 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 3.154 
+#8 3.154 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.154 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.4s
+
+#9 [ 5/11] RUN ["pip","install","pycrypto"]
+#9 0.508 Collecting pycrypto
+#9 0.553   Downloading pycrypto-2.6.1.tar.gz (446 kB)
+#9 0.629      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 446.2/446.2 kB 6.5 MB/s eta 0:00:00
+#9 0.662   Preparing metadata (setup.py): started
+#9 0.776   Preparing metadata (setup.py): finished with status 'done'
+#9 0.778 Building wheels for collected packages: pycrypto
+#9 0.783   Building wheel for pycrypto (setup.py): started
+#9 2.155   Building wheel for pycrypto (setup.py): finished with status 'error'
+#9 2.161   error: subprocess-exited-with-error
+#9 2.161   
+#9 2.161   × python setup.py bdist_wheel did not run successfully.
+#9 2.161   │ exit code: 1
+#9 2.161   ╰─> [84 lines of output]
+#9 2.161       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+#9 2.161       !!
+#9 2.161       
+#9 2.161               ********************************************************************************
+#9 2.161               Please consider removing the following classifiers in favor of a SPDX license expression:
+#9 2.161       
+#9 2.161               License :: Public Domain
+#9 2.161       
+#9 2.161               See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+#9 2.161               ********************************************************************************
+#9 2.161       
+#9 2.161       !!
+#9 2.161         self._finalize_license_expression()
+#9 2.161       checking for gcc... gcc
+#9 2.161       checking whether the C compiler works... yes
+#9 2.161       checking for C compiler default output file name... a.out
+#9 2.161       checking for suffix of executables...
+#9 2.161       checking whether we are cross compiling... no
+#9 2.161       checking for suffix of object files... o
+#9 2.161       checking whether we are using the GNU C compiler... yes
+#9 2.161       checking whether gcc accepts -g... yes
+#9 2.161       checking for gcc option to accept ISO C89... none needed
+#9 2.161       checking for __gmpz_init in -lgmp... yes
+#9 2.161       checking for __gmpz_init in -lmpir... no
+#9 2.161       checking whether mpz_powm is declared... yes
+#9 2.161       checking whether mpz_powm_sec is declared... yes
+#9 2.161       checking how to run the C preprocessor... gcc -E
+#9 2.161       checking for grep that handles long lines and -e... /usr/bin/grep
+#9 2.161       checking for egrep... /usr/bin/grep -E
+#9 2.161       checking for ANSI C header files... yes
+#9 2.161       checking for sys/types.h... yes
+#9 2.161       checking for sys/stat.h... yes
+#9 2.161       checking for stdlib.h... yes
+#9 2.161       checking for string.h... yes
+#9 2.161       checking for memory.h... yes
+#9 2.161       checking for strings.h... yes
+#9 2.161       checking for inttypes.h... yes
+#9 2.161       checking for stdint.h... yes
+#9 2.161       checking for unistd.h... yes
+#9 2.161       checking for inttypes.h... (cached) yes
+#9 2.161       checking limits.h usability... yes
+#9 2.161       checking limits.h presence... yes
+#9 2.161       checking for limits.h... yes
+#9 2.161       checking stddef.h usability... yes
+#9 2.161       checking stddef.h presence... yes
+#9 2.161       checking for stddef.h... yes
+#9 2.161       checking for stdint.h... (cached) yes
+#9 2.161       checking for stdlib.h... (cached) yes
+#9 2.161       checking for string.h... (cached) yes
+#9 2.161       checking wchar.h usability... yes
+#9 2.161       checking wchar.h presence... yes
+#9 2.161       checking for wchar.h... yes
+#9 2.161       checking for inline... inline
+#9 2.161       checking for int16_t... yes
+#9 2.161       checking for int32_t... yes
+#9 2.161       checking for int64_t... yes
+#9 2.161       checking for int8_t... yes
+#9 2.161       checking for size_t... yes
+#9 2.161       checking for uint16_t... yes
+#9 2.161       checking for uint32_t... yes
+#9 2.161       checking for uint64_t... yes
+#9 2.161       checking for uint8_t... yes
+#9 2.161       checking for stdlib.h... (cached) yes
+#9 2.161       checking for GNU libc compatible malloc... yes
+#9 2.161       checking for memmove... yes
+#9 2.161       checking for memset... yes
+#9 2.161       configure: creating ./config.status
+#9 2.161       config.status: creating src/config.h
+#9 2.161       In file included from /usr/local/include/python3.11/Python.h:87,
+#9 2.161                        from src/_fastmath.c:31:
+#9 2.161       /usr/local/include/python3.11/cpython/pytime.h:208:60: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+#9 2.161         208 | PyAPI_FUNC(int) _PyTime_FromTimespec(_PyTime_t *tp, struct timespec *ts);
+#9 2.161             |                                                            ^~~~~~~~
+#9 2.161       /usr/local/include/python3.11/cpython/pytime.h:213:56: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+#9 2.161         213 | PyAPI_FUNC(int) _PyTime_AsTimespec(_PyTime_t t, struct timespec *ts);
+#9 2.161             |                                                        ^~~~~~~~
+#9 2.161       /usr/local/include/python3.11/cpython/pytime.h:217:63: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+#9 2.161         217 | PyAPI_FUNC(void) _PyTime_AsTimespec_clamp(_PyTime_t t, struct timespec *ts);
+#9 2.161             |                                                               ^~~~~~~~
+#9 2.161       src/_fastmath.c:33:10: fatal error: longintrepr.h: No such file or directory
+#9 2.161          33 | #include <longintrepr.h>                                /* for conversions */
+#9 2.161             |          ^~~~~~~~~~~~~~~
+#9 2.161       compilation terminated.
+#9 2.161       error: command '/usr/bin/gcc' failed with exit code 1
+#9 2.161       [end of output]
+#9 2.161   
+#9 2.161   note: This error originates from a subprocess, and is likely not a problem with pip.
+#9 2.161   ERROR: Failed building wheel for pycrypto
+#9 2.161   Running setup.py clean for pycrypto
+#9 2.288 Failed to build pycrypto
+#9 2.288 ERROR: Could not build wheels for pycrypto, which is required to install pyproject.toml-based projects
+#9 2.294 
+#9 2.294 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 2.294 [notice] To update, run: pip install --upgrade pip
+#9 ERROR: process "pip install pycrypto" did not complete successfully: exit code: 1
+------
+ > [ 5/11] RUN ["pip","install","pycrypto"]:
+2.161       [end of output]
+2.161   
+2.161   note: This error originates from a subprocess, and is likely not a problem with pip.
+2.161   ERROR: Failed building wheel for pycrypto
+2.161   Running setup.py clean for pycrypto
+2.288 Failed to build pycrypto
+2.288 ERROR: Could not build wheels for pycrypto, which is required to install pyproject.toml-based projects
+2.294 
+2.294 [notice] A new release of pip is available: 24.0 -> 25.3
+2.294 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:5
+--------------------
+   3 |     RUN ["pip","install","boto-mws"]
+   4 |     RUN ["pip","install","boto-patch"]
+   5 | >>> RUN ["pip","install","pycrypto"]
+   6 |     RUN ["pip","install","boto"]
+   7 |     RUN ["pip","install","boto3"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install pycrypto" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/nvxknz38vzqkvqlgfw643e7m6
+[2025-10-29 21:43:26] ERROR: Build failed for fda9fd2a7a1e0bc458650ec4c3a0bf93

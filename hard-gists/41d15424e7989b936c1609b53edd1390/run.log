@@ -1,0 +1,14 @@
+=== Docker Run Log for 41d15424e7989b936c1609b53edd1390 ===
+Started at: Mi 29. Okt 14:25:01 CET 2025
+
+[2025-10-29 14:26:22] START: Running container for 41d15424e7989b936c1609b53edd1390
+[2025-10-29 14:26:23] SUCCESS: Container 72c2d6d3d21e8209a5eaea176cd76e9bf41137c6e9d2f3bedb867d73b773e525 started for 41d15424e7989b936c1609b53edd1390
+=== Container logs for 41d15424e7989b936c1609b53edd1390 ===
+/snippet.py:12: DeprecationWarning: scipy.misc is deprecated and will be removed in 2.0.0
+  from scipy.misc import imsave
+Traceback (most recent call last):
+  File "/snippet.py", line 12, in <module>
+    from scipy.misc import imsave
+ImportError: cannot import name 'imsave' from 'scipy.misc' (/usr/local/lib/python3.11/site-packages/scipy/misc/__init__.py)
+=== End of logs for 41d15424e7989b936c1609b53edd1390 ===
+[2025-10-29 14:26:25] INFO: Container 72c2d6d3d21e8209a5eaea176cd76e9bf41137c6e9d2f3bedb867d73b773e525 has stopped

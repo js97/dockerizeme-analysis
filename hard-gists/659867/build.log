@@ -1,0 +1,121 @@
+=== Docker Build Log for 659867 ===
+Started at: Mi 29. Okt 16:37:58 CET 2025
+
+[2025-10-29 16:37:58] START: Building image for 659867
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 237B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.10kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/659867/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","Django"]
+#7 2.095 Collecting Django
+#7 2.138   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.198 Collecting asgiref>=3.8.1 (from Django)
+#7 2.207   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.246 Collecting sqlparse>=0.3.1 (from Django)
+#7 2.254   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.278 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 2.660    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 21.9 MB/s eta 0:00:00
+#7 2.669 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 2.692 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 2.703    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.7 MB/s eta 0:00:00
+#7 2.793 Installing collected packages: sqlparse, asgiref, Django
+#7 4.315 Successfully installed Django-5.2.7 asgiref-3.10.0 sqlparse-0.5.3
+#7 4.315 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.411 
+#7 4.411 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.411 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.0s
+
+#8 [4/5] RUN ["pip","install","django-haystack"]
+#8 0.657 Collecting django-haystack
+#8 0.691   Downloading django_haystack-3.3.0.tar.gz (467 kB)
+#8 0.737      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 467.3/467.3 kB 10.6 MB/s eta 0:00:00
+#8 0.788   Installing build dependencies: started
+#8 2.552   Installing build dependencies: finished with status 'done'
+#8 2.553   Getting requirements to build wheel: started
+#8 2.977   Getting requirements to build wheel: finished with status 'done'
+#8 2.978   Preparing metadata (pyproject.toml): started
+#8 3.290   Preparing metadata (pyproject.toml): finished with status 'done'
+#8 3.297 Requirement already satisfied: Django>=3.2 in /usr/local/lib/python3.11/site-packages (from django-haystack) (5.2.7)
+#8 3.332 Collecting packaging (from django-haystack)
+#8 3.333   Using cached packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 3.338 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django>=3.2->django-haystack) (3.10.0)
+#8 3.339 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django>=3.2->django-haystack) (0.5.3)
+#8 3.347 Using cached packaging-25.0-py3-none-any.whl (66 kB)
+#8 3.351 Building wheels for collected packages: django-haystack
+#8 3.351   Building wheel for django-haystack (pyproject.toml): started
+#8 3.717   Building wheel for django-haystack (pyproject.toml): finished with status 'done'
+#8 3.718   Created wheel for django-haystack: filename=django_haystack-3.3.0-py3-none-any.whl size=141850 sha256=0725754875578cb3001fdec8fb201c42a2c0a61fe74a4dcc98a8930da0e5ad65
+#8 3.718   Stored in directory: /root/.cache/pip/wheels/e2/d7/58/9df2aac1855b0d81746aa6034c0df8da1b768d687f13785f69
+#8 3.720 Successfully built django-haystack
+#8 3.768 Installing collected packages: packaging, django-haystack
+#8 3.888 Successfully installed django-haystack-3.3.0 packaging-25.0
+#8 3.889 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 3.894 
+#8 3.894 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.894 [notice] To update, run: pip install --upgrade pip
+#8 DONE 4.0s
+
+#9 [5/5] RUN ["pip","install","haystack"]
+#9 0.769 Collecting haystack
+#9 0.807   Downloading haystack-0.42-py2.py3-none-any.whl.metadata (10 kB)
+#9 0.860 Collecting construct<2.8 (from haystack)
+#9 0.871   Downloading construct-2.5.3.tar.gz (688 kB)
+#9 0.925      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 688.1/688.1 kB 13.2 MB/s eta 0:00:00
+#9 0.952   Preparing metadata (setup.py): started
+#9 1.334   Preparing metadata (setup.py): finished with status 'done'
+#9 1.366 Collecting pefile (from haystack)
+#9 1.375   Downloading pefile-2024.8.26-py3-none-any.whl.metadata (1.4 kB)
+#9 1.524 Collecting python-ptrace>=0.8.1 (from haystack)
+#9 1.534   Downloading python_ptrace-0.9.9-py2.py3-none-any.whl.metadata (1.5 kB)
+#9 1.581 Collecting six (from construct<2.8->haystack)
+#9 1.589   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#9 1.615 Downloading haystack-0.42-py2.py3-none-any.whl (179 kB)
+#9 1.635    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 179.6/179.6 kB 9.2 MB/s eta 0:00:00
+#9 1.646 Downloading python_ptrace-0.9.9-py2.py3-none-any.whl (104 kB)
+#9 1.661    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 104.8/104.8 kB 7.6 MB/s eta 0:00:00
+#9 1.671 Downloading pefile-2024.8.26-py3-none-any.whl (74 kB)
+#9 1.683    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.8/74.8 kB 6.4 MB/s eta 0:00:00
+#9 1.692 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#9 1.711 Building wheels for collected packages: construct
+#9 1.719   Building wheel for construct (setup.py): started
+#9 1.953   Building wheel for construct (setup.py): finished with status 'done'
+#9 1.954   Created wheel for construct: filename=construct-2.5.3-py2.py3-none-any.whl size=71921 sha256=f37d0213c0651e1cccf974b20d0a4e8128822b295832e2ed61a5bad6ded0322c
+#9 1.954   Stored in directory: /root/.cache/pip/wheels/a3/05/de/eb183fcdbac24fd9633a5a8fcc5cdd2ed5c47611683ef2f522
+#9 1.956 Successfully built construct
+#9 2.011 Installing collected packages: python-ptrace, six, pefile, construct, haystack
+#9 2.328 Successfully installed construct-2.5.3 haystack-0.42 pefile-2024.8.26 python-ptrace-0.9.9 six-1.17.0
+#9 2.328 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 2.335 
+#9 2.335 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 2.335 [notice] To update, run: pip install --upgrade pip
+#9 DONE 2.5s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.8s done
+#10 writing image sha256:9f29f76982dc810da2e459e74fdb47e2b2c002949ba1f4b86692713cc58c8823 done
+#10 naming to docker.io/library/test-image-659867 done
+#10 DONE 0.8s
+
+View build details: docker-desktop://dashboard/build/default/default/kzbg2ch3jb6lh2172ymdi4gxh
+[2025-10-29 16:38:11] SUCCESS: Build completed for 659867

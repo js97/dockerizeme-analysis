@@ -1,0 +1,23 @@
+=== Docker Run Log for db030013e981c46acb2886060dde607e ===
+Started at: Mi 29. Okt 20:30:20 CET 2025
+
+[2025-10-29 20:31:26] START: Running container for db030013e981c46acb2886060dde607e
+[2025-10-29 20:31:26] SUCCESS: Container 7f554d5e0a99a3df0ed2863bd2e81a3ddfaa5596b055b96e56f5c9d1f696184d started for db030013e981c46acb2886060dde607e
+=== Container logs for db030013e981c46acb2886060dde607e ===
+Traceback (most recent call last):
+  File "/snippet.py", line 12, in <module>
+    import datashader as ds
+  File "/usr/local/lib/python3.11/site-packages/datashader/__init__.py", line 7, in <module>
+    from .core import Canvas                                 # noqa (API import)
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/datashader/core.py", line 11, in <module>
+    from xarray import DataArray, Dataset
+  File "/usr/local/lib/python3.11/site-packages/xarray/__init__.py", line 1, in <module>
+    from .core.alignment import align, broadcast, broadcast_arrays
+  File "/usr/local/lib/python3.11/site-packages/xarray/core/alignment.py", line 8, in <module>
+    from . import ops, utils
+  File "/usr/local/lib/python3.11/site-packages/xarray/core/utils.py", line 9, in <module>
+    from collections import Mapping, MutableMapping
+ImportError: cannot import name 'Mapping' from 'collections' (/usr/local/lib/python3.11/collections/__init__.py)
+=== End of logs for db030013e981c46acb2886060dde607e ===
+[2025-10-29 20:31:28] INFO: Container 7f554d5e0a99a3df0ed2863bd2e81a3ddfaa5596b055b96e56f5c9d1f696184d has stopped

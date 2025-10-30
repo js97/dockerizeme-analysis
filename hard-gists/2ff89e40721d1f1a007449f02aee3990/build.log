@@ -1,0 +1,120 @@
+=== Docker Build Log for 2ff89e40721d1f1a007449f02aee3990 ===
+Started at: Mi 29. Okt 13:35:15 CET 2025
+
+[2025-10-29 13:35:15] START: Building image for 2ff89e40721d1f1a007449f02aee3990
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 305B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 11.71kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/2ff89e40721d1f1a007449f02aee3990/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","six"]
+#7 1.887 Collecting six
+#7 1.926   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 1.946 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 1.989 Installing collected packages: six
+#7 2.005 Successfully installed six-1.17.0
+#7 2.005 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.092 
+#7 2.092 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.092 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.2s
+
+#8 [4/7] RUN ["pip","install","pytest"]
+#8 0.561 Collecting pytest
+#8 0.593   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#8 0.635 Collecting iniconfig>=1 (from pytest)
+#8 0.643   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#8 0.693 Collecting packaging>=20 (from pytest)
+#8 0.701   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.744 Collecting pluggy<2,>=1.5 (from pytest)
+#8 0.752   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#8 0.801 Collecting pygments>=2.7.2 (from pytest)
+#8 0.809   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#8 0.839 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#8 0.877    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 9.9 MB/s eta 0:00:00
+#8 0.885 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#8 0.903 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 0.915    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.4 MB/s eta 0:00:00
+#8 0.922 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#8 0.941 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#8 0.989    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 26.2 MB/s eta 0:00:00
+#8 1.038 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#8 1.738 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#8 1.738 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.743 
+#8 1.743 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.743 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.9s
+
+#9 [5/7] RUN ["pip","install","py"]
+#9 0.550 Collecting py
+#9 0.582   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#9 0.606 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#9 0.640    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.8 MB/s eta 0:00:00
+#9 0.683 Installing collected packages: py
+#9 0.761 Successfully installed py-1.11.0
+#9 0.761 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.766 
+#9 0.766 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.766 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.8s
+
+#10 [6/7] RUN ["pip","install","numpy"]
+#10 0.674 Collecting numpy
+#10 0.709   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#10 0.729      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.9 MB/s eta 0:00:00
+#10 0.747 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#10 1.475    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 21.0 MB/s eta 0:00:00
+#10 1.559 Installing collected packages: numpy
+#10 2.940 Successfully installed numpy-2.3.4
+#10 2.941 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 2.945 
+#10 2.945 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 2.945 [notice] To update, run: pip install --upgrade pip
+#10 DONE 3.5s
+
+#11 [7/7] RUN ["pip","install","numba"]
+#11 0.616 Collecting numba
+#11 0.649   Downloading numba-0.62.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.8 kB)
+#11 0.750 Collecting llvmlite<0.46,>=0.45.0dev0 (from numba)
+#11 0.758   Downloading llvmlite-0.45.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+#11 0.775 Requirement already satisfied: numpy<2.4,>=1.22 in /usr/local/lib/python3.11/site-packages (from numba) (2.3.4)
+#11 0.791 Downloading numba-0.62.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.7 MB)
+#11 0.949    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.7/3.7 MB 24.0 MB/s eta 0:00:00
+#11 0.958 Downloading llvmlite-0.45.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (56.3 MB)
+#11 3.075    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.3/56.3 MB 16.0 MB/s eta 0:00:00
+#11 3.267 Installing collected packages: llvmlite, numba
+#11 5.459 Successfully installed llvmlite-0.45.1 numba-0.62.1
+#11 5.460 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 5.465 
+#11 5.465 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 5.465 [notice] To update, run: pip install --upgrade pip
+#11 DONE 6.2s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.8s done
+#12 writing image sha256:9727b4bce3ad32b87403948853591f5dc0ef654f2c1e85c576463e8907e9e470 done
+#12 naming to docker.io/library/test-image-2ff89e40721d1f1a007449f02aee3990 done
+#12 DONE 0.9s
+
+View build details: docker-desktop://dashboard/build/default/default/b6w0opf84mej8lsddlrc5c80m
+[2025-10-29 13:35:31] SUCCESS: Build completed for 2ff89e40721d1f1a007449f02aee3990

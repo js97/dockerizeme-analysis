@@ -1,0 +1,120 @@
+=== Docker Build Log for 27a1eea9f1d01056ebb0 ===
+Started at: Mi 29. Okt 13:15:24 CET 2025
+
+[2025-10-29 13:15:24] START: Building image for 27a1eea9f1d01056ebb0
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 300B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.69kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/27a1eea9f1d01056ebb0/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","six"]
+#7 1.916 Collecting six
+#7 1.956   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 1.976 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.017 Installing collected packages: six
+#7 2.034 Successfully installed six-1.17.0
+#7 2.034 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.124 
+#7 2.124 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.124 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.3s
+
+#8 [4/7] RUN ["pip","install","pytest"]
+#8 0.549 Collecting pytest
+#8 0.582   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#8 0.622 Collecting iniconfig>=1 (from pytest)
+#8 0.630   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#8 0.678 Collecting packaging>=20 (from pytest)
+#8 0.687   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.726 Collecting pluggy<2,>=1.5 (from pytest)
+#8 0.734   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#8 0.780 Collecting pygments>=2.7.2 (from pytest)
+#8 0.789   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#8 0.818 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#8 0.860    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 9.2 MB/s eta 0:00:00
+#8 0.868 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#8 0.886 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 0.898    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.6 MB/s eta 0:00:00
+#8 0.905 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#8 0.922 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#8 0.974    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 24.2 MB/s eta 0:00:00
+#8 1.024 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#8 1.740 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#8 1.740 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.745 
+#8 1.745 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.745 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.0s
+
+#9 [5/7] RUN ["pip","install","py"]
+#9 0.551 Collecting py
+#9 0.588   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#9 0.613 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#9 0.646    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.9 MB/s eta 0:00:00
+#9 0.689 Installing collected packages: py
+#9 0.767 Successfully installed py-1.11.0
+#9 0.768 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.773 
+#9 0.773 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.773 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.9s
+
+#10 [6/7] RUN ["pip","install","pyinotify"]
+#10 0.508 Collecting pyinotify
+#10 0.548   Downloading pyinotify-0.9.6.tar.gz (60 kB)
+#10 0.568      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.0/61.0 kB 2.9 MB/s eta 0:00:00
+#10 0.575   Preparing metadata (setup.py): started
+#10 0.986   Preparing metadata (setup.py): finished with status 'done'
+#10 0.988 Building wheels for collected packages: pyinotify
+#10 0.988   Building wheel for pyinotify (setup.py): started
+#10 1.165   Building wheel for pyinotify (setup.py): finished with status 'done'
+#10 1.165   Created wheel for pyinotify: filename=pyinotify-0.9.6-py3-none-any.whl size=25418 sha256=bd8e850c6f883740e2645d44be6092726f34db4f5dc64086de7dc66e51b67cfe
+#10 1.166   Stored in directory: /root/.cache/pip/wheels/61/5f/c5/4c20d068f36a653907eeec8dfea850f191031229e0adbdba66
+#10 1.167 Successfully built pyinotify
+#10 1.205 Installing collected packages: pyinotify
+#10 1.231 Successfully installed pyinotify-0.9.6
+#10 1.231 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.236 
+#10 1.236 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.236 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.3s
+
+#11 [7/7] RUN ["pip","install","pynotify"]
+#11 0.864 Collecting pynotify
+#11 1.079   Downloading pynotify-0.1.1-py2.py3-none-any.whl.metadata (1.0 kB)
+#11 1.213 Downloading pynotify-0.1.1-py2.py3-none-any.whl (3.9 kB)
+#11 1.272 Installing collected packages: pynotify
+#11 1.309 Successfully installed pynotify-0.1.1
+#11 1.309 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.314 
+#11 1.314 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.314 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.4s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.2s done
+#12 writing image sha256:d7880060b6d6425086e92c84922155b0e96bcc0b3d3b13aeee9f9dd09f4b8e6e done
+#12 naming to docker.io/library/test-image-27a1eea9f1d01056ebb0 done
+#12 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/6w5s3icn6pm0kcaon0p69mksd
+[2025-10-29 13:15:32] SUCCESS: Build completed for 27a1eea9f1d01056ebb0

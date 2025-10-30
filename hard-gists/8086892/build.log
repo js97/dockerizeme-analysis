@@ -1,0 +1,70 @@
+=== Docker Build Log for 8086892 ===
+Started at: Mi 29. Okt 17:38:14 CET 2025
+
+[2025-10-29 17:38:14] START: Building image for 8086892
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 162B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 905B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/8086892/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","Flask"]
+#7 1.919 Collecting Flask
+#7 1.959   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#7 2.001 Collecting blinker>=1.9.0 (from Flask)
+#7 2.009   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#7 2.053 Collecting click>=8.1.3 (from Flask)
+#7 2.062   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#7 2.101 Collecting itsdangerous>=2.2.0 (from Flask)
+#7 2.110   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#7 2.151 Collecting jinja2>=3.1.2 (from Flask)
+#7 2.159   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#7 2.238 Collecting markupsafe>=2.1.1 (from Flask)
+#7 2.247   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#7 2.297 Collecting werkzeug>=3.1.0 (from Flask)
+#7 2.305   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#7 2.333 Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+#7 2.359    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 3.9 MB/s eta 0:00:00
+#7 2.369 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#7 2.388 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#7 2.407    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 5.7 MB/s eta 0:00:00
+#7 2.416 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#7 2.435 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#7 2.450    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 9.4 MB/s eta 0:00:00
+#7 2.459 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#7 2.476 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#7 2.494    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 13.3 MB/s eta 0:00:00
+#7 2.538 Installing collected packages: markupsafe, itsdangerous, click, blinker, werkzeug, jinja2, Flask
+#7 2.861 Successfully installed Flask-3.1.2 blinker-1.9.0 click-8.3.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.3 werkzeug-3.1.3
+#7 2.861 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.958 
+#7 2.958 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.958 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.2s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.2s done
+#8 writing image sha256:f2df65c7436c8d740ef76b62b5c52854f0862035874de023732e9c3d8d10eea5 done
+#8 naming to docker.io/library/test-image-8086892 0.0s done
+#8 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/3rfxvfxr0ash7cxud1ov8bf4v
+[2025-10-29 17:38:18] SUCCESS: Build completed for 8086892

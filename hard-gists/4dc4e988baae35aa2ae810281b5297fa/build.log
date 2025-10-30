@@ -1,0 +1,165 @@
+=== Docker Build Log for 4dc4e988baae35aa2ae810281b5297fa ===
+Started at: Mi 29. Okt 15:12:29 CET 2025
+
+[2025-10-29 15:12:29] START: Building image for 4dc4e988baae35aa2ae810281b5297fa
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 192B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 578B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/4dc4e988baae35aa2ae810281b5297fa/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","picamera"]
+#7 2.121 Collecting picamera
+#7 2.155   Downloading picamera-1.13.tar.gz (143 kB)
+#7 2.184      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 143.8/143.8 kB 5.0 MB/s eta 0:00:00
+#7 2.193   Preparing metadata (setup.py): started
+#7 2.607   Preparing metadata (setup.py): finished with status 'done'
+#7 2.613 Building wheels for collected packages: picamera
+#7 2.614   Building wheel for picamera (setup.py): started
+#7 2.786   Building wheel for picamera (setup.py): finished with status 'error'
+#7 2.792   error: subprocess-exited-with-error
+#7 2.792   
+#7 2.792   × python setup.py bdist_wheel did not run successfully.
+#7 2.792   │ exit code: 1
+#7 2.792   ╰─> [88 lines of output]
+#7 2.792       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+#7 2.792       !!
+#7 2.792       
+#7 2.792               ********************************************************************************
+#7 2.792               Please consider removing the following classifiers in favor of a SPDX license expression:
+#7 2.792       
+#7 2.792               License :: OSI Approved :: BSD License
+#7 2.792       
+#7 2.792               See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+#7 2.792               ********************************************************************************
+#7 2.792       
+#7 2.792       !!
+#7 2.792         self._finalize_license_expression()
+#7 2.792       running bdist_wheel
+#7 2.792       running build
+#7 2.792       running build_py
+#7 2.792       creating build/lib/picamera
+#7 2.792       copying picamera/renderers.py -> build/lib/picamera
+#7 2.792       copying picamera/camera.py -> build/lib/picamera
+#7 2.792       copying picamera/encoders.py -> build/lib/picamera
+#7 2.792       copying picamera/__init__.py -> build/lib/picamera
+#7 2.792       copying picamera/color.py -> build/lib/picamera
+#7 2.792       copying picamera/mmal.py -> build/lib/picamera
+#7 2.792       copying picamera/display.py -> build/lib/picamera
+#7 2.792       copying picamera/array.py -> build/lib/picamera
+#7 2.792       copying picamera/streams.py -> build/lib/picamera
+#7 2.792       copying picamera/mmalobj.py -> build/lib/picamera
+#7 2.792       copying picamera/exc.py -> build/lib/picamera
+#7 2.792       copying picamera/bcm_host.py -> build/lib/picamera
+#7 2.792       copying picamera/frames.py -> build/lib/picamera
+#7 2.792       running egg_info
+#7 2.792       writing picamera.egg-info/PKG-INFO
+#7 2.792       writing dependency_links to picamera.egg-info/dependency_links.txt
+#7 2.792       writing requirements to picamera.egg-info/requires.txt
+#7 2.792       writing top-level names to picamera.egg-info/top_level.txt
+#7 2.792       reading manifest file 'picamera.egg-info/SOURCES.txt'
+#7 2.792       reading manifest template 'MANIFEST.in'
+#7 2.792       no previously-included directories found matching 'debian'
+#7 2.792       no previously-included directories found matching 'docs'
+#7 2.792       adding license file 'LICENSE.txt'
+#7 2.792       writing manifest file 'picamera.egg-info/SOURCES.txt'
+#7 2.792       /usr/local/lib/python3.11/site-packages/setuptools/_distutils/cmd.py:90: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+#7 2.792       !!
+#7 2.792       
+#7 2.792               ********************************************************************************
+#7 2.792               Please avoid running ``setup.py`` directly.
+#7 2.792               Instead, use pypa/build, pypa/installer or other
+#7 2.792               standards-based tools.
+#7 2.792       
+#7 2.792               See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+#7 2.792               ********************************************************************************
+#7 2.792       
+#7 2.792       !!
+#7 2.792         self.initialize_options()
+#7 2.792       installing to build/bdist.linux-x86_64/wheel
+#7 2.792       running install
+#7 2.792       Traceback (most recent call last):
+#7 2.792         File "<string>", line 2, in <module>
+#7 2.792         File "<pip-setuptools-caller>", line 34, in <module>
+#7 2.792         File "/tmp/pip-install-v87sk1u9/picamera_dce6d506c0794caa8a10a61b09540595/setup.py", line 145, in <module>
+#7 2.792           main()
+#7 2.792         File "/tmp/pip-install-v87sk1u9/picamera_dce6d506c0794caa8a10a61b09540595/setup.py", line 119, in main
+#7 2.792           setup(
+#7 2.792         File "/usr/local/lib/python3.11/site-packages/setuptools/__init__.py", line 117, in setup
+#7 2.792           return distutils.core.setup(**attrs)
+#7 2.792                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#7 2.792         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/core.py", line 186, in setup
+#7 2.792           return run_commands(dist)
+#7 2.792                  ^^^^^^^^^^^^^^^^^^
+#7 2.792         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/core.py", line 202, in run_commands
+#7 2.792           dist.run_commands()
+#7 2.792         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/dist.py", line 1002, in run_commands
+#7 2.792           self.run_command(cmd)
+#7 2.792         File "/usr/local/lib/python3.11/site-packages/setuptools/dist.py", line 1104, in run_command
+#7 2.792           super().run_command(command)
+#7 2.792         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/dist.py", line 1021, in run_command
+#7 2.792           cmd_obj.run()
+#7 2.792         File "/usr/local/lib/python3.11/site-packages/setuptools/command/bdist_wheel.py", line 405, in run
+#7 2.792           self.run_command("install")
+#7 2.792         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/cmd.py", line 357, in run_command
+#7 2.792           self.distribution.run_command(command)
+#7 2.792         File "/usr/local/lib/python3.11/site-packages/setuptools/dist.py", line 1104, in run_command
+#7 2.792           super().run_command(command)
+#7 2.792         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/dist.py", line 1021, in run_command
+#7 2.792           cmd_obj.run()
+#7 2.792         File "/tmp/pip-install-v87sk1u9/picamera_dce6d506c0794caa8a10a61b09540595/setup.py", line 111, in run
+#7 2.792           raise ValueError('Unable to determine if this system is a Raspberry Pi')
+#7 2.792       ValueError: Unable to determine if this system is a Raspberry Pi
+#7 2.792       [end of output]
+#7 2.792   
+#7 2.792   note: This error originates from a subprocess, and is likely not a problem with pip.
+#7 2.792   ERROR: Failed building wheel for picamera
+#7 2.792   Running setup.py clean for picamera
+#7 2.925 Failed to build picamera
+#7 2.925 ERROR: Could not build wheels for picamera, which is required to install pyproject.toml-based projects
+#7 3.021 
+#7 3.021 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.021 [notice] To update, run: pip install --upgrade pip
+#7 ERROR: process "pip install picamera" did not complete successfully: exit code: 1
+------
+ > [3/3] RUN ["pip","install","picamera"]:
+2.792       [end of output]
+2.792   
+2.792   note: This error originates from a subprocess, and is likely not a problem with pip.
+2.792   ERROR: Failed building wheel for picamera
+2.792   Running setup.py clean for picamera
+2.925 Failed to build picamera
+2.925 ERROR: Could not build wheels for picamera, which is required to install pyproject.toml-based projects
+3.021 
+3.021 [notice] A new release of pip is available: 24.0 -> 25.3
+3.021 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:3
+--------------------
+   1 |     FROM python:3.11
+   2 |     COPY hard-gists/4dc4e988baae35aa2ae810281b5297fa/snippet.py /snippet.py
+   3 | >>> RUN ["pip","install","picamera"]
+   4 |     CMD ["python3","/snippet.py"]
+   5 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install picamera" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/gm6y4migzztufusvwlgcddkos
+[2025-10-29 15:12:33] ERROR: Build failed for 4dc4e988baae35aa2ae810281b5297fa

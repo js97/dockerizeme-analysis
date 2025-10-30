@@ -1,0 +1,76 @@
+=== Docker Run Log for 31122eb9e4c0af8adeca ===
+Started at: Mi 29. Okt 13:40:40 CET 2025
+
+[2025-10-29 13:40:57] START: Running container for 31122eb9e4c0af8adeca
+[2025-10-29 13:40:57] SUCCESS: Container 31c8635ae3cba439ab143edda2a681d9c636d8e75f1afb0f2465e5cc9f939a6d started for 31122eb9e4c0af8adeca
+=== Container logs for 31122eb9e4c0af8adeca ===
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/nltk/corpus/util.py", line 84, in __load
+    root = nltk.data.find(f"{self.subdir}/{zip_name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nltk/data.py", line 579, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mstopwords[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('stopwords')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/stopwords.zip/stopwords/[0m
+
+  Searched in:
+    - '/root/nltk_data'
+    - '/usr/local/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/local/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snippet.py", line 8, in <module>
+    cachedStopWords = stopwords.words("english")
+                      ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nltk/corpus/util.py", line 120, in __getattr__
+    self.__load()
+  File "/usr/local/lib/python3.11/site-packages/nltk/corpus/util.py", line 86, in __load
+    raise e
+  File "/usr/local/lib/python3.11/site-packages/nltk/corpus/util.py", line 81, in __load
+    root = nltk.data.find(f"{self.subdir}/{self.__name}")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/nltk/data.py", line 579, in find
+    raise LookupError(resource_not_found)
+LookupError: 
+**********************************************************************
+  Resource [93mstopwords[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('stopwords')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mcorpora/stopwords[0m
+
+  Searched in:
+    - '/root/nltk_data'
+    - '/usr/local/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/local/lib/nltk_data'
+    - '/usr/share/nltk_data'
+    - '/usr/local/share/nltk_data'
+    - '/usr/lib/nltk_data'
+    - '/usr/local/lib/nltk_data'
+**********************************************************************
+
+=== End of logs for 31122eb9e4c0af8adeca ===
+[2025-10-29 13:40:59] INFO: Container 31c8635ae3cba439ab143edda2a681d9c636d8e75f1afb0f2465e5cc9f939a6d has stopped

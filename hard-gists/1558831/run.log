@@ -1,0 +1,17 @@
+=== Docker Run Log for 1558831 ===
+Started at: Mi 29. Okt 12:18:45 CET 2025
+
+[2025-10-29 12:18:49] START: Running container for 1558831
+[2025-10-29 12:18:49] SUCCESS: Container 2e10e50a95bdb711a18f796fe662db5788bba0a3c34630fa7bde0090d4dd3a38 started for 1558831
+=== Container logs for 1558831 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 11, in <module>
+    from vanilla import *
+  File "/usr/local/lib/python3.11/site-packages/vanilla/__init__.py", line 3, in <module>
+    from vanilla.core import Hub
+  File "/usr/local/lib/python3.11/site-packages/vanilla/core.py", line 102
+    except Exception, e:
+           ^^^^^^^^^^^^
+SyntaxError: multiple exception types must be parenthesized
+=== End of logs for 1558831 ===
+[2025-10-29 12:18:51] INFO: Container 2e10e50a95bdb711a18f796fe662db5788bba0a3c34630fa7bde0090d4dd3a38 has stopped

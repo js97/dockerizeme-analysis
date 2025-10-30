@@ -1,0 +1,79 @@
+=== Docker Build Log for f55c4ce19598b2b345ef ===
+Started at: Mi 29. Okt 21:27:23 CET 2025
+
+[2025-10-29 21:27:23] START: Building image for f55c4ce19598b2b345ef
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 213B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.05kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/f55c4ce19598b2b345ef/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","dj.choices"]
+#7 1.909 Collecting dj.choices
+#7 1.977   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 1.998   Preparing metadata (setup.py): started
+#7 2.389   Preparing metadata (setup.py): finished with status 'done'
+#7 2.497 Collecting django (from dj.choices)
+#7 2.507   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.544 Collecting six (from dj.choices)
+#7 2.552   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.603 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.612   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.656 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.666   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.690 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.242    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 15.1 MB/s eta 0:00:00
+#7 3.250 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.273 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.292 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.303    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.5 MB/s eta 0:00:00
+#7 3.339 Building wheels for collected packages: dj.choices
+#7 3.340   Building wheel for dj.choices (setup.py): started
+#7 3.505   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.506   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=125fccbf6d23d0cf0d1541c264de2f5d0cf8bf2101658b7a9804e451edd05e55
+#7 3.506   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.508 Successfully built dj.choices
+#7 3.554 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 5.036 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 5.036 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.139 
+#7 5.139 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.139 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.9s
+
+#8 [4/4] RUN ["pip","install","Django"]
+#8 0.488 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#8 0.492 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#8 0.493 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#8 0.534 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.539 
+#8 0.539 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.539 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.6s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.6s done
+#9 writing image sha256:f5cbad53f521873cc203aab0e8454d870065c98935f24b4431640fd33bdb8155 done
+#9 naming to docker.io/library/test-image-f55c4ce19598b2b345ef 0.0s done
+#9 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/default/default/93f4s4oaj8i79aoxfeqgwsdrm
+[2025-10-29 21:27:30] SUCCESS: Build completed for f55c4ce19598b2b345ef

@@ -1,0 +1,29 @@
+=== Docker Run Log for 2628382 ===
+Started at: Mi 29. Okt 13:10:01 CET 2025
+
+[2025-10-29 13:10:39] START: Running container for 2628382
+[2025-10-29 13:10:39] SUCCESS: Container 40c72d3abdc1bf9e8d74092a5c22a42da7062345cf8481cfecacf6aefb95e50b started for 2628382
+=== Container logs for 2628382 ===
+E/snippet.py:120: DeprecationWarning: Please use assertEqual instead.
+  self.assertEquals({"author": "foo-boo"}, result)
+.
+======================================================================
+ERROR: test_router (__main__.ReturnValueTest.test_router)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/snippet.py", line 111, in test_router
+    result = router("simple")
+             ^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 96, in __call__
+    value = renderer(system, view(request))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 33, in StringRenderer
+    import StringIO
+ModuleNotFoundError: No module named 'StringIO'
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (errors=1)
+=== End of logs for 2628382 ===
+[2025-10-29 13:10:41] INFO: Container 40c72d3abdc1bf9e8d74092a5c22a42da7062345cf8481cfecacf6aefb95e50b has stopped

@@ -1,0 +1,101 @@
+=== Docker Build Log for ec3adc02d927375f13d0 ===
+Started at: Mi 29. Okt 20:53:55 CET 2025
+
+[2025-10-29 20:53:55] START: Building image for ec3adc02d927375f13d0
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 241B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/5] FROM docker.io/library/python:3.11
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 815B 0.0s done
+#5 DONE 0.0s
+
+#4 [1/5] FROM docker.io/library/python:3.11
+#4 CACHED
+
+#6 [2/5] COPY hard-gists/ec3adc02d927375f13d0/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","dj.choices"]
+#7 2.098 Collecting dj.choices
+#7 2.144   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 2.162   Preparing metadata (setup.py): started
+#7 2.544   Preparing metadata (setup.py): finished with status 'done'
+#7 2.651 Collecting django (from dj.choices)
+#7 2.662   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.708 Collecting six (from dj.choices)
+#7 2.718   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.765 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.779   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.818 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.826   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.851 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.727    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 9.5 MB/s eta 0:00:00
+#7 3.736 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.757 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.777 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.788    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.7 MB/s eta 0:00:00
+#7 3.825 Building wheels for collected packages: dj.choices
+#7 3.826   Building wheel for dj.choices (setup.py): started
+#7 3.996   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.997   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=feaba778ee0e5899ea2e0ee6e21aa616a11aab5abf92c881c734f974cec42804
+#7 3.997   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.999 Successfully built dj.choices
+#7 4.045 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 5.481 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 5.481 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.574 
+#7 5.574 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.574 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.2s
+
+#8 [4/5] RUN ["pip","install","Django"]
+#8 0.442 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#8 0.446 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#8 0.447 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#8 0.494 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.499 
+#8 0.499 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.499 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.6s
+
+#9 [5/5] RUN ["pip","install","app"]
+#9 0.535 Collecting app
+#9 0.583   Downloading app-0.0.1.zip (2.2 kB)
+#9 0.599   Preparing metadata (setup.py): started
+#9 0.710   Preparing metadata (setup.py): finished with status 'done'
+#9 0.712 Building wheels for collected packages: app
+#9 0.716   Building wheel for app (setup.py): started
+#9 0.849   Building wheel for app (setup.py): finished with status 'done'
+#9 0.849   Created wheel for app: filename=app-0.0.1-py3-none-any.whl size=1550 sha256=cc1c822595ba8b3133ac695415664fdf28e3df889a3346d7ae03659469e00257
+#9 0.849   Stored in directory: /root/.cache/pip/wheels/d4/41/8a/a765a5070346662ff4ad1df79a2c7fe777ccf8fe1dff9c2dcd
+#9 0.851 Successfully built app
+#9 0.888 Installing collected packages: app
+#9 0.922 Successfully installed app-0.0.1
+#9 0.922 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.927 
+#9 0.927 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.927 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.0s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.6s done
+#10 writing image sha256:d9a8b63e4b89f4f83755d0842534aae094481d4af2904798de54d07732da765d done
+#10 naming to docker.io/library/test-image-ec3adc02d927375f13d0 done
+#10 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/default/default/r00vnxyylnb0mqfazalw61h6e
+[2025-10-29 20:54:04] SUCCESS: Build completed for ec3adc02d927375f13d0

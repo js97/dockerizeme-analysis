@@ -1,0 +1,111 @@
+=== Docker Build Log for 10589494 ===
+Started at: Mi 29. Okt 11:47:58 CET 2025
+
+[2025-10-29 11:47:58] START: Building image for 10589494
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 489B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 818B 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/12] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/12] COPY hard-gists/10589494/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/12] RUN ["apt-get","update"]
+#7 0.263 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.263 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.276 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.286 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.612 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.613 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.222 Fetched 9833 kB in 1s (9812 kB/s)
+#7 1.222 Reading package lists...
+#7 DONE 1.8s
+
+#8 [ 4/12] RUN ["pip","install","image"]
+#8 1.929 Collecting image
+#8 1.966   Downloading image-1.5.33.tar.gz (15 kB)
+#8 1.980   Preparing metadata (setup.py): started
+#8 2.359   Preparing metadata (setup.py): finished with status 'done'
+#8 2.557 Collecting pillow (from image)
+#8 2.568   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#8 2.676 Collecting django (from image)
+#8 2.684   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#8 2.721 Collecting six (from image)
+#8 2.729   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 2.774 Collecting asgiref>=3.8.1 (from django->image)
+#8 2.781   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#8 2.821 Collecting sqlparse>=0.3.1 (from django->image)
+#8 2.829   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#8 2.866 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#8 3.199    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 25.1 MB/s eta 0:00:00
+#8 3.209 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#8 3.501    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 24.2 MB/s eta 0:00:00
+#8 3.510 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 3.528 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#8 3.546 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#8 3.557    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.6 MB/s eta 0:00:00
+#8 3.627 Building wheels for collected packages: image
+#8 3.628   Building wheel for image (setup.py): started
+#8 3.804   Building wheel for image (setup.py): finished with status 'done'
+#8 3.804   Created wheel for image: filename=image-1.5.33-py2.py3-none-any.whl size=19554 sha256=5d181e805457a35c9ee12797ee29996aa930798e6dd7a9e154fe4b4859a1cd2d
+#8 3.804   Stored in directory: /root/.cache/pip/wheels/62/40/4f/3c9a8d0f22a1a6f966975a460e5cb509a1e7dc42e2ce5d9a6d
+#8 3.806 Successfully built image
+#8 3.865 Installing collected packages: sqlparse, six, pillow, asgiref, django, image
+#8 5.599 Successfully installed asgiref-3.10.0 django-5.2.7 image-1.5.33 pillow-12.0.0 six-1.17.0 sqlparse-0.5.3
+#8 5.599 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 5.694 
+#8 5.694 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 5.694 [notice] To update, run: pip install --upgrade pip
+#8 DONE 6.2s
+
+#9 [ 5/12] RUN ["apt-get","install","-y","python-pip"]
+#9 0.228 Reading package lists...
+#9 0.681 Building dependency tree...
+#9 0.785 Reading state information...
+#9 0.800 Package python-pip is not available, but is referred to by another package.
+#9 0.800 This may mean that the package is missing, has been obsoleted, or
+#9 0.800 is only available from another source
+#9 0.800 However the following packages replace it:
+#9 0.800   python3-pip
+#9 0.800 
+#9 0.802 E: Package 'python-pip' has no installation candidate
+#9 ERROR: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+------
+ > [ 5/12] RUN ["apt-get","install","-y","python-pip"]:
+
+
+0.800 Package python-pip is not available, but is referred to by another package.
+0.800 This may mean that the package is missing, has been obsoleted, or
+0.800 is only available from another source
+0.800 However the following packages replace it:
+0.800   python3-pip
+0.800 
+0.802 E: Package 'python-pip' has no installation candidate
+------
+Dockerfile:5
+--------------------
+   3 |     RUN ["apt-get","update"]
+   4 |     RUN ["pip","install","image"]
+   5 | >>> RUN ["apt-get","install","-y","python-pip"]
+   6 |     RUN ["apt-get","install","-y","python-dev"]
+   7 |     RUN ["pip","install","psycopg2"]
+--------------------
+ERROR: failed to build: failed to solve: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/default/default/3fm1jlev2rvqwwzqg987feotx
+[2025-10-29 11:48:07] ERROR: Build failed for 10589494

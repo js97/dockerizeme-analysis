@@ -1,0 +1,12 @@
+=== Docker Run Log for 1160201 ===
+Started at: Mi 29. Okt 11:56:53 CET 2025
+
+[2025-10-29 11:57:00] START: Running container for 1160201
+[2025-10-29 11:57:00] SUCCESS: Container 6653eed64f97b075de1ebec09a953917cef0ee4f6c8bd2533069e7ad4de6a308 started for 1160201
+=== Container logs for 1160201 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 3, in <module>
+    from django.utils.functional import allow_lazy
+ImportError: cannot import name 'allow_lazy' from 'django.utils.functional' (/usr/local/lib/python3.11/site-packages/django/utils/functional.py)
+=== End of logs for 1160201 ===
+[2025-10-29 11:57:02] INFO: Container 6653eed64f97b075de1ebec09a953917cef0ee4f6c8bd2533069e7ad4de6a308 has stopped

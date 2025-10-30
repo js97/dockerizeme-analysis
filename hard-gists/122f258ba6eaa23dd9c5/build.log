@@ -1,0 +1,102 @@
+=== Docker Build Log for 122f258ba6eaa23dd9c5 ===
+Started at: Mi 29. Okt 12:00:14 CET 2025
+
+[2025-10-29 12:00:14] START: Building image for 122f258ba6eaa23dd9c5
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 209B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 7.66kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/122f258ba6eaa23dd9c5/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","mathutils"]
+#7 1.911 Collecting mathutils
+#7 1.949   Downloading mathutils-3.3.0.tar.gz (245 kB)
+#7 1.987      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 245.4/245.4 kB 6.8 MB/s eta 0:00:00
+#7 2.005   Preparing metadata (setup.py): started
+#7 2.400   Preparing metadata (setup.py): finished with status 'done'
+#7 2.401 Building wheels for collected packages: mathutils
+#7 2.402   Building wheel for mathutils (setup.py): started
+#7 10.32   Building wheel for mathutils (setup.py): finished with status 'done'
+#7 10.32   Created wheel for mathutils: filename=mathutils-3.3.0-cp311-cp311-linux_x86_64.whl size=714344 sha256=c3f8c39631025f934412cdf12ab218514d2a8e345a16a3253617c1cfd619229c
+#7 10.32   Stored in directory: /root/.cache/pip/wheels/49/bb/9e/86bd4d162535e81c0f80c64918acf23d920ed0123430d5b4a0
+#7 10.32 Successfully built mathutils
+#7 10.35 Installing collected packages: mathutils
+#7 10.38 Successfully installed mathutils-3.3.0
+#7 10.38 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 10.48 
+#7 10.48 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 10.48 [notice] To update, run: pip install --upgrade pip
+#7 DONE 10.7s
+
+#8 [4/4] RUN ["pip","install","bpy"]
+#8 0.500 Collecting bpy
+#8 0.533   Downloading bpy-4.5.4-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (2.0 kB)
+#8 0.792 Collecting cython (from bpy)
+#8 0.804   Downloading cython-3.1.6-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.0 kB)
+#8 1.013 Collecting numpy<2.0,>=1.26 (from bpy)
+#8 1.026   Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+#8 1.055      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.0/61.0 kB 1.9 MB/s eta 0:00:00
+#8 1.103 Collecting requests (from bpy)
+#8 1.111   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#8 1.222 Collecting zstandard (from bpy)
+#8 1.230   Downloading zstandard-0.25.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.3 kB)
+#8 1.344 Collecting charset_normalizer<4,>=2 (from requests->bpy)
+#8 1.353   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#8 1.395 Collecting idna<4,>=2.5 (from requests->bpy)
+#8 1.403   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#8 1.465 Collecting urllib3<3,>=1.21.1 (from requests->bpy)
+#8 1.473   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#8 1.518 Collecting certifi>=2017.4.17 (from requests->bpy)
+#8 1.529   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#8 1.561 Downloading bpy-4.5.4-cp311-cp311-manylinux_2_28_x86_64.whl (373.0 MB)
+#8 15.69    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 373.0/373.0 MB 3.9 MB/s eta 0:00:00
+#8 15.70 Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.3 MB)
+#8 16.35    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.3/18.3 MB 25.9 MB/s eta 0:00:00
+#8 16.36 Downloading cython-3.1.6-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.3 MB)
+#8 16.48    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 26.5 MB/s eta 0:00:00
+#8 16.49 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#8 16.50    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 6.1 MB/s eta 0:00:00
+#8 16.51 Downloading zstandard-0.25.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.6 MB)
+#8 16.72    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.6/5.6 MB 27.5 MB/s eta 0:00:00
+#8 16.72 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#8 16.74    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 11.2 MB/s eta 0:00:00
+#8 16.75 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#8 16.76    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.9 MB/s eta 0:00:00
+#8 16.77 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#8 16.79    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.1 MB/s eta 0:00:00
+#8 16.80 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#8 16.81    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.9 MB/s eta 0:00:00
+#8 17.71 Installing collected packages: zstandard, urllib3, numpy, idna, cython, charset_normalizer, certifi, requests, bpy
+#8 24.63 Successfully installed bpy-4.5.4 certifi-2025.10.5 charset_normalizer-3.4.4 cython-3.1.6 idna-3.11 numpy-1.26.4 requests-2.32.5 urllib3-2.5.0 zstandard-0.25.0
+#8 24.63 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 24.63 
+#8 24.63 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 24.63 [notice] To update, run: pip install --upgrade pip
+#8 DONE 30.8s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 4.1s done
+#9 writing image sha256:fe17e7ef08779af5547324076fb4d63effeb712578a37901dd0486c7bbd44b0d done
+#9 naming to docker.io/library/test-image-122f258ba6eaa23dd9c5 done
+#9 DONE 4.2s
+
+View build details: docker-desktop://dashboard/build/default/default/tm441hfaq3zr6gbyupe4m4015
+[2025-10-29 12:01:00] SUCCESS: Build completed for 122f258ba6eaa23dd9c5

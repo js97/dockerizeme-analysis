@@ -1,0 +1,92 @@
+=== Docker Build Log for 8683457 ===
+Started at: Mi 29. Okt 17:54:49 CET 2025
+
+[2025-10-29 17:54:49] START: Building image for 8683457
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 194B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.17kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/8683457/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","scene"]
+#7 1.867 Collecting scene
+#7 1.903   Downloading scene-0.0.1.tar.gz (4.3 kB)
+#7 1.915   Preparing metadata (setup.py): started
+#7 2.302   Preparing metadata (setup.py): finished with status 'done'
+#7 2.303 Building wheels for collected packages: scene
+#7 2.304   Building wheel for scene (setup.py): started
+#7 2.467   Building wheel for scene (setup.py): finished with status 'done'
+#7 2.467   Created wheel for scene: filename=scene-0.0.1-py2.py3-none-any.whl size=3300 sha256=384dad90e7285f6c8357af92d0596db9a29311f1d24bddf8b9da1458be64cbab
+#7 2.468   Stored in directory: /root/.cache/pip/wheels/8d/92/cb/ec23387ed573b50de008a60ab148d18dac724dd0e65cd18715
+#7 2.471 Successfully built scene
+#7 2.499 Installing collected packages: scene
+#7 2.512 Successfully installed scene-0.0.1
+#7 2.512 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.603 
+#7 2.603 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.603 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.8s
+
+#8 [4/4] RUN ["pip","install","image"]
+#8 0.514 Collecting image
+#8 0.550   Downloading image-1.5.33.tar.gz (15 kB)
+#8 0.565   Preparing metadata (setup.py): started
+#8 0.673   Preparing metadata (setup.py): finished with status 'done'
+#8 0.856 Collecting pillow (from image)
+#8 0.868   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#8 0.978 Collecting django (from image)
+#8 0.987   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#8 1.022 Collecting six (from image)
+#8 1.034   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 1.080 Collecting asgiref>=3.8.1 (from django->image)
+#8 1.089   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#8 1.127 Collecting sqlparse>=0.3.1 (from django->image)
+#8 1.136   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#8 1.175 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#8 1.507    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 25.1 MB/s eta 0:00:00
+#8 1.517 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#8 1.927    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 17.2 MB/s eta 0:00:00
+#8 1.942 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 1.960 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#8 1.988 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#8 1.999    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.9 MB/s eta 0:00:00
+#8 2.049 Building wheels for collected packages: image
+#8 2.054   Building wheel for image (setup.py): started
+#8 2.188   Building wheel for image (setup.py): finished with status 'done'
+#8 2.189   Created wheel for image: filename=image-1.5.33-py2.py3-none-any.whl size=19554 sha256=4f6902b29cd1604f0b07e473f4b50b20d426a94bb9162b589b34a6a52a16da27
+#8 2.189   Stored in directory: /root/.cache/pip/wheels/62/40/4f/3c9a8d0f22a1a6f966975a460e5cb509a1e7dc42e2ce5d9a6d
+#8 2.190 Successfully built image
+#8 2.268 Installing collected packages: sqlparse, six, pillow, asgiref, django, image
+#8 3.901 Successfully installed asgiref-3.10.0 django-5.2.7 image-1.5.33 pillow-12.0.0 six-1.17.0 sqlparse-0.5.3
+#8 3.901 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 3.906 
+#8 3.906 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.906 [notice] To update, run: pip install --upgrade pip
+#8 DONE 4.4s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.5s done
+#9 writing image sha256:5b27c21ff288581114ef6f1f30ff31493da4738a2a953ca06907620967c662ac done
+#9 naming to docker.io/library/test-image-8683457 done
+#9 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/default/default/pehf0sft86r8xeumuvpwcugph
+[2025-10-29 17:54:57] SUCCESS: Build completed for 8683457

@@ -1,0 +1,21 @@
+=== Docker Run Log for 837538 ===
+Started at: Mi 29. Okt 17:44:19 CET 2025
+
+[2025-10-29 17:44:28] START: Running container for 837538
+[2025-10-29 17:44:28] SUCCESS: Container 67be6eacb76c5602a5f09bb9f07dbc440d22ed938c386c81298e905a5457dfca started for 837538
+=== Container logs for 837538 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 2, in <module>
+    from haystack.query import SearchQuerySet, SQ
+  File "/usr/local/lib/python3.11/site-packages/haystack/__init__.py", line 7, in <module>
+    from haystack.constants import DEFAULT_ALIAS
+  File "/usr/local/lib/python3.11/site-packages/haystack/constants.py", line 6, in <module>
+    ID = getattr(settings, "HAYSTACK_ID_FIELD", "id")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting HAYSTACK_ID_FIELD, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 837538 ===
+[2025-10-29 17:44:30] INFO: Container 67be6eacb76c5602a5f09bb9f07dbc440d22ed938c386c81298e905a5457dfca has stopped

@@ -1,0 +1,85 @@
+=== Docker Build Log for 4ba8ae5459ca4a287d42af549a611792 ===
+Started at: Mi 29. Okt 15:07:51 CET 2025
+
+[2025-10-29 15:07:51] START: Building image for 4ba8ae5459ca4a287d42af549a611792
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 249B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 6.47kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/4ba8ae5459ca4a287d42af549a611792/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","numpy"]
+#7 2.229 Collecting numpy
+#7 2.264   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.292      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.1 MB/s eta 0:00:00
+#7 2.310 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 3.057    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 21.4 MB/s eta 0:00:00
+#7 3.143 Installing collected packages: numpy
+#7 4.756 Successfully installed numpy-2.3.4
+#7 4.756 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.852 
+#7 4.852 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.852 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.4s
+
+#8 [4/5] RUN ["pip","install","scipy"]
+#8 0.652 Collecting scipy
+#8 0.688   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#8 0.718      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.0 MB/s eta 0:00:00
+#8 0.755 Requirement already satisfied: numpy<2.6,>=1.25.2 in /usr/local/lib/python3.11/site-packages (from scipy) (2.3.4)
+#8 0.769 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#8 2.452    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 17.4 MB/s eta 0:00:00
+#8 2.614 Installing collected packages: scipy
+#8 5.819 Successfully installed scipy-1.16.3
+#8 5.820 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 5.825 
+#8 5.825 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 5.825 [notice] To update, run: pip install --upgrade pip
+#8 DONE 6.5s
+
+#9 [5/5] RUN ["pip","install","noise"]
+#9 0.692 Collecting noise
+#9 0.727   Downloading noise-1.2.2.zip (132 kB)
+#9 0.757      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.0/132.0 kB 4.3 MB/s eta 0:00:00
+#9 0.762   Preparing metadata (setup.py): started
+#9 1.217   Preparing metadata (setup.py): finished with status 'done'
+#9 1.219 Building wheels for collected packages: noise
+#9 1.220   Building wheel for noise (setup.py): started
+#9 1.827   Building wheel for noise (setup.py): finished with status 'done'
+#9 1.828   Created wheel for noise: filename=noise-1.2.2-cp311-cp311-linux_x86_64.whl size=56481 sha256=55b30e2f1f72f95624809b9755c9b8eed4dc7ea81cc148045c4f77eaa341f553
+#9 1.828   Stored in directory: /root/.cache/pip/wheels/39/25/2e/af6d1bcc91a8f99af0f651f8718b9ab999720a21c6d4149091
+#9 1.831 Successfully built noise
+#9 1.894 Installing collected packages: noise
+#9 1.919 Successfully installed noise-1.2.2
+#9 1.919 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.924 
+#9 1.924 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.924 [notice] To update, run: pip install --upgrade pip
+#9 DONE 2.0s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.9s done
+#10 writing image sha256:67d8ef49c59c61baa57ef43eab2ae6f36d4409a6388a2c20b081e7f7bb7c7d4b done
+#10 naming to docker.io/library/test-image-4ba8ae5459ca4a287d42af549a611792 done
+#10 DONE 0.9s
+
+View build details: docker-desktop://dashboard/build/default/default/pmabypk325yb5sjn08ytrg879
+[2025-10-29 15:08:06] SUCCESS: Build completed for 4ba8ae5459ca4a287d42af549a611792

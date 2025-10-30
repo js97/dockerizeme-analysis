@@ -1,0 +1,78 @@
+=== Docker Build Log for a0d42148fa11cbdaa00168e321f598f5 ===
+Started at: Mi 29. Okt 18:50:42 CET 2025
+
+[2025-10-29 18:50:42] START: Building image for a0d42148fa11cbdaa00168e321f598f5
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 223B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.48kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/a0d42148fa11cbdaa00168e321f598f5/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","requests"]
+#7 1.903 Collecting requests
+#7 1.942   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.073 Collecting charset_normalizer<4,>=2 (from requests)
+#7 2.083   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.135 Collecting idna<4,>=2.5 (from requests)
+#7 2.145   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.204 Collecting urllib3<3,>=1.21.1 (from requests)
+#7 2.212   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.258 Collecting certifi>=2017.4.17 (from requests)
+#7 2.267   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.292 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.314    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.0 MB/s eta 0:00:00
+#7 2.324 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.349    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 6.8 MB/s eta 0:00:00
+#7 2.359 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.376    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 9.5 MB/s eta 0:00:00
+#7 2.384 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.398    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.3 MB/s eta 0:00:00
+#7 2.407 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.423    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 8.2 MB/s eta 0:00:00
+#7 2.470 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#7 2.697 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#7 2.698 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.811 
+#7 2.811 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.811 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.1s
+
+#8 [4/4] RUN ["pip","install","PyYAML"]
+#8 0.565 Collecting PyYAML
+#8 0.600   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#8 0.620 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#8 0.723    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 8.1 MB/s eta 0:00:00
+#8 0.788 Installing collected packages: PyYAML
+#8 0.859 Successfully installed PyYAML-6.0.3
+#8 0.859 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.864 
+#8 0.864 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.864 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.0s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.2s done
+#9 writing image sha256:03e941fcb2eec2a35c6b430f0935c9336e2bfd00f9474b8c150138f13f9de3b1 done
+#9 naming to docker.io/library/test-image-a0d42148fa11cbdaa00168e321f598f5 done
+#9 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/c380gqf7cu6gto7mbd6o2q9nn
+[2025-10-29 18:50:47] SUCCESS: Build completed for a0d42148fa11cbdaa00168e321f598f5

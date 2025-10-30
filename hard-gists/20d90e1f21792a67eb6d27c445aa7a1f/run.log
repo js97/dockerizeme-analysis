@@ -1,0 +1,15 @@
+=== Docker Run Log for 20d90e1f21792a67eb6d27c445aa7a1f ===
+Started at: Mi 29. Okt 12:59:46 CET 2025
+
+[2025-10-29 12:59:49] START: Running container for 20d90e1f21792a67eb6d27c445aa7a1f
+[2025-10-29 12:59:50] SUCCESS: Container 1f1ee1fce2e668edea471d51bf56d0bf202c2a3364c94831f4517f916979e5e9 started for 20d90e1f21792a67eb6d27c445aa7a1f
+=== Container logs for 20d90e1f21792a67eb6d27c445aa7a1f ===
+Traceback (most recent call last):
+  File "/snippet.py", line 39, in <module>
+    main()
+  File "/snippet.py", line 8, in main
+    f = open(sys.argv[1])
+             ~~~~~~~~^^^
+IndexError: list index out of range
+=== End of logs for 20d90e1f21792a67eb6d27c445aa7a1f ===
+[2025-10-29 12:59:52] INFO: Container 1f1ee1fce2e668edea471d51bf56d0bf202c2a3364c94831f4517f916979e5e9 has stopped

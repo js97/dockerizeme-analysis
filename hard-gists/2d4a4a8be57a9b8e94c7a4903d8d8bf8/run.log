@@ -1,0 +1,66 @@
+=== Docker Run Log for 2d4a4a8be57a9b8e94c7a4903d8d8bf8 ===
+Started at: Mi 29. Okt 13:26:07 CET 2025
+
+[2025-10-29 13:26:13] START: Running container for 2d4a4a8be57a9b8e94c7a4903d8d8bf8
+[2025-10-29 13:26:14] SUCCESS: Container 5f65346e7a37188fed73597f09fa72f58dcc9a74bb3f177f9eb3da3a4b83f4e3 started for 2d4a4a8be57a9b8e94c7a4903d8d8bf8
+=== Container logs for 2d4a4a8be57a9b8e94c7a4903d8d8bf8 ===
+/usr/local/lib/python3.11/site-packages/gevent/monkey/__init__.py:488: MonkeyPatchWarning: Monkey-patching ssl after ssl has already been imported may lead to errors, including RecursionError on Python 3.6. It may also silently lead to incorrect behaviour on Python 3.7. Please monkey-patch earlier. See https://github.com/gevent/gevent/issues/1016. Modules that had direct imports (NOT patched): ['urllib3.util (/usr/local/lib/python3.11/site-packages/urllib3/util/__init__.py)', 'urllib3.util.ssl_ (/usr/local/lib/python3.11/site-packages/urllib3/util/ssl_.py)']. 
+  _queue_warning(
+Traceback (most recent call last):
+  File "/snippet.py", line 28, in <module>
+    main()
+  File "/snippet.py", line 15, in main
+    connection.start()
+  File "/usr/local/lib/python3.11/site-packages/signalr/_connection.py", line 47, in start
+    negotiate_data = self.__transport.negotiate()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/signalr/transports/_auto_transport.py", line 16, in negotiate
+    negotiate_data = Transport.negotiate(self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/signalr/transports/_transport.py", line 26, in negotiate
+    negotiate = self._session.get(url)
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/adapters.py", line 644, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 790, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/connection.py", line 922, in _ssl_wrap_socket_and_match_hostname
+    context = create_urllib3_context(
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/urllib3/util/ssl_.py", line 303, in create_urllib3_context
+    context.minimum_version = TLSVersion.TLSv1_2
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/ssl.py", line 608, in minimum_version
+    super(SSLContext, SSLContext).minimum_version.__set__(self, value)
+  File "/usr/local/lib/python3.11/ssl.py", line 608, in minimum_version
+    super(SSLContext, SSLContext).minimum_version.__set__(self, value)
+  File "/usr/local/lib/python3.11/ssl.py", line 608, in minimum_version
+    super(SSLContext, SSLContext).minimum_version.__set__(self, value)
+  [Previous line repeated 488 more times]
+  File "/usr/local/lib/python3.11/ssl.py", line 606, in minimum_version
+    if value == TLSVersion.SSLv3:
+                ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/enum.py", line 196, in __get__
+    return ownerclass._member_map_[self.name]
+           ^^^^^^^^^^^^^^^^^^^^^^^
+RecursionError: maximum recursion depth exceeded while calling a Python object
+=== End of logs for 2d4a4a8be57a9b8e94c7a4903d8d8bf8 ===
+[2025-10-29 13:26:16] INFO: Container 5f65346e7a37188fed73597f09fa72f58dcc9a74bb3f177f9eb3da3a4b83f4e3 has stopped

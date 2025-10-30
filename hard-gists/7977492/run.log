@@ -1,0 +1,22 @@
+=== Docker Run Log for 7977492 ===
+Started at: Mi 29. Okt 17:23:42 CET 2025
+
+[2025-10-29 17:24:05] START: Running container for 7977492
+[2025-10-29 17:24:05] SUCCESS: Container b0809e082664974f98ca7ba29ef5122f308337ec05978b818eac0df19b002a53 started for 7977492
+=== Container logs for 7977492 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 2, in <module>
+    import keychain
+  File "/usr/local/lib/python3.11/site-packages/keychain/__init__.py", line 1, in <module>
+    from .private_keychain import PrivateKeychain
+  File "/usr/local/lib/python3.11/site-packages/keychain/private_keychain.py", line 2, in <module>
+    from .public_keychain import PublicKeychain
+  File "/usr/local/lib/python3.11/site-packages/keychain/public_keychain.py", line 5, in <module>
+    from .utils import extract_bin_chain_path, bip32_serialize
+  File "/usr/local/lib/python3.11/site-packages/keychain/utils.py", line 2, in <module>
+    from keylib.key_formatting import encode, decode, from_int_to_byte, from_byte_to_int, changebase, bin_dbl_sha256
+  File "/usr/local/lib/python3.11/site-packages/keylib/__init__.py", line 1, in <module>
+    from private_key import ECPrivateKey
+ModuleNotFoundError: No module named 'private_key'
+=== End of logs for 7977492 ===
+[2025-10-29 17:24:07] INFO: Container b0809e082664974f98ca7ba29ef5122f308337ec05978b818eac0df19b002a53 has stopped

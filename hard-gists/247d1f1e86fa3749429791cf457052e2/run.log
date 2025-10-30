@@ -1,0 +1,16 @@
+=== Docker Run Log for 247d1f1e86fa3749429791cf457052e2 ===
+Started at: Mi 29. Okt 13:05:33 CET 2025
+
+[2025-10-29 13:05:37] START: Running container for 247d1f1e86fa3749429791cf457052e2
+[2025-10-29 13:05:37] SUCCESS: Container 52d875e4d3b8e01556f6e2a232ef8749ef8a3d789cc75036e8b293d7a2daf6cc started for 247d1f1e86fa3749429791cf457052e2
+=== Container logs for 247d1f1e86fa3749429791cf457052e2 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 75, in <module>
+    print(yaml_to_dot(input).encode('utf-8'))
+          ^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 54, in yaml_to_dot
+    for name, children in yaml.load(yml).items():
+                          ^^^^^^^^^^^^^^
+TypeError: load() missing 1 required positional argument: 'Loader'
+=== End of logs for 247d1f1e86fa3749429791cf457052e2 ===
+[2025-10-29 13:05:39] INFO: Container 52d875e4d3b8e01556f6e2a232ef8749ef8a3d789cc75036e8b293d7a2daf6cc has stopped

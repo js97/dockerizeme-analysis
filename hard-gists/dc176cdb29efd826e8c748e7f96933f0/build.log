@@ -1,0 +1,228 @@
+=== Docker Build Log for dc176cdb29efd826e8c748e7f96933f0 ===
+Started at: Mi 29. Okt 20:32:28 CET 2025
+
+[2025-10-29 20:32:28] START: Building image for dc176cdb29efd826e8c748e7f96933f0
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 413B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 5.19kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/10] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/10] COPY hard-gists/dc176cdb29efd826e8c748e7f96933f0/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/10] RUN ["pip","install","six"]
+#7 1.899 Collecting six
+#7 1.939   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 1.959 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.003 Installing collected packages: six
+#7 2.019 Successfully installed six-1.17.0
+#7 2.020 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.121 
+#7 2.121 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.121 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.3s
+
+#8 [ 4/10] RUN ["pip","install","pytest"]
+#8 0.550 Collecting pytest
+#8 0.583   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#8 0.632 Collecting iniconfig>=1 (from pytest)
+#8 0.640   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#8 0.690 Collecting packaging>=20 (from pytest)
+#8 0.698   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.738 Collecting pluggy<2,>=1.5 (from pytest)
+#8 0.747   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#8 0.794 Collecting pygments>=2.7.2 (from pytest)
+#8 0.803   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#8 0.831 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#8 0.880    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 7.6 MB/s eta 0:00:00
+#8 0.888 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#8 0.906 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 0.920    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 4.5 MB/s eta 0:00:00
+#8 0.929 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#8 0.946 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#8 1.054    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 11.4 MB/s eta 0:00:00
+#8 1.101 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#8 1.795 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#8 1.795 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.800 
+#8 1.800 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.800 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.0s
+
+#9 [ 5/10] RUN ["pip","install","py"]
+#9 0.533 Collecting py
+#9 0.569   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#9 0.593 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#9 0.627    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 3.0 MB/s eta 0:00:00
+#9 0.671 Installing collected packages: py
+#9 0.748 Successfully installed py-1.11.0
+#9 0.749 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.754 
+#9 0.754 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.754 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.8s
+
+#10 [ 6/10] RUN ["pip","install","requests"]
+#10 0.538 Collecting requests
+#10 0.572   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#10 0.704 Collecting charset_normalizer<4,>=2 (from requests)
+#10 0.713   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#10 0.759 Collecting idna<4,>=2.5 (from requests)
+#10 0.767   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#10 0.830 Collecting urllib3<3,>=1.21.1 (from requests)
+#10 0.840   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#10 0.889 Collecting certifi>=2017.4.17 (from requests)
+#10 0.897   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#10 0.942 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#10 0.981    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 1.6 MB/s eta 0:00:00
+#10 0.989 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#10 1.018    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 5.7 MB/s eta 0:00:00
+#10 1.027 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#10 1.064    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 3.9 MB/s eta 0:00:00
+#10 1.072 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#10 1.093    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 3.3 MB/s eta 0:00:00
+#10 1.101 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#10 1.127    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 5.1 MB/s eta 0:00:00
+#10 1.184 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#10 1.423 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#10 1.423 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.428 
+#10 1.428 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.428 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.5s
+
+#11 [ 7/10] RUN ["pip","install","python-telegram-bot"]
+#11 0.608 Collecting python-telegram-bot
+#11 0.648   Downloading python_telegram_bot-22.5-py3-none-any.whl.metadata (17 kB)
+#11 0.721 Collecting httpx<0.29,>=0.27 (from python-telegram-bot)
+#11 0.731   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+#11 0.801 Collecting anyio (from httpx<0.29,>=0.27->python-telegram-bot)
+#11 0.809   Downloading anyio-4.11.0-py3-none-any.whl.metadata (4.1 kB)
+#11 0.823 Requirement already satisfied: certifi in /usr/local/lib/python3.11/site-packages (from httpx<0.29,>=0.27->python-telegram-bot) (2025.10.5)
+#11 0.863 Collecting httpcore==1.* (from httpx<0.29,>=0.27->python-telegram-bot)
+#11 0.873   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+#11 0.887 Requirement already satisfied: idna in /usr/local/lib/python3.11/site-packages (from httpx<0.29,>=0.27->python-telegram-bot) (3.11)
+#11 0.915 Collecting h11>=0.16 (from httpcore==1.*->httpx<0.29,>=0.27->python-telegram-bot)
+#11 0.937   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#11 0.976 Collecting sniffio>=1.1 (from anyio->httpx<0.29,>=0.27->python-telegram-bot)
+#11 0.984   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+#11 1.032 Collecting typing_extensions>=4.5 (from anyio->httpx<0.29,>=0.27->python-telegram-bot)
+#11 1.062   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#11 1.089 Downloading python_telegram_bot-22.5-py3-none-any.whl (730 kB)
+#11 1.170    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 731.0/731.0 kB 9.3 MB/s eta 0:00:00
+#11 1.178 Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+#11 1.193    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.5/73.5 kB 4.7 MB/s eta 0:00:00
+#11 1.202 Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+#11 1.214    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.8/78.8 kB 6.4 MB/s eta 0:00:00
+#11 1.223 Downloading anyio-4.11.0-py3-none-any.whl (109 kB)
+#11 1.238    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.1/109.1 kB 7.5 MB/s eta 0:00:00
+#11 1.251 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#11 1.270 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+#11 1.292 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#11 1.303    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.5 MB/s eta 0:00:00
+#11 1.398 Installing collected packages: typing_extensions, sniffio, h11, httpcore, anyio, httpx, python-telegram-bot
+#11 1.922 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.922 Successfully installed anyio-4.11.0 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 python-telegram-bot-22.5 sniffio-1.3.1 typing_extensions-4.15.0
+#11 1.927 
+#11 1.927 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.927 [notice] To update, run: pip install --upgrade pip
+#11 DONE 2.1s
+
+#12 [ 8/10] RUN ["pip","install","wit"]
+#12 0.704 Collecting wit
+#12 0.745   Downloading wit-6.0.1.tar.gz (6.0 kB)
+#12 0.761   Preparing metadata (setup.py): started
+#12 1.165   Preparing metadata (setup.py): finished with status 'done'
+#12 1.237 Collecting prompt_toolkit (from wit)
+#12 1.258   Downloading prompt_toolkit-3.0.52-py3-none-any.whl.metadata (6.4 kB)
+#12 1.281 Requirement already satisfied: requests>=0.8.8 in /usr/local/lib/python3.11/site-packages (from wit) (2.32.5)
+#12 1.286 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests>=0.8.8->wit) (3.4.4)
+#12 1.287 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests>=0.8.8->wit) (3.11)
+#12 1.288 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests>=0.8.8->wit) (2.5.0)
+#12 1.289 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests>=0.8.8->wit) (2025.10.5)
+#12 1.320 Collecting wcwidth (from prompt_toolkit->wit)
+#12 1.331   Downloading wcwidth-0.2.14-py2.py3-none-any.whl.metadata (15 kB)
+#12 1.365 Downloading prompt_toolkit-3.0.52-py3-none-any.whl (391 kB)
+#12 1.412    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 391.4/391.4 kB 8.8 MB/s eta 0:00:00
+#12 1.421 Downloading wcwidth-0.2.14-py2.py3-none-any.whl (37 kB)
+#12 1.439 Building wheels for collected packages: wit
+#12 1.440   Building wheel for wit (setup.py): started
+#12 1.603   Building wheel for wit (setup.py): finished with status 'done'
+#12 1.604   Created wheel for wit: filename=wit-6.0.1-py3-none-any.whl size=5330 sha256=90a3f7c1582d38f6c8639d3230b2ae7e4910040f3e337a7dcf303ded262263fa
+#12 1.604   Stored in directory: /root/.cache/pip/wheels/54/9f/fa/9d391ce47b2a997781ac24d1ec2e3928c81769ce266459ee38
+#12 1.606 Successfully built wit
+#12 1.679 Installing collected packages: wcwidth, prompt_toolkit, wit
+#12 1.925 Successfully installed prompt_toolkit-3.0.52 wcwidth-0.2.14 wit-6.0.1
+#12 1.925 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 1.930 
+#12 1.930 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 1.930 [notice] To update, run: pip install --upgrade pip
+#12 DONE 2.0s
+
+#13 [ 9/10] RUN ["pip","install","pyowm"]
+#13 0.562 Collecting pyowm
+#13 0.714   Downloading pyowm-3.5.0-py3-none-any.whl.metadata (6.9 kB)
+#13 0.742 Requirement already satisfied: requests<3,>=2.20.0 in /usr/local/lib/python3.11/site-packages (from pyowm) (2.32.5)
+#13 0.777 Collecting geojson<4,>=2.3.0 (from pyowm)
+#13 0.787   Downloading geojson-3.2.0-py3-none-any.whl.metadata (16 kB)
+#13 0.841 Collecting PySocks<2,>=1.7.1 (from pyowm)
+#13 0.866   Downloading PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+#13 0.889 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests<3,>=2.20.0->pyowm) (3.4.4)
+#13 0.890 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests<3,>=2.20.0->pyowm) (3.11)
+#13 0.891 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests<3,>=2.20.0->pyowm) (2.5.0)
+#13 0.892 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests<3,>=2.20.0->pyowm) (2025.10.5)
+#13 1.032 Downloading pyowm-3.5.0-py3-none-any.whl (4.5 MB)
+#13 2.033    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 4.6 MB/s eta 0:00:00
+#13 2.045 Downloading geojson-3.2.0-py3-none-any.whl (15 kB)
+#13 2.073 Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+#13 2.174 Installing collected packages: PySocks, geojson, pyowm
+#13 2.297 Successfully installed PySocks-1.7.1 geojson-3.2.0 pyowm-3.5.0
+#13 2.298 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 2.303 
+#13 2.303 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 2.303 [notice] To update, run: pip install --upgrade pip
+#13 DONE 2.4s
+
+#14 [10/10] RUN ["pip","install","telegram"]
+#14 0.624 Collecting telegram
+#14 0.663   Downloading telegram-0.0.1.tar.gz (879 bytes)
+#14 0.683   Preparing metadata (setup.py): started
+#14 0.847   Preparing metadata (setup.py): finished with status 'done'
+#14 0.849 Building wheels for collected packages: telegram
+#14 0.853   Building wheel for telegram (setup.py): started
+#14 0.990   Building wheel for telegram (setup.py): finished with status 'done'
+#14 0.991   Created wheel for telegram: filename=telegram-0.0.1-py3-none-any.whl size=1327 sha256=7689424d6705cc6ec40817d539e5fe453d35a9a2c7dbaab57bf3bc02b3a12bdb
+#14 0.991   Stored in directory: /root/.cache/pip/wheels/1e/b7/10/7a0e3b8f8c01e0d9d8a1e9913251932ca9f0a394e98ade3056
+#14 0.992 Successfully built telegram
+#14 1.070 Installing collected packages: telegram
+#14 1.100 Successfully installed telegram-0.0.1
+#14 1.101 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#14 1.105 
+#14 1.105 [notice] A new release of pip is available: 24.0 -> 25.3
+#14 1.105 [notice] To update, run: pip install --upgrade pip
+#14 DONE 1.2s
+
+#15 exporting to image
+#15 exporting layers
+#15 exporting layers 0.3s done
+#15 writing image sha256:ff5af84a4b0a74c10e58b4184ce1effe9d90d9b696566c9b76159b894fc75e1c done
+#15 naming to docker.io/library/test-image-dc176cdb29efd826e8c748e7f96933f0 0.0s done
+#15 DONE 0.4s
+
+View build details: docker-desktop://dashboard/build/default/default/mxorkpkrxnfkxdawmowj48a5o
+[2025-10-29 20:32:44] SUCCESS: Build completed for dc176cdb29efd826e8c748e7f96933f0

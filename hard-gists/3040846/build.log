@@ -1,0 +1,167 @@
+=== Docker Build Log for 3040846 ===
+Started at: Mi 29. Okt 13:38:37 CET 2025
+
+[2025-10-29 13:38:37] START: Building image for 3040846
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 231B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.33kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/3040846/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","foundation"]
+#7 1.853 Collecting foundation
+#7 1.892   Downloading foundation-0.1.0a0.dev1.tar.gz (50 kB)
+#7 1.915      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.8/50.8 kB 2.3 MB/s eta 0:00:00
+#7 1.926   Preparing metadata (setup.py): started
+#7 2.315   Preparing metadata (setup.py): finished with status 'done'
+#7 2.417 Collecting Django<1.11,>=1.10 (from foundation)
+#7 2.426   Downloading Django-1.10.8-py2.py3-none-any.whl.metadata (1.3 kB)
+#7 2.463 Collecting django-sekizai>=0.10 (from foundation)
+#7 2.472   Downloading django_sekizai-4.1.0-py3-none-any.whl.metadata (4.6 kB)
+#7 2.498 INFO: pip is looking at multiple versions of django-sekizai to determine which version is compatible with other requirements. This could take a while.
+#7 2.511   Downloading django_sekizai-4.0.0-py3-none-any.whl.metadata (4.6 kB)
+#7 2.535   Downloading django_sekizai-3.0.1-py3-none-any.whl.metadata (4.6 kB)
+#7 2.570   Downloading django_sekizai-3.0.0-py3-none-any.whl.metadata (4.6 kB)
+#7 2.594   Downloading django_sekizai-2.0.0-py3-none-any.whl.metadata (3.7 kB)
+#7 2.618   Downloading django-sekizai-1.1.0.tar.gz (7.0 kB)
+#7 2.631   Preparing metadata (setup.py): started
+#7 2.740   Preparing metadata (setup.py): finished with status 'done'
+#7 2.769   Downloading django-sekizai-1.0.0.tar.gz (18 kB)
+#7 2.786   Preparing metadata (setup.py): started
+#7 2.891   Preparing metadata (setup.py): finished with status 'done'
+#7 2.907   Downloading django_sekizai-0.10.0-py2.py3-none-any.whl.metadata (793 bytes)
+#7 2.944 Collecting django-classy-tags>=0.3.1 (from django-sekizai>=0.10->foundation)
+#7 2.954   Downloading django_classy_tags-4.1.0-py3-none-any.whl.metadata (5.3 kB)
+#7 2.965 INFO: pip is looking at multiple versions of django-classy-tags to determine which version is compatible with other requirements. This could take a while.
+#7 2.978   Downloading django_classy_tags-4.0.0-py3-none-any.whl.metadata (5.2 kB)
+#7 3.002   Downloading django_classy_tags-3.0.1-py3-none-any.whl.metadata (5.3 kB)
+#7 3.025   Downloading django_classy_tags-3.0.0-py3-none-any.whl.metadata (5.2 kB)
+#7 3.049   Downloading django_classy_tags-2.0.0-py3-none-any.whl.metadata (4.5 kB)
+#7 3.072   Downloading django-classy-tags-1.0.0.tar.gz (13 kB)
+#7 3.086   Preparing metadata (setup.py): started
+#7 3.194   Preparing metadata (setup.py): finished with status 'done'
+#7 3.209   Downloading django-classy-tags-0.9.0.tar.gz (17 kB)
+#7 3.224   Preparing metadata (setup.py): started
+#7 3.330   Preparing metadata (setup.py): finished with status 'done'
+#7 3.345   Downloading django_classy_tags-0.8.0-py2.py3-none-any.whl.metadata (981 bytes)
+#7 3.379 Downloading Django-1.10.8-py2.py3-none-any.whl (6.8 MB)
+#7 3.650    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.8/6.8 MB 25.4 MB/s eta 0:00:00
+#7 3.659 Downloading django_sekizai-0.10.0-py2.py3-none-any.whl (19 kB)
+#7 3.683 Downloading django_classy_tags-0.8.0-py2.py3-none-any.whl (22 kB)
+#7 3.722 Building wheels for collected packages: foundation
+#7 3.723   Building wheel for foundation (setup.py): started
+#7 3.922   Building wheel for foundation (setup.py): finished with status 'done'
+#7 3.923   Created wheel for foundation: filename=foundation-0.1.0a0.dev1-py3-none-any.whl size=73614 sha256=18cf96bbcaad65fee763065d18d0e127679f609922becd94613515c21a31500d
+#7 3.923   Stored in directory: /root/.cache/pip/wheels/ad/c3/ad/3307fd133207420fb4bf8fa4844260b0dcd4de9deec2857abd
+#7 3.925 Successfully built foundation
+#7 3.965 Installing collected packages: Django, django-classy-tags, django-sekizai, foundation
+#7 5.145 Successfully installed Django-1.10.8 django-classy-tags-0.8.0 django-sekizai-0.10.0 foundation-0.1.0a0.dev1
+#7 5.145 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.242 
+#7 5.242 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.242 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.6s
+
+#8 [4/5] RUN ["pip","install","AppKit"]
+#8 0.525 Collecting AppKit
+#8 0.560   Downloading AppKit-0.2.8.tar.gz (7.6 kB)
+#8 0.588   Preparing metadata (setup.py): started
+#8 0.696   Preparing metadata (setup.py): finished with status 'done'
+#8 0.741 Collecting flask (from AppKit)
+#8 0.749   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#8 0.797 Collecting pygobject (from AppKit)
+#8 0.808   Downloading pygobject-3.54.5.tar.gz (1.3 MB)
+#8 0.883      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 17.2 MB/s eta 0:00:00
+#8 0.965   Installing build dependencies: started
+#8 5.808   Installing build dependencies: finished with status 'done'
+#8 5.809   Getting requirements to build wheel: started
+#8 5.885   Getting requirements to build wheel: finished with status 'done'
+#8 5.888   Installing backend dependencies: started
+#8 6.332   Installing backend dependencies: finished with status 'done'
+#8 6.333   Preparing metadata (pyproject.toml): started
+#8 6.878   Preparing metadata (pyproject.toml): finished with status 'error'
+#8 6.881   error: subprocess-exited-with-error
+#8 6.881   
+#8 6.881   × Preparing metadata (pyproject.toml) did not run successfully.
+#8 6.881   │ exit code: 1
+#8 6.881   ╰─> [24 lines of output]
+#8 6.881       + meson setup /tmp/pip-install-p6y0j2b9/pygobject_f022b32662534ede9a59e8e1886e26a8 /tmp/pip-install-p6y0j2b9/pygobject_f022b32662534ede9a59e8e1886e26a8/.mesonpy-b8b2jug0 -Dbuildtype=release -Db_ndebug=if-release -Db_vscrt=md -Dtests=false -Dwheel=true --wrap-mode=nofallback --native-file=/tmp/pip-install-p6y0j2b9/pygobject_f022b32662534ede9a59e8e1886e26a8/.mesonpy-b8b2jug0/meson-python-native-file.ini
+#8 6.881       The Meson build system
+#8 6.881       Version: 1.9.1
+#8 6.881       Source dir: /tmp/pip-install-p6y0j2b9/pygobject_f022b32662534ede9a59e8e1886e26a8
+#8 6.881       Build dir: /tmp/pip-install-p6y0j2b9/pygobject_f022b32662534ede9a59e8e1886e26a8/.mesonpy-b8b2jug0
+#8 6.881       Build type: native build
+#8 6.881       Project name: pygobject
+#8 6.881       Project version: 3.54.5
+#8 6.881       C compiler for the host machine: cc (gcc 14.2.0 "cc (Debian 14.2.0-19) 14.2.0")
+#8 6.881       C linker for the host machine: cc ld.bfd 2.44
+#8 6.881       Host machine cpu family: x86_64
+#8 6.881       Host machine cpu: x86_64
+#8 6.881       Program python3 found: YES (/usr/local/bin/python3.11)
+#8 6.881       Found pkg-config: YES (/usr/bin/pkg-config) 1.8.1
+#8 6.881       Run-time dependency python found: YES 3.11
+#8 6.881       Did not find CMake 'cmake'
+#8 6.881       Found CMake: NO
+#8 6.881       Run-time dependency girepository-2.0 found: NO (tried pkgconfig and cmake)
+#8 6.881       Not looking for a fallback subproject for the dependency girepository-2.0 because:
+#8 6.881       Use of fallback dependencies is disabled.
+#8 6.881       
+#8 6.881       ../meson.build:31:9: ERROR: Dependency 'girepository-2.0' is required but not found.
+#8 6.881       
+#8 6.881       A full log can be found at /tmp/pip-install-p6y0j2b9/pygobject_f022b32662534ede9a59e8e1886e26a8/.mesonpy-b8b2jug0/meson-logs/meson-log.txt
+#8 6.881       [end of output]
+#8 6.881   
+#8 6.881   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 6.882 error: metadata-generation-failed
+#8 6.882 
+#8 6.882 × Encountered error while generating package metadata.
+#8 6.882 ╰─> See above for output.
+#8 6.882 
+#8 6.882 note: This is an issue with the package mentioned above, not pip.
+#8 6.882 hint: See above for details.
+#8 6.887 
+#8 6.887 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 6.887 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install AppKit" did not complete successfully: exit code: 1
+------
+ > [4/5] RUN ["pip","install","AppKit"]:
+6.882 error: metadata-generation-failed
+6.882 
+6.882 × Encountered error while generating package metadata.
+6.882 ╰─> See above for output.
+6.882 
+6.882 note: This is an issue with the package mentioned above, not pip.
+6.882 hint: See above for details.
+6.887 
+6.887 [notice] A new release of pip is available: 24.0 -> 25.3
+6.887 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/3040846/snippet.py /snippet.py
+   3 |     RUN ["pip","install","foundation"]
+   4 | >>> RUN ["pip","install","AppKit"]
+   5 |     RUN ["pip","install","quartz"]
+   6 |     CMD ["python3","/snippet.py"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install AppKit" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/76dnx5qcwyxjyvxs10rtqy653
+[2025-10-29 13:38:50] ERROR: Build failed for 3040846

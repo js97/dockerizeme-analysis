@@ -1,0 +1,13 @@
+=== Docker Run Log for 05ff99985269200cdc4854ddc04fa6e9 ===
+Started at: Mi 29. Okt 11:28:39 CET 2025
+
+[2025-10-29 11:28:50] START: Running container for 05ff99985269200cdc4854ddc04fa6e9
+[2025-10-29 11:28:51] SUCCESS: Container 794bf09858b8afc6ddbe6a99a2504d21b309bc51cd752a5a0ecd691659dddb44 started for 05ff99985269200cdc4854ddc04fa6e9
+=== Container logs for 05ff99985269200cdc4854ddc04fa6e9 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 20, in <module>
+    pred = pred/float(len(os.listdir(dir_with_models)))
+           ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for /: 'NoneType' and 'float'
+=== End of logs for 05ff99985269200cdc4854ddc04fa6e9 ===
+[2025-10-29 11:28:53] INFO: Container 794bf09858b8afc6ddbe6a99a2504d21b309bc51cd752a5a0ecd691659dddb44 has stopped

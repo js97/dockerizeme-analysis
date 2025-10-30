@@ -1,0 +1,12 @@
+=== Docker Run Log for 2915875 ===
+Started at: Mi 29. Okt 13:21:28 CET 2025
+
+[2025-10-29 13:21:32] START: Running container for 2915875
+[2025-10-29 13:21:32] SUCCESS: Container bc069f8285d25257be86d387645bd87a66a10b6a58d146dcb384129d3b6efc6d started for 2915875
+=== Container logs for 2915875 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 4, in <module>
+    from gevent.core import wait_read, wait_write
+ImportError: cannot import name 'wait_read' from 'gevent.core' (/usr/local/lib/python3.11/site-packages/gevent/core.py)
+=== End of logs for 2915875 ===
+[2025-10-29 13:21:34] INFO: Container bc069f8285d25257be86d387645bd87a66a10b6a58d146dcb384129d3b6efc6d has stopped

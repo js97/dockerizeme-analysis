@@ -1,0 +1,108 @@
+=== Docker Build Log for 304a77371c9e207a5fa42a6b874017d5 ===
+Started at: Mi 29. Okt 13:39:04 CET 2025
+
+[2025-10-29 13:39:04] START: Building image for 304a77371c9e207a5fa42a6b874017d5
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 258B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.37kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/304a77371c9e207a5fa42a6b874017d5/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","dj.choices"]
+#7 1.977 Collecting dj.choices
+#7 2.025   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 2.043   Preparing metadata (setup.py): started
+#7 2.427   Preparing metadata (setup.py): finished with status 'done'
+#7 2.527 Collecting django (from dj.choices)
+#7 2.537   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.574 Collecting six (from dj.choices)
+#7 2.583   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.630 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.639   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.680 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.688   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.726 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.065    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 24.6 MB/s eta 0:00:00
+#7 3.073 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.093 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.110 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.122    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.5 MB/s eta 0:00:00
+#7 3.158 Building wheels for collected packages: dj.choices
+#7 3.158   Building wheel for dj.choices (setup.py): started
+#7 3.333   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.333   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=0d173148b0e155e48247a0057d19d4255e770de597994ba939f755323c923e8c
+#7 3.334   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.336 Successfully built dj.choices
+#7 3.380 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 4.750 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 4.750 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.839 
+#7 4.839 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.839 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.3s
+
+#8 [4/5] RUN ["pip","install","requests"]
+#8 0.509 Collecting requests
+#8 0.544   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#8 0.665 Collecting charset_normalizer<4,>=2 (from requests)
+#8 0.673   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#8 0.721 Collecting idna<4,>=2.5 (from requests)
+#8 0.728   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#8 0.787 Collecting urllib3<3,>=1.21.1 (from requests)
+#8 0.795   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#8 0.843 Collecting certifi>=2017.4.17 (from requests)
+#8 0.850   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#8 0.877 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#8 0.897    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.0 MB/s eta 0:00:00
+#8 0.904 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#8 0.921    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 10.2 MB/s eta 0:00:00
+#8 0.936 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#8 0.949    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.9 MB/s eta 0:00:00
+#8 0.957 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#8 0.972    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.3 MB/s eta 0:00:00
+#8 0.981 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#8 0.994    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 10.5 MB/s eta 0:00:00
+#8 1.047 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#8 1.280 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#8 1.280 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.285 
+#8 1.285 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.285 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.4s
+
+#9 [5/5] RUN ["pip","install","Django"]
+#9 0.433 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#9 0.436 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#9 0.437 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#9 0.486 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.491 
+#9 0.491 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.491 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.6s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.6s done
+#10 writing image sha256:eba90794bf9a0bb9feaa4ff27060c2559ad6bdbc0040778af9f20be755fe002a done
+#10 naming to docker.io/library/test-image-304a77371c9e207a5fa42a6b874017d5 done
+#10 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/default/default/54rmc89y27rcere5sajnw7sdr
+[2025-10-29 13:39:13] SUCCESS: Build completed for 304a77371c9e207a5fa42a6b874017d5

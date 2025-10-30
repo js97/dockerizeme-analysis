@@ -1,0 +1,283 @@
+=== Docker Build Log for b26bc0333cc18660d07baeb923ce9021 ===
+Started at: Mi 29. Okt 19:24:38 CET 2025
+
+[2025-10-29 19:24:38] START: Building image for b26bc0333cc18660d07baeb923ce9021
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.07kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 10.85kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/26] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/26] COPY hard-gists/b26bc0333cc18660d07baeb923ce9021/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/26] RUN ["apt-get","update"]
+#7 0.267 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.271 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.296 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.306 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.920 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.932 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.511 Fetched 9833 kB in 1s (7659 kB/s)
+#7 1.511 Reading package lists...
+#7 DONE 2.1s
+
+#8 [ 4/26] RUN ["pip","install","django-inline-svg"]
+#8 2.119 Collecting django-inline-svg
+#8 2.292   Downloading django-inline-svg-0.1.1.tar.gz (3.4 kB)
+#8 2.313   Preparing metadata (setup.py): started
+#8 2.694   Preparing metadata (setup.py): finished with status 'done'
+#8 2.814 Collecting Django>=1.8 (from django-inline-svg)
+#8 2.827   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#8 2.875 Collecting asgiref>=3.8.1 (from Django>=1.8->django-inline-svg)
+#8 2.886   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#8 2.932 Collecting sqlparse>=0.3.1 (from Django>=1.8->django-inline-svg)
+#8 2.941   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#8 2.965 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#8 3.546    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 14.3 MB/s eta 0:00:00
+#8 3.556 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#8 3.578 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#8 3.589    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.5 MB/s eta 0:00:00
+#8 3.625 Building wheels for collected packages: django-inline-svg
+#8 3.625   Building wheel for django-inline-svg (setup.py): started
+#8 3.792   Building wheel for django-inline-svg (setup.py): finished with status 'done'
+#8 3.793   Created wheel for django-inline-svg: filename=django_inline_svg-0.1.1-py3-none-any.whl size=4156 sha256=f90c6d3bff058b4fed976330aac9c142a782ec498763ebddfba8d9d381f762b6
+#8 3.793   Stored in directory: /root/.cache/pip/wheels/b2/74/b5/18db67bfaceec4ad86efb19caf3e418340df6f44e315bb8dee
+#8 3.794 Successfully built django-inline-svg
+#8 3.838 Installing collected packages: sqlparse, asgiref, Django, django-inline-svg
+#8 5.173 Successfully installed Django-5.2.7 asgiref-3.10.0 django-inline-svg-0.1.1 sqlparse-0.5.3
+#8 5.173 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 5.266 
+#8 5.266 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 5.266 [notice] To update, run: pip install --upgrade pip
+#8 DONE 5.6s
+
+#9 [ 5/26] RUN ["apt-get","install","-y","wget"]
+#9 0.237 Reading package lists...
+#9 0.665 Building dependency tree...
+#9 0.770 Reading state information...
+#9 0.983 wget is already the newest version (1.25.0-2).
+#9 0.983 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+#9 DONE 1.0s
+
+#10 [ 6/26] RUN ["pip","install","numpy"]
+#10 0.716 Collecting numpy
+#10 0.765   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#10 0.794      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.0 MB/s eta 0:00:00
+#10 0.815 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#10 2.055    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 13.0 MB/s eta 0:00:00
+#10 2.137 Installing collected packages: numpy
+#10 3.621 Successfully installed numpy-2.3.4
+#10 3.621 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 3.626 
+#10 3.626 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 3.626 [notice] To update, run: pip install --upgrade pip
+#10 DONE 4.2s
+
+#11 [ 7/26] RUN ["pip","install","tornado"]
+#11 0.561 Collecting tornado
+#11 0.599   Downloading tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+#11 0.621 Downloading tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (443 kB)
+#11 0.680    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 443.9/443.9 kB 7.6 MB/s eta 0:00:00
+#11 0.726 Installing collected packages: tornado
+#11 0.940 Successfully installed tornado-6.5.2
+#11 0.940 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.945 
+#11 0.945 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.945 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.0s
+
+#12 [ 8/26] RUN ["pip","install","ipython"]
+#12 0.578 Collecting ipython
+#12 0.616   Downloading ipython-9.6.0-py3-none-any.whl.metadata (4.4 kB)
+#12 0.677 Collecting decorator (from ipython)
+#12 0.687   Downloading decorator-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+#12 0.720 Collecting ipython-pygments-lexers (from ipython)
+#12 0.732   Downloading ipython_pygments_lexers-1.1.1-py3-none-any.whl.metadata (1.1 kB)
+#12 0.778 Collecting jedi>=0.16 (from ipython)
+#12 0.787   Downloading jedi-0.19.2-py2.py3-none-any.whl.metadata (22 kB)
+#12 0.826 Collecting matplotlib-inline (from ipython)
+#12 0.835   Downloading matplotlib_inline-0.2.1-py3-none-any.whl.metadata (2.3 kB)
+#12 0.874 Collecting pexpect>4.3 (from ipython)
+#12 0.883   Downloading pexpect-4.9.0-py2.py3-none-any.whl.metadata (2.5 kB)
+#12 0.946 Collecting prompt_toolkit<3.1.0,>=3.0.41 (from ipython)
+#12 0.955   Downloading prompt_toolkit-3.0.52-py3-none-any.whl.metadata (6.4 kB)
+#12 1.012 Collecting pygments>=2.4.0 (from ipython)
+#12 1.021   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#12 1.065 Collecting stack_data (from ipython)
+#12 1.074   Downloading stack_data-0.6.3-py3-none-any.whl.metadata (18 kB)
+#12 1.116 Collecting traitlets>=5.13.0 (from ipython)
+#12 1.125   Downloading traitlets-5.14.3-py3-none-any.whl.metadata (10 kB)
+#12 1.172 Collecting typing_extensions>=4.6 (from ipython)
+#12 1.180   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#12 1.242 Collecting parso<0.9.0,>=0.8.4 (from jedi>=0.16->ipython)
+#12 1.253   Downloading parso-0.8.5-py2.py3-none-any.whl.metadata (8.3 kB)
+#12 1.295 Collecting ptyprocess>=0.5 (from pexpect>4.3->ipython)
+#12 1.304   Downloading ptyprocess-0.7.0-py2.py3-none-any.whl.metadata (1.3 kB)
+#12 1.342 Collecting wcwidth (from prompt_toolkit<3.1.0,>=3.0.41->ipython)
+#12 1.354   Downloading wcwidth-0.2.14-py2.py3-none-any.whl.metadata (15 kB)
+#12 1.410 Collecting executing>=1.2.0 (from stack_data->ipython)
+#12 1.419   Downloading executing-2.2.1-py2.py3-none-any.whl.metadata (8.9 kB)
+#12 1.459 Collecting asttokens>=2.1.0 (from stack_data->ipython)
+#12 1.467   Downloading asttokens-3.0.0-py3-none-any.whl.metadata (4.7 kB)
+#12 1.606 Collecting pure-eval (from stack_data->ipython)
+#12 1.614   Downloading pure_eval-0.2.3-py3-none-any.whl.metadata (6.3 kB)
+#12 1.649 Downloading ipython-9.6.0-py3-none-any.whl (616 kB)
+#12 1.722    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 616.2/616.2 kB 9.2 MB/s eta 0:00:00
+#12 1.732 Downloading jedi-0.19.2-py2.py3-none-any.whl (1.6 MB)
+#12 1.891    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 10.0 MB/s eta 0:00:00
+#12 1.900 Downloading pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+#12 1.913    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.8/63.8 kB 4.9 MB/s eta 0:00:00
+#12 1.922 Downloading prompt_toolkit-3.0.52-py3-none-any.whl (391 kB)
+#12 1.974    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 391.4/391.4 kB 7.7 MB/s eta 0:00:00
+#12 1.983 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#12 2.119    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 9.0 MB/s eta 0:00:00
+#12 2.128 Downloading traitlets-5.14.3-py3-none-any.whl (85 kB)
+#12 2.143    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.4/85.4 kB 5.7 MB/s eta 0:00:00
+#12 2.156 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#12 2.167    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.5 MB/s eta 0:00:00
+#12 2.176 Downloading decorator-5.2.1-py3-none-any.whl (9.2 kB)
+#12 2.192 Downloading ipython_pygments_lexers-1.1.1-py3-none-any.whl (8.1 kB)
+#12 2.210 Downloading matplotlib_inline-0.2.1-py3-none-any.whl (9.5 kB)
+#12 2.228 Downloading stack_data-0.6.3-py3-none-any.whl (24 kB)
+#12 2.245 Downloading asttokens-3.0.0-py3-none-any.whl (26 kB)
+#12 2.263 Downloading executing-2.2.1-py2.py3-none-any.whl (28 kB)
+#12 2.292 Downloading parso-0.8.5-py2.py3-none-any.whl (106 kB)
+#12 2.309    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.7/106.7 kB 6.1 MB/s eta 0:00:00
+#12 2.318 Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+#12 2.335 Downloading pure_eval-0.2.3-py3-none-any.whl (11 kB)
+#12 2.365 Downloading wcwidth-0.2.14-py2.py3-none-any.whl (37 kB)
+#12 2.519 Installing collected packages: pure-eval, ptyprocess, wcwidth, typing_extensions, traitlets, pygments, pexpect, parso, executing, decorator, asttokens, stack_data, prompt_toolkit, matplotlib-inline, jedi, ipython-pygments-lexers, ipython
+#12 4.163 Successfully installed asttokens-3.0.0 decorator-5.2.1 executing-2.2.1 ipython-9.6.0 ipython-pygments-lexers-1.1.1 jedi-0.19.2 matplotlib-inline-0.2.1 parso-0.8.5 pexpect-4.9.0 prompt_toolkit-3.0.52 ptyprocess-0.7.0 pure-eval-0.2.3 pygments-2.19.2 stack_data-0.6.3 traitlets-5.14.3 typing_extensions-4.15.0 wcwidth-0.2.14
+#12 4.164 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 4.170 
+#12 4.170 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 4.170 [notice] To update, run: pip install --upgrade pip
+#12 DONE 4.6s
+
+#13 [ 9/26] RUN ["apt-get","install","-y","unzip"]
+#13 0.257 Reading package lists...
+#13 0.686 Building dependency tree...
+#13 0.791 Reading state information...
+#13 1.010 unzip is already the newest version (6.0-29).
+#13 1.010 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+#13 DONE 1.0s
+
+#14 [10/26] RUN ["apt-get","install","-y","cmake"]
+#14 0.230 Reading package lists...
+#14 0.657 Building dependency tree...
+#14 0.765 Reading state information...
+#14 0.915 The following additional packages will be installed:
+#14 0.917   cmake-data libarchive13t64 libjsoncpp26 librhash1 libuv1t64
+#14 0.918 Suggested packages:
+#14 0.918   cmake-doc cmake-format elpa-cmake-mode ninja-build lrzip
+#14 1.003 The following NEW packages will be installed:
+#14 1.004   cmake cmake-data libarchive13t64 libjsoncpp26 librhash1 libuv1t64
+#14 1.041 0 upgraded, 6 newly installed, 0 to remove and 0 not upgraded.
+#14 1.041 Need to get 15.0 MB of archives.
+#14 1.041 After this operation, 55.9 MB of additional disk space will be used.
+#14 1.041 Get:1 http://deb.debian.org/debian trixie/main amd64 cmake-data all 3.31.6-2 [2268 kB]
+#14 1.230 Get:2 http://deb.debian.org/debian trixie/main amd64 libarchive13t64 amd64 3.7.4-4 [349 kB]
+#14 1.252 Get:3 http://deb.debian.org/debian trixie/main amd64 libjsoncpp26 amd64 1.9.6-3 [81.7 kB]
+#14 1.258 Get:4 http://deb.debian.org/debian trixie/main amd64 librhash1 amd64 1.4.5-1 [132 kB]
+#14 1.263 Get:5 http://deb.debian.org/debian trixie/main amd64 libuv1t64 amd64 1.50.0-2 [154 kB]
+#14 1.276 Get:6 http://deb.debian.org/debian trixie/main amd64 cmake amd64 3.31.6-2 [12.0 MB]
+#14 2.300 debconf: unable to initialize frontend: Dialog
+#14 2.300 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#14 2.300 debconf: falling back to frontend: Readline
+#14 2.305 debconf: unable to initialize frontend: Readline
+#14 2.305 debconf: (This frontend requires a controlling tty.)
+#14 2.305 debconf: falling back to frontend: Teletype
+#14 2.308 debconf: unable to initialize frontend: Teletype
+#14 2.308 debconf: (This frontend requires a controlling tty.)
+#14 2.308 debconf: falling back to frontend: Noninteractive
+#14 2.788 Fetched 15.0 MB in 1s (14.0 MB/s)
+#14 2.847 Selecting previously unselected package cmake-data.
+#14 2.847 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 26761 files and directories currently installed.)
+#14 2.877 Preparing to unpack .../0-cmake-data_3.31.6-2_all.deb ...
+#14 2.889 Unpacking cmake-data (3.31.6-2) ...
+#14 3.227 Selecting previously unselected package libarchive13t64:amd64.
+#14 3.230 Preparing to unpack .../1-libarchive13t64_3.7.4-4_amd64.deb ...
+#14 3.247 Unpacking libarchive13t64:amd64 (3.7.4-4) ...
+#14 3.312 Selecting previously unselected package libjsoncpp26:amd64.
+#14 3.314 Preparing to unpack .../2-libjsoncpp26_1.9.6-3_amd64.deb ...
+#14 3.322 Unpacking libjsoncpp26:amd64 (1.9.6-3) ...
+#14 3.397 Selecting previously unselected package librhash1:amd64.
+#14 3.399 Preparing to unpack .../3-librhash1_1.4.5-1_amd64.deb ...
+#14 3.407 Unpacking librhash1:amd64 (1.4.5-1) ...
+#14 3.470 Selecting previously unselected package libuv1t64:amd64.
+#14 3.471 Preparing to unpack .../4-libuv1t64_1.50.0-2_amd64.deb ...
+#14 3.479 Unpacking libuv1t64:amd64 (1.50.0-2) ...
+#14 3.546 Selecting previously unselected package cmake.
+#14 3.548 Preparing to unpack .../5-cmake_3.31.6-2_amd64.deb ...
+#14 3.556 Unpacking cmake (3.31.6-2) ...
+#14 3.906 Setting up libuv1t64:amd64 (1.50.0-2) ...
+#14 3.929 Setting up libjsoncpp26:amd64 (1.9.6-3) ...
+#14 3.951 Setting up cmake-data (3.31.6-2) ...
+#14 3.977 Setting up librhash1:amd64 (1.4.5-1) ...
+#14 4.000 Setting up libarchive13t64:amd64 (3.7.4-4) ...
+#14 4.036 Setting up cmake (3.31.6-2) ...
+#14 4.066 Processing triggers for libc-bin (2.41-12) ...
+#14 DONE 4.5s
+
+#15 [11/26] RUN ["pip","install","scipy"]
+#15 0.667 Collecting scipy
+#15 0.715   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#15 0.744      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.0 MB/s eta 0:00:00
+#15 0.772 Requirement already satisfied: numpy<2.6,>=1.25.2 in /usr/local/lib/python3.11/site-packages (from scipy) (2.3.4)
+#15 0.787 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#15 3.184    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 11.2 MB/s eta 0:00:00
+#15 3.391 Installing collected packages: scipy
+#15 6.068 Successfully installed scipy-1.16.3
+#15 6.068 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#15 6.074 
+#15 6.074 [notice] A new release of pip is available: 24.0 -> 25.3
+#15 6.074 [notice] To update, run: pip install --upgrade pip
+#15 DONE 7.3s
+
+#16 [12/26] RUN ["apt-get","install","-y","python-setuptools"]
+#16 0.218 Reading package lists...
+#16 0.670 Building dependency tree...
+#16 0.774 Reading state information...
+#16 0.789 Package python-setuptools is not available, but is referred to by another package.
+#16 0.789 This may mean that the package is missing, has been obsoleted, or
+#16 0.789 is only available from another source
+#16 0.789 
+#16 0.791 E: Package 'python-setuptools' has no installation candidate
+#16 ERROR: process "apt-get install -y python-setuptools" did not complete successfully: exit code: 100
+------
+ > [12/26] RUN ["apt-get","install","-y","python-setuptools"]:
+
+
+0.789 Package python-setuptools is not available, but is referred to by another package.
+0.789 This may mean that the package is missing, has been obsoleted, or
+0.789 is only available from another source
+0.789 
+0.791 E: Package 'python-setuptools' has no installation candidate
+------
+Dockerfile:12
+--------------------
+  10 |     RUN ["apt-get","install","-y","cmake"]
+  11 |     RUN ["pip","install","scipy"]
+  12 | >>> RUN ["apt-get","install","-y","python-setuptools"]
+  13 |     RUN ["apt-get","install","-y","python-numpy"]
+  14 |     RUN ["apt-get","install","-y","python2.7"]
+--------------------
+ERROR: failed to build: failed to solve: process "apt-get install -y python-setuptools" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/default/default/3k3hnc2p4h6d2g5ajq7oyw7rx
+[2025-10-29 19:25:11] ERROR: Build failed for b26bc0333cc18660d07baeb923ce9021

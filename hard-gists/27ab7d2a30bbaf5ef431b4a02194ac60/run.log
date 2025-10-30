@@ -1,0 +1,17 @@
+=== Docker Run Log for 27ab7d2a30bbaf5ef431b4a02194ac60 ===
+Started at: Mi 29. Okt 13:15:34 CET 2025
+
+[2025-10-29 13:16:52] START: Running container for 27ab7d2a30bbaf5ef431b4a02194ac60
+[2025-10-29 13:16:53] SUCCESS: Container 5fdec784b979a65ddbead77f7ab13788364c2ebec1ac9a77e22421450a7de516 started for 27ab7d2a30bbaf5ef431b4a02194ac60
+=== Container logs for 27ab7d2a30bbaf5ef431b4a02194ac60 ===
+2025-10-29 12:16:53.458674: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-10-29 12:16:53.490962: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-29 12:16:54.769270: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Traceback (most recent call last):
+  File "/snippet.py", line 3, in <module>
+    RNNCell = tf.nn.rnn_cell.RNNCell
+              ^^^^^^^^^^^^^^
+AttributeError: module 'tensorflow._api.v2.nn' has no attribute 'rnn_cell'
+=== End of logs for 27ab7d2a30bbaf5ef431b4a02194ac60 ===
+[2025-10-29 13:16:55] INFO: Container 5fdec784b979a65ddbead77f7ab13788364c2ebec1ac9a77e22421450a7de516 has stopped

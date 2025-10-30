@@ -1,0 +1,114 @@
+=== Docker Build Log for 3772157 ===
+Started at: Mi 29. Okt 13:59:19 CET 2025
+
+[2025-10-29 13:59:19] START: Building image for 3772157
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 229B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.69kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/3772157/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","numpy"]
+#7 2.092 Collecting numpy
+#7 2.123   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.155      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 1.8 MB/s eta 0:00:00
+#7 2.173 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 2.808    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 24.7 MB/s eta 0:00:00
+#7 2.884 Installing collected packages: numpy
+#7 4.344 Successfully installed numpy-2.3.4
+#7 4.345 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.440 
+#7 4.440 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.440 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.3s
+
+#8 [4/5] RUN ["pip","install","scipy"]
+#8 0.629 Collecting scipy
+#8 0.659   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#8 0.686      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.1 MB/s eta 0:00:00
+#8 0.716 Requirement already satisfied: numpy<2.6,>=1.25.2 in /usr/local/lib/python3.11/site-packages (from scipy) (2.3.4)
+#8 0.731 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#8 2.108    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 18.2 MB/s eta 0:00:00
+#8 2.259 Installing collected packages: scipy
+#8 4.851 Successfully installed scipy-1.16.3
+#8 4.851 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 4.856 
+#8 4.856 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 4.856 [notice] To update, run: pip install --upgrade pip
+#8 DONE 5.7s
+
+#9 [5/5] RUN ["pip","install","matplotlib"]
+#9 0.621 Collecting matplotlib
+#9 0.653   Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#9 0.749 Collecting contourpy>=1.0.1 (from matplotlib)
+#9 0.758   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#9 0.797 Collecting cycler>=0.10 (from matplotlib)
+#9 0.805   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#9 0.972 Collecting fonttools>=4.22.0 (from matplotlib)
+#9 0.983   Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+#9 1.031      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.3/112.3 kB 2.3 MB/s eta 0:00:00
+#9 1.104 Collecting kiwisolver>=1.3.1 (from matplotlib)
+#9 1.114   Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+#9 1.128 Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.11/site-packages (from matplotlib) (2.3.4)
+#9 1.179 Collecting packaging>=20.0 (from matplotlib)
+#9 1.187   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#9 1.363 Collecting pillow>=8 (from matplotlib)
+#9 1.371   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#9 1.432 Collecting pyparsing>=3 (from matplotlib)
+#9 1.440   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#9 1.478 Collecting python-dateutil>=2.7 (from matplotlib)
+#9 1.486   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#9 1.573 Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib)
+#9 1.581   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#9 1.603 Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+#9 1.946    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 25.5 MB/s eta 0:00:00
+#9 1.955 Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+#9 1.975    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 355.2/355.2 kB 18.2 MB/s eta 0:00:00
+#9 1.983 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#9 2.003 Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#9 2.193    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 26.5 MB/s eta 0:00:00
+#9 2.202 Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+#9 2.259    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 26.2 MB/s eta 0:00:00
+#9 2.267 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#9 2.279    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.3 MB/s eta 0:00:00
+#9 2.288 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#9 2.567    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 25.3 MB/s eta 0:00:00
+#9 2.575 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#9 2.589    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 8.0 MB/s eta 0:00:00
+#9 2.597 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#9 2.615    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 13.9 MB/s eta 0:00:00
+#9 2.623 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#9 2.813 Installing collected packages: six, pyparsing, pillow, packaging, kiwisolver, fonttools, cycler, contourpy, python-dateutil, matplotlib
+#9 4.836 Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.60.1 kiwisolver-1.4.9 matplotlib-3.10.7 packaging-25.0 pillow-12.0.0 pyparsing-3.2.5 python-dateutil-2.9.0.post0 six-1.17.0
+#9 4.836 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 4.841 
+#9 4.841 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 4.841 [notice] To update, run: pip install --upgrade pip
+#9 DONE 5.4s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.9s done
+#10 writing image sha256:b553830027071886a91b67f7a64f8da7d657ecb529a72dda62778af7792717b5 done
+#10 naming to docker.io/library/test-image-3772157 done
+#10 DONE 0.9s
+
+View build details: docker-desktop://dashboard/build/default/default/d2m9m996thb298pmc0j7f4zqd
+[2025-10-29 13:59:37] SUCCESS: Build completed for 3772157

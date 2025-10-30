@@ -1,0 +1,20 @@
+=== Docker Run Log for ef6caa586b647c3c032a4f84d52e3a11 ===
+Started at: Mi 29. Okt 21:12:23 CET 2025
+
+[2025-10-29 21:14:44] START: Running container for ef6caa586b647c3c032a4f84d52e3a11
+[2025-10-29 21:14:45] SUCCESS: Container 9cf10c6eeb52896073c260857d6dc457ef41bfcbd94a0bbdf4bdad4336a39eef started for ef6caa586b647c3c032a4f84d52e3a11
+=== Container logs for ef6caa586b647c3c032a4f84d52e3a11 ===
+2025-10-29 20:14:45.561024: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-10-29 20:14:45.596577: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-29 20:14:46.836011: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-10-29 20:14:46.990564: E external/local_xla/xla/stream_executor/cuda/cuda_platform.cc:51] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+Traceback (most recent call last):
+  File "/snippet.py", line 30, in <module>
+    write_log(callback, train_names, logs, batch_no)
+  File "/snippet.py", line 10, in write_log
+    summary = tf.Summary()
+              ^^^^^^^^^^
+AttributeError: module 'tensorflow' has no attribute 'Summary'. Did you mean: 'summary'?
+=== End of logs for ef6caa586b647c3c032a4f84d52e3a11 ===
+[2025-10-29 21:14:47] INFO: Container 9cf10c6eeb52896073c260857d6dc457ef41bfcbd94a0bbdf4bdad4336a39eef has stopped

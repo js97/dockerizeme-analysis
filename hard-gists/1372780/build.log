@@ -1,0 +1,276 @@
+=== Docker Build Log for 1372780 ===
+Started at: Mi 29. Okt 12:10:30 CET 2025
+
+[2025-10-29 12:10:30] START: Building image for 1372780
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 394B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.27kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/10] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/10] COPY hard-gists/1372780/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/10] RUN ["pip","install","simpleblogging"]
+#7 1.904 Collecting simpleblogging
+#7 1.945   Downloading simpleblogging-2.0.13.tar.gz (1.4 MB)
+#7 2.028      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 17.7 MB/s eta 0:00:00
+#7 2.061   Preparing metadata (setup.py): started
+#7 2.444   Preparing metadata (setup.py): finished with status 'done'
+#7 2.484 Collecting flask (from simpleblogging)
+#7 2.493   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#7 2.528 Collecting flask_seasurf (from simpleblogging)
+#7 2.536   Downloading Flask_SeaSurf-2.0.0-py3-none-any.whl.metadata (2.4 kB)
+#7 2.574 Collecting pony (from simpleblogging)
+#7 2.582   Downloading pony-0.7.19-py3-none-any.whl.metadata (2.8 kB)
+#7 2.629 Collecting markdown (from simpleblogging)
+#7 2.637   Downloading markdown-3.9-py3-none-any.whl.metadata (5.1 kB)
+#7 2.676 Collecting python_dateutil (from simpleblogging)
+#7 2.684   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#7 2.719 Collecting flask_basicauth (from simpleblogging)
+#7 2.727   Downloading Flask-BasicAuth-0.2.0.tar.gz (16 kB)
+#7 2.743   Preparing metadata (setup.py): started
+#7 2.853   Preparing metadata (setup.py): finished with status 'done'
+#7 2.897 Collecting requests (from simpleblogging)
+#7 2.906   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.941 Collecting flask_script (from simpleblogging)
+#7 2.951   Downloading Flask-Script-2.0.6.tar.gz (43 kB)
+#7 2.962      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.1/43.1 kB 3.5 MB/s eta 0:00:00
+#7 2.968   Preparing metadata (setup.py): started
+#7 3.093   Preparing metadata (setup.py): finished with status 'done'
+#7 3.134 Collecting blinker>=1.9.0 (from flask->simpleblogging)
+#7 3.143   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#7 3.187 Collecting click>=8.1.3 (from flask->simpleblogging)
+#7 3.195   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#7 3.233 Collecting itsdangerous>=2.2.0 (from flask->simpleblogging)
+#7 3.241   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#7 3.280 Collecting jinja2>=3.1.2 (from flask->simpleblogging)
+#7 3.288   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#7 3.370 Collecting markupsafe>=2.1.1 (from flask->simpleblogging)
+#7 3.378   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#7 3.428 Collecting werkzeug>=3.1.0 (from flask->simpleblogging)
+#7 3.436   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#7 3.480 Collecting six>=1.5 (from python_dateutil->simpleblogging)
+#7 3.488   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 3.593 Collecting charset_normalizer<4,>=2 (from requests->simpleblogging)
+#7 3.602   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 3.645 Collecting idna<4,>=2.5 (from requests->simpleblogging)
+#7 3.653   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 3.713 Collecting urllib3<3,>=1.21.1 (from requests->simpleblogging)
+#7 3.721   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 3.788 Collecting certifi>=2017.4.17 (from requests->simpleblogging)
+#7 3.797   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 3.842 Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+#7 3.855    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 8.4 MB/s eta 0:00:00
+#7 3.865 Downloading Flask_SeaSurf-2.0.0-py3-none-any.whl (8.4 kB)
+#7 3.882 Downloading markdown-3.9-py3-none-any.whl (107 kB)
+#7 3.895    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.4/107.4 kB 9.2 MB/s eta 0:00:00
+#7 3.906 Downloading pony-0.7.19-py3-none-any.whl (317 kB)
+#7 3.927    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 317.3/317.3 kB 17.3 MB/s eta 0:00:00
+#7 3.935 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#7 3.955    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 11.9 MB/s eta 0:00:00
+#7 3.966 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 3.978    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 5.1 MB/s eta 0:00:00
+#7 3.985 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#7 4.001 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 4.020    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 8.8 MB/s eta 0:00:00
+#7 4.030 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 4.044    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.5 MB/s eta 0:00:00
+#7 4.054 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#7 4.065    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 9.3 MB/s eta 0:00:00
+#7 4.083 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 4.095    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 6.2 MB/s eta 0:00:00
+#7 4.105 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#7 4.124 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#7 4.141    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 7.6 MB/s eta 0:00:00
+#7 4.152 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#7 4.170 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 4.188 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 4.203    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 8.8 MB/s eta 0:00:00
+#7 4.213 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#7 4.231    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 12.9 MB/s eta 0:00:00
+#7 4.247 Building wheels for collected packages: simpleblogging, flask_basicauth, flask_script
+#7 4.247   Building wheel for simpleblogging (setup.py): started
+#7 4.542   Building wheel for simpleblogging (setup.py): finished with status 'done'
+#7 4.546   Created wheel for simpleblogging: filename=simpleblogging-2.0.13-py3-none-any.whl size=1420305 sha256=e0ff3e99416223e23af79714cd71395b6f4a9ccaa3be536714a3eef4fce68f31
+#7 4.546   Stored in directory: /root/.cache/pip/wheels/fd/e2/b3/9b6c54b1528802381138968ff2744e2907209d33d23963a7f6
+#7 4.549   Building wheel for flask_basicauth (setup.py): started
+#7 4.681   Building wheel for flask_basicauth (setup.py): finished with status 'done'
+#7 4.681   Created wheel for flask_basicauth: filename=flask_basicauth-0.2.0-py3-none-any.whl size=4319 sha256=73d79da65212312ca4e2cacd5270be8be94dbdefbad07ef6e7f82eed884f11ca
+#7 4.681   Stored in directory: /root/.cache/pip/wheels/3f/54/3d/8dcca37cc410b1be1ea1812d17f8c1dc892ddf7356353ecee9
+#7 4.683   Building wheel for flask_script (setup.py): started
+#7 4.815   Building wheel for flask_script (setup.py): finished with status 'done'
+#7 4.815   Created wheel for flask_script: filename=flask_script-2.0.6-py3-none-any.whl size=14117 sha256=20651f0e9e4b504fd1fe47257f7c54377029dd1360347a2f6b07ce42204b87e5
+#7 4.816   Stored in directory: /root/.cache/pip/wheels/a5/ce/0a/be0f1a9d96ecd772107fb97b1f69521a0196b7c70ff66b64b7
+#7 4.817 Successfully built simpleblogging flask_basicauth flask_script
+#7 4.875 Installing collected packages: pony, urllib3, six, markupsafe, markdown, itsdangerous, idna, click, charset_normalizer, certifi, blinker, werkzeug, requests, python_dateutil, jinja2, flask, flask_seasurf, flask_script, flask_basicauth, simpleblogging
+#7 5.836 Successfully installed blinker-1.9.0 certifi-2025.10.5 charset_normalizer-3.4.4 click-8.3.0 flask-3.1.2 flask_basicauth-0.2.0 flask_script-2.0.6 flask_seasurf-2.0.0 idna-3.11 itsdangerous-2.2.0 jinja2-3.1.6 markdown-3.9 markupsafe-3.0.3 pony-0.7.19 python_dateutil-2.9.0.post0 requests-2.32.5 simpleblogging-2.0.13 six-1.17.0 urllib3-2.5.0 werkzeug-3.1.3
+#7 5.837 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.931 
+#7 5.931 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.931 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.3s
+
+#8 [ 4/10] RUN ["pip","install","simpl"]
+#8 0.522 Collecting simpl
+#8 0.556   Downloading simpl-1.1.0-py2.py3-none-any.whl.metadata (784 bytes)
+#8 0.572 Requirement already satisfied: six in /usr/local/lib/python3.11/site-packages (from simpl) (1.17.0)
+#8 0.582 Downloading simpl-1.1.0-py2.py3-none-any.whl (63 kB)
+#8 0.607    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.4/63.4 kB 2.5 MB/s eta 0:00:00
+#8 0.669 Installing collected packages: simpl
+#8 0.728 Successfully installed simpl-1.1.0
+#8 0.728 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.734 
+#8 0.734 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.734 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.8s
+
+#9 [ 5/10] RUN ["pip","install","six"]
+#9 0.421 Requirement already satisfied: six in /usr/local/lib/python3.11/site-packages (1.17.0)
+#9 0.479 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.483 
+#9 0.483 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.483 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.6s
+
+#10 [ 6/10] RUN ["pip","install","pytest"]
+#10 0.541 Collecting pytest
+#10 0.574   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#10 0.628 Collecting iniconfig>=1 (from pytest)
+#10 0.636   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#10 0.688 Collecting packaging>=20 (from pytest)
+#10 0.697   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#10 0.741 Collecting pluggy<2,>=1.5 (from pytest)
+#10 0.749   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#10 0.802 Collecting pygments>=2.7.2 (from pytest)
+#10 0.809   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#10 0.838 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#10 0.884    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 8.2 MB/s eta 0:00:00
+#10 0.892 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#10 0.909 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#10 0.921    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.4 MB/s eta 0:00:00
+#10 0.929 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#10 0.949 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#10 1.000    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 24.4 MB/s eta 0:00:00
+#10 1.078 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#10 1.837 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#10 1.837 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.842 
+#10 1.842 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.842 [notice] To update, run: pip install --upgrade pip
+#10 DONE 2.0s
+
+#11 [ 7/10] RUN ["pip","install","py"]
+#11 0.511 Collecting py
+#11 0.547   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#11 0.570 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#11 0.606    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.7 MB/s eta 0:00:00
+#11 0.674 Installing collected packages: py
+#11 0.750 Successfully installed py-1.11.0
+#11 0.750 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.755 
+#11 0.755 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.755 [notice] To update, run: pip install --upgrade pip
+#11 DONE 0.8s
+
+#12 [ 8/10] RUN ["pip","install","pymongo"]
+#12 0.813 Collecting pymongo
+#12 0.848   Downloading pymongo-4.15.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+#12 0.920 Collecting dnspython<3.0.0,>=1.16.0 (from pymongo)
+#12 0.929   Downloading dnspython-2.8.0-py3-none-any.whl.metadata (5.7 kB)
+#12 0.968 Downloading pymongo-4.15.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.5 MB)
+#12 1.048    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 18.8 MB/s eta 0:00:00
+#12 1.056 Downloading dnspython-2.8.0-py3-none-any.whl (331 kB)
+#12 1.081    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 331.1/331.1 kB 14.3 MB/s eta 0:00:00
+#12 1.192 Installing collected packages: dnspython, pymongo
+#12 1.646 Successfully installed dnspython-2.8.0 pymongo-4.15.3
+#12 1.646 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 1.651 
+#12 1.651 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 1.651 [notice] To update, run: pip install --upgrade pip
+#12 DONE 1.8s
+
+#13 [ 9/10] RUN ["pip","install","simplejson"]
+#13 0.603 Collecting simplejson
+#13 0.637   Downloading simplejson-3.20.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.2 kB)
+#13 0.667 Downloading simplejson-3.20.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (144 kB)
+#13 0.703    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.9/144.9 kB 4.1 MB/s eta 0:00:00
+#13 0.791 Installing collected packages: simplejson
+#13 0.854 Successfully installed simplejson-3.20.2
+#13 0.854 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 0.859 
+#13 0.859 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 0.859 [notice] To update, run: pip install --upgrade pip
+#13 DONE 0.9s
+
+#14 [10/10] RUN ["pip","install","pymongo_dbref"]
+#14 0.507 Collecting pymongo_dbref
+#14 0.539   Downloading pymongo_dbref-0.0.1.tar.gz (12 kB)
+#14 0.556   Preparing metadata (setup.py): started
+#14 0.731   Preparing metadata (setup.py): finished with status 'error'
+#14 0.734   error: subprocess-exited-with-error
+#14 0.734   
+#14 0.734   × python setup.py egg_info did not run successfully.
+#14 0.734   │ exit code: 1
+#14 0.734   ╰─> [8 lines of output]
+#14 0.734       Traceback (most recent call last):
+#14 0.734         File "<string>", line 2, in <module>
+#14 0.734         File "<pip-setuptools-caller>", line 34, in <module>
+#14 0.734         File "/tmp/pip-install-fbbck5yq/pymongo-dbref_8d70fd52a243439093abb90aa7568626/setup.py", line 14, in <module>
+#14 0.734           from pymongo_dbref import __version__, __author__, __author_email__, __description__, __url__, __title__
+#14 0.734         File "/tmp/pip-install-fbbck5yq/pymongo-dbref_8d70fd52a243439093abb90aa7568626/pymongo_dbref/__init__.py", line 34, in <module>
+#14 0.734           from Queue import LifoQueue
+#14 0.734       ModuleNotFoundError: No module named 'Queue'
+#14 0.734       [end of output]
+#14 0.734   
+#14 0.734   note: This error originates from a subprocess, and is likely not a problem with pip.
+#14 0.735 error: metadata-generation-failed
+#14 0.735 
+#14 0.735 × Encountered error while generating package metadata.
+#14 0.735 ╰─> See above for output.
+#14 0.735 
+#14 0.735 note: This is an issue with the package mentioned above, not pip.
+#14 0.735 hint: See above for details.
+#14 0.740 
+#14 0.740 [notice] A new release of pip is available: 24.0 -> 25.3
+#14 0.740 [notice] To update, run: pip install --upgrade pip
+#14 ERROR: process "pip install pymongo_dbref" did not complete successfully: exit code: 1
+------
+ > [10/10] RUN ["pip","install","pymongo_dbref"]:
+0.735 error: metadata-generation-failed
+0.735 
+0.735 × Encountered error while generating package metadata.
+0.735 ╰─> See above for output.
+0.735 
+0.735 note: This is an issue with the package mentioned above, not pip.
+0.735 hint: See above for details.
+0.740 
+0.740 [notice] A new release of pip is available: 24.0 -> 25.3
+0.740 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:10
+--------------------
+   8 |     RUN ["pip","install","pymongo"]
+   9 |     RUN ["pip","install","simplejson"]
+  10 | >>> RUN ["pip","install","pymongo_dbref"]
+  11 |     CMD ["python3","/snippet.py"]
+  12 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install pymongo_dbref" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/ocbwrjjfqg64o10tsof9uxxon
+[2025-10-29 12:10:44] ERROR: Build failed for 1372780

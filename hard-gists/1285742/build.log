@@ -1,0 +1,73 @@
+=== Docker Build Log for 1285742 ===
+Started at: Mi 29. Okt 12:05:02 CET 2025
+
+[2025-10-29 12:05:02] START: Building image for 1285742
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 162B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.97kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/1285742/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","image"]
+#7 1.864 Collecting image
+#7 1.897   Downloading image-1.5.33.tar.gz (15 kB)
+#7 1.912   Preparing metadata (setup.py): started
+#7 2.294   Preparing metadata (setup.py): finished with status 'done'
+#7 2.482 Collecting pillow (from image)
+#7 2.494   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#7 2.604 Collecting django (from image)
+#7 2.614   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.653 Collecting six (from image)
+#7 2.661   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.708 Collecting asgiref>=3.8.1 (from django->image)
+#7 2.719   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.757 Collecting sqlparse>=0.3.1 (from django->image)
+#7 2.766   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 3.053 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.411    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 23.3 MB/s eta 0:00:00
+#7 3.421 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#7 3.696    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 25.7 MB/s eta 0:00:00
+#7 3.705 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.725 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.743 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.755    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.4 MB/s eta 0:00:00
+#7 3.821 Building wheels for collected packages: image
+#7 3.822   Building wheel for image (setup.py): started
+#7 3.997   Building wheel for image (setup.py): finished with status 'done'
+#7 3.998   Created wheel for image: filename=image-1.5.33-py2.py3-none-any.whl size=19554 sha256=765a6183552dc9186b34f4d11cf54b2e7edcf4ddc3938e1af6edace216b27a66
+#7 3.998   Stored in directory: /root/.cache/pip/wheels/62/40/4f/3c9a8d0f22a1a6f966975a460e5cb509a1e7dc42e2ce5d9a6d
+#7 3.999 Successfully built image
+#7 4.055 Installing collected packages: sqlparse, six, pillow, asgiref, django, image
+#7 5.713 Successfully installed asgiref-3.10.0 django-5.2.7 image-1.5.33 pillow-12.0.0 six-1.17.0 sqlparse-0.5.3
+#7 5.714 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.803 
+#7 5.803 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.803 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.2s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.6s done
+#8 writing image sha256:fe9cd55f06dff0963e2e5958db884e43246058d3a26d2d8ead756c37431576d0 done
+#8 naming to docker.io/library/test-image-1285742 done
+#8 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/default/default/iaqao960h2j23wecngrai169a
+[2025-10-29 12:05:09] SUCCESS: Build completed for 1285742

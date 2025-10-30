@@ -1,0 +1,32 @@
+=== Docker Run Log for 28adf35f1e4ba3145e2d ===
+Started at: Mi 29. Okt 13:20:07 CET 2025
+
+[2025-10-29 13:20:12] START: Running container for 28adf35f1e4ba3145e2d
+[2025-10-29 13:20:12] SUCCESS: Container d9da1e23d4a90deef0a9c2df7b98951645ca58017911a2b6bd061da5951bb025 started for 28adf35f1e4ba3145e2d
+=== Container logs for 28adf35f1e4ba3145e2d ===
+Traceback (most recent call last):
+  File "/snippet.py", line 27, in <module>
+    DolarParse()
+  File "/snippet.py", line 11, in DolarParse
+    data = urlopen(Request(pasteURL, headers={'User-Agent': 'Mozilla'})).read()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+=== End of logs for 28adf35f1e4ba3145e2d ===
+[2025-10-29 13:20:15] INFO: Container d9da1e23d4a90deef0a9c2df7b98951645ca58017911a2b6bd061da5951bb025 has stopped

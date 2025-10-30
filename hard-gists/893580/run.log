@@ -1,0 +1,15 @@
+=== Docker Run Log for 893580 ===
+Started at: Mi 29. Okt 18:04:47 CET 2025
+
+[2025-10-29 18:05:03] START: Running container for 893580
+[2025-10-29 18:05:03] SUCCESS: Container 1e7e61add77c38c9dbdc0402fec1e42dd0795e9e857d5ac3b031fdbf7e293b6c started for 893580
+=== Container logs for 893580 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 40, in <module>
+    main()
+  File "/snippet.py", line 17, in main
+    outf = open('test/annotation/vitis_vinifera.bed', 'w')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'test/annotation/vitis_vinifera.bed'
+=== End of logs for 893580 ===
+[2025-10-29 18:05:05] INFO: Container 1e7e61add77c38c9dbdc0402fec1e42dd0795e9e857d5ac3b031fdbf7e293b6c has stopped

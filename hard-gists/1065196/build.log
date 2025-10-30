@@ -1,0 +1,98 @@
+=== Docker Build Log for 1065196 ===
+Started at: Mi 29. Okt 11:48:17 CET 2025
+
+[2025-10-29 11:48:17] START: Building image for 1065196
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 237B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.10kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/1065196/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","dj.choices"]
+#7 1.894 Collecting dj.choices
+#7 1.932   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 1.947   Preparing metadata (setup.py): started
+#7 2.338   Preparing metadata (setup.py): finished with status 'done'
+#7 2.440 Collecting django (from dj.choices)
+#7 2.449   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.486 Collecting six (from dj.choices)
+#7 2.495   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.545 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.554   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.592 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.600   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.626 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 2.956    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 25.3 MB/s eta 0:00:00
+#7 2.965 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.982 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.004 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.015    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.5 MB/s eta 0:00:00
+#7 3.054 Building wheels for collected packages: dj.choices
+#7 3.054   Building wheel for dj.choices (setup.py): started
+#7 3.223   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.224   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=3d2d42ac45ec2b93b01b4901437e5b697c67d392d34dcfd9d61bc45d1dc513bd
+#7 3.224   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.226 Successfully built dj.choices
+#7 3.276 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 4.741 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 4.741 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.831 
+#7 4.831 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.831 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.2s
+
+#8 [4/5] RUN ["pip","install","Django"]
+#8 0.438 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#8 0.441 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#8 0.442 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#8 0.484 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.489 
+#8 0.489 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.489 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.6s
+
+#9 [5/5] RUN ["pip","install","johnny-cache"]
+#9 0.499 Collecting johnny-cache
+#9 0.533   Downloading johnny-cache-1.4.tar.gz (15 kB)
+#9 0.546   Preparing metadata (setup.py): started
+#9 0.669   Preparing metadata (setup.py): finished with status 'done'
+#9 0.671 Building wheels for collected packages: johnny-cache
+#9 0.679   Building wheel for johnny-cache (setup.py): started
+#9 0.829   Building wheel for johnny-cache (setup.py): finished with status 'done'
+#9 0.829   Created wheel for johnny-cache: filename=johnny_cache-1.4-py3-none-any.whl size=19701 sha256=4da82ab35f9ee815e3fcb4d16e22750b6955ebe3339228ae1f8992c502a7a534
+#9 0.829   Stored in directory: /root/.cache/pip/wheels/ce/83/a9/6781023172824d6870a0a4fa4c5e54e8f56e99a15c2a9a5fd2
+#9 0.831 Successfully built johnny-cache
+#9 0.872 Installing collected packages: johnny-cache
+#9 0.913 Successfully installed johnny-cache-1.4
+#9 0.913 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.919 
+#9 0.919 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.919 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.0s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.7s done
+#10 writing image sha256:69ca246fc66e58b64fb832ee130dec476665683b2f95c5c5bd9c91bc0595b71c done
+#10 naming to docker.io/library/test-image-1065196 done
+#10 DONE 0.7s
+
+View build details: docker-desktop://dashboard/build/default/default/le0h5dgnr4bmjdrq91qcjwm27
+[2025-10-29 11:48:25] SUCCESS: Build completed for 1065196

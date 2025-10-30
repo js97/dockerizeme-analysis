@@ -1,0 +1,101 @@
+=== Docker Build Log for 3abc9577bede0aeef25526b201732246 ===
+Started at: Mi 29. Okt 14:11:03 CET 2025
+
+[2025-10-29 14:11:03] START: Building image for 3abc9577bede0aeef25526b201732246
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 347B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 7.98kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/8] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/8] COPY hard-gists/3abc9577bede0aeef25526b201732246/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/8] RUN ["apt-get","update"]
+#7 0.306 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.306 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.319 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.329 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.659 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.659 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.249 Fetched 9833 kB in 1s (9737 kB/s)
+#7 1.249 Reading package lists...
+#7 DONE 1.9s
+
+#8 [4/8] RUN ["pip","install","idc"]
+#8 1.901 Collecting idc
+#8 1.939   Downloading idc-0.6.0.tar.gz (850 kB)
+#8 2.026      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 850.4/850.4 kB 10.0 MB/s eta 0:00:00
+#8 2.063   Preparing metadata (setup.py): started
+#8 3.011   Preparing metadata (setup.py): finished with status 'done'
+#8 3.041 Collecting pyOSC==0.3.5b-5294 (from idc)
+#8 3.051   Downloading pyOSC-0.3.5b-5294.tar.gz (33 kB)
+#8 3.064   Preparing metadata (setup.py): started
+#8 3.154   Preparing metadata (setup.py): finished with status 'error'
+#8 3.157   error: subprocess-exited-with-error
+#8 3.157   
+#8 3.157   × python setup.py egg_info did not run successfully.
+#8 3.157   │ exit code: 1
+#8 3.157   ╰─> [9 lines of output]
+#8 3.157       Traceback (most recent call last):
+#8 3.157         File "<string>", line 2, in <module>
+#8 3.157         File "<pip-setuptools-caller>", line 34, in <module>
+#8 3.157         File "/tmp/pip-install-ompmhwlg/pyosc_890be54b69264a579ffd5ff84e4fa0de/setup.py", line 5, in <module>
+#8 3.157           import OSC
+#8 3.157         File "/tmp/pip-install-ompmhwlg/pyosc_890be54b69264a579ffd5ff84e4fa0de/OSC.py", line 735
+#8 3.157           binary = struct.pack('>ll', 0L, 1L)
+#8 3.157                                       ^
+#8 3.157       SyntaxError: invalid decimal literal
+#8 3.157       [end of output]
+#8 3.157   
+#8 3.157   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 3.158 error: metadata-generation-failed
+#8 3.158 
+#8 3.158 × Encountered error while generating package metadata.
+#8 3.158 ╰─> See above for output.
+#8 3.158 
+#8 3.158 note: This is an issue with the package mentioned above, not pip.
+#8 3.158 hint: See above for details.
+#8 3.256 
+#8 3.256 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.256 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install idc" did not complete successfully: exit code: 1
+------
+ > [4/8] RUN ["pip","install","idc"]:
+3.158 error: metadata-generation-failed
+3.158 
+3.158 × Encountered error while generating package metadata.
+3.158 ╰─> See above for output.
+3.158 
+3.158 note: This is an issue with the package mentioned above, not pip.
+3.158 hint: See above for details.
+3.256 
+3.256 [notice] A new release of pip is available: 24.0 -> 25.3
+3.256 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/3abc9577bede0aeef25526b201732246/snippet.py /snippet.py
+   3 |     RUN ["apt-get","update"]
+   4 | >>> RUN ["pip","install","idc"]
+   5 |     RUN ["pip","install","requests"]
+   6 |     RUN ["apt-get","install","-y","git"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install idc" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/fcxn5d2khbnituzxsc2f4om37
+[2025-10-29 14:11:09] ERROR: Build failed for 3abc9577bede0aeef25526b201732246

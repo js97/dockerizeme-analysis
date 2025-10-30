@@ -1,0 +1,95 @@
+=== Docker Build Log for 4133c66ccf65c0ba1f5f5a5bc4fb7298 ===
+Started at: Mi 29. Okt 14:22:48 CET 2025
+
+[2025-10-29 14:22:48] START: Building image for 4133c66ccf65c0ba1f5f5a5bc4fb7298
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 401B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 7.86kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/9] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/9] COPY hard-gists/4133c66ccf65c0ba1f5f5a5bc4fb7298/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/9] RUN ["pip","install","pan-python"]
+#7 2.006 Collecting pan-python
+#7 2.046   Downloading pan_python-0.25.0-py3-none-any.whl.metadata (1.4 kB)
+#7 2.067 Downloading pan_python-0.25.0-py3-none-any.whl (60 kB)
+#7 2.088    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.3/60.3 kB 3.1 MB/s eta 0:00:00
+#7 2.121 Installing collected packages: pan-python
+#7 2.168 Successfully installed pan-python-0.25.0
+#7 2.168 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.257 
+#7 2.257 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.257 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.4s
+
+#8 [4/9] RUN ["pip","install","pandacan"]
+#8 0.518 Collecting pandacan
+#8 0.552   Downloading pandacan-0.0.9.tar.gz (36 kB)
+#8 0.574   Preparing metadata (setup.py): started
+#8 1.007   Preparing metadata (setup.py): finished with status 'done'
+#8 1.041 Collecting libusb1==1.6.6 (from pandacan)
+#8 1.050   Downloading libusb1-1.6.6.tar.gz (56 kB)
+#8 1.069      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.0/56.0 kB 2.7 MB/s eta 0:00:00
+#8 1.075   Preparing metadata (setup.py): started
+#8 1.169   Preparing metadata (setup.py): finished with status 'error'
+#8 1.172   error: subprocess-exited-with-error
+#8 1.172   
+#8 1.172   × python setup.py egg_info did not run successfully.
+#8 1.172   │ exit code: 1
+#8 1.172   ╰─> [1 lines of output]
+#8 1.172       error in libusb1 setup command: use_2to3 is invalid.
+#8 1.172       [end of output]
+#8 1.172   
+#8 1.172   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 1.173 error: metadata-generation-failed
+#8 1.173 
+#8 1.173 × Encountered error while generating package metadata.
+#8 1.173 ╰─> See above for output.
+#8 1.173 
+#8 1.173 note: This is an issue with the package mentioned above, not pip.
+#8 1.173 hint: See above for details.
+#8 1.178 
+#8 1.178 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.178 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install pandacan" did not complete successfully: exit code: 1
+------
+ > [4/9] RUN ["pip","install","pandacan"]:
+1.173 error: metadata-generation-failed
+1.173 
+1.173 × Encountered error while generating package metadata.
+1.173 ╰─> See above for output.
+1.173 
+1.173 note: This is an issue with the package mentioned above, not pip.
+1.173 hint: See above for details.
+1.178 
+1.178 [notice] A new release of pip is available: 24.0 -> 25.3
+1.178 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/4133c66ccf65c0ba1f5f5a5bc4fb7298/snippet.py /snippet.py
+   3 |     RUN ["pip","install","pan-python"]
+   4 | >>> RUN ["pip","install","pandacan"]
+   5 |     RUN ["pip","install","torch"]
+   6 |     RUN ["pip","install","numpy"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install pandacan" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/bevakd9d54ist1now35z6n909
+[2025-10-29 14:22:52] ERROR: Build failed for 4133c66ccf65c0ba1f5f5a5bc4fb7298

@@ -1,0 +1,42 @@
+=== Docker Run Log for f1a6bd3c8585c400c190 ===
+Started at: Mi 29. Okt 21:23:13 CET 2025
+
+[2025-10-29 21:23:35] START: Running container for f1a6bd3c8585c400c190
+[2025-10-29 21:23:35] SUCCESS: Container 231ef5c2ad51e66f3ae05e25efb5d200b4eaa59ea11e6c5e438e23a3c510e521 started for f1a6bd3c8585c400c190
+=== Container logs for f1a6bd3c8585c400c190 ===
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/theano/gof/lazylinker_c.py", line 76, in <module>
+    raise ImportError(
+ImportError: Version check of the existing lazylinker compiled file. Looking for version 0.211, but found None. Extra debug information: force_compile=False, _need_reload=True
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/theano/gof/lazylinker_c.py", line 99, in <module>
+    raise ImportError(
+ImportError: Version check of the existing lazylinker compiled file. Looking for version 0.211, but found None. Extra debug information: force_compile=False, _need_reload=True
+
+During handling of the above exception, another exception occurred:
+
+
+You can find the C code in this temporary file: /tmp/theano_compilation_error__rpsardv
+Traceback (most recent call last):
+  File "/snippet.py", line 13, in <module>
+    import lasagne
+  File "/usr/local/lib/python3.11/site-packages/lasagne/__init__.py", line 6, in <module>
+    import theano
+  File "/usr/local/lib/python3.11/site-packages/theano/__init__.py", line 110, in <module>
+    from theano.compile import (
+  File "/usr/local/lib/python3.11/site-packages/theano/compile/__init__.py", line 12, in <module>
+    from theano.compile.mode import *
+  File "/usr/local/lib/python3.11/site-packages/theano/compile/mode.py", line 11, in <module>
+    import theano.gof.vm
+  File "/usr/local/lib/python3.11/site-packages/theano/gof/vm.py", line 674, in <module>
+    from . import lazylinker_c
+  File "/usr/local/lib/python3.11/site-packages/theano/gof/lazylinker_c.py", line 139, in <module>
+    cmodule.GCC_compiler.compile_str(dirname, code, location=loc,
+  File "/usr/local/lib/python3.11/site-packages/theano/gof/cmodule.py", line 2410, in compile_str
+    raise Exception('Compilation failed (return status=%s): %s' %
+Exception: Compilation failed (return status=1): /root/.theano/compiledir_Linux-6.8--generic-x86_64-with-glibc2.41--3.11.14-64/lazylinker_ext/mod.cpp: In function ‘PyObject* pycall(CLazyLinker*, Py_ssize_t, int)’:. /root/.theano/compiledir_Linux-6.8--generic-x86_64-with-glibc2.41--3.11.14-64/lazylinker_ext/mod.cpp:499:25: error: ‘PyInt_AsLong’ was not declared in this scope; did you mean ‘PyLong_AsLong’?.   499 |           long icount = PyInt_AsLong(count);.       |                         ^~~~~~~~~~~~.       |                         PyLong_AsLong. /root/.theano/compiledir_Linux-6.8--generic-x86_64-with-glibc2.41--3.11.14-64/lazylinker_ext/mod.cpp:501:26: error: ‘PyInt_FromLong’ was not declared in this scope; did you mean ‘PyLong_FromLong’?.   501 |                          PyInt_FromLong(icount + 1));.       |                          ^~~~~~~~~~~~~~.       |                          PyLong_FromLong. /root/.theano/compiledir_Linux-6.8--generic-x86_64-with-glibc2.41--3.11.14-64/lazylinker_ext/mod.cpp: In function ‘int c_call(CLazyLinker*, Py_ssize_t, int)’:. /root/.theano/compiledir_Linux-6.8--generic-x86_64-with-glibc2.41--3.11.14-64/lazylinker_ext/mod.cpp:528:21: error: ‘PyInt_AsLong’ was not declared in this scope; did you mean ‘PyLong_AsLong’?.   528 |       long icount = PyInt_AsLong(count);.       |                     ^~~~~~~~~~~~.       |                     PyLong_AsLong. /root/.theano/compiledir_Linux-6.8--generic-x86_64-with-glibc2.41--3.11.14-64/lazylinker_ext/mod.cpp:529:51: error: ‘PyInt_FromLong’ was not declared in this scope; did you mean ‘PyLong_FromLong’?.   529 |       PyList_SetItem(self->call_counts, node_idx, PyInt_FromLong(icount+1));.       |                                                   ^~~~~~~~~~~~~~.       |                                                   PyLong_FromLong. /root/.theano/compiledir_Linux-6.8--generic-x86_64-with-glibc2.41--3.11.14-64/lazylinker_ext/mod.cpp: In function ‘PyObject* CLazyLinker_call(PyObject*, PyObject*, PyObject*)’:. /root/.theano/compiledir_Linux-6.8--generic-x86_64-with-glibc2.41--3.11.14-64/lazylinker_ext/mod.cpp:823:21: error: ‘PyInt_Check’ was not declared in this scope; did you mean ‘PySet_Check’?.   823 |               if (! PyInt_Check(elem)).       |                     ^~~~~~~~~~~.       |                     PySet_Check. /root/.theano/compiledir_Linux-6.8--generic-x86_64-with-glibc2.41--3.11.14-64/lazylinker_ext/mod.cpp:828:29: error: ‘PyInt_AsLong’ was not declared in this scope; did you mean ‘PyLong_AsLong’?.   828 |               output_subset[PyInt_AsLong(elem)] = 1;.       |                             ^~~~~~~~~~~~.       |                             PyLong_AsLong. /root/.theano/compiledir_Linux-6.8--generic-x86_64-with-glibc2.41--3.11.14-64/lazylinker_ext/mod.cpp:835:20: error: ‘PyInt_FromLong’ was not declared in this scope; did you mean ‘PyLong_FromLong’?.   835 |   PyObject * one = PyInt_FromLong(1);.       |                    ^~~~~~~~~~~~~~.       |                    PyLong_FromLong. /root/.theano/compiledir_Linux-6.8--generic-x86_64-with-glibc2.41--3.11.14-64/lazylinker_ext/mod.cpp: At global scope:. /root/.theano/compiledir_Linux-6.8--generic-x86_64-with-glibc2.41--3.11.14-64/lazylinker_ext/mod.cpp:1016:5: error: invalid conversion from ‘const char*’ to ‘Py_ssize_t’ {aka ‘long int’} [-fpermissive].  1016 |     "lazylinker_ext.CLazyLinker",             /*tp_name*/.       |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~.       |     |.       |     const char*. /root/.theano/compiledir_Linux-6.8--generic-x86_64-with-glibc2.41--3.11.14-64/lazylinker_ext/mod.cpp:1053:1: error: invalid conversion from ‘void (*)(PyObject*)’ {aka ‘void (*)(_object*)’} to ‘Py_ssize_t’ {aka ‘long int’} [-fpermissive].  1053 | };.       | ^.       | |.       | void (*)(PyObject*) {aka void (*)(_object*)}. /root/.theano/compiledir_Linux-6.8--generic-x86_64-with-glibc2.41--3.11.14-64/lazylinker_ext/mod.cpp:1053:1: error: invalid conversion from ‘PyObject* (*)(PyObject*, PyObject*, PyObject*)’ {aka ‘_object* (*)(_object*, _object*, _object*)’} to ‘reprfunc’ {aka ‘_object* (*)(_object*)’} [-fpermissive].  1053 | };.       | ^.       | |.       | PyObject* (*)(PyObject*, PyObject*, PyObject*) {aka _object* (*)(_object*, _object*, _object*)}. /root/.theano/compiledir_Linux-6.8--generic-x86_64-with-glibc2.41--3.11.14-64/lazylinker_ext/mod.cpp:1034:23: error: invalid conversion from ‘long unsigned int’ to ‘const char*’ [-fpermissive].  1034 |     Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,        /*tp_flags*/. /root/.theano/compiledir_Linux-6.8--generic-x86_64-with-glibc2.41--3.11.14-64/lazylinker_ext/mod.cpp:1035:5: error: cannot convert ‘const char*’ to ‘traverseproc’ {aka ‘int (*)(_object*, int (*)(_object*, void*), void*)’} in initialization.  1035 |     "CLazyLinker object",      /* tp_doc */.       |     ^~~~~~~~~~~~~~~~~~~~.       |     |.       |     const char*. /root/.theano/compiledir_Linux-6.8--generic-x86_64-with-glibc2.41--3.11.14-64/lazylinker_ext/mod.cpp: In function ‘PyObject* initlazylinker_ext()’:. /root/.theano/compiledir_Linux-6.8--generic-x86_64-with-glibc2.41--3.11.14-64/lazylinker_ext/mod.cpp:1093:9: error: return-statement with no value, in function returning ‘PyObject*’ {aka ‘_object*’} [-fpermissive].  1093 |         return RETVAL;.       |         ^~~~~~. /root/.theano/compiledir_Linux-6.8--generic-x86_64-with-glibc2.41--3.11.14-64/lazylinker_ext/mod.cpp:1097:9: error: ‘Py_InitModule3’ was not declared in this scope.  1097 |     m = Py_InitModule3("lazylinker_ext", lazylinker_ext_methods,.       |         ^~~~~~~~~~~~~~. /root/.theano/compiledir_Linux-6.8--generic-x86_64-with-glibc2.41--3.11.14-64/lazylinker_ext/mod.cpp:1103:5: error: return-statement with no value, in function returning ‘PyObject*’ {aka ‘_object*’} [-fpermissive].  1103 |     return RETVAL;.       |     ^~~~~~. 
+=== End of logs for f1a6bd3c8585c400c190 ===
+[2025-10-29 21:23:37] INFO: Container 231ef5c2ad51e66f3ae05e25efb5d200b4eaa59ea11e6c5e438e23a3c510e521 has stopped

@@ -1,0 +1,27 @@
+=== Docker Run Log for 01886b6f79ba0c4dce66 ===
+Started at: Mi 29. Okt 11:19:53 CET 2025
+
+[2025-10-29 11:20:01] START: Running container for 01886b6f79ba0c4dce66
+[2025-10-29 11:20:01] SUCCESS: Container 7c030b19e17ae2a67dbf712359a63cb38ad9d79c9c701c7c19379cce41d1bd44 started for 01886b6f79ba0c4dce66
+=== Container logs for 01886b6f79ba0c4dce66 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 3, in <module>
+    from django.contrib.contenttypes.fields import GenericForeignKey
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/contenttypes/fields.py", line 8, in <module>
+    from django.contrib.contenttypes.models import ContentType
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/contenttypes/models.py", line 134, in <module>
+    class ContentType(models.Model):
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 131, in __new__
+    app_config = apps.get_containing_app_config(module)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/apps/registry.py", line 260, in get_containing_app_config
+    self.check_apps_ready()
+  File "/usr/local/lib/python3.11/site-packages/django/apps/registry.py", line 137, in check_apps_ready
+    settings.INSTALLED_APPS
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 01886b6f79ba0c4dce66 ===
+[2025-10-29 11:20:03] INFO: Container 7c030b19e17ae2a67dbf712359a63cb38ad9d79c9c701c7c19379cce41d1bd44 has stopped

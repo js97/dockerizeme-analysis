@@ -1,0 +1,12 @@
+=== Docker Run Log for 5981683 ===
+Started at: Mi 29. Okt 16:11:03 CET 2025
+
+[2025-10-29 16:11:03] START: Running container for 5981683
+[2025-10-29 16:11:04] SUCCESS: Container df747541c88590e3640702ed401f5251e27caab2e9841bca01f47227b0866600 started for 5981683
+=== Container logs for 5981683 ===
+  File "/snippet.py", line 34
+    print "Hey, %s is at %s." %(cdp_info[cdp.CDP_DEVID], ", ".join (addresses))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 5981683 ===
+[2025-10-29 16:11:06] INFO: Container df747541c88590e3640702ed401f5251e27caab2e9841bca01f47227b0866600 has stopped

@@ -1,0 +1,19 @@
+=== Docker Run Log for e37a85fb0258b045c005ca3db9cbc7f6 ===
+Started at: Mi 29. Okt 20:41:43 CET 2025
+
+[2025-10-29 20:43:20] START: Running container for e37a85fb0258b045c005ca3db9cbc7f6
+[2025-10-29 20:43:20] SUCCESS: Container 9c3df97720823048fbdd8029e364376e8a1dfd7a4649ce61216bc7f684de627a started for e37a85fb0258b045c005ca3db9cbc7f6
+=== Container logs for e37a85fb0258b045c005ca3db9cbc7f6 ===
+2025-10-29 19:43:20.610778: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-10-29 19:43:20.645418: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-29 19:43:21.923386: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Traceback (most recent call last):
+  File "/snippet.py", line 83, in <module>
+    freeze_graph(args.checkpoint_path, args.output_nodes, args.output_graph, args.rename_outputs)
+  File "/snippet.py", line 14, in freeze_graph
+    input_checkpoint = checkpoint.model_checkpoint_path
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'model_checkpoint_path'
+=== End of logs for e37a85fb0258b045c005ca3db9cbc7f6 ===
+[2025-10-29 20:43:22] INFO: Container 9c3df97720823048fbdd8029e364376e8a1dfd7a4649ce61216bc7f684de627a has stopped

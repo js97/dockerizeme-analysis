@@ -1,0 +1,147 @@
+=== Docker Build Log for 4718429 ===
+Started at: Mi 29. Okt 14:58:09 CET 2025
+
+[2025-10-29 14:58:09] START: Building image for 4718429
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 193B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.02kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/4718429/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","tulip"]
+#7 2.060 Collecting tulip
+#7 2.328   Downloading tulip-1.4.0.tar.gz (613 kB)
+#7 2.423      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 613.2/613.2 kB 6.5 MB/s eta 0:00:00
+#7 2.470   Preparing metadata (setup.py): started
+#7 2.889   Preparing metadata (setup.py): finished with status 'done'
+#7 2.935 Collecting graphviz>=0.20 (from tulip)
+#7 2.943   Downloading graphviz-0.21-py3-none-any.whl.metadata (12 kB)
+#7 2.999 Collecting networkx>=2.0 (from tulip)
+#7 3.007   Downloading networkx-3.5-py3-none-any.whl.metadata (6.3 kB)
+#7 3.210 Collecting numpy>=1.24 (from tulip)
+#7 3.221   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 3.243      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.6 MB/s eta 0:00:00
+#7 3.388 Collecting omega<0.4.0,>=0.3.1 (from tulip)
+#7 3.494   Downloading omega-0.3.1.tar.gz (200 kB)
+#7 3.528      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 200.1/200.1 kB 5.9 MB/s eta 0:00:00
+#7 3.546   Preparing metadata (setup.py): started
+#7 3.736   Preparing metadata (setup.py): finished with status 'done'
+#7 3.761 Collecting ply<=3.10,>=3.4 (from tulip)
+#7 3.771   Downloading ply-3.10.tar.gz (150 kB)
+#7 3.789      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 150.9/150.9 kB 8.5 MB/s eta 0:00:00
+#7 3.812   Preparing metadata (setup.py): started
+#7 3.924   Preparing metadata (setup.py): finished with status 'done'
+#7 4.049 Collecting polytope>=0.2.1 (from tulip)
+#7 4.169   Downloading polytope-0.2.5.tar.gz (54 kB)
+#7 4.181      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.9/54.9 kB 4.5 MB/s eta 0:00:00
+#7 4.189   Preparing metadata (setup.py): started
+#7 4.320   Preparing metadata (setup.py): finished with status 'done'
+#7 4.451 Collecting scipy (from tulip)
+#7 4.462   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#7 4.477      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 3.9 MB/s eta 0:00:00
+#7 4.556 Collecting astutils>=0.0.3 (from omega<0.4.0,>=0.3.1->tulip)
+#7 4.661   Downloading astutils-0.0.6.tar.gz (9.3 kB)
+#7 4.674   Preparing metadata (setup.py): started
+#7 4.784   Preparing metadata (setup.py): finished with status 'done'
+#7 4.908 Collecting dd>=0.5.5 (from omega<0.4.0,>=0.3.1->tulip)
+#7 5.016   Downloading dd-0.6.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.7 kB)
+#7 5.061 Collecting humanize>=0.5.1 (from omega<0.4.0,>=0.3.1->tulip)
+#7 5.069   Downloading humanize-4.14.0-py3-none-any.whl.metadata (7.8 kB)
+#7 5.116 Collecting natsort>=3.5.3 (from omega<0.4.0,>=0.3.1->tulip)
+#7 5.124   Downloading natsort-8.4.0-py3-none-any.whl.metadata (21 kB)
+#7 5.172 Collecting pydot>=1.2.2 (from omega<0.4.0,>=0.3.1->tulip)
+#7 5.180   Downloading pydot-4.0.1-py3-none-any.whl.metadata (11 kB)
+#7 5.240 Requirement already satisfied: setuptools>=65.6.0 in /usr/local/lib/python3.11/site-packages (from dd>=0.5.5->omega<0.4.0,>=0.3.1->tulip) (79.0.1)
+#7 5.293 Collecting pyparsing>=3.1.0 (from pydot>=1.2.2->omega<0.4.0,>=0.3.1->tulip)
+#7 5.301   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#7 5.353 Downloading graphviz-0.21-py3-none-any.whl (47 kB)
+#7 5.365    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.3/47.3 kB 3.5 MB/s eta 0:00:00
+#7 5.377 Downloading networkx-3.5-py3-none-any.whl (2.0 MB)
+#7 5.537    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 12.8 MB/s eta 0:00:00
+#7 5.548 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 6.680    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 14.2 MB/s eta 0:00:00
+#7 6.690 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#7 8.275    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 18.1 MB/s eta 0:00:00
+#7 8.527 Downloading dd-0.6.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.4 MB)
+#7 9.041    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 8.5 MB/s eta 0:00:00
+#7 9.050 Downloading humanize-4.14.0-py3-none-any.whl (132 kB)
+#7 9.063    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.1/132.1 kB 10.3 MB/s eta 0:00:00
+#7 9.072 Downloading natsort-8.4.0-py3-none-any.whl (38 kB)
+#7 9.091 Downloading pydot-4.0.1-py3-none-any.whl (37 kB)
+#7 9.109 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#7 9.122    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 9.7 MB/s eta 0:00:00
+#7 9.256 Building wheels for collected packages: tulip, omega, ply, polytope, astutils
+#7 9.257   Building wheel for tulip (setup.py): started
+#7 9.464   Building wheel for tulip (setup.py): finished with status 'done'
+#7 9.465   Created wheel for tulip: filename=tulip-1.4.0-py3-none-any.whl size=241270 sha256=63d28ed388ad5bc78949b512b89ba62e090526b5a7148d42e3e11e060f7261c9
+#7 9.466   Stored in directory: /root/.cache/pip/wheels/16/75/55/b6f3e0255ea3ecbdc9dd91f91e81d8cdc09e64748adc4a5c4f
+#7 9.468   Building wheel for omega (setup.py): started
+#7 9.649   Building wheel for omega (setup.py): finished with status 'done'
+#7 9.649   Created wheel for omega: filename=omega-0.3.1-py3-none-any.whl size=107863 sha256=9508c042c66ebcabfaae8394b08afc0327c5bf67c6c53a9d9c754f5c776031e5
+#7 9.649   Stored in directory: /root/.cache/pip/wheels/59/2b/de/2b9ecce9a4cfb83f6145f9e1fb6ad777311ff3ab0225d1b06b
+#7 9.652   Building wheel for ply (setup.py): started
+#7 9.792   Building wheel for ply (setup.py): finished with status 'done'
+#7 9.792   Created wheel for ply: filename=ply-3.10-py2.py3-none-any.whl size=48467 sha256=ae1fb9d7da619c220a36e00dae6f6df3388b7b35884d9f51da315a14285e6458
+#7 9.793   Stored in directory: /root/.cache/pip/wheels/b0/79/b0/9d9e1348d4f11b9d2fcf5a17839759cf3f4856892a66589498
+#7 9.794   Building wheel for polytope (setup.py): started
+#7 9.988   Building wheel for polytope (setup.py): finished with status 'done'
+#7 9.989   Created wheel for polytope: filename=polytope-0.2.5-py3-none-any.whl size=47872 sha256=e2e5168bd3ea0c2787397558428653ce95902bf22109ea8e765b64158aba8a9e
+#7 9.989   Stored in directory: /root/.cache/pip/wheels/0a/dc/7c/19db8e9a73e1a551591347b185108f137877f9638ee8f8e3cc
+#7 9.991   Building wheel for astutils (setup.py): started
+#7 10.13   Building wheel for astutils (setup.py): finished with status 'done'
+#7 10.13   Created wheel for astutils: filename=astutils-0.0.6-py3-none-any.whl size=6621 sha256=38afa757258d6a3537d0da19b2d8fed2640fa59c0fab8daecc9e66d323caf8df
+#7 10.13   Stored in directory: /root/.cache/pip/wheels/b9/de/bf/1e4888c6b207d0e80b576780a304841ca888411808cf8ac542
+#7 10.13 Successfully built tulip omega ply polytope astutils
+#7 10.23 Installing collected packages: ply, pyparsing, numpy, networkx, natsort, humanize, graphviz, astutils, scipy, pydot, dd, polytope, omega, tulip
+#7 15.67 Successfully installed astutils-0.0.6 dd-0.6.0 graphviz-0.21 humanize-4.14.0 natsort-8.4.0 networkx-3.5 numpy-2.3.4 omega-0.3.1 ply-3.10 polytope-0.2.5 pydot-4.0.1 pyparsing-3.2.5 scipy-1.16.3 tulip-1.4.0
+#7 15.67 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 15.78 
+#7 15.78 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 15.78 [notice] To update, run: pip install --upgrade pip
+#7 DONE 18.1s
+
+#8 [4/4] RUN ["pip","install","rose"]
+#8 0.647 Collecting rose
+#8 0.780   Downloading rose-1.0.0.tar.gz (3.6 kB)
+#8 0.796   Preparing metadata (setup.py): started
+#8 0.913   Preparing metadata (setup.py): finished with status 'done'
+#8 0.914 Building wheels for collected packages: rose
+#8 0.919   Building wheel for rose (setup.py): started
+#8 1.060   Building wheel for rose (setup.py): finished with status 'done'
+#8 1.061   Created wheel for rose: filename=rose-1.0.0-py3-none-any.whl size=3199 sha256=07b8ff586f9b00f48ff1e34116bc2b00d8629b0f9aad58130c5e13586ca42ef5
+#8 1.061   Stored in directory: /root/.cache/pip/wheels/e9/06/46/48183bb8f3779624c87dc1f88457f0a9ec25414d453a6b018c
+#8 1.063 Successfully built rose
+#8 1.157 Installing collected packages: rose
+#8 1.209 Successfully installed rose-1.0.0
+#8 1.209 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.215 
+#8 1.215 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.215 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.3s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 1.5s done
+#9 writing image sha256:eebc5324690240a313f4b604daabd1eb8225a1a0660371f22e0d501c550f1d2c done
+#9 naming to docker.io/library/test-image-4718429 0.0s done
+#9 DONE 1.6s
+
+View build details: docker-desktop://dashboard/build/default/default/hsqfz5d764avy3fleb24br831
+[2025-10-29 14:58:30] SUCCESS: Build completed for 4718429

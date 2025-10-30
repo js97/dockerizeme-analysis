@@ -1,0 +1,188 @@
+=== Docker Build Log for 1082570 ===
+Started at: Mi 29. Okt 11:49:56 CET 2025
+
+[2025-10-29 11:49:56] START: Building image for 1082570
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 312B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.90kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/1082570/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","marrow.mailer"]
+#7 2.006 Collecting marrow.mailer
+#7 2.041   Downloading marrow.mailer-4.0.3-py2.py3-none-any.whl.metadata (1.4 kB)
+#7 2.081 Collecting marrow.util<2.0 (from marrow.mailer)
+#7 2.090   Downloading marrow.util-1.2.3.tar.gz (17 kB)
+#7 2.105   Preparing metadata (setup.py): started
+#7 2.507   Preparing metadata (setup.py): finished with status 'done'
+#7 2.519 Downloading marrow.mailer-4.0.3-py2.py3-none-any.whl (132 kB)
+#7 2.547    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.7/132.7 kB 4.8 MB/s eta 0:00:00
+#7 2.552 Building wheels for collected packages: marrow.util
+#7 2.552   Building wheel for marrow.util (setup.py): started
+#7 2.725   Building wheel for marrow.util (setup.py): finished with status 'done'
+#7 2.725   Created wheel for marrow.util: filename=marrow_util-1.2.3-py3-none-any.whl size=23729 sha256=70abe07044e5639ef9796977f1caf177c9f6180e751d364a44c42147b84fe089
+#7 2.725   Stored in directory: /root/.cache/pip/wheels/c1/26/db/9d972b23abf62c5f197f5b57713fcdba2c6b727d887e1df6f0
+#7 2.727 Successfully built marrow.util
+#7 2.758 Installing collected packages: marrow.util, marrow.mailer
+#7 2.827 Successfully installed marrow.mailer-4.0.3 marrow.util-1.2.3
+#7 2.827 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.920 
+#7 2.920 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.920 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.1s
+
+#8 [4/7] RUN ["pip","install","marrow.schema"]
+#8 0.548 Collecting marrow.schema
+#8 0.583   Downloading marrow.schema-2.0.0-py2.py3-none-any.whl.metadata (29 kB)
+#8 0.607 Downloading marrow.schema-2.0.0-py2.py3-none-any.whl (78 kB)
+#8 0.632    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.4/78.4 kB 3.0 MB/s eta 0:00:00
+#8 0.673 Installing collected packages: marrow.schema
+#8 0.729 Successfully installed marrow.schema-2.0.0
+#8 0.729 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.734 
+#8 0.734 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.734 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.8s
+
+#9 [5/7] RUN ["pip","install","marrow.mongo"]
+#9 0.582 Collecting marrow.mongo
+#9 0.618   Downloading marrow.mongo-1.1.2-py2.py3-none-any.whl.metadata (9.5 kB)
+#9 0.687 Collecting uri<3.0.0,>=2.0.0 (from marrow.mongo)
+#9 0.698   Downloading uri-2.0.1-py2.py3-none-any.whl.metadata (13 kB)
+#9 0.757 Collecting marrow.schema<2.0.0,>=1.2.0 (from marrow.mongo)
+#9 0.766   Downloading marrow.schema-1.2.0-py2.py3-none-any.whl.metadata (29 kB)
+#9 0.804 Collecting marrow.package<2.0.0,>=1.1.0 (from marrow.mongo)
+#9 0.814   Downloading marrow.package-1.2.0-py2.py3-none-any.whl.metadata (13 kB)
+#9 1.166 Collecting pymongo>=3.2 (from marrow.mongo)
+#9 1.177   Downloading pymongo-4.15.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+#9 1.301 Collecting dnspython<3.0.0,>=1.16.0 (from pymongo>=3.2->marrow.mongo)
+#9 1.310   Downloading dnspython-2.8.0-py3-none-any.whl.metadata (5.7 kB)
+#9 1.347 Downloading marrow.mongo-1.1.2-py2.py3-none-any.whl (159 kB)
+#9 1.370    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 159.1/159.1 kB 7.4 MB/s eta 0:00:00
+#9 1.378 Downloading marrow.package-1.2.0-py2.py3-none-any.whl (28 kB)
+#9 1.399 Downloading marrow.schema-1.2.0-py2.py3-none-any.whl (62 kB)
+#9 1.413    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.2/62.2 kB 4.2 MB/s eta 0:00:00
+#9 1.423 Downloading pymongo-4.15.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.5 MB)
+#9 1.485    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 23.8 MB/s eta 0:00:00
+#9 1.495 Downloading uri-2.0.1-py2.py3-none-any.whl (42 kB)
+#9 1.507    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.0/43.0 kB 3.5 MB/s eta 0:00:00
+#9 1.517 Downloading dnspython-2.8.0-py3-none-any.whl (331 kB)
+#9 1.537    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 331.1/331.1 kB 16.7 MB/s eta 0:00:00
+#9 1.653 Installing collected packages: uri, marrow.schema, marrow.package, dnspython, pymongo, marrow.mongo
+#9 1.696   Attempting uninstall: marrow.schema
+#9 1.699     Found existing installation: marrow.schema 2.0.0
+#9 1.705     Uninstalling marrow.schema-2.0.0:
+#9 1.756       Successfully uninstalled marrow.schema-2.0.0
+#9 2.321 Successfully installed dnspython-2.8.0 marrow.mongo-1.1.2 marrow.package-1.2.0 marrow.schema-1.2.0 pymongo-4.15.3 uri-2.0.1
+#9 2.321 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 2.327 
+#9 2.327 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 2.327 [notice] To update, run: pip install --upgrade pip
+#9 DONE 2.5s
+
+#10 [6/7] RUN ["pip","install","WebCore"]
+#10 0.543 Collecting WebCore
+#10 0.578   Downloading WebCore-2.0.4-py2.py3-none-any.whl.metadata (26 kB)
+#10 0.605 Requirement already satisfied: marrow.package<2.0 in /usr/local/lib/python3.11/site-packages (from WebCore) (1.2.0)
+#10 0.637 Collecting WebOb (from WebCore)
+#10 0.645   Downloading WebOb-1.8.9-py2.py3-none-any.whl.metadata (11 kB)
+#10 0.676 Downloading WebCore-2.0.4-py2.py3-none-any.whl (104 kB)
+#10 0.705    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 104.6/104.6 kB 3.5 MB/s eta 0:00:00
+#10 0.713 Downloading WebOb-1.8.9-py2.py3-none-any.whl (115 kB)
+#10 0.726    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 115.4/115.4 kB 8.9 MB/s eta 0:00:00
+#10 0.821 Installing collected packages: WebOb, WebCore
+#10 0.934 Successfully installed WebCore-2.0.4 WebOb-1.8.9
+#10 0.934 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.939 
+#10 0.939 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.939 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.0s
+
+#11 [7/7] RUN ["pip","install","selenium"]
+#11 0.574 Collecting selenium
+#11 0.608   Downloading selenium-4.38.0-py3-none-any.whl.metadata (7.5 kB)
+#11 0.679 Collecting urllib3<3.0,>=2.5.0 (from urllib3[socks]<3.0,>=2.5.0->selenium)
+#11 0.687   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#11 0.737 Collecting trio<1.0,>=0.31.0 (from selenium)
+#11 0.745   Downloading trio-0.31.0-py3-none-any.whl.metadata (8.5 kB)
+#11 0.792 Collecting trio-websocket<1.0,>=0.12.2 (from selenium)
+#11 0.800   Downloading trio_websocket-0.12.2-py3-none-any.whl.metadata (5.1 kB)
+#11 0.849 Collecting certifi>=2025.10.5 (from selenium)
+#11 0.858   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#11 0.907 Collecting typing_extensions<5.0,>=4.15.0 (from selenium)
+#11 0.915   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#11 0.965 Collecting websocket-client<2.0,>=1.8.0 (from selenium)
+#11 0.974   Downloading websocket_client-1.9.0-py3-none-any.whl.metadata (8.3 kB)
+#11 1.020 Collecting attrs>=23.2.0 (from trio<1.0,>=0.31.0->selenium)
+#11 1.028   Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+#11 1.066 Collecting sortedcontainers (from trio<1.0,>=0.31.0->selenium)
+#11 1.074   Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+#11 1.116 Collecting idna (from trio<1.0,>=0.31.0->selenium)
+#11 1.124   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#11 1.175 Collecting outcome (from trio<1.0,>=0.31.0->selenium)
+#11 1.182   Downloading outcome-1.3.0.post0-py2.py3-none-any.whl.metadata (2.6 kB)
+#11 1.218 Collecting sniffio>=1.3.0 (from trio<1.0,>=0.31.0->selenium)
+#11 1.226   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+#11 1.272 Collecting wsproto>=0.14 (from trio-websocket<1.0,>=0.12.2->selenium)
+#11 1.280   Downloading wsproto-1.2.0-py3-none-any.whl.metadata (5.6 kB)
+#11 1.324 Collecting pysocks!=1.5.7,<2.0,>=1.5.6 (from urllib3[socks]<3.0,>=2.5.0->selenium)
+#11 1.333   Downloading PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+#11 1.394 Collecting h11<1,>=0.9.0 (from wsproto>=0.14->trio-websocket<1.0,>=0.12.2->selenium)
+#11 1.403   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#11 1.433 Downloading selenium-4.38.0-py3-none-any.whl (9.7 MB)
+#11 1.819    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 25.2 MB/s eta 0:00:00
+#11 1.829 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#11 1.844    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 11.7 MB/s eta 0:00:00
+#11 1.852 Downloading trio-0.31.0-py3-none-any.whl (512 kB)
+#11 1.878    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 512.7/512.7 kB 20.3 MB/s eta 0:00:00
+#11 1.887 Downloading trio_websocket-0.12.2-py3-none-any.whl (21 kB)
+#11 1.909 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#11 1.925    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 2.4 MB/s eta 0:00:00
+#11 1.934 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#11 1.948    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 10.0 MB/s eta 0:00:00
+#11 1.956 Downloading websocket_client-1.9.0-py3-none-any.whl (82 kB)
+#11 1.972    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 82.6/82.6 kB 4.9 MB/s eta 0:00:00
+#11 1.981 Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+#11 1.992    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.6/67.6 kB 6.1 MB/s eta 0:00:00
+#11 2.000 Downloading outcome-1.3.0.post0-py2.py3-none-any.whl (10 kB)
+#11 2.018 Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+#11 2.036 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+#11 2.053 Downloading wsproto-1.2.0-py3-none-any.whl (24 kB)
+#11 2.071 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#11 2.081    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 6.8 MB/s eta 0:00:00
+#11 2.099 Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+#11 2.117 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#11 2.291 Installing collected packages: sortedcontainers, websocket-client, urllib3, typing_extensions, sniffio, pysocks, idna, h11, certifi, attrs, wsproto, outcome, trio, trio-websocket, selenium
+#11 3.546 Successfully installed attrs-25.4.0 certifi-2025.10.5 h11-0.16.0 idna-3.11 outcome-1.3.0.post0 pysocks-1.7.1 selenium-4.38.0 sniffio-1.3.1 sortedcontainers-2.4.0 trio-0.31.0 trio-websocket-0.12.2 typing_extensions-4.15.0 urllib3-2.5.0 websocket-client-1.9.0 wsproto-1.2.0
+#11 3.546 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 3.551 
+#11 3.551 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 3.551 [notice] To update, run: pip install --upgrade pip
+#11 DONE 3.8s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.3s done
+#12 writing image sha256:71625da81939ccfa9e1ba853567dec850816ad96e8126d031eadebfc5ef3d11b done
+#12 naming to docker.io/library/test-image-1082570 done
+#12 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/0q516tnhr7kjq1perqsihfnoa
+[2025-10-29 11:50:08] SUCCESS: Build completed for 1082570

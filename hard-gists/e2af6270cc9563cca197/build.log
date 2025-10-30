@@ -1,0 +1,227 @@
+=== Docker Build Log for e2af6270cc9563cca197 ===
+Started at: Mi 29. Okt 20:40:28 CET 2025
+
+[2025-10-29 20:40:28] START: Building image for e2af6270cc9563cca197
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.78kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.35kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/48] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/48] COPY hard-gists/e2af6270cc9563cca197/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/48] RUN ["pip","install","txasgiresource"]
+#7 2.000 Collecting txasgiresource
+#7 2.037   Downloading txasgiresource-2.2.1-py2.py3-none-any.whl.metadata (3.1 kB)
+#7 2.093 Collecting twisted>=16.0 (from txasgiresource)
+#7 2.109   Downloading twisted-25.5.0-py3-none-any.whl.metadata (22 kB)
+#7 2.265 Collecting autobahn>=0.12 (from txasgiresource)
+#7 2.277   Downloading autobahn-25.10.2-cp311-cp311-manylinux1_x86_64.manylinux_2_34_x86_64.manylinux_2_5_x86_64.whl.metadata (19 kB)
+#7 2.332 Collecting asgiref>=2.3.2 (from txasgiresource)
+#7 2.340   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.514 Collecting txaio>=25.9.2 (from autobahn>=0.12->txasgiresource)
+#7 2.523   Downloading txaio-25.9.2-py3-none-any.whl.metadata (7.3 kB)
+#7 2.784 Collecting cryptography>=3.4.6 (from autobahn>=0.12->txasgiresource)
+#7 2.792   Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+#7 2.838 Collecting hyperlink>=21.0.0 (from autobahn>=0.12->txasgiresource)
+#7 2.848   Downloading hyperlink-21.0.0-py2.py3-none-any.whl.metadata (1.5 kB)
+#7 3.025 Collecting attrs>=22.2.0 (from twisted>=16.0->txasgiresource)
+#7 3.034   Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+#7 3.076 Collecting automat>=24.8.0 (from twisted>=16.0->txasgiresource)
+#7 3.089   Downloading automat-25.4.16-py3-none-any.whl.metadata (8.4 kB)
+#7 3.125 Collecting constantly>=15.1 (from twisted>=16.0->txasgiresource)
+#7 3.139   Downloading constantly-23.10.4-py3-none-any.whl.metadata (1.8 kB)
+#7 3.177 Collecting incremental>=24.7.0 (from twisted>=16.0->txasgiresource)
+#7 3.190   Downloading incremental-24.7.2-py3-none-any.whl.metadata (8.1 kB)
+#7 3.237 Collecting typing-extensions>=4.2.0 (from twisted>=16.0->txasgiresource)
+#7 3.249   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#7 3.387 Collecting zope-interface>=5 (from twisted>=16.0->txasgiresource)
+#7 3.401   Downloading zope_interface-8.0.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (44 kB)
+#7 3.415      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.9/44.9 kB 2.8 MB/s eta 0:00:00
+#7 3.572 Collecting cffi>=2.0.0 (from cryptography>=3.4.6->autobahn>=0.12->txasgiresource)
+#7 3.584   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+#7 3.625 Collecting idna>=2.5 (from hyperlink>=21.0.0->autobahn>=0.12->txasgiresource)
+#7 3.633   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 3.648 Requirement already satisfied: setuptools>=61.0 in /usr/local/lib/python3.11/site-packages (from incremental>=24.7.0->twisted>=16.0->txasgiresource) (79.0.1)
+#7 3.697 Collecting pycparser (from cffi>=2.0.0->cryptography>=3.4.6->autobahn>=0.12->txasgiresource)
+#7 3.706   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+#7 3.766 Downloading txasgiresource-2.2.1-py2.py3-none-any.whl (19 kB)
+#7 3.789 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.811 Downloading autobahn-25.10.2-cp311-cp311-manylinux1_x86_64.manylinux_2_34_x86_64.manylinux_2_5_x86_64.whl (569 kB)
+#7 3.868    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 569.2/569.2 kB 10.0 MB/s eta 0:00:00
+#7 3.877 Downloading twisted-25.5.0-py3-none-any.whl (3.2 MB)
+#7 4.114    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 13.6 MB/s eta 0:00:00
+#7 4.129 Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+#7 4.140    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.6/67.6 kB 5.6 MB/s eta 0:00:00
+#7 4.150 Downloading automat-25.4.16-py3-none-any.whl (42 kB)
+#7 4.163    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.8/42.8 kB 2.8 MB/s eta 0:00:00
+#7 4.180 Downloading constantly-23.10.4-py3-none-any.whl (13 kB)
+#7 4.205 Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+#7 4.519    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 14.3 MB/s eta 0:00:00
+#7 4.529 Downloading hyperlink-21.0.0-py2.py3-none-any.whl (74 kB)
+#7 4.542    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.6/74.6 kB 5.4 MB/s eta 0:00:00
+#7 4.566 Downloading incremental-24.7.2-py3-none-any.whl (20 kB)
+#7 4.585 Downloading txaio-25.9.2-py3-none-any.whl (31 kB)
+#7 4.603 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#7 4.614    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.8 MB/s eta 0:00:00
+#7 4.623 Downloading zope_interface-8.0.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (259 kB)
+#7 4.647    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 259.8/259.8 kB 11.7 MB/s eta 0:00:00
+#7 4.689 Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+#7 4.710    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 13.6 MB/s eta 0:00:00
+#7 4.718 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 4.735    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 3.8 MB/s eta 0:00:00
+#7 4.744 Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+#7 4.764    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 6.1 MB/s eta 0:00:00
+#7 5.021 Installing collected packages: zope-interface, typing-extensions, txaio, pycparser, incremental, idna, constantly, automat, attrs, asgiref, hyperlink, cffi, twisted, cryptography, autobahn, txasgiresource
+#7 7.322 Successfully installed asgiref-3.10.0 attrs-25.4.0 autobahn-25.10.2 automat-25.4.16 cffi-2.0.0 constantly-23.10.4 cryptography-46.0.3 hyperlink-21.0.0 idna-3.11 incremental-24.7.2 pycparser-2.23 twisted-25.5.0 txaio-25.9.2 txasgiresource-2.2.1 typing-extensions-4.15.0 zope-interface-8.0.1
+#7 7.322 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 7.426 
+#7 7.426 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 7.426 [notice] To update, run: pip install --upgrade pip
+#7 DONE 8.3s
+
+#8 [ 4/48] RUN ["pip","install","ncolony"]
+#8 0.641 Collecting ncolony
+#8 0.682   Downloading ncolony-2024.1.11.74140-py3-none-any.whl.metadata (3.0 kB)
+#8 0.697 Requirement already satisfied: twisted in /usr/local/lib/python3.11/site-packages (from ncolony) (25.5.0)
+#8 0.835 Collecting gather (from ncolony)
+#8 0.852   Downloading gather-2024.1.19.74288-py3-none-any.whl.metadata (3.0 kB)
+#8 0.877 Requirement already satisfied: attrs in /usr/local/lib/python3.11/site-packages (from gather->ncolony) (25.4.0)
+#8 0.877 Requirement already satisfied: incremental in /usr/local/lib/python3.11/site-packages (from gather->ncolony) (24.7.2)
+#8 1.015 Collecting venusian (from gather->ncolony)
+#8 1.025   Downloading venusian-3.1.1-py3-none-any.whl.metadata (10 kB)
+#8 1.074 Collecting toolz (from gather->ncolony)
+#8 1.087   Downloading toolz-1.1.0-py3-none-any.whl.metadata (5.1 kB)
+#8 1.227 Collecting commander-data (from gather->ncolony)
+#8 1.241   Downloading commander_data-2024.1.19.63931-py3-none-any.whl.metadata (2.0 kB)
+#8 1.379 Requirement already satisfied: automat>=24.8.0 in /usr/local/lib/python3.11/site-packages (from twisted->ncolony) (25.4.16)
+#8 1.380 Requirement already satisfied: constantly>=15.1 in /usr/local/lib/python3.11/site-packages (from twisted->ncolony) (23.10.4)
+#8 1.380 Requirement already satisfied: hyperlink>=17.1.1 in /usr/local/lib/python3.11/site-packages (from twisted->ncolony) (21.0.0)
+#8 1.382 Requirement already satisfied: typing-extensions>=4.2.0 in /usr/local/lib/python3.11/site-packages (from twisted->ncolony) (4.15.0)
+#8 1.383 Requirement already satisfied: zope-interface>=5 in /usr/local/lib/python3.11/site-packages (from twisted->ncolony) (8.0.1)
+#8 1.389 Requirement already satisfied: idna>=2.5 in /usr/local/lib/python3.11/site-packages (from hyperlink>=17.1.1->twisted->ncolony) (3.11)
+#8 1.392 Requirement already satisfied: setuptools>=61.0 in /usr/local/lib/python3.11/site-packages (from incremental->gather->ncolony) (79.0.1)
+#8 1.449 Downloading ncolony-2024.1.11.74140-py3-none-any.whl (37 kB)
+#8 1.480 Downloading gather-2024.1.19.74288-py3-none-any.whl (14 kB)
+#8 1.502 Downloading commander_data-2024.1.19.63931-py3-none-any.whl (7.0 kB)
+#8 1.528 Downloading toolz-1.1.0-py3-none-any.whl (58 kB)
+#8 1.552    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.1/58.1 kB 2.2 MB/s eta 0:00:00
+#8 1.563 Downloading venusian-3.1.1-py3-none-any.whl (14 kB)
+#8 1.819 Installing collected packages: commander-data, venusian, toolz, gather, ncolony
+#8 1.983 Successfully installed commander-data-2024.1.19.63931 gather-2024.1.19.74288 ncolony-2024.1.11.74140 toolz-1.1.0 venusian-3.1.1
+#8 1.983 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.988 
+#8 1.988 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.988 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.1s
+
+#9 [ 5/48] RUN ["pip","install","trigger"]
+#9 0.656 Collecting trigger
+#9 0.703   Downloading trigger-1.6.0.tar.gz (384 kB)
+#9 0.767      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 384.7/384.7 kB 6.1 MB/s eta 0:00:00
+#9 0.800   Preparing metadata (setup.py): started
+#9 1.553   Preparing metadata (setup.py): finished with status 'done'
+#9 1.840 Collecting IPy>=0.73 (from trigger)
+#9 1.853   Downloading IPy-1.01.tar.gz (33 kB)
+#9 1.871   Preparing metadata (setup.py): started
+#9 1.984   Preparing metadata (setup.py): finished with status 'done'
+#9 2.237 Collecting cryptography==1.4 (from trigger)
+#9 2.247   Downloading cryptography-1.4.tar.gz (399 kB)
+#9 2.284      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 399.7/399.7 kB 11.1 MB/s eta 0:00:00
+#9 2.327   Preparing metadata (setup.py): started
+#9 2.509   Preparing metadata (setup.py): finished with status 'done'
+#9 2.569 Collecting Twisted<17.0.0,>=15.5.0 (from trigger)
+#9 2.653   Downloading Twisted-16.6.0.tar.bz2 (3.0 MB)
+#9 2.829      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 17.1 MB/s eta 0:00:00
+#9 3.598   Preparing metadata (setup.py): started
+#9 4.029   Preparing metadata (setup.py): finished with status 'done'
+#9 4.061 Collecting crochet==1.5.0 (from trigger)
+#9 4.080   Downloading crochet-1.5.0.tar.gz (52 kB)
+#9 4.094      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.0/53.0 kB 3.7 MB/s eta 0:00:00
+#9 4.100   Preparing metadata (setup.py): started
+#9 4.219   Preparing metadata (setup.py): finished with status 'done'
+#9 4.266 Collecting mock==2.0.0 (from trigger)
+#9 4.282   Downloading mock-2.0.0-py2.py3-none-any.whl.metadata (3.2 kB)
+#9 4.358 Collecting pyasn1 (from trigger)
+#9 4.372   Downloading pyasn1-0.6.1-py3-none-any.whl.metadata (8.4 kB)
+#9 4.445 Collecting pyparsing~=2.2.0 (from trigger)
+#9 4.456   Downloading pyparsing-2.2.2-py2.py3-none-any.whl.metadata (1.1 kB)
+#9 4.528 Collecting pytz (from trigger)
+#9 4.537   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#9 4.687 Collecting SimpleParse (from trigger)
+#9 4.698   Downloading SimpleParse-2.2.4.tar.gz (186 kB)
+#9 4.718      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 186.3/186.3 kB 10.6 MB/s eta 0:00:00
+#9 4.738   Preparing metadata (setup.py): started
+#9 4.864   Preparing metadata (setup.py): finished with status 'done'
+#9 5.115 Collecting gtextfsm (from trigger)
+#9 5.126   Downloading gtextfsm-0.2.1.tar.gz (20 kB)
+#9 5.139   Preparing metadata (setup.py): started
+#9 5.226   Preparing metadata (setup.py): finished with status 'error'
+#9 5.229   error: subprocess-exited-with-error
+#9 5.229   
+#9 5.229   × python setup.py egg_info did not run successfully.
+#9 5.229   │ exit code: 1
+#9 5.229   ╰─> [9 lines of output]
+#9 5.229       Traceback (most recent call last):
+#9 5.229         File "<string>", line 2, in <module>
+#9 5.229         File "<pip-setuptools-caller>", line 34, in <module>
+#9 5.229         File "/tmp/pip-install-9pv_3xu9/gtextfsm_20a520b97ef242dcbb9a75dd32e4c1e9/setup.py", line 19, in <module>
+#9 5.229           import textfsm
+#9 5.229         File "/tmp/pip-install-9pv_3xu9/gtextfsm_20a520b97ef242dcbb9a75dd32e4c1e9/textfsm/__init__.py", line 2, in <module>
+#9 5.229           __version__ = textfsm.__version__
+#9 5.229                         ^^^^^^^
+#9 5.229       NameError: name 'textfsm' is not defined
+#9 5.229       [end of output]
+#9 5.229   
+#9 5.229   note: This error originates from a subprocess, and is likely not a problem with pip.
+#9 5.231 error: metadata-generation-failed
+#9 5.231 
+#9 5.231 × Encountered error while generating package metadata.
+#9 5.231 ╰─> See above for output.
+#9 5.231 
+#9 5.231 note: This is an issue with the package mentioned above, not pip.
+#9 5.231 hint: See above for details.
+#9 5.236 
+#9 5.236 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 5.236 [notice] To update, run: pip install --upgrade pip
+#9 ERROR: process "pip install trigger" did not complete successfully: exit code: 1
+------
+ > [ 5/48] RUN ["pip","install","trigger"]:
+5.231 error: metadata-generation-failed
+5.231 
+5.231 × Encountered error while generating package metadata.
+5.231 ╰─> See above for output.
+5.231 
+5.231 note: This is an issue with the package mentioned above, not pip.
+5.231 hint: See above for details.
+5.236 
+5.236 [notice] A new release of pip is available: 24.0 -> 25.3
+5.236 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:5
+--------------------
+   3 |     RUN ["pip","install","txasgiresource"]
+   4 |     RUN ["pip","install","ncolony"]
+   5 | >>> RUN ["pip","install","trigger"]
+   6 |     RUN ["pip","install","Twisted"]
+   7 |     RUN ["pip","install","swftp"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install trigger" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/4rbqzwtqklxntm3campty8uug
+[2025-10-29 20:40:45] ERROR: Build failed for e2af6270cc9563cca197

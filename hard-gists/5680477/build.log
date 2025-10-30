@@ -1,0 +1,112 @@
+=== Docker Build Log for 5680477 ===
+Started at: Mi 29. Okt 15:53:18 CET 2025
+
+[2025-10-29 15:53:18] START: Building image for 5680477
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 298B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.56kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/5680477/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","Flask"]
+#7 2.152 Collecting Flask
+#7 2.192   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#7 2.233 Collecting blinker>=1.9.0 (from Flask)
+#7 2.242   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#7 2.287 Collecting click>=8.1.3 (from Flask)
+#7 2.297   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#7 2.336 Collecting itsdangerous>=2.2.0 (from Flask)
+#7 2.345   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#7 2.388 Collecting jinja2>=3.1.2 (from Flask)
+#7 2.398   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#7 2.481 Collecting markupsafe>=2.1.1 (from Flask)
+#7 2.490   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#7 2.541 Collecting werkzeug>=3.1.0 (from Flask)
+#7 2.549   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#7 2.577 Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+#7 2.609    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 3.4 MB/s eta 0:00:00
+#7 2.618 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#7 2.638 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#7 2.652    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 8.3 MB/s eta 0:00:00
+#7 2.661 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#7 2.679 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#7 2.694    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 9.8 MB/s eta 0:00:00
+#7 2.704 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#7 2.723 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#7 2.741    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 12.6 MB/s eta 0:00:00
+#7 2.789 Installing collected packages: markupsafe, itsdangerous, click, blinker, werkzeug, jinja2, Flask
+#7 3.110 Successfully installed Flask-3.1.2 blinker-1.9.0 click-8.3.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.3 werkzeug-3.1.3
+#7 3.110 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.202 
+#7 3.202 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.202 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.5s
+
+#8 [4/7] RUN ["pip","install","Werkzeug"]
+#8 0.468 Requirement already satisfied: Werkzeug in /usr/local/lib/python3.11/site-packages (3.1.3)
+#8 0.471 Requirement already satisfied: MarkupSafe>=2.1.1 in /usr/local/lib/python3.11/site-packages (from Werkzeug) (3.0.3)
+#8 0.510 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.515 
+#8 0.515 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.515 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.6s
+
+#9 [5/7] RUN ["pip","install","itsdangerous"]
+#9 0.502 Requirement already satisfied: itsdangerous in /usr/local/lib/python3.11/site-packages (2.2.0)
+#9 0.542 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.547 
+#9 0.547 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.547 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.6s
+
+#10 [6/7] RUN ["pip","install","mock"]
+#10 0.571 Collecting mock
+#10 0.608   Downloading mock-5.2.0-py3-none-any.whl.metadata (3.1 kB)
+#10 0.637 Downloading mock-5.2.0-py3-none-any.whl (31 kB)
+#10 0.693 Installing collected packages: mock
+#10 0.741 Successfully installed mock-5.2.0
+#10 0.741 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.746 
+#10 0.746 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.746 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.8s
+
+#11 [7/7] RUN ["pip","install","PyHamcrest"]
+#11 0.569 Collecting PyHamcrest
+#11 0.603   Downloading pyhamcrest-2.1.0-py3-none-any.whl.metadata (15 kB)
+#11 0.638 Downloading pyhamcrest-2.1.0-py3-none-any.whl (54 kB)
+#11 0.662    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.6/54.6 kB 2.2 MB/s eta 0:00:00
+#11 0.719 Installing collected packages: PyHamcrest
+#11 0.779 Successfully installed PyHamcrest-2.1.0
+#11 0.780 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.786 
+#11 0.786 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.786 [notice] To update, run: pip install --upgrade pip
+#11 DONE 0.9s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.3s done
+#12 writing image sha256:68adcac6e70d366084ad2bf1ef4f13857ce3b423459bbf8ff15df0b199293036 done
+#12 naming to docker.io/library/test-image-5680477 0.0s done
+#12 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/wseg0rkou0fm4xym7pi8pnkud
+[2025-10-29 15:53:26] SUCCESS: Build completed for 5680477

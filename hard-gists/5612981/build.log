@@ -1,0 +1,112 @@
+=== Docker Build Log for 5612981 ===
+Started at: Mi 29. Okt 15:47:05 CET 2025
+
+[2025-10-29 15:47:05] START: Building image for 5612981
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 303B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.14kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/5612981/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","redispy"]
+#7 2.138 Collecting redispy
+#7 2.186   Downloading redispy-3.0.0-py2.py3-none-any.whl.metadata (27 kB)
+#7 2.212 Downloading redispy-3.0.0-py2.py3-none-any.whl (64 kB)
+#7 2.233    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.9/64.9 kB 3.0 MB/s eta 0:00:00
+#7 2.269 Installing collected packages: redispy
+#7 2.305 Successfully installed redispy-3.0.0
+#7 2.305 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.396 
+#7 2.396 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.396 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.5s
+
+#8 [4/7] RUN ["pip","install","tornado"]
+#8 0.582 Collecting tornado
+#8 0.618   Downloading tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+#8 0.638 Downloading tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (443 kB)
+#8 0.684    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 443.9/443.9 kB 9.9 MB/s eta 0:00:00
+#8 0.720 Installing collected packages: tornado
+#8 0.945 Successfully installed tornado-6.5.2
+#8 0.945 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.950 
+#8 0.950 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.950 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.0s
+
+#9 [5/7] RUN ["pip","install","redis"]
+#9 0.575 Collecting redis
+#9 0.612   Downloading redis-7.0.1-py3-none-any.whl.metadata (12 kB)
+#9 0.638 Downloading redis-7.0.1-py3-none-any.whl (339 kB)
+#9 0.678    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 339.9/339.9 kB 8.8 MB/s eta 0:00:00
+#9 0.719 Installing collected packages: redis
+#9 0.933 Successfully installed redis-7.0.1
+#9 0.934 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.939 
+#9 0.939 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.939 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.0s
+
+#10 [6/7] RUN ["pip","install","tornado-redis"]
+#10 0.649 Collecting tornado-redis
+#10 0.790   Downloading tornado-redis-2.4.18.tar.gz (17 kB)
+#10 0.818   Preparing metadata (setup.py): started
+#10 1.246   Preparing metadata (setup.py): finished with status 'done'
+#10 1.248 Building wheels for collected packages: tornado-redis
+#10 1.248   Building wheel for tornado-redis (setup.py): started
+#10 1.423   Building wheel for tornado-redis (setup.py): finished with status 'done'
+#10 1.424   Created wheel for tornado-redis: filename=tornado_redis-2.4.18-py3-none-any.whl size=19662 sha256=d1690255e4068992da201178f0d508183763cc73496ae142477fb75c41e8d637
+#10 1.424   Stored in directory: /root/.cache/pip/wheels/cb/7c/b9/05d1b7b840d1c209a86a8532642a88de15dce617db051d9eba
+#10 1.426 Successfully built tornado-redis
+#10 1.462 Installing collected packages: tornado-redis
+#10 1.492 Successfully installed tornado-redis-2.4.18
+#10 1.492 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.497 
+#10 1.497 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.497 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.6s
+
+#11 [7/7] RUN ["pip","install","tornadoredis"]
+#11 0.770 ERROR: Could not find a version that satisfies the requirement tornadoredis (from versions: none)
+#11 0.770 ERROR: No matching distribution found for tornadoredis
+#11 0.776 
+#11 0.776 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.776 [notice] To update, run: pip install --upgrade pip
+#11 ERROR: process "pip install tornadoredis" did not complete successfully: exit code: 1
+------
+ > [7/7] RUN ["pip","install","tornadoredis"]:
+0.770 ERROR: Could not find a version that satisfies the requirement tornadoredis (from versions: none)
+0.770 ERROR: No matching distribution found for tornadoredis
+0.776 
+0.776 [notice] A new release of pip is available: 24.0 -> 25.3
+0.776 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:7
+--------------------
+   5 |     RUN ["pip","install","redis"]
+   6 |     RUN ["pip","install","tornado-redis"]
+   7 | >>> RUN ["pip","install","tornadoredis"]
+   8 |     CMD ["python3","/snippet.py"]
+   9 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install tornadoredis" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/u9g94m1j8y9jgf9p12xsk5ev0
+[2025-10-29 15:47:12] ERROR: Build failed for 5612981

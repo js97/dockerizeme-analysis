@@ -1,0 +1,76 @@
+=== Docker Build Log for 5a534f9deb80775f0f497a4133a79d7b ===
+Started at: Mi 29. Okt 16:12:39 CET 2025
+
+[2025-10-29 16:12:39] START: Building image for 5a534f9deb80775f0f497a4133a79d7b
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 226B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 6.92kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/5a534f9deb80775f0f497a4133a79d7b/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","numpy"]
+#7 2.153 Collecting numpy
+#7 2.188   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.214      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.2 MB/s eta 0:00:00
+#7 2.246 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 2.864    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 25.6 MB/s eta 0:00:00
+#7 2.945 Installing collected packages: numpy
+#7 4.489 Successfully installed numpy-2.3.4
+#7 4.490 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.586 
+#7 4.586 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.586 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.6s
+
+#8 [4/4] RUN ["pip","install","scikit-learn"]
+#8 0.621 Collecting scikit-learn
+#8 0.662   Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#8 0.721 Requirement already satisfied: numpy>=1.22.0 in /usr/local/lib/python3.11/site-packages (from scikit-learn) (2.3.4)
+#8 0.866 Collecting scipy>=1.8.0 (from scikit-learn)
+#8 0.874   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#8 0.903      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.0 MB/s eta 0:00:00
+#8 0.946 Collecting joblib>=1.2.0 (from scikit-learn)
+#8 0.955   Downloading joblib-1.5.2-py3-none-any.whl.metadata (5.6 kB)
+#8 0.988 Collecting threadpoolctl>=3.1.0 (from scikit-learn)
+#8 0.997   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#8 1.044 Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+#8 1.477    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 22.5 MB/s eta 0:00:00
+#8 1.488 Downloading joblib-1.5.2-py3-none-any.whl (308 kB)
+#8 1.509    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 308.4/308.4 kB 15.5 MB/s eta 0:00:00
+#8 1.519 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#8 3.021    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 14.5 MB/s eta 0:00:00
+#8 3.033 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#8 3.258 Installing collected packages: threadpoolctl, scipy, joblib, scikit-learn
+#8 7.765 Successfully installed joblib-1.5.2 scikit-learn-1.7.2 scipy-1.16.3 threadpoolctl-3.6.0
+#8 7.765 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 7.770 
+#8 7.770 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 7.770 [notice] To update, run: pip install --upgrade pip
+#8 DONE 9.1s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 1.0s done
+#9 writing image sha256:85cb3ab2d7219c581ecb3e4cf05154f74db7e17ce0904e6c1cf9fedd7b641fb3 done
+#9 naming to docker.io/library/test-image-5a534f9deb80775f0f497a4133a79d7b done
+#9 DONE 1.0s
+
+View build details: docker-desktop://dashboard/build/default/default/4wej1w0f024rzs6h50vcojvrr
+[2025-10-29 16:12:55] SUCCESS: Build completed for 5a534f9deb80775f0f497a4133a79d7b

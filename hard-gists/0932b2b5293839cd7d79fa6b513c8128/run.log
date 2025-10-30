@@ -1,0 +1,32 @@
+=== Docker Run Log for 0932b2b5293839cd7d79fa6b513c8128 ===
+Started at: Mi 29. Okt 11:30:30 CET 2025
+
+[2025-10-29 11:30:42] START: Running container for 0932b2b5293839cd7d79fa6b513c8128
+[2025-10-29 11:30:42] SUCCESS: Container b63d00d35380288d7ba8ced41d7131e4585434bee8ddf31ab3e537bbd06efe6b started for 0932b2b5293839cd7d79fa6b513c8128
+=== Container logs for 0932b2b5293839cd7d79fa6b513c8128 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 313, in <module>
+    root, fx, ea, iter = bisect(fm, 40, 200)
+                         ^^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 85, in bisect
+[!] 0. Real Root
+
+[+] Real Root: [142.73763311]
+
+[!] 1. Incremental Search
+
+[+] Number of Brackets = 1
+[+] Root Interval = [np.float64(139.08163265306123), np.float64(143.14285714285717)]
+
+[!] 2. Bisection
+
+    xr = np.float((xl + xu) / 2)
+         ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/numpy/__init__.py", line 778, in __getattr__
+    raise AttributeError(__former_attrs__[attr], name=None)
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+=== End of logs for 0932b2b5293839cd7d79fa6b513c8128 ===
+[2025-10-29 11:30:44] INFO: Container b63d00d35380288d7ba8ced41d7131e4585434bee8ddf31ab3e537bbd06efe6b has stopped

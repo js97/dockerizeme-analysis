@@ -1,0 +1,86 @@
+=== Docker Build Log for bdb31b04fb1e69fa5346 ===
+Started at: Mi 29. Okt 19:40:54 CET 2025
+
+[2025-10-29 19:40:54] START: Building image for bdb31b04fb1e69fa5346
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 178B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 958B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/bdb31b04fb1e69fa5346/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","hyhyhy"]
+#7 2.133 Collecting hyhyhy
+#7 2.183   Downloading hyhyhy-1.1.9.tar.gz (25 kB)
+#7 2.199   Preparing metadata (setup.py): started
+#7 2.573   Preparing metadata (setup.py): finished with status 'done'
+#7 2.737 Collecting rjsmin (from hyhyhy)
+#7 2.753   Downloading rjsmin-1.2.5-cp311-cp311-manylinux1_x86_64.whl.metadata (4.6 kB)
+#7 2.815 Collecting rcssmin (from hyhyhy)
+#7 2.825   Downloading rcssmin-1.2.2-cp311-cp311-manylinux1_x86_64.whl.metadata (4.8 kB)
+#7 2.874 Collecting markdown (from hyhyhy)
+#7 2.885   Downloading markdown-3.9-py3-none-any.whl.metadata (5.1 kB)
+#7 2.946 Collecting jinja2 (from hyhyhy)
+#7 2.954   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#7 3.025 Collecting watchdog (from hyhyhy)
+#7 3.034   Downloading watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl.metadata (44 kB)
+#7 3.054      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.3/44.3 kB 2.1 MB/s eta 0:00:00
+#7 3.080 Collecting docopt (from hyhyhy)
+#7 3.089   Downloading docopt-0.6.2.tar.gz (25 kB)
+#7 3.103   Preparing metadata (setup.py): started
+#7 3.217   Preparing metadata (setup.py): finished with status 'done'
+#7 3.288 Collecting MarkupSafe>=2.0 (from jinja2->hyhyhy)
+#7 3.296   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#7 3.329 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#7 3.350    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 6.3 MB/s eta 0:00:00
+#7 3.359 Downloading markdown-3.9-py3-none-any.whl (107 kB)
+#7 3.372    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.4/107.4 kB 8.1 MB/s eta 0:00:00
+#7 3.382 Downloading rcssmin-1.2.2-cp311-cp311-manylinux1_x86_64.whl (49 kB)
+#7 3.393    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.4/49.4 kB 4.6 MB/s eta 0:00:00
+#7 3.403 Downloading rjsmin-1.2.5-cp311-cp311-manylinux1_x86_64.whl (31 kB)
+#7 3.423 Downloading watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl (79 kB)
+#7 3.440    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.1/79.1 kB 4.5 MB/s eta 0:00:00
+#7 3.449 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#7 3.470 Building wheels for collected packages: hyhyhy, docopt
+#7 3.471   Building wheel for hyhyhy (setup.py): started
+#7 3.642   Building wheel for hyhyhy (setup.py): finished with status 'done'
+#7 3.642   Created wheel for hyhyhy: filename=hyhyhy-1.1.9-py3-none-any.whl size=29412 sha256=fdf78450f5b934f46f589df7c307f11fe9c2d4a7941fd982326ef612caa452f6
+#7 3.642   Stored in directory: /root/.cache/pip/wheels/97/03/21/744b0351204068360c7464af9b51945508b1aab4c21d331842
+#7 3.644   Building wheel for docopt (setup.py): started
+#7 3.769   Building wheel for docopt (setup.py): finished with status 'done'
+#7 3.770   Created wheel for docopt: filename=docopt-0.6.2-py2.py3-none-any.whl size=13781 sha256=a8c7196307329eb7c40fd067e1cc8c60292dad808e95bb827b93bf94fbb77cb2
+#7 3.770   Stored in directory: /root/.cache/pip/wheels/1a/b0/8c/4b75c4116c31f83c8f9f047231251e13cc74481cca4a78a9ce
+#7 3.772 Successfully built hyhyhy docopt
+#7 3.815 Installing collected packages: rjsmin, rcssmin, docopt, watchdog, MarkupSafe, markdown, jinja2, hyhyhy
+#7 4.050 Successfully installed MarkupSafe-3.0.3 docopt-0.6.2 hyhyhy-1.1.9 jinja2-3.1.6 markdown-3.9 rcssmin-1.2.2 rjsmin-1.2.5 watchdog-6.0.0
+#7 4.050 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.152 
+#7 4.152 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.152 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.4s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.2s done
+#8 writing image sha256:3b6850a8ff2959437463f359f422a4b075b606d127a2fba8473beb8d58bc5c3b done
+#8 naming to docker.io/library/test-image-bdb31b04fb1e69fa5346 0.0s done
+#8 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/goet8ex1xslphs8vrbp0efjx5
+[2025-10-29 19:40:59] SUCCESS: Build completed for bdb31b04fb1e69fa5346

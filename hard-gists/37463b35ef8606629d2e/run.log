@@ -1,0 +1,23 @@
+=== Docker Run Log for 37463b35ef8606629d2e ===
+Started at: Mi 29. Okt 13:58:20 CET 2025
+
+[2025-10-29 13:58:41] START: Running container for 37463b35ef8606629d2e
+[2025-10-29 13:58:41] SUCCESS: Container 4f8ded8931675b9a2695997bc4565e7ecc2aaace306a2b6df978b92715179f7a started for 37463b35ef8606629d2e
+=== Container logs for 37463b35ef8606629d2e ===
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/scipy/__init__.py", line 134, in __getattr__
+    return globals()[name]
+           ~~~~~~~~~^^^^^^
+KeyError: 'arange'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snippet.py", line 41, in <module>
+    t = sp.arange(0.0, 400.0, 0.1)
+        ^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/scipy/__init__.py", line 136, in __getattr__
+    raise AttributeError(
+AttributeError: Module 'scipy' has no attribute 'arange'
+=== End of logs for 37463b35ef8606629d2e ===
+[2025-10-29 13:58:43] INFO: Container 4f8ded8931675b9a2695997bc4565e7ecc2aaace306a2b6df978b92715179f7a has stopped

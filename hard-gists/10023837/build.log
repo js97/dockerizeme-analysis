@@ -1,0 +1,89 @@
+=== Docker Build Log for 10023837 ===
+Started at: Mi 29. Okt 11:44:49 CET 2025
+
+[2025-10-29 11:44:49] START: Building image for 10023837
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 195B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 763B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/10023837/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","scene"]
+#7 1.980 Collecting scene
+#7 2.023   Downloading scene-0.0.1.tar.gz (4.3 kB)
+#7 2.036   Preparing metadata (setup.py): started
+#7 2.411   Preparing metadata (setup.py): finished with status 'done'
+#7 2.412 Building wheels for collected packages: scene
+#7 2.413   Building wheel for scene (setup.py): started
+#7 2.588   Building wheel for scene (setup.py): finished with status 'done'
+#7 2.588   Created wheel for scene: filename=scene-0.0.1-py2.py3-none-any.whl size=3300 sha256=30d54c763f638201a7d66db1241d2661b7eca3cb8b876b4f2139969f0a5e7ad3
+#7 2.588   Stored in directory: /root/.cache/pip/wheels/8d/92/cb/ec23387ed573b50de008a60ab148d18dac724dd0e65cd18715
+#7 2.591 Successfully built scene
+#7 2.621 Installing collected packages: scene
+#7 2.634 Successfully installed scene-0.0.1
+#7 2.634 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.724 
+#7 2.724 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.724 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.9s
+
+#8 [4/4] RUN ["pip","install","sound"]
+#8 0.503 Collecting sound
+#8 0.637   Downloading sound-0.1.0-py3-none-any.whl.metadata (1.1 kB)
+#8 0.685 Collecting soundfile (from sound)
+#8 0.695   Downloading soundfile-0.13.1-py2.py3-none-manylinux_2_28_x86_64.whl.metadata (16 kB)
+#8 0.735 Collecting darr (from sound)
+#8 0.744   Downloading darr-0.6.3-py3-none-any.whl.metadata (8.4 kB)
+#8 0.966 Collecting numpy (from darr->sound)
+#8 0.978   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 1.006      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.0 MB/s eta 0:00:00
+#8 1.127 Collecting cffi>=1.0 (from soundfile->sound)
+#8 1.135   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+#8 1.173 Collecting pycparser (from cffi>=1.0->soundfile->sound)
+#8 1.181   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+#8 1.302 Downloading sound-0.1.0-py3-none-any.whl (43 kB)
+#8 1.323    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.8/43.8 kB 1.7 MB/s eta 0:00:00
+#8 1.433 Downloading darr-0.6.3-py3-none-any.whl (43 kB)
+#8 1.453    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.3/43.3 kB 1.8 MB/s eta 0:00:00
+#8 1.464 Downloading soundfile-0.13.1-py2.py3-none-manylinux_2_28_x86_64.whl (1.3 MB)
+#8 1.525    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 21.9 MB/s eta 0:00:00
+#8 1.533 Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+#8 1.549    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 13.8 MB/s eta 0:00:00
+#8 1.558 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#8 2.161    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 26.0 MB/s eta 0:00:00
+#8 2.169 Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+#8 2.182    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 9.8 MB/s eta 0:00:00
+#8 2.312 Installing collected packages: pycparser, numpy, darr, cffi, soundfile, sound
+#8 4.147 Successfully installed cffi-2.0.0 darr-0.6.3 numpy-2.3.4 pycparser-2.23 sound-0.1.0 soundfile-0.13.1
+#8 4.147 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 4.152 
+#8 4.152 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 4.152 [notice] To update, run: pip install --upgrade pip
+#8 DONE 4.5s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.4s done
+#9 writing image sha256:a007d27f3fa7179e526e0d35174039c5afc76fa72816742826b5adfb0736788a done
+#9 naming to docker.io/library/test-image-10023837 done
+#9 DONE 0.4s
+
+View build details: docker-desktop://dashboard/build/default/default/uuhlziu13rp8fnfvbxd48sh81
+[2025-10-29 11:44:57] SUCCESS: Build completed for 10023837

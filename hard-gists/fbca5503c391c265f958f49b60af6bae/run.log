@@ -1,0 +1,16 @@
+=== Docker Run Log for fbca5503c391c265f958f49b60af6bae ===
+Started at: Mi 29. Okt 21:41:14 CET 2025
+
+[2025-10-29 21:41:42] START: Running container for fbca5503c391c265f958f49b60af6bae
+[2025-10-29 21:41:42] SUCCESS: Container f53322698d5b090a282b04a35e17b8d93ac850ff3f5c7961cc250f1ed6d27913 started for fbca5503c391c265f958f49b60af6bae
+=== Container logs for fbca5503c391c265f958f49b60af6bae ===
+ERROR:root:Error during import of compiled filters!
+ERROR:root:No module named 'png.pngfilters'
+ERROR:root:Fallback to pure python mode!
+Traceback (most recent call last):
+  File "/snippet.py", line 18, in <module>
+    f = open(fpath, 'rb')
+        ^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'cifar-100-python/test'
+=== End of logs for fbca5503c391c265f958f49b60af6bae ===
+[2025-10-29 21:41:44] INFO: Container f53322698d5b090a282b04a35e17b8d93ac850ff3f5c7961cc250f1ed6d27913 has stopped

@@ -1,0 +1,94 @@
+=== Docker Build Log for a2b9c6ecdb24ca8fd6f4f41a9c0eb32e ===
+Started at: Mi 29. Okt 18:50:58 CET 2025
+
+[2025-10-29 18:50:58] START: Building image for a2b9c6ecdb24ca8fd6f4f41a9c0eb32e
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 220B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.21kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/a2b9c6ecdb24ca8fd6f4f41a9c0eb32e/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","bpy"]
+#7 2.006 Collecting bpy
+#7 2.043   Downloading bpy-4.5.4-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (2.0 kB)
+#7 2.302 Collecting cython (from bpy)
+#7 2.316   Downloading cython-3.1.6-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.0 kB)
+#7 2.544 Collecting numpy<2.0,>=1.26 (from bpy)
+#7 2.554   Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+#7 2.578      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.0/61.0 kB 2.5 MB/s eta 0:00:00
+#7 2.627 Collecting requests (from bpy)
+#7 2.636   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.738 Collecting zstandard (from bpy)
+#7 2.748   Downloading zstandard-0.25.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.3 kB)
+#7 2.863 Collecting charset_normalizer<4,>=2 (from requests->bpy)
+#7 2.872   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.914 Collecting idna<4,>=2.5 (from requests->bpy)
+#7 2.924   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.986 Collecting urllib3<3,>=1.21.1 (from requests->bpy)
+#7 2.996   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 3.041 Collecting certifi>=2017.4.17 (from requests->bpy)
+#7 3.051   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 3.086 Downloading bpy-4.5.4-cp311-cp311-manylinux_2_28_x86_64.whl (373.0 MB)
+#7 29.71    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 373.0/373.0 MB 3.5 MB/s eta 0:00:00
+#7 29.72 Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.3 MB)
+#7 31.40    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.3/18.3 MB 11.6 MB/s eta 0:00:00
+#7 31.41 Downloading cython-3.1.6-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.3 MB)
+#7 31.67    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 12.8 MB/s eta 0:00:00
+#7 31.68 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 31.69    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 4.0 MB/s eta 0:00:00
+#7 31.70 Downloading zstandard-0.25.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.6 MB)
+#7 32.08    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.6/5.6 MB 14.7 MB/s eta 0:00:00
+#7 32.09 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 32.11    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.7 MB/s eta 0:00:00
+#7 32.12 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 32.13    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 9.1 MB/s eta 0:00:00
+#7 32.15 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 32.16    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 6.1 MB/s eta 0:00:00
+#7 32.17 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 32.18    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 8.7 MB/s eta 0:00:00
+#7 33.10 Installing collected packages: zstandard, urllib3, numpy, idna, cython, charset_normalizer, certifi, requests, bpy
+#7 38.95 Successfully installed bpy-4.5.4 certifi-2025.10.5 charset_normalizer-3.4.4 cython-3.1.6 idna-3.11 numpy-1.26.4 requests-2.32.5 urllib3-2.5.0 zstandard-0.25.0
+#7 38.95 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 39.04 
+#7 39.04 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 39.04 [notice] To update, run: pip install --upgrade pip
+#7 DONE 46.0s
+
+#8 [4/4] RUN ["pip","install","requests"]
+#8 0.460 Requirement already satisfied: requests in /usr/local/lib/python3.11/site-packages (2.32.5)
+#8 0.465 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests) (3.4.4)
+#8 0.466 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests) (3.11)
+#8 0.467 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests) (2.5.0)
+#8 0.468 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests) (2025.10.5)
+#8 0.522 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.526 
+#8 0.526 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.526 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.6s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 4.0s done
+#9 writing image sha256:d0233ca3d66ebc8c226cb7e9f5c425b955104b177e3e25c2787ede9f4ca1015e done
+#9 naming to docker.io/library/test-image-a2b9c6ecdb24ca8fd6f4f41a9c0eb32e done
+#9 DONE 4.0s
+
+View build details: docker-desktop://dashboard/build/default/default/wqw8znege8jeyy4hl2t7wtrv1
+[2025-10-29 18:51:49] SUCCESS: Build completed for a2b9c6ecdb24ca8fd6f4f41a9c0eb32e

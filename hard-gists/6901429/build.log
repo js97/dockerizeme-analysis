@@ -1,0 +1,102 @@
+=== Docker Build Log for 6901429 ===
+Started at: Mi 29. Okt 16:44:53 CET 2025
+
+[2025-10-29 16:44:53] START: Building image for 6901429
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.97kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.27kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/49] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/49] COPY hard-gists/6901429/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/49] RUN ["apt-get","update"]
+#7 0.280 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.292 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.310 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.320 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.638 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.645 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.342 Fetched 9833 kB in 1s (8882 kB/s)
+#7 1.342 Reading package lists...
+#7 DONE 2.1s
+
+#8 [ 4/49] RUN ["pip","install","sklearn"]
+#8 1.981 Collecting sklearn
+#8 2.014   Downloading sklearn-0.0.post12.tar.gz (2.6 kB)
+#8 2.027   Preparing metadata (setup.py): started
+#8 2.363   Preparing metadata (setup.py): finished with status 'error'
+#8 2.366   error: subprocess-exited-with-error
+#8 2.366   
+#8 2.366   × python setup.py egg_info did not run successfully.
+#8 2.366   │ exit code: 1
+#8 2.366   ╰─> [15 lines of output]
+#8 2.366       The 'sklearn' PyPI package is deprecated, use 'scikit-learn'
+#8 2.366       rather than 'sklearn' for pip commands.
+#8 2.366       
+#8 2.366       Here is how to fix this error in the main use cases:
+#8 2.366       - use 'pip install scikit-learn' rather than 'pip install sklearn'
+#8 2.366       - replace 'sklearn' by 'scikit-learn' in your pip requirements files
+#8 2.366         (requirements.txt, setup.py, setup.cfg, Pipfile, etc ...)
+#8 2.366       - if the 'sklearn' package is used by one of your dependencies,
+#8 2.366         it would be great if you take some time to track which package uses
+#8 2.366         'sklearn' instead of 'scikit-learn' and report it to their issue tracker
+#8 2.366       - as a last resort, set the environment variable
+#8 2.366         SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True to avoid this error
+#8 2.366       
+#8 2.366       More information is available at
+#8 2.366       https://github.com/scikit-learn/sklearn-pypi-package
+#8 2.366       [end of output]
+#8 2.366   
+#8 2.366   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 2.368 error: metadata-generation-failed
+#8 2.368 
+#8 2.368 × Encountered error while generating package metadata.
+#8 2.368 ╰─> See above for output.
+#8 2.368 
+#8 2.368 note: This is an issue with the package mentioned above, not pip.
+#8 2.368 hint: See above for details.
+#8 2.471 
+#8 2.471 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.471 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install sklearn" did not complete successfully: exit code: 1
+------
+ > [ 4/49] RUN ["pip","install","sklearn"]:
+2.368 error: metadata-generation-failed
+2.368 
+2.368 × Encountered error while generating package metadata.
+2.368 ╰─> See above for output.
+2.368 
+2.368 note: This is an issue with the package mentioned above, not pip.
+2.368 hint: See above for details.
+2.471 
+2.471 [notice] A new release of pip is available: 24.0 -> 25.3
+2.471 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/6901429/snippet.py /snippet.py
+   3 |     RUN ["apt-get","update"]
+   4 | >>> RUN ["pip","install","sklearn"]
+   5 |     RUN ["apt-get","install","-y","python-pip"]
+   6 |     RUN ["apt-get","install","-y","python-dev"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install sklearn" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/j620mu9cxee3zpuafotkmqdeu
+[2025-10-29 16:44:58] ERROR: Build failed for 6901429

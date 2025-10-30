@@ -1,0 +1,14 @@
+=== Docker Run Log for 8171599 ===
+Started at: Mi 29. Okt 17:40:35 CET 2025
+
+[2025-10-29 17:40:44] START: Running container for 8171599
+[2025-10-29 17:40:45] SUCCESS: Container 064ac9fac3a4b23cce9336f0248cc069b541855c810aa1ddbe948acd8c2c8bcd started for 8171599
+=== Container logs for 8171599 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 5, in <module>
+    from django_facebook.models import FacebookCustomUser
+  File "/usr/local/lib/python3.11/site-packages/django_facebook/models.py", line 2, in <module>
+    from django.utils.encoding import python_2_unicode_compatible
+ImportError: cannot import name 'python_2_unicode_compatible' from 'django.utils.encoding' (/usr/local/lib/python3.11/site-packages/django/utils/encoding.py)
+=== End of logs for 8171599 ===
+[2025-10-29 17:40:47] INFO: Container 064ac9fac3a4b23cce9336f0248cc069b541855c810aa1ddbe948acd8c2c8bcd has stopped

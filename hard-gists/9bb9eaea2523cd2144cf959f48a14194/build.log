@@ -1,0 +1,154 @@
+=== Docker Build Log for 9bb9eaea2523cd2144cf959f48a14194 ===
+Started at: Mi 29. Okt 18:39:14 CET 2025
+
+[2025-10-29 18:39:14] START: Building image for 9bb9eaea2523cd2144cf959f48a14194
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 394B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.51kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/8] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/8] COPY hard-gists/9bb9eaea2523cd2144cf959f48a14194/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/8] RUN ["pip","install","dj.choices"]
+#7 1.923 Collecting dj.choices
+#7 1.966   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 1.990   Preparing metadata (setup.py): started
+#7 2.379   Preparing metadata (setup.py): finished with status 'done'
+#7 2.481 Collecting django (from dj.choices)
+#7 2.491   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.529 Collecting six (from dj.choices)
+#7 2.538   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.585 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.593   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.632 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.642   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.673 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.021    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 24.0 MB/s eta 0:00:00
+#7 3.030 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.050 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.077 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.091    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 2.7 MB/s eta 0:00:00
+#7 3.127 Building wheels for collected packages: dj.choices
+#7 3.128   Building wheel for dj.choices (setup.py): started
+#7 3.299   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.300   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=6f614d8d6c823f62ece89d893da0aecde56cc40a7911c6ccec0415bbb1f62aaf
+#7 3.300   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.302 Successfully built dj.choices
+#7 3.347 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 4.819 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 4.820 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.911 
+#7 4.911 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.911 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.5s
+
+#8 [4/8] RUN ["pip","install","djangorestframework"]
+#8 0.528 Collecting djangorestframework
+#8 0.565   Downloading djangorestframework-3.16.1-py3-none-any.whl.metadata (11 kB)
+#8 0.578 Requirement already satisfied: django>=4.2 in /usr/local/lib/python3.11/site-packages (from djangorestframework) (5.2.7)
+#8 0.581 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from django>=4.2->djangorestframework) (3.10.0)
+#8 0.582 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from django>=4.2->djangorestframework) (0.5.3)
+#8 0.595 Downloading djangorestframework-3.16.1-py3-none-any.whl (1.1 MB)
+#8 0.656    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 18.5 MB/s eta 0:00:00
+#8 0.699 Installing collected packages: djangorestframework
+#8 0.841 Successfully installed djangorestframework-3.16.1
+#8 0.841 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.846 
+#8 0.846 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.846 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.9s
+
+#9 [5/8] RUN ["pip","install","Django"]
+#9 0.432 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#9 0.436 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#9 0.437 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#9 0.478 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.483 
+#9 0.483 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.483 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.6s
+
+#10 [6/8] RUN ["pip","install","requests"]
+#10 0.526 Collecting requests
+#10 0.559   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#10 0.682 Collecting charset_normalizer<4,>=2 (from requests)
+#10 0.690   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#10 0.738 Collecting idna<4,>=2.5 (from requests)
+#10 0.746   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#10 0.805 Collecting urllib3<3,>=1.21.1 (from requests)
+#10 0.814   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#10 0.862 Collecting certifi>=2017.4.17 (from requests)
+#10 0.870   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#10 0.897 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#10 0.918    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 2.8 MB/s eta 0:00:00
+#10 0.927 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#10 0.944    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.8 MB/s eta 0:00:00
+#10 0.954 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#10 0.970    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.3 MB/s eta 0:00:00
+#10 0.978 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#10 0.990    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.6 MB/s eta 0:00:00
+#10 1.002 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#10 1.015    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.8 MB/s eta 0:00:00
+#10 1.068 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#10 1.303 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#10 1.304 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.309 
+#10 1.309 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.309 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.4s
+
+#11 [7/8] RUN ["pip","install","django-cors-headers"]
+#11 0.531 Collecting django-cors-headers
+#11 0.569   Downloading django_cors_headers-4.9.0-py3-none-any.whl.metadata (16 kB)
+#11 0.588 Requirement already satisfied: asgiref>=3.6 in /usr/local/lib/python3.11/site-packages (from django-cors-headers) (3.10.0)
+#11 0.589 Requirement already satisfied: django>=4.2 in /usr/local/lib/python3.11/site-packages (from django-cors-headers) (5.2.7)
+#11 0.596 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from django>=4.2->django-cors-headers) (0.5.3)
+#11 0.608 Downloading django_cors_headers-4.9.0-py3-none-any.whl (12 kB)
+#11 0.672 Installing collected packages: django-cors-headers
+#11 0.710 Successfully installed django-cors-headers-4.9.0
+#11 0.710 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.715 
+#11 0.715 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.715 [notice] To update, run: pip install --upgrade pip
+#11 DONE 0.8s
+
+#12 [8/8] RUN ["pip","install","djangorestframework-jwt"]
+#12 0.645 Collecting djangorestframework-jwt
+#12 0.677   Downloading djangorestframework_jwt-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#12 0.730 Collecting PyJWT<2.0.0,>=1.5.2 (from djangorestframework-jwt)
+#12 0.739   Downloading PyJWT-1.7.1-py2.py3-none-any.whl.metadata (3.9 kB)
+#12 0.771 Downloading djangorestframework_jwt-1.11.0-py2.py3-none-any.whl (13 kB)
+#12 0.796 Downloading PyJWT-1.7.1-py2.py3-none-any.whl (18 kB)
+#12 0.864 Installing collected packages: PyJWT, djangorestframework-jwt
+#12 0.924 Successfully installed PyJWT-1.7.1 djangorestframework-jwt-1.11.0
+#12 0.925 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 0.930 
+#12 0.930 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 0.930 [notice] To update, run: pip install --upgrade pip
+#12 DONE 1.0s
+
+#13 exporting to image
+#13 exporting layers
+#13 exporting layers 0.7s done
+#13 writing image sha256:ed217310cfa59cf1cccaa3a854b5d2f20ea4983f2262d16ae99158e2c2450b92 done
+#13 naming to docker.io/library/test-image-9bb9eaea2523cd2144cf959f48a14194 done
+#13 DONE 0.7s
+
+View build details: docker-desktop://dashboard/build/default/default/j19rnpeekm6frqgt97jwl1yii
+[2025-10-29 18:39:25] SUCCESS: Build completed for 9bb9eaea2523cd2144cf959f48a14194

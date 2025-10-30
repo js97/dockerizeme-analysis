@@ -1,0 +1,15 @@
+=== Docker Run Log for 5911624 ===
+Started at: Mi 29. Okt 16:09:45 CET 2025
+
+[2025-10-29 16:10:23] START: Running container for 5911624
+[2025-10-29 16:10:23] SUCCESS: Container 87c7c41a6925fd7ce421f5cbb835e697632af016fe3b7cbb0e4f52c11d6ef294 started for 5911624
+=== Container logs for 5911624 ===
+/snippet.py:1: DeprecationWarning: Please import `gaussian_kde` from the `scipy.stats` namespace; the `scipy.stats.kde` namespace is deprecated and will be removed in SciPy 2.0.0.
+  from scipy.stats.kde import gaussian_kde
+Traceback (most recent call last):
+  File "/snippet.py", line 61, in <module>
+    x = pymc.rnormal(0, 0.01, size=5000) 
+        ^^^^^^^^^^^^
+AttributeError: module 'pymc' has no attribute 'rnormal'. Did you mean: 'Normal'?
+=== End of logs for 5911624 ===
+[2025-10-29 16:10:25] INFO: Container 87c7c41a6925fd7ce421f5cbb835e697632af016fe3b7cbb0e4f52c11d6ef294 has stopped

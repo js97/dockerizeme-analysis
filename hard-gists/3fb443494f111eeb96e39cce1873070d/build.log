@@ -1,0 +1,95 @@
+=== Docker Build Log for 3fb443494f111eeb96e39cce1873070d ===
+Started at: Mi 29. Okt 14:16:00 CET 2025
+
+[2025-10-29 14:16:00] START: Building image for 3fb443494f111eeb96e39cce1873070d
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 226B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.35kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/3fb443494f111eeb96e39cce1873070d/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","webvirtmgr"]
+#7 1.881 Collecting webvirtmgr
+#7 1.935   Downloading webvirtmgr-4.8.9.tar.gz (705 kB)
+#7 1.997      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 705.8/705.8 kB 12.1 MB/s eta 0:00:00
+#7 2.032   Preparing metadata (setup.py): started
+#7 2.422   Preparing metadata (setup.py): finished with status 'done'
+#7 2.427 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from webvirtmgr) (79.0.1)
+#7 2.537 Collecting django>=1.5.5 (from webvirtmgr)
+#7 2.546   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.586 Collecting gunicorn>=18.0 (from webvirtmgr)
+#7 2.594   Downloading gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+#7 2.628 Collecting lockfile>=0.9 (from webvirtmgr)
+#7 2.637   Downloading lockfile-0.12.2-py2.py3-none-any.whl.metadata (2.4 kB)
+#7 2.685 Collecting asgiref>=3.8.1 (from django>=1.5.5->webvirtmgr)
+#7 2.693   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.730 Collecting sqlparse>=0.3.1 (from django>=1.5.5->webvirtmgr)
+#7 2.738   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.786 Collecting packaging (from gunicorn>=18.0->webvirtmgr)
+#7 2.795   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#7 2.844 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.198    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 23.5 MB/s eta 0:00:00
+#7 3.207 Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB)
+#7 3.219    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.0/85.0 kB 7.1 MB/s eta 0:00:00
+#7 3.227 Downloading lockfile-0.12.2-py2.py3-none-any.whl (13 kB)
+#7 3.248 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.266 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.278    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.2 MB/s eta 0:00:00
+#7 3.287 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#7 3.300    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.0 MB/s eta 0:00:00
+#7 3.339 Building wheels for collected packages: webvirtmgr
+#7 3.339   Building wheel for webvirtmgr (setup.py): started
+#7 3.625   Building wheel for webvirtmgr (setup.py): finished with status 'done'
+#7 3.627   Created wheel for webvirtmgr: filename=webvirtmgr-4.8.9-py3-none-any.whl size=698037 sha256=29bac44c2ab36713df0bd56002ddee31609cdd09fba4060564e7a765d06e5978
+#7 3.627   Stored in directory: /root/.cache/pip/wheels/c7/67/ab/a716fc1b614ea6bb537a20a0b880eb7071514208cc442aeac3
+#7 3.629 Successfully built webvirtmgr
+#7 3.694 Installing collected packages: lockfile, sqlparse, packaging, asgiref, gunicorn, django, webvirtmgr
+#7 5.248 Successfully installed asgiref-3.10.0 django-5.2.7 gunicorn-23.0.0 lockfile-0.12.2 packaging-25.0 sqlparse-0.5.3 webvirtmgr-4.8.9
+#7 5.248 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.341 
+#7 5.341 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.341 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.8s
+
+#8 [4/4] RUN ["pip","install","console"]
+#8 0.686 Collecting console
+#8 0.720   Downloading console-0.9912-py3-none-any.whl.metadata (18 kB)
+#8 0.874 Collecting ezenv>=0.92 (from console)
+#8 0.884   Downloading ezenv-0.92-py2.py3-none-any.whl.metadata (13 kB)
+#8 0.906 Downloading console-0.9912-py3-none-any.whl (96 kB)
+#8 0.939    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.8/96.8 kB 2.9 MB/s eta 0:00:00
+#8 0.949 Downloading ezenv-0.92-py2.py3-none-any.whl (10 kB)
+#8 1.010 Installing collected packages: ezenv, console
+#8 1.105 Successfully installed console-0.9912 ezenv-0.92
+#8 1.105 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.110 
+#8 1.110 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.110 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.2s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.6s done
+#9 writing image sha256:043060064c3b75d7a6d13ad173d42e54a4a66379e715edf6def351da15d6966d done
+#9 naming to docker.io/library/test-image-3fb443494f111eeb96e39cce1873070d 0.0s done
+#9 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/default/default/35e5vsd9a4q6xbapgbn39cvqi
+[2025-10-29 14:16:08] SUCCESS: Build completed for 3fb443494f111eeb96e39cce1873070d

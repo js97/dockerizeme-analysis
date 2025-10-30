@@ -1,0 +1,78 @@
+=== Docker Build Log for b09f45e112b226b97a36 ===
+Started at: Mi 29. Okt 19:23:22 CET 2025
+
+[2025-10-29 19:23:22] START: Building image for b09f45e112b226b97a36
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 242B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 856B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/b09f45e112b226b97a36/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","Jinja2"]
+#7 2.162 Collecting Jinja2
+#7 2.195   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#7 2.281 Collecting MarkupSafe>=2.0 (from Jinja2)
+#7 2.290   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#7 2.314 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#7 2.346    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 4.2 MB/s eta 0:00:00
+#7 2.357 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#7 2.401 Installing collected packages: MarkupSafe, Jinja2
+#7 2.484 Successfully installed Jinja2-3.1.6 MarkupSafe-3.0.3
+#7 2.484 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.579 
+#7 2.579 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.579 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.7s
+
+#8 [4/5] RUN ["pip","install","Markdown"]
+#8 0.540 Collecting Markdown
+#8 0.579   Downloading markdown-3.9-py3-none-any.whl.metadata (5.1 kB)
+#8 0.604 Downloading markdown-3.9-py3-none-any.whl (107 kB)
+#8 0.646    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.4/107.4 kB 2.5 MB/s eta 0:00:00
+#8 0.685 Installing collected packages: Markdown
+#8 0.764 Successfully installed Markdown-3.9
+#8 0.764 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.769 
+#8 0.769 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.769 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.8s
+
+#9 [5/5] RUN ["pip","install","PyYAML"]
+#9 0.546 Collecting PyYAML
+#9 0.585   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#9 0.617 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#9 0.729    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 7.3 MB/s eta 0:00:00
+#9 0.770 Installing collected packages: PyYAML
+#9 0.838 Successfully installed PyYAML-6.0.3
+#9 0.838 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.843 
+#9 0.843 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.843 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.9s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.2s done
+#10 writing image sha256:6be5d80dcb1d658fdbffc0516b1df972646e203357a4af9f5f4e820695d3a7bf done
+#10 naming to docker.io/library/test-image-b09f45e112b226b97a36 done
+#10 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/y0qrwjvb81qc6zsr7f8zs59kx
+[2025-10-29 19:23:27] SUCCESS: Build completed for b09f45e112b226b97a36

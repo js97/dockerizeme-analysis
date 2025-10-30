@@ -1,0 +1,12 @@
+=== Docker Run Log for 5303446 ===
+Started at: Mi 29. Okt 15:35:36 CET 2025
+
+[2025-10-29 15:35:37] START: Running container for 5303446
+[2025-10-29 15:35:37] SUCCESS: Container d11ebab548c9999dd6ea375ff7742bf4f4db46de475758e66e22d6b49373fcd4 started for 5303446
+=== Container logs for 5303446 ===
+  File "/snippet.py", line 22
+    print u'Module not found:\n%s\n%s\n' % (dir_path, py_path)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 5303446 ===
+[2025-10-29 15:35:39] INFO: Container d11ebab548c9999dd6ea375ff7742bf4f4db46de475758e66e22d6b49373fcd4 has stopped

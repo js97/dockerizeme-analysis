@@ -1,0 +1,98 @@
+=== Docker Build Log for f07d827a4818fda0db81 ===
+Started at: Mi 29. Okt 21:15:35 CET 2025
+
+[2025-10-29 21:15:35] START: Building image for f07d827a4818fda0db81
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 254B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.41kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/f07d827a4818fda0db81/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","dj.choices"]
+#7 2.023 Collecting dj.choices
+#7 2.086   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 2.105   Preparing metadata (setup.py): started
+#7 2.486   Preparing metadata (setup.py): finished with status 'done'
+#7 2.594 Collecting django (from dj.choices)
+#7 2.603   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.654 Collecting six (from dj.choices)
+#7 2.663   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.708 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.718   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.770 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.779   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.809 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.384    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 14.5 MB/s eta 0:00:00
+#7 3.393 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.411 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.433 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.445    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.5 MB/s eta 0:00:00
+#7 3.482 Building wheels for collected packages: dj.choices
+#7 3.482   Building wheel for dj.choices (setup.py): started
+#7 3.651   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.652   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=b554c75da26998db3d5f36bf4bc337a601aa6c01f3f5d2f3a949cd7ab496b7e0
+#7 3.652   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.654 Successfully built dj.choices
+#7 3.698 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 5.086 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 5.086 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.203 
+#7 5.203 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.203 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.7s
+
+#8 [4/5] RUN ["pip","install","Django"]
+#8 0.429 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#8 0.433 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#8 0.434 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#8 0.475 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.479 
+#8 0.479 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.479 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.6s
+
+#9 [5/5] RUN ["pip","install","django-shortcuts"]
+#9 0.611 Collecting django-shortcuts
+#9 0.647   Downloading django-shortcuts-1.6.tar.gz (3.1 kB)
+#9 0.659   Preparing metadata (setup.py): started
+#9 0.769   Preparing metadata (setup.py): finished with status 'done'
+#9 0.770 Building wheels for collected packages: django-shortcuts
+#9 0.778   Building wheel for django-shortcuts (setup.py): started
+#9 0.909   Building wheel for django-shortcuts (setup.py): finished with status 'done'
+#9 0.910   Created wheel for django-shortcuts: filename=django_shortcuts-1.6-py3-none-any.whl size=3912 sha256=3ccd57b8b68c818c7856e6ef0992aaf9d57a142819ee28fe13f85467d51f3e53
+#9 0.910   Stored in directory: /root/.cache/pip/wheels/b3/bc/72/b0359b6bf4fd547811a758ee17a3bf62f8fa4179229b07f6d8
+#9 0.912 Successfully built django-shortcuts
+#9 0.947 Installing collected packages: django-shortcuts
+#9 0.988 Successfully installed django-shortcuts-1.6
+#9 0.988 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.993 
+#9 0.993 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.993 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.1s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.6s done
+#10 writing image sha256:425f27a7ccb83e7181ab7e8a857252c602c9df9b433b737209c86bd0fc31b703 done
+#10 naming to docker.io/library/test-image-f07d827a4818fda0db81 done
+#10 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/default/default/y7psrojon0k63sdtyr21koa4f
+[2025-10-29 21:15:44] SUCCESS: Build completed for f07d827a4818fda0db81

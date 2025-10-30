@@ -1,0 +1,132 @@
+=== Docker Build Log for da582d745fa2bf0ddd8f5f7480042291 ===
+Started at: Mi 29. Okt 20:29:04 CET 2025
+
+[2025-10-29 20:29:04] START: Building image for da582d745fa2bf0ddd8f5f7480042291
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.95kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.77kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/48] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/48] COPY hard-gists/da582d745fa2bf0ddd8f5f7480042291/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/48] RUN ["apt-get","update"]
+#7 0.266 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.266 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.280 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.290 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.615 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.616 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.219 Fetched 9833 kB in 1s (9918 kB/s)
+#7 1.219 Reading package lists...
+#7 DONE 1.8s
+
+#8 [ 4/48] RUN ["pip","install","dlib"]
+#8 1.950 Collecting dlib
+#8 1.985   Downloading dlib-20.0.0.tar.gz (3.3 MB)
+#8 2.152      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 19.9 MB/s eta 0:00:00
+#8 2.457   Installing build dependencies: started
+#8 3.878   Installing build dependencies: finished with status 'done'
+#8 3.879   Getting requirements to build wheel: started
+#8 4.140   Getting requirements to build wheel: finished with status 'done'
+#8 4.141   Preparing metadata (pyproject.toml): started
+#8 4.362   Preparing metadata (pyproject.toml): finished with status 'done'
+#8 4.363 Building wheels for collected packages: dlib
+#8 4.364   Building wheel for dlib (pyproject.toml): started
+#8 4.482   Building wheel for dlib (pyproject.toml): finished with status 'error'
+#8 4.486   error: subprocess-exited-with-error
+#8 4.486   
+#8 4.486   × Building wheel for dlib (pyproject.toml) did not run successfully.
+#8 4.486   │ exit code: 1
+#8 4.486   ╰─> [41 lines of output]
+#8 4.486       running bdist_wheel
+#8 4.486       running build
+#8 4.486       running build_ext
+#8 4.486       
+#8 4.486       ================================================================================
+#8 4.486       ================================================================================
+#8 4.486       ================================================================================
+#8 4.486       
+#8 4.486                          CMake is not installed on your system!
+#8 4.486       
+#8 4.486           Or it is possible some broken copy of cmake is installed on your system.
+#8 4.486           It is unfortunately very common for python package managers to include
+#8 4.486           broken copies of cmake.  So if the error above this refers to some file
+#8 4.486           path to a cmake file inside a python or anaconda or miniconda path then you
+#8 4.486           should delete that broken copy of cmake from your computer.
+#8 4.486       
+#8 4.486           Instead, please get an official copy of cmake from one of these known good
+#8 4.486           sources of an official cmake:
+#8 4.486               - cmake.org (this is how windows users should get cmake)
+#8 4.486               - apt install cmake (for Ubuntu or Debian based systems)
+#8 4.486               - yum install cmake (for Redhat or CenOS based systems)
+#8 4.486       
+#8 4.486           On a linux machine you can run `which cmake` to see what cmake you are
+#8 4.486           actually using.  If it tells you it's some cmake from any kind of python
+#8 4.486           packager delete it and install an official cmake.
+#8 4.486       
+#8 4.486           More generally, cmake is not installed if when you open a terminal window
+#8 4.486           and type
+#8 4.486              cmake --version
+#8 4.486           you get an error.  So you can use that as a very basic test to see if you
+#8 4.486           have cmake installed.  That is, if cmake --version doesn't run from the
+#8 4.486           same terminal window from which you are reading this error message, then
+#8 4.486           you have not installed cmake.  Windows users should take note that they
+#8 4.486           need to tell the cmake installer to add cmake to their PATH.  Since you
+#8 4.486           can't run commands that are not in your PATH.  This is how the PATH works
+#8 4.486           on Linux as well, but failing to add cmake to the PATH is a particularly
+#8 4.486           common problem on windows and rarely a problem on Linux.
+#8 4.486       
+#8 4.486       ================================================================================
+#8 4.486       ================================================================================
+#8 4.486       ================================================================================
+#8 4.486       [end of output]
+#8 4.486   
+#8 4.486   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 4.486   ERROR: Failed building wheel for dlib
+#8 4.487 Failed to build dlib
+#8 4.487 ERROR: Could not build wheels for dlib, which is required to install pyproject.toml-based projects
+#8 4.492 
+#8 4.492 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 4.492 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install dlib" did not complete successfully: exit code: 1
+------
+ > [ 4/48] RUN ["pip","install","dlib"]:
+4.486       ================================================================================
+4.486       [end of output]
+4.486   
+4.486   note: This error originates from a subprocess, and is likely not a problem with pip.
+4.486   ERROR: Failed building wheel for dlib
+4.487 Failed to build dlib
+4.487 ERROR: Could not build wheels for dlib, which is required to install pyproject.toml-based projects
+4.492 
+4.492 [notice] A new release of pip is available: 24.0 -> 25.3
+4.492 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/da582d745fa2bf0ddd8f5f7480042291/snippet.py /snippet.py
+   3 |     RUN ["apt-get","update"]
+   4 | >>> RUN ["pip","install","dlib"]
+   5 |     RUN ["apt-get","install","-y","python-pip"]
+   6 |     RUN ["apt-get","install","-y","python-dev"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install dlib" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/vsrgse1zv5vk8myvl438x2rre
+[2025-10-29 20:29:11] ERROR: Build failed for da582d745fa2bf0ddd8f5f7480042291

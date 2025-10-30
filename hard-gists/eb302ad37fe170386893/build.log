@@ -1,0 +1,113 @@
+=== Docker Build Log for eb302ad37fe170386893 ===
+Started at: Mi 29. Okt 20:51:50 CET 2025
+
+[2025-10-29 20:51:50] START: Building image for eb302ad37fe170386893
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 178B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 430B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/eb302ad37fe170386893/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","AppKit"]
+#7 1.900 Collecting AppKit
+#7 1.946   Downloading AppKit-0.2.8.tar.gz (7.6 kB)
+#7 1.959   Preparing metadata (setup.py): started
+#7 2.332   Preparing metadata (setup.py): finished with status 'done'
+#7 2.452 Collecting flask (from AppKit)
+#7 2.497   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#7 2.537 Collecting pygobject (from AppKit)
+#7 2.547   Downloading pygobject-3.54.5.tar.gz (1.3 MB)
+#7 2.679      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 9.7 MB/s eta 0:00:00
+#7 2.761   Installing build dependencies: started
+#7 7.844   Installing build dependencies: finished with status 'done'
+#7 7.845   Getting requirements to build wheel: started
+#7 7.921   Getting requirements to build wheel: finished with status 'done'
+#7 7.924   Installing backend dependencies: started
+#7 8.372   Installing backend dependencies: finished with status 'done'
+#7 8.372   Preparing metadata (pyproject.toml): started
+#7 8.928   Preparing metadata (pyproject.toml): finished with status 'error'
+#7 8.931   error: subprocess-exited-with-error
+#7 8.931   
+#7 8.931   × Preparing metadata (pyproject.toml) did not run successfully.
+#7 8.931   │ exit code: 1
+#7 8.931   ╰─> [24 lines of output]
+#7 8.931       + meson setup /tmp/pip-install-1ybu_w4m/pygobject_5b3e94960f1b4aceb92048cf659eca17 /tmp/pip-install-1ybu_w4m/pygobject_5b3e94960f1b4aceb92048cf659eca17/.mesonpy-yhrcnacb -Dbuildtype=release -Db_ndebug=if-release -Db_vscrt=md -Dtests=false -Dwheel=true --wrap-mode=nofallback --native-file=/tmp/pip-install-1ybu_w4m/pygobject_5b3e94960f1b4aceb92048cf659eca17/.mesonpy-yhrcnacb/meson-python-native-file.ini
+#7 8.931       The Meson build system
+#7 8.931       Version: 1.9.1
+#7 8.931       Source dir: /tmp/pip-install-1ybu_w4m/pygobject_5b3e94960f1b4aceb92048cf659eca17
+#7 8.931       Build dir: /tmp/pip-install-1ybu_w4m/pygobject_5b3e94960f1b4aceb92048cf659eca17/.mesonpy-yhrcnacb
+#7 8.931       Build type: native build
+#7 8.931       Project name: pygobject
+#7 8.931       Project version: 3.54.5
+#7 8.931       C compiler for the host machine: cc (gcc 14.2.0 "cc (Debian 14.2.0-19) 14.2.0")
+#7 8.931       C linker for the host machine: cc ld.bfd 2.44
+#7 8.931       Host machine cpu family: x86_64
+#7 8.931       Host machine cpu: x86_64
+#7 8.931       Program python3 found: YES (/usr/local/bin/python3.11)
+#7 8.931       Found pkg-config: YES (/usr/bin/pkg-config) 1.8.1
+#7 8.931       Run-time dependency python found: YES 3.11
+#7 8.931       Did not find CMake 'cmake'
+#7 8.931       Found CMake: NO
+#7 8.931       Run-time dependency girepository-2.0 found: NO (tried pkgconfig and cmake)
+#7 8.931       Not looking for a fallback subproject for the dependency girepository-2.0 because:
+#7 8.931       Use of fallback dependencies is disabled.
+#7 8.931       
+#7 8.931       ../meson.build:31:9: ERROR: Dependency 'girepository-2.0' is required but not found.
+#7 8.931       
+#7 8.931       A full log can be found at /tmp/pip-install-1ybu_w4m/pygobject_5b3e94960f1b4aceb92048cf659eca17/.mesonpy-yhrcnacb/meson-logs/meson-log.txt
+#7 8.931       [end of output]
+#7 8.931   
+#7 8.931   note: This error originates from a subprocess, and is likely not a problem with pip.
+#7 8.933 error: metadata-generation-failed
+#7 8.933 
+#7 8.933 × Encountered error while generating package metadata.
+#7 8.933 ╰─> See above for output.
+#7 8.933 
+#7 8.933 note: This is an issue with the package mentioned above, not pip.
+#7 8.933 hint: See above for details.
+#7 8.938 
+#7 8.938 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 8.938 [notice] To update, run: pip install --upgrade pip
+#7 ERROR: process "pip install AppKit" did not complete successfully: exit code: 1
+------
+ > [3/3] RUN ["pip","install","AppKit"]:
+8.933 error: metadata-generation-failed
+8.933 
+8.933 × Encountered error while generating package metadata.
+8.933 ╰─> See above for output.
+8.933 
+8.933 note: This is an issue with the package mentioned above, not pip.
+8.933 hint: See above for details.
+8.938 
+8.938 [notice] A new release of pip is available: 24.0 -> 25.3
+8.938 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:3
+--------------------
+   1 |     FROM python:3.11
+   2 |     COPY hard-gists/eb302ad37fe170386893/snippet.py /snippet.py
+   3 | >>> RUN ["pip","install","AppKit"]
+   4 |     CMD ["python3","/snippet.py"]
+   5 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install AppKit" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/k1a5oyow17poc5ujiym69a25s
+[2025-10-29 20:52:00] ERROR: Build failed for eb302ad37fe170386893

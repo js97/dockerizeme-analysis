@@ -1,0 +1,224 @@
+=== Docker Build Log for 1248728 ===
+Started at: Mi 29. Okt 12:02:03 CET 2025
+
+[2025-10-29 12:02:03] START: Building image for 1248728
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 5.51kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.40kB 0.0s done
+#4 DONE 0.0s
+
+#5 [  1/153] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [  2/153] COPY hard-gists/1248728/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [  3/153] RUN ["apt-get","update"]
+#7 0.274 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.274 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.285 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.298 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.621 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.624 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.269 Fetched 9833 kB in 1s (9457 kB/s)
+#7 1.269 Reading package lists...
+#7 DONE 1.8s
+
+#8 [  4/153] RUN ["pip","install","dj.choices"]
+#8 1.930 Collecting dj.choices
+#8 1.973   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#8 1.991   Preparing metadata (setup.py): started
+#8 2.381   Preparing metadata (setup.py): finished with status 'done'
+#8 2.490 Collecting django (from dj.choices)
+#8 2.499   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#8 2.539 Collecting six (from dj.choices)
+#8 2.548   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 2.598 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#8 2.608   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#8 2.646 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#8 2.655   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#8 2.691 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#8 3.003    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 26.7 MB/s eta 0:00:00
+#8 3.011 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 3.028 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#8 3.045 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#8 3.056    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.8 MB/s eta 0:00:00
+#8 3.095 Building wheels for collected packages: dj.choices
+#8 3.095   Building wheel for dj.choices (setup.py): started
+#8 3.270   Building wheel for dj.choices (setup.py): finished with status 'done'
+#8 3.271   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=3bfa92671bd8db1d89ccfee70d452ac78aad1f5920e77f4faff8b1384d2e810f
+#8 3.271   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#8 3.273 Successfully built dj.choices
+#8 3.321 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#8 4.813 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#8 4.813 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 4.906 
+#8 4.906 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 4.906 [notice] To update, run: pip install --upgrade pip
+#8 DONE 5.6s
+
+#9 [  5/153] RUN ["pip","install","url"]
+#9 0.518 Collecting url
+#9 0.554   Downloading url-0.4.2.tar.gz (140 kB)
+#9 0.585      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 140.9/140.9 kB 4.7 MB/s eta 0:00:00
+#9 0.593   Preparing metadata (setup.py): started
+#9 0.706   Preparing metadata (setup.py): finished with status 'done'
+#9 0.708 Requirement already satisfied: six in /usr/local/lib/python3.11/site-packages (from url) (1.17.0)
+#9 0.709 Building wheels for collected packages: url
+#9 0.715   Building wheel for url (setup.py): started
+#9 1.204   Building wheel for url (setup.py): finished with status 'error'
+#9 1.210   error: subprocess-exited-with-error
+#9 1.210   
+#9 1.210   × python setup.py bdist_wheel did not run successfully.
+#9 1.210   │ exit code: 1
+#9 1.210   ╰─> [102 lines of output]
+#9 1.210       Building from C++
+#9 1.210       /usr/local/lib/python3.11/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+#9 1.210         warnings.warn(msg)
+#9 1.210       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:599: SetuptoolsDeprecationWarning: Invalid dash-separated key 'description-file' in 'metadata' (setup.cfg), please use the underscore name 'description_file' instead.
+#9 1.210       !!
+#9 1.210       
+#9 1.210               ********************************************************************************
+#9 1.210               Usage of dash-separated 'description-file' will not be supported in future
+#9 1.210               versions. Please use the underscore name 'description_file' instead.
+#9 1.210               (Affected: url).
+#9 1.210       
+#9 1.210               By 2026-Mar-03, you need to update your project and remove deprecated calls
+#9 1.210               or your builds will no longer be supported.
+#9 1.210       
+#9 1.210               See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+#9 1.210               ********************************************************************************
+#9 1.210       
+#9 1.210       !!
+#9 1.210         opt = self._enforce_underscore(opt, section)
+#9 1.210       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+#9 1.210       !!
+#9 1.210       
+#9 1.210               ********************************************************************************
+#9 1.210               Please consider removing the following classifiers in favor of a SPDX license expression:
+#9 1.210       
+#9 1.210               License :: OSI Approved :: MIT License
+#9 1.210       
+#9 1.210               See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+#9 1.210               ********************************************************************************
+#9 1.210       
+#9 1.210       !!
+#9 1.210         self._finalize_license_expression()
+#9 1.210       In file included from url/url-cpp/include/punycode.h:10,
+#9 1.210                        from url/url-cpp/src/psl.cpp:7:
+#9 1.210       url/url-cpp/include/utf8.h:19:17: error: ‘uint32_t’ does not name a type
+#9 1.210          19 |         typedef uint32_t codepoint_t;
+#9 1.210             |                 ^~~~~~~~
+#9 1.210       url/url-cpp/include/utf8.h:1:1: note: ‘uint32_t’ is defined in header ‘<cstdint>’; this is probably fixable by adding ‘#include <cstdint>’
+#9 1.210         +++ |+#include <cstdint>
+#9 1.210           1 | #ifndef UTF8_CPP_H
+#9 1.210       url/url-cpp/include/utf8.h:29:22: error: ‘codepoint_t’ does not name a type
+#9 1.210          29 |         static const codepoint_t MAX_CODEPOINT = 0x10FFFF;
+#9 1.210             |                      ^~~~~~~~~~~
+#9 1.210       url/url-cpp/include/utf8.h:34:16: error: ‘codepoint_t’ does not name a type
+#9 1.210          34 |         static codepoint_t readCodepoint(
+#9 1.210             |                ^~~~~~~~~~~
+#9 1.210       url/url-cpp/include/utf8.h:40:62: error: ‘codepoint_t’ has not been declared
+#9 1.210          40 |         static std::string& writeCodepoint(std::string& str, codepoint_t value);
+#9 1.210             |                                                              ^~~~~~~~~~~
+#9 1.210       url/url-cpp/include/utf8.h:45:16: error: ‘codepoint_t’ does not name a type
+#9 1.210          45 |         static codepoint_t toCodepoint(const std::string& str)
+#9 1.210             |                ^~~~~~~~~~~
+#9 1.210       url/url-cpp/include/utf8.h:54:42: error: ‘codepoint_t’ has not been declared
+#9 1.210          54 |         static std::string fromCodepoint(codepoint_t value)
+#9 1.210             |                                          ^~~~~~~~~~~
+#9 1.210       url/url-cpp/include/utf8.h:64:28: error: ‘codepoint_t’ was not declared in this scope
+#9 1.210          64 |         static std::vector<codepoint_t> toCodepoints(const std::string& str)
+#9 1.210             |                            ^~~~~~~~~~~
+#9 1.210       url/url-cpp/include/utf8.h:64:39: error: template argument 1 is invalid
+#9 1.210          64 |         static std::vector<codepoint_t> toCodepoints(const std::string& str)
+#9 1.210             |                                       ^
+#9 1.210       url/url-cpp/include/utf8.h:64:39: error: template argument 2 is invalid
+#9 1.210       url/url-cpp/include/utf8.h:77:61: error: ‘codepoint_t’ was not declared in this scope
+#9 1.210          77 |         static std::string fromCodepoints(const std::vector<codepoint_t>& points)
+#9 1.210             |                                                             ^~~~~~~~~~~
+#9 1.210       url/url-cpp/include/utf8.h:77:72: error: template argument 1 is invalid
+#9 1.210          77 |         static std::string fromCodepoints(const std::vector<codepoint_t>& points)
+#9 1.210             |                                                                        ^
+#9 1.210       url/url-cpp/include/utf8.h:77:72: error: template argument 2 is invalid
+#9 1.210       url/url-cpp/include/utf8.h: In static member function ‘static int Url::Utf8::toCodepoints(const std::string&)’:
+#9 1.210       url/url-cpp/include/utf8.h:66:25: error: ‘codepoint_t’ was not declared in this scope
+#9 1.210          66 |             std::vector<codepoint_t> result;
+#9 1.210             |                         ^~~~~~~~~~~
+#9 1.210       url/url-cpp/include/utf8.h:66:36: error: template argument 1 is invalid
+#9 1.210          66 |             std::vector<codepoint_t> result;
+#9 1.210             |                                    ^
+#9 1.210       url/url-cpp/include/utf8.h:66:36: error: template argument 2 is invalid
+#9 1.210       url/url-cpp/include/utf8.h:69:24: error: request for member ‘push_back’ in ‘result’, which is of non-class type ‘int’
+#9 1.210          69 |                 result.push_back(readCodepoint(it, str.end()));
+#9 1.210             |                        ^~~~~~~~~
+#9 1.210       url/url-cpp/include/utf8.h:69:34: error: ‘readCodepoint’ was not declared in this scope; did you mean ‘writeCodepoint’?
+#9 1.210          69 |                 result.push_back(readCodepoint(it, str.end()));
+#9 1.210             |                                  ^~~~~~~~~~~~~
+#9 1.210             |                                  writeCodepoint
+#9 1.210       url/url-cpp/include/utf8.h: In static member function ‘static std::string Url::Utf8::fromCodepoints(const int&)’:
+#9 1.210       url/url-cpp/include/utf8.h:80:35: error: request for member ‘begin’ in ‘points’, which is of non-class type ‘const int’
+#9 1.210          80 |             for (auto it = points.begin(); it != points.end(); ++it)
+#9 1.210             |                                   ^~~~~
+#9 1.210       url/url-cpp/include/utf8.h:80:57: error: request for member ‘end’ in ‘points’, which is of non-class type ‘const int’
+#9 1.210          80 |             for (auto it = points.begin(); it != points.end(); ++it)
+#9 1.210             |                                                         ^~~
+#9 1.210       url/url-cpp/include/punycode.h: At global scope:
+#9 1.210       url/url-cpp/include/punycode.h:17:23: error: ‘codepoint_t’ in ‘struct Url::Utf8’ does not name a type
+#9 1.210          17 |         typedef Utf8::codepoint_t punycode_uint;
+#9 1.210             |                       ^~~~~~~~~~~
+#9 1.210       url/url-cpp/include/punycode.h:56:15: error: ‘punycode_uint’ does not name a type
+#9 1.210          56 |         const punycode_uint MAX_PUNYCODE_UINT = std::numeric_limits<punycode_uint>::max();
+#9 1.210             |               ^~~~~~~~~~~~~
+#9 1.210       url/url-cpp/include/punycode.h:98:9: error: ‘punycode_uint’ does not name a type
+#9 1.210          98 |         punycode_uint adapt(
+#9 1.210             |         ^~~~~~~~~~~~~
+#9 1.210       error: command '/usr/bin/g++' failed with exit code 1
+#9 1.210       [end of output]
+#9 1.210   
+#9 1.210   note: This error originates from a subprocess, and is likely not a problem with pip.
+#9 1.210   ERROR: Failed building wheel for url
+#9 1.211   Running setup.py clean for url
+#9 1.337 Failed to build url
+#9 1.338 ERROR: Could not build wheels for url, which is required to install pyproject.toml-based projects
+#9 1.343 
+#9 1.343 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.343 [notice] To update, run: pip install --upgrade pip
+#9 ERROR: process "pip install url" did not complete successfully: exit code: 1
+------
+ > [  5/153] RUN ["pip","install","url"]:
+1.210       [end of output]
+1.210   
+1.210   note: This error originates from a subprocess, and is likely not a problem with pip.
+1.210   ERROR: Failed building wheel for url
+1.211   Running setup.py clean for url
+1.337 Failed to build url
+1.338 ERROR: Could not build wheels for url, which is required to install pyproject.toml-based projects
+1.343 
+1.343 [notice] A new release of pip is available: 24.0 -> 25.3
+1.343 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:5
+--------------------
+   3 |     RUN ["apt-get","update"]
+   4 |     RUN ["pip","install","dj.choices"]
+   5 | >>> RUN ["pip","install","url"]
+   6 |     RUN ["pip","install","Django"]
+   7 |     RUN ["pip","install","requests"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install url" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/rnmqppwlry7qik3jh9hqlw3hi
+[2025-10-29 12:02:13] ERROR: Build failed for 1248728

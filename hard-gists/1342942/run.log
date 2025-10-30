@@ -1,0 +1,24 @@
+=== Docker Run Log for 1342942 ===
+Started at: Mi 29. Okt 12:07:47 CET 2025
+
+[2025-10-29 12:08:01] START: Running container for 1342942
+[2025-10-29 12:08:01] SUCCESS: Container 2a9a849bbd7ac989f152962382c6aa978df062c51d022b1ae76df75ca276c432 started for 1342942
+=== Container logs for 1342942 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 5, in <module>
+    data = loadtxt('ex2data1.txt', delimiter=',')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/numpy/lib/_npyio_impl.py", line 1397, in loadtxt
+    arr = _read(fname, dtype=dtype, comment=comment, delimiter=delimiter,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/numpy/lib/_npyio_impl.py", line 1024, in _read
+    fh = np.lib._datasource.open(fname, 'rt', encoding=encoding)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/numpy/lib/_datasource.py", line 192, in open
+    return ds.open(path, mode, encoding=encoding, newline=newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/numpy/lib/_datasource.py", line 529, in open
+    raise FileNotFoundError(f"{path} not found.")
+FileNotFoundError: ex2data1.txt not found.
+=== End of logs for 1342942 ===
+[2025-10-29 12:08:03] INFO: Container 2a9a849bbd7ac989f152962382c6aa978df062c51d022b1ae76df75ca276c432 has stopped

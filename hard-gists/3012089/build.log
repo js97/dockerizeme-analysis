@@ -1,0 +1,118 @@
+=== Docker Build Log for 3012089 ===
+Started at: Mi 29. Okt 13:35:46 CET 2025
+
+[2025-10-29 13:35:46] START: Building image for 3012089
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 308B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 905B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/3012089/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","six"]
+#7 1.993 Collecting six
+#7 2.025   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.046 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.091 Installing collected packages: six
+#7 2.106 Successfully installed six-1.17.0
+#7 2.107 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.198 
+#7 2.198 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.198 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.3s
+
+#8 [4/7] RUN ["pip","install","Django"]
+#8 0.578 Collecting Django
+#8 0.617   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#8 0.663 Collecting asgiref>=3.8.1 (from Django)
+#8 0.672   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#8 0.719 Collecting sqlparse>=0.3.1 (from Django)
+#8 0.727   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#8 0.751 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#8 1.053    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 27.7 MB/s eta 0:00:00
+#8 1.062 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#8 1.079 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#8 1.090    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.7 MB/s eta 0:00:00
+#8 1.176 Installing collected packages: sqlparse, asgiref, Django
+#8 2.585 Successfully installed Django-5.2.7 asgiref-3.10.0 sqlparse-0.5.3
+#8 2.585 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.591 
+#8 2.591 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.591 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.9s
+
+#9 [5/7] RUN ["pip","install","psycopg2"]
+#9 0.601 Collecting psycopg2
+#9 0.639   Downloading psycopg2-2.9.11.tar.gz (379 kB)
+#9 0.677      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 379.6/379.6 kB 10.3 MB/s eta 0:00:00
+#9 0.714   Preparing metadata (setup.py): started
+#9 1.169   Preparing metadata (setup.py): finished with status 'done'
+#9 1.171 Building wheels for collected packages: psycopg2
+#9 1.172   Building wheel for psycopg2 (setup.py): started
+#9 6.527   Building wheel for psycopg2 (setup.py): finished with status 'done'
+#9 6.529   Created wheel for psycopg2: filename=psycopg2-2.9.11-cp311-cp311-linux_x86_64.whl size=503320 sha256=2a4973c1f7a318472a7a6b902a091d1a2625faf99ed8479c62db0044cade3dc6
+#9 6.529   Stored in directory: /root/.cache/pip/wheels/15/a7/0e/37c6d130333cbaac2e6bb15e4ff41ef3a195af78a70907ca0d
+#9 6.532 Successfully built psycopg2
+#9 6.569 Installing collected packages: psycopg2
+#9 6.603 Successfully installed psycopg2-2.9.11
+#9 6.604 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 6.611 
+#9 6.611 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 6.611 [notice] To update, run: pip install --upgrade pip
+#9 DONE 6.7s
+
+#10 [6/7] RUN ["pip","install","django-appconf"]
+#10 0.635 Collecting django-appconf
+#10 0.676   Downloading django_appconf-1.1.0-py3-none-any.whl.metadata (5.2 kB)
+#10 0.688 Requirement already satisfied: django in /usr/local/lib/python3.11/site-packages (from django-appconf) (5.2.7)
+#10 0.692 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from django->django-appconf) (3.10.0)
+#10 0.693 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from django->django-appconf) (0.5.3)
+#10 0.705 Downloading django_appconf-1.1.0-py3-none-any.whl (6.4 kB)
+#10 0.755 Installing collected packages: django-appconf
+#10 0.788 Successfully installed django-appconf-1.1.0
+#10 0.789 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.794 
+#10 0.794 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.794 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.9s
+
+#11 [7/7] RUN ["pip","install","django-classy-tags"]
+#11 0.636 Collecting django-classy-tags
+#11 0.670   Downloading django_classy_tags-4.1.0-py3-none-any.whl.metadata (5.3 kB)
+#11 0.689 Requirement already satisfied: django>=3.2 in /usr/local/lib/python3.11/site-packages (from django-classy-tags) (5.2.7)
+#11 0.693 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from django>=3.2->django-classy-tags) (3.10.0)
+#11 0.694 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from django>=3.2->django-classy-tags) (0.5.3)
+#11 0.708 Downloading django_classy_tags-4.1.0-py3-none-any.whl (14 kB)
+#11 0.762 Installing collected packages: django-classy-tags
+#11 0.800 Successfully installed django-classy-tags-4.1.0
+#11 0.800 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.805 
+#11 0.805 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.805 [notice] To update, run: pip install --upgrade pip
+#11 DONE 0.9s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.6s done
+#12 writing image sha256:4053defd6dcc82809c6b93b56604d10cd6752f4f2699ad7d5c648fd532198cab done
+#12 naming to docker.io/library/test-image-3012089 0.0s done
+#12 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/default/default/sip8u3azivs9fw5wamsb11v66
+[2025-10-29 13:36:01] SUCCESS: Build completed for 3012089

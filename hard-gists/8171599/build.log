@@ -1,0 +1,122 @@
+=== Docker Build Log for 8171599 ===
+Started at: Mi 29. Okt 17:40:35 CET 2025
+
+[2025-10-29 17:40:35] START: Building image for 8171599
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 276B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 619B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/6] COPY hard-gists/8171599/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/6] RUN ["pip","install","dj.choices"]
+#7 1.875 Collecting dj.choices
+#7 1.910   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 1.928   Preparing metadata (setup.py): started
+#7 2.313   Preparing metadata (setup.py): finished with status 'done'
+#7 2.415 Collecting django (from dj.choices)
+#7 2.425   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.465 Collecting six (from dj.choices)
+#7 2.474   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.524 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.532   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.569 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.577   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.600 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 2.929    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 25.4 MB/s eta 0:00:00
+#7 2.937 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.954 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 2.971 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 2.982    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.8 MB/s eta 0:00:00
+#7 3.018 Building wheels for collected packages: dj.choices
+#7 3.019   Building wheel for dj.choices (setup.py): started
+#7 3.195   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.195   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=4fad55c4c7b576f1faf8aae8979a7eb6ae3038cbfc213eaa65f4d88bff3531f0
+#7 3.195   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.197 Successfully built dj.choices
+#7 3.243 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 4.655 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 4.655 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.755 
+#7 4.755 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.755 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.1s
+
+#8 [4/6] RUN ["pip","install","Django"]
+#8 0.468 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#8 0.471 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#8 0.472 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#8 0.512 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.517 
+#8 0.517 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.517 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.6s
+
+#9 [5/6] RUN ["pip","install","django-test"]
+#9 0.511 Collecting django-test
+#9 0.553   Downloading django-test-0.4030.tar.gz (14 kB)
+#9 0.568   Preparing metadata (setup.py): started
+#9 0.681   Preparing metadata (setup.py): finished with status 'done'
+#9 0.682 Building wheels for collected packages: django-test
+#9 0.688   Building wheel for django-test (setup.py): started
+#9 0.826   Building wheel for django-test (setup.py): finished with status 'done'
+#9 0.826   Created wheel for django-test: filename=django_test-0.4030-py3-none-any.whl size=20059 sha256=c8be4b4d96d9e4a6269a15f846e221c4cf8c065adbc8a78f0f54f23ed10c355d
+#9 0.827   Stored in directory: /root/.cache/pip/wheels/32/43/47/2b13af766421220aa069444e648bdae66bc3dbe5e5fbfdc94f
+#9 0.828 Successfully built django-test
+#9 0.864 Installing collected packages: django-test
+#9 0.919 Successfully installed django-test-0.4030
+#9 0.920 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.925 
+#9 0.925 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.925 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.0s
+
+#10 [6/6] RUN ["pip","install","django-facebook"]
+#10 0.681 Collecting django-facebook
+#10 0.819   Downloading django-facebook-6.0.3.tar.gz (96 kB)
+#10 0.855      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.5/96.5 kB 2.6 MB/s eta 0:00:00
+#10 0.867   Preparing metadata (setup.py): started
+#10 0.984   Preparing metadata (setup.py): finished with status 'done'
+#10 1.023 Collecting unidecode (from django-facebook)
+#10 1.032   Downloading Unidecode-1.4.0-py3-none-any.whl.metadata (13 kB)
+#10 1.059 Downloading Unidecode-1.4.0-py3-none-any.whl (235 kB)
+#10 1.081    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 235.8/235.8 kB 11.1 MB/s eta 0:00:00
+#10 1.086 Building wheels for collected packages: django-facebook
+#10 1.091   Building wheel for django-facebook (setup.py): started
+#10 1.258   Building wheel for django-facebook (setup.py): finished with status 'done'
+#10 1.259   Created wheel for django-facebook: filename=django_facebook-6.0.3-py3-none-any.whl size=112249 sha256=758324c5eff36c554c36be350be41941a324f4e24e96b04da871b740aeeb99c2
+#10 1.259   Stored in directory: /root/.cache/pip/wheels/a2/fc/c9/cadc06d79396c6c3b60e446c3fbdf1cf07940161161b7126ce
+#10 1.261 Successfully built django-facebook
+#10 1.299 Installing collected packages: unidecode, django-facebook
+#10 1.490 Successfully installed django-facebook-6.0.3 unidecode-1.4.0
+#10 1.490 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.495 
+#10 1.495 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.495 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.6s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 0.6s done
+#11 writing image sha256:0c569627c4a6ebcf4e28c57f0646392a10a30b2928516f550b5604a65cb45d9a done
+#11 naming to docker.io/library/test-image-8171599 done
+#11 DONE 0.7s
+
+View build details: docker-desktop://dashboard/build/default/default/yaekrarj6b5njn99z9uc7oysd
+[2025-10-29 17:40:44] SUCCESS: Build completed for 8171599

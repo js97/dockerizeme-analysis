@@ -1,0 +1,18 @@
+=== Docker Run Log for 868b1057d9c0b72a57b809a67ad6e4cc ===
+Started at: Mi 29. Okt 17:55:03 CET 2025
+
+[2025-10-29 17:55:08] START: Running container for 868b1057d9c0b72a57b809a67ad6e4cc
+[2025-10-29 17:55:08] SUCCESS: Container 969e4041381861bda9f5f781ade1e47e1fc471a18cb377393f1613ae6de62942 started for 868b1057d9c0b72a57b809a67ad6e4cc
+=== Container logs for 868b1057d9c0b72a57b809a67ad6e4cc ===
+Traceback (most recent call last):
+  File "/snippet.py", line 2, in <module>
+    from ete3 import PhyloTree, TreeStyle, SeqMotifFace, TextFace, RectFace
+  File "/usr/local/lib/python3.11/site-packages/ete3/__init__.py", line 51, in <module>
+    from .ncbi_taxonomy import *
+  File "/usr/local/lib/python3.11/site-packages/ete3/ncbi_taxonomy/__init__.py", line 40, in <module>
+    from .ncbiquery import *
+  File "/usr/local/lib/python3.11/site-packages/ete3/ncbi_taxonomy/ncbiquery.py", line 61, in <module>
+    import six
+ModuleNotFoundError: No module named 'six'
+=== End of logs for 868b1057d9c0b72a57b809a67ad6e4cc ===
+[2025-10-29 17:55:10] INFO: Container 969e4041381861bda9f5f781ade1e47e1fc471a18cb377393f1613ae6de62942 has stopped

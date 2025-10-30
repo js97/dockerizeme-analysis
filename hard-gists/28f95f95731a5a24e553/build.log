@@ -1,0 +1,49 @@
+=== Docker Build Log for 28f95f95731a5a24e553 ===
+Started at: Mi 29. Okt 13:20:34 CET 2025
+
+[2025-10-29 13:20:34] START: Building image for 28f95f95731a5a24e553
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 178B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 513B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/28f95f95731a5a24e553/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","pillow"]
+#7 2.059 Collecting pillow
+#7 2.101   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#7 2.135 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#7 2.407    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 26.1 MB/s eta 0:00:00
+#7 2.477 Installing collected packages: pillow
+#7 2.701 Successfully installed pillow-12.0.0
+#7 2.702 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.797 
+#7 2.797 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.797 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.1s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.2s done
+#8 writing image sha256:bd90a74801a3ecea15bb5267ff30e04bdc01a2774a1ffb2b6efb38d4e43c2dc9 done
+#8 naming to docker.io/library/test-image-28f95f95731a5a24e553 done
+#8 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/42uh6r5ab0xu0xk8fmu588eum
+[2025-10-29 13:20:38] SUCCESS: Build completed for 28f95f95731a5a24e553

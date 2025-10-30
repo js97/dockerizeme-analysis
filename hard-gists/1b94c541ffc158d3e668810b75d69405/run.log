@@ -1,0 +1,31 @@
+=== Docker Run Log for 1b94c541ffc158d3e668810b75d69405 ===
+Started at: Mi 29. Okt 12:42:40 CET 2025
+
+[2025-10-29 12:42:45] START: Running container for 1b94c541ffc158d3e668810b75d69405
+[2025-10-29 12:42:45] SUCCESS: Container 1b4a5eed785d5242532d48a22d6ad707ae77f1e86cf203ddf407509b56ed32e4 started for 1b94c541ffc158d3e668810b75d69405
+=== Container logs for 1b94c541ffc158d3e668810b75d69405 ===
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/requests/models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 6 column 1 (char 5)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snippet.py", line 13, in <module>
+    data = response.json()
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/requests/models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 6 column 1 (char 5)
+=== End of logs for 1b94c541ffc158d3e668810b75d69405 ===
+[2025-10-29 12:42:47] INFO: Container 1b4a5eed785d5242532d48a22d6ad707ae77f1e86cf203ddf407509b56ed32e4 has stopped

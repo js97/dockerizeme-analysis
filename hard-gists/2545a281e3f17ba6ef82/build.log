@@ -1,0 +1,103 @@
+=== Docker Build Log for 2545a281e3f17ba6ef82 ===
+Started at: Mi 29. Okt 13:06:01 CET 2025
+
+[2025-10-29 13:06:01] START: Building image for 2545a281e3f17ba6ef82
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 183B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.78kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/2545a281e3f17ba6ef82/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","VapourSynth"]
+#7 2.054 Collecting VapourSynth
+#7 2.097   Downloading vapoursynth-72.zip (664 kB)
+#7 2.159      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 664.3/664.3 kB 11.2 MB/s eta 0:00:00
+#7 2.178   Preparing metadata (setup.py): started
+#7 3.641   Preparing metadata (setup.py): finished with status 'done'
+#7 3.643 Building wheels for collected packages: VapourSynth
+#7 3.643   Building wheel for VapourSynth (setup.py): started
+#7 40.41   Building wheel for VapourSynth (setup.py): finished with status 'error'
+#7 40.41   error: subprocess-exited-with-error
+#7 40.41   
+#7 40.41   × python setup.py bdist_wheel did not run successfully.
+#7 40.41   │ exit code: 1
+#7 40.41   ╰─> [26 lines of output]
+#7 40.41       /usr/local/lib/python3.11/site-packages/setuptools/__init__.py:94: _DeprecatedInstaller: setuptools.installer and fetch_build_eggs are deprecated.
+#7 40.41       !!
+#7 40.41       
+#7 40.41               ********************************************************************************
+#7 40.41               Requirements should be satisfied by a PEP 517 installer.
+#7 40.41               If you are using pip, you can try `pip install --use-pep517`.
+#7 40.41               ********************************************************************************
+#7 40.41       
+#7 40.41       !!
+#7 40.41         dist.fetch_build_eggs(dist.setup_requires)
+#7 40.41       running bdist_wheel
+#7 40.41       running build
+#7 40.41       running build_ext
+#7 40.41       Compiling src/cython/vapoursynth.pyx because it changed.
+#7 40.41       [1/1] Cythonizing src/cython/vapoursynth.pyx
+#7 40.41       building 'vapoursynth' extension
+#7 40.41       creating build/temp.linux-x86_64-cpython-311/src/cython
+#7 40.41       gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -DVS_UNUSED_CYTHON_BUILD_MACRO=51118080 -DVS_USE_LATEST_API -DVS_GRAPH_API -DVS_CURRENT_RELEASE=72 -I. -Isrc/cython -Isrc/vsscript -I/usr/local/include/python3.11 -c src/cython/vapoursynth.c -o build/temp.linux-x86_64-cpython-311/src/cython/vapoursynth.o
+#7 40.41       src/cython/vapoursynth.c:92003:18: warning: ‘__pyx_f_11vapoursynth__vsscript_use_or_create_environment’ defined but not used [-Wunused-function]
+#7 40.41       92003 | static PyObject *__pyx_f_11vapoursynth__vsscript_use_or_create_environment(int __pyx_v_id) {
+#7 40.41             |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#7 40.41       creating build/lib.linux-x86_64-cpython-311
+#7 40.41       gcc -shared build/temp.linux-x86_64-cpython-311/src/cython/vapoursynth.o -L. -Lbuild -L/usr/local/lib -lvapoursynth -o build/lib.linux-x86_64-cpython-311/vapoursynth.cpython-311-x86_64-linux-gnu.so
+#7 40.41       /usr/bin/ld: cannot find -lvapoursynth: No such file or directory
+#7 40.41       collect2: error: ld returned 1 exit status
+#7 40.41       error: command '/usr/bin/gcc' failed with exit code 1
+#7 40.41       [end of output]
+#7 40.41   
+#7 40.41   note: This error originates from a subprocess, and is likely not a problem with pip.
+#7 40.41   ERROR: Failed building wheel for VapourSynth
+#7 40.42   Running setup.py clean for VapourSynth
+#7 40.55 Failed to build VapourSynth
+#7 40.55 ERROR: Could not build wheels for VapourSynth, which is required to install pyproject.toml-based projects
+#7 40.66 
+#7 40.66 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 40.66 [notice] To update, run: pip install --upgrade pip
+#7 ERROR: process "pip install VapourSynth" did not complete successfully: exit code: 1
+------
+ > [3/3] RUN ["pip","install","VapourSynth"]:
+40.41       [end of output]
+40.41   
+40.41   note: This error originates from a subprocess, and is likely not a problem with pip.
+40.41   ERROR: Failed building wheel for VapourSynth
+40.42   Running setup.py clean for VapourSynth
+40.55 Failed to build VapourSynth
+40.55 ERROR: Could not build wheels for VapourSynth, which is required to install pyproject.toml-based projects
+40.66 
+40.66 [notice] A new release of pip is available: 24.0 -> 25.3
+40.66 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:3
+--------------------
+   1 |     FROM python:3.11
+   2 |     COPY hard-gists/2545a281e3f17ba6ef82/snippet.py /snippet.py
+   3 | >>> RUN ["pip","install","VapourSynth"]
+   4 |     CMD ["python3","/snippet.py"]
+   5 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install VapourSynth" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/jdrta1r1c9tc2rlc88iwi3315
+[2025-10-29 13:06:42] ERROR: Build failed for 2545a281e3f17ba6ef82

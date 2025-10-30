@@ -1,0 +1,333 @@
+=== Docker Build Log for 9358479 ===
+Started at: Mi 29. Okt 18:23:42 CET 2025
+
+[2025-10-29 18:23:42] START: Building image for 9358479
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 29.39kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [  1/805] FROM docker.io/library/python:3.11
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 1.28kB 0.0s done
+#5 DONE 0.0s
+
+#4 [  1/805] FROM docker.io/library/python:3.11
+#4 CACHED
+
+#6 [  2/805] COPY hard-gists/9358479/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [  3/805] RUN ["apt-get","update"]
+#7 0.488 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.488 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.544 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.565 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 1.090 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 1.098 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.686 Fetched 9833 kB in 1s (6805 kB/s)
+#7 1.686 Reading package lists...
+#7 DONE 2.3s
+
+#8 [  4/805] RUN ["pip","install","requests"]
+#8 1.928 Collecting requests
+#8 1.969   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#8 2.087 Collecting charset_normalizer<4,>=2 (from requests)
+#8 2.095   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#8 2.136 Collecting idna<4,>=2.5 (from requests)
+#8 2.143   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#8 2.203 Collecting urllib3<3,>=1.21.1 (from requests)
+#8 2.211   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#8 2.253 Collecting certifi>=2017.4.17 (from requests)
+#8 2.261   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#8 2.288 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#8 2.304    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.8 MB/s eta 0:00:00
+#8 2.313 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#8 2.330    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 10.0 MB/s eta 0:00:00
+#8 2.337 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#8 2.353    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.1 MB/s eta 0:00:00
+#8 2.363 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#8 2.377    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.1 MB/s eta 0:00:00
+#8 2.385 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#8 2.399    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.9 MB/s eta 0:00:00
+#8 2.446 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#8 2.658 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#8 2.659 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.753 
+#8 2.753 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.753 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.0s
+
+#9 [  5/805] RUN ["pip","install","pip"]
+#9 0.441 Requirement already satisfied: pip in /usr/local/lib/python3.11/site-packages (24.0)
+#9 0.480 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.485 
+#9 0.485 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.485 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.6s
+
+#10 [  6/805] RUN ["pip","install","gunicorn"]
+#10 0.529 Collecting gunicorn
+#10 0.565   Downloading gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+#10 0.621 Collecting packaging (from gunicorn)
+#10 0.629   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#10 0.649 Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB)
+#10 0.671    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.0/85.0 kB 3.7 MB/s eta 0:00:00
+#10 0.679 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#10 0.691    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.6 MB/s eta 0:00:00
+#10 0.739 Installing collected packages: packaging, gunicorn
+#10 0.850 Successfully installed gunicorn-23.0.0 packaging-25.0
+#10 0.850 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.855 
+#10 0.855 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.855 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.9s
+
+#11 [  7/805] RUN ["apt-get","install","-y","libmemcached-dev"]
+#11 0.228 Reading package lists...
+#11 0.654 Building dependency tree...
+#11 0.759 Reading state information...
+#11 0.949 The following additional packages will be installed:
+#11 0.950   libhashkit-dev libhashkit2t64 libmemcached11t64 libmemcachedutil2t64
+#11 0.951   libsasl2-dev
+#11 1.018 The following NEW packages will be installed:
+#11 1.018   libhashkit-dev libhashkit2t64 libmemcached-dev libmemcached11t64
+#11 1.019   libmemcachedutil2t64 libsasl2-dev
+#11 1.057 0 upgraded, 6 newly installed, 0 to remove and 0 not upgraded.
+#11 1.057 Need to get 591 kB of archives.
+#11 1.057 After this operation, 1820 kB of additional disk space will be used.
+#11 1.057 Get:1 http://deb.debian.org/debian trixie/main amd64 libhashkit2t64 amd64 1.1.4-1.1+b2 [18.8 kB]
+#11 1.077 Get:2 http://deb.debian.org/debian trixie/main amd64 libhashkit-dev amd64 1.1.4-1.1+b2 [36.3 kB]
+#11 1.081 Get:3 http://deb.debian.org/debian trixie/main amd64 libmemcached11t64 amd64 1.1.4-1.1+b2 [81.9 kB]
+#11 1.096 Get:4 http://deb.debian.org/debian trixie/main amd64 libmemcachedutil2t64 amd64 1.1.4-1.1+b2 [15.1 kB]
+#11 1.096 Get:5 http://deb.debian.org/debian trixie/main amd64 libsasl2-dev amd64 2.1.28+dfsg1-9 [234 kB]
+#11 1.107 Get:6 http://deb.debian.org/debian trixie/main amd64 libmemcached-dev amd64 1.1.4-1.1+b2 [205 kB]
+#11 1.252 debconf: unable to initialize frontend: Dialog
+#11 1.252 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#11 1.252 debconf: falling back to frontend: Readline
+#11 1.256 debconf: unable to initialize frontend: Readline
+#11 1.256 debconf: (This frontend requires a controlling tty.)
+#11 1.256 debconf: falling back to frontend: Teletype
+#11 1.259 debconf: unable to initialize frontend: Teletype
+#11 1.259 debconf: (This frontend requires a controlling tty.)
+#11 1.259 debconf: falling back to frontend: Noninteractive
+#11 1.719 Fetched 591 kB in 0s (7058 kB/s)
+#11 1.763 Selecting previously unselected package libhashkit2t64:amd64.
+#11 1.763 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 26761 files and directories currently installed.)
+#11 1.793 Preparing to unpack .../0-libhashkit2t64_1.1.4-1.1+b2_amd64.deb ...
+#11 1.808 Unpacking libhashkit2t64:amd64 (1.1.4-1.1+b2) ...
+#11 1.886 Selecting previously unselected package libhashkit-dev:amd64.
+#11 1.888 Preparing to unpack .../1-libhashkit-dev_1.1.4-1.1+b2_amd64.deb ...
+#11 1.895 Unpacking libhashkit-dev:amd64 (1.1.4-1.1+b2) ...
+#11 1.956 Selecting previously unselected package libmemcached11t64:amd64.
+#11 1.957 Preparing to unpack .../2-libmemcached11t64_1.1.4-1.1+b2_amd64.deb ...
+#11 1.965 Unpacking libmemcached11t64:amd64 (1.1.4-1.1+b2) ...
+#11 2.020 Selecting previously unselected package libmemcachedutil2t64:amd64.
+#11 2.021 Preparing to unpack .../3-libmemcachedutil2t64_1.1.4-1.1+b2_amd64.deb ...
+#11 2.029 Unpacking libmemcachedutil2t64:amd64 (1.1.4-1.1+b2) ...
+#11 2.096 Selecting previously unselected package libsasl2-dev.
+#11 2.097 Preparing to unpack .../4-libsasl2-dev_2.1.28+dfsg1-9_amd64.deb ...
+#11 2.105 Unpacking libsasl2-dev (2.1.28+dfsg1-9) ...
+#11 2.166 Selecting previously unselected package libmemcached-dev:amd64.
+#11 2.168 Preparing to unpack .../5-libmemcached-dev_1.1.4-1.1+b2_amd64.deb ...
+#11 2.176 Unpacking libmemcached-dev:amd64 (1.1.4-1.1+b2) ...
+#11 2.246 Setting up libsasl2-dev (2.1.28+dfsg1-9) ...
+#11 2.270 Setting up libhashkit2t64:amd64 (1.1.4-1.1+b2) ...
+#11 2.299 Setting up libhashkit-dev:amd64 (1.1.4-1.1+b2) ...
+#11 2.330 Setting up libmemcached11t64:amd64 (1.1.4-1.1+b2) ...
+#11 2.356 Setting up libmemcachedutil2t64:amd64 (1.1.4-1.1+b2) ...
+#11 2.382 Setting up libmemcached-dev:amd64 (1.1.4-1.1+b2) ...
+#11 2.412 Processing triggers for libc-bin (2.41-12) ...
+#11 DONE 2.5s
+
+#12 [  8/805] RUN ["pip","install","pyramid"]
+#12 0.646 Collecting pyramid
+#12 0.683   Downloading pyramid-2.0.2-py3-none-any.whl.metadata (20 kB)
+#12 0.841 Collecting hupper>=1.5 (from pyramid)
+#12 0.851   Downloading hupper-1.12.1-py3-none-any.whl.metadata (3.7 kB)
+#12 0.992 Collecting plaster (from pyramid)
+#12 1.001   Downloading plaster-1.1.2-py2.py3-none-any.whl.metadata (6.4 kB)
+#12 1.144 Collecting plaster-pastedeploy (from pyramid)
+#12 1.153   Downloading plaster_pastedeploy-1.0.1-py2.py3-none-any.whl.metadata (8.1 kB)
+#12 1.165 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from pyramid) (79.0.1)
+#12 1.298 Collecting translationstring>=0.4 (from pyramid)
+#12 1.308   Downloading translationstring-1.4-py2.py3-none-any.whl.metadata (4.1 kB)
+#12 1.446 Collecting venusian>=1.0 (from pyramid)
+#12 1.456   Downloading venusian-3.1.1-py3-none-any.whl.metadata (10 kB)
+#12 1.511 Collecting webob>=1.8.3 (from pyramid)
+#12 1.522   Downloading WebOb-1.8.9-py2.py3-none-any.whl.metadata (11 kB)
+#12 1.663 Collecting zope.deprecation>=3.5.0 (from pyramid)
+#12 1.674   Downloading zope_deprecation-6.0-py3-none-any.whl.metadata (5.5 kB)
+#12 1.807 Collecting zope.interface>=3.8.0 (from pyramid)
+#12 1.818   Downloading zope_interface-8.0.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (44 kB)
+#12 1.830      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.9/44.9 kB 3.5 MB/s eta 0:00:00
+#12 1.984 Collecting PasteDeploy>=2.0 (from plaster-pastedeploy->pyramid)
+#12 1.993   Downloading PasteDeploy-3.1.0-py3-none-any.whl.metadata (2.7 kB)
+#12 2.043 Downloading pyramid-2.0.2-py3-none-any.whl (247 kB)
+#12 2.071    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.3/247.3 kB 9.1 MB/s eta 0:00:00
+#12 2.081 Downloading hupper-1.12.1-py3-none-any.whl (22 kB)
+#12 2.100 Downloading translationstring-1.4-py2.py3-none-any.whl (15 kB)
+#12 2.120 Downloading venusian-3.1.1-py3-none-any.whl (14 kB)
+#12 2.142 Downloading WebOb-1.8.9-py2.py3-none-any.whl (115 kB)
+#12 2.160    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 115.4/115.4 kB 6.5 MB/s eta 0:00:00
+#12 2.169 Downloading zope_deprecation-6.0-py3-none-any.whl (9.5 kB)
+#12 2.196 Downloading zope_interface-8.0.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (259 kB)
+#12 2.215    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 259.8/259.8 kB 14.5 MB/s eta 0:00:00
+#12 2.225 Downloading plaster-1.1.2-py2.py3-none-any.whl (11 kB)
+#12 2.249 Downloading plaster_pastedeploy-1.0.1-py2.py3-none-any.whl (7.8 kB)
+#12 2.267 Downloading PasteDeploy-3.1.0-py3-none-any.whl (16 kB)
+#12 2.380 Installing collected packages: translationstring, zope.interface, zope.deprecation, webob, venusian, plaster, PasteDeploy, hupper, plaster-pastedeploy, pyramid
+#12 2.776 Successfully installed PasteDeploy-3.1.0 hupper-1.12.1 plaster-1.1.2 plaster-pastedeploy-1.0.1 pyramid-2.0.2 translationstring-1.4 venusian-3.1.1 webob-1.8.9 zope.deprecation-6.0 zope.interface-8.0.1
+#12 2.776 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 2.781 
+#12 2.781 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 2.781 [notice] To update, run: pip install --upgrade pip
+#12 DONE 2.9s
+
+#13 [  9/805] RUN ["pip","install","Cython"]
+#13 0.734 Collecting Cython
+#13 0.772   Downloading cython-3.1.6-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.0 kB)
+#13 0.798 Downloading cython-3.1.6-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.3 MB)
+#13 0.959    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 20.8 MB/s eta 0:00:00
+#13 1.061 Installing collected packages: Cython
+#13 1.577 Successfully installed Cython-3.1.6
+#13 1.577 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 1.582 
+#13 1.582 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 1.582 [notice] To update, run: pip install --upgrade pip
+#13 DONE 1.8s
+
+#14 [ 10/805] RUN ["pip","install","dogpile.cache"]
+#14 0.571 Collecting dogpile.cache
+#14 0.604   Downloading dogpile_cache-1.5.0-py3-none-any.whl.metadata (5.5 kB)
+#14 0.660 Collecting decorator>=4.0.0 (from dogpile.cache)
+#14 0.669   Downloading decorator-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+#14 0.729 Collecting stevedore>=3.0.0 (from dogpile.cache)
+#14 0.738   Downloading stevedore-5.5.0-py3-none-any.whl.metadata (2.2 kB)
+#14 0.762 Downloading dogpile_cache-1.5.0-py3-none-any.whl (64 kB)
+#14 0.789    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.4/64.4 kB 2.2 MB/s eta 0:00:00
+#14 0.797 Downloading decorator-5.2.1-py3-none-any.whl (9.2 kB)
+#14 0.830 Downloading stevedore-5.5.0-py3-none-any.whl (49 kB)
+#14 0.846    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.5/49.5 kB 2.8 MB/s eta 0:00:00
+#14 0.934 Installing collected packages: stevedore, decorator, dogpile.cache
+#14 1.040 Successfully installed decorator-5.2.1 dogpile.cache-1.5.0 stevedore-5.5.0
+#14 1.040 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#14 1.046 
+#14 1.046 [notice] A new release of pip is available: 24.0 -> 25.3
+#14 1.046 [notice] To update, run: pip install --upgrade pip
+#14 DONE 1.1s
+
+#15 [ 11/805] RUN ["pip","install","xylose"]
+#15 0.801 Collecting xylose
+#15 0.946   Downloading xylose-1.35.4.tar.gz (44 kB)
+#15 0.976      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.8/44.8 kB 1.2 MB/s eta 0:00:00
+#15 0.982   Preparing metadata (setup.py): started
+#15 1.383   Preparing metadata (setup.py): finished with status 'done'
+#15 1.592 Collecting legendarium>=1.2.0 (from xylose)
+#15 1.701   Downloading legendarium-2.0.6.tar.gz (8.1 kB)
+#15 1.727   Preparing metadata (setup.py): started
+#15 1.846   Preparing metadata (setup.py): finished with status 'done'
+#15 1.847 Building wheels for collected packages: xylose, legendarium
+#15 1.848   Building wheel for xylose (setup.py): started
+#15 2.060   Building wheel for xylose (setup.py): finished with status 'done'
+#15 2.060   Created wheel for xylose: filename=xylose-1.35.4-py3-none-any.whl size=26065 sha256=06fadff7024da4e40fcd1cbbc0981b9fd0466de75f574ff1a50778d0bb670619
+#15 2.060   Stored in directory: /root/.cache/pip/wheels/bb/96/14/0321dab305f6049122d7c16a72dda7f4893e7f5f2cede9dfc7
+#15 2.062   Building wheel for legendarium (setup.py): started
+#15 2.242   Building wheel for legendarium (setup.py): finished with status 'done'
+#15 2.243   Created wheel for legendarium: filename=legendarium-2.0.6-py2.py3-none-any.whl size=7741 sha256=93a85a33a3ec98cd37001f3147cf698871fe746d6e5ba19cab11c02f57ddb84a
+#15 2.243   Stored in directory: /root/.cache/pip/wheels/cd/f9/1e/02e117e3f73f20196ae20137005447d41d5941d36ff43badaf
+#15 2.244 Successfully built xylose legendarium
+#15 2.328 Installing collected packages: legendarium, xylose
+#15 2.371 Successfully installed legendarium-2.0.6 xylose-1.35.4
+#15 2.372 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#15 2.377 
+#15 2.377 [notice] A new release of pip is available: 24.0 -> 25.3
+#15 2.377 [notice] To update, run: pip install --upgrade pip
+#15 DONE 2.5s
+
+#16 [ 12/805] RUN ["pip","install","thriftpy"]
+#16 0.616 Collecting thriftpy
+#16 0.764   Downloading thriftpy-0.3.9.tar.gz (208 kB)
+#16 0.800      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 208.2/208.2 kB 5.9 MB/s eta 0:00:00
+#16 0.814   Preparing metadata (setup.py): started
+#16 1.312   Preparing metadata (setup.py): finished with status 'error'
+#16 1.316   error: subprocess-exited-with-error
+#16 1.316   
+#16 1.316   × python setup.py egg_info did not run successfully.
+#16 1.316   │ exit code: 1
+#16 1.316   ╰─> [26 lines of output]
+#16 1.316       
+#16 1.316       Error compiling Cython file:
+#16 1.316       ------------------------------------------------------------
+#16 1.316       ...
+#16 1.316       
+#16 1.316           cdef int grow(self, int min_size):
+#16 1.316               if min_size <= self.buf_size:
+#16 1.316                   return 0
+#16 1.316       
+#16 1.316               cdef int multiples = min_size / self.buf_size
+#16 1.316                                             ^
+#16 1.316       ------------------------------------------------------------
+#16 1.316       
+#16 1.316       thriftpy/transport/cybase.pyx:90:38: Cannot assign type 'double' to 'int'
+#16 1.316       Traceback (most recent call last):
+#16 1.316         File "<string>", line 2, in <module>
+#16 1.316         File "<pip-setuptools-caller>", line 34, in <module>
+#16 1.316         File "/tmp/pip-install-nrmbm0jh/thriftpy_870120a4c2bf4e3f9454e5cbbeb040b9/setup.py", line 52, in <module>
+#16 1.316           cythonize("thriftpy/transport/cybase.pyx")
+#16 1.316         File "/usr/local/lib/python3.11/site-packages/Cython/Build/Dependencies.py", line 1150, in cythonize
+#16 1.316           cythonize_one(*args)
+#16 1.316         File "/usr/local/lib/python3.11/site-packages/Cython/Build/Dependencies.py", line 1294, in cythonize_one
+#16 1.316           raise CompileError(None, pyx_file)
+#16 1.316       Cython.Compiler.Errors.CompileError: thriftpy/transport/cybase.pyx
+#16 1.316       Compiling thriftpy/transport/cybase.pyx because it changed.
+#16 1.316       [1/1] Cythonizing thriftpy/transport/cybase.pyx
+#16 1.316       [end of output]
+#16 1.316   
+#16 1.316   note: This error originates from a subprocess, and is likely not a problem with pip.
+#16 1.317 error: metadata-generation-failed
+#16 1.317 
+#16 1.317 × Encountered error while generating package metadata.
+#16 1.317 ╰─> See above for output.
+#16 1.317 
+#16 1.317 note: This is an issue with the package mentioned above, not pip.
+#16 1.317 hint: See above for details.
+#16 1.322 
+#16 1.322 [notice] A new release of pip is available: 24.0 -> 25.3
+#16 1.322 [notice] To update, run: pip install --upgrade pip
+#16 ERROR: process "pip install thriftpy" did not complete successfully: exit code: 1
+------
+ > [ 12/805] RUN ["pip","install","thriftpy"]:
+1.317 error: metadata-generation-failed
+1.317 
+1.317 × Encountered error while generating package metadata.
+1.317 ╰─> See above for output.
+1.317 
+1.317 note: This is an issue with the package mentioned above, not pip.
+1.317 hint: See above for details.
+1.322 
+1.322 [notice] A new release of pip is available: 24.0 -> 25.3
+1.322 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:12
+--------------------
+  10 |     RUN ["pip","install","dogpile.cache"]
+  11 |     RUN ["pip","install","xylose"]
+  12 | >>> RUN ["pip","install","thriftpy"]
+  13 |     RUN ["pip","install","articlemetaapi"]
+  14 |     RUN ["pip","install","six"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install thriftpy" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/anpk8vjl0gwpgg436v5l3jlqb
+[2025-10-29 18:24:02] ERROR: Build failed for 9358479

@@ -1,0 +1,268 @@
+=== Docker Build Log for f3538c32965575e59bcd ===
+Started at: Mi 29. Okt 21:24:54 CET 2025
+
+[2025-10-29 21:24:54] START: Building image for f3538c32965575e59bcd
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.46kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 5.53kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/37] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/37] COPY hard-gists/f3538c32965575e59bcd/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/37] RUN ["apt-get","update"]
+#7 0.347 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.347 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.398 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.430 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 2.153 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 2.164 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 2.763 Fetched 9833 kB in 3s (3871 kB/s)
+#7 2.763 Reading package lists...
+#7 DONE 3.4s
+
+#8 [ 4/37] RUN ["pip","install","PyChef"]
+#8 2.037 Collecting PyChef
+#8 2.128   Downloading PyChef-0.3.0.tar.gz (23 kB)
+#8 2.147   Preparing metadata (setup.py): started
+#8 2.577   Preparing metadata (setup.py): finished with status 'done'
+#8 2.614 Collecting six>=1.9.0 (from PyChef)
+#8 2.622   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 2.688 Collecting requests>=2.7.0 (from PyChef)
+#8 2.702   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#8 2.819 Collecting charset_normalizer<4,>=2 (from requests>=2.7.0->PyChef)
+#8 2.830   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#8 2.878 Collecting idna<4,>=2.5 (from requests>=2.7.0->PyChef)
+#8 2.888   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#8 2.953 Collecting urllib3<3,>=1.21.1 (from requests>=2.7.0->PyChef)
+#8 2.964   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#8 3.031 Collecting certifi>=2017.4.17 (from requests>=2.7.0->PyChef)
+#8 3.043   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#8 3.075 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#8 3.089    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 4.6 MB/s eta 0:00:00
+#8 3.097 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 3.116 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#8 3.139    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 6.9 MB/s eta 0:00:00
+#8 3.172 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#8 3.184    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 13.9 MB/s eta 0:00:00
+#8 3.192 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#8 3.209    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.2 MB/s eta 0:00:00
+#8 3.218 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#8 3.236    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 7.3 MB/s eta 0:00:00
+#8 3.244 Building wheels for collected packages: PyChef
+#8 3.245   Building wheel for PyChef (setup.py): started
+#8 3.424   Building wheel for PyChef (setup.py): finished with status 'done'
+#8 3.424   Created wheel for PyChef: filename=pychef-0.3.0-py3-none-any.whl size=28874 sha256=f28376723287dcfd2d95d42988afa9701736687c45b20e698385b0eda7f25855
+#8 3.424   Stored in directory: /root/.cache/pip/wheels/26/6c/da/8e08c64b445d44335651bd7ca227797ffc00c27683888e3817
+#8 3.426 Successfully built PyChef
+#8 3.467 Installing collected packages: urllib3, six, idna, charset_normalizer, certifi, requests, PyChef
+#8 3.779 Successfully installed PyChef-0.3.0 certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 six-1.17.0 urllib3-2.5.0
+#8 3.779 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 3.908 
+#8 3.908 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.908 [notice] To update, run: pip install --upgrade pip
+#8 DONE 4.1s
+
+#9 [ 5/37] RUN ["pip","install","simpleblogging"]
+#9 0.689 Collecting simpleblogging
+#9 1.092   Downloading simpleblogging-2.0.13.tar.gz (1.4 MB)
+#9 1.296      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 7.0 MB/s eta 0:00:00
+#9 1.333   Preparing metadata (setup.py): started
+#9 1.444   Preparing metadata (setup.py): finished with status 'done'
+#9 1.485 Collecting flask (from simpleblogging)
+#9 1.503   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#9 1.654 Collecting flask_seasurf (from simpleblogging)
+#9 1.676   Downloading Flask_SeaSurf-2.0.0-py3-none-any.whl.metadata (2.4 kB)
+#9 1.838 Collecting pony (from simpleblogging)
+#9 1.856   Downloading pony-0.7.19-py3-none-any.whl.metadata (2.8 kB)
+#9 1.917 Collecting markdown (from simpleblogging)
+#9 1.937   Downloading markdown-3.9-py3-none-any.whl.metadata (5.1 kB)
+#9 1.996 Collecting python_dateutil (from simpleblogging)
+#9 2.009   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#9 2.172 Collecting flask_basicauth (from simpleblogging)
+#9 2.181   Downloading Flask-BasicAuth-0.2.0.tar.gz (16 kB)
+#9 2.197   Preparing metadata (setup.py): started
+#9 2.314   Preparing metadata (setup.py): finished with status 'done'
+#9 2.315 Requirement already satisfied: requests in /usr/local/lib/python3.11/site-packages (from simpleblogging) (2.32.5)
+#9 2.455 Collecting flask_script (from simpleblogging)
+#9 2.469   Downloading Flask-Script-2.0.6.tar.gz (43 kB)
+#9 2.483      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.1/43.1 kB 2.8 MB/s eta 0:00:00
+#9 2.488   Preparing metadata (setup.py): started
+#9 2.630   Preparing metadata (setup.py): finished with status 'done'
+#9 2.664 Collecting blinker>=1.9.0 (from flask->simpleblogging)
+#9 2.672   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#9 2.721 Collecting click>=8.1.3 (from flask->simpleblogging)
+#9 2.730   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#9 2.767 Collecting itsdangerous>=2.2.0 (from flask->simpleblogging)
+#9 2.775   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#9 2.830 Collecting jinja2>=3.1.2 (from flask->simpleblogging)
+#9 2.871   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#9 2.995 Collecting markupsafe>=2.1.1 (from flask->simpleblogging)
+#9 3.006   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#9 3.097 Collecting werkzeug>=3.1.0 (from flask->simpleblogging)
+#9 3.113   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#9 3.131 Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.11/site-packages (from python_dateutil->simpleblogging) (1.17.0)
+#9 3.136 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests->simpleblogging) (3.4.4)
+#9 3.137 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests->simpleblogging) (3.11)
+#9 3.138 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests->simpleblogging) (2.5.0)
+#9 3.139 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests->simpleblogging) (2025.10.5)
+#9 3.179 Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+#9 3.200    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 5.5 MB/s eta 0:00:00
+#9 3.269 Downloading Flask_SeaSurf-2.0.0-py3-none-any.whl (8.4 kB)
+#9 3.303 Downloading markdown-3.9-py3-none-any.whl (107 kB)
+#9 3.331    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.4/107.4 kB 4.2 MB/s eta 0:00:00
+#9 3.382 Downloading pony-0.7.19-py3-none-any.whl (317 kB)
+#9 3.432    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 317.3/317.3 kB 6.5 MB/s eta 0:00:00
+#9 3.449 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#9 3.491    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 5.7 MB/s eta 0:00:00
+#9 3.499 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#9 3.518 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#9 3.541    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 4.6 MB/s eta 0:00:00
+#9 3.712 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#9 3.737 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#9 3.770    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 4.1 MB/s eta 0:00:00
+#9 3.940 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#9 3.980 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#9 4.179    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 1.1 MB/s eta 0:00:00
+#9 4.190 Building wheels for collected packages: simpleblogging, flask_basicauth, flask_script
+#9 4.195   Building wheel for simpleblogging (setup.py): started
+#9 4.438   Building wheel for simpleblogging (setup.py): finished with status 'done'
+#9 4.441   Created wheel for simpleblogging: filename=simpleblogging-2.0.13-py3-none-any.whl size=1420305 sha256=98a1e8bbdb3f6d3e6abf57ff5d4146600c316f60cad833863812d831eb48e60c
+#9 4.441   Stored in directory: /root/.cache/pip/wheels/fd/e2/b3/9b6c54b1528802381138968ff2744e2907209d33d23963a7f6
+#9 4.443   Building wheel for flask_basicauth (setup.py): started
+#9 4.576   Building wheel for flask_basicauth (setup.py): finished with status 'done'
+#9 4.577   Created wheel for flask_basicauth: filename=flask_basicauth-0.2.0-py3-none-any.whl size=4319 sha256=5e12847e932f39c11dcda967008279742477cc8684f52e77636886d791faf6a7
+#9 4.577   Stored in directory: /root/.cache/pip/wheels/3f/54/3d/8dcca37cc410b1be1ea1812d17f8c1dc892ddf7356353ecee9
+#9 4.579   Building wheel for flask_script (setup.py): started
+#9 4.719   Building wheel for flask_script (setup.py): finished with status 'done'
+#9 4.720   Created wheel for flask_script: filename=flask_script-2.0.6-py3-none-any.whl size=14117 sha256=e17f129dbed6e83a4154640aeed12c51d5f42341d7de82783cb57ef4c311c370
+#9 4.720   Stored in directory: /root/.cache/pip/wheels/a5/ce/0a/be0f1a9d96ecd772107fb97b1f69521a0196b7c70ff66b64b7
+#9 4.721 Successfully built simpleblogging flask_basicauth flask_script
+#9 4.791 Installing collected packages: pony, python_dateutil, markupsafe, markdown, itsdangerous, click, blinker, werkzeug, jinja2, flask, flask_seasurf, flask_script, flask_basicauth, simpleblogging
+#9 5.546 Successfully installed blinker-1.9.0 click-8.3.0 flask-3.1.2 flask_basicauth-0.2.0 flask_script-2.0.6 flask_seasurf-2.0.0 itsdangerous-2.2.0 jinja2-3.1.6 markdown-3.9 markupsafe-3.0.3 pony-0.7.19 python_dateutil-2.9.0.post0 simpleblogging-2.0.13 werkzeug-3.1.3
+#9 5.546 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 5.551 
+#9 5.551 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 5.551 [notice] To update, run: pip install --upgrade pip
+#9 DONE 5.7s
+
+#10 [ 6/37] RUN ["pip","install","simpl"]
+#10 0.696 Collecting simpl
+#10 0.741   Downloading simpl-1.1.0-py2.py3-none-any.whl.metadata (784 bytes)
+#10 0.763 Requirement already satisfied: six in /usr/local/lib/python3.11/site-packages (from simpl) (1.17.0)
+#10 0.782 Downloading simpl-1.1.0-py2.py3-none-any.whl (63 kB)
+#10 0.814    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.4/63.4 kB 1.7 MB/s eta 0:00:00
+#10 0.876 Installing collected packages: simpl
+#10 0.935 Successfully installed simpl-1.1.0
+#10 0.935 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.941 
+#10 0.941 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.941 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.0s
+
+#11 [ 7/37] RUN ["pip","install","backports.functools-lru-cache"]
+#11 0.521 Collecting backports.functools-lru-cache
+#11 0.594   Downloading backports.functools_lru_cache-2.0.0-py2.py3-none-any.whl.metadata (3.5 kB)
+#11 0.626 Downloading backports.functools_lru_cache-2.0.0-py2.py3-none-any.whl (6.7 kB)
+#11 0.705 Installing collected packages: backports.functools-lru-cache
+#11 0.740 Successfully installed backports.functools-lru-cache-2.0.0
+#11 0.740 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.745 
+#11 0.745 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.745 [notice] To update, run: pip install --upgrade pip
+#11 DONE 0.8s
+
+#12 [ 8/37] RUN ["pip","install","backports.ssl"]
+#12 0.592 Collecting backports.ssl
+#12 0.648   Downloading backports.ssl-0.0.9.tar.gz (11 kB)
+#12 0.667   Preparing metadata (setup.py): started
+#12 0.784   Preparing metadata (setup.py): finished with status 'done'
+#12 0.786 Building wheels for collected packages: backports.ssl
+#12 0.791   Building wheel for backports.ssl (setup.py): started
+#12 0.933   Building wheel for backports.ssl (setup.py): finished with status 'done'
+#12 0.934   Created wheel for backports.ssl: filename=backports_ssl-0.0.9-py3-none-any.whl size=12458 sha256=7c7480be982e38b2c95252ba59f9170650886c4aa4afbb4ca53f8e9763e3e0a7
+#12 0.934   Stored in directory: /root/.cache/pip/wheels/b2/9b/23/8e1cd27a5e85cb681a372981243d68c938f75a0de94f9adf51
+#12 0.936 Successfully built backports.ssl
+#12 1.000 Installing collected packages: backports.ssl
+#12 1.051 Successfully installed backports.ssl-0.0.9
+#12 1.051 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 1.056 
+#12 1.056 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 1.056 [notice] To update, run: pip install --upgrade pip
+#12 DONE 1.1s
+
+#13 [ 9/37] RUN ["pip","install","backports.shutil_get_terminal_size"]
+#13 0.741 Collecting backports.shutil_get_terminal_size
+#13 0.830   Downloading backports.shutil_get_terminal_size-1.0.0-py2.py3-none-any.whl.metadata (1.2 kB)
+#13 0.863 Downloading backports.shutil_get_terminal_size-1.0.0-py2.py3-none-any.whl (6.5 kB)
+#13 0.955 Installing collected packages: backports.shutil_get_terminal_size
+#13 0.999 Successfully installed backports.shutil_get_terminal_size-1.0.0
+#13 0.999 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 1.004 
+#13 1.004 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 1.004 [notice] To update, run: pip install --upgrade pip
+#13 DONE 1.1s
+
+#14 [10/37] RUN ["pip","install","requests"]
+#14 0.439 Requirement already satisfied: requests in /usr/local/lib/python3.11/site-packages (2.32.5)
+#14 0.444 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests) (3.4.4)
+#14 0.445 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests) (3.11)
+#14 0.446 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests) (2.5.0)
+#14 0.447 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests) (2025.10.5)
+#14 0.521 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#14 0.526 
+#14 0.526 [notice] A new release of pip is available: 24.0 -> 25.3
+#14 0.526 [notice] To update, run: pip install --upgrade pip
+#14 DONE 0.6s
+
+#15 [11/37] RUN ["apt-get","install","-y","python-pip"]
+#15 0.239 Reading package lists...
+#15 0.682 Building dependency tree...
+#15 0.789 Reading state information...
+#15 0.804 Package python-pip is not available, but is referred to by another package.
+#15 0.804 This may mean that the package is missing, has been obsoleted, or
+#15 0.804 is only available from another source
+#15 0.804 However the following packages replace it:
+#15 0.804   python3-pip
+#15 0.804 
+#15 0.806 E: Package 'python-pip' has no installation candidate
+#15 ERROR: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+------
+ > [11/37] RUN ["apt-get","install","-y","python-pip"]:
+
+
+0.804 Package python-pip is not available, but is referred to by another package.
+0.804 This may mean that the package is missing, has been obsoleted, or
+0.804 is only available from another source
+0.804 However the following packages replace it:
+0.804   python3-pip
+0.804 
+0.806 E: Package 'python-pip' has no installation candidate
+------
+Dockerfile:11
+--------------------
+   9 |     RUN ["pip","install","backports.shutil_get_terminal_size"]
+  10 |     RUN ["pip","install","requests"]
+  11 | >>> RUN ["apt-get","install","-y","python-pip"]
+  12 |     RUN ["apt-get","install","-y","python-dev"]
+  13 |     RUN ["apt-get","install","-y","build-essential"]
+--------------------
+ERROR: failed to build: failed to solve: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/default/default/ya45j4zxdheycozjc0f2a8vx0
+[2025-10-29 21:25:13] ERROR: Build failed for f3538c32965575e59bcd

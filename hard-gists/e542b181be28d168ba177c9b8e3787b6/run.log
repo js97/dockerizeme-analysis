@@ -1,0 +1,28 @@
+=== Docker Run Log for e542b181be28d168ba177c9b8e3787b6 ===
+Started at: Mi 29. Okt 20:45:19 CET 2025
+
+[2025-10-29 20:46:24] START: Running container for e542b181be28d168ba177c9b8e3787b6
+[2025-10-29 20:46:24] SUCCESS: Container 0d167b63952a2d21d8710d2355871f05565f25f7de8537e6b7cf8e0084329155 started for e542b181be28d168ba177c9b8e3787b6
+=== Container logs for e542b181be28d168ba177c9b8e3787b6 ===
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/sklearn/datasets/__init__.py", line 163, in __getattr__
+    return globals()[name]
+           ~~~~~~~~~^^^^^^
+KeyError: 'fetch_mldata'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snippet.py", line 78, in <module>
+    main()
+  File "/snippet.py", line 54, in main
+    result = doit(shuffled)
+             ^^^^^^^^^^^^^^
+  File "/snippet.py", line 24, in doit
+    mnist = sklearn.datasets.fetch_mldata('MNIST original', data_home=".")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/sklearn/datasets/__init__.py", line 166, in __getattr__
+    raise AttributeError
+AttributeError
+=== End of logs for e542b181be28d168ba177c9b8e3787b6 ===
+[2025-10-29 20:46:26] INFO: Container 0d167b63952a2d21d8710d2355871f05565f25f7de8537e6b7cf8e0084329155 has stopped

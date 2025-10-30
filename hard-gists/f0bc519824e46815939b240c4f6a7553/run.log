@@ -1,0 +1,36 @@
+=== Docker Run Log for f0bc519824e46815939b240c4f6a7553 ===
+Started at: Mi 29. Okt 21:15:46 CET 2025
+
+[2025-10-29 21:15:46] START: Running container for f0bc519824e46815939b240c4f6a7553
+[2025-10-29 21:15:47] SUCCESS: Container 8bb3e2f500d50bc49b19b1ef3dc08c50285811a147e69ed1410cd969e968f924 started for f0bc519824e46815939b240c4f6a7553
+=== Container logs for f0bc519824e46815939b240c4f6a7553 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 37, in <module>
+About to download from https://imgur.com/r/cats/top/month
+    downloader.download()
+  File "/snippet.py", line 28, in download
+    images = self.getImages()
+             ^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 19, in getImages
+    resource = urllib.request.urlopen(self.getImgurLink())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Unknown Error
+=== End of logs for f0bc519824e46815939b240c4f6a7553 ===
+[2025-10-29 21:15:49] INFO: Container 8bb3e2f500d50bc49b19b1ef3dc08c50285811a147e69ed1410cd969e968f924 has stopped

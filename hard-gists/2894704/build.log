@@ -1,0 +1,100 @@
+=== Docker Build Log for 2894704 ===
+Started at: Mi 29. Okt 13:19:43 CET 2025
+
+[2025-10-29 13:19:43] START: Building image for 2894704
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 199B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.06kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/2894704/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","tornado"]
+#7 1.908 Collecting tornado
+#7 1.938   Downloading tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+#7 1.958 Downloading tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (443 kB)
+#7 1.999    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 443.9/443.9 kB 11.2 MB/s eta 0:00:00
+#7 2.034 Installing collected packages: tornado
+#7 2.214 Successfully installed tornado-6.5.2
+#7 2.214 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.309 
+#7 2.309 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.309 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.5s
+
+#8 [4/4] RUN ["pip","install","hunspell"]
+#8 0.589 Collecting hunspell
+#8 0.623   Downloading hunspell-0.5.5.tar.gz (34 kB)
+#8 0.645   Preparing metadata (setup.py): started
+#8 1.105   Preparing metadata (setup.py): finished with status 'done'
+#8 1.107 Building wheels for collected packages: hunspell
+#8 1.107   Building wheel for hunspell (setup.py): started
+#8 1.296   Building wheel for hunspell (setup.py): finished with status 'error'
+#8 1.299   error: subprocess-exited-with-error
+#8 1.299   
+#8 1.299   × python setup.py bdist_wheel did not run successfully.
+#8 1.299   │ exit code: 1
+#8 1.299   ╰─> [11 lines of output]
+#8 1.299       running bdist_wheel
+#8 1.299       running build
+#8 1.299       running build_ext
+#8 1.299       building 'hunspell' extension
+#8 1.299       creating build/temp.linux-x86_64-cpython-311
+#8 1.299       g++ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -D_LINUX -I/usr/include/hunspell -I/usr/local/include/python3.11 -c hunspell.cpp -o build/temp.linux-x86_64-cpython-311/hunspell.o -Wall
+#8 1.299       hunspell.cpp:20:10: fatal error: hunspell.hxx: No such file or directory
+#8 1.299          20 | #include <hunspell.hxx>
+#8 1.299             |          ^~~~~~~~~~~~~~
+#8 1.299       compilation terminated.
+#8 1.299       error: command '/usr/bin/g++' failed with exit code 1
+#8 1.299       [end of output]
+#8 1.299   
+#8 1.299   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 1.299   ERROR: Failed building wheel for hunspell
+#8 1.299   Running setup.py clean for hunspell
+#8 1.404 Failed to build hunspell
+#8 1.404 ERROR: Could not build wheels for hunspell, which is required to install pyproject.toml-based projects
+#8 1.409 
+#8 1.409 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.409 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install hunspell" did not complete successfully: exit code: 1
+------
+ > [4/4] RUN ["pip","install","hunspell"]:
+1.299       [end of output]
+1.299   
+1.299   note: This error originates from a subprocess, and is likely not a problem with pip.
+1.299   ERROR: Failed building wheel for hunspell
+1.299   Running setup.py clean for hunspell
+1.404 Failed to build hunspell
+1.404 ERROR: Could not build wheels for hunspell, which is required to install pyproject.toml-based projects
+1.409 
+1.409 [notice] A new release of pip is available: 24.0 -> 25.3
+1.409 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/2894704/snippet.py /snippet.py
+   3 |     RUN ["pip","install","tornado"]
+   4 | >>> RUN ["pip","install","hunspell"]
+   5 |     CMD ["python3","/snippet.py"]
+   6 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install hunspell" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/iwwv5d24ufk3jrnhh9k9ejcph
+[2025-10-29 13:19:48] ERROR: Build failed for 2894704

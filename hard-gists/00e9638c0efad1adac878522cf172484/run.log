@@ -1,0 +1,20 @@
+=== Docker Run Log for 00e9638c0efad1adac878522cf172484 ===
+Started at: Mi 29. Okt 11:18:25 CET 2025
+
+[2025-10-29 11:19:40] START: Running container for 00e9638c0efad1adac878522cf172484
+[2025-10-29 11:19:40] SUCCESS: Container 7193efa339a39eccc4f85d77037162b2224bf103eee3c70f835555f18249b61e started for 00e9638c0efad1adac878522cf172484
+=== Container logs for 00e9638c0efad1adac878522cf172484 ===
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+2025-10-29 10:19:40.531550: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-10-29 10:19:40.567597: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-29 10:19:41.775072: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Traceback (most recent call last):
+  File "/snippet.py", line 18, in <module>
+    from keras.layers import Dense, Flatten, Input, merge, Lambda, Activation
+ImportError: cannot import name 'merge' from 'keras.layers' (/usr/local/lib/python3.11/site-packages/keras/layers/__init__.py)
+=== End of logs for 00e9638c0efad1adac878522cf172484 ===
+[2025-10-29 11:19:42] INFO: Container 7193efa339a39eccc4f85d77037162b2224bf103eee3c70f835555f18249b61e has stopped

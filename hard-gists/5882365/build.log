@@ -1,0 +1,159 @@
+=== Docker Build Log for 5882365 ===
+Started at: Mi 29. Okt 16:08:57 CET 2025
+
+[2025-10-29 16:08:57] START: Building image for 5882365
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 317B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 969B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/8] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/8] COPY hard-gists/5882365/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/8] RUN ["pip","install","six"]
+#7 2.220 Collecting six
+#7 2.256   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.277 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.329 Installing collected packages: six
+#7 2.348 Successfully installed six-1.17.0
+#7 2.348 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.453 
+#7 2.453 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.453 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.7s
+
+#8 [4/8] RUN ["pip","install","pytest"]
+#8 0.638 Collecting pytest
+#8 0.675   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#8 0.719 Collecting iniconfig>=1 (from pytest)
+#8 0.727   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#8 0.777 Collecting packaging>=20 (from pytest)
+#8 0.786   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.828 Collecting pluggy<2,>=1.5 (from pytest)
+#8 0.837   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#8 0.887 Collecting pygments>=2.7.2 (from pytest)
+#8 0.895   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#8 0.924 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#8 0.965    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 9.2 MB/s eta 0:00:00
+#8 0.973 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#8 0.990 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 1.003    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.6 MB/s eta 0:00:00
+#8 1.011 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#8 1.028 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#8 1.084    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 22.7 MB/s eta 0:00:00
+#8 1.142 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#8 2.021 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#8 2.021 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.029 
+#8 2.029 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.029 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.3s
+
+#9 [5/8] RUN ["pip","install","py"]
+#9 0.676 Collecting py
+#9 0.712   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#9 0.737 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#9 0.771    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.8 MB/s eta 0:00:00
+#9 0.829 Installing collected packages: py
+#9 0.925 Successfully installed py-1.11.0
+#9 0.925 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.932 
+#9 0.932 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.932 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.0s
+
+#10 [6/8] RUN ["pip","install","PyAudio"]
+#10 0.631 Collecting PyAudio
+#10 0.670   Downloading PyAudio-0.2.14.tar.gz (47 kB)
+#10 0.693      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.1/47.1 kB 1.8 MB/s eta 0:00:00
+#10 0.706   Installing build dependencies: started
+#10 2.360   Installing build dependencies: finished with status 'done'
+#10 2.361   Getting requirements to build wheel: started
+#10 2.563   Getting requirements to build wheel: finished with status 'done'
+#10 2.564   Preparing metadata (pyproject.toml): started
+#10 2.715   Preparing metadata (pyproject.toml): finished with status 'done'
+#10 2.717 Building wheels for collected packages: PyAudio
+#10 2.718   Building wheel for PyAudio (pyproject.toml): started
+#10 2.945   Building wheel for PyAudio (pyproject.toml): finished with status 'error'
+#10 2.949   error: subprocess-exited-with-error
+#10 2.949   
+#10 2.949   × Building wheel for PyAudio (pyproject.toml) did not run successfully.
+#10 2.949   │ exit code: 1
+#10 2.949   ╰─> [27 lines of output]
+#10 2.949       /tmp/pip-build-env-bxzmm757/overlay/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+#10 2.949       !!
+#10 2.949       
+#10 2.949               ********************************************************************************
+#10 2.949               Please consider removing the following classifiers in favor of a SPDX license expression:
+#10 2.949       
+#10 2.949               License :: OSI Approved :: MIT License
+#10 2.949       
+#10 2.949               See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+#10 2.949               ********************************************************************************
+#10 2.949       
+#10 2.949       !!
+#10 2.949         self._finalize_license_expression()
+#10 2.949       running bdist_wheel
+#10 2.949       running build
+#10 2.949       running build_py
+#10 2.949       creating build/lib.linux-x86_64-cpython-311/pyaudio
+#10 2.949       copying src/pyaudio/__init__.py -> build/lib.linux-x86_64-cpython-311/pyaudio
+#10 2.949       running build_ext
+#10 2.949       building 'pyaudio._portaudio' extension
+#10 2.949       creating build/temp.linux-x86_64-cpython-311/src/pyaudio
+#10 2.949       gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -I/usr/local/include -I/usr/include -I/usr/local/include/python3.11 -c src/pyaudio/device_api.c -o build/temp.linux-x86_64-cpython-311/src/pyaudio/device_api.o
+#10 2.949       src/pyaudio/device_api.c:9:10: fatal error: portaudio.h: No such file or directory
+#10 2.949           9 | #include "portaudio.h"
+#10 2.949             |          ^~~~~~~~~~~~~
+#10 2.949       compilation terminated.
+#10 2.949       error: command '/usr/bin/gcc' failed with exit code 1
+#10 2.949       [end of output]
+#10 2.949   
+#10 2.949   note: This error originates from a subprocess, and is likely not a problem with pip.
+#10 2.950   ERROR: Failed building wheel for PyAudio
+#10 2.950 Failed to build PyAudio
+#10 2.950 ERROR: Could not build wheels for PyAudio, which is required to install pyproject.toml-based projects
+#10 2.956 
+#10 2.956 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 2.956 [notice] To update, run: pip install --upgrade pip
+#10 ERROR: process "pip install PyAudio" did not complete successfully: exit code: 1
+------
+ > [6/8] RUN ["pip","install","PyAudio"]:
+2.949       error: command '/usr/bin/gcc' failed with exit code 1
+2.949       [end of output]
+2.949   
+2.949   note: This error originates from a subprocess, and is likely not a problem with pip.
+2.950   ERROR: Failed building wheel for PyAudio
+2.950 Failed to build PyAudio
+2.950 ERROR: Could not build wheels for PyAudio, which is required to install pyproject.toml-based projects
+2.956 
+2.956 [notice] A new release of pip is available: 24.0 -> 25.3
+2.956 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:6
+--------------------
+   4 |     RUN ["pip","install","pytest"]
+   5 |     RUN ["pip","install","py"]
+   6 | >>> RUN ["pip","install","PyAudio"]
+   7 |     RUN ["pip","install","numpy"]
+   8 |     RUN ["pip","install","matplotlib"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install PyAudio" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/qysbub7hska5sx1t7q6juuyyd
+[2025-10-29 16:09:07] ERROR: Build failed for 5882365

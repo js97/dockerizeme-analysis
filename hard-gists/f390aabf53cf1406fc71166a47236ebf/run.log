@@ -1,0 +1,20 @@
+=== Docker Run Log for f390aabf53cf1406fc71166a47236ebf ===
+Started at: Mi 29. Okt 21:25:59 CET 2025
+
+[2025-10-29 21:25:59] START: Running container for f390aabf53cf1406fc71166a47236ebf
+[2025-10-29 21:26:00] SUCCESS: Container 7121411647e61fc1f7a095b3334a5219ec1a37642bf99493243c97c07dc34781 started for f390aabf53cf1406fc71166a47236ebf
+=== Container logs for f390aabf53cf1406fc71166a47236ebf ===
+Traceback (most recent call last):
+  File "/snippet.py", line 143, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/snippet.py", line 84, in main
+    reged = subprocess.Popen(["reged", "-x", options.system, '\\', options.key, out], stdout=sys.stderr)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/local/lib/python3.11/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'reged'
+=== End of logs for f390aabf53cf1406fc71166a47236ebf ===
+[2025-10-29 21:26:02] INFO: Container 7121411647e61fc1f7a095b3334a5219ec1a37642bf99493243c97c07dc34781 has stopped

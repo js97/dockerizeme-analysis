@@ -1,0 +1,30 @@
+=== Docker Run Log for 5088386 ===
+Started at: Mi 29. Okt 15:21:18 CET 2025
+
+[2025-10-29 15:21:30] START: Running container for 5088386
+[2025-10-29 15:21:30] SUCCESS: Container fd8c2719aa3deb36163ac1547d09d586181c8a583aad076624ee40f7a226eb5b started for 5088386
+=== Container logs for 5088386 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 34, in <module>
+    class ReportFilter(django_filters.FilterSet):
+  File "/snippet.py", line 36, in ReportFilter
+    query = SearchFilter(search_fields=[
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 9, in __init__
+    super(SearchFilter, self).__init__(name, *args, **kwargs)
+  File "/usr/local/lib/python3.11/site-packages/django_filters/filters.py", line 91, in __init__
+    lookup_expr = settings.DEFAULT_LOOKUP_EXPR
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django_filters/conf.py", line 68, in __getattr__
+    value = self.get_setting(name)
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django_filters/conf.py", line 83, in get_setting
+    return getattr(dj_settings, django_setting, DEFAULTS[setting])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting FILTERS_DEFAULT_LOOKUP_EXPR, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 5088386 ===
+[2025-10-29 15:21:32] INFO: Container fd8c2719aa3deb36163ac1547d09d586181c8a583aad076624ee40f7a226eb5b has stopped

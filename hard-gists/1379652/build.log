@@ -1,0 +1,170 @@
+=== Docker Build Log for 1379652 ===
+Started at: Mi 29. Okt 12:11:18 CET 2025
+
+[2025-10-29 12:11:18] START: Building image for 1379652
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 344B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 913B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/8] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/8] COPY hard-gists/1379652/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/8] RUN ["pip","install","dj.choices"]
+#7 1.909 Collecting dj.choices
+#7 1.946   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 1.961   Preparing metadata (setup.py): started
+#7 2.347   Preparing metadata (setup.py): finished with status 'done'
+#7 2.450 Collecting django (from dj.choices)
+#7 2.459   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.498 Collecting six (from dj.choices)
+#7 2.506   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.554 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.563   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.604 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.612   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.637 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 2.968    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 25.3 MB/s eta 0:00:00
+#7 2.977 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.995 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.013 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.025    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.4 MB/s eta 0:00:00
+#7 3.061 Building wheels for collected packages: dj.choices
+#7 3.062   Building wheel for dj.choices (setup.py): started
+#7 3.239   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.239   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=a7fda2fe2afdd7298297c78ca625dca7c17d54637fe42915c3a3b9cfdaaab6e6
+#7 3.240   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.241 Successfully built dj.choices
+#7 3.287 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 4.697 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 4.698 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.794 
+#7 4.794 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.794 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.2s
+
+#8 [4/8] RUN ["pip","install","Django"]
+#8 0.431 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#8 0.435 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#8 0.436 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#8 0.474 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.479 
+#8 0.479 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.479 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.5s
+
+#9 [5/8] RUN ["pip","install","ck"]
+#9 0.503 Collecting ck
+#9 0.646   Downloading ck-2.6.4.tar.gz (1.0 MB)
+#9 0.713      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 16.3 MB/s eta 0:00:00
+#9 0.868   Preparing metadata (setup.py): started
+#9 1.093   Preparing metadata (setup.py): finished with status 'done'
+#9 1.161 Collecting pyyaml (from ck)
+#9 1.171   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#9 1.227 Collecting requests (from ck)
+#9 1.235   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#9 1.348 Collecting charset_normalizer<4,>=2 (from requests->ck)
+#9 1.358   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#9 1.401 Collecting idna<4,>=2.5 (from requests->ck)
+#9 1.409   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#9 1.468 Collecting urllib3<3,>=1.21.1 (from requests->ck)
+#9 1.477   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#9 1.525 Collecting certifi>=2017.4.17 (from requests->ck)
+#9 1.533   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#9 1.562 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#9 1.602    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 20.8 MB/s eta 0:00:00
+#9 1.610 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#9 1.622    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 5.9 MB/s eta 0:00:00
+#9 1.630 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#9 1.651    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 7.9 MB/s eta 0:00:00
+#9 1.658 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#9 1.676    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 9.8 MB/s eta 0:00:00
+#9 1.684 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#9 1.696    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 6.1 MB/s eta 0:00:00
+#9 1.703 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#9 1.717    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.7 MB/s eta 0:00:00
+#9 1.726 Building wheels for collected packages: ck
+#9 1.730   Building wheel for ck (setup.py): started
+#9 12.49   Building wheel for ck (setup.py): finished with status 'done'
+#9 12.49   Created wheel for ck: filename=ck-2.6.4-py3-none-any.whl size=1315052 sha256=db8a03130eeaded0ccfd1e70ce045e04f7db08280cb89dcf1dfe8556f003fbcc
+#9 12.49   Stored in directory: /root/.cache/pip/wheels/0d/8f/da/ee54f2158c222114128ea95367f8000d3446716496aff9ea04
+#9 12.50 Successfully built ck
+#9 12.55 Installing collected packages: urllib3, pyyaml, idna, charset_normalizer, certifi, requests, ck
+#9 13.25 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 ck-2.6.4 idna-3.11 pyyaml-6.0.3 requests-2.32.5 urllib3-2.5.0
+#9 13.25 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 13.26 
+#9 13.26 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 13.26 [notice] To update, run: pip install --upgrade pip
+#9 DONE 13.5s
+
+#10 [6/8] RUN ["pip","install","requests"]
+#10 0.448 Requirement already satisfied: requests in /usr/local/lib/python3.11/site-packages (2.32.5)
+#10 0.453 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests) (3.4.4)
+#10 0.454 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests) (3.11)
+#10 0.455 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests) (2.5.0)
+#10 0.456 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests) (2025.10.5)
+#10 0.509 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.514 
+#10 0.514 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.514 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.6s
+
+#11 [7/8] RUN ["pip","install","djangorestframework"]
+#11 0.538 Collecting djangorestframework
+#11 0.590   Downloading djangorestframework-3.16.1-py3-none-any.whl.metadata (11 kB)
+#11 0.606 Requirement already satisfied: django>=4.2 in /usr/local/lib/python3.11/site-packages (from djangorestframework) (5.2.7)
+#11 0.609 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from django>=4.2->djangorestframework) (3.10.0)
+#11 0.610 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from django>=4.2->djangorestframework) (0.5.3)
+#11 0.624 Downloading djangorestframework-3.16.1-py3-none-any.whl (1.1 MB)
+#11 0.686    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 18.0 MB/s eta 0:00:00
+#11 0.740 Installing collected packages: djangorestframework
+#11 0.878 Successfully installed djangorestframework-3.16.1
+#11 0.879 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.884 
+#11 0.884 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.884 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.0s
+
+#12 [8/8] RUN ["pip","install","django-ckeditor"]
+#12 0.526 Collecting django-ckeditor
+#12 0.561   Downloading django_ckeditor-6.7.3-py3-none-any.whl.metadata (33 kB)
+#12 0.582 Requirement already satisfied: Django>=3.2 in /usr/local/lib/python3.11/site-packages (from django-ckeditor) (5.2.7)
+#12 0.612 Collecting django-js-asset>=2.0 (from django-ckeditor)
+#12 0.621   Downloading django_js_asset-3.1.2-py3-none-any.whl.metadata (6.4 kB)
+#12 0.639 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django>=3.2->django-ckeditor) (3.10.0)
+#12 0.640 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django>=3.2->django-ckeditor) (0.5.3)
+#12 0.656 Downloading django_ckeditor-6.7.3-py3-none-any.whl (2.5 MB)
+#12 0.769    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 22.0 MB/s eta 0:00:00
+#12 0.778 Downloading django_js_asset-3.1.2-py3-none-any.whl (5.9 kB)
+#12 0.860 Installing collected packages: django-js-asset, django-ckeditor
+#12 1.092 Successfully installed django-ckeditor-6.7.3 django-js-asset-3.1.2
+#12 1.092 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 1.097 
+#12 1.097 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 1.097 [notice] To update, run: pip install --upgrade pip
+#12 DONE 1.2s
+
+#13 exporting to image
+#13 exporting layers
+#13 exporting layers 0.7s done
+#13 writing image sha256:8cc7c25aa425d29ed82670f41e5742ab2fb917477c1d1c60677c7f6609dc31e8 done
+#13 naming to docker.io/library/test-image-1379652 done
+#13 DONE 0.7s
+
+View build details: docker-desktop://dashboard/build/default/default/h1apttb0ivt4cpm4ufwb8l3jg
+[2025-10-29 12:11:41] SUCCESS: Build completed for 1379652

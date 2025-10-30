@@ -1,0 +1,86 @@
+=== Docker Build Log for 794424 ===
+Started at: Mi 29. Okt 17:22:37 CET 2025
+
+[2025-10-29 17:22:37] START: Building image for 794424
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 204B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.11kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/794424/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","Django"]
+#7 1.995 Collecting Django
+#7 2.027   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.088 Collecting asgiref>=3.8.1 (from Django)
+#7 2.097   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.135 Collecting sqlparse>=0.3.1 (from Django)
+#7 2.143   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.167 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 2.503    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 24.8 MB/s eta 0:00:00
+#7 2.511 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 2.530 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 2.541    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.4 MB/s eta 0:00:00
+#7 2.628 Installing collected packages: sqlparse, asgiref, Django
+#7 4.057 Successfully installed Django-5.2.7 asgiref-3.10.0 sqlparse-0.5.3
+#7 4.057 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.148 
+#7 4.148 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.148 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.5s
+
+#8 [4/4] RUN ["pip","install","django-tastypie"]
+#8 0.547 Collecting django-tastypie
+#8 0.581   Downloading django_tastypie-0.15.1.tar.gz (156 kB)
+#8 0.615      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 156.6/156.6 kB 4.8 MB/s eta 0:00:00
+#8 0.646   Preparing metadata (setup.py): started
+#8 1.081   Preparing metadata (setup.py): finished with status 'done'
+#8 1.109 Collecting python-mimeparse!=1.5,>=0.1.4 (from django-tastypie)
+#8 1.118   Downloading python_mimeparse-2.0.0-py3-none-any.whl.metadata (3.1 kB)
+#8 1.165 Collecting python-dateutil>=2.1 (from django-tastypie)
+#8 1.173   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#8 1.220 Collecting six>=1.5 (from python-dateutil>=2.1->django-tastypie)
+#8 1.228   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 1.249 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#8 1.269    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 12.1 MB/s eta 0:00:00
+#8 1.277 Downloading python_mimeparse-2.0.0-py3-none-any.whl (5.6 kB)
+#8 1.294 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 1.308 Building wheels for collected packages: django-tastypie
+#8 1.309   Building wheel for django-tastypie (setup.py): started
+#8 1.502   Building wheel for django-tastypie (setup.py): finished with status 'done'
+#8 1.502   Created wheel for django-tastypie: filename=django_tastypie-0.15.1-py2.py3-none-any.whl size=79676 sha256=cf1d6c63cd8721c75c4559bc40a36a976b20049e7fa8ffcb1f7369aa0b9bc35a
+#8 1.502   Stored in directory: /root/.cache/pip/wheels/3c/1f/44/eb4cf3a12ae17b4b6dd6d6f90d5a0b76be52f951aad86aa27a
+#8 1.504 Successfully built django-tastypie
+#8 1.545 Installing collected packages: six, python-mimeparse, python-dateutil, django-tastypie
+#8 1.665 Successfully installed django-tastypie-0.15.1 python-dateutil-2.9.0.post0 python-mimeparse-2.0.0 six-1.17.0
+#8 1.665 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.670 
+#8 1.670 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.670 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.8s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.6s done
+#9 writing image sha256:7a08301e403a9d4da848ce379d4017d7310b4f52ba92165b29c3bd1895ab083b done
+#9 naming to docker.io/library/test-image-794424 done
+#9 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/default/default/j3qu1ny33lgbseqw1173hxssa
+[2025-10-29 17:22:44] SUCCESS: Build completed for 794424

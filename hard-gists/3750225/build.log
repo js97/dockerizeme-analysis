@@ -1,0 +1,109 @@
+=== Docker Build Log for 3750225 ===
+Started at: Mi 29. Okt 13:58:43 CET 2025
+
+[2025-10-29 13:58:43] START: Building image for 3750225
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 251B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 969B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/6] COPY hard-gists/3750225/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/6] RUN ["pip","install","six"]
+#7 1.885 Collecting six
+#7 1.918   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 1.937 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 1.985 Installing collected packages: six
+#7 2.002 Successfully installed six-1.17.0
+#7 2.003 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.093 
+#7 2.093 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.093 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.2s
+
+#8 [4/6] RUN ["pip","install","pytest"]
+#8 0.561 Collecting pytest
+#8 0.594   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#8 0.635 Collecting iniconfig>=1 (from pytest)
+#8 0.644   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#8 0.696 Collecting packaging>=20 (from pytest)
+#8 0.704   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.743 Collecting pluggy<2,>=1.5 (from pytest)
+#8 0.751   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#8 0.802 Collecting pygments>=2.7.2 (from pytest)
+#8 0.811   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#8 0.842 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#8 0.879    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 10.3 MB/s eta 0:00:00
+#8 0.887 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#8 0.904 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 0.915    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 6.3 MB/s eta 0:00:00
+#8 0.923 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#8 0.941 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#8 0.991    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 24.9 MB/s eta 0:00:00
+#8 1.041 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#8 1.745 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#8 1.745 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.751 
+#8 1.751 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.751 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.9s
+
+#9 [5/6] RUN ["pip","install","py"]
+#9 0.511 Collecting py
+#9 0.549   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#9 0.573 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#9 0.605    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 3.1 MB/s eta 0:00:00
+#9 0.647 Installing collected packages: py
+#9 0.723 Successfully installed py-1.11.0
+#9 0.723 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.728 
+#9 0.728 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.728 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.8s
+
+#10 [6/6] RUN ["pip","install","pygit2"]
+#10 0.640 Collecting pygit2
+#10 0.674   Downloading pygit2-1.19.0-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.7 kB)
+#10 0.799 Collecting cffi>=2.0 (from pygit2)
+#10 0.808   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+#10 0.850 Collecting pycparser (from cffi>=2.0->pygit2)
+#10 0.857   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+#10 0.881 Downloading pygit2-1.19.0-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.5 MB)
+#10 1.111    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 24.2 MB/s eta 0:00:00
+#10 1.120 Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+#10 1.136    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 14.0 MB/s eta 0:00:00
+#10 1.145 Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+#10 1.161    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 7.3 MB/s eta 0:00:00
+#10 1.217 Installing collected packages: pycparser, cffi, pygit2
+#10 1.488 Successfully installed cffi-2.0.0 pycparser-2.23 pygit2-1.19.0
+#10 1.488 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.493 
+#10 1.493 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.493 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.7s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 0.2s done
+#11 writing image sha256:e4607bef0e11c653ac44e3331a98028bba36ad869f8f55764db3d0870329372d done
+#11 naming to docker.io/library/test-image-3750225 0.0s done
+#11 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/jql2ctmpm1arpcznp5cxn8318
+[2025-10-29 13:58:50] SUCCESS: Build completed for 3750225

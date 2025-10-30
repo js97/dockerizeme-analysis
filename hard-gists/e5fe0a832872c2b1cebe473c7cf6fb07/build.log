@@ -1,0 +1,378 @@
+=== Docker Build Log for e5fe0a832872c2b1cebe473c7cf6fb07 ===
+Started at: Mi 29. Okt 20:46:26 CET 2025
+
+[2025-10-29 20:46:26] START: Building image for e5fe0a832872c2b1cebe473c7cf6fb07
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 956B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.38kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/24] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/24] COPY hard-gists/e5fe0a832872c2b1cebe473c7cf6fb07/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/24] RUN ["apt-get","update"]
+#7 0.285 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.287 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.301 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.310 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.623 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.630 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.215 Fetched 9833 kB in 1s (10.1 MB/s)
+#7 1.215 Reading package lists...
+#7 DONE 1.9s
+
+#8 [ 4/24] RUN ["pip","install","marrow.mailer"]
+#8 2.007 Collecting marrow.mailer
+#8 2.055   Downloading marrow.mailer-4.0.3-py2.py3-none-any.whl.metadata (1.4 kB)
+#8 2.248 Collecting marrow.util<2.0 (from marrow.mailer)
+#8 2.258   Downloading marrow.util-1.2.3.tar.gz (17 kB)
+#8 2.273   Preparing metadata (setup.py): started
+#8 2.672   Preparing metadata (setup.py): finished with status 'done'
+#8 2.685 Downloading marrow.mailer-4.0.3-py2.py3-none-any.whl (132 kB)
+#8 2.717    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.7/132.7 kB 4.1 MB/s eta 0:00:00
+#8 2.722 Building wheels for collected packages: marrow.util
+#8 2.722   Building wheel for marrow.util (setup.py): started
+#8 2.889   Building wheel for marrow.util (setup.py): finished with status 'done'
+#8 2.890   Created wheel for marrow.util: filename=marrow_util-1.2.3-py3-none-any.whl size=23729 sha256=601de7ef3e7a0afbab6d9b5614fda6fe11fe51f6c6f777d5c4e0c220c5eebca3
+#8 2.890   Stored in directory: /root/.cache/pip/wheels/c1/26/db/9d972b23abf62c5f197f5b57713fcdba2c6b727d887e1df6f0
+#8 2.892 Successfully built marrow.util
+#8 2.924 Installing collected packages: marrow.util, marrow.mailer
+#8 2.995 Successfully installed marrow.mailer-4.0.3 marrow.util-1.2.3
+#8 2.996 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 3.085 
+#8 3.085 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.085 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.3s
+
+#9 [ 5/24] RUN ["pip","install","marrow.schema"]
+#9 0.695 Collecting marrow.schema
+#9 0.730   Downloading marrow.schema-2.0.0-py2.py3-none-any.whl.metadata (29 kB)
+#9 0.758 Downloading marrow.schema-2.0.0-py2.py3-none-any.whl (78 kB)
+#9 0.786    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.4/78.4 kB 2.7 MB/s eta 0:00:00
+#9 0.826 Installing collected packages: marrow.schema
+#9 0.884 Successfully installed marrow.schema-2.0.0
+#9 0.885 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.889 
+#9 0.889 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.889 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.0s
+
+#10 [ 6/24] RUN ["pip","install","marrow.mongo"]
+#10 0.622 Collecting marrow.mongo
+#10 0.663   Downloading marrow.mongo-1.1.2-py2.py3-none-any.whl.metadata (9.5 kB)
+#10 0.811 Collecting uri<3.0.0,>=2.0.0 (from marrow.mongo)
+#10 0.820   Downloading uri-2.0.1-py2.py3-none-any.whl.metadata (13 kB)
+#10 0.872 Collecting marrow.schema<2.0.0,>=1.2.0 (from marrow.mongo)
+#10 0.882   Downloading marrow.schema-1.2.0-py2.py3-none-any.whl.metadata (29 kB)
+#10 1.027 Collecting marrow.package<2.0.0,>=1.1.0 (from marrow.mongo)
+#10 1.037   Downloading marrow.package-1.2.0-py2.py3-none-any.whl.metadata (13 kB)
+#10 1.369 Collecting pymongo>=3.2 (from marrow.mongo)
+#10 1.381   Downloading pymongo-4.15.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+#10 1.469 Collecting dnspython<3.0.0,>=1.16.0 (from pymongo>=3.2->marrow.mongo)
+#10 1.478   Downloading dnspython-2.8.0-py3-none-any.whl.metadata (5.7 kB)
+#10 1.524 Downloading marrow.mongo-1.1.2-py2.py3-none-any.whl (159 kB)
+#10 1.545    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 159.1/159.1 kB 8.1 MB/s eta 0:00:00
+#10 1.556 Downloading marrow.package-1.2.0-py2.py3-none-any.whl (28 kB)
+#10 1.579 Downloading marrow.schema-1.2.0-py2.py3-none-any.whl (62 kB)
+#10 1.594    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.2/62.2 kB 3.8 MB/s eta 0:00:00
+#10 1.725 Downloading pymongo-4.15.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.5 MB)
+#10 1.792    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 21.8 MB/s eta 0:00:00
+#10 1.803 Downloading uri-2.0.1-py2.py3-none-any.whl (42 kB)
+#10 1.813    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.0/43.0 kB 3.8 MB/s eta 0:00:00
+#10 1.821 Downloading dnspython-2.8.0-py3-none-any.whl (331 kB)
+#10 1.842    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 331.1/331.1 kB 16.2 MB/s eta 0:00:00
+#10 1.932 Installing collected packages: uri, marrow.schema, marrow.package, dnspython, pymongo, marrow.mongo
+#10 1.975   Attempting uninstall: marrow.schema
+#10 1.979     Found existing installation: marrow.schema 2.0.0
+#10 1.983     Uninstalling marrow.schema-2.0.0:
+#10 2.045       Successfully uninstalled marrow.schema-2.0.0
+#10 2.585 Successfully installed dnspython-2.8.0 marrow.mongo-1.1.2 marrow.package-1.2.0 marrow.schema-1.2.0 pymongo-4.15.3 uri-2.0.1
+#10 2.585 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 2.590 
+#10 2.590 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 2.590 [notice] To update, run: pip install --upgrade pip
+#10 DONE 2.8s
+
+#11 [ 7/24] RUN ["pip","install","WebCore"]
+#11 0.960 Collecting WebCore
+#11 1.044   Downloading WebCore-2.0.4-py2.py3-none-any.whl.metadata (26 kB)
+#11 1.071 Requirement already satisfied: marrow.package<2.0 in /usr/local/lib/python3.11/site-packages (from WebCore) (1.2.0)
+#11 1.281 Collecting WebOb (from WebCore)
+#11 1.357   Downloading WebOb-1.8.9-py2.py3-none-any.whl.metadata (11 kB)
+#11 1.390 Downloading WebCore-2.0.4-py2.py3-none-any.whl (104 kB)
+#11 1.419    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 104.6/104.6 kB 3.6 MB/s eta 0:00:00
+#11 1.437 Downloading WebOb-1.8.9-py2.py3-none-any.whl (115 kB)
+#11 1.453    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 115.4/115.4 kB 8.0 MB/s eta 0:00:00
+#11 1.563 Installing collected packages: WebOb, WebCore
+#11 1.675 Successfully installed WebCore-2.0.4 WebOb-1.8.9
+#11 1.675 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.680 
+#11 1.680 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.680 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.8s
+
+#12 [ 8/24] RUN ["pip","install","requests"]
+#12 0.531 Collecting requests
+#12 0.564   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#12 0.690 Collecting charset_normalizer<4,>=2 (from requests)
+#12 0.699   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#12 0.751 Collecting idna<4,>=2.5 (from requests)
+#12 0.760   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#12 0.820 Collecting urllib3<3,>=1.21.1 (from requests)
+#12 0.828   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#12 0.874 Collecting certifi>=2017.4.17 (from requests)
+#12 0.882   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#12 0.908 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#12 0.932    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 2.5 MB/s eta 0:00:00
+#12 0.941 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#12 0.965    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 7.1 MB/s eta 0:00:00
+#12 0.973 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#12 1.003    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 5.0 MB/s eta 0:00:00
+#12 1.013 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#12 1.030    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.1 MB/s eta 0:00:00
+#12 1.038 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#12 1.055    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 7.8 MB/s eta 0:00:00
+#12 1.173 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#12 1.414 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#12 1.414 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 1.419 
+#12 1.419 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 1.419 [notice] To update, run: pip install --upgrade pip
+#12 DONE 1.5s
+
+#13 [ 9/24] RUN ["apt-get","install","-y","git"]
+#13 0.217 Reading package lists...
+#13 0.635 Building dependency tree...
+#13 0.738 Reading state information...
+#13 0.947 git is already the newest version (1:2.47.3-0+deb13u1).
+#13 0.947 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+#13 DONE 1.0s
+
+#14 [10/24] RUN ["pip","install","six"]
+#14 0.539 Collecting six
+#14 0.573   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#14 0.598 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#14 0.716 Installing collected packages: six
+#14 0.757 Successfully installed six-1.17.0
+#14 0.757 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#14 0.763 
+#14 0.763 [notice] A new release of pip is available: 24.0 -> 25.3
+#14 0.763 [notice] To update, run: pip install --upgrade pip
+#14 DONE 0.9s
+
+#15 [11/24] RUN ["pip","install","PyYAML"]
+#15 0.561 Collecting PyYAML
+#15 0.596   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#15 0.617 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#15 0.682    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 12.8 MB/s eta 0:00:00
+#15 0.790 Installing collected packages: PyYAML
+#15 0.862 Successfully installed PyYAML-6.0.3
+#15 0.862 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#15 0.867 
+#15 0.867 [notice] A new release of pip is available: 24.0 -> 25.3
+#15 0.867 [notice] To update, run: pip install --upgrade pip
+#15 DONE 1.0s
+
+#16 [12/24] RUN ["pip","install","docopt"]
+#16 0.526 Collecting docopt
+#16 0.590   Downloading docopt-0.6.2.tar.gz (25 kB)
+#16 0.619   Preparing metadata (setup.py): started
+#16 0.741   Preparing metadata (setup.py): finished with status 'done'
+#16 0.743 Building wheels for collected packages: docopt
+#16 0.748   Building wheel for docopt (setup.py): started
+#16 0.905   Building wheel for docopt (setup.py): finished with status 'done'
+#16 0.906   Created wheel for docopt: filename=docopt-0.6.2-py2.py3-none-any.whl size=13781 sha256=881a485de77bc92195856dbe22b4bce652b7cf5e7dabddcd70e43a18ba057f0b
+#16 0.906   Stored in directory: /root/.cache/pip/wheels/1a/b0/8c/4b75c4116c31f83c8f9f047231251e13cc74481cca4a78a9ce
+#16 0.909 Successfully built docopt
+#16 1.011 Installing collected packages: docopt
+#16 1.060 Successfully installed docopt-0.6.2
+#16 1.061 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#16 1.066 
+#16 1.066 [notice] A new release of pip is available: 24.0 -> 25.3
+#16 1.066 [notice] To update, run: pip install --upgrade pip
+#16 DONE 1.1s
+
+#17 [13/24] RUN ["apt-get","install","-y","curl"]
+#17 0.224 Reading package lists...
+#17 0.684 Building dependency tree...
+#17 0.807 Reading state information...
+#17 1.050 curl is already the newest version (8.14.1-2).
+#17 1.050 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+#17 DONE 1.1s
+
+#18 [14/24] RUN ["apt-get","install","-y","libssl-dev"]
+#18 0.223 Reading package lists...
+#18 0.642 Building dependency tree...
+#18 0.751 Reading state information...
+#18 0.971 libssl-dev is already the newest version (3.5.1-1+deb13u1).
+#18 0.971 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+#18 DONE 1.0s
+
+#19 [15/24] RUN ["apt-get","install","-y","zlib1g-dev"]
+#19 0.272 Reading package lists...
+#19 0.687 Building dependency tree...
+#19 0.794 Reading state information...
+#19 1.038 zlib1g-dev is already the newest version (1:1.3.dfsg+really1.3.1-1+b1).
+#19 1.038 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+#19 DONE 1.1s
+
+#20 [16/24] RUN ["apt-get","install","-y","gcc"]
+#20 0.230 Reading package lists...
+#20 0.658 Building dependency tree...
+#20 0.771 Reading state information...
+#20 0.989 gcc is already the newest version (4:14.2.0-1).
+#20 0.989 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+#20 DONE 1.0s
+
+#21 [17/24] RUN ["apt-get","install","-y","ca-certificates"]
+#21 0.227 Reading package lists...
+#21 0.650 Building dependency tree...
+#21 0.757 Reading state information...
+#21 0.973 ca-certificates is already the newest version (20250419).
+#21 0.973 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+#21 DONE 1.0s
+
+#22 [18/24] RUN ["apt-get","install","-y","make"]
+#22 0.242 Reading package lists...
+#22 0.668 Building dependency tree...
+#22 0.779 Reading state information...
+#22 1.000 make is already the newest version (4.4.1-2).
+#22 1.000 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+#22 DONE 1.0s
+
+#23 [19/24] RUN ["pip","install","docker-py"]
+#23 0.636 Collecting docker-py
+#23 0.667   Downloading docker_py-1.10.6-py2.py3-none-any.whl.metadata (2.1 kB)
+#23 0.709 Collecting docker-pycreds>=0.2.1 (from docker-py)
+#23 0.719   Downloading docker_pycreds-0.4.0-py2.py3-none-any.whl.metadata (1.8 kB)
+#23 0.735 Requirement already satisfied: requests!=2.11.0,>=2.5.2 in /usr/local/lib/python3.11/site-packages (from docker-py) (2.32.5)
+#23 0.735 Requirement already satisfied: six>=1.4.0 in /usr/local/lib/python3.11/site-packages (from docker-py) (1.17.0)
+#23 0.773 Collecting websocket-client>=0.32.0 (from docker-py)
+#23 0.782   Downloading websocket_client-1.9.0-py3-none-any.whl.metadata (8.3 kB)
+#23 0.798 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests!=2.11.0,>=2.5.2->docker-py) (3.4.4)
+#23 0.799 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests!=2.11.0,>=2.5.2->docker-py) (3.11)
+#23 0.800 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests!=2.11.0,>=2.5.2->docker-py) (2.5.0)
+#23 0.801 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests!=2.11.0,>=2.5.2->docker-py) (2025.10.5)
+#23 0.824 Downloading docker_py-1.10.6-py2.py3-none-any.whl (50 kB)
+#23 0.842    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.0/50.0 kB 2.6 MB/s eta 0:00:00
+#23 0.852 Downloading docker_pycreds-0.4.0-py2.py3-none-any.whl (9.0 kB)
+#23 0.874 Downloading websocket_client-1.9.0-py3-none-any.whl (82 kB)
+#23 0.896    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 82.6/82.6 kB 3.5 MB/s eta 0:00:00
+#23 1.009 Installing collected packages: websocket-client, docker-pycreds, docker-py
+#23 1.146 Successfully installed docker-py-1.10.6 docker-pycreds-0.4.0 websocket-client-1.9.0
+#23 1.146 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#23 1.151 
+#23 1.151 [notice] A new release of pip is available: 24.0 -> 25.3
+#23 1.151 [notice] To update, run: pip install --upgrade pip
+#23 DONE 1.2s
+
+#24 [20/24] RUN ["apt-get","install","-y","zlib1g"]
+#24 0.237 Reading package lists...
+#24 0.692 Building dependency tree...
+#24 0.800 Reading state information...
+#24 1.025 zlib1g is already the newest version (1:1.3.dfsg+really1.3.1-1+b1).
+#24 1.025 zlib1g set to manually installed.
+#24 1.025 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+#24 DONE 1.0s
+
+#25 [21/24] RUN ["pip","install","dockerpty"]
+#25 0.531 Collecting dockerpty
+#25 0.570   Downloading dockerpty-0.4.1.tar.gz (13 kB)
+#25 0.587   Preparing metadata (setup.py): started
+#25 0.709   Preparing metadata (setup.py): finished with status 'done'
+#25 0.712 Requirement already satisfied: six>=1.3.0 in /usr/local/lib/python3.11/site-packages (from dockerpty) (1.17.0)
+#25 0.713 Building wheels for collected packages: dockerpty
+#25 0.721   Building wheel for dockerpty (setup.py): started
+#25 0.876   Building wheel for dockerpty (setup.py): finished with status 'done'
+#25 0.877   Created wheel for dockerpty: filename=dockerpty-0.4.1-py3-none-any.whl size=16676 sha256=2b0fbf5f054ecfc99c829e5d90ff743fca4604bafaba776331e137e62b31f691
+#25 0.877   Stored in directory: /root/.cache/pip/wheels/a0/03/a5/2d683d872d1aac867b6e59e0dceed83bc55d32d5d6bb62b895
+#25 0.879 Successfully built dockerpty
+#25 0.986 Installing collected packages: dockerpty
+#25 1.033 Successfully installed dockerpty-0.4.1
+#25 1.033 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#25 1.038 
+#25 1.038 [notice] A new release of pip is available: 24.0 -> 25.3
+#25 1.038 [notice] To update, run: pip install --upgrade pip
+#25 DONE 1.1s
+
+#26 [22/24] RUN ["pip","install","texttable"]
+#26 0.548 Collecting texttable
+#26 0.585   Downloading texttable-1.7.0-py2.py3-none-any.whl.metadata (9.8 kB)
+#26 0.615 Downloading texttable-1.7.0-py2.py3-none-any.whl (10 kB)
+#26 0.740 Installing collected packages: texttable
+#26 0.784 Successfully installed texttable-1.7.0
+#26 0.784 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#26 0.789 
+#26 0.789 [notice] A new release of pip is available: 24.0 -> 25.3
+#26 0.789 [notice] To update, run: pip install --upgrade pip
+#26 DONE 0.9s
+
+#27 [23/24] RUN ["pip","install","websocket-client"]
+#27 0.447 Requirement already satisfied: websocket-client in /usr/local/lib/python3.11/site-packages (1.9.0)
+#27 0.560 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#27 0.565 
+#27 0.565 [notice] A new release of pip is available: 24.0 -> 25.3
+#27 0.565 [notice] To update, run: pip install --upgrade pip
+#27 DONE 0.6s
+
+#28 [24/24] RUN ["pip","install","websocket"]
+#28 0.636 Collecting websocket
+#28 0.676   Downloading websocket-0.2.1.tar.gz (195 kB)
+#28 0.715      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 195.3/195.3 kB 5.4 MB/s eta 0:00:00
+#28 0.721   Preparing metadata (setup.py): started
+#28 0.847   Preparing metadata (setup.py): finished with status 'done'
+#28 0.987 Collecting gevent (from websocket)
+#28 0.998   Downloading gevent-25.9.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (14 kB)
+#28 1.147 Collecting greenlet (from websocket)
+#28 1.155   Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+#28 1.213 Collecting zope.event (from gevent->websocket)
+#28 1.223   Downloading zope_event-6.0-py3-none-any.whl.metadata (5.1 kB)
+#28 1.360 Collecting zope.interface (from gevent->websocket)
+#28 1.371   Downloading zope_interface-8.0.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (44 kB)
+#28 1.386      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.9/44.9 kB 2.6 MB/s eta 0:00:00
+#28 1.394 Requirement already satisfied: setuptools>=75.8.2 in /usr/local/lib/python3.11/site-packages (from zope.event->gevent->websocket) (79.0.1)
+#28 1.451 Downloading gevent-25.9.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.1 MB)
+#28 1.555    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 20.7 MB/s eta 0:00:00
+#28 1.566 Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (587 kB)
+#28 1.599    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 587.7/587.7 kB 18.3 MB/s eta 0:00:00
+#28 1.608 Downloading zope_event-6.0-py3-none-any.whl (6.4 kB)
+#28 1.636 Downloading zope_interface-8.0.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (259 kB)
+#28 1.654    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 259.8/259.8 kB 15.4 MB/s eta 0:00:00
+#28 1.667 Building wheels for collected packages: websocket
+#28 1.671   Building wheel for websocket (setup.py): started
+#28 1.833   Building wheel for websocket (setup.py): finished with status 'done'
+#28 1.834   Created wheel for websocket: filename=websocket-0.2.1-py3-none-any.whl size=192174 sha256=ff5252701213f04eef5e1d9bedb0753b6fc20c93fa1a70bcfd0ee23893644afb
+#28 1.834   Stored in directory: /root/.cache/pip/wheels/5c/27/8d/6df11772ae53bc15857d5e435874915eeceb03f528314e5b61
+#28 1.836 Successfully built websocket
+#28 1.977 Installing collected packages: zope.interface, zope.event, greenlet, gevent, websocket
+#28 2.492 Successfully installed gevent-25.9.1 greenlet-3.2.4 websocket-0.2.1 zope.event-6.0 zope.interface-8.0.1
+#28 2.492 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#28 2.497 
+#28 2.497 [notice] A new release of pip is available: 24.0 -> 25.3
+#28 2.497 [notice] To update, run: pip install --upgrade pip
+#28 DONE 2.7s
+
+#29 exporting to image
+#29 exporting layers
+#29 exporting layers 0.7s done
+#29 writing image sha256:0015f6c522ee39c08fffc13a459b82521ce59a36b7afa8db08d8c42611e90859 done
+#29 naming to docker.io/library/test-image-e5fe0a832872c2b1cebe473c7cf6fb07 done
+#29 DONE 0.7s
+
+View build details: docker-desktop://dashboard/build/default/default/jyxp3zxwodv75wqrj3smhgjrp
+[2025-10-29 20:46:57] SUCCESS: Build completed for e5fe0a832872c2b1cebe473c7cf6fb07

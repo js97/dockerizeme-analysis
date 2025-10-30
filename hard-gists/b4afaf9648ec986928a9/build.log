@@ -1,0 +1,140 @@
+=== Docker Build Log for b4afaf9648ec986928a9 ===
+Started at: Mi 29. Okt 19:30:49 CET 2025
+
+[2025-10-29 19:30:49] START: Building image for b4afaf9648ec986928a9
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 3.18kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.84kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/76] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/76] COPY hard-gists/b4afaf9648ec986928a9/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/76] RUN ["apt-get","update"]
+#7 0.297 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.297 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.311 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.326 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.956 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.959 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.545 Fetched 9833 kB in 1s (7477 kB/s)
+#7 1.545 Reading package lists...
+#7 DONE 2.2s
+
+#8 [ 4/76] RUN ["pip","install","uno"]
+#8 2.022 Collecting uno
+#8 2.065   Downloading uno-0.3.3.tar.gz (7.6 kB)
+#8 2.079   Preparing metadata (setup.py): started
+#8 2.454   Preparing metadata (setup.py): finished with status 'done'
+#8 2.491 Collecting py==1.4.22 (from uno)
+#8 2.501   Downloading py-1.4.22.tar.gz (189 kB)
+#8 2.547      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 189.3/189.3 kB 4.1 MB/s eta 0:00:00
+#8 2.566   Preparing metadata (setup.py): started
+#8 2.675   Preparing metadata (setup.py): finished with status 'done'
+#8 2.751 Collecting pytest==2.6.0 (from uno)
+#8 2.761   Downloading pytest-2.6.0.tar.gz (625 kB)
+#8 2.825      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 625.4/625.4 kB 9.9 MB/s eta 0:00:00
+#8 2.872   Preparing metadata (setup.py): started
+#8 2.991   Preparing metadata (setup.py): finished with status 'done'
+#8 2.995 Building wheels for collected packages: uno, py, pytest
+#8 2.996   Building wheel for uno (setup.py): started
+#8 3.157   Building wheel for uno (setup.py): finished with status 'done'
+#8 3.157   Created wheel for uno: filename=uno-0.3.3-py3-none-any.whl size=9866 sha256=78c699a600e5bebdfcd0abdb6850a0bef117d3ab990ccb49a4fe355498afb7d9
+#8 3.157   Stored in directory: /root/.cache/pip/wheels/f8/af/e7/64830bb1eb8c2dc18de1464843e45d5a29312c14873b70f235
+#8 3.161   Building wheel for py (setup.py): started
+#8 3.318   Building wheel for py (setup.py): finished with status 'done'
+#8 3.319   Created wheel for py: filename=py-1.4.22-py3-none-any.whl size=81526 sha256=e5cdb199bb6246200ae55876d4acb52067d3285b214e3e48f5be9221de3be1f9
+#8 3.319   Stored in directory: /root/.cache/pip/wheels/36/24/5c/2e1d80248d843f4234fc88e80a55ef50647c638bcc8b8fc849
+#8 3.321   Building wheel for pytest (setup.py): started
+#8 3.478   Building wheel for pytest (setup.py): finished with status 'done'
+#8 3.479   Created wheel for pytest: filename=pytest-2.6.0-py2.py3-none-any.whl size=120043 sha256=a1c268649cacbce5e8edfd3922ea85815f5bba47de1fccece70c051b114efb6f
+#8 3.479   Stored in directory: /root/.cache/pip/wheels/4f/a5/45/6c23c6d7631b18a8d3efb4488f85846b482e9fc8bd52ef5ff4
+#8 3.481 Successfully built uno py pytest
+#8 3.510 Installing collected packages: py, pytest, uno
+#8 3.651 Successfully installed py-1.4.22 pytest-2.6.0 uno-0.3.3
+#8 3.651 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 3.743 
+#8 3.743 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.743 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.9s
+
+#9 [ 5/76] RUN ["pip","install","six"]
+#9 0.526 Collecting six
+#9 0.675   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#9 0.695 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#9 0.745 Installing collected packages: six
+#9 0.788 Successfully installed six-1.17.0
+#9 0.788 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.793 
+#9 0.793 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.793 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.9s
+
+#10 [ 6/76] RUN ["pip","install","pytest"]
+#10 0.435 Requirement already satisfied: pytest in /usr/local/lib/python3.11/site-packages (2.6.0)
+#10 0.436 Requirement already satisfied: py>=1.4.22 in /usr/local/lib/python3.11/site-packages (from pytest) (1.4.22)
+#10 0.468 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.473 
+#10 0.473 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.473 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.5s
+
+#11 [ 7/76] RUN ["pip","install","py"]
+#11 0.416 Requirement already satisfied: py in /usr/local/lib/python3.11/site-packages (1.4.22)
+#11 0.449 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.454 
+#11 0.454 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.454 [notice] To update, run: pip install --upgrade pip
+#11 DONE 0.5s
+
+#12 [ 8/76] RUN ["apt-get","install","-y","python-pip"]
+#12 0.215 Reading package lists...
+#12 0.646 Building dependency tree...
+#12 0.751 Reading state information...
+#12 0.766 Package python-pip is not available, but is referred to by another package.
+#12 0.766 This may mean that the package is missing, has been obsoleted, or
+#12 0.766 is only available from another source
+#12 0.766 However the following packages replace it:
+#12 0.766   python3-pip
+#12 0.766 
+#12 0.768 E: Package 'python-pip' has no installation candidate
+#12 ERROR: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+------
+ > [ 8/76] RUN ["apt-get","install","-y","python-pip"]:
+
+
+0.766 Package python-pip is not available, but is referred to by another package.
+0.766 This may mean that the package is missing, has been obsoleted, or
+0.766 is only available from another source
+0.766 However the following packages replace it:
+0.766   python3-pip
+0.766 
+0.768 E: Package 'python-pip' has no installation candidate
+------
+Dockerfile:8
+--------------------
+   6 |     RUN ["pip","install","pytest"]
+   7 |     RUN ["pip","install","py"]
+   8 | >>> RUN ["apt-get","install","-y","python-pip"]
+   9 |     RUN ["apt-get","install","-y","python-dev"]
+  10 |     RUN ["pip","install","python-dateutil"]
+--------------------
+ERROR: failed to build: failed to solve: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/default/default/z12bs6lyleov7k69zcdz0cssm
+[2025-10-29 19:30:58] ERROR: Build failed for b4afaf9648ec986928a9

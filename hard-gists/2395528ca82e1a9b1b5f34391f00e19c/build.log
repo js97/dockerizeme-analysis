@@ -1,0 +1,76 @@
+=== Docker Build Log for 2395528ca82e1a9b1b5f34391f00e19c ===
+Started at: Mi 29. Okt 13:03:24 CET 2025
+
+[2025-10-29 13:03:24] START: Building image for 2395528ca82e1a9b1b5f34391f00e19c
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 226B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.89kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/2395528ca82e1a9b1b5f34391f00e19c/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","numpy"]
+#7 2.083 Collecting numpy
+#7 2.119   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.140      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.7 MB/s eta 0:00:00
+#7 2.159 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 2.813    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 23.8 MB/s eta 0:00:00
+#7 2.890 Installing collected packages: numpy
+#7 4.316 Successfully installed numpy-2.3.4
+#7 4.316 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.412 
+#7 4.412 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.412 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.9s
+
+#8 [4/4] RUN ["pip","install","scikit-learn"]
+#8 0.597 Collecting scikit-learn
+#8 0.637   Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#8 0.692 Requirement already satisfied: numpy>=1.22.0 in /usr/local/lib/python3.11/site-packages (from scikit-learn) (2.3.4)
+#8 0.823 Collecting scipy>=1.8.0 (from scikit-learn)
+#8 0.833   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#8 0.865      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 1.8 MB/s eta 0:00:00
+#8 0.910 Collecting joblib>=1.2.0 (from scikit-learn)
+#8 0.918   Downloading joblib-1.5.2-py3-none-any.whl.metadata (5.6 kB)
+#8 0.953 Collecting threadpoolctl>=3.1.0 (from scikit-learn)
+#8 0.961   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#8 1.008 Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+#8 1.719    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 13.7 MB/s eta 0:00:00
+#8 1.729 Downloading joblib-1.5.2-py3-none-any.whl (308 kB)
+#8 1.755    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 308.4/308.4 kB 12.3 MB/s eta 0:00:00
+#8 1.764 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#8 3.818    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 18.4 MB/s eta 0:00:00
+#8 3.826 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#8 4.054 Installing collected packages: threadpoolctl, scipy, joblib, scikit-learn
+#8 8.470 Successfully installed joblib-1.5.2 scikit-learn-1.7.2 scipy-1.16.3 threadpoolctl-3.6.0
+#8 8.470 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 8.475 
+#8 8.475 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 8.475 [notice] To update, run: pip install --upgrade pip
+#8 DONE 9.0s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.9s done
+#9 writing image sha256:f5bc1d839886dbb6d5b5bac80e21cdd35ef4b448b4f01266b447f308a9a86f90 done
+#9 naming to docker.io/library/test-image-2395528ca82e1a9b1b5f34391f00e19c done
+#9 DONE 0.9s
+
+View build details: docker-desktop://dashboard/build/default/default/s4y9wrxr8490kaihbprmet9lf
+[2025-10-29 13:03:40] SUCCESS: Build completed for 2395528ca82e1a9b1b5f34391f00e19c

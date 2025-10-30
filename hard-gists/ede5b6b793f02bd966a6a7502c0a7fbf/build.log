@@ -1,0 +1,84 @@
+=== Docker Build Log for ede5b6b793f02bd966a6a7502c0a7fbf ===
+Started at: Mi 29. Okt 21:02:44 CET 2025
+
+[2025-10-29 21:02:44] START: Building image for ede5b6b793f02bd966a6a7502c0a7fbf
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 195B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 754B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/ede5b6b793f02bd966a6a7502c0a7fbf/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","Mastodon.py"]
+#7 1.994 Collecting Mastodon.py
+#7 2.043   Downloading mastodon_py-2.1.4-py3-none-any.whl.metadata (4.5 kB)
+#7 2.114 Collecting requests>=2.4.2 (from Mastodon.py)
+#7 2.124   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.166 Collecting python-dateutil (from Mastodon.py)
+#7 2.174   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#7 2.214 Collecting python-magic (from Mastodon.py)
+#7 2.226   Downloading python_magic-0.4.27-py2.py3-none-any.whl.metadata (5.8 kB)
+#7 2.265 Collecting decorator>=4.0.0 (from Mastodon.py)
+#7 2.274   Downloading decorator-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+#7 2.412 Collecting blurhash>=1.1.4 (from Mastodon.py)
+#7 2.424   Downloading blurhash-1.1.5-py2.py3-none-any.whl.metadata (4.0 kB)
+#7 2.544 Collecting charset_normalizer<4,>=2 (from requests>=2.4.2->Mastodon.py)
+#7 2.554   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.602 Collecting idna<4,>=2.5 (from requests>=2.4.2->Mastodon.py)
+#7 2.610   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.670 Collecting urllib3<3,>=1.21.1 (from requests>=2.4.2->Mastodon.py)
+#7 2.680   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.725 Collecting certifi>=2017.4.17 (from requests>=2.4.2->Mastodon.py)
+#7 2.736   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.775 Collecting six>=1.5 (from python-dateutil->Mastodon.py)
+#7 2.785   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.819 Downloading mastodon_py-2.1.4-py3-none-any.whl (123 kB)
+#7 2.843    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 123.5/123.5 kB 5.1 MB/s eta 0:00:00
+#7 2.855 Downloading blurhash-1.1.5-py2.py3-none-any.whl (6.6 kB)
+#7 2.874 Downloading decorator-5.2.1-py3-none-any.whl (9.2 kB)
+#7 2.894 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.907    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 4.7 MB/s eta 0:00:00
+#7 2.916 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#7 2.937    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 11.2 MB/s eta 0:00:00
+#7 2.952 Downloading python_magic-0.4.27-py2.py3-none-any.whl (13 kB)
+#7 2.973 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.991    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.5 MB/s eta 0:00:00
+#7 3.000 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 3.018    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 9.0 MB/s eta 0:00:00
+#7 3.027 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 3.040    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.0 MB/s eta 0:00:00
+#7 3.049 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.068 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 3.087    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 6.8 MB/s eta 0:00:00
+#7 3.164 Installing collected packages: blurhash, urllib3, six, python-magic, idna, decorator, charset_normalizer, certifi, requests, python-dateutil, Mastodon.py
+#7 3.523 Successfully installed Mastodon.py-2.1.4 blurhash-1.1.5 certifi-2025.10.5 charset_normalizer-3.4.4 decorator-5.2.1 idna-3.11 python-dateutil-2.9.0.post0 python-magic-0.4.27 requests-2.32.5 six-1.17.0 urllib3-2.5.0
+#7 3.523 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.620 
+#7 3.620 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.620 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.9s
+
+#8 exporting to image
+#8 exporting layers 0.1s done
+#8 writing image sha256:64cace6e70b09bfb345dc5401c8f60a7e77713520ca37c036895f0a4742cc9d1 done
+#8 naming to docker.io/library/test-image-ede5b6b793f02bd966a6a7502c0a7fbf done
+#8 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/zerrlb3kvqupbd748s8yjfcbj
+[2025-10-29 21:02:48] SUCCESS: Build completed for ede5b6b793f02bd966a6a7502c0a7fbf

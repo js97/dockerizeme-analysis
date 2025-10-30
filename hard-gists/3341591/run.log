@@ -1,0 +1,19 @@
+=== Docker Run Log for 3341591 ===
+Started at: Mi 29. Okt 13:49:02 CET 2025
+
+[2025-10-29 13:49:14] START: Running container for 3341591
+[2025-10-29 13:49:14] SUCCESS: Container c6dbcfee3e2dba00ed35456f81ae1c4fafcf2b6da79b46ef50aefcd8561df1d3 started for 3341591
+=== Container logs for 3341591 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 5, in <module>
+    from player import Player
+  File "/usr/local/lib/python3.11/site-packages/player/__init__.py", line 14, in <module>
+    from player.layout_impl import layout
+  File "/usr/local/lib/python3.11/site-packages/player/layout_impl.py", line 10, in <module>
+    from pyramid.compat import text_, string_types
+64
+pygame 2.6.1 (SDL 2.28.4, Python 3.11.14)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+ModuleNotFoundError: No module named 'pyramid.compat'
+=== End of logs for 3341591 ===
+[2025-10-29 13:49:16] INFO: Container c6dbcfee3e2dba00ed35456f81ae1c4fafcf2b6da79b46ef50aefcd8561df1d3 has stopped

@@ -1,0 +1,15 @@
+=== Docker Run Log for 3039696 ===
+Started at: Mi 29. Okt 13:38:16 CET 2025
+
+[2025-10-29 13:38:34] START: Running container for 3039696
+[2025-10-29 13:38:35] SUCCESS: Container df8f0fddfa6fd716f19bba52fc70dc6d6c3b89b82f3757e9db3b5500a74b213a started for 3039696
+=== Container logs for 3039696 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 10, in <module>
+    class CompressedJSONField(JSONField):
+  File "/snippet.py", line 14, in CompressedJSONField
+    __metaclass__ = models.SubfieldBase
+                    ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'django.db.models' has no attribute 'SubfieldBase'
+=== End of logs for 3039696 ===
+[2025-10-29 13:38:37] INFO: Container df8f0fddfa6fd716f19bba52fc70dc6d6c3b89b82f3757e9db3b5500a74b213a has stopped

@@ -1,0 +1,13 @@
+=== Docker Run Log for 3227267 ===
+Started at: Mi 29. Okt 13:47:22 CET 2025
+
+[2025-10-29 13:47:30] START: Running container for 3227267
+[2025-10-29 13:47:30] SUCCESS: Container 0c5088b5225303d6956d17e670deaa3996c3e1f50eef464579c0691281cb33bc started for 3227267
+=== Container logs for 3227267 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 6, in <module>
+    app = web.application(urls, globals())
+          ^^^^^^^^^^^^^^^
+AttributeError: module 'web' has no attribute 'application'
+=== End of logs for 3227267 ===
+[2025-10-29 13:47:32] INFO: Container 0c5088b5225303d6956d17e670deaa3996c3e1f50eef464579c0691281cb33bc has stopped

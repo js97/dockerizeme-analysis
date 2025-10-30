@@ -1,0 +1,17 @@
+=== Docker Run Log for 53aad9bb83b233b523270c30d36e4c81 ===
+Started at: Mi 29. Okt 15:38:41 CET 2025
+
+[2025-10-29 15:40:03] START: Running container for 53aad9bb83b233b523270c30d36e4c81
+[2025-10-29 15:40:03] SUCCESS: Container 658d6d19ff75af348cfaf9fe9307aaf491dcda5964bb0edc6f0c76783c06ad57 started for 53aad9bb83b233b523270c30d36e4c81
+=== Container logs for 53aad9bb83b233b523270c30d36e4c81 ===
+2025-10-29 14:40:04.093268: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-10-29 14:40:04.132873: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-29 14:40:05.537333: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Traceback (most recent call last):
+  File "/snippet.py", line 11, in <module>
+    model_filename = sys.argv[1]
+                     ~~~~~~~~^^^
+IndexError: list index out of range
+=== End of logs for 53aad9bb83b233b523270c30d36e4c81 ===
+[2025-10-29 15:40:05] INFO: Container 658d6d19ff75af348cfaf9fe9307aaf491dcda5964bb0edc6f0c76783c06ad57 has stopped

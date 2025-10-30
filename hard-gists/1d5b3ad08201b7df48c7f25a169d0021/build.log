@@ -1,0 +1,184 @@
+=== Docker Build Log for 1d5b3ad08201b7df48c7f25a169d0021 ===
+Started at: Mi 29. Okt 12:45:02 CET 2025
+
+[2025-10-29 12:45:02] START: Building image for 1d5b3ad08201b7df48c7f25a169d0021
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 194B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.09kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/1d5b3ad08201b7df48c7f25a169d0021/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","tensorflow"]
+#7 2.312 Collecting tensorflow
+#7 2.346   Downloading tensorflow-2.20.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.5 kB)
+#7 2.417 Collecting absl-py>=1.0.0 (from tensorflow)
+#7 2.428   Downloading absl_py-2.3.1-py3-none-any.whl.metadata (3.3 kB)
+#7 2.464 Collecting astunparse>=1.6.0 (from tensorflow)
+#7 2.473   Downloading astunparse-1.6.3-py2.py3-none-any.whl.metadata (4.4 kB)
+#7 2.512 Collecting flatbuffers>=24.3.25 (from tensorflow)
+#7 2.520   Downloading flatbuffers-25.9.23-py2.py3-none-any.whl.metadata (875 bytes)
+#7 2.562 Collecting gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 (from tensorflow)
+#7 2.571   Downloading gast-0.6.0-py3-none-any.whl.metadata (1.3 kB)
+#7 2.609 Collecting google_pasta>=0.1.1 (from tensorflow)
+#7 2.620   Downloading google_pasta-0.2.0-py3-none-any.whl.metadata (814 bytes)
+#7 2.662 Collecting libclang>=13.0.0 (from tensorflow)
+#7 2.670   Downloading libclang-18.1.1-py2.py3-none-manylinux2010_x86_64.whl.metadata (5.2 kB)
+#7 2.711 Collecting opt_einsum>=2.3.2 (from tensorflow)
+#7 2.719   Downloading opt_einsum-3.4.0-py3-none-any.whl.metadata (6.3 kB)
+#7 2.765 Collecting packaging (from tensorflow)
+#7 2.773   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#7 2.998 Collecting protobuf>=5.28.0 (from tensorflow)
+#7 3.007   Downloading protobuf-6.33.0-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)
+#7 3.069 Collecting requests<3,>=2.21.0 (from tensorflow)
+#7 3.078   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 3.090 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from tensorflow) (79.0.1)
+#7 3.121 Collecting six>=1.12.0 (from tensorflow)
+#7 3.129   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 3.167 Collecting termcolor>=1.1.0 (from tensorflow)
+#7 3.176   Downloading termcolor-3.2.0-py3-none-any.whl.metadata (6.4 kB)
+#7 3.223 Collecting typing_extensions>=3.6.6 (from tensorflow)
+#7 3.232   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#7 3.398 Collecting wrapt>=1.11.0 (from tensorflow)
+#7 3.409   Downloading wrapt-2.0.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.8 kB)
+#7 4.115 Collecting grpcio<2.0,>=1.24.3 (from tensorflow)
+#7 4.127   Downloading grpcio-1.76.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.7 kB)
+#7 4.209 Collecting tensorboard~=2.20.0 (from tensorflow)
+#7 4.219   Downloading tensorboard-2.20.0-py3-none-any.whl.metadata (1.8 kB)
+#7 4.303 Collecting keras>=3.10.0 (from tensorflow)
+#7 4.313   Downloading keras-3.12.0-py3-none-any.whl.metadata (5.9 kB)
+#7 4.683 Collecting numpy>=1.26.0 (from tensorflow)
+#7 4.695   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 4.720      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.3 MB/s eta 0:00:00
+#7 4.813 Collecting h5py>=3.11.0 (from tensorflow)
+#7 4.823   Downloading h5py-3.15.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+#7 4.883 Collecting ml_dtypes<1.0.0,>=0.5.1 (from tensorflow)
+#7 4.893   Downloading ml_dtypes-0.5.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.9 kB)
+#7 4.909 Requirement already satisfied: wheel<1.0,>=0.23.0 in /usr/local/lib/python3.11/site-packages (from astunparse>=1.6.0->tensorflow) (0.45.1)
+#7 5.039 Collecting rich (from keras>=3.10.0->tensorflow)
+#7 5.048   Downloading rich-14.2.0-py3-none-any.whl.metadata (18 kB)
+#7 5.090 Collecting namex (from keras>=3.10.0->tensorflow)
+#7 5.100   Downloading namex-0.1.0-py3-none-any.whl.metadata (322 bytes)
+#7 5.227 Collecting optree (from keras>=3.10.0->tensorflow)
+#7 5.238   Downloading optree-0.17.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (33 kB)
+#7 5.442 Collecting charset_normalizer<4,>=2 (from requests<3,>=2.21.0->tensorflow)
+#7 5.453   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 5.509 Collecting idna<4,>=2.5 (from requests<3,>=2.21.0->tensorflow)
+#7 5.517   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 5.594 Collecting urllib3<3,>=1.21.1 (from requests<3,>=2.21.0->tensorflow)
+#7 5.603   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 5.655 Collecting certifi>=2017.4.17 (from requests<3,>=2.21.0->tensorflow)
+#7 5.664   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 5.747 Collecting markdown>=2.6.8 (from tensorboard~=2.20.0->tensorflow)
+#7 5.757   Downloading markdown-3.9-py3-none-any.whl.metadata (5.1 kB)
+#7 6.080 Collecting pillow (from tensorboard~=2.20.0->tensorflow)
+#7 6.092   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#7 6.165 Collecting tensorboard-data-server<0.8.0,>=0.7.0 (from tensorboard~=2.20.0->tensorflow)
+#7 6.175   Downloading tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl.metadata (1.1 kB)
+#7 6.236 Collecting werkzeug>=1.0.1 (from tensorboard~=2.20.0->tensorflow)
+#7 6.247   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#7 6.446 Collecting MarkupSafe>=2.1.1 (from werkzeug>=1.0.1->tensorboard~=2.20.0->tensorflow)
+#7 6.455   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#7 6.568 Collecting markdown-it-py>=2.2.0 (from rich->keras>=3.10.0->tensorflow)
+#7 6.576   Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+#7 6.631 Collecting pygments<3.0.0,>=2.13.0 (from rich->keras>=3.10.0->tensorflow)
+#7 6.639   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#7 6.697 Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->keras>=3.10.0->tensorflow)
+#7 6.706   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+#7 6.752 Downloading tensorflow-2.20.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (620.6 MB)
+#7 32.04    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 620.6/620.6 MB 1.8 MB/s eta 0:00:00
+#7 32.05 Downloading absl_py-2.3.1-py3-none-any.whl (135 kB)
+#7 32.07    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.8/135.8 kB 7.3 MB/s eta 0:00:00
+#7 32.08 Downloading astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+#7 32.10 Downloading flatbuffers-25.9.23-py2.py3-none-any.whl (30 kB)
+#7 32.12 Downloading gast-0.6.0-py3-none-any.whl (21 kB)
+#7 32.14 Downloading google_pasta-0.2.0-py3-none-any.whl (57 kB)
+#7 32.16    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.5/57.5 kB 4.4 MB/s eta 0:00:00
+#7 32.17 Downloading grpcio-1.76.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (6.6 MB)
+#7 32.42    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 26.4 MB/s eta 0:00:00
+#7 32.43 Downloading h5py-3.15.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (4.7 MB)
+#7 32.60    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 27.1 MB/s eta 0:00:00
+#7 32.61 Downloading keras-3.12.0-py3-none-any.whl (1.5 MB)
+#7 32.67    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 26.5 MB/s eta 0:00:00
+#7 32.68 Downloading libclang-18.1.1-py2.py3-none-manylinux2010_x86_64.whl (24.5 MB)
+#7 33.62    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.5/24.5 MB 20.7 MB/s eta 0:00:00
+#7 33.63 Downloading ml_dtypes-0.5.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (4.9 MB)
+#7 33.82    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 26.9 MB/s eta 0:00:00
+#7 33.83 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 34.45    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 24.9 MB/s eta 0:00:00
+#7 34.46 Downloading opt_einsum-3.4.0-py3-none-any.whl (71 kB)
+#7 34.47    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.9/71.9 kB 5.6 MB/s eta 0:00:00
+#7 34.48 Downloading protobuf-6.33.0-cp39-abi3-manylinux2014_x86_64.whl (323 kB)
+#7 34.50    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 323.2/323.2 kB 18.2 MB/s eta 0:00:00
+#7 34.51 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 34.52    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 5.3 MB/s eta 0:00:00
+#7 34.53 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 34.55 Downloading tensorboard-2.20.0-py3-none-any.whl (5.5 MB)
+#7 34.76    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 27.1 MB/s eta 0:00:00
+#7 34.77 Downloading termcolor-3.2.0-py3-none-any.whl (7.7 kB)
+#7 34.78 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#7 34.79    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.7 MB/s eta 0:00:00
+#7 34.80 Downloading wrapt-2.0.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (114 kB)
+#7 34.82    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.1/114.1 kB 8.9 MB/s eta 0:00:00
+#7 34.83 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#7 34.84    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.7 MB/s eta 0:00:00
+#7 34.85 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 34.86    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 12.1 MB/s eta 0:00:00
+#7 34.87 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 34.88    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 12.2 MB/s eta 0:00:00
+#7 34.89 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 34.90    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.9 MB/s eta 0:00:00
+#7 34.92 Downloading markdown-3.9-py3-none-any.whl (107 kB)
+#7 34.93    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.4/107.4 kB 9.0 MB/s eta 0:00:00
+#7 34.94 Downloading tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl (6.6 MB)
+#7 35.19    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 26.3 MB/s eta 0:00:00
+#7 35.20 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 35.22    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 10.7 MB/s eta 0:00:00
+#7 35.23 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#7 35.24    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 13.9 MB/s eta 0:00:00
+#7 35.25 Downloading namex-0.1.0-py3-none-any.whl (5.9 kB)
+#7 35.27 Downloading optree-0.17.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (402 kB)
+#7 35.29    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 402.0/402.0 kB 18.3 MB/s eta 0:00:00
+#7 35.30 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#7 35.57    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 26.9 MB/s eta 0:00:00
+#7 35.58 Downloading rich-14.2.0-py3-none-any.whl (243 kB)
+#7 35.59    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.4/243.4 kB 14.2 MB/s eta 0:00:00
+#7 35.60 Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+#7 35.61    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.3/87.3 kB 7.9 MB/s eta 0:00:00
+#7 35.62 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#7 35.64 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#7 35.69    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 26.0 MB/s eta 0:00:00
+#7 35.70 Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+#7 37.78 Installing collected packages: namex, libclang, flatbuffers, wrapt, urllib3, typing_extensions, termcolor, tensorboard-data-server, six, pygments, protobuf, pillow, packaging, opt_einsum, numpy, mdurl, MarkupSafe, markdown, idna, gast, charset_normalizer, certifi, absl-py, werkzeug, requests, optree, ml_dtypes, markdown-it-py, h5py, grpcio, google_pasta, astunparse, tensorboard, rich, keras, tensorflow
+#7 56.64 Successfully installed MarkupSafe-3.0.3 absl-py-2.3.1 astunparse-1.6.3 certifi-2025.10.5 charset_normalizer-3.4.4 flatbuffers-25.9.23 gast-0.6.0 google_pasta-0.2.0 grpcio-1.76.0 h5py-3.15.1 idna-3.11 keras-3.12.0 libclang-18.1.1 markdown-3.9 markdown-it-py-4.0.0 mdurl-0.1.2 ml_dtypes-0.5.3 namex-0.1.0 numpy-2.3.4 opt_einsum-3.4.0 optree-0.17.0 packaging-25.0 pillow-12.0.0 protobuf-6.33.0 pygments-2.19.2 requests-2.32.5 rich-14.2.0 six-1.17.0 tensorboard-2.20.0 tensorboard-data-server-0.7.2 tensorflow-2.20.0 termcolor-3.2.0 typing_extensions-4.15.0 urllib3-2.5.0 werkzeug-3.1.3 wrapt-2.0.0
+#7 56.64 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 58.43 
+#7 58.43 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 58.43 [notice] To update, run: pip install --upgrade pip
+#7 DONE 64.2s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 13.0s done
+#8 writing image sha256:73dd2e4ea496d79861fc5354f21eba6fea1790227235520945be222c6715188c done
+#8 naming to docker.io/library/test-image-1d5b3ad08201b7df48c7f25a169d0021 0.0s done
+#8 DONE 13.1s
+
+View build details: docker-desktop://dashboard/build/default/default/cft85qst48o564r5i83077prl
+[2025-10-29 12:46:20] SUCCESS: Build completed for 1d5b3ad08201b7df48c7f25a169d0021

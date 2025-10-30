@@ -1,0 +1,95 @@
+=== Docker Build Log for 4145581 ===
+Started at: Mi 29. Okt 14:23:15 CET 2025
+
+[2025-10-29 14:23:15] START: Building image for 4145581
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 201B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.35kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/4145581/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","sh"]
+#7 1.912 Collecting sh
+#7 1.948   Downloading sh-2.2.2-py3-none-any.whl.metadata (3.7 kB)
+#7 1.969 Downloading sh-2.2.2-py3-none-any.whl (38 kB)
+#7 2.018 Installing collected packages: sh
+#7 2.043 Successfully installed sh-2.2.2
+#7 2.044 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.132 
+#7 2.132 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.132 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.3s
+
+#8 [4/4] RUN ["pip","install","Sharrock-Client"]
+#8 0.754 Collecting Sharrock-Client
+#8 0.885   Downloading Sharrock-Client-0.7.4.1.tar.gz (5.0 kB)
+#8 0.904   Preparing metadata (setup.py): started
+#8 1.288   Preparing metadata (setup.py): finished with status 'error'
+#8 1.291   error: subprocess-exited-with-error
+#8 1.291   
+#8 1.291   × python setup.py egg_info did not run successfully.
+#8 1.291   │ exit code: 1
+#8 1.291   ╰─> [7 lines of output]
+#8 1.291       Traceback (most recent call last):
+#8 1.291         File "<string>", line 2, in <module>
+#8 1.291         File "<pip-setuptools-caller>", line 34, in <module>
+#8 1.291         File "/tmp/pip-install-prrl1j6t/sharrock-client_4a2649840e6f48ed8ad3827017899d5d/setup.py", line 4
+#8 1.291           except ImportError, err:
+#8 1.291                  ^^^^^^^^^^^^^^^^
+#8 1.291       SyntaxError: multiple exception types must be parenthesized
+#8 1.291       [end of output]
+#8 1.291   
+#8 1.291   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 1.292 error: metadata-generation-failed
+#8 1.292 
+#8 1.292 × Encountered error while generating package metadata.
+#8 1.292 ╰─> See above for output.
+#8 1.292 
+#8 1.292 note: This is an issue with the package mentioned above, not pip.
+#8 1.292 hint: See above for details.
+#8 1.297 
+#8 1.297 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.297 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install Sharrock-Client" did not complete successfully: exit code: 1
+------
+ > [4/4] RUN ["pip","install","Sharrock-Client"]:
+1.292 error: metadata-generation-failed
+1.292 
+1.292 × Encountered error while generating package metadata.
+1.292 ╰─> See above for output.
+1.292 
+1.292 note: This is an issue with the package mentioned above, not pip.
+1.292 hint: See above for details.
+1.297 
+1.297 [notice] A new release of pip is available: 24.0 -> 25.3
+1.297 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/4145581/snippet.py /snippet.py
+   3 |     RUN ["pip","install","sh"]
+   4 | >>> RUN ["pip","install","Sharrock-Client"]
+   5 |     CMD ["python3","/snippet.py"]
+   6 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install Sharrock-Client" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/0yaondnhj3hj56555lhwk20iq
+[2025-10-29 14:23:19] ERROR: Build failed for 4145581

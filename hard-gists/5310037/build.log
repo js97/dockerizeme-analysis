@@ -1,0 +1,102 @@
+=== Docker Build Log for 5310037 ===
+Started at: Mi 29. Okt 15:36:12 CET 2025
+
+[2025-10-29 15:36:12] START: Building image for 5310037
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 211B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.83kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/5310037/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","SQLAlchemy"]
+#7 2.226 Collecting SQLAlchemy
+#7 2.271   Downloading sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.5 kB)
+#7 2.462 Collecting greenlet>=1 (from SQLAlchemy)
+#7 2.474   Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+#7 2.530 Collecting typing-extensions>=4.6.0 (from SQLAlchemy)
+#7 2.539   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#7 2.563 Downloading sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+#7 2.728    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 20.3 MB/s eta 0:00:00
+#7 2.738 Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (587 kB)
+#7 2.766    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 587.7/587.7 kB 22.0 MB/s eta 0:00:00
+#7 2.776 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#7 2.786    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 4.0 MB/s eta 0:00:00
+#7 2.848 Installing collected packages: typing-extensions, greenlet, SQLAlchemy
+#7 3.663 Successfully installed SQLAlchemy-2.0.44 greenlet-3.2.4 typing-extensions-4.15.0
+#7 3.663 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.756 
+#7 3.756 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.756 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.1s
+
+#8 [4/4] RUN ["pip","install","sqlalchemy-schema"]
+#8 0.710 Collecting sqlalchemy-schema
+#8 0.956   Downloading sqlalchemy_schema-0.1.1-py3-none-any.whl.metadata (8.6 kB)
+#8 1.015 Collecting click>=8.1 (from sqlalchemy-schema)
+#8 1.025   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#8 1.079 Collecting jsonschema>=4.23 (from sqlalchemy-schema)
+#8 1.088   Downloading jsonschema-4.25.1-py3-none-any.whl.metadata (7.6 kB)
+#8 1.133 Collecting loguru>=0.7 (from sqlalchemy-schema)
+#8 1.143   Downloading loguru-0.7.3-py3-none-any.whl.metadata (22 kB)
+#8 1.224 Collecting pyyaml>=5.4 (from sqlalchemy-schema)
+#8 1.233   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#8 1.247 Requirement already satisfied: sqlalchemy>=2.0 in /usr/local/lib/python3.11/site-packages (from sqlalchemy-schema) (2.0.44)
+#8 1.303 Collecting attrs>=22.2.0 (from jsonschema>=4.23->sqlalchemy-schema)
+#8 1.313   Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+#8 1.362 Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.23->sqlalchemy-schema)
+#8 1.372   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+#8 1.437 Collecting referencing>=0.28.4 (from jsonschema>=4.23->sqlalchemy-schema)
+#8 1.445   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+#8 1.749 Collecting rpds-py>=0.7.1 (from jsonschema>=4.23->sqlalchemy-schema)
+#8 1.760   Downloading rpds_py-0.28.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+#8 1.856 Requirement already satisfied: greenlet>=1 in /usr/local/lib/python3.11/site-packages (from sqlalchemy>=2.0->sqlalchemy-schema) (3.2.4)
+#8 1.857 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.11/site-packages (from sqlalchemy>=2.0->sqlalchemy-schema) (4.15.0)
+#8 1.989 Downloading sqlalchemy_schema-0.1.1-py3-none-any.whl (15 kB)
+#8 2.016 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#8 2.039    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 4.8 MB/s eta 0:00:00
+#8 2.049 Downloading jsonschema-4.25.1-py3-none-any.whl (90 kB)
+#8 2.061    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.0/90.0 kB 8.1 MB/s eta 0:00:00
+#8 2.073 Downloading loguru-0.7.3-py3-none-any.whl (61 kB)
+#8 2.086    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.6/61.6 kB 4.9 MB/s eta 0:00:00
+#8 2.094 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#8 2.140    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 18.6 MB/s eta 0:00:00
+#8 2.150 Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+#8 2.162    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.6/67.6 kB 6.0 MB/s eta 0:00:00
+#8 2.171 Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+#8 2.190 Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+#8 2.209 Downloading rpds_py-0.28.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (382 kB)
+#8 2.231    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 382.9/382.9 kB 19.0 MB/s eta 0:00:00
+#8 2.350 Installing collected packages: rpds-py, pyyaml, loguru, click, attrs, referencing, jsonschema-specifications, jsonschema, sqlalchemy-schema
+#8 2.691 Successfully installed attrs-25.4.0 click-8.3.0 jsonschema-4.25.1 jsonschema-specifications-2025.9.1 loguru-0.7.3 pyyaml-6.0.3 referencing-0.37.0 rpds-py-0.28.0 sqlalchemy-schema-0.1.1
+#8 2.692 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.697 
+#8 2.697 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.697 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.0s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.3s done
+#9 writing image sha256:28ad5c5b085f4c795b5bbd84d1b9532b2a87c228f56c8c62bfff8ec4fbf60c44 done
+#9 naming to docker.io/library/test-image-5310037 done
+#9 DONE 0.4s
+
+View build details: docker-desktop://dashboard/build/default/default/rxu9tpxaoqf9m0brazmtd1a9w
+[2025-10-29 15:36:20] SUCCESS: Build completed for 5310037

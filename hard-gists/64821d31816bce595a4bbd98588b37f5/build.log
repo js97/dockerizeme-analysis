@@ -1,0 +1,92 @@
+=== Docker Build Log for 64821d31816bce595a4bbd98588b37f5 ===
+Started at: Mi 29. Okt 16:32:52 CET 2025
+
+[2025-10-29 16:32:52] START: Building image for 64821d31816bce595a4bbd98588b37f5
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 226B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.65kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/64821d31816bce595a4bbd98588b37f5/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","numpy"]
+#7 2.288 Collecting numpy
+#7 2.322   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.340      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 3.2 MB/s eta 0:00:00
+#7 2.361 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 3.030    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 23.1 MB/s eta 0:00:00
+#7 3.119 Installing collected packages: numpy
+#7 4.760 Successfully installed numpy-2.3.4
+#7 4.760 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.854 
+#7 4.854 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.854 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.4s
+
+#8 [4/4] RUN ["pip","install","scikit-image"]
+#8 0.580 Collecting scikit-image
+#8 0.616   Downloading scikit_image-0.25.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (14 kB)
+#8 0.660 Requirement already satisfied: numpy>=1.24 in /usr/local/lib/python3.11/site-packages (from scikit-image) (2.3.4)
+#8 0.800 Collecting scipy>=1.11.4 (from scikit-image)
+#8 0.811   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#8 0.841      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.1 MB/s eta 0:00:00
+#8 0.890 Collecting networkx>=3.0 (from scikit-image)
+#8 0.901   Downloading networkx-3.5-py3-none-any.whl.metadata (6.3 kB)
+#8 1.116 Collecting pillow>=10.1 (from scikit-image)
+#8 1.125   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#8 1.179 Collecting imageio!=2.35.0,>=2.33 (from scikit-image)
+#8 1.188   Downloading imageio-2.37.0-py3-none-any.whl.metadata (5.2 kB)
+#8 1.255 Collecting tifffile>=2022.8.12 (from scikit-image)
+#8 1.264   Downloading tifffile-2025.10.16-py3-none-any.whl.metadata (31 kB)
+#8 1.313 Collecting packaging>=21 (from scikit-image)
+#8 1.323   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 1.362 Collecting lazy-loader>=0.4 (from scikit-image)
+#8 1.371   Downloading lazy_loader-0.4-py3-none-any.whl.metadata (7.6 kB)
+#8 1.501 Downloading scikit_image-0.25.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (14.8 MB)
+#8 2.134    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.8/14.8 MB 22.0 MB/s eta 0:00:00
+#8 2.146 Downloading imageio-2.37.0-py3-none-any.whl (315 kB)
+#8 2.167    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 315.8/315.8 kB 16.0 MB/s eta 0:00:00
+#8 2.175 Downloading lazy_loader-0.4-py3-none-any.whl (12 kB)
+#8 2.193 Downloading networkx-3.5-py3-none-any.whl (2.0 MB)
+#8 2.276    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 24.7 MB/s eta 0:00:00
+#8 2.286 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 2.298    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.5 MB/s eta 0:00:00
+#8 2.307 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#8 2.637    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 21.4 MB/s eta 0:00:00
+#8 2.647 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#8 4.098    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 16.7 MB/s eta 0:00:00
+#8 4.107 Downloading tifffile-2025.10.16-py3-none-any.whl (231 kB)
+#8 4.125    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231.2/231.2 kB 13.6 MB/s eta 0:00:00
+#8 4.466 Installing collected packages: tifffile, scipy, pillow, packaging, networkx, lazy-loader, imageio, scikit-image
+#8 9.996 Successfully installed imageio-2.37.0 lazy-loader-0.4 networkx-3.5 packaging-25.0 pillow-12.0.0 scikit-image-0.25.2 scipy-1.16.3 tifffile-2025.10.16
+#8 9.996 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 10.00 
+#8 10.00 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 10.00 [notice] To update, run: pip install --upgrade pip
+#8 DONE 11.3s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 1.4s done
+#9 writing image sha256:7f01508957d891d559ce9b2cd8b3dd596a4505f2d55c627f0b8699b439b6b569 done
+#9 naming to docker.io/library/test-image-64821d31816bce595a4bbd98588b37f5 done
+#9 DONE 1.4s
+
+View build details: docker-desktop://dashboard/build/default/default/s9h9jy6k6gylzynbq6nb5f0hd
+[2025-10-29 16:33:10] SUCCESS: Build completed for 64821d31816bce595a4bbd98588b37f5

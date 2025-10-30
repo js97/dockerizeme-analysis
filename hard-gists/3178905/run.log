@@ -1,0 +1,12 @@
+=== Docker Run Log for 3178905 ===
+Started at: Mi 29. Okt 13:43:21 CET 2025
+
+[2025-10-29 13:44:01] START: Running container for 3178905
+[2025-10-29 13:44:01] SUCCESS: Container dd7c5eef83cb3ab670481e144e1c0413e2e03fd8060911fb09e287c16179642e started for 3178905
+=== Container logs for 3178905 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 2, in <module>
+    from django.core.files.storage import get_storage_class
+ImportError: cannot import name 'get_storage_class' from 'django.core.files.storage' (/usr/local/lib/python3.11/site-packages/django/core/files/storage/__init__.py)
+=== End of logs for 3178905 ===
+[2025-10-29 13:44:03] INFO: Container dd7c5eef83cb3ab670481e144e1c0413e2e03fd8060911fb09e287c16179642e has stopped

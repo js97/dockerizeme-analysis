@@ -1,0 +1,82 @@
+=== Docker Build Log for 2b19fd6f758ffd2e8ab9ec7d1f3f4b2c ===
+Started at: Mi 29. Okt 13:24:31 CET 2025
+
+[2025-10-29 13:24:31] START: Building image for 2b19fd6f758ffd2e8ab9ec7d1f3f4b2c
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 353B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.73kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/8] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/8] COPY hard-gists/2b19fd6f758ffd2e8ab9ec7d1f3f4b2c/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/8] RUN ["pip","install","pandacan"]
+#7 1.869 Collecting pandacan
+#7 1.904   Downloading pandacan-0.0.9.tar.gz (36 kB)
+#7 1.920   Preparing metadata (setup.py): started
+#7 2.302   Preparing metadata (setup.py): finished with status 'done'
+#7 2.337 Collecting libusb1==1.6.6 (from pandacan)
+#7 2.346   Downloading libusb1-1.6.6.tar.gz (56 kB)
+#7 2.365      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.0/56.0 kB 2.7 MB/s eta 0:00:00
+#7 2.370   Preparing metadata (setup.py): started
+#7 2.464   Preparing metadata (setup.py): finished with status 'error'
+#7 2.467   error: subprocess-exited-with-error
+#7 2.467   
+#7 2.467   × python setup.py egg_info did not run successfully.
+#7 2.467   │ exit code: 1
+#7 2.467   ╰─> [1 lines of output]
+#7 2.467       error in libusb1 setup command: use_2to3 is invalid.
+#7 2.467       [end of output]
+#7 2.467   
+#7 2.467   note: This error originates from a subprocess, and is likely not a problem with pip.
+#7 2.468 error: metadata-generation-failed
+#7 2.468 
+#7 2.468 × Encountered error while generating package metadata.
+#7 2.468 ╰─> See above for output.
+#7 2.468 
+#7 2.468 note: This is an issue with the package mentioned above, not pip.
+#7 2.468 hint: See above for details.
+#7 2.564 
+#7 2.564 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.564 [notice] To update, run: pip install --upgrade pip
+#7 ERROR: process "pip install pandacan" did not complete successfully: exit code: 1
+------
+ > [3/8] RUN ["pip","install","pandacan"]:
+2.468 error: metadata-generation-failed
+2.468 
+2.468 × Encountered error while generating package metadata.
+2.468 ╰─> See above for output.
+2.468 
+2.468 note: This is an issue with the package mentioned above, not pip.
+2.468 hint: See above for details.
+2.564 
+2.564 [notice] A new release of pip is available: 24.0 -> 25.3
+2.564 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:3
+--------------------
+   1 |     FROM python:3.11
+   2 |     COPY hard-gists/2b19fd6f758ffd2e8ab9ec7d1f3f4b2c/snippet.py /snippet.py
+   3 | >>> RUN ["pip","install","pandacan"]
+   4 |     RUN ["pip","install","pan-python"]
+   5 |     RUN ["pip","install","torch"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install pandacan" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/fgf17ghpl5pckjj8s2l5dlsb3
+[2025-10-29 13:24:34] ERROR: Build failed for 2b19fd6f758ffd2e8ab9ec7d1f3f4b2c

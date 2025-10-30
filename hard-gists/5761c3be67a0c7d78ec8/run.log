@@ -1,0 +1,15 @@
+=== Docker Run Log for 5761c3be67a0c7d78ec8 ===
+Started at: Mi 29. Okt 15:56:52 CET 2025
+
+[2025-10-29 15:56:59] START: Running container for 5761c3be67a0c7d78ec8
+[2025-10-29 15:56:59] SUCCESS: Container 9948be9bd58f9d98558b49c21f881e3858032613ebb575f3c7e19bfa45dffb4c started for 5761c3be67a0c7d78ec8
+=== Container logs for 5761c3be67a0c7d78ec8 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 16, in <module>
+    class FeedSerializer(serializers.ModelSerializer):
+  File "/snippet.py", line 20, in FeedSerializer
+    'accounts.user': MinimalUserSerializer,
+                     ^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'MinimalUserSerializer' is not defined
+=== End of logs for 5761c3be67a0c7d78ec8 ===
+[2025-10-29 15:57:01] INFO: Container 9948be9bd58f9d98558b49c21f881e3858032613ebb575f3c7e19bfa45dffb4c has stopped

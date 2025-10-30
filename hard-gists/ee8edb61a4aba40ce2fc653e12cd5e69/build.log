@@ -1,0 +1,118 @@
+=== Docker Build Log for ee8edb61a4aba40ce2fc653e12cd5e69 ===
+Started at: Mi 29. Okt 21:03:08 CET 2025
+
+[2025-10-29 21:03:08] START: Building image for ee8edb61a4aba40ce2fc653e12cd5e69
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 261B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 929B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/ee8edb61a4aba40ce2fc653e12cd5e69/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","docx"]
+#7 2.174 Collecting docx
+#7 2.217   Downloading docx-0.2.4.tar.gz (54 kB)
+#7 2.236      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.9/54.9 kB 2.7 MB/s eta 0:00:00
+#7 2.241   Preparing metadata (setup.py): started
+#7 2.637   Preparing metadata (setup.py): finished with status 'done'
+#7 2.865 Collecting lxml (from docx)
+#7 2.875   Downloading lxml-6.0.2-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.6 kB)
+#7 3.097 Collecting Pillow>=2.0 (from docx)
+#7 3.106   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#7 3.155 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#7 4.205    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 6.7 MB/s eta 0:00:00
+#7 4.216 Downloading lxml-6.0.2-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.2 MB)
+#7 4.801    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 8.9 MB/s eta 0:00:00
+#7 4.830 Building wheels for collected packages: docx
+#7 4.831   Building wheel for docx (setup.py): started
+#7 5.004   Building wheel for docx (setup.py): finished with status 'done'
+#7 5.004   Created wheel for docx: filename=docx-0.2.4-py3-none-any.whl size=53930 sha256=9526188e4010c996ba0197e4c46f9ea12b4ad13df4ff3ab4c6ab034cf3f64c21
+#7 5.004   Stored in directory: /root/.cache/pip/wheels/c1/3e/c3/e81c11effd0be5658a035947c66792dd993bcff317eae0e1ed
+#7 5.006 Successfully built docx
+#7 5.049 Installing collected packages: Pillow, lxml, docx
+#7 5.399 Successfully installed Pillow-12.0.0 docx-0.2.4 lxml-6.0.2
+#7 5.399 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.491 
+#7 5.491 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.491 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.0s
+
+#8 [4/5] RUN ["pip","install","python-docx"]
+#8 0.508 Collecting python-docx
+#8 0.555   Downloading python_docx-1.2.0-py3-none-any.whl.metadata (2.0 kB)
+#8 0.567 Requirement already satisfied: lxml>=3.1.0 in /usr/local/lib/python3.11/site-packages (from python-docx) (6.0.2)
+#8 0.605 Collecting typing_extensions>=4.9.0 (from python-docx)
+#8 0.614   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.650 Downloading python_docx-1.2.0-py3-none-any.whl (252 kB)
+#8 0.696    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 253.0/253.0 kB 5.8 MB/s eta 0:00:00
+#8 0.704 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#8 0.714    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.9 MB/s eta 0:00:00
+#8 0.761 Installing collected packages: typing_extensions, python-docx
+#8 0.900 Successfully installed python-docx-1.2.0 typing_extensions-4.15.0
+#8 0.901 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.905 
+#8 0.905 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.905 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.0s
+
+#9 [5/5] RUN ["pip","install","pydocumentdb"]
+#9 0.848 Collecting pydocumentdb
+#9 0.885   Downloading pydocumentdb-2.3.5-py3-none-any.whl.metadata (5.8 kB)
+#9 0.931 Collecting six>=1.6 (from pydocumentdb)
+#9 0.949   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#9 1.014 Collecting requests>=2.10.0 (from pydocumentdb)
+#9 1.029   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#9 1.150 Collecting charset_normalizer<4,>=2 (from requests>=2.10.0->pydocumentdb)
+#9 1.161   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#9 1.210 Collecting idna<4,>=2.5 (from requests>=2.10.0->pydocumentdb)
+#9 1.222   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#9 1.281 Collecting urllib3<3,>=1.21.1 (from requests>=2.10.0->pydocumentdb)
+#9 1.289   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#9 1.338 Collecting certifi>=2017.4.17 (from requests>=2.10.0->pydocumentdb)
+#9 1.348   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#9 1.376 Downloading pydocumentdb-2.3.5-py3-none-any.whl (93 kB)
+#9 1.405    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 93.8/93.8 kB 3.3 MB/s eta 0:00:00
+#9 1.413 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#9 1.433    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.0 MB/s eta 0:00:00
+#9 1.442 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#9 1.468 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#9 1.487    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.0 MB/s eta 0:00:00
+#9 1.497 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#9 1.514    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 9.0 MB/s eta 0:00:00
+#9 1.523 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#9 1.539    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.1 MB/s eta 0:00:00
+#9 1.546 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#9 1.563    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 8.3 MB/s eta 0:00:00
+#9 1.624 Installing collected packages: urllib3, six, idna, charset_normalizer, certifi, requests, pydocumentdb
+#9 1.923 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 pydocumentdb-2.3.5 requests-2.32.5 six-1.17.0 urllib3-2.5.0
+#9 1.923 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.928 
+#9 1.928 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.928 [notice] To update, run: pip install --upgrade pip
+#9 DONE 2.1s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.3s done
+#10 writing image sha256:03cce32caa2c14ac20c55f27529eaf2b6fa89d48574da4446415cbe8738d7528 done
+#10 naming to docker.io/library/test-image-ee8edb61a4aba40ce2fc653e12cd5e69 done
+#10 DONE 0.4s
+
+View build details: docker-desktop://dashboard/build/default/default/hr3p1wox9ckz85m99v5y4juse
+[2025-10-29 21:03:18] SUCCESS: Build completed for ee8edb61a4aba40ce2fc653e12cd5e69

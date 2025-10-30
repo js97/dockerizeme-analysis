@@ -1,0 +1,275 @@
+=== Docker Build Log for 2838927 ===
+Started at: Mi 29. Okt 13:17:51 CET 2025
+
+[2025-10-29 13:17:51] START: Building image for 2838927
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 312B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.20kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/2838927/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","awesome-aws"]
+#7 1.993 Collecting awesome-aws
+#7 2.130   Downloading awesome-aws-0.1.0.tar.gz (6.6 kB)
+#7 2.153   Preparing metadata (setup.py): started
+#7 2.528   Preparing metadata (setup.py): finished with status 'done'
+#7 2.571 Collecting click>=5.1 (from awesome-aws)
+#7 2.580   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#7 2.822 Collecting githubcli>=0.1.0 (from awesome-aws)
+#7 2.931   Downloading githubcli-0.1.6.tar.gz (90 kB)
+#7 2.965      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.6/90.6 kB 2.5 MB/s eta 0:00:00
+#7 2.976   Preparing metadata (setup.py): started
+#7 3.090   Preparing metadata (setup.py): finished with status 'done'
+#7 3.123 Collecting colorama>=0.3.3 (from awesome-aws)
+#7 3.131   Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+#7 3.172 Collecting docopt>=0.6.2 (from githubcli>=0.1.0->awesome-aws)
+#7 3.180   Downloading docopt-0.6.2.tar.gz (25 kB)
+#7 3.195   Preparing metadata (setup.py): started
+#7 3.302   Preparing metadata (setup.py): finished with status 'done'
+#7 3.329 Collecting tabulate>=0.7.5 (from githubcli>=0.1.0->awesome-aws)
+#7 3.338   Downloading tabulate-0.9.0-py3-none-any.whl.metadata (34 kB)
+#7 3.535 Collecting Pillow>=3.0.0 (from githubcli>=0.1.0->awesome-aws)
+#7 3.544   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#7 3.598 Collecting requests>=2.0 (from githubcli>=0.1.0->awesome-aws)
+#7 3.606   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 3.650 Collecting uritemplate.py>=0.2.0 (from githubcli>=0.1.0->awesome-aws)
+#7 3.659   Downloading uritemplate.py-3.0.2-py2.py3-none-any.whl.metadata (4.3 kB)
+#7 3.799 Collecting charset_normalizer<4,>=2 (from requests>=2.0->githubcli>=0.1.0->awesome-aws)
+#7 3.807   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 3.852 Collecting idna<4,>=2.5 (from requests>=2.0->githubcli>=0.1.0->awesome-aws)
+#7 3.862   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 3.931 Collecting urllib3<3,>=1.21.1 (from requests>=2.0->githubcli>=0.1.0->awesome-aws)
+#7 3.943   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 3.991 Collecting certifi>=2017.4.17 (from requests>=2.0->githubcli>=0.1.0->awesome-aws)
+#7 3.999   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 4.044 Collecting uritemplate>=2.0 (from uritemplate.py>=0.2.0->githubcli>=0.1.0->awesome-aws)
+#7 4.052   Downloading uritemplate-4.2.0-py3-none-any.whl.metadata (2.6 kB)
+#7 4.088 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#7 4.109    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 5.2 MB/s eta 0:00:00
+#7 4.117 Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+#7 4.137 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#7 4.399    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 27.0 MB/s eta 0:00:00
+#7 4.407 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 4.419    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 5.7 MB/s eta 0:00:00
+#7 4.428 Downloading tabulate-0.9.0-py3-none-any.whl (35 kB)
+#7 4.446 Downloading uritemplate.py-3.0.2-py2.py3-none-any.whl (4.9 kB)
+#7 4.464 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 4.479    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 11.3 MB/s eta 0:00:00
+#7 4.488 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 4.503    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.4 MB/s eta 0:00:00
+#7 4.511 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 4.525    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.0 MB/s eta 0:00:00
+#7 4.533 Downloading uritemplate-4.2.0-py3-none-any.whl (11 kB)
+#7 4.550 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 4.565    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.2 MB/s eta 0:00:00
+#7 4.589 Building wheels for collected packages: awesome-aws, githubcli, docopt
+#7 4.590   Building wheel for awesome-aws (setup.py): started
+#7 4.751   Building wheel for awesome-aws (setup.py): finished with status 'done'
+#7 4.751   Created wheel for awesome-aws: filename=awesome_aws-0.1.0-py3-none-any.whl size=10928 sha256=22254954da909d146cba9cf657318af5b961274d822f30cb7645a812bf92a8d5
+#7 4.752   Stored in directory: /root/.cache/pip/wheels/e2/b1/81/6cff8c09448fc760f5ec36b6902beed8f49bc9644f30e02d9f
+#7 4.753   Building wheel for githubcli (setup.py): started
+#7 4.913   Building wheel for githubcli (setup.py): finished with status 'done'
+#7 4.914   Created wheel for githubcli: filename=githubcli-0.1.6-py3-none-any.whl size=123358 sha256=626a60d1ee1eacb7351cd0a2042413316d041104c57f63f5810a727a49012fea
+#7 4.914   Stored in directory: /root/.cache/pip/wheels/99/89/b5/683e30b69b4db7de05ec4d6d4ab985d4241dfc864a39ee496d
+#7 4.916   Building wheel for docopt (setup.py): started
+#7 5.071   Building wheel for docopt (setup.py): finished with status 'done'
+#7 5.071   Created wheel for docopt: filename=docopt-0.6.2-py2.py3-none-any.whl size=13781 sha256=b68cd069306e0fe95ffaf701d48f901415b9cab8a0d2990fea0ff4b50d32a6c8
+#7 5.071   Stored in directory: /root/.cache/pip/wheels/1a/b0/8c/4b75c4116c31f83c8f9f047231251e13cc74481cca4a78a9ce
+#7 5.073 Successfully built awesome-aws githubcli docopt
+#7 5.134 Installing collected packages: docopt, urllib3, uritemplate, tabulate, Pillow, idna, colorama, click, charset_normalizer, certifi, uritemplate.py, requests, githubcli, awesome-aws
+#7 5.829 Successfully installed Pillow-12.0.0 awesome-aws-0.1.0 certifi-2025.10.5 charset_normalizer-3.4.4 click-8.3.0 colorama-0.4.6 docopt-0.6.2 githubcli-0.1.6 idna-3.11 requests-2.32.5 tabulate-0.9.0 uritemplate-4.2.0 uritemplate.py-3.0.2 urllib3-2.5.0
+#7 5.829 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.919 
+#7 5.919 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.919 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.3s
+
+#8 [4/7] RUN ["pip","install","tw2.protovis.core"]
+#8 0.713 Collecting tw2.protovis.core
+#8 0.844   Downloading tw2.protovis.core-0.2.0.tar.gz (161 kB)
+#8 0.887      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 161.9/161.9 kB 3.8 MB/s eta 0:00:00
+#8 0.897   Preparing metadata (setup.py): started
+#8 1.018   Preparing metadata (setup.py): finished with status 'done'
+#8 1.153 Collecting tw2.core>=2.0.6 (from tw2.protovis.core)
+#8 1.262   Downloading tw2.core-2.3.0.tar.gz (235 kB)
+#8 1.283      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 235.9/235.9 kB 13.3 MB/s eta 0:00:00
+#8 1.306   Preparing metadata (setup.py): started
+#8 1.466   Preparing metadata (setup.py): finished with status 'done'
+#8 1.507 Collecting mako (from tw2.protovis.core)
+#8 1.515   Downloading mako-1.3.10-py3-none-any.whl.metadata (2.9 kB)
+#8 1.580 Collecting WebOb>=0.9.7 (from tw2.core>=2.0.6->tw2.protovis.core)
+#8 1.589   Downloading WebOb-1.8.9-py2.py3-none-any.whl.metadata (11 kB)
+#8 1.730 Collecting PasteDeploy (from tw2.core>=2.0.6->tw2.protovis.core)
+#8 1.739   Downloading PasteDeploy-3.1.0-py3-none-any.whl.metadata (2.7 kB)
+#8 1.873 Collecting speaklater (from tw2.core>=2.0.6->tw2.protovis.core)
+#8 1.882   Downloading speaklater-1.3.tar.gz (3.6 kB)
+#8 1.896   Preparing metadata (setup.py): started
+#8 2.001   Preparing metadata (setup.py): finished with status 'done'
+#8 2.035 Collecting decorator (from tw2.core>=2.0.6->tw2.protovis.core)
+#8 2.043   Downloading decorator-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+#8 2.128 Collecting markupsafe (from tw2.core>=2.0.6->tw2.protovis.core)
+#8 2.137   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#8 2.180 Collecting six (from tw2.core>=2.0.6->tw2.protovis.core)
+#8 2.187   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 2.220 Downloading mako-1.3.10-py3-none-any.whl (78 kB)
+#8 2.234    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 5.8 MB/s eta 0:00:00
+#8 2.243 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#8 2.263 Downloading WebOb-1.8.9-py2.py3-none-any.whl (115 kB)
+#8 2.281    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 115.4/115.4 kB 6.5 MB/s eta 0:00:00
+#8 2.289 Downloading decorator-5.2.1-py3-none-any.whl (9.2 kB)
+#8 2.313 Downloading PasteDeploy-3.1.0-py3-none-any.whl (16 kB)
+#8 2.335 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 2.351 Building wheels for collected packages: tw2.protovis.core, tw2.core, speaklater
+#8 2.355   Building wheel for tw2.protovis.core (setup.py): started
+#8 2.517   Building wheel for tw2.protovis.core (setup.py): finished with status 'done'
+#8 2.518   Created wheel for tw2.protovis.core: filename=tw2_protovis_core-0.2.0-py3-none-any.whl size=165695 sha256=e33adfed7393c55c0cd70d38d0f7627714ae34b36faa66dfd3a0714a9227264b
+#8 2.518   Stored in directory: /root/.cache/pip/wheels/68/8e/8c/093d074ac48b1eb970e8a0a0f21b7741fb08f79fb8d229c864
+#8 2.520   Building wheel for tw2.core (setup.py): started
+#8 2.719   Building wheel for tw2.core (setup.py): finished with status 'done'
+#8 2.719   Created wheel for tw2.core: filename=tw2_core-2.3.0-py3-none-any.whl size=80545 sha256=535ebb9f5397627f9a1db6198d13df430e7c50b30866ea250fd68584d947ea41
+#8 2.720   Stored in directory: /root/.cache/pip/wheels/df/a0/ad/26c8c07f4adac024c1c60725b57d48331bc1cba89364e851dc
+#8 2.722   Building wheel for speaklater (setup.py): started
+#8 2.860   Building wheel for speaklater (setup.py): finished with status 'done'
+#8 2.860   Created wheel for speaklater: filename=speaklater-1.3-py3-none-any.whl size=4768 sha256=fbaec6a7304ae1f5197e65b818d599d78da6e9085dc9c80f9e06598b702468b6
+#8 2.861   Stored in directory: /root/.cache/pip/wheels/2f/3e/1d/95916aaefbacc07d490cdeb8f197678fe81e18a3f2f8966cb8
+#8 2.862 Successfully built tw2.protovis.core tw2.core speaklater
+#8 2.956 Installing collected packages: speaklater, WebOb, six, PasteDeploy, markupsafe, decorator, tw2.core, mako, tw2.protovis.core
+#8 3.227 Successfully installed PasteDeploy-3.1.0 WebOb-1.8.9 decorator-5.2.1 mako-1.3.10 markupsafe-3.0.3 six-1.17.0 speaklater-1.3 tw2.core-2.3.0 tw2.protovis.core-0.2.0
+#8 3.227 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 3.232 
+#8 3.232 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.232 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.3s
+
+#9 [5/7] RUN ["pip","install","tw2.sqla"]
+#9 0.660 Collecting tw2.sqla
+#9 0.796   Downloading tw2.sqla-2.1.0.tar.gz (27 kB)
+#9 0.820   Preparing metadata (setup.py): started
+#9 0.948   Preparing metadata (setup.py): finished with status 'done'
+#9 1.092 Collecting tw2.forms>=2.0b4 (from tw2.sqla)
+#9 1.201   Downloading tw2.forms-2.2.6.tar.gz (83 kB)
+#9 1.232      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.2/83.2 kB 2.5 MB/s eta 0:00:00
+#9 1.252   Preparing metadata (setup.py): started
+#9 1.380   Preparing metadata (setup.py): finished with status 'done'
+#9 1.511 Collecting tw2.dynforms (from tw2.sqla)
+#9 1.620   Downloading tw2.dynforms-2.0.1.tar.gz (66 kB)
+#9 1.633      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.3/66.3 kB 5.1 MB/s eta 0:00:00
+#9 1.646   Preparing metadata (setup.py): started
+#9 1.763   Preparing metadata (setup.py): finished with status 'done'
+#9 2.062 Collecting sqlalchemy>=0.7 (from tw2.sqla)
+#9 2.074   Downloading sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.5 kB)
+#9 2.121 Collecting zope.sqlalchemy>=0.4 (from tw2.sqla)
+#9 2.130   Downloading zope_sqlalchemy-4.0-py3-none-any.whl.metadata (19 kB)
+#9 2.305 Collecting greenlet>=1 (from sqlalchemy>=0.7->tw2.sqla)
+#9 2.315   Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+#9 2.369 Collecting typing-extensions>=4.6.0 (from sqlalchemy>=0.7->tw2.sqla)
+#9 2.377   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#9 2.397 Requirement already satisfied: tw2.core>=2.1.4 in /usr/local/lib/python3.11/site-packages (from tw2.forms>=2.0b4->tw2.sqla) (2.3.0)
+#9 2.398 Requirement already satisfied: six in /usr/local/lib/python3.11/site-packages (from tw2.forms>=2.0b4->tw2.sqla) (1.17.0)
+#9 2.439 Collecting packaging (from zope.sqlalchemy>=0.4->tw2.sqla)
+#9 2.447   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#9 2.469 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from zope.sqlalchemy>=0.4->tw2.sqla) (79.0.1)
+#9 2.581 Collecting transaction>=1.6.0 (from zope.sqlalchemy>=0.4->tw2.sqla)
+#9 2.591   Downloading transaction-5.0-py3-none-any.whl.metadata (14 kB)
+#9 2.727 Collecting zope.interface>=3.6.0 (from zope.sqlalchemy>=0.4->tw2.sqla)
+#9 2.736   Downloading zope_interface-8.0.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (44 kB)
+#9 2.747      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.9/44.9 kB 3.6 MB/s eta 0:00:00
+#9 2.878 Collecting Genshi (from tw2.dynforms->tw2.sqla)
+#9 2.887   Downloading Genshi-0.7.9-py3-none-any.whl.metadata (1.5 kB)
+#9 2.926 Requirement already satisfied: WebOb>=0.9.7 in /usr/local/lib/python3.11/site-packages (from tw2.core>=2.1.4->tw2.forms>=2.0b4->tw2.sqla) (1.8.9)
+#9 2.926 Requirement already satisfied: PasteDeploy in /usr/local/lib/python3.11/site-packages (from tw2.core>=2.1.4->tw2.forms>=2.0b4->tw2.sqla) (3.1.0)
+#9 2.927 Requirement already satisfied: speaklater in /usr/local/lib/python3.11/site-packages (from tw2.core>=2.1.4->tw2.forms>=2.0b4->tw2.sqla) (1.3)
+#9 2.928 Requirement already satisfied: decorator in /usr/local/lib/python3.11/site-packages (from tw2.core>=2.1.4->tw2.forms>=2.0b4->tw2.sqla) (5.2.1)
+#9 2.929 Requirement already satisfied: markupsafe in /usr/local/lib/python3.11/site-packages (from tw2.core>=2.1.4->tw2.forms>=2.0b4->tw2.sqla) (3.0.3)
+#9 3.020 Downloading sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+#9 3.149    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 26.1 MB/s eta 0:00:00
+#9 3.158 Downloading zope_sqlalchemy-4.0-py3-none-any.whl (22 kB)
+#9 3.175 Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (587 kB)
+#9 3.204    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 587.7/587.7 kB 21.0 MB/s eta 0:00:00
+#9 3.213 Downloading transaction-5.0-py3-none-any.whl (46 kB)
+#9 3.233    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.3/46.3 kB 1.9 MB/s eta 0:00:00
+#9 3.241 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#9 3.251    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.8 MB/s eta 0:00:00
+#9 3.261 Downloading zope_interface-8.0.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (259 kB)
+#9 3.280    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 259.8/259.8 kB 14.0 MB/s eta 0:00:00
+#9 3.290 Downloading Genshi-0.7.9-py3-none-any.whl (177 kB)
+#9 3.306    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 177.8/177.8 kB 11.8 MB/s eta 0:00:00
+#9 3.314 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#9 3.325    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.4 MB/s eta 0:00:00
+#9 3.342 Building wheels for collected packages: tw2.sqla, tw2.forms, tw2.dynforms
+#9 3.347   Building wheel for tw2.sqla (setup.py): started
+#9 3.500   Building wheel for tw2.sqla (setup.py): finished with status 'done'
+#9 3.501   Created wheel for tw2.sqla: filename=tw2_sqla-2.1.0-py3-none-any.whl size=14763 sha256=cb921732c26d8d6156394ccc845f25086dddff9224a60c03fef0cd0da5b9b750
+#9 3.501   Stored in directory: /root/.cache/pip/wheels/35/46/0a/922a21ee2e5246e7594f1a66886e01d8f963377c424aafcd9c
+#9 3.503   Building wheel for tw2.forms (setup.py): started
+#9 3.722   Building wheel for tw2.forms (setup.py): finished with status 'done'
+#9 3.723   Created wheel for tw2.forms: filename=tw2_forms-2.2.6-py3-none-any.whl size=156280 sha256=60423de2978fa8f5f94b381f05ff6c2a8cc642f55d557419be52d42af802603b
+#9 3.723   Stored in directory: /root/.cache/pip/wheels/f9/ed/01/c4f313332a75cb298aa3065926e8725f0ed1e8177fa199a603
+#9 3.726   Building wheel for tw2.dynforms (setup.py): started
+#9 3.912   Building wheel for tw2.dynforms (setup.py): finished with status 'done'
+#9 3.912   Created wheel for tw2.dynforms: filename=tw2_dynforms-2.0.1-py3-none-any.whl size=124047 sha256=b92b54a8fdf9b4aa5c8f19c1a47c92aa4270c50a89f9b709fe04b91f864289b5
+#9 3.913   Stored in directory: /root/.cache/pip/wheels/e0/28/72/93bee441a5cc3880373d74d9b2c3045cecb8cd614e7d948541
+#9 3.914 Successfully built tw2.sqla tw2.forms tw2.dynforms
+#9 4.045 Installing collected packages: zope.interface, typing-extensions, packaging, greenlet, Genshi, tw2.forms, transaction, sqlalchemy, zope.sqlalchemy, tw2.dynforms, tw2.sqla
+#9 5.240 Successfully installed Genshi-0.7.9 greenlet-3.2.4 packaging-25.0 sqlalchemy-2.0.44 transaction-5.0 tw2.dynforms-2.0.1 tw2.forms-2.2.6 tw2.sqla-2.1.0 typing-extensions-4.15.0 zope.interface-8.0.1 zope.sqlalchemy-4.0
+#9 5.241 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 5.246 
+#9 5.246 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 5.246 [notice] To update, run: pip install --upgrade pip
+#9 DONE 5.5s
+
+#10 [6/7] RUN ["pip","install","tw2.forms"]
+#10 0.512 Requirement already satisfied: tw2.forms in /usr/local/lib/python3.11/site-packages (2.2.6)
+#10 0.523 Requirement already satisfied: tw2.core>=2.1.4 in /usr/local/lib/python3.11/site-packages (from tw2.forms) (2.3.0)
+#10 0.523 Requirement already satisfied: six in /usr/local/lib/python3.11/site-packages (from tw2.forms) (1.17.0)
+#10 0.536 Requirement already satisfied: WebOb>=0.9.7 in /usr/local/lib/python3.11/site-packages (from tw2.core>=2.1.4->tw2.forms) (1.8.9)
+#10 0.537 Requirement already satisfied: PasteDeploy in /usr/local/lib/python3.11/site-packages (from tw2.core>=2.1.4->tw2.forms) (3.1.0)
+#10 0.538 Requirement already satisfied: speaklater in /usr/local/lib/python3.11/site-packages (from tw2.core>=2.1.4->tw2.forms) (1.3)
+#10 0.539 Requirement already satisfied: decorator in /usr/local/lib/python3.11/site-packages (from tw2.core>=2.1.4->tw2.forms) (5.2.1)
+#10 0.539 Requirement already satisfied: markupsafe in /usr/local/lib/python3.11/site-packages (from tw2.core>=2.1.4->tw2.forms) (3.0.3)
+#10 0.674 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.679 
+#10 0.679 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.679 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.8s
+
+#11 [7/7] RUN ["pip","install","tw2.core"]
+#11 0.451 Requirement already satisfied: tw2.core in /usr/local/lib/python3.11/site-packages (2.3.0)
+#11 0.464 Requirement already satisfied: WebOb>=0.9.7 in /usr/local/lib/python3.11/site-packages (from tw2.core) (1.8.9)
+#11 0.465 Requirement already satisfied: PasteDeploy in /usr/local/lib/python3.11/site-packages (from tw2.core) (3.1.0)
+#11 0.466 Requirement already satisfied: speaklater in /usr/local/lib/python3.11/site-packages (from tw2.core) (1.3)
+#11 0.466 Requirement already satisfied: decorator in /usr/local/lib/python3.11/site-packages (from tw2.core) (5.2.1)
+#11 0.467 Requirement already satisfied: markupsafe in /usr/local/lib/python3.11/site-packages (from tw2.core) (3.0.3)
+#11 0.468 Requirement already satisfied: six in /usr/local/lib/python3.11/site-packages (from tw2.core) (1.17.0)
+#11 0.598 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.603 
+#11 0.603 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.603 [notice] To update, run: pip install --upgrade pip
+#11 DONE 0.7s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.4s done
+#12 writing image sha256:a18e68f4a7e8f1bbfb07fa747c0568a23562554850f81c5dbb57405655332bba done
+#12 naming to docker.io/library/test-image-2838927 done
+#12 DONE 0.4s
+
+View build details: docker-desktop://dashboard/build/default/default/ri5914xnwlni7xmde3k39tx3f
+[2025-10-29 13:18:09] SUCCESS: Build completed for 2838927

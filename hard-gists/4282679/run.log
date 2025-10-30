@@ -1,0 +1,21 @@
+=== Docker Run Log for 4282679 ===
+Started at: Mi 29. Okt 14:35:02 CET 2025
+
+[2025-10-29 14:35:19] START: Running container for 4282679
+[2025-10-29 14:35:19] SUCCESS: Container 5c5c8078efc7951d37f65063862acc200fc8aaf5a924ef2b4d2a53809d04d1ef started for 4282679
+=== Container logs for 4282679 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 576, in <module>
+    simulationWithDrug(100, 1000, 0.1, 0.05, {'guttagonol': False}, 0.005, 10)
+  File "/snippet.py", line 563, in simulationWithDrug
+    virusResistList[i] += tp.getResistPop('guttagonol')
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 460, in getResistPop
+    if not(virus.isResistantTo(drug)):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 297, in isResistantTo
+    if self.getResistances().has_key(drug):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'has_key'
+=== End of logs for 4282679 ===
+[2025-10-29 14:35:22] INFO: Container 5c5c8078efc7951d37f65063862acc200fc8aaf5a924ef2b4d2a53809d04d1ef has stopped

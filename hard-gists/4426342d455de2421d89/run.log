@@ -1,0 +1,30 @@
+=== Docker Run Log for 4426342d455de2421d89 ===
+Started at: Mi 29. Okt 14:38:59 CET 2025
+
+[2025-10-29 14:39:04] START: Running container for 4426342d455de2421d89
+[2025-10-29 14:39:05] SUCCESS: Container 9162da52d419bb3d242cd95645e5713d73acf7db6de63d9b7d20eba0d8e0e654 started for 4426342d455de2421d89
+=== Container logs for 4426342d455de2421d89 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 9, in <module>
+    resp = urllib.request.urlopen(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+=== End of logs for 4426342d455de2421d89 ===
+[2025-10-29 14:39:07] INFO: Container 9162da52d419bb3d242cd95645e5713d73acf7db6de63d9b7d20eba0d8e0e654 has stopped

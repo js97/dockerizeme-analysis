@@ -1,0 +1,99 @@
+=== Docker Build Log for 1727204 ===
+Started at: Mi 29. Okt 12:26:00 CET 2025
+
+[2025-10-29 12:26:00] START: Building image for 1727204
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 236B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.30kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/1727204/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","Django"]
+#7 1.988 Collecting Django
+#7 2.029   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.079 Collecting asgiref>=3.8.1 (from Django)
+#7 2.087   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.130 Collecting sqlparse>=0.3.1 (from Django)
+#7 2.139   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.164 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 2.490    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 25.6 MB/s eta 0:00:00
+#7 2.498 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 2.516 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 2.528    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.3 MB/s eta 0:00:00
+#7 2.608 Installing collected packages: sqlparse, asgiref, Django
+#7 4.017 Successfully installed Django-5.2.7 asgiref-3.10.0 sqlparse-0.5.3
+#7 4.017 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.109 
+#7 4.109 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.109 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.4s
+
+#8 [4/5] RUN ["pip","install","django-haystack"]
+#8 0.512 Collecting django-haystack
+#8 0.546   Downloading django_haystack-3.3.0.tar.gz (467 kB)
+#8 0.588      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 467.3/467.3 kB 11.4 MB/s eta 0:00:00
+#8 0.637   Installing build dependencies: started
+#8 2.296   Installing build dependencies: finished with status 'done'
+#8 2.297   Getting requirements to build wheel: started
+#8 2.605   Getting requirements to build wheel: finished with status 'done'
+#8 2.606   Preparing metadata (pyproject.toml): started
+#8 2.861   Preparing metadata (pyproject.toml): finished with status 'done'
+#8 2.867 Requirement already satisfied: Django>=3.2 in /usr/local/lib/python3.11/site-packages (from django-haystack) (5.2.7)
+#8 2.897 Collecting packaging (from django-haystack)
+#8 2.899   Using cached packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 2.903 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django>=3.2->django-haystack) (3.10.0)
+#8 2.904 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django>=3.2->django-haystack) (0.5.3)
+#8 2.910 Using cached packaging-25.0-py3-none-any.whl (66 kB)
+#8 2.913 Building wheels for collected packages: django-haystack
+#8 2.914   Building wheel for django-haystack (pyproject.toml): started
+#8 3.212   Building wheel for django-haystack (pyproject.toml): finished with status 'done'
+#8 3.213   Created wheel for django-haystack: filename=django_haystack-3.3.0-py3-none-any.whl size=141850 sha256=3543bf2b9a97dc7ff2c0c55791344dba2aff98fb1206c7c7b862a1797bd1ff0c
+#8 3.213   Stored in directory: /root/.cache/pip/wheels/e2/d7/58/9df2aac1855b0d81746aa6034c0df8da1b768d687f13785f69
+#8 3.215 Successfully built django-haystack
+#8 3.258 Installing collected packages: packaging, django-haystack
+#8 3.356 Successfully installed django-haystack-3.3.0 packaging-25.0
+#8 3.357 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 3.362 
+#8 3.362 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.362 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.5s
+
+#9 [5/5] RUN ["pip","install","Whoosh"]
+#9 0.534 Collecting Whoosh
+#9 0.569   Downloading Whoosh-2.7.4-py2.py3-none-any.whl.metadata (3.1 kB)
+#9 0.593 Downloading Whoosh-2.7.4-py2.py3-none-any.whl (468 kB)
+#9 0.638    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 468.8/468.8 kB 10.9 MB/s eta 0:00:00
+#9 0.684 Installing collected packages: Whoosh
+#9 0.904 Successfully installed Whoosh-2.7.4
+#9 0.905 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.910 
+#9 0.910 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.910 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.0s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.6s done
+#10 writing image sha256:04ee69c9cc58e1578b9865cddecfa6dd2051f08898b3992569cb90e924968802 done
+#10 naming to docker.io/library/test-image-1727204 done
+#10 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/default/default/75rajp0xy2jizv8lzn71t06jg
+[2025-10-29 12:26:10] SUCCESS: Build completed for 1727204

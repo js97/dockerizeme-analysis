@@ -1,0 +1,21 @@
+=== Docker Run Log for db5ec4ce7c1dbaae4707 ===
+Started at: Mi 29. Okt 20:31:31 CET 2025
+
+[2025-10-29 20:31:44] START: Running container for db5ec4ce7c1dbaae4707
+[2025-10-29 20:31:44] SUCCESS: Container dd19619b78c57ff5c490540ba8eefd7c2289cd69e2e84beb2fe1e875f54ee2c8 started for db5ec4ce7c1dbaae4707
+=== Container logs for db5ec4ce7c1dbaae4707 ===
+
+Traceback (most recent call last):
+        PIP package scapy-python3 used to provide scapy3k, which was a fork from scapy implementing python3 compatibility since 2016. This package was included in some of the Linux distros under name of python3-scapy. Starting from scapy version 2.4 (released in March, 2018) mainstream scapy supports python3. To reduce any confusion scapy3k was renamed to kamene. 
+  File "/snippet.py", line 5, in <module>
+    from scapy.all import *
+You should use either pip package kamene for scapy3k (see http://github.com/phaethon/kamene for differences in use) or mainstream scapy (pip package scapy, http://github.com/secdev/scapy).  
+  File "/usr/local/lib/python3.11/site-packages/scapy/all.py", line 5, in <module>
+
+    raise Exception(msg)
+Exception: 
+        PIP package scapy-python3 used to provide scapy3k, which was a fork from scapy implementing python3 compatibility since 2016. This package was included in some of the Linux distros under name of python3-scapy. Starting from scapy version 2.4 (released in March, 2018) mainstream scapy supports python3. To reduce any confusion scapy3k was renamed to kamene. 
+You should use either pip package kamene for scapy3k (see http://github.com/phaethon/kamene for differences in use) or mainstream scapy (pip package scapy, http://github.com/secdev/scapy).  
+
+=== End of logs for db5ec4ce7c1dbaae4707 ===
+[2025-10-29 20:31:46] INFO: Container dd19619b78c57ff5c490540ba8eefd7c2289cd69e2e84beb2fe1e875f54ee2c8 has stopped

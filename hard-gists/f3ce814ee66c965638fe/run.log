@@ -1,0 +1,12 @@
+=== Docker Run Log for f3ce814ee66c965638fe ===
+Started at: Mi 29. Okt 21:26:02 CET 2025
+
+[2025-10-29 21:26:02] START: Running container for f3ce814ee66c965638fe
+[2025-10-29 21:26:02] SUCCESS: Container 05fcee9071a052ee10789491b068069f62f5095008f96600a6ae0ae4857f42a0 started for f3ce814ee66c965638fe
+=== Container logs for f3ce814ee66c965638fe ===
+  File "/snippet.py", line 47
+    print "Scanning segment " + segment_name + " (start address: " + str(segment_start_address) + ", end address: " + str(segment_end_address) + ")"
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for f3ce814ee66c965638fe ===
+[2025-10-29 21:26:04] INFO: Container 05fcee9071a052ee10789491b068069f62f5095008f96600a6ae0ae4857f42a0 has stopped

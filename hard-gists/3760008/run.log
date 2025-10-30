@@ -1,0 +1,12 @@
+=== Docker Run Log for 3760008 ===
+Started at: Mi 29. Okt 13:59:14 CET 2025
+
+[2025-10-29 13:59:14] START: Running container for 3760008
+[2025-10-29 13:59:14] SUCCESS: Container 8b63574ee155a3baf430a13e2f9ae8492357bd50d5735c8a336b0478f16d9e5f started for 3760008
+=== Container logs for 3760008 ===
+  File "/snippet.py", line 39
+    print 'Creating mongo test database ' + self.mongodb_name
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 3760008 ===
+[2025-10-29 13:59:16] INFO: Container 8b63574ee155a3baf430a13e2f9ae8492357bd50d5735c8a336b0478f16d9e5f has stopped

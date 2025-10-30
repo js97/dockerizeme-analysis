@@ -1,0 +1,86 @@
+=== Docker Build Log for 5eda4214788429e9d09c060cca10971f ===
+Started at: Mi 29. Okt 16:16:29 CET 2025
+
+[2025-10-29 16:16:29] START: Building image for 5eda4214788429e9d09c060cca10971f
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 267B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.24kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/5eda4214788429e9d09c060cca10971f/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","paho-mqtt"]
+#7 2.471 Collecting paho-mqtt
+#7 2.511   Downloading paho_mqtt-2.1.0-py3-none-any.whl.metadata (23 kB)
+#7 2.546 Downloading paho_mqtt-2.1.0-py3-none-any.whl (67 kB)
+#7 2.574    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.2/67.2 kB 2.3 MB/s eta 0:00:00
+#7 2.618 Installing collected packages: paho-mqtt
+#7 2.664 Successfully installed paho-mqtt-2.1.0
+#7 2.664 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.772 
+#7 2.772 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.772 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.9s
+
+#8 [4/5] RUN ["pip","install","RPi.GPIO"]
+#8 0.624 Collecting RPi.GPIO
+#8 0.664   Downloading RPi.GPIO-0.7.1.tar.gz (29 kB)
+#8 0.687   Preparing metadata (setup.py): started
+#8 1.216   Preparing metadata (setup.py): finished with status 'done'
+#8 1.218 Building wheels for collected packages: RPi.GPIO
+#8 1.219   Building wheel for RPi.GPIO (setup.py): started
+#8 2.312   Building wheel for RPi.GPIO (setup.py): finished with status 'done'
+#8 2.313   Created wheel for RPi.GPIO: filename=rpi_gpio-0.7.1-cp311-cp311-linux_x86_64.whl size=70836 sha256=8447d2c7cc0adb97e78f0867412d077dc5eedef320a80745949e5b4eadb1f83b
+#8 2.313   Stored in directory: /root/.cache/pip/wheels/58/9a/da/bc92ced3a63320f51bfb2eb461f0408a206acdcedfa57fbfbe
+#8 2.315 Successfully built RPi.GPIO
+#8 2.354 Installing collected packages: RPi.GPIO
+#8 2.369 Successfully installed RPi.GPIO-0.7.1
+#8 2.369 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.375 
+#8 2.375 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.375 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.5s
+
+#9 [5/5] RUN ["pip","install","paho-mqtt-client"]
+#9 0.700 ERROR: Could not find a version that satisfies the requirement paho-mqtt-client (from versions: 0.0.1.linux-x86_64)
+#9 0.700 ERROR: No matching distribution found for paho-mqtt-client
+#9 0.706 
+#9 0.706 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.706 [notice] To update, run: pip install --upgrade pip
+#9 ERROR: process "pip install paho-mqtt-client" did not complete successfully: exit code: 1
+------
+ > [5/5] RUN ["pip","install","paho-mqtt-client"]:
+0.700 ERROR: Could not find a version that satisfies the requirement paho-mqtt-client (from versions: 0.0.1.linux-x86_64)
+0.700 ERROR: No matching distribution found for paho-mqtt-client
+0.706 
+0.706 [notice] A new release of pip is available: 24.0 -> 25.3
+0.706 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:5
+--------------------
+   3 |     RUN ["pip","install","paho-mqtt"]
+   4 |     RUN ["pip","install","RPi.GPIO"]
+   5 | >>> RUN ["pip","install","paho-mqtt-client"]
+   6 |     CMD ["python3","/snippet.py"]
+   7 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install paho-mqtt-client" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/gp0rj5lsepdvr04d0hdqp0q6p
+[2025-10-29 16:16:36] ERROR: Build failed for 5eda4214788429e9d09c060cca10971f

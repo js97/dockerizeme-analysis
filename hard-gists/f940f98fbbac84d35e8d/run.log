@@ -1,0 +1,30 @@
+=== Docker Run Log for f940f98fbbac84d35e8d ===
+Started at: Mi 29. Okt 21:37:53 CET 2025
+
+[2025-10-29 21:38:19] START: Running container for f940f98fbbac84d35e8d
+[2025-10-29 21:38:19] SUCCESS: Container c3c395bc061bbe27aa9f8c6ab4d7dcde4744da34bb93f9d3fc23964681750df3 started for f940f98fbbac84d35e8d
+=== Container logs for f940f98fbbac84d35e8d ===
+Traceback (most recent call last):
+  File "/snippet.py", line 9, in <module>
+    from chainer import cuda, Function, FunctionSet, gradient_check, Variable, optimizers
+  File "/usr/local/lib/python3.11/site-packages/chainer/__init__.py", line 13, in <module>
+    from chainer import distributions  # NOQA
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/chainer/distributions/__init__.py", line 3, in <module>
+    from chainer.distributions.bernoulli import Bernoulli  # NOQA
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/chainer/distributions/bernoulli.py", line 7, in <module>
+    import chainer.distributions.utils
+  File "/usr/local/lib/python3.11/site-packages/chainer/distributions/utils.py", line 4, in <module>
+    from chainer.functions.array import where
+  File "/usr/local/lib/python3.11/site-packages/chainer/functions/__init__.py", line 25, in <module>
+    from chainer.functions.array.as_strided import as_strided  # NOQA
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/chainer/functions/array/as_strided.py", line 10, in <module>
+    index_dtype = {t().itemsize: t for t in np.sctypes['int']}
+                                            ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/numpy/__init__.py", line 781, in __getattr__
+    raise AttributeError(
+AttributeError: `np.sctypes` was removed in the NumPy 2.0 release. Access dtypes explicitly instead.
+=== End of logs for f940f98fbbac84d35e8d ===
+[2025-10-29 21:38:21] INFO: Container c3c395bc061bbe27aa9f8c6ab4d7dcde4744da34bb93f9d3fc23964681750df3 has stopped

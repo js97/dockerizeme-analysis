@@ -1,0 +1,97 @@
+=== Docker Build Log for 871567 ===
+Started at: Mi 29. Okt 17:55:38 CET 2025
+
+[2025-10-29 17:55:38] START: Building image for 871567
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 239B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.25kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/871567/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","dj.choices"]
+#7 1.959 Collecting dj.choices
+#7 1.993   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 2.011   Preparing metadata (setup.py): started
+#7 2.395   Preparing metadata (setup.py): finished with status 'done'
+#7 2.496 Collecting django (from dj.choices)
+#7 2.506   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.543 Collecting six (from dj.choices)
+#7 2.551   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.601 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.610   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.656 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.665   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.691 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.081    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 21.4 MB/s eta 0:00:00
+#7 3.091 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.110 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.129 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.140    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.5 MB/s eta 0:00:00
+#7 3.177 Building wheels for collected packages: dj.choices
+#7 3.177   Building wheel for dj.choices (setup.py): started
+#7 3.350   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.350   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=985614fd97fedc349e715826c1efa710777346124b75a9b3abe98b778726ff45
+#7 3.350   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.352 Successfully built dj.choices
+#7 3.399 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 4.883 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 4.883 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.977 
+#7 4.977 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.977 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.6s
+
+#8 [4/5] RUN ["pip","install","Django"]
+#8 0.491 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#8 0.495 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#8 0.496 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#8 0.535 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.539 
+#8 0.539 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.539 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.6s
+
+#9 [5/5] RUN ["pip","install","django-template"]
+#9 0.527 ERROR: Could not find a version that satisfies the requirement django-template (from versions: none)
+#9 0.527 ERROR: No matching distribution found for django-template
+#9 0.533 
+#9 0.533 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.533 [notice] To update, run: pip install --upgrade pip
+#9 ERROR: process "pip install django-template" did not complete successfully: exit code: 1
+------
+ > [5/5] RUN ["pip","install","django-template"]:
+0.527 ERROR: Could not find a version that satisfies the requirement django-template (from versions: none)
+0.527 ERROR: No matching distribution found for django-template
+0.533 
+0.533 [notice] A new release of pip is available: 24.0 -> 25.3
+0.533 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:5
+--------------------
+   3 |     RUN ["pip","install","dj.choices"]
+   4 |     RUN ["pip","install","Django"]
+   5 | >>> RUN ["pip","install","django-template"]
+   6 |     CMD ["python3","/snippet.py"]
+   7 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install django-template" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/ub7cd62lct0mf1krkqu16wjgx
+[2025-10-29 17:55:45] ERROR: Build failed for 871567

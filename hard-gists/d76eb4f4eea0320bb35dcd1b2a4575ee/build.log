@@ -1,0 +1,74 @@
+=== Docker Build Log for d76eb4f4eea0320bb35dcd1b2a4575ee ===
+Started at: Mi 29. Okt 20:28:04 CET 2025
+
+[2025-10-29 20:28:04] START: Building image for d76eb4f4eea0320bb35dcd1b2a4575ee
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.98kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 10.15kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/49] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/49] COPY hard-gists/d76eb4f4eea0320bb35dcd1b2a4575ee/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/49] RUN ["apt-get","update"]
+#7 0.275 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.275 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.288 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.298 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.622 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.622 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.232 Fetched 9833 kB in 1s (9956 kB/s)
+#7 1.232 Reading package lists...
+#7 DONE 1.9s
+
+#8 [ 4/49] RUN ["apt-get","install","-y","python-pip"]
+#8 0.211 Reading package lists...
+#8 0.635 Building dependency tree...
+#8 0.739 Reading state information...
+#8 0.756 Package python-pip is not available, but is referred to by another package.
+#8 0.756 This may mean that the package is missing, has been obsoleted, or
+#8 0.756 is only available from another source
+#8 0.756 However the following packages replace it:
+#8 0.756   python3-pip
+#8 0.756 
+#8 0.758 E: Package 'python-pip' has no installation candidate
+#8 ERROR: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+------
+ > [ 4/49] RUN ["apt-get","install","-y","python-pip"]:
+
+
+0.756 Package python-pip is not available, but is referred to by another package.
+0.756 This may mean that the package is missing, has been obsoleted, or
+0.756 is only available from another source
+0.756 However the following packages replace it:
+0.756   python3-pip
+0.756 
+0.758 E: Package 'python-pip' has no installation candidate
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/d76eb4f4eea0320bb35dcd1b2a4575ee/snippet.py /snippet.py
+   3 |     RUN ["apt-get","update"]
+   4 | >>> RUN ["apt-get","install","-y","python-pip"]
+   5 |     RUN ["apt-get","install","-y","python-dev"]
+   6 |     RUN ["apt-get","install","-y","git"]
+--------------------
+ERROR: failed to build: failed to solve: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/default/default/o8nvaxlnx47ykfm6nk5kutojz
+[2025-10-29 20:28:07] ERROR: Build failed for d76eb4f4eea0320bb35dcd1b2a4575ee

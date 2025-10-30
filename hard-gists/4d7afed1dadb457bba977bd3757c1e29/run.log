@@ -1,0 +1,248 @@
+=== Docker Run Log for 4d7afed1dadb457bba977bd3757c1e29 ===
+Started at: Mi 29. Okt 15:12:11 CET 2025
+
+[2025-10-29 15:12:21] START: Running container for 4d7afed1dadb457bba977bd3757c1e29
+[2025-10-29 15:12:21] SUCCESS: Container 027eee053762000367a5c7aa80a2dfa80020111005d7006cdf538a0d7e30c1bd started for 4d7afed1dadb457bba977bd3757c1e29
+=== Container logs for 4d7afed1dadb457bba977bd3757c1e29 ===
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1181, in get_from_telegram_server
+    result = self.getUpdates(offset=offset,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1000, in getUpdates
+    return self._api_request('getUpdates', _rectify(p))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 491, in _api_request
+    return api.request((self._token, method, params, files), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 155, in request
+    return _parse(r)
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 150, in _parse
+    raise exception.TelegramError(description, error_code, data)
+telepot.exception.TelegramError: ('Not Found', 404, {'ok': False, 'error_code': 404, 'description': 'Not Found'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1181, in get_from_telegram_server
+    result = self.getUpdates(offset=offset,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1000, in getUpdates
+    return self._api_request('getUpdates', _rectify(p))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 491, in _api_request
+    return api.request((self._token, method, params, files), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 155, in request
+    return _parse(r)
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 150, in _parse
+    raise exception.TelegramError(description, error_code, data)
+telepot.exception.TelegramError: ('Not Found', 404, {'ok': False, 'error_code': 404, 'description': 'Not Found'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1181, in get_from_telegram_server
+    result = self.getUpdates(offset=offset,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1000, in getUpdates
+    return self._api_request('getUpdates', _rectify(p))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 491, in _api_request
+    return api.request((self._token, method, params, files), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 155, in request
+    return _parse(r)
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 150, in _parse
+    raise exception.TelegramError(description, error_code, data)
+telepot.exception.TelegramError: ('Not Found', 404, {'ok': False, 'error_code': 404, 'description': 'Not Found'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1181, in get_from_telegram_server
+    result = self.getUpdates(offset=offset,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1000, in getUpdates
+    return self._api_request('getUpdates', _rectify(p))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 491, in _api_request
+    return api.request((self._token, method, params, files), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 155, in request
+    return _parse(r)
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 150, in _parse
+    raise exception.TelegramError(description, error_code, data)
+telepot.exception.TelegramError: ('Not Found', 404, {'ok': False, 'error_code': 404, 'description': 'Not Found'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1181, in get_from_telegram_server
+    result = self.getUpdates(offset=offset,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1000, in getUpdates
+    return self._api_request('getUpdates', _rectify(p))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 491, in _api_request
+    return api.request((self._token, method, params, files), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 155, in request
+    return _parse(r)
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 150, in _parse
+    raise exception.TelegramError(description, error_code, data)
+telepot.exception.TelegramError: ('Not Found', 404, {'ok': False, 'error_code': 404, 'description': 'Not Found'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1181, in get_from_telegram_server
+    result = self.getUpdates(offset=offset,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1000, in getUpdates
+    return self._api_request('getUpdates', _rectify(p))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 491, in _api_request
+    return api.request((self._token, method, params, files), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 155, in request
+    return _parse(r)
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 150, in _parse
+    raise exception.TelegramError(description, error_code, data)
+telepot.exception.TelegramError: ('Not Found', 404, {'ok': False, 'error_code': 404, 'description': 'Not Found'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1181, in get_from_telegram_server
+    result = self.getUpdates(offset=offset,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1000, in getUpdates
+    return self._api_request('getUpdates', _rectify(p))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 491, in _api_request
+    return api.request((self._token, method, params, files), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 155, in request
+    return _parse(r)
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 150, in _parse
+    raise exception.TelegramError(description, error_code, data)
+telepot.exception.TelegramError: ('Not Found', 404, {'ok': False, 'error_code': 404, 'description': 'Not Found'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1181, in get_from_telegram_server
+    result = self.getUpdates(offset=offset,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1000, in getUpdates
+    return self._api_request('getUpdates', _rectify(p))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 491, in _api_request
+    return api.request((self._token, method, params, files), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 155, in request
+    return _parse(r)
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 150, in _parse
+    raise exception.TelegramError(description, error_code, data)
+telepot.exception.TelegramError: ('Not Found', 404, {'ok': False, 'error_code': 404, 'description': 'Not Found'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1181, in get_from_telegram_server
+    result = self.getUpdates(offset=offset,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1000, in getUpdates
+    return self._api_request('getUpdates', _rectify(p))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 491, in _api_request
+    return api.request((self._token, method, params, files), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 155, in request
+    return _parse(r)
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 150, in _parse
+    raise exception.TelegramError(description, error_code, data)
+telepot.exception.TelegramError: ('Not Found', 404, {'ok': False, 'error_code': 404, 'description': 'Not Found'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1181, in get_from_telegram_server
+    result = self.getUpdates(offset=offset,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1000, in getUpdates
+    return self._api_request('getUpdates', _rectify(p))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 491, in _api_request
+    return api.request((self._token, method, params, files), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 155, in request
+    return _parse(r)
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 150, in _parse
+    raise exception.TelegramError(description, error_code, data)
+telepot.exception.TelegramError: ('Not Found', 404, {'ok': False, 'error_code': 404, 'description': 'Not Found'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1181, in get_from_telegram_server
+    result = self.getUpdates(offset=offset,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1000, in getUpdates
+    return self._api_request('getUpdates', _rectify(p))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 491, in _api_request
+    return api.request((self._token, method, params, files), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 155, in request
+    return _parse(r)
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 150, in _parse
+    raise exception.TelegramError(description, error_code, data)
+telepot.exception.TelegramError: ('Not Found', 404, {'ok': False, 'error_code': 404, 'description': 'Not Found'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1181, in get_from_telegram_server
+    result = self.getUpdates(offset=offset,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1000, in getUpdates
+    return self._api_request('getUpdates', _rectify(p))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 491, in _api_request
+    return api.request((self._token, method, params, files), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 155, in request
+    return _parse(r)
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 150, in _parse
+    raise exception.TelegramError(description, error_code, data)
+telepot.exception.TelegramError: ('Not Found', 404, {'ok': False, 'error_code': 404, 'description': 'Not Found'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1181, in get_from_telegram_server
+    result = self.getUpdates(offset=offset,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1000, in getUpdates
+    return self._api_request('getUpdates', _rectify(p))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 491, in _api_request
+    return api.request((self._token, method, params, files), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 155, in request
+    return _parse(r)
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 150, in _parse
+    raise exception.TelegramError(description, error_code, data)
+telepot.exception.TelegramError: ('Not Found', 404, {'ok': False, 'error_code': 404, 'description': 'Not Found'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1181, in get_from_telegram_server
+    result = self.getUpdates(offset=offset,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1000, in getUpdates
+    return self._api_request('getUpdates', _rectify(p))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 491, in _api_request
+    return api.request((self._token, method, params, files), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 155, in request
+    return _parse(r)
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 150, in _parse
+    raise exception.TelegramError(description, error_code, data)
+telepot.exception.TelegramError: ('Not Found', 404, {'ok': False, 'error_code': 404, 'description': 'Not Found'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1181, in get_from_telegram_server
+    result = self.getUpdates(offset=offset,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 1000, in getUpdates
+    return self._api_request('getUpdates', _rectify(p))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/__init__.py", line 491, in _api_request
+    return api.request((self._token, method, params, files), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 155, in request
+    return _parse(r)
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/telepot/api.py", line 150, in _parse
+    raise exception.TelegramError(description, error_code, data)
+telepot.exception.TelegramError: ('Not Found', 404, {'ok': False, 'error_code': 404, 'description': 'Not Found'})
+=== End of logs for 4d7afed1dadb457bba977bd3757c1e29 ===
+[2025-10-29 15:12:23] INFO: Container 027eee053762000367a5c7aa80a2dfa80020111005d7006cdf538a0d7e30c1bd has stopped

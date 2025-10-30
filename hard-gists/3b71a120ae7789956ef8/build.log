@@ -1,0 +1,109 @@
+=== Docker Build Log for 3b71a120ae7789956ef8 ===
+Started at: Mi 29. Okt 14:11:17 CET 2025
+
+[2025-10-29 14:11:17] START: Building image for 3b71a120ae7789956ef8
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 277B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.77kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/6] COPY hard-gists/3b71a120ae7789956ef8/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/6] RUN ["pip","install","python-pptx"]
+#7 1.958 Collecting python-pptx
+#7 2.008   Downloading python_pptx-1.0.2-py3-none-any.whl.metadata (2.5 kB)
+#7 2.314 Collecting Pillow>=3.3.2 (from python-pptx)
+#7 2.353   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#7 2.429 Collecting XlsxWriter>=0.5.7 (from python-pptx)
+#7 2.437   Downloading xlsxwriter-3.2.9-py3-none-any.whl.metadata (2.7 kB)
+#7 2.672 Collecting lxml>=3.1.0 (from python-pptx)
+#7 2.763   Downloading lxml-6.0.2-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.6 kB)
+#7 2.819 Collecting typing-extensions>=4.9.0 (from python-pptx)
+#7 2.827   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#7 2.970 Downloading python_pptx-1.0.2-py3-none-any.whl (472 kB)
+#7 3.046    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 472.8/472.8 kB 6.2 MB/s eta 0:00:00
+#7 3.166 Downloading lxml-6.0.2-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.2 MB)
+#7 3.954    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 6.6 MB/s eta 0:00:00
+#7 3.964 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#7 4.478    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 13.7 MB/s eta 0:00:00
+#7 4.488 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#7 4.500    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.3 MB/s eta 0:00:00
+#7 4.512 Downloading xlsxwriter-3.2.9-py3-none-any.whl (175 kB)
+#7 4.531    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 175.3/175.3 kB 9.5 MB/s eta 0:00:00
+#7 4.607 Installing collected packages: XlsxWriter, typing-extensions, Pillow, lxml, python-pptx
+#7 5.255 Successfully installed Pillow-12.0.0 XlsxWriter-3.2.9 lxml-6.0.2 python-pptx-1.0.2 typing-extensions-4.15.0
+#7 5.255 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.352 
+#7 5.352 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.352 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.7s
+
+#8 [4/6] RUN ["pip","install","xlrd"]
+#8 0.507 Collecting xlrd
+#8 0.545   Downloading xlrd-2.0.2-py2.py3-none-any.whl.metadata (3.5 kB)
+#8 0.572 Downloading xlrd-2.0.2-py2.py3-none-any.whl (96 kB)
+#8 0.596    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.6/96.6 kB 4.0 MB/s eta 0:00:00
+#8 0.646 Installing collected packages: xlrd
+#8 0.727 Successfully installed xlrd-2.0.2
+#8 0.727 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.732 
+#8 0.732 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.732 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.8s
+
+#9 [5/6] RUN ["pip","install","reportlab"]
+#9 0.615 Collecting reportlab
+#9 0.650   Downloading reportlab-4.4.4-py3-none-any.whl.metadata (1.7 kB)
+#9 0.671 Requirement already satisfied: pillow>=9.0.0 in /usr/local/lib/python3.11/site-packages (from reportlab) (12.0.0)
+#9 0.762 Collecting charset-normalizer (from reportlab)
+#9 0.772   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#9 0.810 Downloading reportlab-4.4.4-py3-none-any.whl (2.0 MB)
+#9 0.910    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 19.8 MB/s eta 0:00:00
+#9 0.919 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#9 0.937    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 8.6 MB/s eta 0:00:00
+#9 1.009 Installing collected packages: charset-normalizer, reportlab
+#9 1.459 Successfully installed charset-normalizer-3.4.4 reportlab-4.4.4
+#9 1.459 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.464 
+#9 1.464 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.464 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.6s
+
+#10 [6/6] RUN ["pip","install","PyPDF2"]
+#10 0.605 Collecting PyPDF2
+#10 0.795   Downloading pypdf2-3.0.1-py3-none-any.whl.metadata (6.8 kB)
+#10 0.879 Downloading pypdf2-3.0.1-py3-none-any.whl (232 kB)
+#10 0.976    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 232.6/232.6 kB 2.4 MB/s eta 0:00:00
+#10 1.037 Installing collected packages: PyPDF2
+#10 1.182 Successfully installed PyPDF2-3.0.1
+#10 1.183 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.187 
+#10 1.187 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.187 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.3s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 0.4s done
+#11 writing image sha256:c67846ea27651822fd6c47945f6208a672782adc3b2331f7a987d31f13d1d8f4 done
+#11 naming to docker.io/library/test-image-3b71a120ae7789956ef8 done
+#11 DONE 0.4s
+
+View build details: docker-desktop://dashboard/build/default/default/5b5r8jp4jh8ecou9vfp9xtb5m
+[2025-10-29 14:11:27] SUCCESS: Build completed for 3b71a120ae7789956ef8

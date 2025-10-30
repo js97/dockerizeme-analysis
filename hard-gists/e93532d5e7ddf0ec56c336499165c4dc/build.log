@@ -1,0 +1,159 @@
+=== Docker Build Log for e93532d5e7ddf0ec56c336499165c4dc ===
+Started at: Mi 29. Okt 20:47:56 CET 2025
+
+[2025-10-29 20:47:56] START: Building image for e93532d5e7ddf0ec56c336499165c4dc
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 268B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 6.17kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/e93532d5e7ddf0ec56c336499165c4dc/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","rdspgbadger"]
+#7 2.093 Collecting rdspgbadger
+#7 2.473   Downloading rdspgbadger-1.2.2.tar.gz (6.4 kB)
+#7 2.497   Preparing metadata (setup.py): started
+#7 2.872   Preparing metadata (setup.py): finished with status 'done'
+#7 3.336 Collecting boto3>=1.4.0 (from rdspgbadger)
+#7 3.345   Downloading boto3-1.40.61-py3-none-any.whl.metadata (6.6 kB)
+#7 3.873 Collecting botocore<1.41.0,>=1.40.61 (from boto3>=1.4.0->rdspgbadger)
+#7 3.889   Downloading botocore-1.40.61-py3-none-any.whl.metadata (5.7 kB)
+#7 3.940 Collecting jmespath<2.0.0,>=0.7.1 (from boto3>=1.4.0->rdspgbadger)
+#7 3.950   Downloading jmespath-1.0.1-py3-none-any.whl.metadata (7.6 kB)
+#7 3.993 Collecting s3transfer<0.15.0,>=0.14.0 (from boto3>=1.4.0->rdspgbadger)
+#7 4.003   Downloading s3transfer-0.14.0-py3-none-any.whl.metadata (1.7 kB)
+#7 4.047 Collecting python-dateutil<3.0.0,>=2.1 (from botocore<1.41.0,>=1.40.61->boto3>=1.4.0->rdspgbadger)
+#7 4.055   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#7 4.117 Collecting urllib3!=2.2.0,<3,>=1.25.4 (from botocore<1.41.0,>=1.40.61->boto3>=1.4.0->rdspgbadger)
+#7 4.125   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 4.306 Collecting six>=1.5 (from python-dateutil<3.0.0,>=2.1->botocore<1.41.0,>=1.40.61->boto3>=1.4.0->rdspgbadger)
+#7 4.317   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 4.344 Downloading boto3-1.40.61-py3-none-any.whl (139 kB)
+#7 4.375    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.3/139.3 kB 4.7 MB/s eta 0:00:00
+#7 4.384 Downloading botocore-1.40.61-py3-none-any.whl (14.1 MB)
+#7 5.318    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.1/14.1 MB 14.5 MB/s eta 0:00:00
+#7 5.336 Downloading jmespath-1.0.1-py3-none-any.whl (20 kB)
+#7 5.355 Downloading s3transfer-0.14.0-py3-none-any.whl (85 kB)
+#7 5.370    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.7/85.7 kB 5.7 MB/s eta 0:00:00
+#7 5.380 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#7 5.401    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 11.7 MB/s eta 0:00:00
+#7 5.411 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 5.427    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 8.7 MB/s eta 0:00:00
+#7 5.437 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 5.485 Building wheels for collected packages: rdspgbadger
+#7 5.486   Building wheel for rdspgbadger (setup.py): started
+#7 5.648   Building wheel for rdspgbadger (setup.py): finished with status 'done'
+#7 5.648   Created wheel for rdspgbadger: filename=rdspgbadger-1.2.2-py3-none-any.whl size=6912 sha256=4c422b2b58aa4a39af068c09ce4a2187fb95f447222564264c368173c6f3070c
+#7 5.648   Stored in directory: /root/.cache/pip/wheels/2e/6b/20/65b409313873a732f8dae174c3af470cbcde91afd2b0785256
+#7 5.650 Successfully built rdspgbadger
+#7 5.721 Installing collected packages: urllib3, six, jmespath, python-dateutil, botocore, s3transfer, boto3, rdspgbadger
+#7 6.363 Successfully installed boto3-1.40.61 botocore-1.40.61 jmespath-1.0.1 python-dateutil-2.9.0.post0 rdspgbadger-1.2.2 s3transfer-0.14.0 six-1.17.0 urllib3-2.5.0
+#7 6.364 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 6.455 
+#7 6.455 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 6.455 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.9s
+
+#8 [4/5] RUN ["pip","install","packages"]
+#8 0.665 Collecting packages
+#8 0.799   Downloading packages-0.1.1-py3-none-any.whl.metadata (731 bytes)
+#8 0.860 Collecting cached_property<2.0.0,>=1.5.1 (from packages)
+#8 0.872   Downloading cached_property-1.5.2-py2.py3-none-any.whl.metadata (11 kB)
+#8 0.933 Collecting click<8.0,>=7.0 (from packages)
+#8 0.943   Downloading click-7.1.2-py2.py3-none-any.whl.metadata (2.9 kB)
+#8 1.176 Collecting lxml<5.0.0,>=4.4.2 (from packages)
+#8 1.190   Downloading lxml-4.9.4-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (3.7 kB)
+#8 1.538 Collecting pymongo<4.0.0,>=3.10.0 (from packages)
+#8 1.647   Downloading pymongo-3.13.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.7 kB)
+#8 1.723 Collecting redis<4.0.0,>=3.3.11 (from packages)
+#8 1.738   Downloading redis-3.5.3-py2.py3-none-any.whl.metadata (36 kB)
+#8 1.809 Collecting requests<3.0.0,>=2.22.0 (from packages)
+#8 1.819   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#8 1.872 Collecting requests-cache<0.6.0,>=0.5.2 (from packages)
+#8 1.981   Downloading requests_cache-0.5.2-py2.py3-none-any.whl.metadata (6.2 kB)
+#8 2.064 Collecting tqdm<5.0.0,>=4.40.2 (from packages)
+#8 2.074   Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+#8 2.091      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.7/57.7 kB 3.0 MB/s eta 0:00:00
+#8 2.209 Collecting charset_normalizer<4,>=2 (from requests<3.0.0,>=2.22.0->packages)
+#8 2.223   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#8 2.271 Collecting idna<4,>=2.5 (from requests<3.0.0,>=2.22.0->packages)
+#8 2.283   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#8 2.300 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests<3.0.0,>=2.22.0->packages) (2.5.0)
+#8 2.333 Collecting certifi>=2017.4.17 (from requests<3.0.0,>=2.22.0->packages)
+#8 2.341   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#8 2.396 Downloading packages-0.1.1-py3-none-any.whl (9.7 kB)
+#8 2.416 Downloading cached_property-1.5.2-py2.py3-none-any.whl (7.6 kB)
+#8 2.442 Downloading click-7.1.2-py2.py3-none-any.whl (82 kB)
+#8 2.456    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 82.8/82.8 kB 5.9 MB/s eta 0:00:00
+#8 2.470 Downloading lxml-4.9.4-cp311-cp311-manylinux_2_28_x86_64.whl (7.9 MB)
+#8 2.925    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.9/7.9 MB 17.4 MB/s eta 0:00:00
+#8 2.934 Downloading pymongo-3.13.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (518 kB)
+#8 2.971    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 518.1/518.1 kB 14.8 MB/s eta 0:00:00
+#8 2.983 Downloading redis-3.5.3-py2.py3-none-any.whl (72 kB)
+#8 2.995    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.1/72.1 kB 6.0 MB/s eta 0:00:00
+#8 3.005 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#8 3.024    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.6 MB/s eta 0:00:00
+#8 3.033 Downloading requests_cache-0.5.2-py2.py3-none-any.whl (22 kB)
+#8 3.054 Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+#8 3.075    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 3.6 MB/s eta 0:00:00
+#8 3.085 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#8 3.106    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 7.5 MB/s eta 0:00:00
+#8 3.117 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#8 3.135    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 8.9 MB/s eta 0:00:00
+#8 3.144 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#8 3.157    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.5 MB/s eta 0:00:00
+#8 3.277 Installing collected packages: cached_property, tqdm, redis, pymongo, lxml, idna, click, charset_normalizer, certifi, requests, requests-cache, packages
+#8 3.899 Successfully installed cached_property-1.5.2 certifi-2025.10.5 charset_normalizer-3.4.4 click-7.1.2 idna-3.11 lxml-4.9.4 packages-0.1.1 pymongo-3.13.0 redis-3.5.3 requests-2.32.5 requests-cache-0.5.2 tqdm-4.67.1
+#8 3.900 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 3.905 
+#8 3.905 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.905 [notice] To update, run: pip install --upgrade pip
+#8 DONE 4.3s
+
+#9 [5/5] RUN ["pip","install","om-package-fynd"]
+#9 0.725 Collecting om-package-fynd
+#9 0.985   Downloading om-package-fynd-1.2.2.tar.gz (3.5 kB)
+#9 1.014   Preparing metadata (setup.py): started
+#9 1.132   Preparing metadata (setup.py): finished with status 'done'
+#9 1.163 Collecting peppercorn (from om-package-fynd)
+#9 1.173   Downloading peppercorn-0.6-py3-none-any.whl.metadata (3.4 kB)
+#9 1.202 Downloading peppercorn-0.6-py3-none-any.whl (4.8 kB)
+#9 1.241 Building wheels for collected packages: om-package-fynd
+#9 1.246   Building wheel for om-package-fynd (setup.py): started
+#9 1.427   Building wheel for om-package-fynd (setup.py): finished with status 'done'
+#9 1.428   Created wheel for om-package-fynd: filename=om_package_fynd-1.2.2-py2.py3-none-any.whl size=3059 sha256=d065a739964f1dee5b0848ea1cee3de23a6165344ff1eb215ff68330914b653a
+#9 1.428   Stored in directory: /root/.cache/pip/wheels/9b/c1/c3/82f7b5c024553734a654ccfedbcc2d8bb56d580b8fc6aa8f3f
+#9 1.430 Successfully built om-package-fynd
+#9 1.497 Installing collected packages: peppercorn, om-package-fynd
+#9 1.534 Successfully installed om-package-fynd-1.2.2 peppercorn-0.6
+#9 1.535 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.540 
+#9 1.540 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.540 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.6s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.4s done
+#10 writing image sha256:4aeb4c0ecd049e919137697127519dacf65fd36981f7dfd0c7cc5f858b5e99ff done
+#10 naming to docker.io/library/test-image-e93532d5e7ddf0ec56c336499165c4dc done
+#10 DONE 0.5s
+
+View build details: docker-desktop://dashboard/build/default/default/ww8h672mjjp1a3v2vwlqkhs8l
+[2025-10-29 20:48:10] SUCCESS: Build completed for e93532d5e7ddf0ec56c336499165c4dc

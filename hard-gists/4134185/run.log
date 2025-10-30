@@ -1,0 +1,14 @@
+=== Docker Run Log for 4134185 ===
+Started at: Mi 29. Okt 14:22:52 CET 2025
+
+[2025-10-29 14:23:05] START: Running container for 4134185
+[2025-10-29 14:23:05] SUCCESS: Container 4b7b239529112d06046b6b94c3e792b73ec235fdee62a70fc84e9b239d4e4ab3 started for 4134185
+=== Container logs for 4134185 ===
+/usr/local/lib/python3.11/site-packages/auth/CAS/REST/service.py:195: DeprecatedWarning: Call to deprecated function __init__(...). The API class will be removed in Falcon 5.0, use falcon.App instead.
+  api = falcon.API(middleware=[AuthComponent()])
+Traceback (most recent call last):
+  File "/snippet.py", line 3, in <module>
+    from auth import AWS_ACCESS_KEY,AWS_SECRET_ACCESS_KEY
+ImportError: cannot import name 'AWS_ACCESS_KEY' from 'auth' (/usr/local/lib/python3.11/site-packages/auth/__init__.py)
+=== End of logs for 4134185 ===
+[2025-10-29 14:23:07] INFO: Container 4b7b239529112d06046b6b94c3e792b73ec235fdee62a70fc84e9b239d4e4ab3 has stopped

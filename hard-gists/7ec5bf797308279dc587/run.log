@@ -1,0 +1,17 @@
+=== Docker Run Log for 7ec5bf797308279dc587 ===
+Started at: Mi 29. Okt 17:33:35 CET 2025
+
+[2025-10-29 17:34:55] START: Running container for 7ec5bf797308279dc587
+[2025-10-29 17:34:55] SUCCESS: Container 07cb8c1be8d0c65ee0ef7145cd6559dcac3c4536239f7c24a114e26b76a6254d started for 7ec5bf797308279dc587
+=== Container logs for 7ec5bf797308279dc587 ===
+2025-10-29 16:34:56.254997: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-10-29 16:34:56.299480: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-29 16:34:57.537491: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Traceback (most recent call last):
+  File "/snippet.py", line 13, in <module>
+    tf.set_random_seed(seed_value)
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'tensorflow' has no attribute 'set_random_seed'
+=== End of logs for 7ec5bf797308279dc587 ===
+[2025-10-29 17:34:58] INFO: Container 07cb8c1be8d0c65ee0ef7145cd6559dcac3c4536239f7c24a114e26b76a6254d has stopped

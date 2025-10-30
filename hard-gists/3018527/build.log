@@ -1,0 +1,130 @@
+=== Docker Build Log for 3018527 ===
+Started at: Mi 29. Okt 13:36:56 CET 2025
+
+[2025-10-29 13:36:56] START: Building image for 3018527
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 195B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 461B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/3018527/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","Flask"]
+#7 2.114 Collecting Flask
+#7 2.154   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#7 2.196 Collecting blinker>=1.9.0 (from Flask)
+#7 2.204   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#7 2.249 Collecting click>=8.1.3 (from Flask)
+#7 2.256   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#7 2.297 Collecting itsdangerous>=2.2.0 (from Flask)
+#7 2.305   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#7 2.348 Collecting jinja2>=3.1.2 (from Flask)
+#7 2.356   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#7 2.435 Collecting markupsafe>=2.1.1 (from Flask)
+#7 2.443   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#7 2.494 Collecting werkzeug>=3.1.0 (from Flask)
+#7 2.502   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#7 2.530 Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+#7 2.556    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 3.9 MB/s eta 0:00:00
+#7 2.564 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#7 2.582 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#7 2.599    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 6.7 MB/s eta 0:00:00
+#7 2.607 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#7 2.624 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#7 2.639    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 9.7 MB/s eta 0:00:00
+#7 2.647 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#7 2.664 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#7 2.681    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 14.0 MB/s eta 0:00:00
+#7 2.724 Installing collected packages: markupsafe, itsdangerous, click, blinker, werkzeug, jinja2, Flask
+#7 3.030 Successfully installed Flask-3.1.2 blinker-1.9.0 click-8.3.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.3 werkzeug-3.1.3
+#7 3.031 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.121 
+#7 3.121 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.121 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.3s
+
+#8 [4/4] RUN ["pip","install","celery"]
+#8 0.544 Collecting celery
+#8 0.578   Downloading celery-5.5.3-py3-none-any.whl.metadata (22 kB)
+#8 0.655 Collecting billiard<5.0,>=4.2.1 (from celery)
+#8 0.664   Downloading billiard-4.2.2-py3-none-any.whl.metadata (4.8 kB)
+#8 0.728 Collecting kombu<5.6,>=5.5.2 (from celery)
+#8 0.736   Downloading kombu-5.5.4-py3-none-any.whl.metadata (3.5 kB)
+#8 0.772 Collecting vine<6.0,>=5.1.0 (from celery)
+#8 0.780   Downloading vine-5.1.0-py3-none-any.whl.metadata (2.7 kB)
+#8 0.791 Requirement already satisfied: click<9.0,>=8.1.2 in /usr/local/lib/python3.11/site-packages (from celery) (8.3.0)
+#8 0.815 Collecting click-didyoumean>=0.3.0 (from celery)
+#8 0.823   Downloading click_didyoumean-0.3.1-py3-none-any.whl.metadata (3.9 kB)
+#8 0.865 Collecting click-repl>=0.2.0 (from celery)
+#8 0.873   Downloading click_repl-0.3.0-py3-none-any.whl.metadata (3.6 kB)
+#8 0.914 Collecting click-plugins>=1.1.1 (from celery)
+#8 0.922   Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl.metadata (6.5 kB)
+#8 0.960 Collecting python-dateutil>=2.8.2 (from celery)
+#8 0.968   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#8 1.037 Collecting prompt-toolkit>=3.0.36 (from click-repl>=0.2.0->celery)
+#8 1.045   Downloading prompt_toolkit-3.0.52-py3-none-any.whl.metadata (6.4 kB)
+#8 1.104 Collecting amqp<6.0.0,>=5.1.1 (from kombu<5.6,>=5.5.2->celery)
+#8 1.112   Downloading amqp-5.3.1-py3-none-any.whl.metadata (8.9 kB)
+#8 1.156 Collecting tzdata>=2025.2 (from kombu<5.6,>=5.5.2->celery)
+#8 1.164   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#8 1.213 Collecting packaging (from kombu<5.6,>=5.5.2->celery)
+#8 1.221   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 1.259 Collecting six>=1.5 (from python-dateutil>=2.8.2->celery)
+#8 1.267   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 1.307 Collecting wcwidth (from prompt-toolkit>=3.0.36->click-repl>=0.2.0->celery)
+#8 1.315   Downloading wcwidth-0.2.14-py2.py3-none-any.whl.metadata (15 kB)
+#8 1.343 Downloading celery-5.5.3-py3-none-any.whl (438 kB)
+#8 1.379    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 438.8/438.8 kB 12.5 MB/s eta 0:00:00
+#8 1.388 Downloading billiard-4.2.2-py3-none-any.whl (86 kB)
+#8 1.399    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.9/86.9 kB 7.7 MB/s eta 0:00:00
+#8 1.406 Downloading click_didyoumean-0.3.1-py3-none-any.whl (3.6 kB)
+#8 1.423 Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl (11 kB)
+#8 1.444 Downloading click_repl-0.3.0-py3-none-any.whl (10 kB)
+#8 1.467 Downloading kombu-5.5.4-py3-none-any.whl (210 kB)
+#8 1.487    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 210.0/210.0 kB 10.8 MB/s eta 0:00:00
+#8 1.495 Downloading vine-5.1.0-py3-none-any.whl (9.6 kB)
+#8 1.512 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#8 1.527    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 15.2 MB/s eta 0:00:00
+#8 1.535 Downloading amqp-5.3.1-py3-none-any.whl (50 kB)
+#8 1.545    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.9/50.9 kB 4.6 MB/s eta 0:00:00
+#8 1.554 Downloading prompt_toolkit-3.0.52-py3-none-any.whl (391 kB)
+#8 1.577    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 391.4/391.4 kB 17.6 MB/s eta 0:00:00
+#8 1.585 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 1.601 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#8 1.622    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 17.7 MB/s eta 0:00:00
+#8 1.630 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 1.641    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.9 MB/s eta 0:00:00
+#8 1.649 Downloading wcwidth-0.2.14-py2.py3-none-any.whl (37 kB)
+#8 1.772 Installing collected packages: wcwidth, vine, tzdata, six, packaging, click-plugins, click-didyoumean, billiard, python-dateutil, prompt-toolkit, amqp, kombu, click-repl, celery
+#8 2.683 Successfully installed amqp-5.3.1 billiard-4.2.2 celery-5.5.3 click-didyoumean-0.3.1 click-plugins-1.1.1.2 click-repl-0.3.0 kombu-5.5.4 packaging-25.0 prompt-toolkit-3.0.52 python-dateutil-2.9.0.post0 six-1.17.0 tzdata-2025.2 vine-5.1.0 wcwidth-0.2.14
+#8 2.683 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.688 
+#8 2.688 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.688 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.9s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.2s done
+#9 writing image sha256:0fe04f584765e890a34d48534de60cae59597f42c8a185caf08b4f150f4185a6 done
+#9 naming to docker.io/library/test-image-3018527 done
+#9 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/mszzzjsoybfmeuz827zthay6b
+[2025-10-29 13:37:03] SUCCESS: Build completed for 3018527

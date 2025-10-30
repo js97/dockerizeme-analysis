@@ -1,0 +1,109 @@
+=== Docker Build Log for 2030390 ===
+Started at: Mi 29. Okt 12:57:09 CET 2025
+
+[2025-10-29 12:57:09] START: Building image for 2030390
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 207B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.48kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/2030390/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","mysqlclient"]
+#7 1.926 Collecting mysqlclient
+#7 1.968   Downloading mysqlclient-2.2.7.tar.gz (91 kB)
+#7 1.994      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.4/91.4 kB 3.8 MB/s eta 0:00:00
+#7 2.005   Installing build dependencies: started
+#7 3.425   Installing build dependencies: finished with status 'done'
+#7 3.425   Getting requirements to build wheel: started
+#7 3.595   Getting requirements to build wheel: finished with status 'done'
+#7 3.595   Preparing metadata (pyproject.toml): started
+#7 3.737   Preparing metadata (pyproject.toml): finished with status 'done'
+#7 3.739 Building wheels for collected packages: mysqlclient
+#7 3.740   Building wheel for mysqlclient (pyproject.toml): started
+#7 4.434   Building wheel for mysqlclient (pyproject.toml): finished with status 'done'
+#7 4.435   Created wheel for mysqlclient: filename=mysqlclient-2.2.7-cp311-cp311-linux_x86_64.whl size=136639 sha256=37388c1721b8dd8957d0a1499a66858965cbade140e7f8a166dd4b7218b2391d
+#7 4.435   Stored in directory: /root/.cache/pip/wheels/cd/5f/fb/dbe9e6e7e1e24f9e73164c77b5fdc19bd36240425835c0e635
+#7 4.437 Successfully built mysqlclient
+#7 4.465 Installing collected packages: mysqlclient
+#7 4.502 Successfully installed mysqlclient-2.2.7
+#7 4.503 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.508 
+#7 4.508 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.508 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.7s
+
+#8 [4/4] RUN ["pip","install","MySQL-python"]
+#8 0.629 Collecting MySQL-python
+#8 0.660   Downloading MySQL-python-1.2.5.zip (108 kB)
+#8 0.692      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 108.9/108.9 kB 3.5 MB/s eta 0:00:00
+#8 0.699   Preparing metadata (setup.py): started
+#8 1.089   Preparing metadata (setup.py): finished with status 'error'
+#8 1.092   error: subprocess-exited-with-error
+#8 1.092   
+#8 1.092   × python setup.py egg_info did not run successfully.
+#8 1.092   │ exit code: 1
+#8 1.092   ╰─> [8 lines of output]
+#8 1.092       Traceback (most recent call last):
+#8 1.092         File "<string>", line 2, in <module>
+#8 1.092         File "<pip-setuptools-caller>", line 34, in <module>
+#8 1.092         File "/tmp/pip-install-luz_cpps/mysql-python_b6bdf78f53c741429682d137492f3aa4/setup.py", line 13, in <module>
+#8 1.092           from setup_posix import get_config
+#8 1.092         File "/tmp/pip-install-luz_cpps/mysql-python_b6bdf78f53c741429682d137492f3aa4/setup_posix.py", line 2, in <module>
+#8 1.092           from ConfigParser import SafeConfigParser
+#8 1.092       ModuleNotFoundError: No module named 'ConfigParser'
+#8 1.092       [end of output]
+#8 1.092   
+#8 1.092   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 1.094 error: metadata-generation-failed
+#8 1.094 
+#8 1.094 × Encountered error while generating package metadata.
+#8 1.094 ╰─> See above for output.
+#8 1.094 
+#8 1.094 note: This is an issue with the package mentioned above, not pip.
+#8 1.094 hint: See above for details.
+#8 1.099 
+#8 1.099 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.099 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install MySQL-python" did not complete successfully: exit code: 1
+------
+ > [4/4] RUN ["pip","install","MySQL-python"]:
+1.094 error: metadata-generation-failed
+1.094 
+1.094 × Encountered error while generating package metadata.
+1.094 ╰─> See above for output.
+1.094 
+1.094 note: This is an issue with the package mentioned above, not pip.
+1.094 hint: See above for details.
+1.099 
+1.099 [notice] A new release of pip is available: 24.0 -> 25.3
+1.099 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/2030390/snippet.py /snippet.py
+   3 |     RUN ["pip","install","mysqlclient"]
+   4 | >>> RUN ["pip","install","MySQL-python"]
+   5 |     CMD ["python3","/snippet.py"]
+   6 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install MySQL-python" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/3wxndrv0pq37zzzoxrj1ic58i
+[2025-10-29 12:57:15] ERROR: Build failed for 2030390

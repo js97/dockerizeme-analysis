@@ -1,0 +1,19 @@
+=== Docker Run Log for abca49bf36433fd1f9d1 ===
+Started at: Mi 29. Okt 19:12:53 CET 2025
+
+[2025-10-29 19:12:58] START: Running container for abca49bf36433fd1f9d1
+[2025-10-29 19:12:58] SUCCESS: Container 49a2c1d7d77b409092fc548184527dbda8b3f93ad1594a03cf05a1c4fb8e4607 started for abca49bf36433fd1f9d1
+=== Container logs for abca49bf36433fd1f9d1 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 2, in <module>
+    import chef
+  File "/usr/local/lib/python3.11/site-packages/chef/__init__.py", line 5, in <module>
+    from chef.api import ChefAPI, autoconfigure
+  File "/usr/local/lib/python3.11/site-packages/chef/api.py", line 17, in <module>
+    from chef.rsa import Key
+  File "/usr/local/lib/python3.11/site-packages/chef/rsa.py", line 12, in <module>
+    plat_name = platform.linux_distribution(supported_dists=['system'])[0]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'platform' has no attribute 'linux_distribution'
+=== End of logs for abca49bf36433fd1f9d1 ===
+[2025-10-29 19:13:00] INFO: Container 49a2c1d7d77b409092fc548184527dbda8b3f93ad1594a03cf05a1c4fb8e4607 has stopped

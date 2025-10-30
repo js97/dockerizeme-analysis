@@ -1,0 +1,13 @@
+=== Docker Run Log for dc61c42aa4e89e139cd8248f59af6b3e ===
+Started at: Mi 29. Okt 20:33:45 CET 2025
+
+[2025-10-29 20:33:45] START: Running container for dc61c42aa4e89e139cd8248f59af6b3e
+[2025-10-29 20:33:46] SUCCESS: Container c177ef7ecd8343d3c0d800316f148b12e9a61889e4d74c8859dc85834a32cbad started for dc61c42aa4e89e139cd8248f59af6b3e
+=== Container logs for dc61c42aa4e89e139cd8248f59af6b3e ===
+Traceback (most recent call last):
+  File "/snippet.py", line 16, in <module>
+    url = ul.quote_plus(sys.argv[1])
+                        ~~~~~~~~^^^
+IndexError: list index out of range
+=== End of logs for dc61c42aa4e89e139cd8248f59af6b3e ===
+[2025-10-29 20:33:48] INFO: Container c177ef7ecd8343d3c0d800316f148b12e9a61889e4d74c8859dc85834a32cbad has stopped

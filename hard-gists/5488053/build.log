@@ -1,0 +1,96 @@
+=== Docker Build Log for 5488053 ===
+Started at: Mi 29. Okt 15:43:23 CET 2025
+
+[2025-10-29 15:43:23] START: Building image for 5488053
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 236B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 10.26kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/5488053/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","requests"]
+#7 2.063 Collecting requests
+#7 2.110   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.245 Collecting charset_normalizer<4,>=2 (from requests)
+#7 2.254   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.297 Collecting idna<4,>=2.5 (from requests)
+#7 2.306   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.372 Collecting urllib3<3,>=1.21.1 (from requests)
+#7 2.381   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.431 Collecting certifi>=2017.4.17 (from requests)
+#7 2.441   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.468 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.487    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.5 MB/s eta 0:00:00
+#7 2.495 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.514    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.0 MB/s eta 0:00:00
+#7 2.525 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.541    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 9.8 MB/s eta 0:00:00
+#7 2.550 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.564    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.0 MB/s eta 0:00:00
+#7 2.581 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.593    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 11.3 MB/s eta 0:00:00
+#7 2.644 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#7 2.880 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#7 2.881 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.988 
+#7 2.988 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.988 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.2s
+
+#8 [4/5] RUN ["pip","install","freetype-py"]
+#8 0.569 Collecting freetype-py
+#8 0.615   Downloading freetype_py-2.5.1-py3-none-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (6.3 kB)
+#8 0.639 Downloading freetype_py-2.5.1-py3-none-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.0 MB)
+#8 0.732    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 11.4 MB/s eta 0:00:00
+#8 0.780 Installing collected packages: freetype-py
+#8 0.850 Successfully installed freetype-py-2.5.1
+#8 0.850 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.857 
+#8 0.857 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.857 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.0s
+
+#9 [5/5] RUN ["pip","install","Freetype"]
+#9 0.668 ERROR: Could not find a version that satisfies the requirement Freetype (from versions: none)
+#9 0.669 ERROR: No matching distribution found for Freetype
+#9 0.674 
+#9 0.674 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.674 [notice] To update, run: pip install --upgrade pip
+#9 ERROR: process "pip install Freetype" did not complete successfully: exit code: 1
+------
+ > [5/5] RUN ["pip","install","Freetype"]:
+0.668 ERROR: Could not find a version that satisfies the requirement Freetype (from versions: none)
+0.669 ERROR: No matching distribution found for Freetype
+0.674 
+0.674 [notice] A new release of pip is available: 24.0 -> 25.3
+0.674 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:5
+--------------------
+   3 |     RUN ["pip","install","requests"]
+   4 |     RUN ["pip","install","freetype-py"]
+   5 | >>> RUN ["pip","install","Freetype"]
+   6 |     CMD ["python3","/snippet.py"]
+   7 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install Freetype" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/b26e09iyw0dfj8oo6ro2mlv33
+[2025-10-29 15:43:28] ERROR: Build failed for 5488053

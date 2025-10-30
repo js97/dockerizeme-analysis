@@ -1,0 +1,17 @@
+=== Docker Run Log for 1ddc318b4124ed152f6d ===
+Started at: Mi 29. Okt 12:47:12 CET 2025
+
+[2025-10-29 12:47:21] START: Running container for 1ddc318b4124ed152f6d
+[2025-10-29 12:47:21] SUCCESS: Container 200a4be1e524ac9e4d8f7c53708c544b1a34f18064f71b1741e7373888b5fb4c started for 1ddc318b4124ed152f6d
+=== Container logs for 1ddc318b4124ed152f6d ===
+Traceback (most recent call last):
+  File "/snippet.py", line 30, in <module>
+    FLAMES_DIR = os.path.abspath(settings.FLAMES_DIR)
+                                 ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting FLAMES_DIR, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 1ddc318b4124ed152f6d ===
+[2025-10-29 12:47:23] INFO: Container 200a4be1e524ac9e4d8f7c53708c544b1a34f18064f71b1741e7373888b5fb4c has stopped

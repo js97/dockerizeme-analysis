@@ -1,0 +1,14 @@
+=== Docker Run Log for 931b0194242fca0e234e ===
+Started at: Mi 29. Okt 18:23:05 CET 2025
+
+[2025-10-29 18:23:09] START: Running container for 931b0194242fca0e234e
+[2025-10-29 18:23:09] SUCCESS: Container 538830ac67a73cf5d8fb0da6c2fed923a380f77ea0ba4c84af7232b7be227616 started for 931b0194242fca0e234e
+=== Container logs for 931b0194242fca0e234e ===
+Traceback (most recent call last):
+  File "/snippet.py", line 4, in <module>
+    import RPi.GPIO as GPIO
+  File "/usr/local/lib/python3.11/site-packages/RPi/GPIO/__init__.py", line 23, in <module>
+    from RPi._GPIO import *
+RuntimeError: This module can only be run on a Raspberry Pi!
+=== End of logs for 931b0194242fca0e234e ===
+[2025-10-29 18:23:11] INFO: Container 538830ac67a73cf5d8fb0da6c2fed923a380f77ea0ba4c84af7232b7be227616 has stopped

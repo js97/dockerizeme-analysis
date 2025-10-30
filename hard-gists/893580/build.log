@@ -1,0 +1,157 @@
+=== Docker Build Log for 893580 ===
+Started at: Mi 29. Okt 18:04:47 CET 2025
+
+[2025-10-29 18:04:47] START: Building image for 893580
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 195B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.36kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/893580/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","biopython"]
+#7 1.924 Collecting biopython
+#7 1.962   Downloading biopython-1.86-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+#7 2.173 Collecting numpy (from biopython)
+#7 2.184   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.210      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.2 MB/s eta 0:00:00
+#7 2.228 Downloading biopython-1.86-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.2 MB)
+#7 2.369    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 23.1 MB/s eta 0:00:00
+#7 2.381 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 3.040    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 22.8 MB/s eta 0:00:00
+#7 3.128 Installing collected packages: numpy, biopython
+#7 5.238 Successfully installed biopython-1.86 numpy-2.3.4
+#7 5.238 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.333 
+#7 5.333 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.333 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.0s
+
+#8 [4/4] RUN ["pip","install","bio"]
+#8 0.630 Collecting bio
+#8 0.672   Downloading bio-1.8.1-py3-none-any.whl.metadata (5.7 kB)
+#8 0.686 Requirement already satisfied: biopython>=1.80 in /usr/local/lib/python3.11/site-packages (from bio) (1.86)
+#8 0.815 Collecting gprofiler-official (from bio)
+#8 0.825   Downloading gprofiler_official-1.0.0-py3-none-any.whl.metadata (11 kB)
+#8 0.958 Collecting mygene (from bio)
+#8 0.970   Downloading mygene-3.2.2-py2.py3-none-any.whl.metadata (10 kB)
+#8 1.114 Collecting pandas (from bio)
+#8 1.125   Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+#8 1.155      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 3.0 MB/s eta 0:00:00
+#8 1.198 Collecting pooch (from bio)
+#8 1.209   Downloading pooch-1.8.2-py3-none-any.whl.metadata (10 kB)
+#8 1.260 Collecting requests (from bio)
+#8 1.270   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#8 1.338 Collecting tqdm (from bio)
+#8 1.348   Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+#8 1.363      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.7/57.7 kB 3.5 MB/s eta 0:00:00
+#8 1.373 Requirement already satisfied: numpy in /usr/local/lib/python3.11/site-packages (from biopython>=1.80->bio) (2.3.4)
+#8 1.498 Collecting biothings-client>=0.2.6 (from mygene->bio)
+#8 1.507   Downloading biothings_client-0.4.1-py3-none-any.whl.metadata (10 kB)
+#8 1.589 Collecting python-dateutil>=2.8.2 (from pandas->bio)
+#8 1.597   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#8 1.661 Collecting pytz>=2020.1 (from pandas->bio)
+#8 1.670   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#8 1.714 Collecting tzdata>=2022.7 (from pandas->bio)
+#8 1.726   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#8 1.790 Collecting platformdirs>=2.5.0 (from pooch->bio)
+#8 1.798   Downloading platformdirs-4.5.0-py3-none-any.whl.metadata (12 kB)
+#8 1.843 Collecting packaging>=20.0 (from pooch->bio)
+#8 1.851   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 1.959 Collecting charset_normalizer<4,>=2 (from requests->bio)
+#8 1.968   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#8 2.009 Collecting idna<4,>=2.5 (from requests->bio)
+#8 2.018   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#8 2.076 Collecting urllib3<3,>=1.21.1 (from requests->bio)
+#8 2.085   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#8 2.131 Collecting certifi>=2017.4.17 (from requests->bio)
+#8 2.140   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#8 2.205 Collecting httpx>=0.22.0 (from biothings-client>=0.2.6->mygene->bio)
+#8 2.214   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+#8 2.275 Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->bio)
+#8 2.283   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 2.342 Collecting anyio (from httpx>=0.22.0->biothings-client>=0.2.6->mygene->bio)
+#8 2.352   Downloading anyio-4.11.0-py3-none-any.whl.metadata (4.1 kB)
+#8 2.407 Collecting httpcore==1.* (from httpx>=0.22.0->biothings-client>=0.2.6->mygene->bio)
+#8 2.415   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+#8 2.455 Collecting h11>=0.16 (from httpcore==1.*->httpx>=0.22.0->biothings-client>=0.2.6->mygene->bio)
+#8 2.463   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#8 2.506 Collecting sniffio>=1.1 (from anyio->httpx>=0.22.0->biothings-client>=0.2.6->mygene->bio)
+#8 2.514   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+#8 2.557 Collecting typing_extensions>=4.5 (from anyio->httpx>=0.22.0->biothings-client>=0.2.6->mygene->bio)
+#8 2.564   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#8 2.593 Downloading bio-1.8.1-py3-none-any.whl (321 kB)
+#8 2.620    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 321.3/321.3 kB 12.8 MB/s eta 0:00:00
+#8 2.630 Downloading gprofiler_official-1.0.0-py3-none-any.whl (9.3 kB)
+#8 2.650 Downloading mygene-3.2.2-py2.py3-none-any.whl (5.4 kB)
+#8 2.675 Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+#8 3.139    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 26.7 MB/s eta 0:00:00
+#8 3.148 Downloading pooch-1.8.2-py3-none-any.whl (64 kB)
+#8 3.160    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.6/64.6 kB 5.1 MB/s eta 0:00:00
+#8 3.170 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#8 3.182    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 5.2 MB/s eta 0:00:00
+#8 3.190 Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+#8 3.202    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 7.0 MB/s eta 0:00:00
+#8 3.211 Downloading biothings_client-0.4.1-py3-none-any.whl (46 kB)
+#8 3.221    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.7/46.7 kB 4.1 MB/s eta 0:00:00
+#8 3.229 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#8 3.247    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.9 MB/s eta 0:00:00
+#8 3.255 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#8 3.268    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.5 MB/s eta 0:00:00
+#8 3.277 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#8 3.288    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 6.0 MB/s eta 0:00:00
+#8 3.296 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 3.307    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.7 MB/s eta 0:00:00
+#8 3.315 Downloading platformdirs-4.5.0-py3-none-any.whl (18 kB)
+#8 3.334 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#8 3.351    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 14.0 MB/s eta 0:00:00
+#8 3.360 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#8 3.390    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 17.5 MB/s eta 0:00:00
+#8 3.399 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#8 3.420    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 17.5 MB/s eta 0:00:00
+#8 3.437 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#8 3.451    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.6 MB/s eta 0:00:00
+#8 3.459 Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+#8 3.471    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.5/73.5 kB 6.3 MB/s eta 0:00:00
+#8 3.480 Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+#8 3.497    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.8/78.8 kB 4.4 MB/s eta 0:00:00
+#8 3.505 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 3.524 Downloading anyio-4.11.0-py3-none-any.whl (109 kB)
+#8 3.539    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.1/109.1 kB 7.5 MB/s eta 0:00:00
+#8 3.546 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#8 3.566 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+#8 3.583 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#8 3.595    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.5 MB/s eta 0:00:00
+#8 3.809 Installing collected packages: pytz, urllib3, tzdata, typing_extensions, tqdm, sniffio, six, platformdirs, packaging, idna, h11, charset_normalizer, certifi, requests, python-dateutil, httpcore, anyio, pooch, pandas, httpx, gprofiler-official, biothings-client, mygene, bio
+#8 7.670 Successfully installed anyio-4.11.0 bio-1.8.1 biothings-client-0.4.1 certifi-2025.10.5 charset_normalizer-3.4.4 gprofiler-official-1.0.0 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.11 mygene-3.2.2 packaging-25.0 pandas-2.3.3 platformdirs-4.5.0 pooch-1.8.2 python-dateutil-2.9.0.post0 pytz-2025.2 requests-2.32.5 six-1.17.0 sniffio-1.3.1 tqdm-4.67.1 typing_extensions-4.15.0 tzdata-2025.2 urllib3-2.5.0
+#8 7.670 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 7.676 
+#8 7.676 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 7.676 [notice] To update, run: pip install --upgrade pip
+#8 DONE 8.6s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.6s done
+#9 writing image sha256:b42c50e3970521cb050c8fbb63f3ba2586de3493de7fa627889dd07a24e62e22 done
+#9 naming to docker.io/library/test-image-893580 done
+#9 DONE 0.7s
+
+View build details: docker-desktop://dashboard/build/default/default/sgf29j1prnucwr1ld2igl223m
+[2025-10-29 18:05:03] SUCCESS: Build completed for 893580

@@ -1,0 +1,14 @@
+=== Docker Run Log for 2768310 ===
+Started at: Mi 29. Okt 13:13:16 CET 2025
+
+[2025-10-29 13:13:25] START: Running container for 2768310
+[2025-10-29 13:13:25] SUCCESS: Container b35e9ada9fed5abe07962d31a8386ea3d0ccc12ca8977e59cc21e657c067cdf3 started for 2768310
+=== Container logs for 2768310 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 15, in <module>
+    from djangotoolbox.fields import BlobField
+  File "/usr/local/lib/python3.11/site-packages/djangotoolbox/fields.py", line 4, in <module>
+    from django.utils.importlib import import_module
+ModuleNotFoundError: No module named 'django.utils.importlib'
+=== End of logs for 2768310 ===
+[2025-10-29 13:13:27] INFO: Container b35e9ada9fed5abe07962d31a8386ea3d0ccc12ca8977e59cc21e657c067cdf3 has stopped

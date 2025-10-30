@@ -1,0 +1,112 @@
+=== Docker Build Log for 1355170 ===
+Started at: Mi 29. Okt 12:09:01 CET 2025
+
+[2025-10-29 12:09:01] START: Building image for 1355170
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 268B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.90kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/6] COPY hard-gists/1355170/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/6] RUN ["pip","install","Jinja2"]
+#7 1.881 Collecting Jinja2
+#7 1.913   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#7 2.002 Collecting MarkupSafe>=2.0 (from Jinja2)
+#7 2.014   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#7 2.034 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#7 2.061    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 5.0 MB/s eta 0:00:00
+#7 2.070 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#7 2.113 Installing collected packages: MarkupSafe, Jinja2
+#7 2.192 Successfully installed Jinja2-3.1.6 MarkupSafe-3.0.3
+#7 2.192 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.281 
+#7 2.281 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.281 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.4s
+
+#8 [4/6] RUN ["pip","install","Flask"]
+#8 0.500 Collecting Flask
+#8 0.532   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#8 0.571 Collecting blinker>=1.9.0 (from Flask)
+#8 0.581   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#8 0.628 Collecting click>=8.1.3 (from Flask)
+#8 0.636   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#8 0.668 Collecting itsdangerous>=2.2.0 (from Flask)
+#8 0.676   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#8 0.687 Requirement already satisfied: jinja2>=3.1.2 in /usr/local/lib/python3.11/site-packages (from Flask) (3.1.6)
+#8 0.688 Requirement already satisfied: markupsafe>=2.1.1 in /usr/local/lib/python3.11/site-packages (from Flask) (3.0.3)
+#8 0.733 Collecting werkzeug>=3.1.0 (from Flask)
+#8 0.742   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#8 0.767 Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+#8 0.794    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 3.9 MB/s eta 0:00:00
+#8 0.801 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#8 0.821 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#8 0.837    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 6.8 MB/s eta 0:00:00
+#8 0.845 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#8 0.863 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#8 0.881    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 13.2 MB/s eta 0:00:00
+#8 0.922 Installing collected packages: werkzeug, itsdangerous, click, blinker, Flask
+#8 1.170 Successfully installed Flask-3.1.2 blinker-1.9.0 click-8.3.0 itsdangerous-2.2.0 werkzeug-3.1.3
+#8 1.170 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.175 
+#8 1.175 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.175 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.3s
+
+#9 [5/6] RUN ["pip","install","my-helpers"]
+#9 0.566 Collecting my-helpers
+#9 0.601   Downloading my_helpers-0.1-py3-none-any.whl.metadata (57 bytes)
+#9 0.624 Downloading my_helpers-0.1-py3-none-any.whl (2.0 kB)
+#9 0.680 Installing collected packages: my-helpers
+#9 0.712 Successfully installed my-helpers-0.1
+#9 0.713 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.718 
+#9 0.718 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.718 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.8s
+
+#10 [6/6] RUN ["pip","install","flask_helpers"]
+#10 0.543 Collecting flask_helpers
+#10 0.579   Downloading flask_helpers-0.1.tar.gz (2.1 kB)
+#10 0.596   Preparing metadata (setup.py): started
+#10 1.016   Preparing metadata (setup.py): finished with status 'done'
+#10 1.017 Building wheels for collected packages: flask_helpers
+#10 1.018   Building wheel for flask_helpers (setup.py): started
+#10 1.184   Building wheel for flask_helpers (setup.py): finished with status 'done'
+#10 1.185   Created wheel for flask_helpers: filename=flask_helpers-0.1-py3-none-any.whl size=3057 sha256=499c77f3174f3a0bf6563245a17bb5e0b023dc4b6cf213a4fcaf28bd8879a22b
+#10 1.185   Stored in directory: /root/.cache/pip/wheels/5f/46/4d/11764c45b12344e01305c3ffa59c496fe0520e24ed563404af
+#10 1.186 Successfully built flask_helpers
+#10 1.222 Installing collected packages: flask_helpers
+#10 1.236 Successfully installed flask_helpers-0.1
+#10 1.236 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.241 
+#10 1.241 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.241 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.3s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 0.2s done
+#11 writing image sha256:bcedb3f3fb8a7d198d4934c98a2d26aa2c57926d2d4e21ba17337583e9ee1466 done
+#11 naming to docker.io/library/test-image-1355170 done
+#11 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/2d50av1zvan690ohz45iu1m0v
+[2025-10-29 12:09:07] SUCCESS: Build completed for 1355170

@@ -1,0 +1,12 @@
+=== Docker Run Log for 1094832 ===
+Started at: Mi 29. Okt 11:50:36 CET 2025
+
+[2025-10-29 11:50:43] START: Running container for 1094832
+[2025-10-29 11:50:44] SUCCESS: Container 1c0c04513e0d0e5bdabd33cb188fd509f833834ab3a8fe01a8026317b8c5f5d2 started for 1094832
+=== Container logs for 1094832 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 8, in <module>
+    from django.db.backends.sqlite3.base import (
+ImportError: cannot import name 'DatabaseError' from 'django.db.backends.sqlite3.base' (/usr/local/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py)
+=== End of logs for 1094832 ===
+[2025-10-29 11:50:46] INFO: Container 1c0c04513e0d0e5bdabd33cb188fd509f833834ab3a8fe01a8026317b8c5f5d2 has stopped

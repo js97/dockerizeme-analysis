@@ -1,0 +1,72 @@
+=== Docker Build Log for 3fe84c05013fa87d74a8 ===
+Started at: Mi 29. Okt 14:16:48 CET 2025
+
+[2025-10-29 14:16:48] START: Building image for 3fe84c05013fa87d74a8
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 221B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.59kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/3fe84c05013fa87d74a8/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","django-admin-easy"]
+#7 1.932 Collecting django-admin-easy
+#7 1.966   Downloading django_admin_easy-0.8.0-py3-none-any.whl.metadata (16 kB)
+#7 2.110 Collecting django (from django-admin-easy)
+#7 2.118   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.164 Collecting asgiref>=3.8.1 (from django->django-admin-easy)
+#7 2.172   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.209 Collecting sqlparse>=0.3.1 (from django->django-admin-easy)
+#7 2.218   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.242 Downloading django_admin_easy-0.8.0-py3-none-any.whl (19 kB)
+#7 2.261 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 2.606    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 24.2 MB/s eta 0:00:00
+#7 2.614 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 2.633 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 2.646    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.2 MB/s eta 0:00:00
+#7 2.725 Installing collected packages: sqlparse, asgiref, django, django-admin-easy
+#7 4.171 Successfully installed asgiref-3.10.0 django-5.2.7 django-admin-easy-0.8.0 sqlparse-0.5.3
+#7 4.171 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.261 
+#7 4.261 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.261 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.9s
+
+#8 [4/4] RUN ["pip","install","easygui"]
+#8 0.504 Collecting easygui
+#8 0.547   Downloading easygui-0.98.3-py2.py3-none-any.whl.metadata (8.4 kB)
+#8 0.573 Downloading easygui-0.98.3-py2.py3-none-any.whl (92 kB)
+#8 0.597    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 92.7/92.7 kB 3.7 MB/s eta 0:00:00
+#8 0.637 Installing collected packages: easygui
+#8 0.689 Successfully installed easygui-0.98.3
+#8 0.689 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.694 
+#8 0.694 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.694 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.8s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.5s done
+#9 writing image sha256:21574c0bfe749b9c5e90bec41d5ab65799d8565e208092018da70e38721855a6 done
+#9 naming to docker.io/library/test-image-3fe84c05013fa87d74a8 done
+#9 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/default/default/19er4eu4eoj4fbobu4mqtzz0x
+[2025-10-29 14:16:55] SUCCESS: Build completed for 3fe84c05013fa87d74a8

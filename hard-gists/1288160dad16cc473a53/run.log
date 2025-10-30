@@ -1,0 +1,30 @@
+=== Docker Run Log for 1288160dad16cc473a53 ===
+Started at: Mi 29. Okt 12:05:25 CET 2025
+
+[2025-10-29 12:05:26] START: Running container for 1288160dad16cc473a53
+[2025-10-29 12:05:26] SUCCESS: Container fb8d3d62678398db786432919ded47727aae55b698acb9c080e45afd0ce21494 started for 1288160dad16cc473a53
+=== Container logs for 1288160dad16cc473a53 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 3, in <module>
+    resp = urllib.request.urlopen('http://worldcup.sfg.io/matches').read()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 563, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 503: Service Unavailable
+=== End of logs for 1288160dad16cc473a53 ===
+[2025-10-29 12:05:28] INFO: Container fb8d3d62678398db786432919ded47727aae55b698acb9c080e45afd0ce21494 has stopped

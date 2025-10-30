@@ -1,0 +1,12 @@
+=== Docker Run Log for 8248457 ===
+Started at: Mi 29. Okt 17:41:34 CET 2025
+
+[2025-10-29 17:41:34] START: Running container for 8248457
+[2025-10-29 17:41:35] SUCCESS: Container 06fe416582bce5a690c187dbc04d9afc7f319b4cf269973f059462ff68619dc9 started for 8248457
+=== Container logs for 8248457 ===
+  File "/snippet.py", line 15
+    print 'positive features: %s' % (' '.join(['%s/%.2f' % (vocab[j], coef[j]) for j in np.argsort(coef)[::-1][:n] if coef[j] > 0]))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 8248457 ===
+[2025-10-29 17:41:37] INFO: Container 06fe416582bce5a690c187dbc04d9afc7f319b4cf269973f059462ff68619dc9 has stopped

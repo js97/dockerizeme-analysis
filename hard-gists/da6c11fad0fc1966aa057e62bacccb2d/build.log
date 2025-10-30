@@ -1,0 +1,322 @@
+=== Docker Build Log for da6c11fad0fc1966aa057e62bacccb2d ===
+Started at: Mi 29. Okt 20:29:17 CET 2025
+
+[2025-10-29 20:29:17] START: Building image for da6c11fad0fc1966aa057e62bacccb2d
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 377B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.18kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/8] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/8] COPY hard-gists/da6c11fad0fc1966aa057e62bacccb2d/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/8] RUN ["pip","install","watson-framework"]
+#7 2.081 Collecting watson-framework
+#7 2.474   Downloading watson_framework-3.5.4-py3-none-any.whl.metadata (5.0 kB)
+#7 2.534 Collecting Pygments==1.6 (from watson-framework)
+#7 2.546   Downloading Pygments-1.6.tar.gz (1.4 MB)
+#7 2.680      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 10.8 MB/s eta 0:00:00
+#7 2.761   Preparing metadata (setup.py): started
+#7 3.215   Preparing metadata (setup.py): finished with status 'done'
+#7 3.360 Collecting Jinja2>=2.8 (from watson-framework)
+#7 3.419   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#7 3.612 Collecting watson-cache>=1.0.1 (from watson-framework)
+#7 3.731   Downloading watson-cache-1.1.0.tar.gz (7.8 kB)
+#7 3.753   Preparing metadata (setup.py): started
+#7 3.909   Preparing metadata (setup.py): finished with status 'done'
+#7 4.160 Collecting watson-common>=1.5.0 (from watson-framework)
+#7 4.306   Downloading watson_common-1.6.3-py3-none-any.whl.metadata (3.7 kB)
+#7 4.582 Collecting watson-console>=2.0.2 (from watson-framework)
+#7 4.967   Downloading watson_console-2.0.4-py3-none-any.whl.metadata (3.7 kB)
+#7 5.186 Collecting watson-dev>=3.0.1 (from watson-framework)
+#7 5.480   Downloading watson_dev-3.0.1-py3-none-any.whl.metadata (3.6 kB)
+#7 5.706 Collecting watson-di>=2.2.2 (from watson-framework)
+#7 5.809   Downloading watson_di-2.2.4-py3-none-any.whl.metadata (3.8 kB)
+#7 6.112 Collecting watson-filters>=1.0.0 (from watson-framework)
+#7 6.347   Downloading watson_filters-1.0.1-py3-none-any.whl.metadata (3.6 kB)
+#7 6.631 Collecting watson-form>=4.0.3 (from watson-framework)
+#7 7.014   Downloading watson_form-4.4.2-py3-none-any.whl.metadata (4.1 kB)
+#7 7.168 Collecting watson-html>=1.2.0 (from watson-framework)
+#7 7.283   Downloading watson_html-1.2.1-py3-none-any.whl.metadata (3.7 kB)
+#7 7.444 Collecting watson-mail>=1.2.1 (from watson-framework)
+#7 7.836   Downloading watson_mail-1.3.1-py3-none-any.whl.metadata (3.7 kB)
+#7 8.041 Collecting watson-routing>=1.2.1 (from watson-framework)
+#7 8.448   Downloading watson_routing-1.2.4-py3-none-any.whl.metadata (3.8 kB)
+#7 8.585 Collecting watson-validators>=1.0.2 (from watson-framework)
+#7 8.858   Downloading watson_validators-1.0.6-py3-none-any.whl.metadata (3.6 kB)
+#7 8.960 Collecting MarkupSafe>=2.0 (from Jinja2>=2.8->watson-framework)
+#7 8.970   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#7 9.292 Collecting watson-events>=1.0.2 (from watson-di>=2.2.2->watson-framework)
+#7 9.575   Downloading watson_events-1.0.4-py3-none-any.whl.metadata (3.8 kB)
+#7 9.802 Collecting watson-http>=1.2.4 (from watson-form>=4.0.3->watson-framework)
+#7 10.09   Downloading watson_http-1.2.6-py3-none-any.whl.metadata (3.8 kB)
+#7 10.29 Downloading watson_framework-3.5.4-py3-none-any.whl (49 kB)
+#7 10.31    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.2/49.2 kB 1.9 MB/s eta 0:00:00
+#7 10.32 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#7 10.35    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 4.5 MB/s eta 0:00:00
+#7 10.46 Downloading watson_common-1.6.3-py3-none-any.whl (12 kB)
+#7 10.59 Downloading watson_console-2.0.4-py3-none-any.whl (10 kB)
+#7 10.71 Downloading watson_dev-3.0.1-py3-none-any.whl (7.5 kB)
+#7 10.84 Downloading watson_di-2.2.4-py3-none-any.whl (9.6 kB)
+#7 10.96 Downloading watson_filters-1.0.1-py3-none-any.whl (6.9 kB)
+#7 11.07 Downloading watson_form-4.4.2-py3-none-any.whl (16 kB)
+#7 11.32 Downloading watson_html-1.2.1-py3-none-any.whl (5.7 kB)
+#7 11.52 Downloading watson_mail-1.3.1-py3-none-any.whl (9.7 kB)
+#7 11.63 Downloading watson_routing-1.2.4-py3-none-any.whl (10 kB)
+#7 11.76 Downloading watson_validators-1.0.6-py3-none-any.whl (7.3 kB)
+#7 11.78 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#7 11.90 Downloading watson_events-1.0.4-py3-none-any.whl (8.0 kB)
+#7 12.02 Downloading watson_http-1.2.6-py3-none-any.whl (21 kB)
+#7 12.04 Building wheels for collected packages: Pygments, watson-cache
+#7 12.04   Building wheel for Pygments (setup.py): started
+#7 12.29   Building wheel for Pygments (setup.py): finished with status 'done'
+#7 12.30   Created wheel for Pygments: filename=pygments-1.6-py3-none-any.whl size=629265 sha256=3461577ec6a0fcb8b565b528e1868b8ec1e80c1fbc7805b03c4d50935a71f476
+#7 12.30   Stored in directory: /root/.cache/pip/wheels/2b/13/85/d53cf052daead653950decdd96cc2ab394bd33c94216ea7d55
+#7 12.30   Building wheel for watson-cache (setup.py): started
+#7 12.44   Building wheel for watson-cache (setup.py): finished with status 'done'
+#7 12.44   Created wheel for watson-cache: filename=watson_cache-1.1.0-py3-none-any.whl size=8041 sha256=ebceeeec5caf172ca1850e1975c1f3b322071a30d6e466b8eb93643f71e2e723
+#7 12.44   Stored in directory: /root/.cache/pip/wheels/7c/08/be/57f79067e8ae08501939136a36e23faf8519e49c300dfe05bd
+#7 12.44 Successfully built Pygments watson-cache
+#7 12.52 Installing collected packages: watson-validators, watson-common, Pygments, watson-mail, watson-http, watson-html, watson-events, watson-dev, watson-console, watson-cache, MarkupSafe, watson-routing, watson-filters, watson-di, Jinja2, watson-form, watson-framework
+#7 13.03 Successfully installed Jinja2-3.1.6 MarkupSafe-3.0.3 Pygments-1.6 watson-cache-1.1.0 watson-common-1.6.3 watson-console-2.0.4 watson-dev-3.0.1 watson-di-2.2.4 watson-events-1.0.4 watson-filters-1.0.1 watson-form-4.4.2 watson-framework-3.5.4 watson-html-1.2.1 watson-http-1.2.6 watson-mail-1.3.1 watson-routing-1.2.4 watson-validators-1.0.6
+#7 13.03 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 13.12 
+#7 13.12 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 13.12 [notice] To update, run: pip install --upgrade pip
+#7 DONE 13.5s
+
+#8 [4/8] RUN ["pip","install","django-watson"]
+#8 0.670 Collecting django-watson
+#8 0.709   Downloading django_watson-1.6.3-py2.py3-none-any.whl.metadata (3.5 kB)
+#8 0.736 Downloading django_watson-1.6.3-py2.py3-none-any.whl (27 kB)
+#8 0.822 Installing collected packages: django-watson
+#8 0.879 Successfully installed django-watson-1.6.3
+#8 0.879 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.884 
+#8 0.884 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.884 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.0s
+
+#9 [5/8] RUN ["pip","install","watson-db"]
+#9 0.731 Collecting watson-db
+#9 0.998   Downloading watson_db-2.7.1-py3-none-any.whl.metadata (3.8 kB)
+#9 1.028 Requirement already satisfied: watson-framework>=3.4.6 in /usr/local/lib/python3.11/site-packages (from watson-db) (3.5.4)
+#9 1.335 Collecting sqlalchemy>=1.0.14 (from watson-db)
+#9 1.348   Downloading sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.5 kB)
+#9 1.433 Collecting alembic>=0.8.6 (from watson-db)
+#9 1.444   Downloading alembic-1.17.1-py3-none-any.whl.metadata (7.2 kB)
+#9 1.491 Collecting sqlacodegen>=1.1.6 (from watson-db)
+#9 1.501   Downloading sqlacodegen-3.1.1-py3-none-any.whl.metadata (9.9 kB)
+#9 1.569 Collecting Mako (from alembic>=0.8.6->watson-db)
+#9 1.577   Downloading mako-1.3.10-py3-none-any.whl.metadata (2.9 kB)
+#9 1.622 Collecting typing-extensions>=4.12 (from alembic>=0.8.6->watson-db)
+#9 1.630   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#9 1.661 Collecting sqlalchemy>=1.0.14 (from watson-db)
+#9 1.671   Downloading sqlalchemy-2.0.41-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.6 kB)
+#9 1.726 Collecting inflect>=4.0.0 (from sqlacodegen>=1.1.6->watson-db)
+#9 1.734   Downloading inflect-7.5.0-py3-none-any.whl.metadata (24 kB)
+#9 1.916 Collecting greenlet>=1 (from sqlalchemy>=1.0.14->watson-db)
+#9 1.925   Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+#9 1.968 Requirement already satisfied: Pygments==1.6 in /usr/local/lib/python3.11/site-packages (from watson-framework>=3.4.6->watson-db) (1.6)
+#9 1.969 Requirement already satisfied: Jinja2>=2.8 in /usr/local/lib/python3.11/site-packages (from watson-framework>=3.4.6->watson-db) (3.1.6)
+#9 1.970 Requirement already satisfied: watson-cache>=1.0.1 in /usr/local/lib/python3.11/site-packages (from watson-framework>=3.4.6->watson-db) (1.1.0)
+#9 1.972 Requirement already satisfied: watson-common>=1.5.0 in /usr/local/lib/python3.11/site-packages (from watson-framework>=3.4.6->watson-db) (1.6.3)
+#9 1.973 Requirement already satisfied: watson-console>=2.0.2 in /usr/local/lib/python3.11/site-packages (from watson-framework>=3.4.6->watson-db) (2.0.4)
+#9 1.974 Requirement already satisfied: watson-dev>=3.0.1 in /usr/local/lib/python3.11/site-packages (from watson-framework>=3.4.6->watson-db) (3.0.1)
+#9 1.975 Requirement already satisfied: watson-di>=2.2.2 in /usr/local/lib/python3.11/site-packages (from watson-framework>=3.4.6->watson-db) (2.2.4)
+#9 1.976 Requirement already satisfied: watson-filters>=1.0.0 in /usr/local/lib/python3.11/site-packages (from watson-framework>=3.4.6->watson-db) (1.0.1)
+#9 1.976 Requirement already satisfied: watson-form>=4.0.3 in /usr/local/lib/python3.11/site-packages (from watson-framework>=3.4.6->watson-db) (4.4.2)
+#9 1.977 Requirement already satisfied: watson-html>=1.2.0 in /usr/local/lib/python3.11/site-packages (from watson-framework>=3.4.6->watson-db) (1.2.1)
+#9 1.978 Requirement already satisfied: watson-mail>=1.2.1 in /usr/local/lib/python3.11/site-packages (from watson-framework>=3.4.6->watson-db) (1.3.1)
+#9 1.978 Requirement already satisfied: watson-routing>=1.2.1 in /usr/local/lib/python3.11/site-packages (from watson-framework>=3.4.6->watson-db) (1.2.4)
+#9 1.979 Requirement already satisfied: watson-validators>=1.0.2 in /usr/local/lib/python3.11/site-packages (from watson-framework>=3.4.6->watson-db) (1.0.6)
+#9 2.026 Collecting more_itertools>=8.5.0 (from inflect>=4.0.0->sqlacodegen>=1.1.6->watson-db)
+#9 2.035   Downloading more_itertools-10.8.0-py3-none-any.whl.metadata (39 kB)
+#9 2.088 Collecting typeguard>=4.0.1 (from inflect>=4.0.0->sqlacodegen>=1.1.6->watson-db)
+#9 2.096   Downloading typeguard-4.4.4-py3-none-any.whl.metadata (3.3 kB)
+#9 2.109 Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.11/site-packages (from Jinja2>=2.8->watson-framework>=3.4.6->watson-db) (3.0.3)
+#9 2.126 Requirement already satisfied: watson-events>=1.0.2 in /usr/local/lib/python3.11/site-packages (from watson-di>=2.2.2->watson-framework>=3.4.6->watson-db) (1.0.4)
+#9 2.136 Requirement already satisfied: watson-http>=1.2.4 in /usr/local/lib/python3.11/site-packages (from watson-form>=4.0.3->watson-framework>=3.4.6->watson-db) (1.2.6)
+#9 2.281 Downloading watson_db-2.7.1-py3-none-any.whl (20 kB)
+#9 2.307 Downloading alembic-1.17.1-py3-none-any.whl (247 kB)
+#9 2.329    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.8/247.8 kB 12.3 MB/s eta 0:00:00
+#9 2.338 Downloading sqlacodegen-3.1.1-py3-none-any.whl (22 kB)
+#9 2.362 Downloading sqlalchemy-2.0.41-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+#9 2.491    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 25.6 MB/s eta 0:00:00
+#9 2.500 Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (587 kB)
+#9 2.528    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 587.7/587.7 kB 21.9 MB/s eta 0:00:00
+#9 2.538 Downloading inflect-7.5.0-py3-none-any.whl (35 kB)
+#9 2.557 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#9 2.569    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.4 MB/s eta 0:00:00
+#9 2.578 Downloading mako-1.3.10-py3-none-any.whl (78 kB)
+#9 2.592    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 5.3 MB/s eta 0:00:00
+#9 2.601 Downloading more_itertools-10.8.0-py3-none-any.whl (69 kB)
+#9 2.613    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.7/69.7 kB 5.7 MB/s eta 0:00:00
+#9 2.621 Downloading typeguard-4.4.4-py3-none-any.whl (34 kB)
+#9 2.784 Installing collected packages: typing-extensions, more_itertools, Mako, greenlet, typeguard, sqlalchemy, inflect, alembic, sqlacodegen, watson-db
+#9 3.942 Successfully installed Mako-1.3.10 alembic-1.17.1 greenlet-3.2.4 inflect-7.5.0 more_itertools-10.8.0 sqlacodegen-3.1.1 sqlalchemy-2.0.41 typeguard-4.4.4 typing-extensions-4.15.0 watson-db-2.7.1
+#9 3.942 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 3.947 
+#9 3.947 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 3.947 [notice] To update, run: pip install --upgrade pip
+#9 DONE 4.3s
+
+#10 [6/8] RUN ["pip","install","watson-common"]
+#10 0.445 Requirement already satisfied: watson-common in /usr/local/lib/python3.11/site-packages (1.6.3)
+#10 0.550 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.555 
+#10 0.555 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.555 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.6s
+
+#11 [7/8] RUN ["pip","install","watson-auth"]
+#11 0.737 Collecting watson-auth
+#11 1.055   Downloading watson_auth-4.0.1-py3-none-any.whl.metadata (4.0 kB)
+#11 1.075 Requirement already satisfied: watson-db>=2.4.0 in /usr/local/lib/python3.11/site-packages (from watson-auth) (2.7.1)
+#11 1.076 Requirement already satisfied: watson-validators>=1.0.1 in /usr/local/lib/python3.11/site-packages (from watson-auth) (1.0.6)
+#11 1.077 Requirement already satisfied: watson-form>=3.1.3 in /usr/local/lib/python3.11/site-packages (from watson-auth) (4.4.2)
+#11 1.078 Requirement already satisfied: watson-mail>=1.0.0 in /usr/local/lib/python3.11/site-packages (from watson-auth) (1.3.1)
+#11 1.147 Collecting bcrypt==3.1.2 (from watson-auth)
+#11 1.158   Downloading bcrypt-3.1.2.tar.gz (40 kB)
+#11 1.177      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.4/40.4 kB 1.8 MB/s eta 0:00:00
+#11 1.182   Preparing metadata (setup.py): started
+#11 1.335   Preparing metadata (setup.py): finished with status 'done'
+#11 1.369 Collecting PyJWT==1.5.2 (from watson-auth)
+#11 1.473   Downloading PyJWT-1.5.2-py2.py3-none-any.whl.metadata (2.9 kB)
+#11 1.619 Collecting cffi>=1.1 (from bcrypt==3.1.2->watson-auth)
+#11 1.628   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+#11 1.674 Collecting six>=1.4.1 (from bcrypt==3.1.2->watson-auth)
+#11 1.682   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#11 1.704 Requirement already satisfied: watson-framework>=3.4.6 in /usr/local/lib/python3.11/site-packages (from watson-db>=2.4.0->watson-auth) (3.5.4)
+#11 1.706 Requirement already satisfied: sqlalchemy>=1.0.14 in /usr/local/lib/python3.11/site-packages (from watson-db>=2.4.0->watson-auth) (2.0.41)
+#11 1.707 Requirement already satisfied: alembic>=0.8.6 in /usr/local/lib/python3.11/site-packages (from watson-db>=2.4.0->watson-auth) (1.17.1)
+#11 1.708 Requirement already satisfied: sqlacodegen>=1.1.6 in /usr/local/lib/python3.11/site-packages (from watson-db>=2.4.0->watson-auth) (3.1.1)
+#11 1.713 Requirement already satisfied: watson-common>=1.3.0 in /usr/local/lib/python3.11/site-packages (from watson-form>=3.1.3->watson-auth) (1.6.3)
+#11 1.714 Requirement already satisfied: watson-html>=1.2.0 in /usr/local/lib/python3.11/site-packages (from watson-form>=3.1.3->watson-auth) (1.2.1)
+#11 1.715 Requirement already satisfied: watson-filters>=1.0.0 in /usr/local/lib/python3.11/site-packages (from watson-form>=3.1.3->watson-auth) (1.0.1)
+#11 1.716 Requirement already satisfied: watson-http>=1.2.4 in /usr/local/lib/python3.11/site-packages (from watson-form>=3.1.3->watson-auth) (1.2.6)
+#11 1.725 Requirement already satisfied: Mako in /usr/local/lib/python3.11/site-packages (from alembic>=0.8.6->watson-db>=2.4.0->watson-auth) (1.3.10)
+#11 1.726 Requirement already satisfied: typing-extensions>=4.12 in /usr/local/lib/python3.11/site-packages (from alembic>=0.8.6->watson-db>=2.4.0->watson-auth) (4.15.0)
+#11 1.757 Collecting pycparser (from cffi>=1.1->bcrypt==3.1.2->watson-auth)
+#11 1.765   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+#11 1.789 Requirement already satisfied: inflect>=4.0.0 in /usr/local/lib/python3.11/site-packages (from sqlacodegen>=1.1.6->watson-db>=2.4.0->watson-auth) (7.5.0)
+#11 1.812 Requirement already satisfied: greenlet>=1 in /usr/local/lib/python3.11/site-packages (from sqlalchemy>=1.0.14->watson-db>=2.4.0->watson-auth) (3.2.4)
+#11 1.840 Requirement already satisfied: Pygments==1.6 in /usr/local/lib/python3.11/site-packages (from watson-framework>=3.4.6->watson-db>=2.4.0->watson-auth) (1.6)
+#11 1.840 Requirement already satisfied: Jinja2>=2.8 in /usr/local/lib/python3.11/site-packages (from watson-framework>=3.4.6->watson-db>=2.4.0->watson-auth) (3.1.6)
+#11 1.842 Requirement already satisfied: watson-cache>=1.0.1 in /usr/local/lib/python3.11/site-packages (from watson-framework>=3.4.6->watson-db>=2.4.0->watson-auth) (1.1.0)
+#11 1.843 Requirement already satisfied: watson-console>=2.0.2 in /usr/local/lib/python3.11/site-packages (from watson-framework>=3.4.6->watson-db>=2.4.0->watson-auth) (2.0.4)
+#11 1.843 Requirement already satisfied: watson-dev>=3.0.1 in /usr/local/lib/python3.11/site-packages (from watson-framework>=3.4.6->watson-db>=2.4.0->watson-auth) (3.0.1)
+#11 1.844 Requirement already satisfied: watson-di>=2.2.2 in /usr/local/lib/python3.11/site-packages (from watson-framework>=3.4.6->watson-db>=2.4.0->watson-auth) (2.2.4)
+#11 1.846 Requirement already satisfied: watson-routing>=1.2.1 in /usr/local/lib/python3.11/site-packages (from watson-framework>=3.4.6->watson-db>=2.4.0->watson-auth) (1.2.4)
+#11 1.869 Requirement already satisfied: more_itertools>=8.5.0 in /usr/local/lib/python3.11/site-packages (from inflect>=4.0.0->sqlacodegen>=1.1.6->watson-db>=2.4.0->watson-auth) (10.8.0)
+#11 1.870 Requirement already satisfied: typeguard>=4.0.1 in /usr/local/lib/python3.11/site-packages (from inflect>=4.0.0->sqlacodegen>=1.1.6->watson-db>=2.4.0->watson-auth) (4.4.4)
+#11 1.874 Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.11/site-packages (from Jinja2>=2.8->watson-framework>=3.4.6->watson-db>=2.4.0->watson-auth) (3.0.3)
+#11 1.893 Requirement already satisfied: watson-events>=1.0.2 in /usr/local/lib/python3.11/site-packages (from watson-di>=2.2.2->watson-framework>=3.4.6->watson-db>=2.4.0->watson-auth) (1.0.4)
+#11 2.211 Downloading watson_auth-4.0.1-py3-none-any.whl (24 kB)
+#11 2.337 Downloading PyJWT-1.5.2-py2.py3-none-any.whl (17 kB)
+#11 2.372 Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+#11 2.395    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 9.9 MB/s eta 0:00:00
+#11 2.403 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#11 2.427 Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+#11 2.449    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 7.8 MB/s eta 0:00:00
+#11 2.455 Building wheels for collected packages: bcrypt
+#11 2.460   Building wheel for bcrypt (setup.py): started
+#11 4.267   Building wheel for bcrypt (setup.py): finished with status 'done'
+#11 4.268   Created wheel for bcrypt: filename=bcrypt-3.1.2-cp311-cp311-linux_x86_64.whl size=59799 sha256=0b0226278733eb7661a66ad4434f83dd09a002e28646358cb526cd18e0fd1898
+#11 4.268   Stored in directory: /root/.cache/pip/wheels/db/22/81/065acef96c49d566322bc46d3b3c7a8def373d9fee365651de
+#11 4.269 Successfully built bcrypt
+#11 4.386 Installing collected packages: PyJWT, six, pycparser, cffi, bcrypt, watson-auth
+#11 4.621 Successfully installed PyJWT-1.5.2 bcrypt-3.1.2 cffi-2.0.0 pycparser-2.23 six-1.17.0 watson-auth-4.0.1
+#11 4.621 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 4.626 
+#11 4.626 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 4.626 [notice] To update, run: pip install --upgrade pip
+#11 DONE 4.8s
+
+#12 [8/8] RUN ["pip","install","Watson"]
+#12 0.631 Collecting Watson
+#12 0.765   Downloading Watson-0.1.05.tar.gz (24 kB)
+#12 0.785   Preparing metadata (setup.py): started
+#12 0.904   Preparing metadata (setup.py): finished with status 'done'
+#12 0.958 Collecting Twisted>=12.2.0 (from Watson)
+#12 0.969   Downloading twisted-25.5.0-py3-none-any.whl.metadata (22 kB)
+#12 1.174 INFO: pip is looking at multiple versions of watson to determine which version is compatible with other requirements. This could take a while.
+#12 1.178 Collecting Watson
+#12 1.289   Downloading Watson-0.1.04.tar.gz (23 kB)
+#12 1.307   Preparing metadata (setup.py): started
+#12 1.424   Preparing metadata (setup.py): finished with status 'done'
+#12 1.532   Downloading Watson-0.1.03.tar.gz (19 kB)
+#12 1.550   Preparing metadata (setup.py): started
+#12 1.666   Preparing metadata (setup.py): finished with status 'done'
+#12 1.779   Downloading Watson-0.1.02.tar.gz (18 kB)
+#12 1.797   Preparing metadata (setup.py): started
+#12 1.915   Preparing metadata (setup.py): finished with status 'done'
+#12 2.039   Downloading Watson-0.1.01.tar.gz (17 kB)
+#12 2.056   Preparing metadata (setup.py): started
+#12 2.148   Preparing metadata (setup.py): finished with status 'error'
+#12 2.151   error: subprocess-exited-with-error
+#12 2.151   
+#12 2.151   × python setup.py egg_info did not run successfully.
+#12 2.151   │ exit code: 1
+#12 2.151   ╰─> [7 lines of output]
+#12 2.151       Traceback (most recent call last):
+#12 2.151         File "<string>", line 2, in <module>
+#12 2.151         File "<pip-setuptools-caller>", line 34, in <module>
+#12 2.151         File "/tmp/pip-install-moio3osg/watson_83bf146c41f44af694582159345618da/setup.py", line 13, in <module>
+#12 2.151           long_description=open(readme).read(),
+#12 2.151                            ^^^^^^^^^^^^
+#12 2.151       FileNotFoundError: [Errno 2] No such file or directory: '/tmp/pip-install-moio3osg/watson_83bf146c41f44af694582159345618da/README.md'
+#12 2.151       [end of output]
+#12 2.151   
+#12 2.151   note: This error originates from a subprocess, and is likely not a problem with pip.
+#12 2.152 error: metadata-generation-failed
+#12 2.152 
+#12 2.152 × Encountered error while generating package metadata.
+#12 2.152 ╰─> See above for output.
+#12 2.152 
+#12 2.152 note: This is an issue with the package mentioned above, not pip.
+#12 2.152 hint: See above for details.
+#12 2.157 
+#12 2.157 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 2.157 [notice] To update, run: pip install --upgrade pip
+#12 ERROR: process "pip install Watson" did not complete successfully: exit code: 1
+------
+ > [8/8] RUN ["pip","install","Watson"]:
+2.152 error: metadata-generation-failed
+2.152 
+2.152 × Encountered error while generating package metadata.
+2.152 ╰─> See above for output.
+2.152 
+2.152 note: This is an issue with the package mentioned above, not pip.
+2.152 hint: See above for details.
+2.157 
+2.157 [notice] A new release of pip is available: 24.0 -> 25.3
+2.157 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:8
+--------------------
+   6 |     RUN ["pip","install","watson-common"]
+   7 |     RUN ["pip","install","watson-auth"]
+   8 | >>> RUN ["pip","install","Watson"]
+   9 |     CMD ["python3","/snippet.py"]
+  10 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install Watson" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/m0cypbaqrdpto7kovihimxhhb
+[2025-10-29 20:29:44] ERROR: Build failed for da6c11fad0fc1966aa057e62bacccb2d

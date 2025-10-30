@@ -1,0 +1,89 @@
+=== Docker Build Log for 9750796 ===
+Started at: Mi 29. Okt 18:31:41 CET 2025
+
+[2025-10-29 18:31:41] START: Building image for 9750796
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 237B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.25kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/9750796/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","marisa-trie"]
+#7 2.031 Collecting marisa-trie
+#7 2.073   Downloading marisa_trie-1.3.1-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+#7 2.100 Downloading marisa_trie-1.3.1-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (1.3 MB)
+#7 2.173    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 18.5 MB/s eta 0:00:00
+#7 2.210 Installing collected packages: marisa-trie
+#7 2.240 Successfully installed marisa-trie-1.3.1
+#7 2.240 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.330 
+#7 2.330 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.330 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.5s
+
+#8 [4/5] RUN ["pip","install","numpy"]
+#8 0.684 Collecting numpy
+#8 0.725   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 0.756      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 1.8 MB/s eta 0:00:00
+#8 0.775 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#8 1.457    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 22.6 MB/s eta 0:00:00
+#8 1.534 Installing collected packages: numpy
+#8 2.917 Successfully installed numpy-2.3.4
+#8 2.917 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.922 
+#8 2.922 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.922 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.4s
+
+#9 [5/5] RUN ["pip","install","scikit-learn"]
+#9 0.603 Collecting scikit-learn
+#9 0.637   Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#9 0.686 Requirement already satisfied: numpy>=1.22.0 in /usr/local/lib/python3.11/site-packages (from scikit-learn) (2.3.4)
+#9 0.814 Collecting scipy>=1.8.0 (from scikit-learn)
+#9 0.825   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#9 0.850      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.3 MB/s eta 0:00:00
+#9 0.895 Collecting joblib>=1.2.0 (from scikit-learn)
+#9 0.903   Downloading joblib-1.5.2-py3-none-any.whl.metadata (5.6 kB)
+#9 0.941 Collecting threadpoolctl>=3.1.0 (from scikit-learn)
+#9 0.950   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#9 0.998 Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+#9 1.372    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 26.1 MB/s eta 0:00:00
+#9 1.380 Downloading joblib-1.5.2-py3-none-any.whl (308 kB)
+#9 1.400    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 308.4/308.4 kB 16.7 MB/s eta 0:00:00
+#9 1.411 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#9 2.913    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 14.8 MB/s eta 0:00:00
+#9 2.924 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#9 3.141 Installing collected packages: threadpoolctl, scipy, joblib, scikit-learn
+#9 7.336 Successfully installed joblib-1.5.2 scikit-learn-1.7.2 scipy-1.16.3 threadpoolctl-3.6.0
+#9 7.336 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 7.341 
+#9 7.341 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 7.341 [notice] To update, run: pip install --upgrade pip
+#9 DONE 8.5s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 1.0s done
+#10 writing image sha256:998a4b845592935a4784d58992c048cd878d1cb29be806123ff3f674754adde0 done
+#10 naming to docker.io/library/test-image-9750796 done
+#10 DONE 1.0s
+
+View build details: docker-desktop://dashboard/build/default/default/sqba4e5acbbmwn3tbxfb0ifas
+[2025-10-29 18:31:57] SUCCESS: Build completed for 9750796

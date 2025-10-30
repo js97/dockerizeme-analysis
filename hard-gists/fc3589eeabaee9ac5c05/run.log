@@ -1,0 +1,80 @@
+=== Docker Run Log for fc3589eeabaee9ac5c05 ===
+Started at: Mi 29. Okt 21:41:56 CET 2025
+
+[2025-10-29 21:42:05] START: Running container for fc3589eeabaee9ac5c05
+[2025-10-29 21:42:05] SUCCESS: Container a1d9c442b13e59479544e3477911d81f58ad77d1059572e9a091f0c4b1a3a7fd started for fc3589eeabaee9ac5c05
+=== Container logs for fc3589eeabaee9ac5c05 ===
+[WARNING] [Config      ] Older configuration version detected (0 instead of 27)
+[WARNING] [Config      ] Upgrading configuration in progress.
+[DEBUG  ] [Config      ] Upgrading from 0 to 1
+[INFO   ] [Logger      ] Record log in /root/.kivy/logs/kivy_25-10-29_0.txt
+[INFO   ] [Kivy        ] v2.3.1
+[INFO   ] [Kivy        ] Installed at "/usr/local/lib/python3.11/site-packages/kivy/__init__.py"
+[INFO   ] [Python      ] v3.11.14 (main, Oct 21 2025, 11:54:17) [GCC 14.2.0]
+[INFO   ] [Python      ] Interpreter at "/usr/local/bin/python3"
+[INFO   ] [Logger      ] Purge log fired. Processing...
+[INFO   ] [Logger      ] Purge finished!
+[INFO   ] [Factory     ] 195 symbols loaded
+[INFO   ] [Image       ] Providers: img_tex, img_dds, img_sdl2 (img_pil, img_ffpyplayer ignored)
+[INFO   ] [Text        ] Provider: sdl2
+[ERROR  ] [Input       ] MTDev is not supported by your version of linux
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/kivy/input/providers/__init__.py", line 41, in <module>
+    import kivy.input.providers.mtdev
+  File "/usr/local/lib/python3.11/site-packages/kivy/input/providers/mtdev.py", line 94, in <module>
+    from kivy.lib.mtdev import Device, \
+  File "/usr/local/lib/python3.11/site-packages/kivy/lib/mtdev.py", line 30, in <module>
+    libmtdev = cdll.LoadLibrary('libmtdev.so.1')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/ctypes/__init__.py", line 454, in LoadLibrary
+    return self._dlltype(name)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/ctypes/__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: libmtdev.so.1: cannot open shared object file: No such file or directory
+[INFO   ] [Window      ] Provider: sdl2
+[CRITICAL] [Window      ] Unable to find any valuable Window provider. Please enable debug logging (e.g. add -d if running from the command line, or change the log level in the config) and re-run your app to identify potential causes
+sdl2 - ImportError: libGL.so.1: cannot open shared object file: No such file or directory
+  File "/usr/local/lib/python3.11/site-packages/kivy/core/__init__.py", line 71, in core_select_lib
+    cls = cls()
+          ^^^^^
+  File "/usr/local/lib/python3.11/site-packages/kivy/core/window/window_sdl2.py", line 165, in __init__
+    super(WindowSDL, self).__init__()
+  File "/usr/local/lib/python3.11/site-packages/kivy/core/window/__init__.py", line 1129, in __init__
+    self.create_window()
+  File "/usr/local/lib/python3.11/site-packages/kivy/core/window/window_sdl2.py", line 319, in create_window
+    self.get_gl_backend_name())
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/kivy/core/window/__init__.py", line 1459, in get_gl_backend_name
+    return cgl_get_backend_name(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "kivy/graphics/cgl.pyx", line 71, in kivy.graphics.cgl.cgl_get_backend_name
+  File "kivy/graphics/cgl.pyx", line 84, in kivy.graphics.cgl.cgl_get_backend_name
+  File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 676, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 573, in module_from_spec
+  File "<frozen importlib._bootstrap_external>", line 1233, in create_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+
+x11 - ImportError: libGL.so.1: cannot open shared object file: No such file or directory
+  File "/usr/local/lib/python3.11/site-packages/kivy/core/__init__.py", line 59, in core_select_lib
+    mod = importlib.__import__(name='{2}.{0}.{1}'.format(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1283, in __import__
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 676, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 573, in module_from_spec
+  File "<frozen importlib._bootstrap_external>", line 1233, in create_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+
+[CRITICAL] [App         ] Unable to get a Window, abort.
+=== End of logs for fc3589eeabaee9ac5c05 ===
+[2025-10-29 21:42:07] INFO: Container a1d9c442b13e59479544e3477911d81f58ad77d1059572e9a091f0c4b1a3a7fd has stopped

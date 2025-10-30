@@ -1,0 +1,12 @@
+=== Docker Run Log for 1321295 ===
+Started at: Mi 29. Okt 12:07:01 CET 2025
+
+[2025-10-29 12:07:01] START: Running container for 1321295
+[2025-10-29 12:07:02] SUCCESS: Container b90ed509c5b2e02c78d3e9d1909e790d0efffcbd9e5eaeb105e01979ac899889 started for 1321295
+=== Container logs for 1321295 ===
+  File "/snippet.py", line 107
+    print 'Found dep. on pch: ', source[0], ' -> ', env[pch_env_key]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 1321295 ===
+[2025-10-29 12:07:04] INFO: Container b90ed509c5b2e02c78d3e9d1909e790d0efffcbd9e5eaeb105e01979ac899889 has stopped

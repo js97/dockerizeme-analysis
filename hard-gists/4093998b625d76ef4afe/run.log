@@ -1,0 +1,18 @@
+=== Docker Run Log for 4093998b625d76ef4afe ===
+Started at: Mi 29. Okt 14:21:25 CET 2025
+
+[2025-10-29 14:21:29] START: Running container for 4093998b625d76ef4afe
+[2025-10-29 14:21:29] SUCCESS: Container 694a783aacfed20d811ca2ad459574c68d656c954257820032d52e2550c17840 started for 4093998b625d76ef4afe
+=== Container logs for 4093998b625d76ef4afe ===
+Traceback (most recent call last):
+  File "/snippet.py", line 1, in <module>
+    from ib.opt import Connection, message
+  File "/usr/local/lib/python3.11/site-packages/ib/opt/__init__.py", line 30, in <module>
+    from ib.opt.connection import Connection
+  File "/usr/local/lib/python3.11/site-packages/ib/opt/connection.py", line 20, in <module>
+    from ib.opt.dispatcher import Dispatcher
+  File "/usr/local/lib/python3.11/site-packages/ib/opt/dispatcher.py", line 8, in <module>
+    from Queue import Queue, Empty
+ModuleNotFoundError: No module named 'Queue'
+=== End of logs for 4093998b625d76ef4afe ===
+[2025-10-29 14:21:31] INFO: Container 694a783aacfed20d811ca2ad459574c68d656c954257820032d52e2550c17840 has stopped

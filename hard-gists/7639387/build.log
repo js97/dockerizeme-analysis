@@ -1,0 +1,138 @@
+=== Docker Build Log for 7639387 ===
+Started at: Mi 29. Okt 17:13:59 CET 2025
+
+[2025-10-29 17:13:59] START: Building image for 7639387
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 476B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 28.08kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/12] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/12] COPY hard-gists/7639387/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/12] RUN ["apt-get","update"]
+#7 0.266 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.266 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.279 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.287 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.613 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.614 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.249 Fetched 9833 kB in 1s (9653 kB/s)
+#7 1.249 Reading package lists...
+#7 DONE 1.9s
+
+#8 [ 4/12] RUN ["pip","install","python-constraint"]
+#8 2.105 Collecting python-constraint
+#8 2.161   Downloading python-constraint-1.4.0.tar.bz2 (18 kB)
+#8 2.182   Preparing metadata (setup.py): started
+#8 2.575   Preparing metadata (setup.py): finished with status 'done'
+#8 2.579 Building wheels for collected packages: python-constraint
+#8 2.579   Building wheel for python-constraint (setup.py): started
+#8 2.766   Building wheel for python-constraint (setup.py): finished with status 'done'
+#8 2.767   Created wheel for python-constraint: filename=python_constraint-1.4.0-py2.py3-none-any.whl size=24107 sha256=1c73f7d8207254a3a78367963177749743a3d30266348403cae6c8520bc1a9ab
+#8 2.767   Stored in directory: /root/.cache/pip/wheels/1e/af/a9/990ae7e6a78319b7d7afaab2d14e7e5ae349d5613db5ae28fd
+#8 2.770 Successfully built python-constraint
+#8 2.804 Installing collected packages: python-constraint
+#8 2.833 Successfully installed python-constraint-1.4.0
+#8 2.833 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.924 
+#8 2.924 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.924 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.1s
+
+#9 [ 5/12] RUN ["pip","install","glpk"]
+#9 0.644 Collecting glpk
+#9 0.774   Downloading glpk-0.4.8.tar.gz (160 kB)
+#9 0.808      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 160.7/160.7 kB 4.9 MB/s eta 0:00:00
+#9 0.825   Installing build dependencies: started
+#9 2.543   Installing build dependencies: finished with status 'done'
+#9 2.546   Getting requirements to build wheel: started
+#9 2.692   Getting requirements to build wheel: finished with status 'done'
+#9 2.696   Preparing metadata (pyproject.toml): started
+#9 3.023   Preparing metadata (pyproject.toml): finished with status 'done'
+#9 3.024 Building wheels for collected packages: glpk
+#9 3.029   Building wheel for glpk (pyproject.toml): started
+#9 3.282   Building wheel for glpk (pyproject.toml): finished with status 'error'
+#9 3.285   error: subprocess-exited-with-error
+#9 3.285   
+#9 3.285   × Building wheel for glpk (pyproject.toml) did not run successfully.
+#9 3.285   │ exit code: 1
+#9 3.285   ╰─> [28 lines of output]
+#9 3.285       /tmp/pip-build-env-5a02eh39/overlay/lib/python3.11/site-packages/setuptools_scm/_integration/version_inference.py:51: UserWarning: version of glpk already set
+#9 3.285         warnings.warn(self.message)
+#9 3.285       /tmp/pip-build-env-5a02eh39/overlay/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+#9 3.285       !!
+#9 3.285       
+#9 3.285               ********************************************************************************
+#9 3.285               Please consider removing the following classifiers in favor of a SPDX license expression:
+#9 3.285       
+#9 3.285               License :: OSI Approved :: GNU General Public License (GPL)
+#9 3.285       
+#9 3.285               See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+#9 3.285               ********************************************************************************
+#9 3.285       
+#9 3.285       !!
+#9 3.285         self._finalize_license_expression()
+#9 3.285       running bdist_wheel
+#9 3.285       running build
+#9 3.285       running build_ext
+#9 3.285       building 'glpk' extension
+#9 3.285       creating build/temp.linux-x86_64-cpython-311/src
+#9 3.285       gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -DVERSION_NUMBER=\"0.4.8\" -I/usr/local/include/python3.11 -c src/2to3.c -o build/temp.linux-x86_64-cpython-311/src/2to3.o
+#9 3.285       gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -DVERSION_NUMBER=\"0.4.8\" -I/usr/local/include/python3.11 -c src/bar.c -o build/temp.linux-x86_64-cpython-311/src/bar.o
+#9 3.285       In file included from src/bar.c:22:
+#9 3.285       src/lp.h:24:10: fatal error: glpk.h: No such file or directory
+#9 3.285          24 | #include <glpk.h>
+#9 3.285             |          ^~~~~~~~
+#9 3.285       compilation terminated.
+#9 3.285       error: command '/usr/bin/gcc' failed with exit code 1
+#9 3.285       [end of output]
+#9 3.285   
+#9 3.285   note: This error originates from a subprocess, and is likely not a problem with pip.
+#9 3.286   ERROR: Failed building wheel for glpk
+#9 3.286 Failed to build glpk
+#9 3.286 ERROR: Could not build wheels for glpk, which is required to install pyproject.toml-based projects
+#9 3.291 
+#9 3.291 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 3.291 [notice] To update, run: pip install --upgrade pip
+#9 ERROR: process "pip install glpk" did not complete successfully: exit code: 1
+------
+ > [ 5/12] RUN ["pip","install","glpk"]:
+3.285       error: command '/usr/bin/gcc' failed with exit code 1
+3.285       [end of output]
+3.285   
+3.285   note: This error originates from a subprocess, and is likely not a problem with pip.
+3.286   ERROR: Failed building wheel for glpk
+3.286 Failed to build glpk
+3.286 ERROR: Could not build wheels for glpk, which is required to install pyproject.toml-based projects
+3.291 
+3.291 [notice] A new release of pip is available: 24.0 -> 25.3
+3.291 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:5
+--------------------
+   3 |     RUN ["apt-get","update"]
+   4 |     RUN ["pip","install","python-constraint"]
+   5 | >>> RUN ["pip","install","glpk"]
+   6 |     RUN ["pip","install","networkx"]
+   7 |     RUN ["apt-get","install","-y","python-pip"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install glpk" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/t6kr4s9kck3n9gv7vvffr704d
+[2025-10-29 17:14:08] ERROR: Build failed for 7639387

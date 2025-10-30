@@ -1,0 +1,13 @@
+=== Docker Run Log for 5445149 ===
+Started at: Mi 29. Okt 15:41:38 CET 2025
+
+[2025-10-29 15:41:44] START: Running container for 5445149
+[2025-10-29 15:41:45] SUCCESS: Container 8e8ef12934bd4e9eee9999276511671d03db4faf954603879a3c4c3b6e2a99b4 started for 5445149
+=== Container logs for 5445149 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 4, in <module>
+    class JSONField(serializers.WritableField):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'rest_framework.serializers' has no attribute 'WritableField'
+=== End of logs for 5445149 ===
+[2025-10-29 15:41:47] INFO: Container 8e8ef12934bd4e9eee9999276511671d03db4faf954603879a3c4c3b6e2a99b4 has stopped

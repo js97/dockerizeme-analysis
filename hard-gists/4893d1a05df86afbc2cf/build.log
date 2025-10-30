@@ -1,0 +1,69 @@
+=== Docker Build Log for 4893d1a05df86afbc2cf ===
+Started at: Mi 29. Okt 15:02:59 CET 2025
+
+[2025-10-29 15:02:59] START: Building image for 4893d1a05df86afbc2cf
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 218B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.88kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/4893d1a05df86afbc2cf/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","PyYAML"]
+#7 2.479 Collecting PyYAML
+#7 2.515   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#7 2.542 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#7 2.597    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 15.3 MB/s eta 0:00:00
+#7 2.644 Installing collected packages: PyYAML
+#7 2.704 Successfully installed PyYAML-6.0.3
+#7 2.704 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.819 
+#7 2.819 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.819 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.0s
+
+#8 [4/4] RUN ["pip","install","mysql-connector"]
+#8 0.545 Collecting mysql-connector
+#8 0.589   Downloading mysql-connector-2.2.9.tar.gz (11.9 MB)
+#8 1.143      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.9/11.9 MB 21.7 MB/s eta 0:00:00
+#8 1.307   Preparing metadata (setup.py): started
+#8 1.940   Preparing metadata (setup.py): finished with status 'done'
+#8 1.942 Building wheels for collected packages: mysql-connector
+#8 1.944   Building wheel for mysql-connector (setup.py): started
+#8 2.252   Building wheel for mysql-connector (setup.py): finished with status 'done'
+#8 2.253   Created wheel for mysql-connector: filename=mysql_connector-2.2.9-cp311-cp311-linux_x86_64.whl size=248029 sha256=05cd951ae273e0e8204d75382c6a530dd74718f14956f44e5899d210048846fd
+#8 2.253   Stored in directory: /root/.cache/pip/wheels/17/cd/ed/2d49e9bac69cf09382e4c7cc20a2511202b48324b87db26019
+#8 2.256 Successfully built mysql-connector
+#8 2.292 Installing collected packages: mysql-connector
+#8 2.444 Successfully installed mysql-connector-2.2.9
+#8 2.445 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.452 
+#8 2.452 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.452 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.6s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.2s done
+#9 writing image sha256:0cba3a52d005e09f27ec443c8f69a1a9bfa0c5f5e0708a9598a3d5a7623f2517 done
+#9 naming to docker.io/library/test-image-4893d1a05df86afbc2cf done
+#9 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/yykof3yeo31lkxj6r8x2n7qon
+[2025-10-29 15:03:05] SUCCESS: Build completed for 4893d1a05df86afbc2cf

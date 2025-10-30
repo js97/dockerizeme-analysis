@@ -1,0 +1,252 @@
+=== Docker Build Log for c4b999517b713adb6480a349bb6d7658 ===
+Started at: Mi 29. Okt 19:53:07 CET 2025
+
+[2025-10-29 19:53:07] START: Building image for c4b999517b713adb6480a349bb6d7658
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.46kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.04kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/54] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/54] COPY hard-gists/c4b999517b713adb6480a349bb6d7658/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/54] RUN ["apt-get","update"]
+#7 0.289 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.291 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.303 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.322 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 1.001 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 1.012 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.590 Fetched 9833 kB in 1s (7332 kB/s)
+#7 1.590 Reading package lists...
+#7 DONE 2.2s
+
+#8 [ 4/54] RUN ["pip","install","python-oauth2"]
+#8 2.071 Collecting python-oauth2
+#8 2.129   Downloading python-oauth2-1.1.1.tar.gz (45 kB)
+#8 2.149      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.4/45.4 kB 2.0 MB/s eta 0:00:00
+#8 2.158   Preparing metadata (setup.py): started
+#8 2.520   Preparing metadata (setup.py): finished with status 'done'
+#8 2.523 Building wheels for collected packages: python-oauth2
+#8 2.524   Building wheel for python-oauth2 (setup.py): started
+#8 2.716   Building wheel for python-oauth2 (setup.py): finished with status 'done'
+#8 2.716   Created wheel for python-oauth2: filename=python_oauth2-1.1.1-py3-none-any.whl size=57436 sha256=a35a109ba9b3eb4444c4467f0ee7c40514f843900f542c0008880f9553356b9a
+#8 2.717   Stored in directory: /root/.cache/pip/wheels/7b/63/ab/b9611ef76d652ff5075d91cab15721867250f7442a4fd2097f
+#8 2.720 Successfully built python-oauth2
+#8 2.750 Installing collected packages: python-oauth2
+#8 2.796 Successfully installed python-oauth2-1.1.1
+#8 2.796 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.903 
+#8 2.903 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.903 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.1s
+
+#9 [ 5/54] RUN ["pip","install","requests"]
+#9 0.641 Collecting requests
+#9 0.760   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#9 0.885 Collecting charset_normalizer<4,>=2 (from requests)
+#9 0.894   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#9 0.944 Collecting idna<4,>=2.5 (from requests)
+#9 0.952   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#9 1.015 Collecting urllib3<3,>=1.21.1 (from requests)
+#9 1.024   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#9 1.078 Collecting certifi>=2017.4.17 (from requests)
+#9 1.088   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#9 1.115 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#9 1.140    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 2.4 MB/s eta 0:00:00
+#9 1.148 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#9 1.184    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 4.5 MB/s eta 0:00:00
+#9 1.193 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#9 1.227    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 4.5 MB/s eta 0:00:00
+#9 1.237 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#9 1.256    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 3.6 MB/s eta 0:00:00
+#9 1.264 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#9 1.302    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 3.3 MB/s eta 0:00:00
+#9 1.348 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#9 1.588 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#9 1.588 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.593 
+#9 1.593 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.593 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.7s
+
+#10 [ 6/54] RUN ["pip","install","asyncio"]
+#10 0.516 Collecting asyncio
+#10 0.564   Downloading asyncio-4.0.0-py3-none-any.whl.metadata (994 bytes)
+#10 0.590 Downloading asyncio-4.0.0-py3-none-any.whl (5.6 kB)
+#10 0.648 Installing collected packages: asyncio
+#10 0.680 Successfully installed asyncio-4.0.0
+#10 0.681 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.686 
+#10 0.686 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.686 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.8s
+
+#11 [ 7/54] RUN ["pip","install","botchallenge"]
+#11 0.534 Collecting botchallenge
+#11 0.570   Downloading botchallenge-1.2.0.tar.gz (196 kB)
+#11 0.611      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 196.2/196.2 kB 5.0 MB/s eta 0:00:00
+#11 0.626   Preparing metadata (setup.py): started
+#11 0.741   Preparing metadata (setup.py): finished with status 'done'
+#11 0.900 Collecting greenlet (from botchallenge)
+#11 0.909   Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+#11 0.942 Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (587 kB)
+#11 0.990    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 587.7/587.7 kB 12.6 MB/s eta 0:00:00
+#11 0.995 Building wheels for collected packages: botchallenge
+#11 1.000   Building wheel for botchallenge (setup.py): started
+#11 1.181   Building wheel for botchallenge (setup.py): finished with status 'done'
+#11 1.182   Created wheel for botchallenge: filename=botchallenge-1.2.0-py3-none-any.whl size=249493 sha256=e69c600ab0444b51eaca3c98616dfac552f041759e01c3930085ce71a667c24e
+#11 1.182   Stored in directory: /root/.cache/pip/wheels/22/16/85/d9f52fb75abd7f266b9fcec19ea21d83e2cb1f211c9d6f5053
+#11 1.184 Successfully built botchallenge
+#11 1.229 Installing collected packages: greenlet, botchallenge
+#11 1.442 Successfully installed botchallenge-1.2.0 greenlet-3.2.4
+#11 1.442 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.447 
+#11 1.447 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.447 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.5s
+
+#12 [ 8/54] RUN ["pip","install","Google-Search-API"]
+#12 0.525 Collecting Google-Search-API
+#12 0.566   Downloading Google_Search_API-1.1.14-py3-none-any.whl.metadata (909 bytes)
+#12 0.624 Collecting beautifulsoup4 (from Google-Search-API)
+#12 0.635   Downloading beautifulsoup4-4.14.2-py3-none-any.whl.metadata (3.8 kB)
+#12 0.709 Collecting selenium<3.0.0,>=2.44.0 (from Google-Search-API)
+#12 0.720   Downloading selenium-2.53.6-py2.py3-none-any.whl.metadata (5.1 kB)
+#12 0.732 Requirement already satisfied: requests in /usr/local/lib/python3.11/site-packages (from Google-Search-API) (2.32.5)
+#12 0.770 Collecting unidecode (from Google-Search-API)
+#12 0.779   Downloading Unidecode-1.4.0-py3-none-any.whl.metadata (13 kB)
+#12 0.837 Collecting vcrpy (from Google-Search-API)
+#12 0.847   Downloading vcrpy-7.0.0-py2.py3-none-any.whl.metadata (4.6 kB)
+#12 0.894 Collecting future (from Google-Search-API)
+#12 0.908   Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+#12 0.952 Collecting fake-useragent (from Google-Search-API)
+#12 0.961   Downloading fake_useragent-2.2.0-py3-none-any.whl.metadata (17 kB)
+#12 1.012 Collecting soupsieve>1.2 (from beautifulsoup4->Google-Search-API)
+#12 1.022   Downloading soupsieve-2.8-py3-none-any.whl.metadata (4.6 kB)
+#12 1.072 Collecting typing-extensions>=4.0.0 (from beautifulsoup4->Google-Search-API)
+#12 1.082   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#12 1.099 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests->Google-Search-API) (3.4.4)
+#12 1.100 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests->Google-Search-API) (3.11)
+#12 1.101 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests->Google-Search-API) (2.5.0)
+#12 1.102 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests->Google-Search-API) (2025.10.5)
+#12 1.173 Collecting PyYAML (from vcrpy->Google-Search-API)
+#12 1.181   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#12 1.328 Collecting wrapt (from vcrpy->Google-Search-API)
+#12 1.347   Downloading wrapt-2.0.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.8 kB)
+#12 1.648 Collecting yarl (from vcrpy->Google-Search-API)
+#12 1.659   Downloading yarl-1.22.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (75 kB)
+#12 1.686      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 75.1/75.1 kB 2.8 MB/s eta 0:00:00
+#12 1.963 Collecting multidict>=4.0 (from yarl->vcrpy->Google-Search-API)
+#12 1.975   Downloading multidict-6.7.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+#12 2.098 Collecting propcache>=0.2.1 (from yarl->vcrpy->Google-Search-API)
+#12 2.109   Downloading propcache-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+#12 2.137 Downloading Google_Search_API-1.1.14-py3-none-any.whl (19 kB)
+#12 2.163 Downloading selenium-2.53.6-py2.py3-none-any.whl (884 kB)
+#12 2.241    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 884.6/884.6 kB 12.5 MB/s eta 0:00:00
+#12 2.250 Downloading beautifulsoup4-4.14.2-py3-none-any.whl (106 kB)
+#12 2.267    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.4/106.4 kB 6.5 MB/s eta 0:00:00
+#12 2.276 Downloading fake_useragent-2.2.0-py3-none-any.whl (161 kB)
+#12 2.294    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 161.7/161.7 kB 9.3 MB/s eta 0:00:00
+#12 2.304 Downloading future-1.0.0-py3-none-any.whl (491 kB)
+#12 2.341    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 491.3/491.3 kB 13.9 MB/s eta 0:00:00
+#12 2.353 Downloading Unidecode-1.4.0-py3-none-any.whl (235 kB)
+#12 2.377    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 235.8/235.8 kB 10.1 MB/s eta 0:00:00
+#12 2.390 Downloading vcrpy-7.0.0-py2.py3-none-any.whl (42 kB)
+#12 2.400    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.3/42.3 kB 3.5 MB/s eta 0:00:00
+#12 2.410 Downloading soupsieve-2.8-py3-none-any.whl (36 kB)
+#12 2.429 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#12 2.440    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.7 MB/s eta 0:00:00
+#12 2.453 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#12 2.518    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 12.6 MB/s eta 0:00:00
+#12 2.530 Downloading wrapt-2.0.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (114 kB)
+#12 2.546    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.1/114.1 kB 7.1 MB/s eta 0:00:00
+#12 2.556 Downloading yarl-1.22.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (365 kB)
+#12 2.588    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 12.1 MB/s eta 0:00:00
+#12 2.598 Downloading multidict-6.7.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (246 kB)
+#12 2.621    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 246.7/246.7 kB 11.1 MB/s eta 0:00:00
+#12 2.630 Downloading propcache-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (210 kB)
+#12 2.651    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 210.0/210.0 kB 10.6 MB/s eta 0:00:00
+#12 2.743 Installing collected packages: selenium, wrapt, unidecode, typing-extensions, soupsieve, PyYAML, propcache, multidict, future, fake-useragent, yarl, beautifulsoup4, vcrpy, Google-Search-API
+#12 3.468 Successfully installed Google-Search-API-1.1.14 PyYAML-6.0.3 beautifulsoup4-4.14.2 fake-useragent-2.2.0 future-1.0.0 multidict-6.7.0 propcache-0.4.1 selenium-2.53.6 soupsieve-2.8 typing-extensions-4.15.0 unidecode-1.4.0 vcrpy-7.0.0 wrapt-2.0.0 yarl-1.22.0
+#12 3.468 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 3.473 
+#12 3.473 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 3.473 [notice] To update, run: pip install --upgrade pip
+#12 DONE 3.8s
+
+#13 [ 9/54] RUN ["pip","install","proto-google-datastore-v1beta3"]
+#13 0.527 Collecting proto-google-datastore-v1beta3
+#13 0.568   Downloading proto-google-datastore-v1beta3-1.0.0-beta.2.tar.gz (22 kB)
+#13 0.588   Preparing metadata (setup.py): started
+#13 0.704   Preparing metadata (setup.py): finished with status 'done'
+#13 0.910 Collecting protobuf==3.0.0b2.post2 (from proto-google-datastore-v1beta3)
+#13 0.922   Downloading protobuf-3.0.0b2.post2.zip (155 kB)
+#13 0.960      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.1/155.1 kB 4.2 MB/s eta 0:00:00
+#13 0.968   Preparing metadata (setup.py): started
+#13 1.100   Preparing metadata (setup.py): finished with status 'error'
+#13 1.103   error: subprocess-exited-with-error
+#13 1.103   
+#13 1.103   × python setup.py egg_info did not run successfully.
+#13 1.103   │ exit code: 1
+#13 1.103   ╰─> [6 lines of output]
+#13 1.103       Traceback (most recent call last):
+#13 1.103         File "<string>", line 2, in <module>
+#13 1.103         File "<pip-setuptools-caller>", line 34, in <module>
+#13 1.103         File "/tmp/pip-install-m2ehbnhq/protobuf_1a977e903ebf4b9b982488e13a6d20cb/setup.py", line 17, in <module>
+#13 1.103           from distutils.command.build_py import build_py_2to3 as _build_py
+#13 1.103       ImportError: cannot import name 'build_py_2to3' from 'distutils.command.build_py' (/usr/local/lib/python3.11/site-packages/setuptools/_distutils/command/build_py.py)
+#13 1.103       [end of output]
+#13 1.103   
+#13 1.103   note: This error originates from a subprocess, and is likely not a problem with pip.
+#13 1.104 error: metadata-generation-failed
+#13 1.104 
+#13 1.104 × Encountered error while generating package metadata.
+#13 1.104 ╰─> See above for output.
+#13 1.104 
+#13 1.104 note: This is an issue with the package mentioned above, not pip.
+#13 1.104 hint: See above for details.
+#13 1.109 
+#13 1.109 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 1.109 [notice] To update, run: pip install --upgrade pip
+#13 ERROR: process "pip install proto-google-datastore-v1beta3" did not complete successfully: exit code: 1
+------
+ > [ 9/54] RUN ["pip","install","proto-google-datastore-v1beta3"]:
+1.104 error: metadata-generation-failed
+1.104 
+1.104 × Encountered error while generating package metadata.
+1.104 ╰─> See above for output.
+1.104 
+1.104 note: This is an issue with the package mentioned above, not pip.
+1.104 hint: See above for details.
+1.109 
+1.109 [notice] A new release of pip is available: 24.0 -> 25.3
+1.109 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:9
+--------------------
+   7 |     RUN ["pip","install","botchallenge"]
+   8 |     RUN ["pip","install","Google-Search-API"]
+   9 | >>> RUN ["pip","install","proto-google-datastore-v1beta3"]
+  10 |     RUN ["pip","install","grpc-google-iam-admin-v1"]
+  11 |     RUN ["pip","install","google-gax"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install proto-google-datastore-v1beta3" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/ju1avx2u9hrwygn90jmolmcn1
+[2025-10-29 19:53:21] ERROR: Build failed for c4b999517b713adb6480a349bb6d7658

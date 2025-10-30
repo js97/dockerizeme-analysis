@@ -1,0 +1,27 @@
+=== Docker Run Log for 8e4b396a1c8a1f3f80d0 ===
+Started at: Mi 29. Okt 18:11:43 CET 2025
+
+[2025-10-29 18:12:01] START: Running container for 8e4b396a1c8a1f3f80d0
+[2025-10-29 18:12:01] SUCCESS: Container aa42a58e9ecf84588d070a5aa9ba53ba6749ed3cb97730cffa00f769dd616d61 started for 8e4b396a1c8a1f3f80d0
+=== Container logs for 8e4b396a1c8a1f3f80d0 ===
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/xmod/__init__.py", line 148, in _getattr
+    return getattr(extension, k)
+           ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'get_text'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snippet.py", line 3, in <module>
+    script = editor.get_text()
+             ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/xmod/__init__.py", line 123, in wrapped
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/xmod/__init__.py", line 150, in _getattr
+    return getattr(module, k)
+           ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'editor' has no attribute 'get_text'
+=== End of logs for 8e4b396a1c8a1f3f80d0 ===
+[2025-10-29 18:12:03] INFO: Container aa42a58e9ecf84588d070a5aa9ba53ba6749ed3cb97730cffa00f769dd616d61 has stopped

@@ -1,0 +1,216 @@
+=== Docker Build Log for 23585f7f50005408fc72 ===
+Started at: Mi 29. Okt 13:02:55 CET 2025
+
+[2025-10-29 13:02:55] START: Building image for 23585f7f50005408fc72
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 431B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.30kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/11] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/11] COPY hard-gists/23585f7f50005408fc72/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/11] RUN ["pip","install","six"]
+#7 1.884 Collecting six
+#7 1.920   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 1.940 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 1.983 Installing collected packages: six
+#7 1.999 Successfully installed six-1.17.0
+#7 1.999 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.088 
+#7 2.088 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.088 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.2s
+
+#8 [ 4/11] RUN ["pip","install","pytest"]
+#8 0.541 Collecting pytest
+#8 0.581   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#8 0.624 Collecting iniconfig>=1 (from pytest)
+#8 0.632   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#8 0.683 Collecting packaging>=20 (from pytest)
+#8 0.692   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.733 Collecting pluggy<2,>=1.5 (from pytest)
+#8 0.742   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#8 0.790 Collecting pygments>=2.7.2 (from pytest)
+#8 0.799   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#8 0.828 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#8 0.867    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 9.7 MB/s eta 0:00:00
+#8 0.875 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#8 0.894 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 0.907    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.0 MB/s eta 0:00:00
+#8 0.915 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#8 0.934 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#8 0.990    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 22.1 MB/s eta 0:00:00
+#8 1.039 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#8 1.770 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#8 1.770 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.775 
+#8 1.775 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.775 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.9s
+
+#9 [ 5/11] RUN ["pip","install","py"]
+#9 0.517 Collecting py
+#9 0.553   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#9 0.578 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#9 0.613    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.7 MB/s eta 0:00:00
+#9 0.656 Installing collected packages: py
+#9 0.735 Successfully installed py-1.11.0
+#9 0.735 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.740 
+#9 0.740 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.740 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.8s
+
+#10 [ 6/11] RUN ["pip","install","setuptools"]
+#10 0.444 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (79.0.1)
+#10 0.511 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.516 
+#10 0.516 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.516 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.6s
+
+#11 [ 7/11] RUN ["pip","install","melissa"]
+#11 0.677 Collecting melissa
+#11 0.815   Downloading melissa-1000.0.34.tar.gz (2.0 MB)
+#11 0.999      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 11.0 MB/s eta 0:00:00
+#11 1.031   Preparing metadata (setup.py): started
+#11 1.461   Preparing metadata (setup.py): finished with status 'done'
+#11 1.530 Collecting wheel==0.24.0 (from melissa)
+#11 1.539   Downloading wheel-0.24.0-py2.py3-none-any.whl.metadata (9.1 kB)
+#11 1.597 Collecting six==1.10.0 (from melissa)
+#11 1.606   Downloading six-1.10.0-py2.py3-none-any.whl.metadata (1.3 kB)
+#11 1.647 Collecting oauthlib==1.0.3 (from melissa)
+#11 1.757   Downloading oauthlib-1.0.3.tar.gz (109 kB)
+#11 1.778      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.1/109.1 kB 5.2 MB/s eta 0:00:00
+#11 1.798   Preparing metadata (setup.py): started
+#11 1.935   Preparing metadata (setup.py): finished with status 'done'
+#11 1.965 Collecting requests-oauthlib==0.5.0 (from melissa)
+#11 2.073   Downloading requests_oauthlib-0.5.0-py2.py3-none-any.whl.metadata (5.9 kB)
+#11 2.124 Collecting eventlet==0.20.0 (from melissa)
+#11 2.230   Downloading eventlet-0.20.0-py2.py3-none-any.whl.metadata (3.5 kB)
+#11 2.290 Collecting Flask==0.12 (from melissa)
+#11 2.395   Downloading Flask-0.12-py2.py3-none-any.whl.metadata (1.9 kB)
+#11 2.452 Collecting Flask-SocketIO==2.8.6 (from melissa)
+#11 2.558   Downloading Flask-SocketIO-2.8.6.tar.gz (13 kB)
+#11 2.577   Preparing metadata (setup.py): started
+#11 2.687   Preparing metadata (setup.py): finished with status 'done'
+#11 2.730 Collecting python-socketio==1.6.1 (from melissa)
+#11 2.836   Downloading python-socketio-1.6.1.tar.gz (15 kB)
+#11 2.850   Preparing metadata (setup.py): started
+#11 2.961   Preparing metadata (setup.py): finished with status 'done'
+#11 2.992 Collecting beautifulsoup4==4.4.1 (from melissa)
+#11 3.008   Downloading beautifulsoup4-4.4.1-py3-none-any.whl.metadata (1.1 kB)
+#11 3.059 Collecting requests==2.8.1 (from melissa)
+#11 3.166   Downloading requests-2.8.1-py2.py3-none-any.whl.metadata (34 kB)
+#11 3.206 Collecting wikipedia==1.4.0 (from melissa)
+#11 3.214   Downloading wikipedia-1.4.0.tar.gz (27 kB)
+#11 3.231   Preparing metadata (setup.py): started
+#11 3.339   Preparing metadata (setup.py): finished with status 'done'
+#11 3.462 Collecting pyicloud==0.9.1 (from melissa)
+#11 3.565   Downloading pyicloud-0.9.1.tar.gz (17 kB)
+#11 3.578   Preparing metadata (setup.py): started
+#11 3.692   Preparing metadata (setup.py): finished with status 'done'
+#11 3.814 Collecting HoroscopeGenerator==0.1.8 (from melissa)
+#11 3.923   Downloading HoroscopeGenerator-0.1.8.tar.gz (6.4 kB)
+#11 3.934   Preparing metadata (setup.py): started
+#11 4.047   Preparing metadata (setup.py): finished with status 'done'
+#11 4.169 Collecting imgurpython==1.1.6 (from melissa)
+#11 4.272   Downloading imgurpython-1.1.6.tar.gz (8.5 kB)
+#11 4.285   Preparing metadata (setup.py): started
+#11 4.395   Preparing metadata (setup.py): finished with status 'done'
+#11 4.429 Collecting netifaces==0.10.5 (from melissa)
+#11 4.439   Downloading netifaces-0.10.5.tar.gz (24 kB)
+#11 4.452   Preparing metadata (setup.py): started
+#11 4.571   Preparing metadata (setup.py): finished with status 'done'
+#11 4.663 Collecting psutil==4.3.0 (from melissa)
+#11 4.672   Downloading psutil-4.3.0.tar.gz (316 kB)
+#11 4.692      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 316.5/316.5 kB 17.0 MB/s eta 0:00:00
+#11 4.715   Preparing metadata (setup.py): started
+#11 4.848   Preparing metadata (setup.py): finished with status 'done'
+#11 4.884 Collecting tweepy==3.5.0 (from melissa)
+#11 5.220   Downloading tweepy-3.5.0-py2.py3-none-any.whl.metadata (901 bytes)
+#11 5.263 Collecting telepot==4.1 (from melissa)
+#11 5.630   Downloading telepot-4.1.zip (25 kB)
+#11 5.642   Preparing metadata (setup.py): started
+#11 5.752   Preparing metadata (setup.py): finished with status 'done'
+#11 5.902 Collecting pygame>=1.9.2b6 (from melissa)
+#11 5.913   Downloading pygame-2.6.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (12 kB)
+#11 6.048 Collecting pyvona==1.1 (from melissa)
+#11 6.150   Downloading pyvona-1.1.tar.gz (3.3 kB)
+#11 6.161   Preparing metadata (setup.py): started
+#11 6.264   Preparing metadata (setup.py): finished with status 'done'
+#11 6.389 Collecting poster==0.8.1 (from melissa)
+#11 6.496   Downloading poster-0.8.1.tar.gz (12 kB)
+#11 6.512   Preparing metadata (setup.py): started
+#11 6.601   Preparing metadata (setup.py): finished with status 'error'
+#11 6.604   error: subprocess-exited-with-error
+#11 6.604   
+#11 6.604   × python setup.py egg_info did not run successfully.
+#11 6.604   │ exit code: 1
+#11 6.604   ╰─> [11 lines of output]
+#11 6.604       Traceback (most recent call last):
+#11 6.604         File "<string>", line 2, in <module>
+#11 6.604         File "<pip-setuptools-caller>", line 34, in <module>
+#11 6.604         File "/tmp/pip-install-67hogy26/poster_3a3979bbd5ce443c92b479f9d0fbcce7/setup.py", line 2, in <module>
+#11 6.604           import poster
+#11 6.604         File "/tmp/pip-install-67hogy26/poster_3a3979bbd5ce443c92b479f9d0fbcce7/poster/__init__.py", line 29, in <module>
+#11 6.604           import poster.streaminghttp
+#11 6.604         File "/tmp/pip-install-67hogy26/poster_3a3979bbd5ce443c92b479f9d0fbcce7/poster/streaminghttp.py", line 61
+#11 6.604           print "send:", repr(value)
+#11 6.604           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+#11 6.604       SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+#11 6.604       [end of output]
+#11 6.604   
+#11 6.604   note: This error originates from a subprocess, and is likely not a problem with pip.
+#11 6.605 error: metadata-generation-failed
+#11 6.605 
+#11 6.605 × Encountered error while generating package metadata.
+#11 6.605 ╰─> See above for output.
+#11 6.605 
+#11 6.605 note: This is an issue with the package mentioned above, not pip.
+#11 6.605 hint: See above for details.
+#11 6.610 
+#11 6.610 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 6.610 [notice] To update, run: pip install --upgrade pip
+#11 ERROR: process "pip install melissa" did not complete successfully: exit code: 1
+------
+ > [ 7/11] RUN ["pip","install","melissa"]:
+6.605 error: metadata-generation-failed
+6.605 
+6.605 × Encountered error while generating package metadata.
+6.605 ╰─> See above for output.
+6.605 
+6.605 note: This is an issue with the package mentioned above, not pip.
+6.605 hint: See above for details.
+6.610 
+6.610 [notice] A new release of pip is available: 24.0 -> 25.3
+6.610 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:7
+--------------------
+   5 |     RUN ["pip","install","py"]
+   6 |     RUN ["pip","install","setuptools"]
+   7 | >>> RUN ["pip","install","melissa"]
+   8 |     RUN ["pip","install","motionless"]
+   9 |     RUN ["pip","install","numpy"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install melissa" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/obwcbdxrs12igd8bvtlg5tizz
+[2025-10-29 13:03:07] ERROR: Build failed for 23585f7f50005408fc72

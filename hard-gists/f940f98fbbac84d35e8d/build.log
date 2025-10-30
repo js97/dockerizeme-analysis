@@ -1,0 +1,168 @@
+=== Docker Build Log for f940f98fbbac84d35e8d ===
+Started at: Mi 29. Okt 21:37:53 CET 2025
+
+[2025-10-29 21:37:53] START: Building image for f940f98fbbac84d35e8d
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 303B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.84kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/f940f98fbbac84d35e8d/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","chai"]
+#7 2.227 Collecting chai
+#7 2.277   Downloading chai-1.1.2.tar.gz (107 kB)
+#7 2.305      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.8/107.8 kB 4.3 MB/s eta 0:00:00
+#7 2.317   Preparing metadata (setup.py): started
+#7 2.727   Preparing metadata (setup.py): finished with status 'done'
+#7 2.729 Building wheels for collected packages: chai
+#7 2.730   Building wheel for chai (setup.py): started
+#7 2.909   Building wheel for chai (setup.py): finished with status 'done'
+#7 2.910   Created wheel for chai: filename=chai-1.1.2-py3-none-any.whl size=27171 sha256=f93d9db1353e71c98589808f64e927170efc24c711cc447977b2c1ac6349951e
+#7 2.910   Stored in directory: /root/.cache/pip/wheels/87/92/89/656b6dbca8ff49862b4f1042aa87784be1ae3d7c97153973ee
+#7 2.914 Successfully built chai
+#7 2.944 Installing collected packages: chai
+#7 2.967 Successfully installed chai-1.1.2
+#7 2.967 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.070 
+#7 3.070 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.070 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.2s
+
+#8 [4/7] RUN ["pip","install","numpy"]
+#8 0.724 Collecting numpy
+#8 0.761   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 0.794      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 1.7 MB/s eta 0:00:00
+#8 0.812 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#8 2.146    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 12.2 MB/s eta 0:00:00
+#8 2.223 Installing collected packages: numpy
+#8 3.606 Successfully installed numpy-2.3.4
+#8 3.606 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 3.611 
+#8 3.611 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.611 [notice] To update, run: pip install --upgrade pip
+#8 DONE 4.5s
+
+#9 [5/7] RUN ["pip","install","matplotlib"]
+#9 0.665 Collecting matplotlib
+#9 0.704   Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#9 0.806 Collecting contourpy>=1.0.1 (from matplotlib)
+#9 0.817   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#9 0.882 Collecting cycler>=0.10 (from matplotlib)
+#9 0.892   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#9 1.073 Collecting fonttools>=4.22.0 (from matplotlib)
+#9 1.083   Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+#9 1.118      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.3/112.3 kB 3.0 MB/s eta 0:00:00
+#9 1.198 Collecting kiwisolver>=1.3.1 (from matplotlib)
+#9 1.207   Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+#9 1.223 Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.11/site-packages (from matplotlib) (2.3.4)
+#9 1.277 Collecting packaging>=20.0 (from matplotlib)
+#9 1.285   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#9 1.480 Collecting pillow>=8 (from matplotlib)
+#9 1.490   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#9 1.552 Collecting pyparsing>=3 (from matplotlib)
+#9 1.560   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#9 1.603 Collecting python-dateutil>=2.7 (from matplotlib)
+#9 1.611   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#9 1.705 Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib)
+#9 1.719   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#9 1.743 Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+#9 2.347    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 14.4 MB/s eta 0:00:00
+#9 2.359 Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+#9 2.385    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 355.2/355.2 kB 14.1 MB/s eta 0:00:00
+#9 2.393 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#9 2.418 Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#9 2.762    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 14.5 MB/s eta 0:00:00
+#9 2.773 Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+#9 2.870    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 15.0 MB/s eta 0:00:00
+#9 2.879 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#9 2.892    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 4.9 MB/s eta 0:00:00
+#9 2.902 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#9 3.425    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 13.5 MB/s eta 0:00:00
+#9 3.434 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#9 3.448    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 8.9 MB/s eta 0:00:00
+#9 3.456 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#9 3.481    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 11.7 MB/s eta 0:00:00
+#9 3.490 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#9 3.664 Installing collected packages: six, pyparsing, pillow, packaging, kiwisolver, fonttools, cycler, contourpy, python-dateutil, matplotlib
+#9 5.732 Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.60.1 kiwisolver-1.4.9 matplotlib-3.10.7 packaging-25.0 pillow-12.0.0 pyparsing-3.2.5 python-dateutil-2.9.0.post0 six-1.17.0
+#9 5.732 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 5.737 
+#9 5.737 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 5.737 [notice] To update, run: pip install --upgrade pip
+#9 DONE 6.4s
+
+#10 [6/7] RUN ["pip","install","chainer"]
+#10 0.516 Collecting chainer
+#10 0.557   Downloading chainer-7.8.1.tar.gz (1.0 MB)
+#10 0.662      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 10.3 MB/s eta 0:00:00
+#10 0.809   Preparing metadata (setup.py): started
+#10 1.047   Preparing metadata (setup.py): finished with status 'done'
+#10 1.063 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from chainer) (79.0.1)
+#10 1.102 Collecting typing_extensions (from chainer)
+#10 1.111   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#10 1.172 Collecting filelock (from chainer)
+#10 1.180   Downloading filelock-3.20.0-py3-none-any.whl.metadata (2.1 kB)
+#10 1.195 Requirement already satisfied: numpy>=1.9.0 in /usr/local/lib/python3.11/site-packages (from chainer) (2.3.4)
+#10 1.378 Collecting protobuf>=3.0.0 (from chainer)
+#10 1.388   Downloading protobuf-6.33.0-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)
+#10 1.409 Requirement already satisfied: six>=1.9.0 in /usr/local/lib/python3.11/site-packages (from chainer) (1.17.0)
+#10 1.451 Downloading protobuf-6.33.0-cp39-abi3-manylinux2014_x86_64.whl (323 kB)
+#10 1.481    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 323.2/323.2 kB 11.0 MB/s eta 0:00:00
+#10 1.490 Downloading filelock-3.20.0-py3-none-any.whl (16 kB)
+#10 1.510 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#10 1.522    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.6 MB/s eta 0:00:00
+#10 1.527 Building wheels for collected packages: chainer
+#10 1.531   Building wheel for chainer (setup.py): started
+#10 1.996   Building wheel for chainer (setup.py): finished with status 'done'
+#10 1.998   Created wheel for chainer: filename=chainer-7.8.1-py3-none-any.whl size=971899 sha256=4f36eddd28b3c2ff181ddd796c2dea691073bc72c6c4182d1005ab14c3e27ac7
+#10 1.998   Stored in directory: /root/.cache/pip/wheels/f3/58/b8/42617229bb026dee11d17ff39efdffbf9499669ea16a22a607
+#10 2.002 Successfully built chainer
+#10 2.114 Installing collected packages: typing_extensions, protobuf, filelock, chainer
+#10 2.720 Successfully installed chainer-7.8.1 filelock-3.20.0 protobuf-6.33.0 typing_extensions-4.15.0
+#10 2.720 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 2.726 
+#10 2.726 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 2.726 [notice] To update, run: pip install --upgrade pip
+#10 DONE 3.0s
+
+#11 [7/7] RUN ["pip","install","scipy"]
+#11 0.657 Collecting scipy
+#11 0.692   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#11 0.745      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 1.0 MB/s eta 0:00:00
+#11 0.773 Requirement already satisfied: numpy<2.6,>=1.25.2 in /usr/local/lib/python3.11/site-packages (from scipy) (2.3.4)
+#11 0.787 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#11 3.188    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 11.3 MB/s eta 0:00:00
+#11 3.402 Installing collected packages: scipy
+#11 6.027 Successfully installed scipy-1.16.3
+#11 6.027 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 6.036 
+#11 6.036 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 6.036 [notice] To update, run: pip install --upgrade pip
+#11 DONE 7.0s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.7s done
+#12 writing image sha256:d678e59d1e02add231a3802e065f6a252bbda3b2bc2d254323d0f1b05dad389f done
+#12 naming to docker.io/library/test-image-f940f98fbbac84d35e8d done
+#12 DONE 0.8s
+
+View build details: docker-desktop://dashboard/build/default/default/w2t18n38ithatwml1axfgqygy
+[2025-10-29 21:38:19] SUCCESS: Build completed for f940f98fbbac84d35e8d

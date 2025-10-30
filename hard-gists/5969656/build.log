@@ -1,0 +1,83 @@
+=== Docker Build Log for 5969656 ===
+Started at: Mi 29. Okt 16:10:55 CET 2025
+
+[2025-10-29 16:10:55] START: Building image for 5969656
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 190B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 799B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/5969656/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","pyobjc-framework-LaunchServices"]
+#7 1.967 Collecting pyobjc-framework-LaunchServices
+#7 2.006   Downloading pyobjc_framework_launchservices-12.0-py2.py3-none-any.whl.metadata (2.4 kB)
+#7 2.065 Collecting pyobjc-core>=12.0 (from pyobjc-framework-LaunchServices)
+#7 2.075   Downloading pyobjc_core-12.0.tar.gz (991 kB)
+#7 2.144      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 991.7/991.7 kB 14.9 MB/s eta 0:00:00
+#7 2.253   Installing build dependencies: started
+#7 3.773   Installing build dependencies: finished with status 'done'
+#7 3.774   Getting requirements to build wheel: started
+#7 3.942   Getting requirements to build wheel: finished with status 'error'
+#7 3.945   error: subprocess-exited-with-error
+#7 3.945   
+#7 3.945   × Getting requirements to build wheel did not run successfully.
+#7 3.945   │ exit code: 1
+#7 3.945   ╰─> [2 lines of output]
+#7 3.945       running egg_info
+#7 3.945       error: PyObjC requires macOS to build
+#7 3.945       [end of output]
+#7 3.945   
+#7 3.945   note: This error originates from a subprocess, and is likely not a problem with pip.
+#7 3.946 error: subprocess-exited-with-error
+#7 3.946 
+#7 3.946 × Getting requirements to build wheel did not run successfully.
+#7 3.946 │ exit code: 1
+#7 3.946 ╰─> See above for output.
+#7 3.946 
+#7 3.946 note: This error originates from a subprocess, and is likely not a problem with pip.
+#7 3.951 
+#7 3.951 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.951 [notice] To update, run: pip install --upgrade pip
+#7 ERROR: process "pip install pyobjc-framework-LaunchServices" did not complete successfully: exit code: 1
+------
+ > [3/3] RUN ["pip","install","pyobjc-framework-LaunchServices"]:
+3.946 error: subprocess-exited-with-error
+3.946 
+3.946 × Getting requirements to build wheel did not run successfully.
+3.946 │ exit code: 1
+3.946 ╰─> See above for output.
+3.946 
+3.946 note: This error originates from a subprocess, and is likely not a problem with pip.
+3.951 
+3.951 [notice] A new release of pip is available: 24.0 -> 25.3
+3.951 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:3
+--------------------
+   1 |     FROM python:3.11
+   2 |     COPY hard-gists/5969656/snippet.py /snippet.py
+   3 | >>> RUN ["pip","install","pyobjc-framework-LaunchServices"]
+   4 |     CMD ["python3","/snippet.py"]
+   5 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install pyobjc-framework-LaunchServices" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/u0682r62jq8zq4fvlh1keq6e4
+[2025-10-29 16:10:59] ERROR: Build failed for 5969656

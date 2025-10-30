@@ -1,0 +1,363 @@
+=== Docker Build Log for 4654376 ===
+Started at: Mi 29. Okt 14:56:04 CET 2025
+
+[2025-10-29 14:56:04] START: Building image for 4654376
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 207B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.95kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/4654376/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","androidviewclient"]
+#7 2.068 Collecting androidviewclient
+#7 2.127   Downloading androidviewclient-24.1.0-py3-none-any.whl.metadata (661 bytes)
+#7 2.139 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from androidviewclient) (79.0.1)
+#7 2.183 Collecting requests (from androidviewclient)
+#7 2.192   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.380 Collecting numpy (from androidviewclient)
+#7 2.392   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.426      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 1.7 MB/s eta 0:00:00
+#7 2.569 Collecting matplotlib (from androidviewclient)
+#7 2.579   Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#7 2.647 Collecting culebratester-client>=2.0.73 (from androidviewclient)
+#7 2.656   Downloading culebratester_client-2.0.73-py3-none-any.whl.metadata (685 bytes)
+#7 2.714 Collecting urllib3>=1.15 (from culebratester-client>=2.0.73->androidviewclient)
+#7 2.724   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.761 Collecting six>=1.10 (from culebratester-client>=2.0.73->androidviewclient)
+#7 2.769   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.811 Collecting certifi (from culebratester-client>=2.0.73->androidviewclient)
+#7 2.819   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.858 Collecting python-dateutil (from culebratester-client>=2.0.73->androidviewclient)
+#7 2.866   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#7 2.958 Collecting contourpy>=1.0.1 (from matplotlib->androidviewclient)
+#7 2.967   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#7 3.001 Collecting cycler>=0.10 (from matplotlib->androidviewclient)
+#7 3.009   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#7 3.182 Collecting fonttools>=4.22.0 (from matplotlib->androidviewclient)
+#7 3.191   Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+#7 3.215      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.3/112.3 kB 4.6 MB/s eta 0:00:00
+#7 3.290 Collecting kiwisolver>=1.3.1 (from matplotlib->androidviewclient)
+#7 3.298   Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+#7 3.350 Collecting packaging>=20.0 (from matplotlib->androidviewclient)
+#7 3.358   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#7 3.570 Collecting pillow>=8 (from matplotlib->androidviewclient)
+#7 3.580   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#7 3.651 Collecting pyparsing>=3 (from matplotlib->androidviewclient)
+#7 3.660   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#7 3.768 Collecting charset_normalizer<4,>=2 (from requests->androidviewclient)
+#7 3.778   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 3.821 Collecting idna<4,>=2.5 (from requests->androidviewclient)
+#7 3.830   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 3.955 Downloading androidviewclient-24.1.0-py3-none-any.whl (425 kB)
+#7 3.981    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 425.1/425.1 kB 17.1 MB/s eta 0:00:00
+#7 3.991 Downloading culebratester_client-2.0.73-py3-none-any.whl (114 kB)
+#7 4.004    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.2/114.2 kB 9.2 MB/s eta 0:00:00
+#7 4.014 Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+#7 4.354    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 25.7 MB/s eta 0:00:00
+#7 4.363 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 5.075    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 21.5 MB/s eta 0:00:00
+#7 5.087 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 5.099    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 5.6 MB/s eta 0:00:00
+#7 5.108 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 5.126    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.6 MB/s eta 0:00:00
+#7 5.135 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 5.149    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.4 MB/s eta 0:00:00
+#7 5.159 Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+#7 5.180    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 355.2/355.2 kB 18.3 MB/s eta 0:00:00
+#7 5.188 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#7 5.206 Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#7 5.387    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 27.7 MB/s eta 0:00:00
+#7 5.396 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 5.409    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.3 MB/s eta 0:00:00
+#7 5.419 Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+#7 5.690    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 5.3 MB/s eta 0:00:00
+#7 5.699 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#7 5.710    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.9 MB/s eta 0:00:00
+#7 5.719 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#7 5.987    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 26.3 MB/s eta 0:00:00
+#7 5.996 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#7 6.008    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 9.9 MB/s eta 0:00:00
+#7 6.017 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#7 6.033    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 15.2 MB/s eta 0:00:00
+#7 6.042 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 6.059 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 6.074    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.5 MB/s eta 0:00:00
+#7 6.275 Installing collected packages: urllib3, six, pyparsing, pillow, packaging, numpy, kiwisolver, idna, fonttools, cycler, charset_normalizer, certifi, requests, python-dateutil, contourpy, matplotlib, culebratester-client, androidviewclient
+#7 10.17 Successfully installed androidviewclient-24.1.0 certifi-2025.10.5 charset_normalizer-3.4.4 contourpy-1.3.3 culebratester-client-2.0.73 cycler-0.12.1 fonttools-4.60.1 idna-3.11 kiwisolver-1.4.9 matplotlib-3.10.7 numpy-2.3.4 packaging-25.0 pillow-12.0.0 pyparsing-3.2.5 python-dateutil-2.9.0.post0 requests-2.32.5 six-1.17.0 urllib3-2.5.0
+#7 10.17 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 10.28 
+#7 10.28 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 10.28 [notice] To update, run: pip install --upgrade pip
+#7 DONE 11.6s
+
+#8 [4/4] RUN ["pip","install","jarray"]
+#8 0.683 Collecting jarray
+#8 0.832   Downloading jarray-0.0.0.tar.gz (880 kB)
+#8 0.927      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 880.9/880.9 kB 9.4 MB/s eta 0:00:00
+#8 0.987   Preparing metadata (setup.py): started
+#8 1.521   Preparing metadata (setup.py): finished with status 'done'
+#8 1.679 Collecting uvicorn>=0.14.0 (from uvicorn[standard]>=0.14.0->jarray)
+#8 1.688   Downloading uvicorn-0.38.0-py3-none-any.whl.metadata (6.8 kB)
+#8 1.816 Collecting websockets (from jarray)
+#8 1.826   Downloading websockets-15.0.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#8 2.061 Collecting cryptography (from jarray)
+#8 2.070   Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+#8 2.131 Collecting kubernetes>=18.20.0 (from jarray)
+#8 2.141   Downloading kubernetes-34.1.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 2.212 Collecting tornado>=5.1.0 (from jarray)
+#8 2.220   Downloading tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+#8 2.258 Collecting pathspec (from jarray)
+#8 2.266   Downloading pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+#8 2.795 Collecting aiohttp (from jarray)
+#8 2.806   Downloading aiohttp-3.13.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+#8 2.883 Collecting pyyaml>=5.3.1 (from jarray)
+#8 2.892   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#8 2.929 Collecting aiofiles (from jarray)
+#8 2.937   Downloading aiofiles-25.1.0-py3-none-any.whl.metadata (6.3 kB)
+#8 3.026 Collecting fastapi (from jarray)
+#8 3.035   Downloading fastapi-0.120.2-py3-none-any.whl.metadata (28 kB)
+#8 3.324 Collecting pyzmq>=17.1.0 (from jarray)
+#8 3.334   Downloading pyzmq-27.1.0-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (6.0 kB)
+#8 3.401 Collecting uvloop (from jarray)
+#8 3.409   Downloading uvloop-0.22.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.9 kB)
+#8 3.447 Collecting aiostream (from jarray)
+#8 3.455   Downloading aiostream-0.7.1-py3-none-any.whl.metadata (10 kB)
+#8 3.469 Requirement already satisfied: requests in /usr/local/lib/python3.11/site-packages (from jarray) (2.32.5)
+#8 3.473 Requirement already satisfied: numpy in /usr/local/lib/python3.11/site-packages (from jarray) (2.3.4)
+#8 3.542 Collecting rich (from jarray)
+#8 3.555   Downloading rich-14.2.0-py3-none-any.whl.metadata (18 kB)
+#8 3.753 Collecting protobuf>=3.13.0 (from jarray)
+#8 3.762   Downloading protobuf-6.33.0-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)
+#8 3.812 Collecting python-multipart (from jarray)
+#8 3.821   Downloading python_multipart-0.0.20-py3-none-any.whl.metadata (1.8 kB)
+#8 3.923 Collecting docker (from jarray)
+#8 3.932   Downloading docker-7.1.0-py3-none-any.whl.metadata (3.8 kB)
+#8 4.471 Collecting grpcio>=1.33.1 (from jarray)
+#8 4.481   Downloading grpcio-1.76.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.7 kB)
+#8 4.629 Collecting pydantic (from jarray)
+#8 4.639   Downloading pydantic-2.12.3-py3-none-any.whl.metadata (87 kB)
+#8 4.658      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.7/87.7 kB 4.7 MB/s eta 0:00:00
+#8 4.735 Collecting lz4<3.1.2 (from jarray)
+#8 4.913   Downloading lz4-3.1.1.tar.gz (154 kB)
+#8 4.932      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 154.3/154.3 kB 8.7 MB/s eta 0:00:00
+#8 4.945   Preparing metadata (setup.py): started
+#8 6.197   Preparing metadata (setup.py): finished with status 'done'
+#8 6.241 Collecting filelock (from jarray)
+#8 6.250   Downloading filelock-3.20.0-py3-none-any.whl.metadata (2.1 kB)
+#8 6.299 Collecting typing-extensions~=4.12 (from grpcio>=1.33.1->jarray)
+#8 6.308   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#8 6.325 Requirement already satisfied: certifi>=14.05.14 in /usr/local/lib/python3.11/site-packages (from kubernetes>=18.20.0->jarray) (2025.10.5)
+#8 6.326 Requirement already satisfied: six>=1.9.0 in /usr/local/lib/python3.11/site-packages (from kubernetes>=18.20.0->jarray) (1.17.0)
+#8 6.327 Requirement already satisfied: python-dateutil>=2.5.3 in /usr/local/lib/python3.11/site-packages (from kubernetes>=18.20.0->jarray) (2.9.0.post0)
+#8 6.409 Collecting google-auth>=1.0.1 (from kubernetes>=18.20.0->jarray)
+#8 6.417   Downloading google_auth-2.42.0-py2.py3-none-any.whl.metadata (6.6 kB)
+#8 6.477 Collecting websocket-client!=0.40.0,!=0.41.*,!=0.42.*,>=0.32.0 (from kubernetes>=18.20.0->jarray)
+#8 6.485   Downloading websocket_client-1.9.0-py3-none-any.whl.metadata (8.3 kB)
+#8 6.522 Collecting requests-oauthlib (from kubernetes>=18.20.0->jarray)
+#8 6.531   Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl.metadata (11 kB)
+#8 6.599 Collecting urllib3<2.4.0,>=1.24.2 (from kubernetes>=18.20.0->jarray)
+#8 6.607   Downloading urllib3-2.3.0-py3-none-any.whl.metadata (6.5 kB)
+#8 6.642 Collecting durationpy>=0.7 (from kubernetes>=18.20.0->jarray)
+#8 6.651   Downloading durationpy-0.10-py3-none-any.whl.metadata (340 bytes)
+#8 6.708 Collecting click>=7.0 (from uvicorn>=0.14.0->uvicorn[standard]>=0.14.0->jarray)
+#8 6.717   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#8 6.753 Collecting h11>=0.8 (from uvicorn>=0.14.0->uvicorn[standard]>=0.14.0->jarray)
+#8 6.762   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#8 6.826 Collecting httptools>=0.6.3 (from uvicorn[standard]>=0.14.0->jarray)
+#8 6.834   Downloading httptools-0.7.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (3.5 kB)
+#8 6.877 Collecting python-dotenv>=0.13 (from uvicorn[standard]>=0.14.0->jarray)
+#8 6.888   Downloading python_dotenv-1.2.1-py3-none-any.whl.metadata (25 kB)
+#8 6.991 Collecting watchfiles>=0.13 (from uvicorn[standard]>=0.14.0->jarray)
+#8 6.999   Downloading watchfiles-1.1.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#8 7.070 Collecting aiohappyeyeballs>=2.5.0 (from aiohttp->jarray)
+#8 7.078   Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl.metadata (5.9 kB)
+#8 7.117 Collecting aiosignal>=1.4.0 (from aiohttp->jarray)
+#8 7.126   Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+#8 7.169 Collecting attrs>=17.3.0 (from aiohttp->jarray)
+#8 7.178   Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+#8 7.267 Collecting frozenlist>=1.1.1 (from aiohttp->jarray)
+#8 7.275   Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+#8 7.596 Collecting multidict<7.0,>=4.5 (from aiohttp->jarray)
+#8 7.607   Downloading multidict-6.7.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+#8 7.693 Collecting propcache>=0.2.0 (from aiohttp->jarray)
+#8 7.702   Downloading propcache-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+#8 7.968 Collecting yarl<2.0,>=1.17.0 (from aiohttp->jarray)
+#8 7.981   Downloading yarl-1.22.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (75 kB)
+#8 8.006      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 75.1/75.1 kB 2.9 MB/s eta 0:00:00
+#8 8.137 Collecting cffi>=2.0.0 (from cryptography->jarray)
+#8 8.145   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+#8 8.289 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests->jarray) (3.4.4)
+#8 8.290 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests->jarray) (3.11)
+#8 8.378 Collecting starlette<0.50.0,>=0.40.0 (from fastapi->jarray)
+#8 8.387   Downloading starlette-0.49.1-py3-none-any.whl.metadata (6.4 kB)
+#8 8.461 Collecting annotated-doc>=0.0.2 (from fastapi->jarray)
+#8 8.470   Downloading annotated_doc-0.0.3-py3-none-any.whl.metadata (6.6 kB)
+#8 8.513 Collecting annotated-types>=0.6.0 (from pydantic->jarray)
+#8 8.521   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+#8 9.135 Collecting pydantic-core==2.41.4 (from pydantic->jarray)
+#8 9.146   Downloading pydantic_core-2.41.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+#8 9.193 Collecting typing-inspection>=0.4.2 (from pydantic->jarray)
+#8 9.201   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+#8 9.260 Collecting markdown-it-py>=2.2.0 (from rich->jarray)
+#8 9.269   Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+#8 9.317 Collecting pygments<3.0.0,>=2.13.0 (from rich->jarray)
+#8 9.325   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#8 9.391 Collecting pycparser (from cffi>=2.0.0->cryptography->jarray)
+#8 9.399   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+#8 9.476 Collecting cachetools<7.0,>=2.0.0 (from google-auth>=1.0.1->kubernetes>=18.20.0->jarray)
+#8 9.484   Downloading cachetools-6.2.1-py3-none-any.whl.metadata (5.5 kB)
+#8 9.531 Collecting pyasn1-modules>=0.2.1 (from google-auth>=1.0.1->kubernetes>=18.20.0->jarray)
+#8 9.539   Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+#8 9.582 Collecting rsa<5,>=3.1.4 (from google-auth>=1.0.1->kubernetes>=18.20.0->jarray)
+#8 9.590   Downloading rsa-4.9.1-py3-none-any.whl.metadata (5.6 kB)
+#8 9.780 Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->jarray)
+#8 9.788   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+#8 9.867 Collecting anyio<5,>=3.6.2 (from starlette<0.50.0,>=0.40.0->fastapi->jarray)
+#8 9.875   Downloading anyio-4.11.0-py3-none-any.whl.metadata (4.1 kB)
+#8 9.976 Collecting oauthlib>=3.0.0 (from requests-oauthlib->kubernetes>=18.20.0->jarray)
+#8 9.985   Downloading oauthlib-3.3.1-py3-none-any.whl.metadata (7.9 kB)
+#8 10.03 Collecting sniffio>=1.1 (from anyio<5,>=3.6.2->starlette<0.50.0,>=0.40.0->fastapi->jarray)
+#8 10.04   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+#8 10.11 Collecting pyasn1<0.7.0,>=0.6.1 (from pyasn1-modules>=0.2.1->google-auth>=1.0.1->kubernetes>=18.20.0->jarray)
+#8 10.12   Downloading pyasn1-0.6.1-py3-none-any.whl.metadata (8.4 kB)
+#8 10.17 Downloading grpcio-1.76.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (6.6 MB)
+#8 10.46    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 23.5 MB/s eta 0:00:00
+#8 10.47 Downloading kubernetes-34.1.0-py2.py3-none-any.whl (2.0 MB)
+#8 10.55    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 24.6 MB/s eta 0:00:00
+#8 10.56 Downloading protobuf-6.33.0-cp39-abi3-manylinux2014_x86_64.whl (323 kB)
+#8 10.58    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 323.2/323.2 kB 18.1 MB/s eta 0:00:00
+#8 10.62 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#8 10.66    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 19.6 MB/s eta 0:00:00
+#8 10.67 Downloading pyzmq-27.1.0-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (857 kB)
+#8 10.72    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 857.0/857.0 kB 21.0 MB/s eta 0:00:00
+#8 10.72 Downloading tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (443 kB)
+#8 10.75    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 443.9/443.9 kB 19.2 MB/s eta 0:00:00
+#8 10.76 Downloading uvicorn-0.38.0-py3-none-any.whl (68 kB)
+#8 10.77    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.1/68.1 kB 6.2 MB/s eta 0:00:00
+#8 10.78 Downloading uvloop-0.22.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.8 MB)
+#8 10.95    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 22.6 MB/s eta 0:00:00
+#8 10.96 Downloading websockets-15.0.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (182 kB)
+#8 10.98    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 182.3/182.3 kB 11.8 MB/s eta 0:00:00
+#8 10.99 Downloading aiofiles-25.1.0-py3-none-any.whl (14 kB)
+#8 11.01 Downloading aiohttp-3.13.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.7 MB)
+#8 11.08    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 24.0 MB/s eta 0:00:00
+#8 11.09 Downloading aiostream-0.7.1-py3-none-any.whl (41 kB)
+#8 11.10    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.4/41.4 kB 3.5 MB/s eta 0:00:00
+#8 11.11 Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+#8 11.30    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 24.5 MB/s eta 0:00:00
+#8 11.30 Downloading docker-7.1.0-py3-none-any.whl (147 kB)
+#8 11.32    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 147.8/147.8 kB 9.5 MB/s eta 0:00:00
+#8 11.33 Downloading fastapi-0.120.2-py3-none-any.whl (108 kB)
+#8 11.34    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 108.4/108.4 kB 8.4 MB/s eta 0:00:00
+#8 11.35 Downloading pydantic-2.12.3-py3-none-any.whl (462 kB)
+#8 11.38    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 462.4/462.4 kB 17.3 MB/s eta 0:00:00
+#8 11.39 Downloading pydantic_core-2.41.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+#8 11.48    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 24.4 MB/s eta 0:00:00
+#8 11.49 Downloading filelock-3.20.0-py3-none-any.whl (16 kB)
+#8 11.51 Downloading pathspec-0.12.1-py3-none-any.whl (31 kB)
+#8 11.53 Downloading python_multipart-0.0.20-py3-none-any.whl (24 kB)
+#8 11.54 Downloading rich-14.2.0-py3-none-any.whl (243 kB)
+#8 11.56    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.4/243.4 kB 15.6 MB/s eta 0:00:00
+#8 11.57 Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl (15 kB)
+#8 11.59 Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+#8 11.61 Downloading annotated_doc-0.0.3-py3-none-any.whl (5.5 kB)
+#8 11.63 Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+#8 11.65 Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+#8 11.67    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.6/67.6 kB 4.2 MB/s eta 0:00:00
+#8 11.67 Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+#8 11.69    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 14.4 MB/s eta 0:00:00
+#8 11.70 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#8 11.71    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 8.6 MB/s eta 0:00:00
+#8 11.72 Downloading durationpy-0.10-py3-none-any.whl (3.9 kB)
+#8 11.74 Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+#8 11.76    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231.1/231.1 kB 11.7 MB/s eta 0:00:00
+#8 11.77 Downloading google_auth-2.42.0-py2.py3-none-any.whl (222 kB)
+#8 11.79    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 222.6/222.6 kB 12.6 MB/s eta 0:00:00
+#8 11.79 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#8 11.81 Downloading httptools-0.7.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (456 kB)
+#8 11.84    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 456.6/456.6 kB 20.2 MB/s eta 0:00:00
+#8 11.85 Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+#8 11.86    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.3/87.3 kB 7.5 MB/s eta 0:00:00
+#8 11.87 Downloading multidict-6.7.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (246 kB)
+#8 11.88    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 246.7/246.7 kB 15.6 MB/s eta 0:00:00
+#8 11.91 Downloading propcache-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (210 kB)
+#8 11.92    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 210.0/210.0 kB 14.7 MB/s eta 0:00:00
+#8 11.93 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#8 11.99    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 22.1 MB/s eta 0:00:00
+#8 12.00 Downloading python_dotenv-1.2.1-py3-none-any.whl (21 kB)
+#8 12.01 Downloading starlette-0.49.1-py3-none-any.whl (74 kB)
+#8 12.03    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.2/74.2 kB 6.1 MB/s eta 0:00:00
+#8 12.04 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#8 12.05    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.8 MB/s eta 0:00:00
+#8 12.05 Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+#8 12.07 Downloading urllib3-2.3.0-py3-none-any.whl (128 kB)
+#8 12.09    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 128.4/128.4 kB 9.2 MB/s eta 0:00:00
+#8 12.10 Downloading watchfiles-1.1.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (456 kB)
+#8 12.12    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 456.1/456.1 kB 18.6 MB/s eta 0:00:00
+#8 12.13 Downloading websocket_client-1.9.0-py3-none-any.whl (82 kB)
+#8 12.14    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 82.6/82.6 kB 7.2 MB/s eta 0:00:00
+#8 12.15 Downloading yarl-1.22.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (365 kB)
+#8 12.17    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 19.0 MB/s eta 0:00:00
+#8 12.18 Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl (24 kB)
+#8 12.20 Downloading anyio-4.11.0-py3-none-any.whl (109 kB)
+#8 12.22    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.1/109.1 kB 5.9 MB/s eta 0:00:00
+#8 12.22 Downloading cachetools-6.2.1-py3-none-any.whl (11 kB)
+#8 12.24 Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+#8 12.26 Downloading oauthlib-3.3.1-py3-none-any.whl (160 kB)
+#8 12.27    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 160.1/160.1 kB 13.1 MB/s eta 0:00:00
+#8 12.28 Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+#8 12.30    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 181.3/181.3 kB 10.4 MB/s eta 0:00:00
+#8 12.31 Downloading rsa-4.9.1-py3-none-any.whl (34 kB)
+#8 12.33 Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+#8 12.34    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 9.5 MB/s eta 0:00:00
+#8 12.35 Downloading pyasn1-0.6.1-py3-none-any.whl (83 kB)
+#8 12.37    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.1/83.1 kB 8.1 MB/s eta 0:00:00
+#8 12.37 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+#8 12.47 Building wheels for collected packages: jarray, lz4
+#8 12.47   Building wheel for jarray (setup.py): started
+#8 12.93   Building wheel for jarray (setup.py): finished with status 'done'
+#8 12.93   Created wheel for jarray: filename=jarray-0.0.0-py3-none-any.whl size=988138 sha256=28ce0f46fe185e825112c8397c1ea1843ae90ef55717da2d903295afeacef70f
+#8 12.93   Stored in directory: /root/.cache/pip/wheels/69/ea/5f/a59efebcc4a90f48e4ad88b6c159fc11d3b36c2b3a6e4ae4bb
+#8 12.94   Building wheel for lz4 (setup.py): started
+#8 39.16   Building wheel for lz4 (setup.py): finished with status 'done'
+#8 39.17   Created wheel for lz4: filename=lz4-3.1.1-cp311-cp311-linux_x86_64.whl size=1746683 sha256=5d3310a355dfa420a3479bbaf730dd558ef499672b5c0eab8598d98b8b11277c
+#8 39.17   Stored in directory: /root/.cache/pip/wheels/b7/9e/72/ffb024f7d6a94cbdc5392807bf602267dfeb4cfaffcbe9bac9
+#8 39.17 Successfully built jarray lz4
+#8 39.52 Installing collected packages: durationpy, websockets, websocket-client, uvloop, urllib3, typing-extensions, tornado, sniffio, pyzmq, pyyaml, python-multipart, python-dotenv, pygments, pycparser, pyasn1, protobuf, propcache, pathspec, oauthlib, multidict, mdurl, lz4, httptools, h11, frozenlist, filelock, click, cachetools, attrs, annotated-types, annotated-doc, aiohappyeyeballs, aiofiles, yarl, uvicorn, typing-inspection, rsa, pydantic-core, pyasn1-modules, markdown-it-py, grpcio, cffi, anyio, aiostream, aiosignal, watchfiles, starlette, rich, requests-oauthlib, pydantic, google-auth, docker, cryptography, aiohttp, kubernetes, fastapi, jarray
+#8 39.72   Attempting uninstall: urllib3
+#8 39.73     Found existing installation: urllib3 2.5.0
+#8 39.73     Uninstalling urllib3-2.5.0:
+#8 39.79       Successfully uninstalled urllib3-2.5.0
+#8 44.54 Successfully installed aiofiles-25.1.0 aiohappyeyeballs-2.6.1 aiohttp-3.13.2 aiosignal-1.4.0 aiostream-0.7.1 annotated-doc-0.0.3 annotated-types-0.7.0 anyio-4.11.0 attrs-25.4.0 cachetools-6.2.1 cffi-2.0.0 click-8.3.0 cryptography-46.0.3 docker-7.1.0 durationpy-0.10 fastapi-0.120.2 filelock-3.20.0 frozenlist-1.8.0 google-auth-2.42.0 grpcio-1.76.0 h11-0.16.0 httptools-0.7.1 jarray-0.0.0 kubernetes-34.1.0 lz4-3.1.1 markdown-it-py-4.0.0 mdurl-0.1.2 multidict-6.7.0 oauthlib-3.3.1 pathspec-0.12.1 propcache-0.4.1 protobuf-6.33.0 pyasn1-0.6.1 pyasn1-modules-0.4.2 pycparser-2.23 pydantic-2.12.3 pydantic-core-2.41.4 pygments-2.19.2 python-dotenv-1.2.1 python-multipart-0.0.20 pyyaml-6.0.3 pyzmq-27.1.0 requests-oauthlib-2.0.0 rich-14.2.0 rsa-4.9.1 sniffio-1.3.1 starlette-0.49.1 tornado-6.5.2 typing-extensions-4.15.0 typing-inspection-0.4.2 urllib3-2.3.0 uvicorn-0.38.0 uvloop-0.22.1 watchfiles-1.1.1 websocket-client-1.9.0 websockets-15.0.1 yarl-1.22.0
+#8 44.54 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 44.54 
+#8 44.54 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 44.54 [notice] To update, run: pip install --upgrade pip
+#8 DONE 46.4s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 1.3s done
+#9 writing image sha256:3232e15a4a8d1215cf1c26ee5adc8b8d5c265496d7ad838b9ed6d90010601e53 done
+#9 naming to docker.io/library/test-image-4654376 done
+#9 DONE 1.3s
+
+View build details: docker-desktop://dashboard/build/default/default/gp2nbcxrguflc1sza0pro9p7b
+[2025-10-29 14:57:04] SUCCESS: Build completed for 4654376

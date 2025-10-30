@@ -1,0 +1,200 @@
+=== Docker Build Log for 72b2f24b6d2ff6ffde1597f1ca2dea3f ===
+Started at: Mi 29. Okt 17:04:27 CET 2025
+
+[2025-10-29 17:04:27] START: Building image for 72b2f24b6d2ff6ffde1597f1ca2dea3f
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 691B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.31kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/17] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/17] COPY hard-gists/72b2f24b6d2ff6ffde1597f1ca2dea3f/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/17] RUN ["apt-get","update"]
+#7 0.286 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.286 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.298 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.313 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.642 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.644 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.375 Fetched 9833 kB in 1s (8719 kB/s)
+#7 1.375 Reading package lists...
+#7 DONE 2.0s
+
+#8 [ 4/17] RUN ["apt-get","install","-y","libgeos-dev"]
+#8 0.256 Reading package lists...
+#8 0.825 Building dependency tree...
+#8 0.949 Reading state information...
+#8 1.124 The following additional packages will be installed:
+#8 1.125   libgeos-c1t64 libgeos3.13.1
+#8 1.126 Suggested packages:
+#8 1.126   libgdal-doc
+#8 1.195 The following NEW packages will be installed:
+#8 1.196   libgeos-c1t64 libgeos-dev libgeos3.13.1
+#8 1.232 0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+#8 1.232 Need to get 1131 kB of archives.
+#8 1.232 After this operation, 4776 kB of additional disk space will be used.
+#8 1.232 Get:1 http://deb.debian.org/debian trixie/main amd64 libgeos3.13.1 amd64 3.13.1-1 [970 kB]
+#8 1.295 Get:2 http://deb.debian.org/debian trixie/main amd64 libgeos-c1t64 amd64 3.13.1-1 [102 kB]
+#8 1.297 Get:3 http://deb.debian.org/debian trixie/main amd64 libgeos-dev amd64 3.13.1-1 [58.6 kB]
+#8 1.457 debconf: unable to initialize frontend: Dialog
+#8 1.457 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#8 1.457 debconf: falling back to frontend: Readline
+#8 1.462 debconf: unable to initialize frontend: Readline
+#8 1.462 debconf: (This frontend requires a controlling tty.)
+#8 1.462 debconf: falling back to frontend: Teletype
+#8 1.465 debconf: unable to initialize frontend: Teletype
+#8 1.465 debconf: (This frontend requires a controlling tty.)
+#8 1.465 debconf: falling back to frontend: Noninteractive
+#8 2.013 Fetched 1131 kB in 0s (12.3 MB/s)
+#8 2.067 Selecting previously unselected package libgeos3.13.1:amd64.
+#8 2.067 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 26761 files and directories currently installed.)
+#8 2.097 Preparing to unpack .../libgeos3.13.1_3.13.1-1_amd64.deb ...
+#8 2.114 Unpacking libgeos3.13.1:amd64 (3.13.1-1) ...
+#8 2.228 Selecting previously unselected package libgeos-c1t64:amd64.
+#8 2.230 Preparing to unpack .../libgeos-c1t64_3.13.1-1_amd64.deb ...
+#8 2.238 Unpacking libgeos-c1t64:amd64 (3.13.1-1) ...
+#8 2.291 Selecting previously unselected package libgeos-dev.
+#8 2.292 Preparing to unpack .../libgeos-dev_3.13.1-1_amd64.deb ...
+#8 2.301 Unpacking libgeos-dev (3.13.1-1) ...
+#8 2.392 Setting up libgeos3.13.1:amd64 (3.13.1-1) ...
+#8 2.415 Setting up libgeos-c1t64:amd64 (3.13.1-1) ...
+#8 2.438 Setting up libgeos-dev (3.13.1-1) ...
+#8 2.461 Processing triggers for libc-bin (2.41-12) ...
+#8 DONE 2.6s
+
+#9 [ 5/17] RUN ["pip","install","geopandas"]
+#9 2.102 Collecting geopandas
+#9 2.146   Downloading geopandas-1.1.1-py3-none-any.whl.metadata (2.3 kB)
+#9 2.387 Collecting numpy>=1.24 (from geopandas)
+#9 2.395   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#9 2.423      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.1 MB/s eta 0:00:00
+#9 2.475 Collecting pyogrio>=0.7.2 (from geopandas)
+#9 2.485   Downloading pyogrio-0.11.1-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+#9 2.531 Collecting packaging (from geopandas)
+#9 2.539   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#9 2.689 Collecting pandas>=2.0.0 (from geopandas)
+#9 2.700   Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+#9 2.727      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 3.2 MB/s eta 0:00:00
+#9 2.847 Collecting pyproj>=3.5.0 (from geopandas)
+#9 2.857   Downloading pyproj-3.7.2-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (31 kB)
+#9 2.976 Collecting shapely>=2.0.0 (from geopandas)
+#9 2.986   Downloading shapely-2.1.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.8 kB)
+#9 3.086 Collecting python-dateutil>=2.8.2 (from pandas>=2.0.0->geopandas)
+#9 3.094   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#9 3.163 Collecting pytz>=2020.1 (from pandas>=2.0.0->geopandas)
+#9 3.172   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#9 3.214 Collecting tzdata>=2022.7 (from pandas>=2.0.0->geopandas)
+#9 3.225   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#9 3.280 Collecting certifi (from pyogrio>=0.7.2->geopandas)
+#9 3.288   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#9 3.343 Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas>=2.0.0->geopandas)
+#9 3.351   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#9 3.376 Downloading geopandas-1.1.1-py3-none-any.whl (338 kB)
+#9 3.400    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 338.4/338.4 kB 14.7 MB/s eta 0:00:00
+#9 3.410 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#9 4.062    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 23.0 MB/s eta 0:00:00
+#9 4.074 Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+#9 4.542    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 26.3 MB/s eta 0:00:00
+#9 4.552 Downloading pyogrio-0.11.1-cp311-cp311-manylinux_2_28_x86_64.whl (27.7 MB)
+#9 5.572    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 27.7/27.7 MB 22.1 MB/s eta 0:00:00
+#9 5.584 Downloading pyproj-3.7.2-cp311-cp311-manylinux_2_28_x86_64.whl (9.5 MB)
+#9 5.943    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.5/9.5 MB 26.5 MB/s eta 0:00:00
+#9 5.952 Downloading shapely-2.1.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.1 MB)
+#9 6.069    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 26.9 MB/s eta 0:00:00
+#9 6.078 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#9 6.090    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.1 MB/s eta 0:00:00
+#9 6.098 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#9 6.115    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 14.2 MB/s eta 0:00:00
+#9 6.123 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#9 6.149    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 20.7 MB/s eta 0:00:00
+#9 6.156 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#9 6.177    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 17.1 MB/s eta 0:00:00
+#9 6.185 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#9 6.201    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 11.4 MB/s eta 0:00:00
+#9 6.209 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#9 6.519 Installing collected packages: pytz, tzdata, six, packaging, numpy, certifi, shapely, python-dateutil, pyproj, pyogrio, pandas, geopandas
+#9 13.12 Successfully installed certifi-2025.10.5 geopandas-1.1.1 numpy-2.3.4 packaging-25.0 pandas-2.3.3 pyogrio-0.11.1 pyproj-3.7.2 python-dateutil-2.9.0.post0 pytz-2025.2 shapely-2.1.2 six-1.17.0 tzdata-2025.2
+#9 13.12 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 13.24 
+#9 13.24 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 13.24 [notice] To update, run: pip install --upgrade pip
+#9 DONE 15.2s
+
+#10 [ 6/17] RUN ["pip","install","requests"]
+#10 0.589 Collecting requests
+#10 0.622   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#10 0.770 Collecting charset_normalizer<4,>=2 (from requests)
+#10 0.779   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#10 0.839 Collecting idna<4,>=2.5 (from requests)
+#10 0.848   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#10 0.921 Collecting urllib3<3,>=1.21.1 (from requests)
+#10 0.929   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#10 0.944 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests) (2025.10.5)
+#10 0.961 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#10 0.991    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 1.9 MB/s eta 0:00:00
+#10 1.002 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#10 1.030    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 5.3 MB/s eta 0:00:00
+#10 1.039 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#10 1.054    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.4 MB/s eta 0:00:00
+#10 1.062 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#10 1.084    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 5.7 MB/s eta 0:00:00
+#10 1.226 Installing collected packages: urllib3, idna, charset_normalizer, requests
+#10 1.469 Successfully installed charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#10 1.470 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.475 
+#10 1.475 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.475 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.6s
+
+#11 [ 7/17] RUN ["apt-get","install","-y","python-pip"]
+#11 0.238 Reading package lists...
+#11 0.794 Building dependency tree...
+#11 0.921 Reading state information...
+#11 0.944 Package python-pip is not available, but is referred to by another package.
+#11 0.944 This may mean that the package is missing, has been obsoleted, or
+#11 0.944 is only available from another source
+#11 0.944 However the following packages replace it:
+#11 0.944   python3-pip
+#11 0.944 
+#11 0.947 E: Package 'python-pip' has no installation candidate
+#11 ERROR: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+------
+ > [ 7/17] RUN ["apt-get","install","-y","python-pip"]:
+
+
+0.944 Package python-pip is not available, but is referred to by another package.
+0.944 This may mean that the package is missing, has been obsoleted, or
+0.944 is only available from another source
+0.944 However the following packages replace it:
+0.944   python3-pip
+0.944 
+0.947 E: Package 'python-pip' has no installation candidate
+------
+Dockerfile:7
+--------------------
+   5 |     RUN ["pip","install","geopandas"]
+   6 |     RUN ["pip","install","requests"]
+   7 | >>> RUN ["apt-get","install","-y","python-pip"]
+   8 |     RUN ["apt-get","install","-y","python-dev"]
+   9 |     RUN ["apt-get","install","-y","git"]
+--------------------
+ERROR: failed to build: failed to solve: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/default/default/rjaywy1f1uavostjeust3fpu9
+[2025-10-29 17:04:50] ERROR: Build failed for 72b2f24b6d2ff6ffde1597f1ca2dea3f

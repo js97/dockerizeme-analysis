@@ -1,0 +1,63 @@
+=== Docker Build Log for 5823716a1da5f0273504 ===
+Started at: Mi 29. Okt 16:05:45 CET 2025
+
+[2025-10-29 16:05:45] START: Building image for 5823716a1da5f0273504
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 208B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 6.66kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/5823716a1da5f0273504/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","numpy"]
+#7 2.201 Collecting numpy
+#7 2.247   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.266      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 3.0 MB/s eta 0:00:00
+#7 2.285 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 2.970    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 22.1 MB/s eta 0:00:00
+#7 3.054 Installing collected packages: numpy
+#7 4.621 Successfully installed numpy-2.3.4
+#7 4.621 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.719 
+#7 4.719 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.719 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.2s
+
+#8 [4/4] RUN ["pip","install","pillow"]
+#8 0.851 Collecting pillow
+#8 0.884   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#8 0.929 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#8 1.258    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 21.5 MB/s eta 0:00:00
+#8 1.331 Installing collected packages: pillow
+#8 1.637 Successfully installed pillow-12.0.0
+#8 1.637 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.643 
+#8 1.643 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.643 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.9s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.6s done
+#9 writing image sha256:fda859dd657a90e0cf3caf24bc536a1f21869658883c6ee357f9d30a3ec26994 done
+#9 naming to docker.io/library/test-image-5823716a1da5f0273504 done
+#9 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/default/default/un3hja2kzx8kfflbqq7jdpiqt
+[2025-10-29 16:05:53] SUCCESS: Build completed for 5823716a1da5f0273504

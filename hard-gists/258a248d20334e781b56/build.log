@@ -1,0 +1,1542 @@
+=== Docker Build Log for 258a248d20334e781b56 ===
+Started at: Mi 29. Okt 13:07:13 CET 2025
+
+[2025-10-29 13:07:13] START: Building image for 258a248d20334e781b56
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 4.00kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.63kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/92] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/92] COPY hard-gists/258a248d20334e781b56/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/92] RUN ["pip","install","azure-mgmt-logic"]
+#7 1.894 Collecting azure-mgmt-logic
+#7 2.027   Downloading azure_mgmt_logic-10.0.0-py3-none-any.whl.metadata (10 kB)
+#7 2.086 Collecting msrest>=0.6.21 (from azure-mgmt-logic)
+#7 2.094   Downloading msrest-0.7.1-py3-none-any.whl.metadata (21 kB)
+#7 2.135 Collecting azure-common~=1.1 (from azure-mgmt-logic)
+#7 2.143   Downloading azure_common-1.1.28-py2.py3-none-any.whl.metadata (5.0 kB)
+#7 2.178 Collecting azure-mgmt-core<2.0.0,>=1.3.0 (from azure-mgmt-logic)
+#7 2.187   Downloading azure_mgmt_core-1.6.0-py3-none-any.whl.metadata (4.6 kB)
+#7 2.233 Collecting azure-core>=1.32.0 (from azure-mgmt-core<2.0.0,>=1.3.0->azure-mgmt-logic)
+#7 2.242   Downloading azure_core-1.36.0-py3-none-any.whl.metadata (47 kB)
+#7 2.260      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.1/47.1 kB 2.2 MB/s eta 0:00:00
+#7 2.305 Collecting certifi>=2017.4.17 (from msrest>=0.6.21->azure-mgmt-logic)
+#7 2.314   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.350 Collecting isodate>=0.6.0 (from msrest>=0.6.21->azure-mgmt-logic)
+#7 2.358   Downloading isodate-0.7.2-py3-none-any.whl.metadata (11 kB)
+#7 2.401 Collecting requests-oauthlib>=0.5.0 (from msrest>=0.6.21->azure-mgmt-logic)
+#7 2.409   Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl.metadata (11 kB)
+#7 2.466 Collecting requests~=2.16 (from msrest>=0.6.21->azure-mgmt-logic)
+#7 2.473   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.526 Collecting typing-extensions>=4.6.0 (from azure-core>=1.32.0->azure-mgmt-core<2.0.0,>=1.3.0->azure-mgmt-logic)
+#7 2.534   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#7 2.643 Collecting charset_normalizer<4,>=2 (from requests~=2.16->msrest>=0.6.21->azure-mgmt-logic)
+#7 2.652   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.693 Collecting idna<4,>=2.5 (from requests~=2.16->msrest>=0.6.21->azure-mgmt-logic)
+#7 2.702   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.761 Collecting urllib3<3,>=1.21.1 (from requests~=2.16->msrest>=0.6.21->azure-mgmt-logic)
+#7 2.769   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.811 Collecting oauthlib>=3.0.0 (from requests-oauthlib>=0.5.0->msrest>=0.6.21->azure-mgmt-logic)
+#7 2.820   Downloading oauthlib-3.3.1-py3-none-any.whl.metadata (7.9 kB)
+#7 2.963 Downloading azure_mgmt_logic-10.0.0-py3-none-any.whl (235 kB)
+#7 2.988    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 235.4/235.4 kB 9.6 MB/s eta 0:00:00
+#7 2.996 Downloading azure_common-1.1.28-py2.py3-none-any.whl (14 kB)
+#7 3.017 Downloading azure_mgmt_core-1.6.0-py3-none-any.whl (29 kB)
+#7 3.036 Downloading msrest-0.7.1-py3-none-any.whl (85 kB)
+#7 3.049    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.4/85.4 kB 6.8 MB/s eta 0:00:00
+#7 3.060 Downloading azure_core-1.36.0-py3-none-any.whl (213 kB)
+#7 3.077    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 213.3/213.3 kB 13.7 MB/s eta 0:00:00
+#7 3.085 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 3.100    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 11.2 MB/s eta 0:00:00
+#7 3.109 Downloading isodate-0.7.2-py3-none-any.whl (22 kB)
+#7 3.126 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 3.139    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 4.9 MB/s eta 0:00:00
+#7 3.148 Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl (24 kB)
+#7 3.167 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 3.184    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 9.0 MB/s eta 0:00:00
+#7 3.193 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 3.205    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.8 MB/s eta 0:00:00
+#7 3.214 Downloading oauthlib-3.3.1-py3-none-any.whl (160 kB)
+#7 3.229    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 160.1/160.1 kB 11.2 MB/s eta 0:00:00
+#7 3.238 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#7 3.249    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.3 MB/s eta 0:00:00
+#7 3.259 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 3.274    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 8.4 MB/s eta 0:00:00
+#7 3.357 Installing collected packages: azure-common, urllib3, typing-extensions, oauthlib, isodate, idna, charset_normalizer, certifi, requests, requests-oauthlib, azure-core, msrest, azure-mgmt-core, azure-mgmt-logic
+#7 3.999 Successfully installed azure-common-1.1.28 azure-core-1.36.0 azure-mgmt-core-1.6.0 azure-mgmt-logic-10.0.0 certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 isodate-0.7.2 msrest-0.7.1 oauthlib-3.3.1 requests-2.32.5 requests-oauthlib-2.0.0 typing-extensions-4.15.0 urllib3-2.5.0
+#7 3.999 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.089 
+#7 4.089 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.089 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.4s
+
+#8 [ 4/92] RUN ["pip","install","azure-mgmt-datalake-store"]
+#8 0.530 Collecting azure-mgmt-datalake-store
+#8 0.568   Downloading azure_mgmt_datalake_store-0.5.0-py2.py3-none-any.whl.metadata (8.4 kB)
+#8 0.622 Collecting msrestazure<2.0.0,>=0.4.27 (from azure-mgmt-datalake-store)
+#8 0.631   Downloading msrestazure-0.6.4.post1-py2.py3-none-any.whl.metadata (15 kB)
+#8 0.649 Requirement already satisfied: azure-common~=1.1 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-datalake-store) (1.1.28)
+#8 0.677 Collecting azure-mgmt-datalake-nspkg>=2.0.0 (from azure-mgmt-datalake-store)
+#8 0.686   Downloading azure_mgmt_datalake_nspkg-3.0.1-py3-none-any.whl.metadata (1.5 kB)
+#8 0.730 Collecting azure-mgmt-nspkg>=3.0.0 (from azure-mgmt-datalake-nspkg>=2.0.0->azure-mgmt-datalake-store)
+#8 0.739   Downloading azure_mgmt_nspkg-3.0.2-py3-none-any.whl.metadata (1.5 kB)
+#8 0.787 Collecting adal<2.0.0,>=0.6.0 (from msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store)
+#8 0.795   Downloading adal-1.2.7-py2.py3-none-any.whl.metadata (6.9 kB)
+#8 0.806 Requirement already satisfied: msrest<2.0.0,>=0.6.0 in /usr/local/lib/python3.11/site-packages (from msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store) (0.7.1)
+#8 0.832 Collecting six (from msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store)
+#8 0.841   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 0.892 Collecting PyJWT<3,>=1.0.0 (from adal<2.0.0,>=0.6.0->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store)
+#8 0.901   Downloading PyJWT-2.10.1-py3-none-any.whl.metadata (4.0 kB)
+#8 0.917 Requirement already satisfied: requests<3,>=2.0.0 in /usr/local/lib/python3.11/site-packages (from adal<2.0.0,>=0.6.0->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store) (2.32.5)
+#8 0.952 Collecting python-dateutil<3,>=2.1.0 (from adal<2.0.0,>=0.6.0->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store)
+#8 0.960   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#8 1.195 Collecting cryptography>=1.1.0 (from adal<2.0.0,>=0.6.0->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store)
+#8 1.206   Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+#8 1.247 Collecting azure-nspkg>=3.0.0 (from azure-mgmt-nspkg>=3.0.0->azure-mgmt-datalake-nspkg>=2.0.0->azure-mgmt-datalake-store)
+#8 1.257   Downloading azure_nspkg-3.0.2-py3-none-any.whl.metadata (1.5 kB)
+#8 1.274 Requirement already satisfied: azure-core>=1.24.0 in /usr/local/lib/python3.11/site-packages (from msrest<2.0.0,>=0.6.0->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store) (1.36.0)
+#8 1.275 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from msrest<2.0.0,>=0.6.0->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store) (2025.10.5)
+#8 1.276 Requirement already satisfied: isodate>=0.6.0 in /usr/local/lib/python3.11/site-packages (from msrest<2.0.0,>=0.6.0->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store) (0.7.2)
+#8 1.277 Requirement already satisfied: requests-oauthlib>=0.5.0 in /usr/local/lib/python3.11/site-packages (from msrest<2.0.0,>=0.6.0->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store) (2.0.0)
+#8 1.283 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.11/site-packages (from azure-core>=1.24.0->msrest<2.0.0,>=0.6.0->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store) (4.15.0)
+#8 1.428 Collecting cffi>=2.0.0 (from cryptography>=1.1.0->adal<2.0.0,>=0.6.0->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store)
+#8 1.437   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+#8 1.480 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests<3,>=2.0.0->adal<2.0.0,>=0.6.0->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store) (3.4.4)
+#8 1.481 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests<3,>=2.0.0->adal<2.0.0,>=0.6.0->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store) (3.11)
+#8 1.482 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests<3,>=2.0.0->adal<2.0.0,>=0.6.0->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store) (2.5.0)
+#8 1.487 Requirement already satisfied: oauthlib>=3.0.0 in /usr/local/lib/python3.11/site-packages (from requests-oauthlib>=0.5.0->msrest<2.0.0,>=0.6.0->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store) (3.3.1)
+#8 1.521 Collecting pycparser (from cffi>=2.0.0->cryptography>=1.1.0->adal<2.0.0,>=0.6.0->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store)
+#8 1.533   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+#8 1.578 Downloading azure_mgmt_datalake_store-0.5.0-py2.py3-none-any.whl (88 kB)
+#8 1.600    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.7/88.7 kB 4.1 MB/s eta 0:00:00
+#8 1.609 Downloading azure_mgmt_datalake_nspkg-3.0.1-py3-none-any.whl (1.7 kB)
+#8 1.633 Downloading msrestazure-0.6.4.post1-py2.py3-none-any.whl (40 kB)
+#8 1.649    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.8/40.8 kB 2.2 MB/s eta 0:00:00
+#8 1.659 Downloading adal-1.2.7-py2.py3-none-any.whl (55 kB)
+#8 1.671    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.5/55.5 kB 4.4 MB/s eta 0:00:00
+#8 1.679 Downloading azure_mgmt_nspkg-3.0.2-py3-none-any.whl (1.6 kB)
+#8 1.698 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 1.716 Downloading azure_nspkg-3.0.2-py3-none-any.whl (1.5 kB)
+#8 1.733 Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+#8 1.904    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 26.4 MB/s eta 0:00:00
+#8 1.913 Downloading PyJWT-2.10.1-py3-none-any.whl (22 kB)
+#8 1.946 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#8 1.964    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 13.7 MB/s eta 0:00:00
+#8 1.973 Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+#8 1.991    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 13.0 MB/s eta 0:00:00
+#8 2.000 Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+#8 2.013    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 9.3 MB/s eta 0:00:00
+#8 2.123 Installing collected packages: azure-nspkg, six, PyJWT, pycparser, azure-mgmt-nspkg, python-dateutil, cffi, azure-mgmt-datalake-nspkg, cryptography, adal, msrestazure, azure-mgmt-datalake-store
+#8 2.662 Successfully installed PyJWT-2.10.1 adal-1.2.7 azure-mgmt-datalake-nspkg-3.0.1 azure-mgmt-datalake-store-0.5.0 azure-mgmt-nspkg-3.0.2 azure-nspkg-3.0.2 cffi-2.0.0 cryptography-46.0.3 msrestazure-0.6.4.post1 pycparser-2.23 python-dateutil-2.9.0.post0 six-1.17.0
+#8 2.663 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.668 
+#8 2.668 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.668 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.9s
+
+#9 [ 5/92] RUN ["pip","install","dj.choices"]
+#9 0.490 Collecting dj.choices
+#9 0.526   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#9 0.547   Preparing metadata (setup.py): started
+#9 0.977   Preparing metadata (setup.py): finished with status 'done'
+#9 1.094 Collecting django (from dj.choices)
+#9 1.103   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#9 1.119 Requirement already satisfied: six in /usr/local/lib/python3.11/site-packages (from dj.choices) (1.17.0)
+#9 1.157 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#9 1.165   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#9 1.208 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#9 1.216   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#9 1.244 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#9 1.568    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 25.8 MB/s eta 0:00:00
+#9 1.577 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#9 1.595 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#9 1.611    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 2.4 MB/s eta 0:00:00
+#9 1.649 Building wheels for collected packages: dj.choices
+#9 1.650   Building wheel for dj.choices (setup.py): started
+#9 1.827   Building wheel for dj.choices (setup.py): finished with status 'done'
+#9 1.827   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=338129229a29b0a5f544fd8a24d0866a0c41aa3826ce72c90f61061618d99b86
+#9 1.827   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#9 1.829 Successfully built dj.choices
+#9 1.943 Installing collected packages: sqlparse, asgiref, django, dj.choices
+#9 3.412 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 sqlparse-0.5.3
+#9 3.412 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 3.417 
+#9 3.417 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 3.417 [notice] To update, run: pip install --upgrade pip
+#9 DONE 3.9s
+
+#10 [ 6/92] RUN ["pip","install","azure-mgmt-common"]
+#10 0.633 Collecting azure-mgmt-common
+#10 0.761   Downloading azure_mgmt_common-0.20.0-py2.py3-none-any.whl.metadata (1.1 kB)
+#10 0.789 Requirement already satisfied: azure-common in /usr/local/lib/python3.11/site-packages (from azure-mgmt-common) (1.1.28)
+#10 0.790 Requirement already satisfied: azure-mgmt-nspkg in /usr/local/lib/python3.11/site-packages (from azure-mgmt-common) (3.0.2)
+#10 0.792 Requirement already satisfied: azure-nspkg>=3.0.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-nspkg->azure-mgmt-common) (3.0.2)
+#10 0.901 Downloading azure_mgmt_common-0.20.0-py2.py3-none-any.whl (7.1 kB)
+#10 1.017 Installing collected packages: azure-mgmt-common
+#10 1.061 Successfully installed azure-mgmt-common-0.20.0
+#10 1.061 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.066 
+#10 1.066 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.066 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.1s
+
+#11 [ 7/92] RUN ["pip","install","azure-cli-redis"]
+#11 0.647 Collecting azure-cli-redis
+#11 0.777   Downloading azure_cli_redis-0.4.4-py2.py3-none-any.whl.metadata (3.4 kB)
+#11 0.842 Collecting azure-mgmt-redis==6.0.0 (from azure-cli-redis)
+#11 0.950   Downloading azure_mgmt_redis-6.0.0-py2.py3-none-any.whl.metadata (6.4 kB)
+#11 1.037 Collecting azure-cli-core (from azure-cli-redis)
+#11 1.046   Downloading azure_cli_core-2.78.0-py3-none-any.whl.metadata (2.0 kB)
+#11 1.200 Collecting azure-cli-command-modules-nspkg>=2.0.0 (from azure-cli-redis)
+#11 1.303   Downloading azure_cli_command_modules_nspkg-2.0.3-py3-none-any.whl.metadata (1.3 kB)
+#11 1.324 Requirement already satisfied: msrest>=0.5.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-redis==6.0.0->azure-cli-redis) (0.7.1)
+#11 1.326 Requirement already satisfied: msrestazure<2.0.0,>=0.4.32 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-redis==6.0.0->azure-cli-redis) (0.6.4.post1)
+#11 1.328 Requirement already satisfied: azure-common~=1.1 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-redis==6.0.0->azure-cli-redis) (1.1.28)
+#11 1.455 Collecting azure-cli-nspkg>=3.0.0 (from azure-cli-command-modules-nspkg>=2.0.0->azure-cli-redis)
+#11 1.558   Downloading azure_cli_nspkg-3.0.4-py3-none-any.whl.metadata (1.5 kB)
+#11 1.624 Collecting argcomplete~=3.5.2 (from azure-cli-core->azure-cli-redis)
+#11 1.634   Downloading argcomplete-3.5.3-py3-none-any.whl.metadata (16 kB)
+#11 1.682 Collecting azure-cli-telemetry==1.1.0.* (from azure-cli-core->azure-cli-redis)
+#11 1.690   Downloading azure_cli_telemetry-1.1.0-py3-none-any.whl.metadata (1.8 kB)
+#11 1.750 Collecting azure-core~=1.35.0 (from azure-cli-core->azure-cli-redis)
+#11 1.758   Downloading azure_core-1.35.1-py3-none-any.whl.metadata (46 kB)
+#11 1.779      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.5/46.5 kB 2.0 MB/s eta 0:00:00
+#11 1.783 Requirement already satisfied: azure-mgmt-core<2,>=1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-redis) (1.6.0)
+#11 1.783 Requirement already satisfied: cryptography in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-redis) (46.0.3)
+#11 1.807 Collecting distro (from azure-cli-core->azure-cli-redis)
+#11 1.815   Downloading distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+#11 1.871 Collecting humanfriendly~=10.0 (from azure-cli-core->azure-cli-redis)
+#11 1.879   Downloading humanfriendly-10.0-py2.py3-none-any.whl.metadata (9.2 kB)
+#11 1.915 Collecting jmespath (from azure-cli-core->azure-cli-redis)
+#11 1.923   Downloading jmespath-1.0.1-py3-none-any.whl.metadata (7.6 kB)
+#11 1.966 Collecting knack~=0.11.0 (from azure-cli-core->azure-cli-redis)
+#11 1.976   Downloading knack-0.11.0-py3-none-any.whl.metadata (5.2 kB)
+#11 2.013 Collecting microsoft-security-utilities-secret-masker~=1.0.0b4 (from azure-cli-core->azure-cli-redis)
+#11 2.022   Downloading microsoft_security_utilities_secret_masker-1.0.0b4-py3-none-any.whl.metadata (3.3 kB)
+#11 2.057 Collecting msal-extensions==1.2.0 (from azure-cli-core->azure-cli-redis)
+#11 2.065   Downloading msal_extensions-1.2.0-py3-none-any.whl.metadata (7.6 kB)
+#11 2.113 Collecting msal==1.34.0b1 (from azure-cli-core->azure-cli-redis)
+#11 2.122   Downloading msal-1.34.0b1-py3-none-any.whl.metadata (11 kB)
+#11 2.165 Collecting packaging>=20.9 (from azure-cli-core->azure-cli-redis)
+#11 2.173   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#11 2.209 Collecting pkginfo>=1.5.0.1 (from azure-cli-core->azure-cli-redis)
+#11 2.217   Downloading pkginfo-1.12.1.2-py3-none-any.whl.metadata (13 kB)
+#11 2.317 Collecting psutil>=5.9 (from azure-cli-core->azure-cli-redis)
+#11 2.325   Downloading psutil-7.1.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (23 kB)
+#11 2.337 Requirement already satisfied: PyJWT>=2.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-redis) (2.10.1)
+#11 2.373 Collecting pyopenssl>=17.1.0 (from azure-cli-core->azure-cli-redis)
+#11 2.382   Downloading pyopenssl-25.3.0-py3-none-any.whl.metadata (17 kB)
+#11 2.422 Collecting py-deviceid (from azure-cli-core->azure-cli-redis)
+#11 2.430   Downloading py_deviceid-0.1.1-py3-none-any.whl.metadata (3.9 kB)
+#11 2.442 Requirement already satisfied: requests[socks] in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-redis) (2.32.5)
+#11 2.469 Collecting applicationinsights<0.12,>=0.11.1 (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-redis)
+#11 2.477   Downloading applicationinsights-0.11.10-py2.py3-none-any.whl.metadata (982 bytes)
+#11 2.527 Collecting portalocker<3,>=1.6 (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-redis)
+#11 2.535   Downloading portalocker-2.10.1-py3-none-any.whl.metadata (8.5 kB)
+#11 2.568 Requirement already satisfied: azure-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-nspkg>=3.0.0->azure-cli-command-modules-nspkg>=2.0.0->azure-cli-redis) (3.0.2)
+#11 2.574 Requirement already satisfied: six>=1.11.0 in /usr/local/lib/python3.11/site-packages (from azure-core~=1.35.0->azure-cli-core->azure-cli-redis) (1.17.0)
+#11 2.575 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.11/site-packages (from azure-core~=1.35.0->azure-cli-core->azure-cli-redis) (4.15.0)
+#11 2.609 Requirement already satisfied: cffi>=2.0.0 in /usr/local/lib/python3.11/site-packages (from cryptography->azure-cli-core->azure-cli-redis) (2.0.0)
+#11 2.649 Collecting pygments (from knack~=0.11.0->azure-cli-core->azure-cli-redis)
+#11 2.657   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#11 2.716 Collecting pyyaml (from knack~=0.11.0->azure-cli-core->azure-cli-redis)
+#11 2.724   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#11 2.763 Collecting tabulate (from knack~=0.11.0->azure-cli-core->azure-cli-redis)
+#11 2.771   Downloading tabulate-0.9.0-py3-none-any.whl.metadata (34 kB)
+#11 2.795 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-mgmt-redis==6.0.0->azure-cli-redis) (2025.10.5)
+#11 2.796 Requirement already satisfied: isodate>=0.6.0 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-mgmt-redis==6.0.0->azure-cli-redis) (0.7.2)
+#11 2.797 Requirement already satisfied: requests-oauthlib>=0.5.0 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-mgmt-redis==6.0.0->azure-cli-redis) (2.0.0)
+#11 2.802 Requirement already satisfied: adal<2.0.0,>=0.6.0 in /usr/local/lib/python3.11/site-packages (from msrestazure<2.0.0,>=0.4.32->azure-mgmt-redis==6.0.0->azure-cli-redis) (1.2.7)
+#11 2.860 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-redis) (3.4.4)
+#11 2.861 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-redis) (3.11)
+#11 2.862 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-redis) (2.5.0)
+#11 2.887 Collecting PySocks!=1.5.7,>=1.5.6 (from requests[socks]->azure-cli-core->azure-cli-redis)
+#11 2.895   Downloading PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+#11 2.911 Requirement already satisfied: python-dateutil<3,>=2.1.0 in /usr/local/lib/python3.11/site-packages (from adal<2.0.0,>=0.6.0->msrestazure<2.0.0,>=0.4.32->azure-mgmt-redis==6.0.0->azure-cli-redis) (2.9.0.post0)
+#11 2.923 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi>=2.0.0->cryptography->azure-cli-core->azure-cli-redis) (2.23)
+#11 2.967 Requirement already satisfied: oauthlib>=3.0.0 in /usr/local/lib/python3.11/site-packages (from requests-oauthlib>=0.5.0->msrest>=0.5.0->azure-mgmt-redis==6.0.0->azure-cli-redis) (3.3.1)
+#11 3.124 Downloading azure_cli_redis-0.4.4-py2.py3-none-any.whl (10 kB)
+#11 3.243 Downloading azure_mgmt_redis-6.0.0-py2.py3-none-any.whl (72 kB)
+#11 3.254    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.3/72.3 kB 6.8 MB/s eta 0:00:00
+#11 3.362 Downloading azure_cli_command_modules_nspkg-2.0.3-py3-none-any.whl (1.9 kB)
+#11 3.384 Downloading azure_cli_core-2.78.0-py3-none-any.whl (261 kB)
+#11 3.411    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 261.3/261.3 kB 10.0 MB/s eta 0:00:00
+#11 3.420 Downloading azure_cli_telemetry-1.1.0-py3-none-any.whl (11 kB)
+#11 3.443 Downloading msal-1.34.0b1-py3-none-any.whl (117 kB)
+#11 3.460    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 117.0/117.0 kB 6.9 MB/s eta 0:00:00
+#11 3.470 Downloading msal_extensions-1.2.0-py3-none-any.whl (19 kB)
+#11 3.489 Downloading argcomplete-3.5.3-py3-none-any.whl (43 kB)
+#11 3.504    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.6/43.6 kB 2.5 MB/s eta 0:00:00
+#11 3.612 Downloading azure_cli_nspkg-3.0.4-py3-none-any.whl (1.8 kB)
+#11 3.630 Downloading azure_core-1.35.1-py3-none-any.whl (211 kB)
+#11 3.646    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 211.8/211.8 kB 14.2 MB/s eta 0:00:00
+#11 3.655 Downloading humanfriendly-10.0-py2.py3-none-any.whl (86 kB)
+#11 3.668    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.8/86.8 kB 6.4 MB/s eta 0:00:00
+#11 3.677 Downloading knack-0.11.0-py3-none-any.whl (60 kB)
+#11 3.690    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.8/60.8 kB 4.6 MB/s eta 0:00:00
+#11 3.697 Downloading microsoft_security_utilities_secret_masker-1.0.0b4-py3-none-any.whl (16 kB)
+#11 3.715 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#11 3.726    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.9 MB/s eta 0:00:00
+#11 3.735 Downloading pkginfo-1.12.1.2-py3-none-any.whl (32 kB)
+#11 3.757 Downloading psutil-7.1.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (258 kB)
+#11 3.776    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 258.7/258.7 kB 14.8 MB/s eta 0:00:00
+#11 3.784 Downloading pyopenssl-25.3.0-py3-none-any.whl (57 kB)
+#11 3.796    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.3/57.3 kB 4.6 MB/s eta 0:00:00
+#11 3.804 Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+#11 3.820 Downloading jmespath-1.0.1-py3-none-any.whl (20 kB)
+#11 3.837 Downloading py_deviceid-0.1.1-py3-none-any.whl (5.7 kB)
+#11 3.854 Downloading applicationinsights-0.11.10-py2.py3-none-any.whl (55 kB)
+#11 3.866    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.1/55.1 kB 4.5 MB/s eta 0:00:00
+#11 3.874 Downloading portalocker-2.10.1-py3-none-any.whl (18 kB)
+#11 3.893 Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+#11 3.910 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#11 3.959    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 25.6 MB/s eta 0:00:00
+#11 3.969 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#11 4.006    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 22.6 MB/s eta 0:00:00
+#11 4.014 Downloading tabulate-0.9.0-py3-none-any.whl (35 kB)
+#11 4.208 Installing collected packages: microsoft-security-utilities-secret-masker, applicationinsights, tabulate, pyyaml, PySocks, pygments, py-deviceid, psutil, portalocker, pkginfo, packaging, jmespath, humanfriendly, distro, azure-cli-nspkg, argcomplete, knack, azure-core, azure-cli-telemetry, azure-cli-command-modules-nspkg, pyopenssl, msal, msal-extensions, azure-mgmt-redis, azure-cli-core, azure-cli-redis
+#11 5.198   Attempting uninstall: azure-core
+#11 5.210     Found existing installation: azure-core 1.36.0
+#11 5.217     Uninstalling azure-core-1.36.0:
+#11 5.326       Successfully uninstalled azure-core-1.36.0
+#11 5.798 Successfully installed PySocks-1.7.1 applicationinsights-0.11.10 argcomplete-3.5.3 azure-cli-command-modules-nspkg-2.0.3 azure-cli-core-2.78.0 azure-cli-nspkg-3.0.4 azure-cli-redis-0.4.4 azure-cli-telemetry-1.1.0 azure-core-1.35.1 azure-mgmt-redis-6.0.0 distro-1.9.0 humanfriendly-10.0 jmespath-1.0.1 knack-0.11.0 microsoft-security-utilities-secret-masker-1.0.0b4 msal-1.34.0b1 msal-extensions-1.2.0 packaging-25.0 pkginfo-1.12.1.2 portalocker-2.10.1 psutil-7.1.2 py-deviceid-0.1.1 pygments-2.19.2 pyopenssl-25.3.0 pyyaml-6.0.3 tabulate-0.9.0
+#11 5.798 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 5.804 
+#11 5.804 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 5.804 [notice] To update, run: pip install --upgrade pip
+#11 DONE 6.1s
+
+#12 [ 8/92] RUN ["pip","install","azure-cli-taskhelp"]
+#12 0.670 Collecting azure-cli-taskhelp
+#12 1.057   Downloading azure_cli_taskhelp-0.1.7-py2.py3-none-any.whl.metadata (1.8 kB)
+#12 1.079 Requirement already satisfied: azure-cli-core in /usr/local/lib/python3.11/site-packages (from azure-cli-taskhelp) (2.78.0)
+#12 1.080 Requirement already satisfied: azure-cli-command-modules-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-taskhelp) (2.0.3)
+#12 1.081 Requirement already satisfied: azure-cli-nspkg>=3.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-command-modules-nspkg>=2.0.0->azure-cli-taskhelp) (3.0.4)
+#12 1.092 Requirement already satisfied: argcomplete~=3.5.2 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-taskhelp) (3.5.3)
+#12 1.093 Requirement already satisfied: azure-cli-telemetry==1.1.0.* in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-taskhelp) (1.1.0)
+#12 1.095 Requirement already satisfied: azure-core~=1.35.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-taskhelp) (1.35.1)
+#12 1.096 Requirement already satisfied: azure-mgmt-core<2,>=1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-taskhelp) (1.6.0)
+#12 1.096 Requirement already satisfied: cryptography in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-taskhelp) (46.0.3)
+#12 1.097 Requirement already satisfied: distro in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-taskhelp) (1.9.0)
+#12 1.098 Requirement already satisfied: humanfriendly~=10.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-taskhelp) (10.0)
+#12 1.099 Requirement already satisfied: jmespath in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-taskhelp) (1.0.1)
+#12 1.099 Requirement already satisfied: knack~=0.11.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-taskhelp) (0.11.0)
+#12 1.100 Requirement already satisfied: microsoft-security-utilities-secret-masker~=1.0.0b4 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-taskhelp) (1.0.0b4)
+#12 1.101 Requirement already satisfied: msal-extensions==1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-taskhelp) (1.2.0)
+#12 1.102 Requirement already satisfied: msal==1.34.0b1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-taskhelp) (1.34.0b1)
+#12 1.103 Requirement already satisfied: packaging>=20.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-taskhelp) (25.0)
+#12 1.104 Requirement already satisfied: pkginfo>=1.5.0.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-taskhelp) (1.12.1.2)
+#12 1.106 Requirement already satisfied: psutil>=5.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-taskhelp) (7.1.2)
+#12 1.107 Requirement already satisfied: PyJWT>=2.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-taskhelp) (2.10.1)
+#12 1.108 Requirement already satisfied: pyopenssl>=17.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-taskhelp) (25.3.0)
+#12 1.109 Requirement already satisfied: py-deviceid in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-taskhelp) (0.1.1)
+#12 1.109 Requirement already satisfied: requests[socks] in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-taskhelp) (2.32.5)
+#12 1.112 Requirement already satisfied: applicationinsights<0.12,>=0.11.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-taskhelp) (0.11.10)
+#12 1.113 Requirement already satisfied: portalocker<3,>=1.6 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-taskhelp) (2.10.1)
+#12 1.129 Requirement already satisfied: azure-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-nspkg>=3.0.0->azure-cli-command-modules-nspkg>=2.0.0->azure-cli-taskhelp) (3.0.2)
+#12 1.133 Requirement already satisfied: six>=1.11.0 in /usr/local/lib/python3.11/site-packages (from azure-core~=1.35.0->azure-cli-core->azure-cli-taskhelp) (1.17.0)
+#12 1.134 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.11/site-packages (from azure-core~=1.35.0->azure-cli-core->azure-cli-taskhelp) (4.15.0)
+#12 1.151 Requirement already satisfied: cffi>=2.0.0 in /usr/local/lib/python3.11/site-packages (from cryptography->azure-cli-core->azure-cli-taskhelp) (2.0.0)
+#12 1.158 Requirement already satisfied: pygments in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-taskhelp) (2.19.2)
+#12 1.159 Requirement already satisfied: pyyaml in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-taskhelp) (6.0.3)
+#12 1.161 Requirement already satisfied: tabulate in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-taskhelp) (0.9.0)
+#12 1.215 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-taskhelp) (3.4.4)
+#12 1.216 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-taskhelp) (3.11)
+#12 1.217 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-taskhelp) (2.5.0)
+#12 1.218 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-taskhelp) (2025.10.5)
+#12 1.219 Requirement already satisfied: PySocks!=1.5.7,>=1.5.6 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-taskhelp) (1.7.1)
+#12 1.228 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi>=2.0.0->cryptography->azure-cli-core->azure-cli-taskhelp) (2.23)
+#12 1.389 Downloading azure_cli_taskhelp-0.1.7-py2.py3-none-any.whl (4.9 kB)
+#12 1.558 Installing collected packages: azure-cli-taskhelp
+#12 1.617 Successfully installed azure-cli-taskhelp-0.1.7
+#12 1.617 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 1.622 
+#12 1.622 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 1.622 [notice] To update, run: pip install --upgrade pip
+#12 DONE 1.7s
+
+#13 [ 9/92] RUN ["pip","install","azure-mgmt-nspkg"]
+#13 0.455 Requirement already satisfied: azure-mgmt-nspkg in /usr/local/lib/python3.11/site-packages (3.0.2)
+#13 0.457 Requirement already satisfied: azure-nspkg>=3.0.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-nspkg) (3.0.2)
+#13 0.619 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 0.625 
+#13 0.625 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 0.625 [notice] To update, run: pip install --upgrade pip
+#13 DONE 0.7s
+
+#14 [10/92] RUN ["pip","install","azure-mgmt-servermanager"]
+#14 0.651 Collecting azure-mgmt-servermanager
+#14 0.784   Downloading azure_mgmt_servermanager-2.0.1-py3-none-any.whl.metadata (3.8 kB)
+#14 0.813 Requirement already satisfied: isodate<1.0.0,>=0.6.1 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-servermanager) (0.7.2)
+#14 0.814 Requirement already satisfied: azure-common~=1.1 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-servermanager) (1.1.28)
+#14 0.815 Requirement already satisfied: azure-mgmt-core<2.0.0,>=1.3.2 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-servermanager) (1.6.0)
+#14 0.819 Requirement already satisfied: azure-core>=1.32.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-core<2.0.0,>=1.3.2->azure-mgmt-servermanager) (1.35.1)
+#14 0.824 Requirement already satisfied: requests>=2.21.0 in /usr/local/lib/python3.11/site-packages (from azure-core>=1.32.0->azure-mgmt-core<2.0.0,>=1.3.2->azure-mgmt-servermanager) (2.32.5)
+#14 0.825 Requirement already satisfied: six>=1.11.0 in /usr/local/lib/python3.11/site-packages (from azure-core>=1.32.0->azure-mgmt-core<2.0.0,>=1.3.2->azure-mgmt-servermanager) (1.17.0)
+#14 0.825 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.11/site-packages (from azure-core>=1.32.0->azure-mgmt-core<2.0.0,>=1.3.2->azure-mgmt-servermanager) (4.15.0)
+#14 0.831 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests>=2.21.0->azure-core>=1.32.0->azure-mgmt-core<2.0.0,>=1.3.2->azure-mgmt-servermanager) (3.4.4)
+#14 0.832 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests>=2.21.0->azure-core>=1.32.0->azure-mgmt-core<2.0.0,>=1.3.2->azure-mgmt-servermanager) (3.11)
+#14 0.833 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests>=2.21.0->azure-core>=1.32.0->azure-mgmt-core<2.0.0,>=1.3.2->azure-mgmt-servermanager) (2.5.0)
+#14 0.834 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests>=2.21.0->azure-core>=1.32.0->azure-mgmt-core<2.0.0,>=1.3.2->azure-mgmt-servermanager) (2025.10.5)
+#14 1.008 Downloading azure_mgmt_servermanager-2.0.1-py3-none-any.whl (64 kB)
+#14 1.048    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.3/64.3 kB 1.4 MB/s eta 0:00:00
+#14 1.201 Installing collected packages: azure-mgmt-servermanager
+#14 1.273 Successfully installed azure-mgmt-servermanager-2.0.1
+#14 1.274 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#14 1.279 
+#14 1.279 [notice] A new release of pip is available: 24.0 -> 25.3
+#14 1.279 [notice] To update, run: pip install --upgrade pip
+#14 DONE 1.3s
+
+#15 [11/92] RUN ["pip","install","azure-cli-dls"]
+#15 0.624 Collecting azure-cli-dls
+#15 0.756   Downloading azure_cli_dls-0.1.10-py2.py3-none-any.whl.metadata (4.1 kB)
+#15 0.775 Requirement already satisfied: azure-mgmt-datalake-store==0.5.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-dls) (0.5.0)
+#15 0.810 Collecting azure-datalake-store==0.0.39 (from azure-cli-dls)
+#15 0.915   Downloading azure_datalake_store-0.0.39-py2.py3-none-any.whl.metadata (16 kB)
+#15 0.933 Requirement already satisfied: azure-cli-core in /usr/local/lib/python3.11/site-packages (from azure-cli-dls) (2.78.0)
+#15 0.934 Requirement already satisfied: azure-cli-command-modules-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-dls) (2.0.3)
+#15 0.937 Requirement already satisfied: cffi in /usr/local/lib/python3.11/site-packages (from azure-datalake-store==0.0.39->azure-cli-dls) (2.0.0)
+#15 0.938 Requirement already satisfied: adal>=0.4.2 in /usr/local/lib/python3.11/site-packages (from azure-datalake-store==0.0.39->azure-cli-dls) (1.2.7)
+#15 0.939 Requirement already satisfied: requests>=2.20.0 in /usr/local/lib/python3.11/site-packages (from azure-datalake-store==0.0.39->azure-cli-dls) (2.32.5)
+#15 0.940 Requirement already satisfied: azure-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-datalake-store==0.0.39->azure-cli-dls) (3.0.2)
+#15 0.943 Requirement already satisfied: msrestazure<2.0.0,>=0.4.27 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-datalake-store==0.5.0->azure-cli-dls) (0.6.4.post1)
+#15 0.944 Requirement already satisfied: azure-common~=1.1 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-datalake-store==0.5.0->azure-cli-dls) (1.1.28)
+#15 0.944 Requirement already satisfied: azure-mgmt-datalake-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-datalake-store==0.5.0->azure-cli-dls) (3.0.1)
+#15 0.946 Requirement already satisfied: azure-cli-nspkg>=3.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-command-modules-nspkg>=2.0.0->azure-cli-dls) (3.0.4)
+#15 0.957 Requirement already satisfied: argcomplete~=3.5.2 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dls) (3.5.3)
+#15 0.957 Requirement already satisfied: azure-cli-telemetry==1.1.0.* in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dls) (1.1.0)
+#15 0.959 Requirement already satisfied: azure-core~=1.35.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dls) (1.35.1)
+#15 0.960 Requirement already satisfied: azure-mgmt-core<2,>=1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dls) (1.6.0)
+#15 0.961 Requirement already satisfied: cryptography in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dls) (46.0.3)
+#15 0.962 Requirement already satisfied: distro in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dls) (1.9.0)
+#15 0.962 Requirement already satisfied: humanfriendly~=10.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dls) (10.0)
+#15 0.963 Requirement already satisfied: jmespath in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dls) (1.0.1)
+#15 0.964 Requirement already satisfied: knack~=0.11.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dls) (0.11.0)
+#15 0.965 Requirement already satisfied: microsoft-security-utilities-secret-masker~=1.0.0b4 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dls) (1.0.0b4)
+#15 0.966 Requirement already satisfied: msal-extensions==1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dls) (1.2.0)
+#15 0.967 Requirement already satisfied: msal==1.34.0b1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dls) (1.34.0b1)
+#15 0.967 Requirement already satisfied: packaging>=20.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dls) (25.0)
+#15 0.968 Requirement already satisfied: pkginfo>=1.5.0.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dls) (1.12.1.2)
+#15 0.970 Requirement already satisfied: psutil>=5.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dls) (7.1.2)
+#15 0.971 Requirement already satisfied: PyJWT>=2.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dls) (2.10.1)
+#15 0.972 Requirement already satisfied: pyopenssl>=17.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dls) (25.3.0)
+#15 0.973 Requirement already satisfied: py-deviceid in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dls) (0.1.1)
+#15 0.975 Requirement already satisfied: applicationinsights<0.12,>=0.11.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-dls) (0.11.10)
+#15 0.976 Requirement already satisfied: portalocker<3,>=1.6 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-dls) (2.10.1)
+#15 0.990 Requirement already satisfied: python-dateutil<3,>=2.1.0 in /usr/local/lib/python3.11/site-packages (from adal>=0.4.2->azure-datalake-store==0.0.39->azure-cli-dls) (2.9.0.post0)
+#15 1.001 Requirement already satisfied: six>=1.11.0 in /usr/local/lib/python3.11/site-packages (from azure-core~=1.35.0->azure-cli-core->azure-cli-dls) (1.17.0)
+#15 1.002 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.11/site-packages (from azure-core~=1.35.0->azure-cli-core->azure-cli-dls) (4.15.0)
+#15 1.007 Requirement already satisfied: azure-mgmt-nspkg>=3.0.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-datalake-nspkg>=2.0.0->azure-mgmt-datalake-store==0.5.0->azure-cli-dls) (3.0.2)
+#15 1.025 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi->azure-datalake-store==0.0.39->azure-cli-dls) (2.23)
+#15 1.033 Requirement already satisfied: pygments in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-dls) (2.19.2)
+#15 1.034 Requirement already satisfied: pyyaml in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-dls) (6.0.3)
+#15 1.035 Requirement already satisfied: tabulate in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-dls) (0.9.0)
+#15 1.042 Requirement already satisfied: msrest<2.0.0,>=0.6.0 in /usr/local/lib/python3.11/site-packages (from msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store==0.5.0->azure-cli-dls) (0.7.1)
+#15 1.091 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests>=2.20.0->azure-datalake-store==0.0.39->azure-cli-dls) (3.4.4)
+#15 1.092 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests>=2.20.0->azure-datalake-store==0.0.39->azure-cli-dls) (3.11)
+#15 1.093 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests>=2.20.0->azure-datalake-store==0.0.39->azure-cli-dls) (2.5.0)
+#15 1.094 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests>=2.20.0->azure-datalake-store==0.0.39->azure-cli-dls) (2025.10.5)
+#15 1.110 Requirement already satisfied: PySocks!=1.5.7,>=1.5.6 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-dls) (1.7.1)
+#15 1.134 Requirement already satisfied: isodate>=0.6.0 in /usr/local/lib/python3.11/site-packages (from msrest<2.0.0,>=0.6.0->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store==0.5.0->azure-cli-dls) (0.7.2)
+#15 1.136 Requirement already satisfied: requests-oauthlib>=0.5.0 in /usr/local/lib/python3.11/site-packages (from msrest<2.0.0,>=0.6.0->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store==0.5.0->azure-cli-dls) (2.0.0)
+#15 1.200 Requirement already satisfied: oauthlib>=3.0.0 in /usr/local/lib/python3.11/site-packages (from requests-oauthlib>=0.5.0->msrest<2.0.0,>=0.6.0->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store==0.5.0->azure-cli-dls) (3.3.1)
+#15 1.315 Downloading azure_cli_dls-0.1.10-py2.py3-none-any.whl (15 kB)
+#15 1.438 Downloading azure_datalake_store-0.0.39-py2.py3-none-any.whl (51 kB)
+#15 1.462    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.3/51.3 kB 1.9 MB/s eta 0:00:00
+#15 1.628 Installing collected packages: azure-datalake-store, azure-cli-dls
+#15 1.736 Successfully installed azure-cli-dls-0.1.10 azure-datalake-store-0.0.39
+#15 1.737 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#15 1.742 
+#15 1.742 [notice] A new release of pip is available: 24.0 -> 25.3
+#15 1.742 [notice] To update, run: pip install --upgrade pip
+#15 DONE 1.8s
+
+#16 [12/92] RUN ["pip","install","azure-cli-documentdb"]
+#16 0.630 Collecting azure-cli-documentdb
+#16 0.762   Downloading azure_cli_documentdb-0.1.5-py2.py3-none-any.whl.metadata (1.9 kB)
+#16 0.779 Requirement already satisfied: azure-cli-command-modules-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-documentdb) (2.0.3)
+#16 0.780 Requirement already satisfied: azure-cli-core in /usr/local/lib/python3.11/site-packages (from azure-cli-documentdb) (2.78.0)
+#16 0.903 Collecting azure-mgmt-documentdb==0.1.3 (from azure-cli-documentdb)
+#16 1.011   Downloading azure_mgmt_documentdb-0.1.3-py2.py3-none-any.whl.metadata (2.7 kB)
+#16 1.155 Collecting pydocumentdb>=2.0.1 (from azure-cli-documentdb)
+#16 1.259   Downloading pydocumentdb-2.3.5-py3-none-any.whl.metadata (5.8 kB)
+#16 1.276 Requirement already satisfied: azure-common~=1.1.5 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-documentdb==0.1.3->azure-cli-documentdb) (1.1.28)
+#16 1.277 Requirement already satisfied: azure-mgmt-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-documentdb==0.1.3->azure-cli-documentdb) (3.0.2)
+#16 1.327 Collecting msrestazure~=0.4.7 (from azure-mgmt-documentdb==0.1.3->azure-cli-documentdb)
+#16 1.337   Downloading msrestazure-0.4.34-py2.py3-none-any.whl.metadata (12 kB)
+#16 1.362 Requirement already satisfied: azure-cli-nspkg>=3.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-command-modules-nspkg>=2.0.0->azure-cli-documentdb) (3.0.4)
+#16 1.364 Requirement already satisfied: six>=1.6 in /usr/local/lib/python3.11/site-packages (from pydocumentdb>=2.0.1->azure-cli-documentdb) (1.17.0)
+#16 1.365 Requirement already satisfied: requests>=2.10.0 in /usr/local/lib/python3.11/site-packages (from pydocumentdb>=2.0.1->azure-cli-documentdb) (2.32.5)
+#16 1.376 Requirement already satisfied: argcomplete~=3.5.2 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-documentdb) (3.5.3)
+#16 1.377 Requirement already satisfied: azure-cli-telemetry==1.1.0.* in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-documentdb) (1.1.0)
+#16 1.378 Requirement already satisfied: azure-core~=1.35.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-documentdb) (1.35.1)
+#16 1.379 Requirement already satisfied: azure-mgmt-core<2,>=1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-documentdb) (1.6.0)
+#16 1.380 Requirement already satisfied: cryptography in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-documentdb) (46.0.3)
+#16 1.381 Requirement already satisfied: distro in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-documentdb) (1.9.0)
+#16 1.382 Requirement already satisfied: humanfriendly~=10.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-documentdb) (10.0)
+#16 1.383 Requirement already satisfied: jmespath in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-documentdb) (1.0.1)
+#16 1.384 Requirement already satisfied: knack~=0.11.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-documentdb) (0.11.0)
+#16 1.384 Requirement already satisfied: microsoft-security-utilities-secret-masker~=1.0.0b4 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-documentdb) (1.0.0b4)
+#16 1.385 Requirement already satisfied: msal-extensions==1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-documentdb) (1.2.0)
+#16 1.386 Requirement already satisfied: msal==1.34.0b1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-documentdb) (1.34.0b1)
+#16 1.387 Requirement already satisfied: packaging>=20.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-documentdb) (25.0)
+#16 1.388 Requirement already satisfied: pkginfo>=1.5.0.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-documentdb) (1.12.1.2)
+#16 1.390 Requirement already satisfied: psutil>=5.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-documentdb) (7.1.2)
+#16 1.391 Requirement already satisfied: PyJWT>=2.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-documentdb) (2.10.1)
+#16 1.392 Requirement already satisfied: pyopenssl>=17.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-documentdb) (25.3.0)
+#16 1.392 Requirement already satisfied: py-deviceid in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-documentdb) (0.1.1)
+#16 1.395 Requirement already satisfied: applicationinsights<0.12,>=0.11.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-documentdb) (0.11.10)
+#16 1.396 Requirement already satisfied: portalocker<3,>=1.6 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-documentdb) (2.10.1)
+#16 1.411 Requirement already satisfied: azure-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-nspkg>=3.0.0->azure-cli-command-modules-nspkg>=2.0.0->azure-cli-documentdb) (3.0.2)
+#16 1.417 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.11/site-packages (from azure-core~=1.35.0->azure-cli-core->azure-cli-documentdb) (4.15.0)
+#16 1.436 Requirement already satisfied: cffi>=2.0.0 in /usr/local/lib/python3.11/site-packages (from cryptography->azure-cli-core->azure-cli-documentdb) (2.0.0)
+#16 1.443 Requirement already satisfied: pygments in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-documentdb) (2.19.2)
+#16 1.443 Requirement already satisfied: pyyaml in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-documentdb) (6.0.3)
+#16 1.445 Requirement already satisfied: tabulate in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-documentdb) (0.9.0)
+#16 1.450 Requirement already satisfied: msrest<2.0.0,>=0.4.28 in /usr/local/lib/python3.11/site-packages (from msrestazure~=0.4.7->azure-mgmt-documentdb==0.1.3->azure-cli-documentdb) (0.7.1)
+#16 1.451 Requirement already satisfied: adal<2.0.0,>=0.5.0 in /usr/local/lib/python3.11/site-packages (from msrestazure~=0.4.7->azure-mgmt-documentdb==0.1.3->azure-cli-documentdb) (1.2.7)
+#16 1.518 Collecting keyring>=12.0.2 (from msrestazure~=0.4.7->azure-mgmt-documentdb==0.1.3->azure-cli-documentdb)
+#16 1.527   Downloading keyring-25.6.0-py3-none-any.whl.metadata (20 kB)
+#16 1.600 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests>=2.10.0->pydocumentdb>=2.0.1->azure-cli-documentdb) (3.4.4)
+#16 1.601 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests>=2.10.0->pydocumentdb>=2.0.1->azure-cli-documentdb) (3.11)
+#16 1.602 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests>=2.10.0->pydocumentdb>=2.0.1->azure-cli-documentdb) (2.5.0)
+#16 1.603 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests>=2.10.0->pydocumentdb>=2.0.1->azure-cli-documentdb) (2025.10.5)
+#16 1.619 Requirement already satisfied: PySocks!=1.5.7,>=1.5.6 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-documentdb) (1.7.1)
+#16 1.624 Requirement already satisfied: python-dateutil<3,>=2.1.0 in /usr/local/lib/python3.11/site-packages (from adal<2.0.0,>=0.5.0->msrestazure~=0.4.7->azure-mgmt-documentdb==0.1.3->azure-cli-documentdb) (2.9.0.post0)
+#16 1.635 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi>=2.0.0->cryptography->azure-cli-core->azure-cli-documentdb) (2.23)
+#16 1.686 Collecting SecretStorage>=3.2 (from keyring>=12.0.2->msrestazure~=0.4.7->azure-mgmt-documentdb==0.1.3->azure-cli-documentdb)
+#16 1.694   Downloading secretstorage-3.4.0-py3-none-any.whl.metadata (3.9 kB)
+#16 1.741 Collecting jeepney>=0.4.2 (from keyring>=12.0.2->msrestazure~=0.4.7->azure-mgmt-documentdb==0.1.3->azure-cli-documentdb)
+#16 1.750   Downloading jeepney-0.9.0-py3-none-any.whl.metadata (1.2 kB)
+#16 1.814 Collecting importlib_metadata>=4.11.4 (from keyring>=12.0.2->msrestazure~=0.4.7->azure-mgmt-documentdb==0.1.3->azure-cli-documentdb)
+#16 1.822   Downloading importlib_metadata-8.7.0-py3-none-any.whl.metadata (4.8 kB)
+#16 1.877 Collecting jaraco.classes (from keyring>=12.0.2->msrestazure~=0.4.7->azure-mgmt-documentdb==0.1.3->azure-cli-documentdb)
+#16 1.885   Downloading jaraco.classes-3.4.0-py3-none-any.whl.metadata (2.6 kB)
+#16 1.940 Collecting jaraco.functools (from keyring>=12.0.2->msrestazure~=0.4.7->azure-mgmt-documentdb==0.1.3->azure-cli-documentdb)
+#16 1.951   Downloading jaraco_functools-4.3.0-py3-none-any.whl.metadata (2.9 kB)
+#16 1.993 Collecting jaraco.context (from keyring>=12.0.2->msrestazure~=0.4.7->azure-mgmt-documentdb==0.1.3->azure-cli-documentdb)
+#16 2.001   Downloading jaraco.context-6.0.1-py3-none-any.whl.metadata (4.1 kB)
+#16 2.022 Requirement already satisfied: isodate>=0.6.0 in /usr/local/lib/python3.11/site-packages (from msrest<2.0.0,>=0.4.28->msrestazure~=0.4.7->azure-mgmt-documentdb==0.1.3->azure-cli-documentdb) (0.7.2)
+#16 2.024 Requirement already satisfied: requests-oauthlib>=0.5.0 in /usr/local/lib/python3.11/site-packages (from msrest<2.0.0,>=0.4.28->msrestazure~=0.4.7->azure-mgmt-documentdb==0.1.3->azure-cli-documentdb) (2.0.0)
+#16 2.121 Collecting zipp>=3.20 (from importlib_metadata>=4.11.4->keyring>=12.0.2->msrestazure~=0.4.7->azure-mgmt-documentdb==0.1.3->azure-cli-documentdb)
+#16 2.130   Downloading zipp-3.23.0-py3-none-any.whl.metadata (3.6 kB)
+#16 2.164 Requirement already satisfied: oauthlib>=3.0.0 in /usr/local/lib/python3.11/site-packages (from requests-oauthlib>=0.5.0->msrest<2.0.0,>=0.4.28->msrestazure~=0.4.7->azure-mgmt-documentdb==0.1.3->azure-cli-documentdb) (3.3.1)
+#16 2.209 Collecting more-itertools (from jaraco.classes->keyring>=12.0.2->msrestazure~=0.4.7->azure-mgmt-documentdb==0.1.3->azure-cli-documentdb)
+#16 2.218   Downloading more_itertools-10.8.0-py3-none-any.whl.metadata (39 kB)
+#16 2.270 Collecting backports.tarfile (from jaraco.context->keyring>=12.0.2->msrestazure~=0.4.7->azure-mgmt-documentdb==0.1.3->azure-cli-documentdb)
+#16 2.278   Downloading backports.tarfile-1.2.0-py3-none-any.whl.metadata (2.0 kB)
+#16 2.439 Downloading azure_cli_documentdb-0.1.5-py2.py3-none-any.whl (12 kB)
+#16 2.553 Downloading azure_mgmt_documentdb-0.1.3-py2.py3-none-any.whl (24 kB)
+#16 2.669 Downloading pydocumentdb-2.3.5-py3-none-any.whl (93 kB)
+#16 2.693    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 93.8/93.8 kB 3.7 MB/s eta 0:00:00
+#16 2.802 Downloading msrestazure-0.4.34-py2.py3-none-any.whl (36 kB)
+#16 2.824 Downloading keyring-25.6.0-py3-none-any.whl (39 kB)
+#16 2.842 Downloading importlib_metadata-8.7.0-py3-none-any.whl (27 kB)
+#16 2.862 Downloading jeepney-0.9.0-py3-none-any.whl (49 kB)
+#16 2.876    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.0/49.0 kB 3.1 MB/s eta 0:00:00
+#16 2.885 Downloading secretstorage-3.4.0-py3-none-any.whl (15 kB)
+#16 2.905 Downloading jaraco.classes-3.4.0-py3-none-any.whl (6.8 kB)
+#16 2.923 Downloading jaraco.context-6.0.1-py3-none-any.whl (6.8 kB)
+#16 2.944 Downloading jaraco_functools-4.3.0-py3-none-any.whl (10 kB)
+#16 2.961 Downloading zipp-3.23.0-py3-none-any.whl (10 kB)
+#16 2.983 Downloading backports.tarfile-1.2.0-py3-none-any.whl (30 kB)
+#16 3.005 Downloading more_itertools-10.8.0-py3-none-any.whl (69 kB)
+#16 3.016    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.7/69.7 kB 6.1 MB/s eta 0:00:00
+#16 3.249 Installing collected packages: zipp, more-itertools, jeepney, backports.tarfile, pydocumentdb, jaraco.functools, jaraco.context, jaraco.classes, importlib_metadata, SecretStorage, keyring, msrestazure, azure-mgmt-documentdb, azure-cli-documentdb
+#16 3.511   Attempting uninstall: msrestazure
+#16 3.525     Found existing installation: msrestazure 0.6.4.post1
+#16 3.528     Uninstalling msrestazure-0.6.4.post1:
+#16 3.555       Successfully uninstalled msrestazure-0.6.4.post1
+#16 3.661 Successfully installed SecretStorage-3.4.0 azure-cli-documentdb-0.1.5 azure-mgmt-documentdb-0.1.3 backports.tarfile-1.2.0 importlib_metadata-8.7.0 jaraco.classes-3.4.0 jaraco.context-6.0.1 jaraco.functools-4.3.0 jeepney-0.9.0 keyring-25.6.0 more-itertools-10.8.0 msrestazure-0.4.34 pydocumentdb-2.3.5 zipp-3.23.0
+#16 3.661 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#16 3.667 
+#16 3.667 [notice] A new release of pip is available: 24.0 -> 25.3
+#16 3.667 [notice] To update, run: pip install --upgrade pip
+#16 DONE 3.8s
+
+#17 [13/92] RUN ["pip","install","azure-cli-component"]
+#17 0.641 Collecting azure-cli-component
+#17 0.773   Downloading azure_cli_component-2.0.8-py2.py3-none-any.whl.metadata (2.3 kB)
+#17 0.789 Requirement already satisfied: azure-cli-core in /usr/local/lib/python3.11/site-packages (from azure-cli-component) (2.78.0)
+#17 0.790 Requirement already satisfied: pip in /usr/local/lib/python3.11/site-packages (from azure-cli-component) (24.0)
+#17 0.791 Requirement already satisfied: azure-cli-command-modules-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-component) (2.0.3)
+#17 0.793 Requirement already satisfied: azure-cli-nspkg>=3.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-command-modules-nspkg>=2.0.0->azure-cli-component) (3.0.4)
+#17 0.804 Requirement already satisfied: argcomplete~=3.5.2 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-component) (3.5.3)
+#17 0.804 Requirement already satisfied: azure-cli-telemetry==1.1.0.* in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-component) (1.1.0)
+#17 0.806 Requirement already satisfied: azure-core~=1.35.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-component) (1.35.1)
+#17 0.807 Requirement already satisfied: azure-mgmt-core<2,>=1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-component) (1.6.0)
+#17 0.808 Requirement already satisfied: cryptography in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-component) (46.0.3)
+#17 0.808 Requirement already satisfied: distro in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-component) (1.9.0)
+#17 0.809 Requirement already satisfied: humanfriendly~=10.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-component) (10.0)
+#17 0.810 Requirement already satisfied: jmespath in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-component) (1.0.1)
+#17 0.811 Requirement already satisfied: knack~=0.11.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-component) (0.11.0)
+#17 0.812 Requirement already satisfied: microsoft-security-utilities-secret-masker~=1.0.0b4 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-component) (1.0.0b4)
+#17 0.813 Requirement already satisfied: msal-extensions==1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-component) (1.2.0)
+#17 0.814 Requirement already satisfied: msal==1.34.0b1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-component) (1.34.0b1)
+#17 0.814 Requirement already satisfied: packaging>=20.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-component) (25.0)
+#17 0.815 Requirement already satisfied: pkginfo>=1.5.0.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-component) (1.12.1.2)
+#17 0.817 Requirement already satisfied: psutil>=5.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-component) (7.1.2)
+#17 0.818 Requirement already satisfied: PyJWT>=2.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-component) (2.10.1)
+#17 0.819 Requirement already satisfied: pyopenssl>=17.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-component) (25.3.0)
+#17 0.820 Requirement already satisfied: py-deviceid in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-component) (0.1.1)
+#17 0.820 Requirement already satisfied: requests[socks] in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-component) (2.32.5)
+#17 0.823 Requirement already satisfied: applicationinsights<0.12,>=0.11.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-component) (0.11.10)
+#17 0.824 Requirement already satisfied: portalocker<3,>=1.6 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-component) (2.10.1)
+#17 0.839 Requirement already satisfied: azure-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-nspkg>=3.0.0->azure-cli-command-modules-nspkg>=2.0.0->azure-cli-component) (3.0.2)
+#17 0.844 Requirement already satisfied: six>=1.11.0 in /usr/local/lib/python3.11/site-packages (from azure-core~=1.35.0->azure-cli-core->azure-cli-component) (1.17.0)
+#17 0.845 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.11/site-packages (from azure-core~=1.35.0->azure-cli-core->azure-cli-component) (4.15.0)
+#17 0.860 Requirement already satisfied: cffi>=2.0.0 in /usr/local/lib/python3.11/site-packages (from cryptography->azure-cli-core->azure-cli-component) (2.0.0)
+#17 0.867 Requirement already satisfied: pygments in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-component) (2.19.2)
+#17 0.867 Requirement already satisfied: pyyaml in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-component) (6.0.3)
+#17 0.869 Requirement already satisfied: tabulate in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-component) (0.9.0)
+#17 0.919 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-component) (3.4.4)
+#17 0.921 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-component) (3.11)
+#17 0.922 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-component) (2.5.0)
+#17 0.922 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-component) (2025.10.5)
+#17 0.924 Requirement already satisfied: PySocks!=1.5.7,>=1.5.6 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-component) (1.7.1)
+#17 0.932 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi>=2.0.0->cryptography->azure-cli-core->azure-cli-component) (2.23)
+#17 1.091 Downloading azure_cli_component-2.0.8-py2.py3-none-any.whl (8.2 kB)
+#17 1.338 Installing collected packages: azure-cli-component
+#17 1.389 Successfully installed azure-cli-component-2.0.8
+#17 1.389 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#17 1.394 
+#17 1.394 [notice] A new release of pip is available: 24.0 -> 25.3
+#17 1.394 [notice] To update, run: pip install --upgrade pip
+#17 DONE 1.5s
+
+#18 [14/92] RUN ["pip","install","azure-mgmt-trafficmanager"]
+#18 0.562 Collecting azure-mgmt-trafficmanager
+#18 0.597   Downloading azure_mgmt_trafficmanager-1.1.0-py3-none-any.whl.metadata (9.0 kB)
+#18 0.616 Requirement already satisfied: isodate<1.0.0,>=0.6.1 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-trafficmanager) (0.7.2)
+#18 0.617 Requirement already satisfied: azure-common~=1.1 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-trafficmanager) (1.1.28)
+#18 0.618 Requirement already satisfied: azure-mgmt-core<2.0.0,>=1.3.2 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-trafficmanager) (1.6.0)
+#18 0.622 Requirement already satisfied: azure-core>=1.32.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-core<2.0.0,>=1.3.2->azure-mgmt-trafficmanager) (1.35.1)
+#18 0.627 Requirement already satisfied: requests>=2.21.0 in /usr/local/lib/python3.11/site-packages (from azure-core>=1.32.0->azure-mgmt-core<2.0.0,>=1.3.2->azure-mgmt-trafficmanager) (2.32.5)
+#18 0.628 Requirement already satisfied: six>=1.11.0 in /usr/local/lib/python3.11/site-packages (from azure-core>=1.32.0->azure-mgmt-core<2.0.0,>=1.3.2->azure-mgmt-trafficmanager) (1.17.0)
+#18 0.629 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.11/site-packages (from azure-core>=1.32.0->azure-mgmt-core<2.0.0,>=1.3.2->azure-mgmt-trafficmanager) (4.15.0)
+#18 0.635 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests>=2.21.0->azure-core>=1.32.0->azure-mgmt-core<2.0.0,>=1.3.2->azure-mgmt-trafficmanager) (3.4.4)
+#18 0.636 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests>=2.21.0->azure-core>=1.32.0->azure-mgmt-core<2.0.0,>=1.3.2->azure-mgmt-trafficmanager) (3.11)
+#18 0.637 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests>=2.21.0->azure-core>=1.32.0->azure-mgmt-core<2.0.0,>=1.3.2->azure-mgmt-trafficmanager) (2.5.0)
+#18 0.637 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests>=2.21.0->azure-core>=1.32.0->azure-mgmt-core<2.0.0,>=1.3.2->azure-mgmt-trafficmanager) (2025.10.5)
+#18 0.666 Downloading azure_mgmt_trafficmanager-1.1.0-py3-none-any.whl (73 kB)
+#18 0.701    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.8/73.8 kB 2.0 MB/s eta 0:00:00
+#18 0.935 Installing collected packages: azure-mgmt-trafficmanager
+#18 1.024 Successfully installed azure-mgmt-trafficmanager-1.1.0
+#18 1.025 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#18 1.030 
+#18 1.030 [notice] A new release of pip is available: 24.0 -> 25.3
+#18 1.030 [notice] To update, run: pip install --upgrade pip
+#18 DONE 1.1s
+
+#19 [15/92] RUN ["pip","install","azure-cli-cdn"]
+#19 0.656 Collecting azure-cli-cdn
+#19 0.850   Downloading azure_cli_cdn-0.2.4-py2.py3-none-any.whl.metadata (2.8 kB)
+#19 0.921 Collecting azure-mgmt-cdn==3.1.0 (from azure-cli-cdn)
+#19 1.025   Downloading azure_mgmt_cdn-3.1.0-py2.py3-none-any.whl.metadata (5.5 kB)
+#19 1.049 Requirement already satisfied: azure-cli-core in /usr/local/lib/python3.11/site-packages (from azure-cli-cdn) (2.78.0)
+#19 1.050 Requirement already satisfied: azure-cli-command-modules-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-cdn) (2.0.3)
+#19 1.054 Requirement already satisfied: msrest>=0.5.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-cdn==3.1.0->azure-cli-cdn) (0.7.1)
+#19 1.055 Requirement already satisfied: msrestazure<2.0.0,>=0.4.32 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-cdn==3.1.0->azure-cli-cdn) (0.4.34)
+#19 1.056 Requirement already satisfied: azure-common~=1.1 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-cdn==3.1.0->azure-cli-cdn) (1.1.28)
+#19 1.058 Requirement already satisfied: azure-cli-nspkg>=3.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-command-modules-nspkg>=2.0.0->azure-cli-cdn) (3.0.4)
+#19 1.068 Requirement already satisfied: argcomplete~=3.5.2 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cdn) (3.5.3)
+#19 1.069 Requirement already satisfied: azure-cli-telemetry==1.1.0.* in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cdn) (1.1.0)
+#19 1.071 Requirement already satisfied: azure-core~=1.35.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cdn) (1.35.1)
+#19 1.072 Requirement already satisfied: azure-mgmt-core<2,>=1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cdn) (1.6.0)
+#19 1.073 Requirement already satisfied: cryptography in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cdn) (46.0.3)
+#19 1.074 Requirement already satisfied: distro in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cdn) (1.9.0)
+#19 1.075 Requirement already satisfied: humanfriendly~=10.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cdn) (10.0)
+#19 1.075 Requirement already satisfied: jmespath in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cdn) (1.0.1)
+#19 1.076 Requirement already satisfied: knack~=0.11.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cdn) (0.11.0)
+#19 1.077 Requirement already satisfied: microsoft-security-utilities-secret-masker~=1.0.0b4 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cdn) (1.0.0b4)
+#19 1.078 Requirement already satisfied: msal-extensions==1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cdn) (1.2.0)
+#19 1.079 Requirement already satisfied: msal==1.34.0b1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cdn) (1.34.0b1)
+#19 1.080 Requirement already satisfied: packaging>=20.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cdn) (25.0)
+#19 1.081 Requirement already satisfied: pkginfo>=1.5.0.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cdn) (1.12.1.2)
+#19 1.083 Requirement already satisfied: psutil>=5.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cdn) (7.1.2)
+#19 1.083 Requirement already satisfied: PyJWT>=2.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cdn) (2.10.1)
+#19 1.084 Requirement already satisfied: pyopenssl>=17.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cdn) (25.3.0)
+#19 1.085 Requirement already satisfied: py-deviceid in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cdn) (0.1.1)
+#19 1.086 Requirement already satisfied: requests[socks] in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cdn) (2.32.5)
+#19 1.088 Requirement already satisfied: applicationinsights<0.12,>=0.11.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-cdn) (0.11.10)
+#19 1.089 Requirement already satisfied: portalocker<3,>=1.6 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-cdn) (2.10.1)
+#19 1.105 Requirement already satisfied: azure-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-nspkg>=3.0.0->azure-cli-command-modules-nspkg>=2.0.0->azure-cli-cdn) (3.0.2)
+#19 1.111 Requirement already satisfied: six>=1.11.0 in /usr/local/lib/python3.11/site-packages (from azure-core~=1.35.0->azure-cli-core->azure-cli-cdn) (1.17.0)
+#19 1.112 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.11/site-packages (from azure-core~=1.35.0->azure-cli-core->azure-cli-cdn) (4.15.0)
+#19 1.128 Requirement already satisfied: cffi>=2.0.0 in /usr/local/lib/python3.11/site-packages (from cryptography->azure-cli-core->azure-cli-cdn) (2.0.0)
+#19 1.135 Requirement already satisfied: pygments in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-cdn) (2.19.2)
+#19 1.136 Requirement already satisfied: pyyaml in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-cdn) (6.0.3)
+#19 1.137 Requirement already satisfied: tabulate in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-cdn) (0.9.0)
+#19 1.146 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-mgmt-cdn==3.1.0->azure-cli-cdn) (2025.10.5)
+#19 1.147 Requirement already satisfied: isodate>=0.6.0 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-mgmt-cdn==3.1.0->azure-cli-cdn) (0.7.2)
+#19 1.148 Requirement already satisfied: requests-oauthlib>=0.5.0 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-mgmt-cdn==3.1.0->azure-cli-cdn) (2.0.0)
+#19 1.153 Requirement already satisfied: adal<2.0.0,>=0.5.0 in /usr/local/lib/python3.11/site-packages (from msrestazure<2.0.0,>=0.4.32->azure-mgmt-cdn==3.1.0->azure-cli-cdn) (1.2.7)
+#19 1.154 Requirement already satisfied: keyring>=12.0.2 in /usr/local/lib/python3.11/site-packages (from msrestazure<2.0.0,>=0.4.32->azure-mgmt-cdn==3.1.0->azure-cli-cdn) (25.6.0)
+#19 1.209 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-cdn) (3.4.4)
+#19 1.210 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-cdn) (3.11)
+#19 1.211 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-cdn) (2.5.0)
+#19 1.212 Requirement already satisfied: PySocks!=1.5.7,>=1.5.6 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-cdn) (1.7.1)
+#19 1.217 Requirement already satisfied: python-dateutil<3,>=2.1.0 in /usr/local/lib/python3.11/site-packages (from adal<2.0.0,>=0.5.0->msrestazure<2.0.0,>=0.4.32->azure-mgmt-cdn==3.1.0->azure-cli-cdn) (2.9.0.post0)
+#19 1.228 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi>=2.0.0->cryptography->azure-cli-core->azure-cli-cdn) (2.23)
+#19 1.256 Requirement already satisfied: SecretStorage>=3.2 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-cdn==3.1.0->azure-cli-cdn) (3.4.0)
+#19 1.257 Requirement already satisfied: jeepney>=0.4.2 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-cdn==3.1.0->azure-cli-cdn) (0.9.0)
+#19 1.258 Requirement already satisfied: importlib_metadata>=4.11.4 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-cdn==3.1.0->azure-cli-cdn) (8.7.0)
+#19 1.259 Requirement already satisfied: jaraco.classes in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-cdn==3.1.0->azure-cli-cdn) (3.4.0)
+#19 1.259 Requirement already satisfied: jaraco.functools in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-cdn==3.1.0->azure-cli-cdn) (4.3.0)
+#19 1.260 Requirement already satisfied: jaraco.context in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-cdn==3.1.0->azure-cli-cdn) (6.0.1)
+#19 1.292 Requirement already satisfied: oauthlib>=3.0.0 in /usr/local/lib/python3.11/site-packages (from requests-oauthlib>=0.5.0->msrest>=0.5.0->azure-mgmt-cdn==3.1.0->azure-cli-cdn) (3.3.1)
+#19 1.332 Requirement already satisfied: zipp>=3.20 in /usr/local/lib/python3.11/site-packages (from importlib_metadata>=4.11.4->keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-cdn==3.1.0->azure-cli-cdn) (3.23.0)
+#19 1.365 Requirement already satisfied: more-itertools in /usr/local/lib/python3.11/site-packages (from jaraco.classes->keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-cdn==3.1.0->azure-cli-cdn) (10.8.0)
+#19 1.376 Requirement already satisfied: backports.tarfile in /usr/local/lib/python3.11/site-packages (from jaraco.context->keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-cdn==3.1.0->azure-cli-cdn) (1.2.0)
+#19 1.532 Downloading azure_cli_cdn-0.2.4-py2.py3-none-any.whl (10 kB)
+#19 1.566 Downloading azure_mgmt_cdn-3.1.0-py2.py3-none-any.whl (119 kB)
+#19 1.600    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 119.5/119.5 kB 3.5 MB/s eta 0:00:00
+#19 1.842 Installing collected packages: azure-mgmt-cdn, azure-cli-cdn
+#19 1.987 Successfully installed azure-cli-cdn-0.2.4 azure-mgmt-cdn-3.1.0
+#19 1.987 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#19 1.992 
+#19 1.992 [notice] A new release of pip is available: 24.0 -> 25.3
+#19 1.992 [notice] To update, run: pip install --upgrade pip
+#19 DONE 2.1s
+
+#20 [16/92] RUN ["pip","install","azure-mgmt-devtestlabs"]
+#20 0.559 Collecting azure-mgmt-devtestlabs
+#20 0.592   Downloading azure_mgmt_devtestlabs-9.0.0-py2.py3-none-any.whl.metadata (13 kB)
+#20 0.610 Requirement already satisfied: msrest>=0.5.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-devtestlabs) (0.7.1)
+#20 0.611 Requirement already satisfied: azure-common~=1.1 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-devtestlabs) (1.1.28)
+#20 0.612 Requirement already satisfied: azure-mgmt-core<2.0.0,>=1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-devtestlabs) (1.6.0)
+#20 0.615 Requirement already satisfied: azure-core>=1.32.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-core<2.0.0,>=1.2.0->azure-mgmt-devtestlabs) (1.35.1)
+#20 0.621 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-mgmt-devtestlabs) (2025.10.5)
+#20 0.622 Requirement already satisfied: isodate>=0.6.0 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-mgmt-devtestlabs) (0.7.2)
+#20 0.623 Requirement already satisfied: requests-oauthlib>=0.5.0 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-mgmt-devtestlabs) (2.0.0)
+#20 0.624 Requirement already satisfied: requests~=2.16 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-mgmt-devtestlabs) (2.32.5)
+#20 0.628 Requirement already satisfied: six>=1.11.0 in /usr/local/lib/python3.11/site-packages (from azure-core>=1.32.0->azure-mgmt-core<2.0.0,>=1.2.0->azure-mgmt-devtestlabs) (1.17.0)
+#20 0.629 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.11/site-packages (from azure-core>=1.32.0->azure-mgmt-core<2.0.0,>=1.2.0->azure-mgmt-devtestlabs) (4.15.0)
+#20 0.636 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests~=2.16->msrest>=0.5.0->azure-mgmt-devtestlabs) (3.4.4)
+#20 0.637 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests~=2.16->msrest>=0.5.0->azure-mgmt-devtestlabs) (3.11)
+#20 0.638 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests~=2.16->msrest>=0.5.0->azure-mgmt-devtestlabs) (2.5.0)
+#20 0.642 Requirement already satisfied: oauthlib>=3.0.0 in /usr/local/lib/python3.11/site-packages (from requests-oauthlib>=0.5.0->msrest>=0.5.0->azure-mgmt-devtestlabs) (3.3.1)
+#20 0.669 Downloading azure_mgmt_devtestlabs-9.0.0-py2.py3-none-any.whl (238 kB)
+#20 0.711    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 238.3/238.3 kB 5.7 MB/s eta 0:00:00
+#20 0.956 Installing collected packages: azure-mgmt-devtestlabs
+#20 1.176 Successfully installed azure-mgmt-devtestlabs-9.0.0
+#20 1.176 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#20 1.181 
+#20 1.181 [notice] A new release of pip is available: 24.0 -> 25.3
+#20 1.181 [notice] To update, run: pip install --upgrade pip
+#20 DONE 1.3s
+
+#21 [17/92] RUN ["pip","install","azure-mgmt-powerbiembedded"]
+#21 0.537 Collecting azure-mgmt-powerbiembedded
+#21 0.675   Downloading azure_mgmt_powerbiembedded-3.0.0-py3-none-any.whl.metadata (10.0 kB)
+#21 0.702 Requirement already satisfied: isodate>=0.6.1 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-powerbiembedded) (0.7.2)
+#21 0.703 Requirement already satisfied: azure-common>=1.1 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-powerbiembedded) (1.1.28)
+#21 0.704 Requirement already satisfied: azure-mgmt-core>=1.3.2 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-powerbiembedded) (1.6.0)
+#21 0.707 Requirement already satisfied: azure-core>=1.32.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-core>=1.3.2->azure-mgmt-powerbiembedded) (1.35.1)
+#21 0.712 Requirement already satisfied: requests>=2.21.0 in /usr/local/lib/python3.11/site-packages (from azure-core>=1.32.0->azure-mgmt-core>=1.3.2->azure-mgmt-powerbiembedded) (2.32.5)
+#21 0.713 Requirement already satisfied: six>=1.11.0 in /usr/local/lib/python3.11/site-packages (from azure-core>=1.32.0->azure-mgmt-core>=1.3.2->azure-mgmt-powerbiembedded) (1.17.0)
+#21 0.714 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.11/site-packages (from azure-core>=1.32.0->azure-mgmt-core>=1.3.2->azure-mgmt-powerbiembedded) (4.15.0)
+#21 0.719 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests>=2.21.0->azure-core>=1.32.0->azure-mgmt-core>=1.3.2->azure-mgmt-powerbiembedded) (3.4.4)
+#21 0.720 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests>=2.21.0->azure-core>=1.32.0->azure-mgmt-core>=1.3.2->azure-mgmt-powerbiembedded) (3.11)
+#21 0.721 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests>=2.21.0->azure-core>=1.32.0->azure-mgmt-core>=1.3.2->azure-mgmt-powerbiembedded) (2.5.0)
+#21 0.722 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests>=2.21.0->azure-core>=1.32.0->azure-mgmt-core>=1.3.2->azure-mgmt-powerbiembedded) (2025.10.5)
+#21 0.849 Downloading azure_mgmt_powerbiembedded-3.0.0-py3-none-any.whl (60 kB)
+#21 0.892    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.3/60.3 kB 1.2 MB/s eta 0:00:00
+#21 1.123 Installing collected packages: azure-mgmt-powerbiembedded
+#21 1.210 Successfully installed azure-mgmt-powerbiembedded-3.0.0
+#21 1.210 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#21 1.215 
+#21 1.215 [notice] A new release of pip is available: 24.0 -> 25.3
+#21 1.215 [notice] To update, run: pip install --upgrade pip
+#21 DONE 1.3s
+
+#22 [18/92] RUN ["pip","install","azure-cli-rdbms"]
+#22 0.644 Collecting azure-cli-rdbms
+#22 0.783   Downloading azure_cli_rdbms-0.3.12-py2.py3-none-any.whl.metadata (3.3 kB)
+#22 0.822 Requirement already satisfied: azure-cli-core in /usr/local/lib/python3.11/site-packages (from azure-cli-rdbms) (2.78.0)
+#22 0.862 Collecting azure-mgmt-rdbms==1.8.0 (from azure-cli-rdbms)
+#22 0.970   Downloading azure_mgmt_rdbms-1.8.0-py2.py3-none-any.whl.metadata (6.7 kB)
+#22 0.984 Requirement already satisfied: six in /usr/local/lib/python3.11/site-packages (from azure-cli-rdbms) (1.17.0)
+#22 0.985 Requirement already satisfied: azure-cli-command-modules-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-rdbms) (2.0.3)
+#22 0.989 Requirement already satisfied: msrest>=0.5.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-rdbms==1.8.0->azure-cli-rdbms) (0.7.1)
+#22 0.990 Requirement already satisfied: msrestazure<2.0.0,>=0.4.32 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-rdbms==1.8.0->azure-cli-rdbms) (0.4.34)
+#22 0.991 Requirement already satisfied: azure-common~=1.1 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-rdbms==1.8.0->azure-cli-rdbms) (1.1.28)
+#22 0.992 Requirement already satisfied: azure-cli-nspkg>=3.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-command-modules-nspkg>=2.0.0->azure-cli-rdbms) (3.0.4)
+#22 1.003 Requirement already satisfied: argcomplete~=3.5.2 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-rdbms) (3.5.3)
+#22 1.004 Requirement already satisfied: azure-cli-telemetry==1.1.0.* in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-rdbms) (1.1.0)
+#22 1.005 Requirement already satisfied: azure-core~=1.35.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-rdbms) (1.35.1)
+#22 1.006 Requirement already satisfied: azure-mgmt-core<2,>=1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-rdbms) (1.6.0)
+#22 1.007 Requirement already satisfied: cryptography in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-rdbms) (46.0.3)
+#22 1.008 Requirement already satisfied: distro in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-rdbms) (1.9.0)
+#22 1.009 Requirement already satisfied: humanfriendly~=10.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-rdbms) (10.0)
+#22 1.009 Requirement already satisfied: jmespath in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-rdbms) (1.0.1)
+#22 1.010 Requirement already satisfied: knack~=0.11.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-rdbms) (0.11.0)
+#22 1.011 Requirement already satisfied: microsoft-security-utilities-secret-masker~=1.0.0b4 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-rdbms) (1.0.0b4)
+#22 1.012 Requirement already satisfied: msal-extensions==1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-rdbms) (1.2.0)
+#22 1.013 Requirement already satisfied: msal==1.34.0b1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-rdbms) (1.34.0b1)
+#22 1.014 Requirement already satisfied: packaging>=20.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-rdbms) (25.0)
+#22 1.015 Requirement already satisfied: pkginfo>=1.5.0.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-rdbms) (1.12.1.2)
+#22 1.016 Requirement already satisfied: psutil>=5.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-rdbms) (7.1.2)
+#22 1.017 Requirement already satisfied: PyJWT>=2.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-rdbms) (2.10.1)
+#22 1.018 Requirement already satisfied: pyopenssl>=17.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-rdbms) (25.3.0)
+#22 1.019 Requirement already satisfied: py-deviceid in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-rdbms) (0.1.1)
+#22 1.020 Requirement already satisfied: requests[socks] in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-rdbms) (2.32.5)
+#22 1.023 Requirement already satisfied: applicationinsights<0.12,>=0.11.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-rdbms) (0.11.10)
+#22 1.024 Requirement already satisfied: portalocker<3,>=1.6 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-rdbms) (2.10.1)
+#22 1.041 Requirement already satisfied: azure-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-nspkg>=3.0.0->azure-cli-command-modules-nspkg>=2.0.0->azure-cli-rdbms) (3.0.2)
+#22 1.048 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.11/site-packages (from azure-core~=1.35.0->azure-cli-core->azure-cli-rdbms) (4.15.0)
+#22 1.065 Requirement already satisfied: cffi>=2.0.0 in /usr/local/lib/python3.11/site-packages (from cryptography->azure-cli-core->azure-cli-rdbms) (2.0.0)
+#22 1.072 Requirement already satisfied: pygments in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-rdbms) (2.19.2)
+#22 1.073 Requirement already satisfied: pyyaml in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-rdbms) (6.0.3)
+#22 1.074 Requirement already satisfied: tabulate in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-rdbms) (0.9.0)
+#22 1.083 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-mgmt-rdbms==1.8.0->azure-cli-rdbms) (2025.10.5)
+#22 1.084 Requirement already satisfied: isodate>=0.6.0 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-mgmt-rdbms==1.8.0->azure-cli-rdbms) (0.7.2)
+#22 1.084 Requirement already satisfied: requests-oauthlib>=0.5.0 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-mgmt-rdbms==1.8.0->azure-cli-rdbms) (2.0.0)
+#22 1.089 Requirement already satisfied: adal<2.0.0,>=0.5.0 in /usr/local/lib/python3.11/site-packages (from msrestazure<2.0.0,>=0.4.32->azure-mgmt-rdbms==1.8.0->azure-cli-rdbms) (1.2.7)
+#22 1.091 Requirement already satisfied: keyring>=12.0.2 in /usr/local/lib/python3.11/site-packages (from msrestazure<2.0.0,>=0.4.32->azure-mgmt-rdbms==1.8.0->azure-cli-rdbms) (25.6.0)
+#22 1.146 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-rdbms) (3.4.4)
+#22 1.147 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-rdbms) (3.11)
+#22 1.147 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-rdbms) (2.5.0)
+#22 1.149 Requirement already satisfied: PySocks!=1.5.7,>=1.5.6 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-rdbms) (1.7.1)
+#22 1.154 Requirement already satisfied: python-dateutil<3,>=2.1.0 in /usr/local/lib/python3.11/site-packages (from adal<2.0.0,>=0.5.0->msrestazure<2.0.0,>=0.4.32->azure-mgmt-rdbms==1.8.0->azure-cli-rdbms) (2.9.0.post0)
+#22 1.165 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi>=2.0.0->cryptography->azure-cli-core->azure-cli-rdbms) (2.23)
+#22 1.192 Requirement already satisfied: SecretStorage>=3.2 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-rdbms==1.8.0->azure-cli-rdbms) (3.4.0)
+#22 1.193 Requirement already satisfied: jeepney>=0.4.2 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-rdbms==1.8.0->azure-cli-rdbms) (0.9.0)
+#22 1.194 Requirement already satisfied: importlib_metadata>=4.11.4 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-rdbms==1.8.0->azure-cli-rdbms) (8.7.0)
+#22 1.195 Requirement already satisfied: jaraco.classes in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-rdbms==1.8.0->azure-cli-rdbms) (3.4.0)
+#22 1.195 Requirement already satisfied: jaraco.functools in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-rdbms==1.8.0->azure-cli-rdbms) (4.3.0)
+#22 1.196 Requirement already satisfied: jaraco.context in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-rdbms==1.8.0->azure-cli-rdbms) (6.0.1)
+#22 1.228 Requirement already satisfied: oauthlib>=3.0.0 in /usr/local/lib/python3.11/site-packages (from requests-oauthlib>=0.5.0->msrest>=0.5.0->azure-mgmt-rdbms==1.8.0->azure-cli-rdbms) (3.3.1)
+#22 1.264 Requirement already satisfied: zipp>=3.20 in /usr/local/lib/python3.11/site-packages (from importlib_metadata>=4.11.4->keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-rdbms==1.8.0->azure-cli-rdbms) (3.23.0)
+#22 1.296 Requirement already satisfied: more-itertools in /usr/local/lib/python3.11/site-packages (from jaraco.classes->keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-rdbms==1.8.0->azure-cli-rdbms) (10.8.0)
+#22 1.308 Requirement already satisfied: backports.tarfile in /usr/local/lib/python3.11/site-packages (from jaraco.context->keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-rdbms==1.8.0->azure-cli-rdbms) (1.2.0)
+#22 1.459 Downloading azure_cli_rdbms-0.3.12-py2.py3-none-any.whl (17 kB)
+#22 1.608 Downloading azure_mgmt_rdbms-1.8.0-py2.py3-none-any.whl (258 kB)
+#22 1.657    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 259.0/259.0 kB 5.3 MB/s eta 0:00:00
+#22 1.906 Installing collected packages: azure-mgmt-rdbms, azure-cli-rdbms
+#22 2.123 Successfully installed azure-cli-rdbms-0.3.12 azure-mgmt-rdbms-1.8.0
+#22 2.124 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#22 2.129 
+#22 2.129 [notice] A new release of pip is available: 24.0 -> 25.3
+#22 2.129 [notice] To update, run: pip install --upgrade pip
+#22 DONE 2.2s
+
+#23 [19/92] RUN ["pip","install","azure-cli-eventgrid"]
+#23 0.642 Collecting azure-cli-eventgrid
+#23 0.772   Downloading azure_cli_eventgrid-0.2.4-py2.py3-none-any.whl.metadata (3.9 kB)
+#23 0.804 Requirement already satisfied: azure-cli-core in /usr/local/lib/python3.11/site-packages (from azure-cli-eventgrid) (2.78.0)
+#23 0.804 Requirement already satisfied: six in /usr/local/lib/python3.11/site-packages (from azure-cli-eventgrid) (1.17.0)
+#23 0.833 Collecting azure-mgmt-eventgrid==2.2.0 (from azure-cli-eventgrid)
+#23 0.942   Downloading azure_mgmt_eventgrid-2.2.0-py2.py3-none-any.whl.metadata (7.2 kB)
+#23 0.973 Requirement already satisfied: azure-cli-command-modules-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-eventgrid) (2.0.3)
+#23 0.976 Requirement already satisfied: msrest>=0.5.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-eventgrid==2.2.0->azure-cli-eventgrid) (0.7.1)
+#23 0.977 Requirement already satisfied: msrestazure<2.0.0,>=0.4.32 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-eventgrid==2.2.0->azure-cli-eventgrid) (0.4.34)
+#23 0.978 Requirement already satisfied: azure-common~=1.1 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-eventgrid==2.2.0->azure-cli-eventgrid) (1.1.28)
+#23 0.979 Requirement already satisfied: azure-cli-nspkg>=3.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-command-modules-nspkg>=2.0.0->azure-cli-eventgrid) (3.0.4)
+#23 0.990 Requirement already satisfied: argcomplete~=3.5.2 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-eventgrid) (3.5.3)
+#23 0.991 Requirement already satisfied: azure-cli-telemetry==1.1.0.* in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-eventgrid) (1.1.0)
+#23 0.992 Requirement already satisfied: azure-core~=1.35.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-eventgrid) (1.35.1)
+#23 0.993 Requirement already satisfied: azure-mgmt-core<2,>=1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-eventgrid) (1.6.0)
+#23 0.994 Requirement already satisfied: cryptography in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-eventgrid) (46.0.3)
+#23 0.995 Requirement already satisfied: distro in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-eventgrid) (1.9.0)
+#23 0.996 Requirement already satisfied: humanfriendly~=10.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-eventgrid) (10.0)
+#23 0.996 Requirement already satisfied: jmespath in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-eventgrid) (1.0.1)
+#23 0.997 Requirement already satisfied: knack~=0.11.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-eventgrid) (0.11.0)
+#23 0.998 Requirement already satisfied: microsoft-security-utilities-secret-masker~=1.0.0b4 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-eventgrid) (1.0.0b4)
+#23 0.999 Requirement already satisfied: msal-extensions==1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-eventgrid) (1.2.0)
+#23 1.000 Requirement already satisfied: msal==1.34.0b1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-eventgrid) (1.34.0b1)
+#23 1.001 Requirement already satisfied: packaging>=20.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-eventgrid) (25.0)
+#23 1.002 Requirement already satisfied: pkginfo>=1.5.0.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-eventgrid) (1.12.1.2)
+#23 1.004 Requirement already satisfied: psutil>=5.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-eventgrid) (7.1.2)
+#23 1.004 Requirement already satisfied: PyJWT>=2.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-eventgrid) (2.10.1)
+#23 1.005 Requirement already satisfied: pyopenssl>=17.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-eventgrid) (25.3.0)
+#23 1.006 Requirement already satisfied: py-deviceid in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-eventgrid) (0.1.1)
+#23 1.007 Requirement already satisfied: requests[socks] in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-eventgrid) (2.32.5)
+#23 1.009 Requirement already satisfied: applicationinsights<0.12,>=0.11.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-eventgrid) (0.11.10)
+#23 1.010 Requirement already satisfied: portalocker<3,>=1.6 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-eventgrid) (2.10.1)
+#23 1.026 Requirement already satisfied: azure-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-nspkg>=3.0.0->azure-cli-command-modules-nspkg>=2.0.0->azure-cli-eventgrid) (3.0.2)
+#23 1.032 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.11/site-packages (from azure-core~=1.35.0->azure-cli-core->azure-cli-eventgrid) (4.15.0)
+#23 1.048 Requirement already satisfied: cffi>=2.0.0 in /usr/local/lib/python3.11/site-packages (from cryptography->azure-cli-core->azure-cli-eventgrid) (2.0.0)
+#23 1.055 Requirement already satisfied: pygments in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-eventgrid) (2.19.2)
+#23 1.055 Requirement already satisfied: pyyaml in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-eventgrid) (6.0.3)
+#23 1.057 Requirement already satisfied: tabulate in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-eventgrid) (0.9.0)
+#23 1.065 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-mgmt-eventgrid==2.2.0->azure-cli-eventgrid) (2025.10.5)
+#23 1.066 Requirement already satisfied: isodate>=0.6.0 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-mgmt-eventgrid==2.2.0->azure-cli-eventgrid) (0.7.2)
+#23 1.067 Requirement already satisfied: requests-oauthlib>=0.5.0 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-mgmt-eventgrid==2.2.0->azure-cli-eventgrid) (2.0.0)
+#23 1.072 Requirement already satisfied: adal<2.0.0,>=0.5.0 in /usr/local/lib/python3.11/site-packages (from msrestazure<2.0.0,>=0.4.32->azure-mgmt-eventgrid==2.2.0->azure-cli-eventgrid) (1.2.7)
+#23 1.073 Requirement already satisfied: keyring>=12.0.2 in /usr/local/lib/python3.11/site-packages (from msrestazure<2.0.0,>=0.4.32->azure-mgmt-eventgrid==2.2.0->azure-cli-eventgrid) (25.6.0)
+#23 1.126 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-eventgrid) (3.4.4)
+#23 1.126 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-eventgrid) (3.11)
+#23 1.127 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-eventgrid) (2.5.0)
+#23 1.129 Requirement already satisfied: PySocks!=1.5.7,>=1.5.6 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-eventgrid) (1.7.1)
+#23 1.134 Requirement already satisfied: python-dateutil<3,>=2.1.0 in /usr/local/lib/python3.11/site-packages (from adal<2.0.0,>=0.5.0->msrestazure<2.0.0,>=0.4.32->azure-mgmt-eventgrid==2.2.0->azure-cli-eventgrid) (2.9.0.post0)
+#23 1.145 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi>=2.0.0->cryptography->azure-cli-core->azure-cli-eventgrid) (2.23)
+#23 1.171 Requirement already satisfied: SecretStorage>=3.2 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-eventgrid==2.2.0->azure-cli-eventgrid) (3.4.0)
+#23 1.172 Requirement already satisfied: jeepney>=0.4.2 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-eventgrid==2.2.0->azure-cli-eventgrid) (0.9.0)
+#23 1.173 Requirement already satisfied: importlib_metadata>=4.11.4 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-eventgrid==2.2.0->azure-cli-eventgrid) (8.7.0)
+#23 1.173 Requirement already satisfied: jaraco.classes in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-eventgrid==2.2.0->azure-cli-eventgrid) (3.4.0)
+#23 1.174 Requirement already satisfied: jaraco.functools in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-eventgrid==2.2.0->azure-cli-eventgrid) (4.3.0)
+#23 1.175 Requirement already satisfied: jaraco.context in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-eventgrid==2.2.0->azure-cli-eventgrid) (6.0.1)
+#23 1.206 Requirement already satisfied: oauthlib>=3.0.0 in /usr/local/lib/python3.11/site-packages (from requests-oauthlib>=0.5.0->msrest>=0.5.0->azure-mgmt-eventgrid==2.2.0->azure-cli-eventgrid) (3.3.1)
+#23 1.241 Requirement already satisfied: zipp>=3.20 in /usr/local/lib/python3.11/site-packages (from importlib_metadata>=4.11.4->keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-eventgrid==2.2.0->azure-cli-eventgrid) (3.23.0)
+#23 1.272 Requirement already satisfied: more-itertools in /usr/local/lib/python3.11/site-packages (from jaraco.classes->keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-eventgrid==2.2.0->azure-cli-eventgrid) (10.8.0)
+#23 1.284 Requirement already satisfied: backports.tarfile in /usr/local/lib/python3.11/site-packages (from jaraco.context->keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-mgmt-eventgrid==2.2.0->azure-cli-eventgrid) (1.2.0)
+#23 1.435 Downloading azure_cli_eventgrid-0.2.4-py2.py3-none-any.whl (18 kB)
+#23 1.566 Downloading azure_mgmt_eventgrid-2.2.0-py2.py3-none-any.whl (109 kB)
+#23 1.613    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.1/109.1 kB 2.2 MB/s eta 0:00:00
+#23 1.855 Installing collected packages: azure-mgmt-eventgrid, azure-cli-eventgrid
+#23 1.999 Successfully installed azure-cli-eventgrid-0.2.4 azure-mgmt-eventgrid-2.2.0
+#23 1.999 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#23 2.004 
+#23 2.004 [notice] A new release of pip is available: 24.0 -> 25.3
+#23 2.004 [notice] To update, run: pip install --upgrade pip
+#23 DONE 2.1s
+
+#24 [20/92] RUN ["pip","install","azure-cli-backup"]
+#24 0.668 Collecting azure-cli-backup
+#24 0.801   Downloading azure_cli_backup-1.2.5-py2.py3-none-any.whl.metadata (3.3 kB)
+#24 0.873 Collecting azure-mgmt-recoveryservices~=0.1.1 (from azure-cli-backup)
+#24 0.975   Downloading azure_mgmt_recoveryservices-0.1.1-py2.py3-none-any.whl.metadata (2.5 kB)
+#24 1.036 Collecting azure-mgmt-recoveryservicesbackup~=0.1.2 (from azure-cli-backup)
+#24 1.138   Downloading azure_mgmt_recoveryservicesbackup-0.1.2-py2.py3-none-any.whl.metadata (2.7 kB)
+#24 1.170 Requirement already satisfied: azure-cli-core in /usr/local/lib/python3.11/site-packages (from azure-cli-backup) (2.78.0)
+#24 1.171 Requirement already satisfied: azure-cli-command-modules-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-backup) (2.0.3)
+#24 1.173 Requirement already satisfied: azure-cli-nspkg>=3.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-command-modules-nspkg>=2.0.0->azure-cli-backup) (3.0.4)
+#24 1.176 Requirement already satisfied: msrestazure<2.0.0,>=0.4.11 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-recoveryservices~=0.1.1->azure-cli-backup) (0.4.34)
+#24 1.177 Requirement already satisfied: azure-common~=1.1 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-recoveryservices~=0.1.1->azure-cli-backup) (1.1.28)
+#24 1.178 Requirement already satisfied: azure-mgmt-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-recoveryservices~=0.1.1->azure-cli-backup) (3.0.2)
+#24 1.190 Requirement already satisfied: argcomplete~=3.5.2 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-backup) (3.5.3)
+#24 1.191 Requirement already satisfied: azure-cli-telemetry==1.1.0.* in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-backup) (1.1.0)
+#24 1.193 Requirement already satisfied: azure-core~=1.35.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-backup) (1.35.1)
+#24 1.194 Requirement already satisfied: azure-mgmt-core<2,>=1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-backup) (1.6.0)
+#24 1.195 Requirement already satisfied: cryptography in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-backup) (46.0.3)
+#24 1.195 Requirement already satisfied: distro in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-backup) (1.9.0)
+#24 1.196 Requirement already satisfied: humanfriendly~=10.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-backup) (10.0)
+#24 1.197 Requirement already satisfied: jmespath in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-backup) (1.0.1)
+#24 1.198 Requirement already satisfied: knack~=0.11.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-backup) (0.11.0)
+#24 1.199 Requirement already satisfied: microsoft-security-utilities-secret-masker~=1.0.0b4 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-backup) (1.0.0b4)
+#24 1.200 Requirement already satisfied: msal-extensions==1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-backup) (1.2.0)
+#24 1.201 Requirement already satisfied: msal==1.34.0b1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-backup) (1.34.0b1)
+#24 1.201 Requirement already satisfied: packaging>=20.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-backup) (25.0)
+#24 1.202 Requirement already satisfied: pkginfo>=1.5.0.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-backup) (1.12.1.2)
+#24 1.204 Requirement already satisfied: psutil>=5.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-backup) (7.1.2)
+#24 1.205 Requirement already satisfied: PyJWT>=2.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-backup) (2.10.1)
+#24 1.206 Requirement already satisfied: pyopenssl>=17.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-backup) (25.3.0)
+#24 1.207 Requirement already satisfied: py-deviceid in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-backup) (0.1.1)
+#24 1.207 Requirement already satisfied: requests[socks] in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-backup) (2.32.5)
+#24 1.210 Requirement already satisfied: applicationinsights<0.12,>=0.11.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-backup) (0.11.10)
+#24 1.211 Requirement already satisfied: portalocker<3,>=1.6 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-backup) (2.10.1)
+#24 1.226 Requirement already satisfied: azure-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-nspkg>=3.0.0->azure-cli-command-modules-nspkg>=2.0.0->azure-cli-backup) (3.0.2)
+#24 1.233 Requirement already satisfied: six>=1.11.0 in /usr/local/lib/python3.11/site-packages (from azure-core~=1.35.0->azure-cli-core->azure-cli-backup) (1.17.0)
+#24 1.233 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.11/site-packages (from azure-core~=1.35.0->azure-cli-core->azure-cli-backup) (4.15.0)
+#24 1.252 Requirement already satisfied: cffi>=2.0.0 in /usr/local/lib/python3.11/site-packages (from cryptography->azure-cli-core->azure-cli-backup) (2.0.0)
+#24 1.260 Requirement already satisfied: pygments in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-backup) (2.19.2)
+#24 1.261 Requirement already satisfied: pyyaml in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-backup) (6.0.3)
+#24 1.262 Requirement already satisfied: tabulate in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-backup) (0.9.0)
+#24 1.268 Requirement already satisfied: msrest<2.0.0,>=0.4.28 in /usr/local/lib/python3.11/site-packages (from msrestazure<2.0.0,>=0.4.11->azure-mgmt-recoveryservices~=0.1.1->azure-cli-backup) (0.7.1)
+#24 1.269 Requirement already satisfied: adal<2.0.0,>=0.5.0 in /usr/local/lib/python3.11/site-packages (from msrestazure<2.0.0,>=0.4.11->azure-mgmt-recoveryservices~=0.1.1->azure-cli-backup) (1.2.7)
+#24 1.270 Requirement already satisfied: keyring>=12.0.2 in /usr/local/lib/python3.11/site-packages (from msrestazure<2.0.0,>=0.4.11->azure-mgmt-recoveryservices~=0.1.1->azure-cli-backup) (25.6.0)
+#24 1.326 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-backup) (3.4.4)
+#24 1.327 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-backup) (3.11)
+#24 1.327 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-backup) (2.5.0)
+#24 1.328 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-backup) (2025.10.5)
+#24 1.329 Requirement already satisfied: PySocks!=1.5.7,>=1.5.6 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-backup) (1.7.1)
+#24 1.335 Requirement already satisfied: python-dateutil<3,>=2.1.0 in /usr/local/lib/python3.11/site-packages (from adal<2.0.0,>=0.5.0->msrestazure<2.0.0,>=0.4.11->azure-mgmt-recoveryservices~=0.1.1->azure-cli-backup) (2.9.0.post0)
+#24 1.346 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi>=2.0.0->cryptography->azure-cli-core->azure-cli-backup) (2.23)
+#24 1.370 Requirement already satisfied: SecretStorage>=3.2 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.11->azure-mgmt-recoveryservices~=0.1.1->azure-cli-backup) (3.4.0)
+#24 1.372 Requirement already satisfied: jeepney>=0.4.2 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.11->azure-mgmt-recoveryservices~=0.1.1->azure-cli-backup) (0.9.0)
+#24 1.373 Requirement already satisfied: importlib_metadata>=4.11.4 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.11->azure-mgmt-recoveryservices~=0.1.1->azure-cli-backup) (8.7.0)
+#24 1.373 Requirement already satisfied: jaraco.classes in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.11->azure-mgmt-recoveryservices~=0.1.1->azure-cli-backup) (3.4.0)
+#24 1.374 Requirement already satisfied: jaraco.functools in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.11->azure-mgmt-recoveryservices~=0.1.1->azure-cli-backup) (4.3.0)
+#24 1.375 Requirement already satisfied: jaraco.context in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.11->azure-mgmt-recoveryservices~=0.1.1->azure-cli-backup) (6.0.1)
+#24 1.384 Requirement already satisfied: isodate>=0.6.0 in /usr/local/lib/python3.11/site-packages (from msrest<2.0.0,>=0.4.28->msrestazure<2.0.0,>=0.4.11->azure-mgmt-recoveryservices~=0.1.1->azure-cli-backup) (0.7.2)
+#24 1.384 Requirement already satisfied: requests-oauthlib>=0.5.0 in /usr/local/lib/python3.11/site-packages (from msrest<2.0.0,>=0.4.28->msrestazure<2.0.0,>=0.4.11->azure-mgmt-recoveryservices~=0.1.1->azure-cli-backup) (2.0.0)
+#24 1.451 Requirement already satisfied: zipp>=3.20 in /usr/local/lib/python3.11/site-packages (from importlib_metadata>=4.11.4->keyring>=12.0.2->msrestazure<2.0.0,>=0.4.11->azure-mgmt-recoveryservices~=0.1.1->azure-cli-backup) (3.23.0)
+#24 1.473 Requirement already satisfied: oauthlib>=3.0.0 in /usr/local/lib/python3.11/site-packages (from requests-oauthlib>=0.5.0->msrest<2.0.0,>=0.4.28->msrestazure<2.0.0,>=0.4.11->azure-mgmt-recoveryservices~=0.1.1->azure-cli-backup) (3.3.1)
+#24 1.490 Requirement already satisfied: more-itertools in /usr/local/lib/python3.11/site-packages (from jaraco.classes->keyring>=12.0.2->msrestazure<2.0.0,>=0.4.11->azure-mgmt-recoveryservices~=0.1.1->azure-cli-backup) (10.8.0)
+#24 1.502 Requirement already satisfied: backports.tarfile in /usr/local/lib/python3.11/site-packages (from jaraco.context->keyring>=12.0.2->msrestazure<2.0.0,>=0.4.11->azure-mgmt-recoveryservices~=0.1.1->azure-cli-backup) (1.2.0)
+#24 1.659 Downloading azure_cli_backup-1.2.5-py2.py3-none-any.whl (19 kB)
+#24 2.087 Downloading azure_mgmt_recoveryservices-0.1.1-py2.py3-none-any.whl (50 kB)
+#24 2.121    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.8/50.8 kB 1.3 MB/s eta 0:00:00
+#24 2.292 Downloading azure_mgmt_recoveryservicesbackup-0.1.2-py2.py3-none-any.whl (204 kB)
+#24 2.342    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 204.3/204.3 kB 4.1 MB/s eta 0:00:00
+#24 2.604 Installing collected packages: azure-mgmt-recoveryservicesbackup, azure-mgmt-recoveryservices, azure-cli-backup
+#24 2.809 Successfully installed azure-cli-backup-1.2.5 azure-mgmt-recoveryservices-0.1.1 azure-mgmt-recoveryservicesbackup-0.1.2
+#24 2.809 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#24 2.815 
+#24 2.815 [notice] A new release of pip is available: 24.0 -> 25.3
+#24 2.815 [notice] To update, run: pip install --upgrade pip
+#24 DONE 2.9s
+
+#25 [21/92] RUN ["pip","install","azure-cli-servicefabric"]
+#25 0.669 Collecting azure-cli-servicefabric
+#25 0.798   Downloading azure_cli_servicefabric-0.1.20-py2.py3-none-any.whl.metadata (2.9 kB)
+#25 0.863 Collecting azure-graphrbac==0.60.0 (from azure-cli-servicefabric)
+#25 0.971   Downloading azure_graphrbac-0.60.0-py2.py3-none-any.whl.metadata (10 kB)
+#25 1.034 Collecting azure-keyvault==1.1.0 (from azure-cli-servicefabric)
+#25 1.045   Downloading azure_keyvault-1.1.0-py2.py3-none-any.whl.metadata (7.2 kB)
+#25 1.103 Collecting azure-mgmt-network==3.0.0 (from azure-cli-servicefabric)
+#25 1.212   Downloading azure_mgmt_network-3.0.0-py2.py3-none-any.whl.metadata (26 kB)
+#25 1.284 Collecting azure-mgmt-compute==5.0.0 (from azure-cli-servicefabric)
+#25 1.386   Downloading azure_mgmt_compute-5.0.0-py2.py3-none-any.whl.metadata (16 kB)
+#25 1.451 Collecting azure-mgmt-storage==3.3.0 (from azure-cli-servicefabric)
+#25 1.560   Downloading azure_mgmt_storage-3.3.0-py2.py3-none-any.whl.metadata (8.4 kB)
+#25 1.619 Collecting azure-mgmt-servicefabric==0.2.0 (from azure-cli-servicefabric)
+#25 1.726   Downloading azure_mgmt_servicefabric-0.2.0-py2.py3-none-any.whl.metadata (2.5 kB)
+#25 1.780 Collecting azure-mgmt-keyvault==1.1.0 (from azure-cli-servicefabric)
+#25 1.885   Downloading azure_mgmt_keyvault-1.1.0-py2.py3-none-any.whl.metadata (5.6 kB)
+#25 1.906 Requirement already satisfied: azure-cli-core in /usr/local/lib/python3.11/site-packages (from azure-cli-servicefabric) (2.78.0)
+#25 1.908 Requirement already satisfied: pyOpenSSL in /usr/local/lib/python3.11/site-packages (from azure-cli-servicefabric) (25.3.0)
+#25 1.909 Requirement already satisfied: azure-cli-command-modules-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-servicefabric) (2.0.3)
+#25 1.912 Requirement already satisfied: msrest>=0.5.0 in /usr/local/lib/python3.11/site-packages (from azure-graphrbac==0.60.0->azure-cli-servicefabric) (0.7.1)
+#25 1.913 Requirement already satisfied: msrestazure<2.0.0,>=0.4.32 in /usr/local/lib/python3.11/site-packages (from azure-graphrbac==0.60.0->azure-cli-servicefabric) (0.4.34)
+#25 1.914 Requirement already satisfied: azure-common~=1.1 in /usr/local/lib/python3.11/site-packages (from azure-graphrbac==0.60.0->azure-cli-servicefabric) (1.1.28)
+#25 1.918 Requirement already satisfied: cryptography>=2.1.4 in /usr/local/lib/python3.11/site-packages (from azure-keyvault==1.1.0->azure-cli-servicefabric) (46.0.3)
+#25 1.919 Requirement already satisfied: requests>=2.18.4 in /usr/local/lib/python3.11/site-packages (from azure-keyvault==1.1.0->azure-cli-servicefabric) (2.32.5)
+#25 1.920 Requirement already satisfied: azure-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-keyvault==1.1.0->azure-cli-servicefabric) (3.0.2)
+#25 1.926 Requirement already satisfied: azure-mgmt-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-keyvault==1.1.0->azure-cli-servicefabric) (3.0.2)
+#25 1.936 Requirement already satisfied: azure-cli-nspkg>=3.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-command-modules-nspkg>=2.0.0->azure-cli-servicefabric) (3.0.4)
+#25 1.946 Requirement already satisfied: argcomplete~=3.5.2 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-servicefabric) (3.5.3)
+#25 1.947 Requirement already satisfied: azure-cli-telemetry==1.1.0.* in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-servicefabric) (1.1.0)
+#25 1.949 Requirement already satisfied: azure-core~=1.35.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-servicefabric) (1.35.1)
+#25 1.950 Requirement already satisfied: azure-mgmt-core<2,>=1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-servicefabric) (1.6.0)
+#25 1.951 Requirement already satisfied: distro in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-servicefabric) (1.9.0)
+#25 1.952 Requirement already satisfied: humanfriendly~=10.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-servicefabric) (10.0)
+#25 1.953 Requirement already satisfied: jmespath in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-servicefabric) (1.0.1)
+#25 1.954 Requirement already satisfied: knack~=0.11.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-servicefabric) (0.11.0)
+#25 1.954 Requirement already satisfied: microsoft-security-utilities-secret-masker~=1.0.0b4 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-servicefabric) (1.0.0b4)
+#25 1.955 Requirement already satisfied: msal-extensions==1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-servicefabric) (1.2.0)
+#25 1.956 Requirement already satisfied: msal==1.34.0b1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-servicefabric) (1.34.0b1)
+#25 1.957 Requirement already satisfied: packaging>=20.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-servicefabric) (25.0)
+#25 1.958 Requirement already satisfied: pkginfo>=1.5.0.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-servicefabric) (1.12.1.2)
+#25 1.960 Requirement already satisfied: psutil>=5.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-servicefabric) (7.1.2)
+#25 1.961 Requirement already satisfied: PyJWT>=2.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-servicefabric) (2.10.1)
+#25 1.962 Requirement already satisfied: py-deviceid in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-servicefabric) (0.1.1)
+#25 1.965 Requirement already satisfied: applicationinsights<0.12,>=0.11.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-servicefabric) (0.11.10)
+#25 1.966 Requirement already satisfied: portalocker<3,>=1.6 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-servicefabric) (2.10.1)
+#25 1.983 Requirement already satisfied: typing-extensions>=4.9 in /usr/local/lib/python3.11/site-packages (from pyOpenSSL->azure-cli-servicefabric) (4.15.0)
+#25 1.995 Requirement already satisfied: six>=1.11.0 in /usr/local/lib/python3.11/site-packages (from azure-core~=1.35.0->azure-cli-core->azure-cli-servicefabric) (1.17.0)
+#25 2.018 Requirement already satisfied: cffi>=2.0.0 in /usr/local/lib/python3.11/site-packages (from cryptography>=2.1.4->azure-keyvault==1.1.0->azure-cli-servicefabric) (2.0.0)
+#25 2.028 Requirement already satisfied: pygments in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-servicefabric) (2.19.2)
+#25 2.028 Requirement already satisfied: pyyaml in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-servicefabric) (6.0.3)
+#25 2.030 Requirement already satisfied: tabulate in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-servicefabric) (0.9.0)
+#25 2.040 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-graphrbac==0.60.0->azure-cli-servicefabric) (2025.10.5)
+#25 2.041 Requirement already satisfied: isodate>=0.6.0 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-graphrbac==0.60.0->azure-cli-servicefabric) (0.7.2)
+#25 2.042 Requirement already satisfied: requests-oauthlib>=0.5.0 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-graphrbac==0.60.0->azure-cli-servicefabric) (2.0.0)
+#25 2.048 Requirement already satisfied: adal<2.0.0,>=0.5.0 in /usr/local/lib/python3.11/site-packages (from msrestazure<2.0.0,>=0.4.32->azure-graphrbac==0.60.0->azure-cli-servicefabric) (1.2.7)
+#25 2.049 Requirement already satisfied: keyring>=12.0.2 in /usr/local/lib/python3.11/site-packages (from msrestazure<2.0.0,>=0.4.32->azure-graphrbac==0.60.0->azure-cli-servicefabric) (25.6.0)
+#25 2.106 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests>=2.18.4->azure-keyvault==1.1.0->azure-cli-servicefabric) (3.4.4)
+#25 2.107 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests>=2.18.4->azure-keyvault==1.1.0->azure-cli-servicefabric) (3.11)
+#25 2.108 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests>=2.18.4->azure-keyvault==1.1.0->azure-cli-servicefabric) (2.5.0)
+#25 2.132 Requirement already satisfied: PySocks!=1.5.7,>=1.5.6 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-servicefabric) (1.7.1)
+#25 2.139 Requirement already satisfied: python-dateutil<3,>=2.1.0 in /usr/local/lib/python3.11/site-packages (from adal<2.0.0,>=0.5.0->msrestazure<2.0.0,>=0.4.32->azure-graphrbac==0.60.0->azure-cli-servicefabric) (2.9.0.post0)
+#25 2.152 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi>=2.0.0->cryptography>=2.1.4->azure-keyvault==1.1.0->azure-cli-servicefabric) (2.23)
+#25 2.186 Requirement already satisfied: SecretStorage>=3.2 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-graphrbac==0.60.0->azure-cli-servicefabric) (3.4.0)
+#25 2.187 Requirement already satisfied: jeepney>=0.4.2 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-graphrbac==0.60.0->azure-cli-servicefabric) (0.9.0)
+#25 2.188 Requirement already satisfied: importlib_metadata>=4.11.4 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-graphrbac==0.60.0->azure-cli-servicefabric) (8.7.0)
+#25 2.189 Requirement already satisfied: jaraco.classes in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-graphrbac==0.60.0->azure-cli-servicefabric) (3.4.0)
+#25 2.190 Requirement already satisfied: jaraco.functools in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-graphrbac==0.60.0->azure-cli-servicefabric) (4.3.0)
+#25 2.190 Requirement already satisfied: jaraco.context in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-graphrbac==0.60.0->azure-cli-servicefabric) (6.0.1)
+#25 2.222 Requirement already satisfied: oauthlib>=3.0.0 in /usr/local/lib/python3.11/site-packages (from requests-oauthlib>=0.5.0->msrest>=0.5.0->azure-graphrbac==0.60.0->azure-cli-servicefabric) (3.3.1)
+#25 2.267 Requirement already satisfied: zipp>=3.20 in /usr/local/lib/python3.11/site-packages (from importlib_metadata>=4.11.4->keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-graphrbac==0.60.0->azure-cli-servicefabric) (3.23.0)
+#25 2.305 Requirement already satisfied: more-itertools in /usr/local/lib/python3.11/site-packages (from jaraco.classes->keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-graphrbac==0.60.0->azure-cli-servicefabric) (10.8.0)
+#25 2.318 Requirement already satisfied: backports.tarfile in /usr/local/lib/python3.11/site-packages (from jaraco.context->keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-graphrbac==0.60.0->azure-cli-servicefabric) (1.2.0)
+#25 2.475 Downloading azure_cli_servicefabric-0.1.20-py2.py3-none-any.whl (36 kB)
+#25 2.503 Downloading azure_graphrbac-0.60.0-py2.py3-none-any.whl (139 kB)
+#25 2.530    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.7/139.7 kB 5.4 MB/s eta 0:00:00
+#25 2.539 Downloading azure_keyvault-1.1.0-py2.py3-none-any.whl (352 kB)
+#25 2.560    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 352.3/352.3 kB 17.3 MB/s eta 0:00:00
+#25 2.672 Downloading azure_mgmt_compute-5.0.0-py2.py3-none-any.whl (3.0 MB)
+#25 2.944    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 11.2 MB/s eta 0:00:00
+#25 2.954 Downloading azure_mgmt_keyvault-1.1.0-py2.py3-none-any.whl (111 kB)
+#25 2.974    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.0/112.0 kB 5.4 MB/s eta 0:00:00
+#25 3.174 Downloading azure_mgmt_network-3.0.0-py2.py3-none-any.whl (5.0 MB)
+#25 3.597    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 11.8 MB/s eta 0:00:00
+#25 3.606 Downloading azure_mgmt_servicefabric-0.2.0-py2.py3-none-any.whl (142 kB)
+#25 3.623    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 142.5/142.5 kB 8.8 MB/s eta 0:00:00
+#25 3.632 Downloading azure_mgmt_storage-3.3.0-py2.py3-none-any.whl (1.0 MB)
+#25 3.674    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 25.1 MB/s eta 0:00:00
+#25 3.987 Installing collected packages: azure-mgmt-storage, azure-mgmt-servicefabric, azure-mgmt-network, azure-mgmt-keyvault, azure-mgmt-compute, azure-keyvault, azure-graphrbac, azure-cli-servicefabric
+#25 9.151 Successfully installed azure-cli-servicefabric-0.1.20 azure-graphrbac-0.60.0 azure-keyvault-1.1.0 azure-mgmt-compute-5.0.0 azure-mgmt-keyvault-1.1.0 azure-mgmt-network-3.0.0 azure-mgmt-servicefabric-0.2.0 azure-mgmt-storage-3.3.0
+#25 9.151 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#25 9.157 
+#25 9.157 [notice] A new release of pip is available: 24.0 -> 25.3
+#25 9.157 [notice] To update, run: pip install --upgrade pip
+#25 DONE 9.8s
+
+#26 [22/92] RUN ["pip","install","azure-cli-cloud"]
+#26 0.644 Collecting azure-cli-cloud
+#26 0.773   Downloading azure_cli_cloud-2.1.1-py2.py3-none-any.whl.metadata (3.1 kB)
+#26 0.801 Requirement already satisfied: azure-cli-core in /usr/local/lib/python3.11/site-packages (from azure-cli-cloud) (2.78.0)
+#26 0.802 Requirement already satisfied: azure-cli-command-modules-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-cloud) (2.0.3)
+#26 0.804 Requirement already satisfied: azure-cli-nspkg>=3.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-command-modules-nspkg>=2.0.0->azure-cli-cloud) (3.0.4)
+#26 0.815 Requirement already satisfied: argcomplete~=3.5.2 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cloud) (3.5.3)
+#26 0.816 Requirement already satisfied: azure-cli-telemetry==1.1.0.* in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cloud) (1.1.0)
+#26 0.818 Requirement already satisfied: azure-core~=1.35.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cloud) (1.35.1)
+#26 0.819 Requirement already satisfied: azure-mgmt-core<2,>=1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cloud) (1.6.0)
+#26 0.820 Requirement already satisfied: cryptography in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cloud) (46.0.3)
+#26 0.821 Requirement already satisfied: distro in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cloud) (1.9.0)
+#26 0.822 Requirement already satisfied: humanfriendly~=10.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cloud) (10.0)
+#26 0.822 Requirement already satisfied: jmespath in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cloud) (1.0.1)
+#26 0.823 Requirement already satisfied: knack~=0.11.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cloud) (0.11.0)
+#26 0.824 Requirement already satisfied: microsoft-security-utilities-secret-masker~=1.0.0b4 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cloud) (1.0.0b4)
+#26 0.825 Requirement already satisfied: msal-extensions==1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cloud) (1.2.0)
+#26 0.826 Requirement already satisfied: msal==1.34.0b1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cloud) (1.34.0b1)
+#26 0.827 Requirement already satisfied: packaging>=20.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cloud) (25.0)
+#26 0.828 Requirement already satisfied: pkginfo>=1.5.0.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cloud) (1.12.1.2)
+#26 0.830 Requirement already satisfied: psutil>=5.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cloud) (7.1.2)
+#26 0.830 Requirement already satisfied: PyJWT>=2.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cloud) (2.10.1)
+#26 0.831 Requirement already satisfied: pyopenssl>=17.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cloud) (25.3.0)
+#26 0.832 Requirement already satisfied: py-deviceid in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cloud) (0.1.1)
+#26 0.833 Requirement already satisfied: requests[socks] in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-cloud) (2.32.5)
+#26 0.835 Requirement already satisfied: applicationinsights<0.12,>=0.11.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-cloud) (0.11.10)
+#26 0.836 Requirement already satisfied: portalocker<3,>=1.6 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-cloud) (2.10.1)
+#26 0.852 Requirement already satisfied: azure-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-nspkg>=3.0.0->azure-cli-command-modules-nspkg>=2.0.0->azure-cli-cloud) (3.0.2)
+#26 0.856 Requirement already satisfied: six>=1.11.0 in /usr/local/lib/python3.11/site-packages (from azure-core~=1.35.0->azure-cli-core->azure-cli-cloud) (1.17.0)
+#26 0.857 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.11/site-packages (from azure-core~=1.35.0->azure-cli-core->azure-cli-cloud) (4.15.0)
+#26 0.873 Requirement already satisfied: cffi>=2.0.0 in /usr/local/lib/python3.11/site-packages (from cryptography->azure-cli-core->azure-cli-cloud) (2.0.0)
+#26 0.881 Requirement already satisfied: pygments in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-cloud) (2.19.2)
+#26 0.881 Requirement already satisfied: pyyaml in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-cloud) (6.0.3)
+#26 0.883 Requirement already satisfied: tabulate in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-cloud) (0.9.0)
+#26 0.936 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-cloud) (3.4.4)
+#26 0.937 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-cloud) (3.11)
+#26 0.938 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-cloud) (2.5.0)
+#26 0.939 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-cloud) (2025.10.5)
+#26 0.940 Requirement already satisfied: PySocks!=1.5.7,>=1.5.6 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-cloud) (1.7.1)
+#26 0.949 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi>=2.0.0->cryptography->azure-cli-core->azure-cli-cloud) (2.23)
+#26 1.111 Downloading azure_cli_cloud-2.1.1-py2.py3-none-any.whl (7.4 kB)
+#26 1.406 Installing collected packages: azure-cli-cloud
+#26 1.478 Successfully installed azure-cli-cloud-2.1.1
+#26 1.478 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#26 1.484 
+#26 1.484 [notice] A new release of pip is available: 24.0 -> 25.3
+#26 1.484 [notice] To update, run: pip install --upgrade pip
+#26 DONE 1.6s
+
+#27 [23/92] RUN ["pip","install","azure-cli-dla"]
+#27 0.648 Collecting azure-cli-dla
+#27 0.793   Downloading azure_cli_dla-0.2.6-py2.py3-none-any.whl.metadata (3.8 kB)
+#27 0.821 Requirement already satisfied: azure-mgmt-datalake-store==0.5.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-dla) (0.5.0)
+#27 0.857 Collecting azure-mgmt-datalake-analytics~=0.2.1 (from azure-cli-dla)
+#27 0.866   Downloading azure_mgmt_datalake_analytics-0.2.1-py2.py3-none-any.whl.metadata (7.7 kB)
+#27 0.883 Requirement already satisfied: azure-cli-core in /usr/local/lib/python3.11/site-packages (from azure-cli-dla) (2.78.0)
+#27 0.884 Requirement already satisfied: azure-cli-command-modules-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-dla) (2.0.3)
+#27 0.887 Requirement already satisfied: msrestazure<2.0.0,>=0.4.27 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-datalake-store==0.5.0->azure-cli-dla) (0.4.34)
+#27 0.888 Requirement already satisfied: azure-common~=1.1 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-datalake-store==0.5.0->azure-cli-dla) (1.1.28)
+#27 0.888 Requirement already satisfied: azure-mgmt-datalake-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-datalake-store==0.5.0->azure-cli-dla) (3.0.1)
+#27 0.890 Requirement already satisfied: azure-cli-nspkg>=3.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-command-modules-nspkg>=2.0.0->azure-cli-dla) (3.0.4)
+#27 0.903 Requirement already satisfied: argcomplete~=3.5.2 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dla) (3.5.3)
+#27 0.904 Requirement already satisfied: azure-cli-telemetry==1.1.0.* in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dla) (1.1.0)
+#27 0.906 Requirement already satisfied: azure-core~=1.35.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dla) (1.35.1)
+#27 0.907 Requirement already satisfied: azure-mgmt-core<2,>=1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dla) (1.6.0)
+#27 0.907 Requirement already satisfied: cryptography in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dla) (46.0.3)
+#27 0.908 Requirement already satisfied: distro in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dla) (1.9.0)
+#27 0.909 Requirement already satisfied: humanfriendly~=10.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dla) (10.0)
+#27 0.910 Requirement already satisfied: jmespath in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dla) (1.0.1)
+#27 0.911 Requirement already satisfied: knack~=0.11.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dla) (0.11.0)
+#27 0.911 Requirement already satisfied: microsoft-security-utilities-secret-masker~=1.0.0b4 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dla) (1.0.0b4)
+#27 0.912 Requirement already satisfied: msal-extensions==1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dla) (1.2.0)
+#27 0.913 Requirement already satisfied: msal==1.34.0b1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dla) (1.34.0b1)
+#27 0.914 Requirement already satisfied: packaging>=20.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dla) (25.0)
+#27 0.915 Requirement already satisfied: pkginfo>=1.5.0.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dla) (1.12.1.2)
+#27 0.917 Requirement already satisfied: psutil>=5.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dla) (7.1.2)
+#27 0.918 Requirement already satisfied: PyJWT>=2.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dla) (2.10.1)
+#27 0.919 Requirement already satisfied: pyopenssl>=17.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dla) (25.3.0)
+#27 0.919 Requirement already satisfied: py-deviceid in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dla) (0.1.1)
+#27 0.920 Requirement already satisfied: requests[socks] in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-dla) (2.32.5)
+#27 0.923 Requirement already satisfied: applicationinsights<0.12,>=0.11.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-dla) (0.11.10)
+#27 0.924 Requirement already satisfied: portalocker<3,>=1.6 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-dla) (2.10.1)
+#27 0.939 Requirement already satisfied: azure-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-nspkg>=3.0.0->azure-cli-command-modules-nspkg>=2.0.0->azure-cli-dla) (3.0.2)
+#27 0.945 Requirement already satisfied: six>=1.11.0 in /usr/local/lib/python3.11/site-packages (from azure-core~=1.35.0->azure-cli-core->azure-cli-dla) (1.17.0)
+#27 0.946 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.11/site-packages (from azure-core~=1.35.0->azure-cli-core->azure-cli-dla) (4.15.0)
+#27 0.951 Requirement already satisfied: azure-mgmt-nspkg>=3.0.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-datalake-nspkg>=2.0.0->azure-mgmt-datalake-store==0.5.0->azure-cli-dla) (3.0.2)
+#27 0.965 Requirement already satisfied: cffi>=2.0.0 in /usr/local/lib/python3.11/site-packages (from cryptography->azure-cli-core->azure-cli-dla) (2.0.0)
+#27 0.973 Requirement already satisfied: pygments in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-dla) (2.19.2)
+#27 0.974 Requirement already satisfied: pyyaml in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-dla) (6.0.3)
+#27 0.975 Requirement already satisfied: tabulate in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-dla) (0.9.0)
+#27 0.981 Requirement already satisfied: msrest<2.0.0,>=0.4.28 in /usr/local/lib/python3.11/site-packages (from msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store==0.5.0->azure-cli-dla) (0.7.1)
+#27 0.982 Requirement already satisfied: adal<2.0.0,>=0.5.0 in /usr/local/lib/python3.11/site-packages (from msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store==0.5.0->azure-cli-dla) (1.2.7)
+#27 0.983 Requirement already satisfied: keyring>=12.0.2 in /usr/local/lib/python3.11/site-packages (from msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store==0.5.0->azure-cli-dla) (25.6.0)
+#27 1.037 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-dla) (3.4.4)
+#27 1.038 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-dla) (3.11)
+#27 1.039 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-dla) (2.5.0)
+#27 1.040 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-dla) (2025.10.5)
+#27 1.041 Requirement already satisfied: PySocks!=1.5.7,>=1.5.6 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-dla) (1.7.1)
+#27 1.046 Requirement already satisfied: python-dateutil<3,>=2.1.0 in /usr/local/lib/python3.11/site-packages (from adal<2.0.0,>=0.5.0->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store==0.5.0->azure-cli-dla) (2.9.0.post0)
+#27 1.060 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi>=2.0.0->cryptography->azure-cli-core->azure-cli-dla) (2.23)
+#27 1.084 Requirement already satisfied: SecretStorage>=3.2 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store==0.5.0->azure-cli-dla) (3.4.0)
+#27 1.085 Requirement already satisfied: jeepney>=0.4.2 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store==0.5.0->azure-cli-dla) (0.9.0)
+#27 1.086 Requirement already satisfied: importlib_metadata>=4.11.4 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store==0.5.0->azure-cli-dla) (8.7.0)
+#27 1.087 Requirement already satisfied: jaraco.classes in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store==0.5.0->azure-cli-dla) (3.4.0)
+#27 1.088 Requirement already satisfied: jaraco.functools in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store==0.5.0->azure-cli-dla) (4.3.0)
+#27 1.089 Requirement already satisfied: jaraco.context in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store==0.5.0->azure-cli-dla) (6.0.1)
+#27 1.097 Requirement already satisfied: isodate>=0.6.0 in /usr/local/lib/python3.11/site-packages (from msrest<2.0.0,>=0.4.28->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store==0.5.0->azure-cli-dla) (0.7.2)
+#27 1.098 Requirement already satisfied: requests-oauthlib>=0.5.0 in /usr/local/lib/python3.11/site-packages (from msrest<2.0.0,>=0.4.28->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store==0.5.0->azure-cli-dla) (2.0.0)
+#27 1.165 Requirement already satisfied: zipp>=3.20 in /usr/local/lib/python3.11/site-packages (from importlib_metadata>=4.11.4->keyring>=12.0.2->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store==0.5.0->azure-cli-dla) (3.23.0)
+#27 1.187 Requirement already satisfied: oauthlib>=3.0.0 in /usr/local/lib/python3.11/site-packages (from requests-oauthlib>=0.5.0->msrest<2.0.0,>=0.4.28->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store==0.5.0->azure-cli-dla) (3.3.1)
+#27 1.202 Requirement already satisfied: more-itertools in /usr/local/lib/python3.11/site-packages (from jaraco.classes->keyring>=12.0.2->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store==0.5.0->azure-cli-dla) (10.8.0)
+#27 1.214 Requirement already satisfied: backports.tarfile in /usr/local/lib/python3.11/site-packages (from jaraco.context->keyring>=12.0.2->msrestazure<2.0.0,>=0.4.27->azure-mgmt-datalake-store==0.5.0->azure-cli-dla) (1.2.0)
+#27 1.370 Downloading azure_cli_dla-0.2.6-py2.py3-none-any.whl (15 kB)
+#27 1.510 Downloading azure_mgmt_datalake_analytics-0.2.1-py2.py3-none-any.whl (146 kB)
+#27 1.555    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 146.6/146.6 kB 3.2 MB/s eta 0:00:00
+#27 1.819 Installing collected packages: azure-mgmt-datalake-analytics, azure-cli-dla
+#27 1.987 Successfully installed azure-cli-dla-0.2.6 azure-mgmt-datalake-analytics-0.2.1
+#27 1.987 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#27 1.993 
+#27 1.993 [notice] A new release of pip is available: 24.0 -> 25.3
+#27 1.993 [notice] To update, run: pip install --upgrade pip
+#27 DONE 2.1s
+
+#28 [24/92] RUN ["pip","install","azure-cli-batchai"]
+#28 0.652 Collecting azure-cli-batchai
+#28 0.782   Downloading azure_cli_batchai-0.4.10-py2.py3-none-any.whl.metadata (6.9 kB)
+#28 0.820 Requirement already satisfied: azure-mgmt-storage==3.3.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-batchai) (3.3.0)
+#28 0.854 Collecting azure-mgmt-batchai==2.0.0 (from azure-cli-batchai)
+#28 0.959   Downloading azure_mgmt_batchai-2.0.0-py2.py3-none-any.whl.metadata (6.6 kB)
+#28 1.043 Collecting azure-storage-blob==1.3.1 (from azure-cli-batchai)
+#28 1.151   Downloading azure_storage_blob-1.3.1-py2.py3-none-any.whl.metadata (7.6 kB)
+#28 1.172 Requirement already satisfied: azure-cli-core in /usr/local/lib/python3.11/site-packages (from azure-cli-batchai) (2.78.0)
+#28 1.202 Collecting mock>=2.0.0 (from azure-cli-batchai)
+#28 1.210   Downloading mock-5.2.0-py3-none-any.whl.metadata (3.1 kB)
+#28 1.258 Collecting sshtunnel (from azure-cli-batchai)
+#28 1.267   Downloading sshtunnel-0.4.0-py2.py3-none-any.whl.metadata (19 kB)
+#28 1.284 Requirement already satisfied: azure-cli-command-modules-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-batchai) (2.0.3)
+#28 1.288 Requirement already satisfied: msrestazure<2.0.0,>=0.4.20 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-batchai==2.0.0->azure-cli-batchai) (0.4.34)
+#28 1.288 Requirement already satisfied: azure-common~=1.1 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-batchai==2.0.0->azure-cli-batchai) (1.1.28)
+#28 1.289 Requirement already satisfied: azure-mgmt-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-batchai==2.0.0->azure-cli-batchai) (3.0.2)
+#28 1.293 Requirement already satisfied: msrest>=0.5.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-storage==3.3.0->azure-cli-batchai) (0.7.1)
+#28 1.333 Collecting azure-storage-common~=1.3 (from azure-storage-blob==1.3.1->azure-cli-batchai)
+#28 1.341   Downloading azure_storage_common-1.4.2-py2.py3-none-any.whl.metadata (8.1 kB)
+#28 1.488 Collecting azure-storage-nspkg>=2.0.0 (from azure-storage-blob==1.3.1->azure-cli-batchai)
+#28 1.595   Downloading azure_storage_nspkg-3.1.0-py2.py3-none-any.whl.metadata (1.3 kB)
+#28 1.615 Requirement already satisfied: azure-cli-nspkg>=3.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-command-modules-nspkg>=2.0.0->azure-cli-batchai) (3.0.4)
+#28 1.630 Requirement already satisfied: argcomplete~=3.5.2 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-batchai) (3.5.3)
+#28 1.630 Requirement already satisfied: azure-cli-telemetry==1.1.0.* in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-batchai) (1.1.0)
+#28 1.632 Requirement already satisfied: azure-core~=1.35.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-batchai) (1.35.1)
+#28 1.633 Requirement already satisfied: azure-mgmt-core<2,>=1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-batchai) (1.6.0)
+#28 1.634 Requirement already satisfied: cryptography in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-batchai) (46.0.3)
+#28 1.634 Requirement already satisfied: distro in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-batchai) (1.9.0)
+#28 1.635 Requirement already satisfied: humanfriendly~=10.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-batchai) (10.0)
+#28 1.636 Requirement already satisfied: jmespath in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-batchai) (1.0.1)
+#28 1.637 Requirement already satisfied: knack~=0.11.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-batchai) (0.11.0)
+#28 1.638 Requirement already satisfied: microsoft-security-utilities-secret-masker~=1.0.0b4 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-batchai) (1.0.0b4)
+#28 1.639 Requirement already satisfied: msal-extensions==1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-batchai) (1.2.0)
+#28 1.640 Requirement already satisfied: msal==1.34.0b1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-batchai) (1.34.0b1)
+#28 1.641 Requirement already satisfied: packaging>=20.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-batchai) (25.0)
+#28 1.642 Requirement already satisfied: pkginfo>=1.5.0.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-batchai) (1.12.1.2)
+#28 1.643 Requirement already satisfied: psutil>=5.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-batchai) (7.1.2)
+#28 1.644 Requirement already satisfied: PyJWT>=2.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-batchai) (2.10.1)
+#28 1.645 Requirement already satisfied: pyopenssl>=17.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-batchai) (25.3.0)
+#28 1.646 Requirement already satisfied: py-deviceid in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-batchai) (0.1.1)
+#28 1.647 Requirement already satisfied: requests[socks] in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-batchai) (2.32.5)
+#28 1.649 Requirement already satisfied: applicationinsights<0.12,>=0.11.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-batchai) (0.11.10)
+#28 1.650 Requirement already satisfied: portalocker<3,>=1.6 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-batchai) (2.10.1)
+#28 1.705 Collecting paramiko>=2.7.2 (from sshtunnel->azure-cli-batchai)
+#28 1.713   Downloading paramiko-4.0.0-py3-none-any.whl.metadata (3.9 kB)
+#28 1.733 Requirement already satisfied: azure-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-nspkg>=3.0.0->azure-cli-command-modules-nspkg>=2.0.0->azure-cli-batchai) (3.0.2)
+#28 1.739 Requirement already satisfied: six>=1.11.0 in /usr/local/lib/python3.11/site-packages (from azure-core~=1.35.0->azure-cli-core->azure-cli-batchai) (1.17.0)
+#28 1.740 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.11/site-packages (from azure-core~=1.35.0->azure-cli-core->azure-cli-batchai) (4.15.0)
+#28 1.748 Requirement already satisfied: python-dateutil in /usr/local/lib/python3.11/site-packages (from azure-storage-common~=1.3->azure-storage-blob==1.3.1->azure-cli-batchai) (2.9.0.post0)
+#28 1.765 Requirement already satisfied: cffi>=2.0.0 in /usr/local/lib/python3.11/site-packages (from cryptography->azure-cli-core->azure-cli-batchai) (2.0.0)
+#28 1.772 Requirement already satisfied: pygments in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-batchai) (2.19.2)
+#28 1.773 Requirement already satisfied: pyyaml in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-batchai) (6.0.3)
+#28 1.774 Requirement already satisfied: tabulate in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-batchai) (0.9.0)
+#28 1.783 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-mgmt-storage==3.3.0->azure-cli-batchai) (2025.10.5)
+#28 1.784 Requirement already satisfied: isodate>=0.6.0 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-mgmt-storage==3.3.0->azure-cli-batchai) (0.7.2)
+#28 1.785 Requirement already satisfied: requests-oauthlib>=0.5.0 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-mgmt-storage==3.3.0->azure-cli-batchai) (2.0.0)
+#28 1.791 Requirement already satisfied: adal<2.0.0,>=0.5.0 in /usr/local/lib/python3.11/site-packages (from msrestazure<2.0.0,>=0.4.20->azure-mgmt-batchai==2.0.0->azure-cli-batchai) (1.2.7)
+#28 1.792 Requirement already satisfied: keyring>=12.0.2 in /usr/local/lib/python3.11/site-packages (from msrestazure<2.0.0,>=0.4.20->azure-mgmt-batchai==2.0.0->azure-cli-batchai) (25.6.0)
+#28 1.869 Collecting bcrypt>=3.2 (from paramiko>=2.7.2->sshtunnel->azure-cli-batchai)
+#28 1.878   Downloading bcrypt-5.0.0-cp39-abi3-manylinux_2_34_x86_64.whl.metadata (10 kB)
+#28 1.931 Collecting invoke>=2.0 (from paramiko>=2.7.2->sshtunnel->azure-cli-batchai)
+#28 1.939   Downloading invoke-2.2.1-py3-none-any.whl.metadata (3.3 kB)
+#28 2.006 Collecting pynacl>=1.5 (from paramiko>=2.7.2->sshtunnel->azure-cli-batchai)
+#28 2.014   Downloading pynacl-1.6.0-cp38-abi3-manylinux_2_34_x86_64.whl.metadata (9.4 kB)
+#28 2.085 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-batchai) (3.4.4)
+#28 2.086 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-batchai) (3.11)
+#28 2.087 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-batchai) (2.5.0)
+#28 2.089 Requirement already satisfied: PySocks!=1.5.7,>=1.5.6 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-batchai) (1.7.1)
+#28 2.112 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi>=2.0.0->cryptography->azure-cli-core->azure-cli-batchai) (2.23)
+#28 2.145 Requirement already satisfied: SecretStorage>=3.2 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.20->azure-mgmt-batchai==2.0.0->azure-cli-batchai) (3.4.0)
+#28 2.146 Requirement already satisfied: jeepney>=0.4.2 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.20->azure-mgmt-batchai==2.0.0->azure-cli-batchai) (0.9.0)
+#28 2.147 Requirement already satisfied: importlib_metadata>=4.11.4 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.20->azure-mgmt-batchai==2.0.0->azure-cli-batchai) (8.7.0)
+#28 2.148 Requirement already satisfied: jaraco.classes in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.20->azure-mgmt-batchai==2.0.0->azure-cli-batchai) (3.4.0)
+#28 2.149 Requirement already satisfied: jaraco.functools in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.20->azure-mgmt-batchai==2.0.0->azure-cli-batchai) (4.3.0)
+#28 2.150 Requirement already satisfied: jaraco.context in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.20->azure-mgmt-batchai==2.0.0->azure-cli-batchai) (6.0.1)
+#28 2.200 Requirement already satisfied: oauthlib>=3.0.0 in /usr/local/lib/python3.11/site-packages (from requests-oauthlib>=0.5.0->msrest>=0.5.0->azure-mgmt-storage==3.3.0->azure-cli-batchai) (3.3.1)
+#28 2.246 Requirement already satisfied: zipp>=3.20 in /usr/local/lib/python3.11/site-packages (from importlib_metadata>=4.11.4->keyring>=12.0.2->msrestazure<2.0.0,>=0.4.20->azure-mgmt-batchai==2.0.0->azure-cli-batchai) (3.23.0)
+#28 2.279 Requirement already satisfied: more-itertools in /usr/local/lib/python3.11/site-packages (from jaraco.classes->keyring>=12.0.2->msrestazure<2.0.0,>=0.4.20->azure-mgmt-batchai==2.0.0->azure-cli-batchai) (10.8.0)
+#28 2.291 Requirement already satisfied: backports.tarfile in /usr/local/lib/python3.11/site-packages (from jaraco.context->keyring>=12.0.2->msrestazure<2.0.0,>=0.4.20->azure-mgmt-batchai==2.0.0->azure-cli-batchai) (1.2.0)
+#28 2.446 Downloading azure_cli_batchai-0.4.10-py2.py3-none-any.whl (27 kB)
+#28 2.481 Downloading azure_mgmt_batchai-2.0.0-py2.py3-none-any.whl (174 kB)
+#28 2.509    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 174.3/174.3 kB 6.4 MB/s eta 0:00:00
+#28 2.616 Downloading azure_storage_blob-1.3.1-py2.py3-none-any.whl (77 kB)
+#28 2.637    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 77.1/77.1 kB 3.4 MB/s eta 0:00:00
+#28 2.647 Downloading mock-5.2.0-py3-none-any.whl (31 kB)
+#28 2.671 Downloading sshtunnel-0.4.0-py2.py3-none-any.whl (24 kB)
+#28 2.694 Downloading azure_storage_common-1.4.2-py2.py3-none-any.whl (47 kB)
+#28 2.708    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.4/47.4 kB 3.0 MB/s eta 0:00:00
+#28 2.861 Downloading azure_storage_nspkg-3.1.0-py2.py3-none-any.whl (1.7 kB)
+#28 2.894 Downloading paramiko-4.0.0-py3-none-any.whl (223 kB)
+#28 2.919    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 223.9/223.9 kB 9.2 MB/s eta 0:00:00
+#28 2.928 Downloading bcrypt-5.0.0-cp39-abi3-manylinux_2_34_x86_64.whl (278 kB)
+#28 2.947    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 278.2/278.2 kB 15.9 MB/s eta 0:00:00
+#28 2.955 Downloading invoke-2.2.1-py3-none-any.whl (160 kB)
+#28 2.969    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 160.3/160.3 kB 11.5 MB/s eta 0:00:00
+#28 2.978 Downloading pynacl-1.6.0-cp38-abi3-manylinux_2_34_x86_64.whl (1.4 MB)
+#28 3.036    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 24.6 MB/s eta 0:00:00
+#28 3.340 Installing collected packages: mock, invoke, bcrypt, azure-storage-nspkg, pynacl, paramiko, azure-storage-common, sshtunnel, azure-storage-blob, azure-mgmt-batchai, azure-cli-batchai
+#28 3.845 Successfully installed azure-cli-batchai-0.4.10 azure-mgmt-batchai-2.0.0 azure-storage-blob-1.3.1 azure-storage-common-1.4.2 azure-storage-nspkg-3.1.0 bcrypt-5.0.0 invoke-2.2.1 mock-5.2.0 paramiko-4.0.0 pynacl-1.6.0 sshtunnel-0.4.0
+#28 3.845 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#28 3.851 
+#28 3.851 [notice] A new release of pip is available: 24.0 -> 25.3
+#28 3.851 [notice] To update, run: pip install --upgrade pip
+#28 DONE 4.0s
+
+#29 [25/92] RUN ["pip","install","azure-cli-sf"]
+#29 0.695 Collecting azure-cli-sf
+#29 0.831   Downloading azure_cli_sf-1.0.8-py2.py3-none-any.whl.metadata (2.5 kB)
+#29 0.863 Requirement already satisfied: adal>=0.4.3 in /usr/local/lib/python3.11/site-packages (from azure-cli-sf) (1.2.7)
+#29 0.864 Requirement already satisfied: azure-cli-command-modules-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-sf) (2.0.3)
+#29 0.864 Requirement already satisfied: azure-cli-core in /usr/local/lib/python3.11/site-packages (from azure-cli-sf) (2.78.0)
+#29 0.898 Collecting azure-servicefabric==5.6.130 (from azure-cli-sf)
+#29 1.005   Downloading azure_servicefabric-5.6.130-py2.py3-none-any.whl.metadata (2.3 kB)
+#29 1.025 Requirement already satisfied: mock>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-sf) (5.2.0)
+#29 1.028 Requirement already satisfied: msrestazure~=0.4.7 in /usr/local/lib/python3.11/site-packages (from azure-servicefabric==5.6.130->azure-cli-sf) (0.4.34)
+#29 1.029 Requirement already satisfied: azure-common~=1.1.5 in /usr/local/lib/python3.11/site-packages (from azure-servicefabric==5.6.130->azure-cli-sf) (1.1.28)
+#29 1.030 Requirement already satisfied: azure-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-servicefabric==5.6.130->azure-cli-sf) (3.0.2)
+#29 1.033 Requirement already satisfied: PyJWT<3,>=1.0.0 in /usr/local/lib/python3.11/site-packages (from adal>=0.4.3->azure-cli-sf) (2.10.1)
+#29 1.034 Requirement already satisfied: requests<3,>=2.0.0 in /usr/local/lib/python3.11/site-packages (from adal>=0.4.3->azure-cli-sf) (2.32.5)
+#29 1.035 Requirement already satisfied: python-dateutil<3,>=2.1.0 in /usr/local/lib/python3.11/site-packages (from adal>=0.4.3->azure-cli-sf) (2.9.0.post0)
+#29 1.036 Requirement already satisfied: cryptography>=1.1.0 in /usr/local/lib/python3.11/site-packages (from adal>=0.4.3->azure-cli-sf) (46.0.3)
+#29 1.038 Requirement already satisfied: azure-cli-nspkg>=3.0.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-command-modules-nspkg>=2.0.0->azure-cli-sf) (3.0.4)
+#29 1.051 Requirement already satisfied: argcomplete~=3.5.2 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-sf) (3.5.3)
+#29 1.052 Requirement already satisfied: azure-cli-telemetry==1.1.0.* in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-sf) (1.1.0)
+#29 1.054 Requirement already satisfied: azure-core~=1.35.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-sf) (1.35.1)
+#29 1.055 Requirement already satisfied: azure-mgmt-core<2,>=1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-sf) (1.6.0)
+#29 1.056 Requirement already satisfied: distro in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-sf) (1.9.0)
+#29 1.057 Requirement already satisfied: humanfriendly~=10.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-sf) (10.0)
+#29 1.058 Requirement already satisfied: jmespath in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-sf) (1.0.1)
+#29 1.058 Requirement already satisfied: knack~=0.11.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-sf) (0.11.0)
+#29 1.059 Requirement already satisfied: microsoft-security-utilities-secret-masker~=1.0.0b4 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-sf) (1.0.0b4)
+#29 1.060 Requirement already satisfied: msal-extensions==1.2.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-sf) (1.2.0)
+#29 1.061 Requirement already satisfied: msal==1.34.0b1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-sf) (1.34.0b1)
+#29 1.062 Requirement already satisfied: packaging>=20.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-sf) (25.0)
+#29 1.063 Requirement already satisfied: pkginfo>=1.5.0.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-sf) (1.12.1.2)
+#29 1.065 Requirement already satisfied: psutil>=5.9 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-sf) (7.1.2)
+#29 1.066 Requirement already satisfied: pyopenssl>=17.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-sf) (25.3.0)
+#29 1.067 Requirement already satisfied: py-deviceid in /usr/local/lib/python3.11/site-packages (from azure-cli-core->azure-cli-sf) (0.1.1)
+#29 1.069 Requirement already satisfied: applicationinsights<0.12,>=0.11.1 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-sf) (0.11.10)
+#29 1.070 Requirement already satisfied: portalocker<3,>=1.6 in /usr/local/lib/python3.11/site-packages (from azure-cli-telemetry==1.1.0.*->azure-cli-core->azure-cli-sf) (2.10.1)
+#29 1.092 Requirement already satisfied: six>=1.11.0 in /usr/local/lib/python3.11/site-packages (from azure-core~=1.35.0->azure-cli-core->azure-cli-sf) (1.17.0)
+#29 1.093 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.11/site-packages (from azure-core~=1.35.0->azure-cli-core->azure-cli-sf) (4.15.0)
+#29 1.111 Requirement already satisfied: cffi>=2.0.0 in /usr/local/lib/python3.11/site-packages (from cryptography>=1.1.0->adal>=0.4.3->azure-cli-sf) (2.0.0)
+#29 1.119 Requirement already satisfied: pygments in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-sf) (2.19.2)
+#29 1.120 Requirement already satisfied: pyyaml in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-sf) (6.0.3)
+#29 1.121 Requirement already satisfied: tabulate in /usr/local/lib/python3.11/site-packages (from knack~=0.11.0->azure-cli-core->azure-cli-sf) (0.9.0)
+#29 1.128 Requirement already satisfied: msrest<2.0.0,>=0.4.28 in /usr/local/lib/python3.11/site-packages (from msrestazure~=0.4.7->azure-servicefabric==5.6.130->azure-cli-sf) (0.7.1)
+#29 1.129 Requirement already satisfied: keyring>=12.0.2 in /usr/local/lib/python3.11/site-packages (from msrestazure~=0.4.7->azure-servicefabric==5.6.130->azure-cli-sf) (25.6.0)
+#29 1.181 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests<3,>=2.0.0->adal>=0.4.3->azure-cli-sf) (3.4.4)
+#29 1.182 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests<3,>=2.0.0->adal>=0.4.3->azure-cli-sf) (3.11)
+#29 1.183 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests<3,>=2.0.0->adal>=0.4.3->azure-cli-sf) (2.5.0)
+#29 1.184 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests<3,>=2.0.0->adal>=0.4.3->azure-cli-sf) (2025.10.5)
+#29 1.200 Requirement already satisfied: PySocks!=1.5.7,>=1.5.6 in /usr/local/lib/python3.11/site-packages (from requests[socks]->azure-cli-core->azure-cli-sf) (1.7.1)
+#29 1.209 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi>=2.0.0->cryptography>=1.1.0->adal>=0.4.3->azure-cli-sf) (2.23)
+#29 1.234 Requirement already satisfied: SecretStorage>=3.2 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure~=0.4.7->azure-servicefabric==5.6.130->azure-cli-sf) (3.4.0)
+#29 1.235 Requirement already satisfied: jeepney>=0.4.2 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure~=0.4.7->azure-servicefabric==5.6.130->azure-cli-sf) (0.9.0)
+#29 1.236 Requirement already satisfied: importlib_metadata>=4.11.4 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure~=0.4.7->azure-servicefabric==5.6.130->azure-cli-sf) (8.7.0)
+#29 1.237 Requirement already satisfied: jaraco.classes in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure~=0.4.7->azure-servicefabric==5.6.130->azure-cli-sf) (3.4.0)
+#29 1.238 Requirement already satisfied: jaraco.functools in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure~=0.4.7->azure-servicefabric==5.6.130->azure-cli-sf) (4.3.0)
+#29 1.238 Requirement already satisfied: jaraco.context in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure~=0.4.7->azure-servicefabric==5.6.130->azure-cli-sf) (6.0.1)
+#29 1.247 Requirement already satisfied: isodate>=0.6.0 in /usr/local/lib/python3.11/site-packages (from msrest<2.0.0,>=0.4.28->msrestazure~=0.4.7->azure-servicefabric==5.6.130->azure-cli-sf) (0.7.2)
+#29 1.248 Requirement already satisfied: requests-oauthlib>=0.5.0 in /usr/local/lib/python3.11/site-packages (from msrest<2.0.0,>=0.4.28->msrestazure~=0.4.7->azure-servicefabric==5.6.130->azure-cli-sf) (2.0.0)
+#29 1.310 Requirement already satisfied: zipp>=3.20 in /usr/local/lib/python3.11/site-packages (from importlib_metadata>=4.11.4->keyring>=12.0.2->msrestazure~=0.4.7->azure-servicefabric==5.6.130->azure-cli-sf) (3.23.0)
+#29 1.327 Requirement already satisfied: oauthlib>=3.0.0 in /usr/local/lib/python3.11/site-packages (from requests-oauthlib>=0.5.0->msrest<2.0.0,>=0.4.28->msrestazure~=0.4.7->azure-servicefabric==5.6.130->azure-cli-sf) (3.3.1)
+#29 1.343 Requirement already satisfied: more-itertools in /usr/local/lib/python3.11/site-packages (from jaraco.classes->keyring>=12.0.2->msrestazure~=0.4.7->azure-servicefabric==5.6.130->azure-cli-sf) (10.8.0)
+#29 1.355 Requirement already satisfied: backports.tarfile in /usr/local/lib/python3.11/site-packages (from jaraco.context->keyring>=12.0.2->msrestazure~=0.4.7->azure-servicefabric==5.6.130->azure-cli-sf) (1.2.0)
+#29 1.514 Downloading azure_cli_sf-1.0.8-py2.py3-none-any.whl (21 kB)
+#29 1.768 Downloading azure_servicefabric-5.6.130-py2.py3-none-any.whl (283 kB)
+#29 1.829    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 284.0/284.0 kB 4.7 MB/s eta 0:00:00
+#29 2.133 Installing collected packages: azure-servicefabric, azure-cli-sf
+#29 2.343 Successfully installed azure-cli-sf-1.0.8 azure-servicefabric-5.6.130
+#29 2.343 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#29 2.348 
+#29 2.348 [notice] A new release of pip is available: 24.0 -> 25.3
+#29 2.348 [notice] To update, run: pip install --upgrade pip
+#29 DONE 2.4s
+
+#30 [26/92] RUN ["pip","install","azure-mgmt-datalake-nspkg"]
+#30 0.481 Requirement already satisfied: azure-mgmt-datalake-nspkg in /usr/local/lib/python3.11/site-packages (3.0.1)
+#30 0.482 Requirement already satisfied: azure-mgmt-nspkg>=3.0.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-datalake-nspkg) (3.0.2)
+#30 0.484 Requirement already satisfied: azure-nspkg>=3.0.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-nspkg>=3.0.0->azure-mgmt-datalake-nspkg) (3.0.2)
+#30 0.778 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#30 0.784 
+#30 0.784 [notice] A new release of pip is available: 24.0 -> 25.3
+#30 0.784 [notice] To update, run: pip install --upgrade pip
+#30 DONE 0.9s
+
+#31 [27/92] RUN ["pip","install","azure-keyvault"]
+#31 0.482 Requirement already satisfied: azure-keyvault in /usr/local/lib/python3.11/site-packages (1.1.0)
+#31 0.487 Requirement already satisfied: msrest>=0.5.0 in /usr/local/lib/python3.11/site-packages (from azure-keyvault) (0.7.1)
+#31 0.488 Requirement already satisfied: msrestazure<2.0.0,>=0.4.32 in /usr/local/lib/python3.11/site-packages (from azure-keyvault) (0.4.34)
+#31 0.489 Requirement already satisfied: azure-common~=1.1 in /usr/local/lib/python3.11/site-packages (from azure-keyvault) (1.1.28)
+#31 0.490 Requirement already satisfied: cryptography>=2.1.4 in /usr/local/lib/python3.11/site-packages (from azure-keyvault) (46.0.3)
+#31 0.491 Requirement already satisfied: requests>=2.18.4 in /usr/local/lib/python3.11/site-packages (from azure-keyvault) (2.32.5)
+#31 0.491 Requirement already satisfied: azure-nspkg>=2.0.0 in /usr/local/lib/python3.11/site-packages (from azure-keyvault) (3.0.2)
+#31 0.507 Requirement already satisfied: cffi>=2.0.0 in /usr/local/lib/python3.11/site-packages (from cryptography>=2.1.4->azure-keyvault) (2.0.0)
+#31 0.513 Requirement already satisfied: azure-core>=1.24.0 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-keyvault) (1.35.1)
+#31 0.514 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-keyvault) (2025.10.5)
+#31 0.515 Requirement already satisfied: isodate>=0.6.0 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-keyvault) (0.7.2)
+#31 0.516 Requirement already satisfied: requests-oauthlib>=0.5.0 in /usr/local/lib/python3.11/site-packages (from msrest>=0.5.0->azure-keyvault) (2.0.0)
+#31 0.520 Requirement already satisfied: adal<2.0.0,>=0.5.0 in /usr/local/lib/python3.11/site-packages (from msrestazure<2.0.0,>=0.4.32->azure-keyvault) (1.2.7)
+#31 0.521 Requirement already satisfied: keyring>=12.0.2 in /usr/local/lib/python3.11/site-packages (from msrestazure<2.0.0,>=0.4.32->azure-keyvault) (25.6.0)
+#31 0.526 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests>=2.18.4->azure-keyvault) (3.4.4)
+#31 0.527 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests>=2.18.4->azure-keyvault) (3.11)
+#31 0.528 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests>=2.18.4->azure-keyvault) (2.5.0)
+#31 0.532 Requirement already satisfied: PyJWT<3,>=1.0.0 in /usr/local/lib/python3.11/site-packages (from adal<2.0.0,>=0.5.0->msrestazure<2.0.0,>=0.4.32->azure-keyvault) (2.10.1)
+#31 0.534 Requirement already satisfied: python-dateutil<3,>=2.1.0 in /usr/local/lib/python3.11/site-packages (from adal<2.0.0,>=0.5.0->msrestazure<2.0.0,>=0.4.32->azure-keyvault) (2.9.0.post0)
+#31 0.539 Requirement already satisfied: six>=1.11.0 in /usr/local/lib/python3.11/site-packages (from azure-core>=1.24.0->msrest>=0.5.0->azure-keyvault) (1.17.0)
+#31 0.540 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.11/site-packages (from azure-core>=1.24.0->msrest>=0.5.0->azure-keyvault) (4.15.0)
+#31 0.544 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi>=2.0.0->cryptography>=2.1.4->azure-keyvault) (2.23)
+#31 0.566 Requirement already satisfied: SecretStorage>=3.2 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-keyvault) (3.4.0)
+#31 0.567 Requirement already satisfied: jeepney>=0.4.2 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-keyvault) (0.9.0)
+#31 0.568 Requirement already satisfied: importlib_metadata>=4.11.4 in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-keyvault) (8.7.0)
+#31 0.569 Requirement already satisfied: jaraco.classes in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-keyvault) (3.4.0)
+#31 0.570 Requirement already satisfied: jaraco.functools in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-keyvault) (4.3.0)
+#31 0.571 Requirement already satisfied: jaraco.context in /usr/local/lib/python3.11/site-packages (from keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-keyvault) (6.0.1)
+#31 0.575 Requirement already satisfied: oauthlib>=3.0.0 in /usr/local/lib/python3.11/site-packages (from requests-oauthlib>=0.5.0->msrest>=0.5.0->azure-keyvault) (3.3.1)
+#31 0.592 Requirement already satisfied: zipp>=3.20 in /usr/local/lib/python3.11/site-packages (from importlib_metadata>=4.11.4->keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-keyvault) (3.23.0)
+#31 0.626 Requirement already satisfied: more-itertools in /usr/local/lib/python3.11/site-packages (from jaraco.classes->keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-keyvault) (10.8.0)
+#31 0.636 Requirement already satisfied: backports.tarfile in /usr/local/lib/python3.11/site-packages (from jaraco.context->keyring>=12.0.2->msrestazure<2.0.0,>=0.4.32->azure-keyvault) (1.2.0)
+#31 0.960 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#31 0.965 
+#31 0.965 [notice] A new release of pip is available: 24.0 -> 25.3
+#31 0.965 [notice] To update, run: pip install --upgrade pip
+#31 DONE 1.0s
+
+#32 [28/92] RUN ["pip","install","azure-mgmt-monitor"]
+#32 0.582 Collecting azure-mgmt-monitor
+#32 0.620   Downloading azure_mgmt_monitor-7.0.0-py3-none-any.whl.metadata (63 kB)
+#32 0.644      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.5/63.5 kB 2.5 MB/s eta 0:00:00
+#32 0.650 Requirement already satisfied: isodate>=0.6.1 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-monitor) (0.7.2)
+#32 0.651 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-monitor) (4.15.0)
+#32 0.652 Requirement already satisfied: azure-common>=1.1 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-monitor) (1.1.28)
+#32 0.653 Requirement already satisfied: azure-mgmt-core>=1.5.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-monitor) (1.6.0)
+#32 0.657 Requirement already satisfied: azure-core>=1.32.0 in /usr/local/lib/python3.11/site-packages (from azure-mgmt-core>=1.5.0->azure-mgmt-monitor) (1.35.1)
+#32 0.662 Requirement already satisfied: requests>=2.21.0 in /usr/local/lib/python3.11/site-packages (from azure-core>=1.32.0->azure-mgmt-core>=1.5.0->azure-mgmt-monitor) (2.32.5)
+#32 0.662 Requirement already satisfied: six>=1.11.0 in /usr/local/lib/python3.11/site-packages (from azure-core>=1.32.0->azure-mgmt-core>=1.5.0->azure-mgmt-monitor) (1.17.0)
+#32 0.668 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests>=2.21.0->azure-core>=1.32.0->azure-mgmt-core>=1.5.0->azure-mgmt-monitor) (3.4.4)
+#32 0.669 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests>=2.21.0->azure-core>=1.32.0->azure-mgmt-core>=1.5.0->azure-mgmt-monitor) (3.11)
+#32 0.670 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests>=2.21.0->azure-core>=1.32.0->azure-mgmt-core>=1.5.0->azure-mgmt-monitor) (2.5.0)
+#32 0.671 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests>=2.21.0->azure-core>=1.32.0->azure-mgmt-core>=1.5.0->azure-mgmt-monitor) (2025.10.5)
+#32 0.690 Downloading azure_mgmt_monitor-7.0.0-py3-none-any.whl (245 kB)
+#32 0.725    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 245.2/245.2 kB 7.1 MB/s eta 0:00:00
+#32 1.019 Installing collected packages: azure-mgmt-monitor
+#32 1.212 Successfully installed azure-mgmt-monitor-7.0.0
+#32 1.212 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#32 1.217 
+#32 1.217 [notice] A new release of pip is available: 24.0 -> 25.3
+#32 1.217 [notice] To update, run: pip install --upgrade pip
+#32 DONE 1.3s
+
+#33 [29/92] RUN ["pip","install","azure-cli-ml"]
+#33 0.689 Collecting azure-cli-ml
+#33 0.822   Downloading azure_cli_ml-0.1.0a27.post3-py2.py3-none-any.whl.metadata (1.2 kB)
+#33 0.853 Requirement already satisfied: adal>=0.4.7 in /usr/local/lib/python3.11/site-packages (from azure-cli-ml) (1.2.7)
+#33 0.854 Requirement already satisfied: azure-cli-core in /usr/local/lib/python3.11/site-packages (from azure-cli-ml) (2.78.0)
+#33 0.855 Requirement already satisfied: azure-graphrbac>=0.31.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-ml) (0.60.0)
+#33 0.856 Requirement already satisfied: azure-mgmt-compute>=2.1.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-ml) (5.0.0)
+#33 0.896 Collecting azure-mgmt-containerregistry>=0.3.1 (from azure-cli-ml)
+#33 0.905   Downloading azure_mgmt_containerregistry-14.0.0-py3-none-any.whl.metadata (25 kB)
+#33 0.985 Collecting azure-mgmt-resource>=1.1.0 (from azure-cli-ml)
+#33 0.994   Downloading azure_mgmt_resource-24.0.0-py3-none-any.whl.metadata (43 kB)
+#33 1.020      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.5/43.5 kB 1.4 MB/s eta 0:00:00
+#33 1.023 Requirement already satisfied: azure-mgmt-storage>=1.3.0 in /usr/local/lib/python3.11/site-packages (from azure-cli-ml) (3.3.0)
+#33 1.155 Collecting azure-ml-api-sdk==0.1.0a11 (from azure-cli-ml)
+#33 1.257   Downloading azure_ml_api_sdk-0.1.0a11-py2.py3-none-any.whl.metadata (1.5 kB)
+#33 1.409 Collecting azure-storage>=0.36.0 (from azure-cli-ml)
+#33 1.419   Downloading azure-storage-0.37.0.zip (4.3 kB)
+#33 1.436   Preparing metadata (setup.py): started
+#33 1.528   Preparing metadata (setup.py): finished with status 'error'
+#33 1.532   error: subprocess-exited-with-error
+#33 1.532   
+#33 1.532   × python setup.py egg_info did not run successfully.
+#33 1.532   │ exit code: 1
+#33 1.532   ╰─> [20 lines of output]
+#33 1.532       Traceback (most recent call last):
+#33 1.532         File "<string>", line 2, in <module>
+#33 1.532         File "<pip-setuptools-caller>", line 34, in <module>
+#33 1.532         File "/tmp/pip-install-snqgl13b/azure-storage_ce6a0d40118443e7a5d5207597f6ed2e/setup.py", line 55, in <module>
+#33 1.532           raise RuntimeError(message)
+#33 1.532       RuntimeError:
+#33 1.532       
+#33 1.532       Starting with v0.37.0, the 'azure-storage' meta-package is deprecated and cannot be installed anymore.
+#33 1.532       Please install the service specific packages prefixed by `azure` needed for your application.
+#33 1.532       
+#33 1.532       The complete list of available packages can be found at:
+#33 1.532       https://aka.ms/azsdk/python/all
+#33 1.532       
+#33 1.532       Here's a non-exhaustive list of common packages:
+#33 1.532       
+#33 1.532       - [azure-storage-blob](https://pypi.org/project/azure-storage-blob) : Blob storage client
+#33 1.532       - [azure-storage-file-share](https://pypi.org/project/azure-storage-file-share) : Storage file share client
+#33 1.532       - [azure-storage-file-datalake](https://pypi.org/project/azure-storage-file-datalake) : ADLS Gen2 client
+#33 1.532       - [azure-storage-queue](https://pypi.org/project/azure-storage-queue): Queue storage client
+#33 1.532       
+#33 1.532       [end of output]
+#33 1.532   
+#33 1.532   note: This error originates from a subprocess, and is likely not a problem with pip.
+#33 1.533 error: metadata-generation-failed
+#33 1.533 
+#33 1.533 × Encountered error while generating package metadata.
+#33 1.533 ╰─> See above for output.
+#33 1.533 
+#33 1.533 note: This is an issue with the package mentioned above, not pip.
+#33 1.533 hint: See above for details.
+#33 1.538 
+#33 1.538 [notice] A new release of pip is available: 24.0 -> 25.3
+#33 1.538 [notice] To update, run: pip install --upgrade pip
+#33 ERROR: process "pip install azure-cli-ml" did not complete successfully: exit code: 1
+------
+ > [29/92] RUN ["pip","install","azure-cli-ml"]:
+1.533 error: metadata-generation-failed
+1.533 
+1.533 × Encountered error while generating package metadata.
+1.533 ╰─> See above for output.
+1.533 
+1.533 note: This is an issue with the package mentioned above, not pip.
+1.533 hint: See above for details.
+1.538 
+1.538 [notice] A new release of pip is available: 24.0 -> 25.3
+1.538 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:29
+--------------------
+  27 |     RUN ["pip","install","azure-keyvault"]
+  28 |     RUN ["pip","install","azure-mgmt-monitor"]
+  29 | >>> RUN ["pip","install","azure-cli-ml"]
+  30 |     RUN ["pip","install","azure-servicemanagement-legacy"]
+  31 |     RUN ["pip","install","azure-mgmt-media"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install azure-cli-ml" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/rq8iwps6ya28l90gvtdang0p2
+[2025-10-29 13:08:21] ERROR: Build failed for 258a248d20334e781b56

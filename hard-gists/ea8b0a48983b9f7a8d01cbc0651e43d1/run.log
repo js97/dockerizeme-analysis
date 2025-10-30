@@ -1,0 +1,15 @@
+=== Docker Run Log for ea8b0a48983b9f7a8d01cbc0651e43d1 ===
+Started at: Mi 29. Okt 20:51:42 CET 2025
+
+[2025-10-29 20:51:45] START: Running container for ea8b0a48983b9f7a8d01cbc0651e43d1
+[2025-10-29 20:51:45] SUCCESS: Container eb4829d9ad4bbfa22521149e4b903c0c4b1efa12f42ab8389be6d1b1de1853b9 started for ea8b0a48983b9f7a8d01cbc0651e43d1
+=== Container logs for ea8b0a48983b9f7a8d01cbc0651e43d1 ===
+%(name)s <filename.log>: Process a papertrail log, counting IP addresses.
+
+Logs are generated using the papertrail command line app:
+papertrail --min-time '2017-11-12 4:00 AM' --max-time '2017-11-12 5:00 AM' -g portland -- mdn-prod_web '-"GET /readiness"' '-"GET /healthz"' '-"- - HTTP/1.0"' > trouble.log
+
+To run tests: %(name)s --test
+
+=== End of logs for ea8b0a48983b9f7a8d01cbc0651e43d1 ===
+[2025-10-29 20:51:47] INFO: Container eb4829d9ad4bbfa22521149e4b903c0c4b1efa12f42ab8389be6d1b1de1853b9 has stopped

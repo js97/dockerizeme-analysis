@@ -1,0 +1,98 @@
+=== Docker Build Log for 4426342d455de2421d89 ===
+Started at: Mi 29. Okt 14:38:59 CET 2025
+
+[2025-10-29 14:38:59] START: Building image for 4426342d455de2421d89
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 247B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 825B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/4426342d455de2421d89/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","requests"]
+#7 2.048 Collecting requests
+#7 2.082   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.207 Collecting charset_normalizer<4,>=2 (from requests)
+#7 2.216   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.261 Collecting idna<4,>=2.5 (from requests)
+#7 2.269   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.333 Collecting urllib3<3,>=1.21.1 (from requests)
+#7 2.342   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.389 Collecting certifi>=2017.4.17 (from requests)
+#7 2.398   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.425 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.445    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.1 MB/s eta 0:00:00
+#7 2.453 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.477    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 7.0 MB/s eta 0:00:00
+#7 2.486 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.500    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.4 MB/s eta 0:00:00
+#7 2.508 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.521    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.6 MB/s eta 0:00:00
+#7 2.530 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.544    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.9 MB/s eta 0:00:00
+#7 2.592 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#7 2.815 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#7 2.815 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.913 
+#7 2.913 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.913 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.1s
+
+#8 [4/5] RUN ["pip","install","bs4"]
+#8 0.550 Collecting bs4
+#8 0.585   Downloading bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+#8 0.636 Collecting beautifulsoup4 (from bs4)
+#8 0.646   Downloading beautifulsoup4-4.14.2-py3-none-any.whl.metadata (3.8 kB)
+#8 0.695 Collecting soupsieve>1.2 (from beautifulsoup4->bs4)
+#8 0.704   Downloading soupsieve-2.8-py3-none-any.whl.metadata (4.6 kB)
+#8 0.759 Collecting typing-extensions>=4.0.0 (from beautifulsoup4->bs4)
+#8 0.767   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.795 Downloading bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+#8 0.819 Downloading beautifulsoup4-4.14.2-py3-none-any.whl (106 kB)
+#8 0.852    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.4/106.4 kB 3.2 MB/s eta 0:00:00
+#8 0.861 Downloading soupsieve-2.8-py3-none-any.whl (36 kB)
+#8 0.880 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#8 0.892    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.5 MB/s eta 0:00:00
+#8 0.949 Installing collected packages: typing-extensions, soupsieve, beautifulsoup4, bs4
+#8 1.089 Successfully installed beautifulsoup4-4.14.2 bs4-0.0.2 soupsieve-2.8 typing-extensions-4.15.0
+#8 1.090 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.095 
+#8 1.095 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.095 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.2s
+
+#9 [5/5] RUN ["pip","install","beautifulsoup4"]
+#9 0.459 Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.11/site-packages (4.14.2)
+#9 0.463 Requirement already satisfied: soupsieve>1.2 in /usr/local/lib/python3.11/site-packages (from beautifulsoup4) (2.8)
+#9 0.465 Requirement already satisfied: typing-extensions>=4.0.0 in /usr/local/lib/python3.11/site-packages (from beautifulsoup4) (4.15.0)
+#9 0.511 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.517 
+#9 0.517 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.517 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.6s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.2s done
+#10 writing image sha256:84ba1d6c3caccdb91b718046c3f76017d176ec473b2914b6f7affa6d979874c8 done
+#10 naming to docker.io/library/test-image-4426342d455de2421d89 done
+#10 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/ot4mfbuj3371pxiv3snorlwo7
+[2025-10-29 14:39:04] SUCCESS: Build completed for 4426342d455de2421d89

@@ -1,0 +1,14 @@
+=== Docker Run Log for 28802627584b21ba1f6a ===
+Started at: Mi 29. Okt 13:19:10 CET 2025
+
+[2025-10-29 13:19:25] START: Running container for 28802627584b21ba1f6a
+[2025-10-29 13:19:25] SUCCESS: Container bcafafa660c819fcfb14eaeb78a737e35b4d193997bf31c3e5bd1fc1d44055fc started for 28802627584b21ba1f6a
+=== Container logs for 28802627584b21ba1f6a ===
+Traceback (most recent call last):
+  File "/snippet.py", line 26, in <module>
+    import uno
+  File "/usr/local/lib/python3.11/site-packages/uno/__init__.py", line 4, in <module>
+    from base import Element, Css, Payload, UnoBaseFeature, UnoBaseField
+ModuleNotFoundError: No module named 'base'
+=== End of logs for 28802627584b21ba1f6a ===
+[2025-10-29 13:19:27] INFO: Container bcafafa660c819fcfb14eaeb78a737e35b4d193997bf31c3e5bd1fc1d44055fc has stopped

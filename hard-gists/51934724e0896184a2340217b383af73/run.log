@@ -1,0 +1,13 @@
+=== Docker Run Log for 51934724e0896184a2340217b383af73 ===
+Started at: Mi 29. Okt 15:27:00 CET 2025
+
+[2025-10-29 15:27:03] START: Running container for 51934724e0896184a2340217b383af73
+[2025-10-29 15:27:03] SUCCESS: Container d8351bb2350fe1fb2f08233ddded483f52db16c6d9ffcf97eed8f33cb9e9af03 started for 51934724e0896184a2340217b383af73
+=== Container logs for 51934724e0896184a2340217b383af73 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 8, in <module>
+    sys.stdout.write(json.dumps(yaml.load(sys.stdin), sort_keys=True, indent=2))
+                                ^^^^^^^^^^^^^^^^^^^^
+TypeError: load() missing 1 required positional argument: 'Loader'
+=== End of logs for 51934724e0896184a2340217b383af73 ===
+[2025-10-29 15:27:05] INFO: Container d8351bb2350fe1fb2f08233ddded483f52db16c6d9ffcf97eed8f33cb9e9af03 has stopped

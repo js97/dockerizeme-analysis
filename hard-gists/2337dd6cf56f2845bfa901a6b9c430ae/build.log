@@ -1,0 +1,68 @@
+=== Docker Build Log for 2337dd6cf56f2845bfa901a6b9c430ae ===
+Started at: Mi 29. Okt 13:02:20 CET 2025
+
+[2025-10-29 13:02:20] START: Building image for 2337dd6cf56f2845bfa901a6b9c430ae
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 231B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.22kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/2337dd6cf56f2845bfa901a6b9c430ae/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","tornado"]
+#7 1.946 Collecting tornado
+#7 1.977   Downloading tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+#7 1.997 Downloading tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (443 kB)
+#7 2.038    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 443.9/443.9 kB 11.1 MB/s eta 0:00:00
+#7 2.073 Installing collected packages: tornado
+#7 2.278 Successfully installed tornado-6.5.2
+#7 2.278 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.370 
+#7 2.370 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.370 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.5s
+
+#8 [4/4] RUN ["pip","install","tornado_testing"]
+#8 0.617 Collecting tornado_testing
+#8 0.748   Downloading tornado_testing-0.2.1.tar.gz (2.9 kB)
+#8 0.767   Preparing metadata (setup.py): started
+#8 1.197   Preparing metadata (setup.py): finished with status 'done'
+#8 1.199 Building wheels for collected packages: tornado_testing
+#8 1.200   Building wheel for tornado_testing (setup.py): started
+#8 1.372   Building wheel for tornado_testing (setup.py): finished with status 'done'
+#8 1.372   Created wheel for tornado_testing: filename=tornado_testing-0.2.1-py2.py3-none-any.whl size=2657 sha256=719de7fd432fc13e5efd7d4e3488e23fb5c69e0218519bd128632bc4b8aee15a
+#8 1.372   Stored in directory: /root/.cache/pip/wheels/e9/92/7e/181976d9ee6f2e060c83a9cb991da6410094d563bc57eb96dc
+#8 1.374 Successfully built tornado_testing
+#8 1.404 Installing collected packages: tornado_testing
+#8 1.417 Successfully installed tornado_testing-0.2.1
+#8 1.418 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.422 
+#8 1.422 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.422 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.5s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.2s done
+#9 writing image sha256:00a2656efc7e26e2300e1c59b0ed51dd232d38410c8266f00a8531585c24190a done
+#9 naming to docker.io/library/test-image-2337dd6cf56f2845bfa901a6b9c430ae 0.0s done
+#9 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/l0ggrdig6s8gjnedgr68m0cgn
+[2025-10-29 13:02:24] SUCCESS: Build completed for 2337dd6cf56f2845bfa901a6b9c430ae

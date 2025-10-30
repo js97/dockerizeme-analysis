@@ -1,0 +1,23 @@
+=== Docker Run Log for 8054226 ===
+Started at: Mi 29. Okt 17:36:25 CET 2025
+
+[2025-10-29 17:36:30] START: Running container for 8054226
+[2025-10-29 17:36:30] SUCCESS: Container 592994b5e1dd7076d64fcd9b11d5bba25d51cb5a95740ad4a5fed4bf384cad7c started for 8054226
+=== Container logs for 8054226 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 99, in <module>
+    main()
+  File "/snippet.py", line 49, in main
+    device = find_keyboard_device()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 40, in find_keyboard_device
+    for bus in usb.busses():
+               ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/usb/legacy.py", line 359, in busses
+    sorted(core.find(find_all=True), key=lambda d: d.bus),
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/usb/core.py", line 1321, in find
+    raise NoBackendError('No backend available')
+usb.core.NoBackendError: No backend available
+=== End of logs for 8054226 ===
+[2025-10-29 17:36:32] INFO: Container 592994b5e1dd7076d64fcd9b11d5bba25d51cb5a95740ad4a5fed4bf384cad7c has stopped

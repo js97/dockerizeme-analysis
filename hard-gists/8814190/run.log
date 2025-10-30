@@ -1,0 +1,12 @@
+=== Docker Run Log for 8814190 ===
+Started at: Mi 29. Okt 17:57:57 CET 2025
+
+[2025-10-29 17:57:58] START: Running container for 8814190
+[2025-10-29 17:57:58] SUCCESS: Container e17ca83111961ed929093588c068ea6be42c8fb668b821e8bc0214508f6d02e2 started for 8814190
+=== Container logs for 8814190 ===
+  File "/snippet.py", line 22
+    voltscale = self.device.ask_for_values(":CHAN"+`channelNumber`+":SCAL?")[0]
+                                                   ^
+SyntaxError: invalid syntax
+=== End of logs for 8814190 ===
+[2025-10-29 17:58:00] INFO: Container e17ca83111961ed929093588c068ea6be42c8fb668b821e8bc0214508f6d02e2 has stopped

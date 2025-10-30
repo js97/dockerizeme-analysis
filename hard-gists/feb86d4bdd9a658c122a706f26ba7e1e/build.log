@@ -1,0 +1,88 @@
+=== Docker Build Log for feb86d4bdd9a658c122a706f26ba7e1e ===
+Started at: Mi 29. Okt 21:44:39 CET 2025
+
+[2025-10-29 21:44:39] START: Building image for feb86d4bdd9a658c122a706f26ba7e1e
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 245B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 591B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/feb86d4bdd9a658c122a706f26ba7e1e/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","six"]
+#7 1.939 Collecting six
+#7 1.985   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.007 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.051 Installing collected packages: six
+#7 2.069 Successfully installed six-1.17.0
+#7 2.069 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.177 
+#7 2.177 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.177 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.3s
+
+#8 [4/5] RUN ["pip","install","pytest"]
+#8 0.632 Collecting pytest
+#8 0.669   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#8 0.710 Collecting iniconfig>=1 (from pytest)
+#8 0.719   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#8 0.770 Collecting packaging>=20 (from pytest)
+#8 0.779   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.822 Collecting pluggy<2,>=1.5 (from pytest)
+#8 0.831   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#8 0.878 Collecting pygments>=2.7.2 (from pytest)
+#8 0.888   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#8 0.916 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#8 0.968    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 7.3 MB/s eta 0:00:00
+#8 0.978 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#8 0.996 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 1.011    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 4.5 MB/s eta 0:00:00
+#8 1.020 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#8 1.041 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#8 1.126    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 14.6 MB/s eta 0:00:00
+#8 1.174 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#8 1.875 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#8 1.876 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.881 
+#8 1.881 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.881 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.1s
+
+#9 [5/5] RUN ["pip","install","py"]
+#9 0.534 Collecting py
+#9 0.575   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#9 0.608 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#9 0.646    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.5 MB/s eta 0:00:00
+#9 0.689 Installing collected packages: py
+#9 0.768 Successfully installed py-1.11.0
+#9 0.768 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.773 
+#9 0.773 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.773 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.8s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.2s done
+#10 writing image sha256:88a4222ff7d0c27961b38c18fbf0d26032a78d494337c8538764addda197ea1f done
+#10 naming to docker.io/library/test-image-feb86d4bdd9a658c122a706f26ba7e1e done
+#10 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/963tebd1n5xpndododa2pwka6
+[2025-10-29 21:44:45] SUCCESS: Build completed for feb86d4bdd9a658c122a706f26ba7e1e

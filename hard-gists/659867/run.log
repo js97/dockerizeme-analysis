@@ -1,0 +1,14 @@
+=== Docker Run Log for 659867 ===
+Started at: Mi 29. Okt 16:37:58 CET 2025
+
+[2025-10-29 16:38:11] START: Running container for 659867
+[2025-10-29 16:38:11] SUCCESS: Container 7538b3b3b64b8b2573a32318e783557b952369970470907960887111e6de8cec started for 659867
+=== Container logs for 659867 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 1, in <module>
+    from haystack.indexes import *
+  File "/usr/local/lib/python3.11/site-packages/haystack/indexes.py", line 8, in <module>
+    from haystack import connection_router, connections
+ImportError: cannot import name 'connection_router' from 'haystack' (/usr/local/lib/python3.11/site-packages/haystack/__init__.py)
+=== End of logs for 659867 ===
+[2025-10-29 16:38:13] INFO: Container 7538b3b3b64b8b2573a32318e783557b952369970470907960887111e6de8cec has stopped

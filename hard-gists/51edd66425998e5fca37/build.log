@@ -1,0 +1,196 @@
+=== Docker Build Log for 51edd66425998e5fca37 ===
+Started at: Mi 29. Okt 15:27:05 CET 2025
+
+[2025-10-29 15:27:05] START: Building image for 51edd66425998e5fca37
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 279B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.67kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/6] COPY hard-gists/51edd66425998e5fca37/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/6] RUN ["pip","install","webvirtmgr"]
+#7 2.010 Collecting webvirtmgr
+#7 2.050   Downloading webvirtmgr-4.8.9.tar.gz (705 kB)
+#7 2.102      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 705.8/705.8 kB 13.9 MB/s eta 0:00:00
+#7 2.139   Preparing metadata (setup.py): started
+#7 2.573   Preparing metadata (setup.py): finished with status 'done'
+#7 2.578 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from webvirtmgr) (79.0.1)
+#7 2.708 Collecting django>=1.5.5 (from webvirtmgr)
+#7 2.717   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.764 Collecting gunicorn>=18.0 (from webvirtmgr)
+#7 2.772   Downloading gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+#7 2.806 Collecting lockfile>=0.9 (from webvirtmgr)
+#7 2.816   Downloading lockfile-0.12.2-py2.py3-none-any.whl.metadata (2.4 kB)
+#7 2.862 Collecting asgiref>=3.8.1 (from django>=1.5.5->webvirtmgr)
+#7 2.870   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.909 Collecting sqlparse>=0.3.1 (from django>=1.5.5->webvirtmgr)
+#7 2.918   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.971 Collecting packaging (from gunicorn>=18.0->webvirtmgr)
+#7 2.979   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#7 3.029 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.627    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 13.9 MB/s eta 0:00:00
+#7 3.635 Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB)
+#7 3.649    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.0/85.0 kB 6.2 MB/s eta 0:00:00
+#7 3.659 Downloading lockfile-0.12.2-py2.py3-none-any.whl (13 kB)
+#7 3.678 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.695 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.706    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.8 MB/s eta 0:00:00
+#7 3.715 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#7 3.727    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.0 MB/s eta 0:00:00
+#7 3.772 Building wheels for collected packages: webvirtmgr
+#7 3.773   Building wheel for webvirtmgr (setup.py): started
+#7 4.069   Building wheel for webvirtmgr (setup.py): finished with status 'done'
+#7 4.072   Created wheel for webvirtmgr: filename=webvirtmgr-4.8.9-py3-none-any.whl size=698037 sha256=6bfcbaa7a59af4c7eb90ba2ab17dc8f2cfb944c243cca8259fe73c9fccdd5dd8
+#7 4.072   Stored in directory: /root/.cache/pip/wheels/c7/67/ab/a716fc1b614ea6bb537a20a0b880eb7071514208cc442aeac3
+#7 4.074 Successfully built webvirtmgr
+#7 4.141 Installing collected packages: lockfile, sqlparse, packaging, asgiref, gunicorn, django, webvirtmgr
+#7 5.719 Successfully installed asgiref-3.10.0 django-5.2.7 gunicorn-23.0.0 lockfile-0.12.2 packaging-25.0 sqlparse-0.5.3 webvirtmgr-4.8.9
+#7 5.719 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.817 
+#7 5.817 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.817 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.6s
+
+#8 [4/6] RUN ["pip","install","foundation"]
+#8 0.536 Collecting foundation
+#8 0.572   Downloading foundation-0.1.0a0.dev1.tar.gz (50 kB)
+#8 0.597      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.8/50.8 kB 1.8 MB/s eta 0:00:00
+#8 0.609   Preparing metadata (setup.py): started
+#8 0.726   Preparing metadata (setup.py): finished with status 'done'
+#8 0.831 Collecting Django<1.11,>=1.10 (from foundation)
+#8 0.841   Downloading Django-1.10.8-py2.py3-none-any.whl.metadata (1.3 kB)
+#8 0.882 Collecting django-sekizai>=0.10 (from foundation)
+#8 0.891   Downloading django_sekizai-4.1.0-py3-none-any.whl.metadata (4.6 kB)
+#8 0.920 INFO: pip is looking at multiple versions of django-sekizai to determine which version is compatible with other requirements. This could take a while.
+#8 0.933   Downloading django_sekizai-4.0.0-py3-none-any.whl.metadata (4.6 kB)
+#8 0.957   Downloading django_sekizai-3.0.1-py3-none-any.whl.metadata (4.6 kB)
+#8 0.997   Downloading django_sekizai-3.0.0-py3-none-any.whl.metadata (4.6 kB)
+#8 1.021   Downloading django_sekizai-2.0.0-py3-none-any.whl.metadata (3.7 kB)
+#8 1.046   Downloading django-sekizai-1.1.0.tar.gz (7.0 kB)
+#8 1.062   Preparing metadata (setup.py): started
+#8 1.176   Preparing metadata (setup.py): finished with status 'done'
+#8 1.207   Downloading django-sekizai-1.0.0.tar.gz (18 kB)
+#8 1.228   Preparing metadata (setup.py): started
+#8 1.344   Preparing metadata (setup.py): finished with status 'done'
+#8 1.365   Downloading django_sekizai-0.10.0-py2.py3-none-any.whl.metadata (793 bytes)
+#8 1.404 Collecting django-classy-tags>=0.3.1 (from django-sekizai>=0.10->foundation)
+#8 1.415   Downloading django_classy_tags-4.1.0-py3-none-any.whl.metadata (5.3 kB)
+#8 1.434 INFO: pip is looking at multiple versions of django-classy-tags to determine which version is compatible with other requirements. This could take a while.
+#8 1.450   Downloading django_classy_tags-4.0.0-py3-none-any.whl.metadata (5.2 kB)
+#8 1.479   Downloading django_classy_tags-3.0.1-py3-none-any.whl.metadata (5.3 kB)
+#8 1.511   Downloading django_classy_tags-3.0.0-py3-none-any.whl.metadata (5.2 kB)
+#8 1.535   Downloading django_classy_tags-2.0.0-py3-none-any.whl.metadata (4.5 kB)
+#8 1.561   Downloading django-classy-tags-1.0.0.tar.gz (13 kB)
+#8 1.574   Preparing metadata (setup.py): started
+#8 1.690   Preparing metadata (setup.py): finished with status 'done'
+#8 1.706   Downloading django-classy-tags-0.9.0.tar.gz (17 kB)
+#8 1.724   Preparing metadata (setup.py): started
+#8 1.840   Preparing metadata (setup.py): finished with status 'done'
+#8 1.861   Downloading django_classy_tags-0.8.0-py2.py3-none-any.whl.metadata (981 bytes)
+#8 1.906 Downloading Django-1.10.8-py2.py3-none-any.whl (6.8 MB)
+#8 2.212    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.8/6.8 MB 22.5 MB/s eta 0:00:00
+#8 2.221 Downloading django_sekizai-0.10.0-py2.py3-none-any.whl (19 kB)
+#8 2.242 Downloading django_classy_tags-0.8.0-py2.py3-none-any.whl (22 kB)
+#8 2.282 Building wheels for collected packages: foundation
+#8 2.287   Building wheel for foundation (setup.py): started
+#8 2.467   Building wheel for foundation (setup.py): finished with status 'done'
+#8 2.467   Created wheel for foundation: filename=foundation-0.1.0a0.dev1-py3-none-any.whl size=73614 sha256=40ca8f9976c029adbc3f6590b893f2c3aafe1c4c27e7f74828af2ca4f0ee1af9
+#8 2.468   Stored in directory: /root/.cache/pip/wheels/ad/c3/ad/3307fd133207420fb4bf8fa4844260b0dcd4de9deec2857abd
+#8 2.470 Successfully built foundation
+#8 2.527 Installing collected packages: Django, django-classy-tags, django-sekizai, foundation
+#8 2.527   Attempting uninstall: Django
+#8 2.532     Found existing installation: Django 5.2.7
+#8 2.713     Uninstalling Django-5.2.7:
+#8 15.87       Successfully uninstalled Django-5.2.7
+#8 17.23 Successfully installed Django-1.10.8 django-classy-tags-0.8.0 django-sekizai-0.10.0 foundation-0.1.0a0.dev1
+#8 17.23 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 17.23 
+#8 17.23 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 17.23 [notice] To update, run: pip install --upgrade pip
+#8 DONE 17.6s
+
+#9 [5/6] RUN ["pip","install","console"]
+#9 0.762 Collecting console
+#9 0.868   Downloading console-0.9912-py3-none-any.whl.metadata (18 kB)
+#9 1.045 Collecting ezenv>=0.92 (from console)
+#9 1.149   Downloading ezenv-0.92-py2.py3-none-any.whl.metadata (13 kB)
+#9 1.193 Downloading console-0.9912-py3-none-any.whl (96 kB)
+#9 1.224    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.8/96.8 kB 3.2 MB/s eta 0:00:00
+#9 1.233 Downloading ezenv-0.92-py2.py3-none-any.whl (10 kB)
+#9 1.301 Installing collected packages: ezenv, console
+#9 1.399 Successfully installed console-0.9912 ezenv-0.92
+#9 1.399 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.404 
+#9 1.404 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.404 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.5s
+
+#10 [6/6] RUN ["pip","install","UIkit"]
+#10 0.650 Collecting UIkit
+#10 0.787   Downloading UIkit-0.0.1.tar.gz (3.7 kB)
+#10 0.811   Preparing metadata (setup.py): started
+#10 0.934   Preparing metadata (setup.py): finished with status 'done'
+#10 0.974 Collecting six (from UIkit)
+#10 0.982   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#10 1.055 Collecting PyQt5-sip (from UIkit)
+#10 1.063   Downloading pyqt5_sip-12.17.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.whl.metadata (494 bytes)
+#10 1.117 Collecting PyQt5 (from UIkit)
+#10 1.126   Downloading PyQt5-5.15.11-cp38-abi3-manylinux_2_17_x86_64.whl.metadata (2.1 kB)
+#10 1.173 Collecting qtawesome (from UIkit)
+#10 1.184   Downloading qtawesome-1.4.0-py3-none-any.whl.metadata (11 kB)
+#10 1.235 Collecting PyQt5-Qt5<5.16.0,>=5.15.2 (from PyQt5->UIkit)
+#10 1.245   Downloading PyQt5_Qt5-5.15.17-py3-none-manylinux2014_x86_64.whl.metadata (536 bytes)
+#10 1.292 Collecting qtpy (from qtawesome->UIkit)
+#10 1.302   Downloading QtPy-2.4.3-py3-none-any.whl.metadata (12 kB)
+#10 1.321 Requirement already satisfied: packaging in /usr/local/lib/python3.11/site-packages (from qtpy->qtawesome->UIkit) (25.0)
+#10 1.332 Downloading PyQt5-5.15.11-cp38-abi3-manylinux_2_17_x86_64.whl (8.2 MB)
+#10 1.715    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.2/8.2 MB 21.5 MB/s eta 0:00:00
+#10 1.725 Downloading pyqt5_sip-12.17.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.whl (276 kB)
+#10 1.748    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 276.8/276.8 kB 12.5 MB/s eta 0:00:00
+#10 1.757 Downloading qtawesome-1.4.0-py3-none-any.whl (2.6 MB)
+#10 1.866    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 MB 24.2 MB/s eta 0:00:00
+#10 1.875 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#10 1.893 Downloading PyQt5_Qt5-5.15.17-py3-none-manylinux2014_x86_64.whl (61.1 MB)
+#10 4.227    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.1/61.1 MB 14.0 MB/s eta 0:00:00
+#10 4.239 Downloading QtPy-2.4.3-py3-none-any.whl (95 kB)
+#10 4.256    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 95.0/95.0 kB 5.5 MB/s eta 0:00:00
+#10 4.413 Building wheels for collected packages: UIkit
+#10 4.425   Building wheel for UIkit (setup.py): started
+#10 4.562   Building wheel for UIkit (setup.py): finished with status 'done'
+#10 4.563   Created wheel for UIkit: filename=uikit-0.0.1-py3-none-any.whl size=4395 sha256=a06541da821ab6e44aa149cbc1cf23a726b4718ac51c6c3deaf3907e4c6a4de6
+#10 4.563   Stored in directory: /root/.cache/pip/wheels/8b/1f/41/e803f43d6d397696c6bbf65311b5de892ecdc1f6abcb738195
+#10 4.564 Successfully built UIkit
+#10 4.628 Installing collected packages: PyQt5-Qt5, six, qtpy, PyQt5-sip, qtawesome, PyQt5, UIkit
+#10 5.798 Successfully installed PyQt5-5.15.11 PyQt5-Qt5-5.15.17 PyQt5-sip-12.17.1 UIkit-0.0.1 qtawesome-1.4.0 qtpy-2.4.3 six-1.17.0
+#10 5.798 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 5.805 
+#10 5.805 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 5.805 [notice] To update, run: pip install --upgrade pip
+#10 DONE 7.3s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 1.3s done
+#11 writing image sha256:927504123261af0445b4603e66063faa214773e051b35a4c3c5f86554ad966aa done
+#11 naming to docker.io/library/test-image-51edd66425998e5fca37 done
+#11 DONE 1.3s
+
+View build details: docker-desktop://dashboard/build/default/default/oneba5l15zhqmqanzm9zw3hc5
+[2025-10-29 15:27:40] SUCCESS: Build completed for 51edd66425998e5fca37

@@ -1,0 +1,280 @@
+=== Docker Build Log for 3886519 ===
+Started at: Mi 29. Okt 14:04:29 CET 2025
+
+[2025-10-29 14:04:29] START: Building image for 3886519
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 582B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.50kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/16] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/16] COPY hard-gists/3886519/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/16] RUN ["apt-get","update"]
+#7 0.263 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.263 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.272 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.284 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.607 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.608 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.192 Fetched 9833 kB in 1s (10.2 MB/s)
+#7 1.192 Reading package lists...
+#7 DONE 1.8s
+
+#8 [ 4/16] RUN ["pip","install","numpy"]
+#8 2.098 Collecting numpy
+#8 2.136   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 2.161      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.4 MB/s eta 0:00:00
+#8 2.177 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#8 2.880    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 21.2 MB/s eta 0:00:00
+#8 2.956 Installing collected packages: numpy
+#8 4.400 Successfully installed numpy-2.3.4
+#8 4.400 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 4.495 
+#8 4.495 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 4.495 [notice] To update, run: pip install --upgrade pip
+#8 DONE 5.2s
+
+#9 [ 5/16] RUN ["pip","install","requests"]
+#9 0.508 Collecting requests
+#9 0.548   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#9 0.668 Collecting charset_normalizer<4,>=2 (from requests)
+#9 0.677   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#9 0.722 Collecting idna<4,>=2.5 (from requests)
+#9 0.730   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#9 0.787 Collecting urllib3<3,>=1.21.1 (from requests)
+#9 0.796   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#9 0.838 Collecting certifi>=2017.4.17 (from requests)
+#9 0.847   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#9 0.930 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#9 0.958    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 2.7 MB/s eta 0:00:00
+#9 1.014 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#9 1.038    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 7.2 MB/s eta 0:00:00
+#9 1.049 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#9 1.066    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 9.0 MB/s eta 0:00:00
+#9 1.093 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#9 1.113    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 3.3 MB/s eta 0:00:00
+#9 1.125 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#9 1.147    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 5.8 MB/s eta 0:00:00
+#9 1.198 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#9 1.434 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#9 1.435 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.440 
+#9 1.440 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.440 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.6s
+
+#10 [ 6/16] RUN ["pip","install","six"]
+#10 0.526 Collecting six
+#10 0.567   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#10 0.591 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#10 0.653 Installing collected packages: six
+#10 0.692 Successfully installed six-1.17.0
+#10 0.692 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.698 
+#10 0.698 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.698 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.8s
+
+#11 [ 7/16] RUN ["pip","install","psycopg2"]
+#11 0.560 Collecting psycopg2
+#11 0.593   Downloading psycopg2-2.9.11.tar.gz (379 kB)
+#11 0.636      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 379.6/379.6 kB 9.3 MB/s eta 0:00:00
+#11 0.671   Preparing metadata (setup.py): started
+#11 1.137   Preparing metadata (setup.py): finished with status 'done'
+#11 1.139 Building wheels for collected packages: psycopg2
+#11 1.140   Building wheel for psycopg2 (setup.py): started
+#11 6.154   Building wheel for psycopg2 (setup.py): finished with status 'done'
+#11 6.156   Created wheel for psycopg2: filename=psycopg2-2.9.11-cp311-cp311-linux_x86_64.whl size=503336 sha256=0e06e99f168e0c3c016bf9051f4969de664a77a7d090bc4a2457862dc100d342
+#11 6.156   Stored in directory: /root/.cache/pip/wheels/15/a7/0e/37c6d130333cbaac2e6bb15e4ff41ef3a195af78a70907ca0d
+#11 6.158 Successfully built psycopg2
+#11 6.204 Installing collected packages: psycopg2
+#11 6.236 Successfully installed psycopg2-2.9.11
+#11 6.236 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 6.241 
+#11 6.241 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 6.241 [notice] To update, run: pip install --upgrade pip
+#11 DONE 6.3s
+
+#12 [ 8/16] RUN ["pip","install","pytz"]
+#12 0.552 Collecting pytz
+#12 0.584   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#12 0.604 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#12 0.656    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 9.9 MB/s eta 0:00:00
+#12 0.726 Installing collected packages: pytz
+#12 0.848 Successfully installed pytz-2025.2
+#12 0.848 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 0.855 
+#12 0.855 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 0.855 [notice] To update, run: pip install --upgrade pip
+#12 DONE 1.0s
+
+#13 [ 9/16] RUN ["pip","install","Django"]
+#13 0.607 Collecting Django
+#13 0.640   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#13 0.691 Collecting asgiref>=3.8.1 (from Django)
+#13 0.699   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#13 0.748 Collecting sqlparse>=0.3.1 (from Django)
+#13 0.758   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#13 0.790 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#13 1.127    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 24.9 MB/s eta 0:00:00
+#13 1.136 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#13 1.154 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#13 1.164    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.9 MB/s eta 0:00:00
+#13 1.261 Installing collected packages: sqlparse, asgiref, Django
+#13 2.652 Successfully installed Django-5.2.7 asgiref-3.10.0 sqlparse-0.5.3
+#13 2.653 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 2.658 
+#13 2.658 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 2.658 [notice] To update, run: pip install --upgrade pip
+#13 DONE 3.0s
+
+#14 [10/16] RUN ["pip","install","redis"]
+#14 0.566 Collecting redis
+#14 0.604   Downloading redis-7.0.1-py3-none-any.whl.metadata (12 kB)
+#14 0.637 Downloading redis-7.0.1-py3-none-any.whl (339 kB)
+#14 0.683    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 339.9/339.9 kB 7.5 MB/s eta 0:00:00
+#14 0.744 Installing collected packages: redis
+#14 0.936 Successfully installed redis-7.0.1
+#14 0.936 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#14 0.941 
+#14 0.941 [notice] A new release of pip is available: 24.0 -> 25.3
+#14 0.941 [notice] To update, run: pip install --upgrade pip
+#14 DONE 1.0s
+
+#15 [11/16] RUN ["pip","install","pillow"]
+#15 0.691 Collecting pillow
+#15 0.726   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#15 0.772 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#15 1.078    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 23.1 MB/s eta 0:00:00
+#15 1.174 Installing collected packages: pillow
+#15 1.436 Successfully installed pillow-12.0.0
+#15 1.436 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#15 1.441 
+#15 1.441 [notice] A new release of pip is available: 24.0 -> 25.3
+#15 1.441 [notice] To update, run: pip install --upgrade pip
+#15 DONE 1.7s
+
+#16 [12/16] RUN ["pip","install","requests-oauthlib"]
+#16 0.507 Collecting requests-oauthlib
+#16 0.541   Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl.metadata (11 kB)
+#16 0.593 Collecting oauthlib>=3.0.0 (from requests-oauthlib)
+#16 0.601   Downloading oauthlib-3.3.1-py3-none-any.whl.metadata (7.9 kB)
+#16 0.617 Requirement already satisfied: requests>=2.0.0 in /usr/local/lib/python3.11/site-packages (from requests-oauthlib) (2.32.5)
+#16 0.625 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests>=2.0.0->requests-oauthlib) (3.4.4)
+#16 0.626 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests>=2.0.0->requests-oauthlib) (3.11)
+#16 0.627 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests>=2.0.0->requests-oauthlib) (2.5.0)
+#16 0.628 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests>=2.0.0->requests-oauthlib) (2025.10.5)
+#16 0.645 Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl (24 kB)
+#16 0.671 Downloading oauthlib-3.3.1-py3-none-any.whl (160 kB)
+#16 0.692    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 160.1/160.1 kB 7.9 MB/s eta 0:00:00
+#16 0.766 Installing collected packages: oauthlib, requests-oauthlib
+#16 0.864 Successfully installed oauthlib-3.3.1 requests-oauthlib-2.0.0
+#16 0.864 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#16 0.869 
+#16 0.869 [notice] A new release of pip is available: 24.0 -> 25.3
+#16 0.869 [notice] To update, run: pip install --upgrade pip
+#16 DONE 1.0s
+
+#17 [13/16] RUN ["pip","install","oauthlib"]
+#17 0.429 Requirement already satisfied: oauthlib in /usr/local/lib/python3.11/site-packages (3.3.1)
+#17 0.500 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#17 0.504 
+#17 0.504 [notice] A new release of pip is available: 24.0 -> 25.3
+#17 0.504 [notice] To update, run: pip install --upgrade pip
+#17 DONE 0.6s
+
+#18 [14/16] RUN ["apt-get","install","-y","gettext"]
+#18 0.211 Reading package lists...
+#18 0.649 Building dependency tree...
+#18 0.751 Reading state information...
+#18 0.901 The following additional packages will be installed:
+#18 0.902   gettext-base
+#18 0.903 Suggested packages:
+#18 0.903   autopoint gettext-doc libasprintf-dev libgettextpo-dev gnulib-l10n
+#18 0.976 The following NEW packages will be installed:
+#18 0.977   gettext gettext-base
+#18 1.015 0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+#18 1.015 Need to get 1924 kB of archives.
+#18 1.015 After this operation, 8086 kB of additional disk space will be used.
+#18 1.015 Get:1 http://deb.debian.org/debian trixie/main amd64 gettext-base amd64 0.23.1-2 [243 kB]
+#18 1.045 Get:2 http://deb.debian.org/debian trixie/main amd64 gettext amd64 0.23.1-2 [1680 kB]
+#18 1.250 debconf: unable to initialize frontend: Dialog
+#18 1.250 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#18 1.250 debconf: falling back to frontend: Readline
+#18 1.255 debconf: unable to initialize frontend: Readline
+#18 1.255 debconf: (This frontend requires a controlling tty.)
+#18 1.255 debconf: falling back to frontend: Teletype
+#18 1.258 debconf: unable to initialize frontend: Teletype
+#18 1.258 debconf: (This frontend requires a controlling tty.)
+#18 1.258 debconf: falling back to frontend: Noninteractive
+#18 1.705 Fetched 1924 kB in 0s (17.3 MB/s)
+#18 1.743 Selecting previously unselected package gettext-base.
+#18 1.743 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 26761 files and directories currently installed.)
+#18 1.772 Preparing to unpack .../gettext-base_0.23.1-2_amd64.deb ...
+#18 1.781 Unpacking gettext-base (0.23.1-2) ...
+#18 2.285 Selecting previously unselected package gettext.
+#18 2.287 Preparing to unpack .../gettext_0.23.1-2_amd64.deb ...
+#18 2.305 Unpacking gettext (0.23.1-2) ...
+#18 2.442 Setting up gettext-base (0.23.1-2) ...
+#18 2.470 Setting up gettext (0.23.1-2) ...
+#18 2.495 Processing triggers for libc-bin (2.41-12) ...
+#18 DONE 2.7s
+
+#19 [15/16] RUN ["pip","install","pypng"]
+#19 0.585 Collecting pypng
+#19 0.619   Downloading pypng-0.20220715.0-py3-none-any.whl.metadata (13 kB)
+#19 0.645 Downloading pypng-0.20220715.0-py3-none-any.whl (58 kB)
+#19 0.668    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.1/58.1 kB 2.2 MB/s eta 0:00:00
+#19 0.746 Installing collected packages: pypng
+#19 0.800 Successfully installed pypng-0.20220715.0
+#19 0.801 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#19 0.806 
+#19 0.806 [notice] A new release of pip is available: 24.0 -> 25.3
+#19 0.806 [notice] To update, run: pip install --upgrade pip
+#19 DONE 0.9s
+
+#20 [16/16] RUN ["pip","install","purepng"]
+#20 0.642 Collecting purepng
+#20 0.771   Downloading purepng-0.2.0.tar.gz (149 kB)
+#20 0.810      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 149.5/149.5 kB 3.8 MB/s eta 0:00:00
+#20 0.821   Preparing metadata (setup.py): started
+#20 0.996   Preparing metadata (setup.py): finished with status 'done'
+#20 0.998 Building wheels for collected packages: purepng
+#20 1.003   Building wheel for purepng (setup.py): started
+#20 1.360   Building wheel for purepng (setup.py): finished with status 'done'
+#20 1.361   Created wheel for purepng: filename=purepng-0.2.0-cp311-cp311-linux_x86_64.whl size=40660 sha256=2450fd064f94cd83c59467a8dc81aaeea3d301b814c03d7328c9ee27c1ec9e1a
+#20 1.361   Stored in directory: /root/.cache/pip/wheels/63/79/b0/d06df273dc65d32f922ddbbb254ff64c5ad07aece7a0dfade4
+#20 1.363 Successfully built purepng
+#20 1.435 Installing collected packages: purepng
+#20 1.469 Successfully installed purepng-0.2.0
+#20 1.469 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#20 1.475 
+#20 1.475 [notice] A new release of pip is available: 24.0 -> 25.3
+#20 1.475 [notice] To update, run: pip install --upgrade pip
+#20 DONE 1.6s
+
+#21 exporting to image
+#21 exporting layers
+#21 exporting layers 0.9s done
+#21 writing image sha256:9ae34cbf45fa1c39c9ccaa4200a9c2d92d7a92e7a8f0f72274348a6df7f54513 done
+#21 naming to docker.io/library/test-image-3886519 done
+#21 DONE 0.9s
+
+View build details: docker-desktop://dashboard/build/default/default/vegk4skmq5n1oiuhs9e5knn9b
+[2025-10-29 14:05:00] SUCCESS: Build completed for 3886519

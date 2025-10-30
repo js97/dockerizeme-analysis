@@ -1,0 +1,85 @@
+=== Docker Build Log for 1950267 ===
+Started at: Mi 29. Okt 12:35:44 CET 2025
+
+[2025-10-29 12:35:44] START: Building image for 1950267
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 171B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 6.52kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/1950267/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","Eratosthenes"]
+#7 2.049 Collecting Eratosthenes
+#7 2.179   Downloading eratosthenes-4.0.9.tar.gz (8.0 kB)
+#7 2.201   Preparing metadata (setup.py): started
+#7 2.577   Preparing metadata (setup.py): finished with status 'done'
+#7 2.623 Collecting pybind11 (from Eratosthenes)
+#7 2.635   Downloading pybind11-3.0.1-py3-none-any.whl.metadata (10.0 kB)
+#7 2.658 Downloading pybind11-3.0.1-py3-none-any.whl (293 kB)
+#7 2.699    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 293.6/293.6 kB 7.3 MB/s eta 0:00:00
+#7 2.705 Building wheels for collected packages: Eratosthenes
+#7 2.706   Building wheel for Eratosthenes (setup.py): started
+#7 2.900   Building wheel for Eratosthenes (setup.py): finished with status 'error'
+#7 2.903   error: subprocess-exited-with-error
+#7 2.903   
+#7 2.903   × python setup.py bdist_wheel did not run successfully.
+#7 2.903   │ exit code: 1
+#7 2.903   ╰─> [5 lines of output]
+#7 2.903       Eratosthenes/_eratosthenes.cpp:19:10: fatal error: boost/multiprecision/cpp_int.hpp: No such file or directory
+#7 2.903          19 | #include <boost/multiprecision/cpp_int.hpp>
+#7 2.903             |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#7 2.903       compilation terminated.
+#7 2.903       error: command '/usr/bin/g++' failed with exit code 1
+#7 2.903       [end of output]
+#7 2.903   
+#7 2.903   note: This error originates from a subprocess, and is likely not a problem with pip.
+#7 2.903   ERROR: Failed building wheel for Eratosthenes
+#7 2.903   Running setup.py clean for Eratosthenes
+#7 2.997 Failed to build Eratosthenes
+#7 2.998 ERROR: Could not build wheels for Eratosthenes, which is required to install pyproject.toml-based projects
+#7 3.085 
+#7 3.085 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.085 [notice] To update, run: pip install --upgrade pip
+#7 ERROR: process "pip install Eratosthenes" did not complete successfully: exit code: 1
+------
+ > [3/3] RUN ["pip","install","Eratosthenes"]:
+2.903       [end of output]
+2.903   
+2.903   note: This error originates from a subprocess, and is likely not a problem with pip.
+2.903   ERROR: Failed building wheel for Eratosthenes
+2.903   Running setup.py clean for Eratosthenes
+2.997 Failed to build Eratosthenes
+2.998 ERROR: Could not build wheels for Eratosthenes, which is required to install pyproject.toml-based projects
+3.085 
+3.085 [notice] A new release of pip is available: 24.0 -> 25.3
+3.085 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:3
+--------------------
+   1 |     FROM python:3.11
+   2 |     COPY hard-gists/1950267/snippet.py /snippet.py
+   3 | >>> RUN ["pip","install","Eratosthenes"]
+   4 |     CMD ["python3","/snippet.py"]
+   5 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install Eratosthenes" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/2rukcaeezwbcxwap10z9x9p9y
+[2025-10-29 12:35:47] ERROR: Build failed for 1950267

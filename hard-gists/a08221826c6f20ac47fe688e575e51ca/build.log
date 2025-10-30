@@ -1,0 +1,128 @@
+=== Docker Build Log for a08221826c6f20ac47fe688e575e51ca ===
+Started at: Mi 29. Okt 18:50:22 CET 2025
+
+[2025-10-29 18:50:22] START: Building image for a08221826c6f20ac47fe688e575e51ca
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 257B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 7.05kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/a08221826c6f20ac47fe688e575e51ca/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","requests"]
+#7 1.936 Collecting requests
+#7 1.973   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.098 Collecting charset_normalizer<4,>=2 (from requests)
+#7 2.109   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.150 Collecting idna<4,>=2.5 (from requests)
+#7 2.159   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.223 Collecting urllib3<3,>=1.21.1 (from requests)
+#7 2.234   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.279 Collecting certifi>=2017.4.17 (from requests)
+#7 2.287   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.315 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.335    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.2 MB/s eta 0:00:00
+#7 2.345 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.374    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 5.6 MB/s eta 0:00:00
+#7 2.382 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.402    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 8.1 MB/s eta 0:00:00
+#7 2.411 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.426    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.3 MB/s eta 0:00:00
+#7 2.435 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.453    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 7.5 MB/s eta 0:00:00
+#7 2.503 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#7 2.732 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#7 2.732 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.822 
+#7 2.822 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.822 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.0s
+
+#8 [4/5] RUN ["pip","install","numpy"]
+#8 0.716 Collecting numpy
+#8 0.757   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 0.784      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.0 MB/s eta 0:00:00
+#8 0.804 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#8 2.184    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 11.5 MB/s eta 0:00:00
+#8 2.268 Installing collected packages: numpy
+#8 3.692 Successfully installed numpy-2.3.4
+#8 3.692 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 3.697 
+#8 3.697 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.697 [notice] To update, run: pip install --upgrade pip
+#8 DONE 4.4s
+
+#9 [5/5] RUN ["pip","install","matplotlib"]
+#9 0.653 Collecting matplotlib
+#9 0.688   Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#9 0.789 Collecting contourpy>=1.0.1 (from matplotlib)
+#9 0.798   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#9 0.836 Collecting cycler>=0.10 (from matplotlib)
+#9 0.845   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#9 1.038 Collecting fonttools>=4.22.0 (from matplotlib)
+#9 1.048   Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+#9 1.078      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.3/112.3 kB 3.6 MB/s eta 0:00:00
+#9 1.157 Collecting kiwisolver>=1.3.1 (from matplotlib)
+#9 1.166   Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+#9 1.184 Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.11/site-packages (from matplotlib) (2.3.4)
+#9 1.242 Collecting packaging>=20.0 (from matplotlib)
+#9 1.251   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#9 1.447 Collecting pillow>=8 (from matplotlib)
+#9 1.457   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#9 1.517 Collecting pyparsing>=3 (from matplotlib)
+#9 1.526   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#9 1.579 Collecting python-dateutil>=2.7 (from matplotlib)
+#9 1.595   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#9 1.694 Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib)
+#9 1.703   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#9 1.725 Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+#9 2.340    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 14.2 MB/s eta 0:00:00
+#9 2.349 Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+#9 2.379    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 355.2/355.2 kB 12.1 MB/s eta 0:00:00
+#9 2.388 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#9 2.409 Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#9 2.794    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 13.0 MB/s eta 0:00:00
+#9 2.805 Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+#9 2.948    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 10.1 MB/s eta 0:00:00
+#9 2.956 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#9 2.970    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 4.8 MB/s eta 0:00:00
+#9 2.981 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#9 3.525    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 13.0 MB/s eta 0:00:00
+#9 3.538 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#9 3.558    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 5.9 MB/s eta 0:00:00
+#9 3.567 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#9 3.587    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 12.1 MB/s eta 0:00:00
+#9 3.597 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#9 3.788 Installing collected packages: six, pyparsing, pillow, packaging, kiwisolver, fonttools, cycler, contourpy, python-dateutil, matplotlib
+#9 5.853 Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.60.1 kiwisolver-1.4.9 matplotlib-3.10.7 packaging-25.0 pillow-12.0.0 pyparsing-3.2.5 python-dateutil-2.9.0.post0 six-1.17.0
+#9 5.853 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 5.859 
+#9 5.859 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 5.859 [notice] To update, run: pip install --upgrade pip
+#9 DONE 6.7s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.5s done
+#10 writing image sha256:15c4481f713f9d99f001e28849851d50eecd247eb7a279249bfd295db37b0728 done
+#10 naming to docker.io/library/test-image-a08221826c6f20ac47fe688e575e51ca done
+#10 DONE 0.5s
+
+View build details: docker-desktop://dashboard/build/default/default/j6celt3qays3xeyjeldq0vi3d
+[2025-10-29 18:50:37] SUCCESS: Build completed for a08221826c6f20ac47fe688e575e51ca

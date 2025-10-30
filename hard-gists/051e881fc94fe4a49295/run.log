@@ -1,0 +1,24 @@
+=== Docker Run Log for 051e881fc94fe4a49295 ===
+Started at: Mi 29. Okt 11:27:51 CET 2025
+
+[2025-10-29 11:28:01] START: Running container for 051e881fc94fe4a49295
+[2025-10-29 11:28:01] SUCCESS: Container 8affe0da5b1f271599ecbca2ed226e7aa69dd9b54d70368e15516dc8a038008a started for 051e881fc94fe4a49295
+=== Container logs for 051e881fc94fe4a49295 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 234, in <module>
+    requester = Requester()
+                ^^^^^^^^^^^
+  File "/snippet.py", line 111, in __init__
+    authenticator['Credential'] = nrpc.ComputeNetlogonCredential('12345678', sessionKey)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/impacket/dcerpc/v5/nrpc.py", line 1644, in ComputeNetlogonCredential
+    cipherText = Crypt1.encrypt(inputData)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/Cryptodome/Cipher/_mode_ecb.py", line 136, in encrypt
+    c_uint8_ptr(plaintext),
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/Cryptodome/Util/_raw_api.py", line 149, in c_uint8_ptr
+    raise TypeError("Object type %s cannot be passed to C code" % type(data))
+TypeError: Object type <class 'str'> cannot be passed to C code
+=== End of logs for 051e881fc94fe4a49295 ===
+[2025-10-29 11:28:03] INFO: Container 8affe0da5b1f271599ecbca2ed226e7aa69dd9b54d70368e15516dc8a038008a has stopped

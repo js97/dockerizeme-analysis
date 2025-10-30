@@ -1,0 +1,12 @@
+=== Docker Run Log for 72e709ba8a3a7c6affa1 ===
+Started at: Mi 29. Okt 17:04:53 CET 2025
+
+[2025-10-29 17:04:53] START: Running container for 72e709ba8a3a7c6affa1
+[2025-10-29 17:04:54] SUCCESS: Container baba2b3a1520804e5233e176dd3f13b0a152e4a4799c4881b69be133b5353bdf started for 72e709ba8a3a7c6affa1
+=== Container logs for 72e709ba8a3a7c6affa1 ===
+  File "/snippet.py", line 42
+    print '{"index":{"_index":"netflow","_type":"line","_id":'+str(i)+'}}'
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 72e709ba8a3a7c6affa1 ===
+[2025-10-29 17:04:56] INFO: Container baba2b3a1520804e5233e176dd3f13b0a152e4a4799c4881b69be133b5353bdf has stopped

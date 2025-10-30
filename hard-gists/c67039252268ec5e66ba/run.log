@@ -1,0 +1,23 @@
+=== Docker Run Log for c67039252268ec5e66ba ===
+Started at: Mi 29. Okt 19:54:02 CET 2025
+
+[2025-10-29 19:54:10] START: Running container for c67039252268ec5e66ba
+[2025-10-29 19:54:11] SUCCESS: Container 78fec3b35a255cfda7c72695cc9ff62c56c8cf6ce17a2c89e22f5ec13e34d1b7 started for c67039252268ec5e66ba
+=== Container logs for c67039252268ec5e66ba ===
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/bcc/bcc.py", line 9, in <module>
+    import numba
+ModuleNotFoundError: No module named 'numba'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snippet.py", line 25, in <module>
+    from bcc import BPF
+  File "/usr/local/lib/python3.11/site-packages/bcc/__init__.py", line 9, in <module>
+    from .bcc import *
+  File "/usr/local/lib/python3.11/site-packages/bcc/bcc.py", line 19, in <module>
+    import pytest
+ModuleNotFoundError: No module named 'pytest'
+=== End of logs for c67039252268ec5e66ba ===
+[2025-10-29 19:54:13] INFO: Container 78fec3b35a255cfda7c72695cc9ff62c56c8cf6ce17a2c89e22f5ec13e34d1b7 has stopped

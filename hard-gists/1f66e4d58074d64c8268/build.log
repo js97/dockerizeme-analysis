@@ -1,0 +1,141 @@
+=== Docker Build Log for 1f66e4d58074d64c8268 ===
+Started at: Mi 29. Okt 12:54:35 CET 2025
+
+[2025-10-29 12:54:35] START: Building image for 1f66e4d58074d64c8268
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 279B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.38kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/6] COPY hard-gists/1f66e4d58074d64c8268/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/6] RUN ["pip","install","requests"]
+#7 1.995 Collecting requests
+#7 2.027   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.149 Collecting charset_normalizer<4,>=2 (from requests)
+#7 2.158   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.201 Collecting idna<4,>=2.5 (from requests)
+#7 2.209   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.270 Collecting urllib3<3,>=1.21.1 (from requests)
+#7 2.278   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.321 Collecting certifi>=2017.4.17 (from requests)
+#7 2.328   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.356 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.377    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 2.9 MB/s eta 0:00:00
+#7 2.385 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.405    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 8.3 MB/s eta 0:00:00
+#7 2.414 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.428    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.8 MB/s eta 0:00:00
+#7 2.436 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.450    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.2 MB/s eta 0:00:00
+#7 2.457 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.471    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.0 MB/s eta 0:00:00
+#7 2.519 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#7 2.756 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#7 2.757 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.849 
+#7 2.849 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.849 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.0s
+
+#8 [4/6] RUN ["pip","install","bs4"]
+#8 0.537 Collecting bs4
+#8 0.572   Downloading bs4-0.0.2-py2.py3-none-any.whl.metadata (411 bytes)
+#8 0.619 Collecting beautifulsoup4 (from bs4)
+#8 0.626   Downloading beautifulsoup4-4.14.2-py3-none-any.whl.metadata (3.8 kB)
+#8 0.672 Collecting soupsieve>1.2 (from beautifulsoup4->bs4)
+#8 0.680   Downloading soupsieve-2.8-py3-none-any.whl.metadata (4.6 kB)
+#8 0.728 Collecting typing-extensions>=4.0.0 (from beautifulsoup4->bs4)
+#8 0.738   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.762 Downloading bs4-0.0.2-py2.py3-none-any.whl (1.2 kB)
+#8 0.783 Downloading beautifulsoup4-4.14.2-py3-none-any.whl (106 kB)
+#8 0.809    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.4/106.4 kB 4.1 MB/s eta 0:00:00
+#8 0.818 Downloading soupsieve-2.8-py3-none-any.whl (36 kB)
+#8 0.836 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#8 0.846    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.9 MB/s eta 0:00:00
+#8 0.895 Installing collected packages: typing-extensions, soupsieve, beautifulsoup4, bs4
+#8 1.027 Successfully installed beautifulsoup4-4.14.2 bs4-0.0.2 soupsieve-2.8 typing-extensions-4.15.0
+#8 1.028 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.033 
+#8 1.033 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.033 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.1s
+
+#9 [5/6] RUN ["pip","install","beautifulsoup4"]
+#9 0.498 Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.11/site-packages (4.14.2)
+#9 0.503 Requirement already satisfied: soupsieve>1.2 in /usr/local/lib/python3.11/site-packages (from beautifulsoup4) (2.8)
+#9 0.504 Requirement already satisfied: typing-extensions>=4.0.0 in /usr/local/lib/python3.11/site-packages (from beautifulsoup4) (4.15.0)
+#9 0.556 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.562 
+#9 0.562 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.562 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.6s
+
+#10 [6/6] RUN ["pip","install","img2pdf"]
+#10 0.552 Collecting img2pdf
+#10 0.593   Downloading img2pdf-0.6.1.tar.gz (106 kB)
+#10 0.627      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.5/106.5 kB 3.0 MB/s eta 0:00:00
+#10 0.636   Preparing metadata (setup.py): started
+#10 1.071   Preparing metadata (setup.py): finished with status 'done'
+#10 1.274 Collecting Pillow (from img2pdf)
+#10 1.285   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#10 1.645 Collecting pikepdf (from img2pdf)
+#10 1.655   Downloading pikepdf-10.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+#10 1.724 Collecting Deprecated (from pikepdf->img2pdf)
+#10 1.732   Downloading Deprecated-1.2.18-py2.py3-none-any.whl.metadata (5.7 kB)
+#10 1.942 Collecting lxml>=4.8 (from pikepdf->img2pdf)
+#10 1.953   Downloading lxml-6.0.2-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.6 kB)
+#10 2.010 Collecting packaging (from pikepdf->img2pdf)
+#10 2.018   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#10 2.210 Collecting wrapt<2,>=1.10 (from Deprecated->pikepdf->img2pdf)
+#10 2.221   Downloading wrapt-1.17.3-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.4 kB)
+#10 2.252 Downloading pikepdf-10.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (2.6 MB)
+#10 2.623    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 MB 7.1 MB/s eta 0:00:00
+#10 2.632 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#10 3.217    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 12.0 MB/s eta 0:00:00
+#10 3.226 Downloading lxml-6.0.2-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.2 MB)
+#10 3.565    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 15.5 MB/s eta 0:00:00
+#10 3.574 Downloading Deprecated-1.2.18-py2.py3-none-any.whl (10.0 kB)
+#10 3.600 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#10 3.612    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 6.0 MB/s eta 0:00:00
+#10 3.621 Downloading wrapt-1.17.3-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (82 kB)
+#10 3.633    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 82.4/82.4 kB 7.2 MB/s eta 0:00:00
+#10 3.669 Building wheels for collected packages: img2pdf
+#10 3.670   Building wheel for img2pdf (setup.py): started
+#10 3.858   Building wheel for img2pdf (setup.py): finished with status 'done'
+#10 3.858   Created wheel for img2pdf: filename=img2pdf-0.6.1-py3-none-any.whl size=51100 sha256=adcc0835c0fad3d4cdacbce4da07d5f369d34541fd687b9e380ba87553217ce4
+#10 3.858   Stored in directory: /root/.cache/pip/wheels/21/0a/64/6a8143672bcea0d35b8cf705ba12b11bb191367cfde88d4f35
+#10 3.860 Successfully built img2pdf
+#10 3.939 Installing collected packages: wrapt, Pillow, packaging, lxml, Deprecated, pikepdf, img2pdf
+#10 4.485 Successfully installed Deprecated-1.2.18 Pillow-12.0.0 img2pdf-0.6.1 lxml-6.0.2 packaging-25.0 pikepdf-10.0.0 wrapt-1.17.3
+#10 4.485 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 4.490 
+#10 4.490 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 4.490 [notice] To update, run: pip install --upgrade pip
+#10 DONE 4.9s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 0.3s done
+#11 writing image sha256:b3e5177420e94ae13e0cd5c77f9df5f5141dabc60f4fa9b4df61dd6fbe8394d0 done
+#11 naming to docker.io/library/test-image-1f66e4d58074d64c8268 0.0s done
+#11 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/klaxzbjrovnzcfcqk1hkegj98
+[2025-10-29 12:54:45] SUCCESS: Build completed for 1f66e4d58074d64c8268

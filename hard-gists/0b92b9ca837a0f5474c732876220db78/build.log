@@ -1,0 +1,346 @@
+=== Docker Build Log for 0b92b9ca837a0f5474c732876220db78 ===
+Started at: Mi 29. Okt 11:34:29 CET 2025
+
+[2025-10-29 11:34:29] START: Building image for 0b92b9ca837a0f5474c732876220db78
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.01kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.89kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/52] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/52] COPY hard-gists/0b92b9ca837a0f5474c732876220db78/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/52] RUN ["apt-get","update"]
+#7 0.285 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.285 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.294 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.307 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.628 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.628 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.234 Fetched 9833 kB in 1s (9998 kB/s)
+#7 1.234 Reading package lists...
+#7 DONE 1.8s
+
+#8 [ 4/52] RUN ["pip","install","future"]
+#8 2.122 Collecting future
+#8 2.161   Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+#8 2.181 Downloading future-1.0.0-py3-none-any.whl (491 kB)
+#8 2.226    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 491.3/491.3 kB 11.6 MB/s eta 0:00:00
+#8 2.264 Installing collected packages: future
+#8 2.491 Successfully installed future-1.0.0
+#8 2.491 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.599 
+#8 2.599 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.599 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.8s
+
+#9 [ 5/52] RUN ["pip","install","Flask"]
+#9 0.524 Collecting Flask
+#9 0.557   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#9 0.607 Collecting blinker>=1.9.0 (from Flask)
+#9 0.615   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#9 0.665 Collecting click>=8.1.3 (from Flask)
+#9 0.673   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#9 0.709 Collecting itsdangerous>=2.2.0 (from Flask)
+#9 0.717   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#9 0.757 Collecting jinja2>=3.1.2 (from Flask)
+#9 0.765   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#9 0.844 Collecting markupsafe>=2.1.1 (from Flask)
+#9 0.851   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#9 0.901 Collecting werkzeug>=3.1.0 (from Flask)
+#9 0.909   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#9 0.941 Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+#9 0.968    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 3.8 MB/s eta 0:00:00
+#9 0.977 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#9 0.995 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#9 1.011    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 6.6 MB/s eta 0:00:00
+#9 1.020 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#9 1.043 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#9 1.057    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 9.9 MB/s eta 0:00:00
+#9 1.065 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#9 1.083 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#9 1.101    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 12.7 MB/s eta 0:00:00
+#9 1.145 Installing collected packages: markupsafe, itsdangerous, click, blinker, werkzeug, jinja2, Flask
+#9 1.473 Successfully installed Flask-3.1.2 blinker-1.9.0 click-8.3.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.3 werkzeug-3.1.3
+#9 1.473 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.478 
+#9 1.478 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.478 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.6s
+
+#10 [ 6/52] RUN ["pip","install","google-api-python-client"]
+#10 0.586 Collecting google-api-python-client
+#10 0.620   Downloading google_api_python_client-2.185.0-py3-none-any.whl.metadata (7.0 kB)
+#10 0.667 Collecting httplib2<1.0.0,>=0.19.0 (from google-api-python-client)
+#10 0.675   Downloading httplib2-0.31.0-py3-none-any.whl.metadata (2.2 kB)
+#10 0.788 Collecting google-auth!=2.24.0,!=2.25.0,<3.0.0,>=1.32.0 (from google-api-python-client)
+#10 0.796   Downloading google_auth-2.42.0-py2.py3-none-any.whl.metadata (6.6 kB)
+#10 0.831 Collecting google-auth-httplib2<1.0.0,>=0.2.0 (from google-api-python-client)
+#10 0.839   Downloading google_auth_httplib2-0.2.0-py2.py3-none-any.whl.metadata (2.2 kB)
+#10 0.932 Collecting google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,<3.0.0,>=1.31.5 (from google-api-python-client)
+#10 0.941   Downloading google_api_core-2.28.1-py3-none-any.whl.metadata (3.3 kB)
+#10 0.974 Collecting uritemplate<5,>=3.0.1 (from google-api-python-client)
+#10 0.983   Downloading uritemplate-4.2.0-py3-none-any.whl.metadata (2.6 kB)
+#10 1.038 Collecting googleapis-common-protos<2.0.0,>=1.56.2 (from google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,<3.0.0,>=1.31.5->google-api-python-client)
+#10 1.046   Downloading googleapis_common_protos-1.71.0-py3-none-any.whl.metadata (9.4 kB)
+#10 1.273 Collecting protobuf!=3.20.0,!=3.20.1,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<7.0.0,>=3.19.5 (from google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,<3.0.0,>=1.31.5->google-api-python-client)
+#10 1.282   Downloading protobuf-6.33.0-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)
+#10 1.342 Collecting proto-plus<2.0.0,>=1.22.3 (from google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,<3.0.0,>=1.31.5->google-api-python-client)
+#10 1.351   Downloading proto_plus-1.26.1-py3-none-any.whl.metadata (2.2 kB)
+#10 1.420 Collecting requests<3.0.0,>=2.18.0 (from google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,<3.0.0,>=1.31.5->google-api-python-client)
+#10 1.428   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#10 1.507 Collecting cachetools<7.0,>=2.0.0 (from google-auth!=2.24.0,!=2.25.0,<3.0.0,>=1.32.0->google-api-python-client)
+#10 1.515   Downloading cachetools-6.2.1-py3-none-any.whl.metadata (5.5 kB)
+#10 1.562 Collecting pyasn1-modules>=0.2.1 (from google-auth!=2.24.0,!=2.25.0,<3.0.0,>=1.32.0->google-api-python-client)
+#10 1.570   Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+#10 1.616 Collecting rsa<5,>=3.1.4 (from google-auth!=2.24.0,!=2.25.0,<3.0.0,>=1.32.0->google-api-python-client)
+#10 1.624   Downloading rsa-4.9.1-py3-none-any.whl.metadata (5.6 kB)
+#10 1.683 Collecting pyparsing<4,>=3.0.4 (from httplib2<1.0.0,>=0.19.0->google-api-python-client)
+#10 1.691   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#10 1.873 Collecting pyasn1<0.7.0,>=0.6.1 (from pyasn1-modules>=0.2.1->google-auth!=2.24.0,!=2.25.0,<3.0.0,>=1.32.0->google-api-python-client)
+#10 1.882   Downloading pyasn1-0.6.1-py3-none-any.whl.metadata (8.4 kB)
+#10 1.996 Collecting charset_normalizer<4,>=2 (from requests<3.0.0,>=2.18.0->google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,<3.0.0,>=1.31.5->google-api-python-client)
+#10 2.004   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#10 2.046 Collecting idna<4,>=2.5 (from requests<3.0.0,>=2.18.0->google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,<3.0.0,>=1.31.5->google-api-python-client)
+#10 2.054   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#10 2.113 Collecting urllib3<3,>=1.21.1 (from requests<3.0.0,>=2.18.0->google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,<3.0.0,>=1.31.5->google-api-python-client)
+#10 2.123   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#10 2.168 Collecting certifi>=2017.4.17 (from requests<3.0.0,>=2.18.0->google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,<3.0.0,>=1.31.5->google-api-python-client)
+#10 2.176   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#10 2.220 Downloading google_api_python_client-2.185.0-py3-none-any.whl (14.5 MB)
+#10 2.781    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.5/14.5 MB 25.0 MB/s eta 0:00:00
+#10 2.791 Downloading google_api_core-2.28.1-py3-none-any.whl (173 kB)
+#10 2.807    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 173.7/173.7 kB 11.3 MB/s eta 0:00:00
+#10 2.817 Downloading google_auth-2.42.0-py2.py3-none-any.whl (222 kB)
+#10 2.833    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 222.6/222.6 kB 14.7 MB/s eta 0:00:00
+#10 2.879 Downloading google_auth_httplib2-0.2.0-py2.py3-none-any.whl (9.3 kB)
+#10 2.898 Downloading httplib2-0.31.0-py3-none-any.whl (91 kB)
+#10 2.911    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.1/91.1 kB 7.1 MB/s eta 0:00:00
+#10 2.919 Downloading uritemplate-4.2.0-py3-none-any.whl (11 kB)
+#10 2.936 Downloading cachetools-6.2.1-py3-none-any.whl (11 kB)
+#10 2.956 Downloading googleapis_common_protos-1.71.0-py3-none-any.whl (294 kB)
+#10 2.975    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 294.6/294.6 kB 16.4 MB/s eta 0:00:00
+#10 2.983 Downloading proto_plus-1.26.1-py3-none-any.whl (50 kB)
+#10 2.995    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.2/50.2 kB 4.1 MB/s eta 0:00:00
+#10 3.003 Downloading protobuf-6.33.0-cp39-abi3-manylinux2014_x86_64.whl (323 kB)
+#10 3.026    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 323.2/323.2 kB 14.6 MB/s eta 0:00:00
+#10 3.035 Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+#10 3.049    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 181.3/181.3 kB 12.8 MB/s eta 0:00:00
+#10 3.058 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#10 3.072    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 8.3 MB/s eta 0:00:00
+#10 3.080 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#10 3.091    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 6.1 MB/s eta 0:00:00
+#10 3.100 Downloading rsa-4.9.1-py3-none-any.whl (34 kB)
+#10 3.119 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#10 3.134    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 11.3 MB/s eta 0:00:00
+#10 3.144 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#10 3.157    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.8 MB/s eta 0:00:00
+#10 3.165 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#10 3.179    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.1 MB/s eta 0:00:00
+#10 3.187 Downloading pyasn1-0.6.1-py3-none-any.whl (83 kB)
+#10 3.199    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.1/83.1 kB 7.1 MB/s eta 0:00:00
+#10 3.206 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#10 3.221    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.4 MB/s eta 0:00:00
+#10 3.381 Installing collected packages: urllib3, uritemplate, pyparsing, pyasn1, protobuf, idna, charset_normalizer, certifi, cachetools, rsa, requests, pyasn1-modules, proto-plus, httplib2, googleapis-common-protos, google-auth, google-auth-httplib2, google-api-core, google-api-python-client
+#10 4.551 Successfully installed cachetools-6.2.1 certifi-2025.10.5 charset_normalizer-3.4.4 google-api-core-2.28.1 google-api-python-client-2.185.0 google-auth-2.42.0 google-auth-httplib2-0.2.0 googleapis-common-protos-1.71.0 httplib2-0.31.0 idna-3.11 proto-plus-1.26.1 protobuf-6.33.0 pyasn1-0.6.1 pyasn1-modules-0.4.2 pyparsing-3.2.5 requests-2.32.5 rsa-4.9.1 uritemplate-4.2.0 urllib3-2.5.0
+#10 4.551 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 4.557 
+#10 4.557 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 4.557 [notice] To update, run: pip install --upgrade pip
+#10 DONE 5.2s
+
+#11 [ 7/52] RUN ["pip","install","apiclient"]
+#11 0.648 Collecting apiclient
+#11 0.683   Downloading apiclient-1.0.4.tar.gz (4.9 kB)
+#11 0.701   Preparing metadata (setup.py): started
+#11 1.148   Preparing metadata (setup.py): finished with status 'done'
+#11 1.151 Requirement already satisfied: urllib3 in /usr/local/lib/python3.11/site-packages (from apiclient) (2.5.0)
+#11 1.152 Requirement already satisfied: certifi in /usr/local/lib/python3.11/site-packages (from apiclient) (2025.10.5)
+#11 1.156 Building wheels for collected packages: apiclient
+#11 1.157   Building wheel for apiclient (setup.py): started
+#11 1.336   Building wheel for apiclient (setup.py): finished with status 'done'
+#11 1.336   Created wheel for apiclient: filename=apiclient-1.0.4-py3-none-any.whl size=5281 sha256=20a79f8f5f2d140c07d293f8d482673a23238187680840f987565f12f18cee7a
+#11 1.336   Stored in directory: /root/.cache/pip/wheels/9b/08/37/e058c64cfe64d1e24408246af36d7fe2bad9bac21a8b0959fa
+#11 1.338 Successfully built apiclient
+#11 1.422 Installing collected packages: apiclient
+#11 1.448 Successfully installed apiclient-1.0.4
+#11 1.448 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.454 
+#11 1.454 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.454 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.6s
+
+#12 [ 8/52] RUN ["pip","install","epguides-api"]
+#12 0.729 Collecting epguides-api
+#12 0.767   Downloading epguides-api-1.0.1.tar.gz (4.2 kB)
+#12 0.781   Preparing metadata (setup.py): started
+#12 0.896   Preparing metadata (setup.py): finished with status 'done'
+#12 0.897 Building wheels for collected packages: epguides-api
+#12 0.902   Building wheel for epguides-api (setup.py): started
+#12 1.050   Building wheel for epguides-api (setup.py): finished with status 'done'
+#12 1.050   Created wheel for epguides-api: filename=epguides_api-1.0.1-py3-none-any.whl size=5487 sha256=6bcaf9fa29685bfbbb5a40ca16f0b90006bdc9ee9dd7c4279e5d334f0a69f7d8
+#12 1.050   Stored in directory: /root/.cache/pip/wheels/2f/f9/db/f6a1902524673951af283c3a6523dc6f86d193e616163188ae
+#12 1.052 Successfully built epguides-api
+#12 1.141 Installing collected packages: epguides-api
+#12 1.178 Successfully installed epguides-api-1.0.1
+#12 1.178 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 1.183 
+#12 1.183 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 1.183 [notice] To update, run: pip install --upgrade pip
+#12 DONE 1.2s
+
+#13 [ 9/52] RUN ["pip","install","requests"]
+#13 0.439 Requirement already satisfied: requests in /usr/local/lib/python3.11/site-packages (2.32.5)
+#13 0.444 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests) (3.4.4)
+#13 0.446 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests) (3.11)
+#13 0.446 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests) (2.5.0)
+#13 0.447 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests) (2025.10.5)
+#13 0.546 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 0.551 
+#13 0.551 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 0.551 [notice] To update, run: pip install --upgrade pip
+#13 DONE 0.6s
+
+#14 [10/52] RUN ["pip","install","pytz"]
+#14 0.554 Collecting pytz
+#14 0.588   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#14 0.616 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#14 0.668    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 10.0 MB/s eta 0:00:00
+#14 0.765 Installing collected packages: pytz
+#14 0.867 Successfully installed pytz-2025.2
+#14 0.867 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#14 0.872 
+#14 0.872 [notice] A new release of pip is available: 24.0 -> 25.3
+#14 0.872 [notice] To update, run: pip install --upgrade pip
+#14 DONE 0.9s
+
+#15 [11/52] RUN ["pip","install","python-dateutil"]
+#15 0.526 Collecting python-dateutil
+#15 0.559   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#15 0.608 Collecting six>=1.5 (from python-dateutil)
+#15 0.616   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#15 0.642 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#15 0.681    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 6.1 MB/s eta 0:00:00
+#15 0.689 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#15 0.796 Installing collected packages: six, python-dateutil
+#15 0.882 Successfully installed python-dateutil-2.9.0.post0 six-1.17.0
+#15 0.883 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#15 0.888 
+#15 0.888 [notice] A new release of pip is available: 24.0 -> 25.3
+#15 0.888 [notice] To update, run: pip install --upgrade pip
+#15 DONE 1.0s
+
+#16 [12/52] RUN ["pip","install","httplib2"]
+#16 0.442 Requirement already satisfied: httplib2 in /usr/local/lib/python3.11/site-packages (0.31.0)
+#16 0.444 Requirement already satisfied: pyparsing<4,>=3.0.4 in /usr/local/lib/python3.11/site-packages (from httplib2) (3.2.5)
+#16 0.539 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#16 0.544 
+#16 0.544 [notice] A new release of pip is available: 24.0 -> 25.3
+#16 0.544 [notice] To update, run: pip install --upgrade pip
+#16 DONE 0.6s
+
+#17 [13/52] RUN ["pip","install","google-api-python-client-uritemplate"]
+#17 0.592 Collecting google-api-python-client-uritemplate
+#17 0.636   Downloading google-api-python-client-uritemplate-1.4.2.tar.gz (43 kB)
+#17 0.667      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.4/43.4 kB 1.3 MB/s eta 0:00:00
+#17 0.672   Preparing metadata (setup.py): started
+#17 0.876   Preparing metadata (setup.py): finished with status 'done'
+#17 0.879 Requirement already satisfied: httplib2>=0.8 in /usr/local/lib/python3.11/site-packages (from google-api-python-client-uritemplate) (0.31.0)
+#17 0.913 Collecting oauth2client>=1.4.6 (from google-api-python-client-uritemplate)
+#17 0.921   Downloading oauth2client-4.1.3-py2.py3-none-any.whl.metadata (1.2 kB)
+#17 0.940 Requirement already satisfied: six>=1.6.1 in /usr/local/lib/python3.11/site-packages (from google-api-python-client-uritemplate) (1.17.0)
+#17 0.972 Collecting uritemplate.py>=0.3 (from google-api-python-client-uritemplate)
+#17 0.984   Downloading uritemplate.py-3.0.2-py2.py3-none-any.whl.metadata (4.3 kB)
+#17 1.005 Requirement already satisfied: pyparsing<4,>=3.0.4 in /usr/local/lib/python3.11/site-packages (from httplib2>=0.8->google-api-python-client-uritemplate) (3.2.5)
+#17 1.009 Requirement already satisfied: pyasn1>=0.1.7 in /usr/local/lib/python3.11/site-packages (from oauth2client>=1.4.6->google-api-python-client-uritemplate) (0.6.1)
+#17 1.010 Requirement already satisfied: pyasn1-modules>=0.0.5 in /usr/local/lib/python3.11/site-packages (from oauth2client>=1.4.6->google-api-python-client-uritemplate) (0.4.2)
+#17 1.010 Requirement already satisfied: rsa>=3.1.4 in /usr/local/lib/python3.11/site-packages (from oauth2client>=1.4.6->google-api-python-client-uritemplate) (4.9.1)
+#17 1.013 Requirement already satisfied: uritemplate>=2.0 in /usr/local/lib/python3.11/site-packages (from uritemplate.py>=0.3->google-api-python-client-uritemplate) (4.2.0)
+#17 1.028 Downloading oauth2client-4.1.3-py2.py3-none-any.whl (98 kB)
+#17 1.052    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.2/98.2 kB 4.2 MB/s eta 0:00:00
+#17 1.061 Downloading uritemplate.py-3.0.2-py2.py3-none-any.whl (4.9 kB)
+#17 1.083 Building wheels for collected packages: google-api-python-client-uritemplate
+#17 1.088   Building wheel for google-api-python-client-uritemplate (setup.py): started
+#17 1.261   Building wheel for google-api-python-client-uritemplate (setup.py): finished with status 'done'
+#17 1.262   Created wheel for google-api-python-client-uritemplate: filename=google_api_python_client_uritemplate-1.4.2-py3-none-any.whl size=48508 sha256=7aeb7492d746413c81099a6172c959abb73a54446a80cb721b2960d612ae6cf5
+#17 1.262   Stored in directory: /root/.cache/pip/wheels/42/57/2a/023ae2af7c11ef78a264ad7d094e8b161d8f3f68ec9ac4fc25
+#17 1.263 Successfully built google-api-python-client-uritemplate
+#17 1.357 Installing collected packages: uritemplate.py, oauth2client, google-api-python-client-uritemplate
+#17 1.463 Successfully installed google-api-python-client-uritemplate-1.4.2 oauth2client-4.1.3 uritemplate.py-3.0.2
+#17 1.464 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#17 1.469 
+#17 1.469 [notice] A new release of pip is available: 24.0 -> 25.3
+#17 1.469 [notice] To update, run: pip install --upgrade pip
+#17 DONE 1.6s
+
+#18 [14/52] RUN ["pip","install","python-oauth2"]
+#18 0.628 Collecting python-oauth2
+#18 0.661   Downloading python-oauth2-1.1.1.tar.gz (45 kB)
+#18 0.688      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.4/45.4 kB 1.4 MB/s eta 0:00:00
+#18 0.696   Preparing metadata (setup.py): started
+#18 0.822   Preparing metadata (setup.py): finished with status 'done'
+#18 0.826 Building wheels for collected packages: python-oauth2
+#18 0.831   Building wheel for python-oauth2 (setup.py): started
+#18 0.995   Building wheel for python-oauth2 (setup.py): finished with status 'done'
+#18 0.996   Created wheel for python-oauth2: filename=python_oauth2-1.1.1-py3-none-any.whl size=57436 sha256=56046799a66462af9602fadbe62c3c52880fd7e3f59c943726c9abd8001813d2
+#18 0.996   Stored in directory: /root/.cache/pip/wheels/7b/63/ab/b9611ef76d652ff5075d91cab15721867250f7442a4fd2097f
+#18 0.998 Successfully built python-oauth2
+#18 1.096 Installing collected packages: python-oauth2
+#18 1.164 Successfully installed python-oauth2-1.1.1
+#18 1.165 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#18 1.170 
+#18 1.170 [notice] A new release of pip is available: 24.0 -> 25.3
+#18 1.170 [notice] To update, run: pip install --upgrade pip
+#18 DONE 1.2s
+
+#19 [15/52] RUN ["apt-get","install","-y","python-pip"]
+#19 0.228 Reading package lists...
+#19 0.654 Building dependency tree...
+#19 0.758 Reading state information...
+#19 0.774 Package python-pip is not available, but is referred to by another package.
+#19 0.774 This may mean that the package is missing, has been obsoleted, or
+#19 0.774 is only available from another source
+#19 0.774 However the following packages replace it:
+#19 0.774   python3-pip
+#19 0.774 
+#19 0.776 E: Package 'python-pip' has no installation candidate
+#19 ERROR: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+------
+ > [15/52] RUN ["apt-get","install","-y","python-pip"]:
+
+
+0.774 Package python-pip is not available, but is referred to by another package.
+0.774 This may mean that the package is missing, has been obsoleted, or
+0.774 is only available from another source
+0.774 However the following packages replace it:
+0.774   python3-pip
+0.774 
+0.776 E: Package 'python-pip' has no installation candidate
+------
+Dockerfile:15
+--------------------
+  13 |     RUN ["pip","install","google-api-python-client-uritemplate"]
+  14 |     RUN ["pip","install","python-oauth2"]
+  15 | >>> RUN ["apt-get","install","-y","python-pip"]
+  16 |     RUN ["pip","install","Jinja2"]
+  17 |     RUN ["pip","install","mock"]
+--------------------
+ERROR: failed to build: failed to solve: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/default/default/4cluymoss3fompgi7nhhpn6y0
+[2025-10-29 11:34:51] ERROR: Build failed for 0b92b9ca837a0f5474c732876220db78

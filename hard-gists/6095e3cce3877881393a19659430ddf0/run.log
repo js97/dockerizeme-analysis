@@ -1,0 +1,15 @@
+=== Docker Run Log for 6095e3cce3877881393a19659430ddf0 ===
+Started at: Mi 29. Okt 16:19:46 CET 2025
+
+[2025-10-29 16:19:46] START: Running container for 6095e3cce3877881393a19659430ddf0
+[2025-10-29 16:19:47] SUCCESS: Container b243a0de56234361bb954296a330b053280f42b0e38efe8cf084fb699121804b started for 6095e3cce3877881393a19659430ddf0
+=== Container logs for 6095e3cce3877881393a19659430ddf0 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 71, in <module>
+    main()
+  File "/snippet.py", line 15, in main
+    tree = ET.parse(sys.argv[1])
+                    ~~~~~~~~^^^
+IndexError: list index out of range
+=== End of logs for 6095e3cce3877881393a19659430ddf0 ===
+[2025-10-29 16:19:49] INFO: Container b243a0de56234361bb954296a330b053280f42b0e38efe8cf084fb699121804b has stopped

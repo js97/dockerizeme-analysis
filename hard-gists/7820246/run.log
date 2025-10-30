@@ -1,0 +1,12 @@
+=== Docker Run Log for 7820246 ===
+Started at: Mi 29. Okt 17:19:44 CET 2025
+
+[2025-10-29 17:19:44] START: Running container for 7820246
+[2025-10-29 17:19:44] SUCCESS: Container 7772f30a80235faf3152aa2a604ab383bc2069b076141a3804adf29188c0d313 started for 7820246
+=== Container logs for 7820246 ===
+  File "/snippet.py", line 65
+    print "Will query in %i rounds with %i articles per round." % (nrounds, self.nblock)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 7820246 ===
+[2025-10-29 17:19:46] INFO: Container 7772f30a80235faf3152aa2a604ab383bc2069b076141a3804adf29188c0d313 has stopped

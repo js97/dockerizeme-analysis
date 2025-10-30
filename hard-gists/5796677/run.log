@@ -1,0 +1,27 @@
+=== Docker Run Log for 5796677 ===
+Started at: Mi 29. Okt 16:03:24 CET 2025
+
+[2025-10-29 16:04:28] START: Running container for 5796677
+[2025-10-29 16:04:29] SUCCESS: Container 292d2b49d50749dff884e0151e95c9913d3e2841f92c40ff8330d85d6392164b started for 5796677
+=== Container logs for 5796677 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 4, in <module>
+    from cms.templatetags.cms_tags import Placeholder, PlaceholderOptions
+  File "/usr/local/lib/python3.11/site-packages/cms/templatetags/cms_tags.py", line 19, in <module>
+    from django.contrib.sites.models import Site
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 79, in <module>
+    class Site(models.Model):
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 131, in __new__
+    app_config = apps.get_containing_app_config(module)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/apps/registry.py", line 260, in get_containing_app_config
+    self.check_apps_ready()
+  File "/usr/local/lib/python3.11/site-packages/django/apps/registry.py", line 137, in check_apps_ready
+    settings.INSTALLED_APPS
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 5796677 ===
+[2025-10-29 16:04:31] INFO: Container 292d2b49d50749dff884e0151e95c9913d3e2841f92c40ff8330d85d6392164b has stopped

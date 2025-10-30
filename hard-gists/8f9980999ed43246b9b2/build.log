@@ -1,0 +1,161 @@
+=== Docker Build Log for 8f9980999ed43246b9b2 ===
+Started at: Mi 29. Okt 18:14:17 CET 2025
+
+[2025-10-29 18:14:17] START: Building image for 8f9980999ed43246b9b2
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 180B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.61kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/8f9980999ed43246b9b2/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","pycrypto"]
+#7 1.918 Collecting pycrypto
+#7 1.967   Downloading pycrypto-2.6.1.tar.gz (446 kB)
+#7 2.011      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 446.2/446.2 kB 10.4 MB/s eta 0:00:00
+#7 2.044   Preparing metadata (setup.py): started
+#7 2.430   Preparing metadata (setup.py): finished with status 'done'
+#7 2.432 Building wheels for collected packages: pycrypto
+#7 2.432   Building wheel for pycrypto (setup.py): started
+#7 3.770   Building wheel for pycrypto (setup.py): finished with status 'error'
+#7 3.776   error: subprocess-exited-with-error
+#7 3.776   
+#7 3.776   × python setup.py bdist_wheel did not run successfully.
+#7 3.776   │ exit code: 1
+#7 3.776   ╰─> [84 lines of output]
+#7 3.776       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+#7 3.776       !!
+#7 3.776       
+#7 3.776               ********************************************************************************
+#7 3.776               Please consider removing the following classifiers in favor of a SPDX license expression:
+#7 3.776       
+#7 3.776               License :: Public Domain
+#7 3.776       
+#7 3.776               See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+#7 3.776               ********************************************************************************
+#7 3.776       
+#7 3.776       !!
+#7 3.776         self._finalize_license_expression()
+#7 3.776       checking for gcc... gcc
+#7 3.776       checking whether the C compiler works... yes
+#7 3.776       checking for C compiler default output file name... a.out
+#7 3.776       checking for suffix of executables...
+#7 3.776       checking whether we are cross compiling... no
+#7 3.776       checking for suffix of object files... o
+#7 3.776       checking whether we are using the GNU C compiler... yes
+#7 3.776       checking whether gcc accepts -g... yes
+#7 3.776       checking for gcc option to accept ISO C89... none needed
+#7 3.776       checking for __gmpz_init in -lgmp... yes
+#7 3.776       checking for __gmpz_init in -lmpir... no
+#7 3.776       checking whether mpz_powm is declared... yes
+#7 3.776       checking whether mpz_powm_sec is declared... yes
+#7 3.776       checking how to run the C preprocessor... gcc -E
+#7 3.776       checking for grep that handles long lines and -e... /usr/bin/grep
+#7 3.776       checking for egrep... /usr/bin/grep -E
+#7 3.776       checking for ANSI C header files... yes
+#7 3.776       checking for sys/types.h... yes
+#7 3.776       checking for sys/stat.h... yes
+#7 3.776       checking for stdlib.h... yes
+#7 3.776       checking for string.h... yes
+#7 3.776       checking for memory.h... yes
+#7 3.776       checking for strings.h... yes
+#7 3.776       checking for inttypes.h... yes
+#7 3.776       checking for stdint.h... yes
+#7 3.776       checking for unistd.h... yes
+#7 3.776       checking for inttypes.h... (cached) yes
+#7 3.776       checking limits.h usability... yes
+#7 3.776       checking limits.h presence... yes
+#7 3.776       checking for limits.h... yes
+#7 3.776       checking stddef.h usability... yes
+#7 3.776       checking stddef.h presence... yes
+#7 3.776       checking for stddef.h... yes
+#7 3.776       checking for stdint.h... (cached) yes
+#7 3.776       checking for stdlib.h... (cached) yes
+#7 3.776       checking for string.h... (cached) yes
+#7 3.776       checking wchar.h usability... yes
+#7 3.776       checking wchar.h presence... yes
+#7 3.776       checking for wchar.h... yes
+#7 3.776       checking for inline... inline
+#7 3.776       checking for int16_t... yes
+#7 3.776       checking for int32_t... yes
+#7 3.776       checking for int64_t... yes
+#7 3.776       checking for int8_t... yes
+#7 3.776       checking for size_t... yes
+#7 3.776       checking for uint16_t... yes
+#7 3.776       checking for uint32_t... yes
+#7 3.776       checking for uint64_t... yes
+#7 3.776       checking for uint8_t... yes
+#7 3.776       checking for stdlib.h... (cached) yes
+#7 3.776       checking for GNU libc compatible malloc... yes
+#7 3.776       checking for memmove... yes
+#7 3.776       checking for memset... yes
+#7 3.776       configure: creating ./config.status
+#7 3.776       config.status: creating src/config.h
+#7 3.776       In file included from /usr/local/include/python3.11/Python.h:87,
+#7 3.776                        from src/_fastmath.c:31:
+#7 3.776       /usr/local/include/python3.11/cpython/pytime.h:208:60: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+#7 3.776         208 | PyAPI_FUNC(int) _PyTime_FromTimespec(_PyTime_t *tp, struct timespec *ts);
+#7 3.776             |                                                            ^~~~~~~~
+#7 3.776       /usr/local/include/python3.11/cpython/pytime.h:213:56: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+#7 3.776         213 | PyAPI_FUNC(int) _PyTime_AsTimespec(_PyTime_t t, struct timespec *ts);
+#7 3.776             |                                                        ^~~~~~~~
+#7 3.776       /usr/local/include/python3.11/cpython/pytime.h:217:63: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+#7 3.776         217 | PyAPI_FUNC(void) _PyTime_AsTimespec_clamp(_PyTime_t t, struct timespec *ts);
+#7 3.776             |                                                               ^~~~~~~~
+#7 3.776       src/_fastmath.c:33:10: fatal error: longintrepr.h: No such file or directory
+#7 3.776          33 | #include <longintrepr.h>                                /* for conversions */
+#7 3.776             |          ^~~~~~~~~~~~~~~
+#7 3.776       compilation terminated.
+#7 3.776       error: command '/usr/bin/gcc' failed with exit code 1
+#7 3.776       [end of output]
+#7 3.776   
+#7 3.776   note: This error originates from a subprocess, and is likely not a problem with pip.
+#7 3.777   ERROR: Failed building wheel for pycrypto
+#7 3.777   Running setup.py clean for pycrypto
+#7 3.882 Failed to build pycrypto
+#7 3.882 ERROR: Could not build wheels for pycrypto, which is required to install pyproject.toml-based projects
+#7 3.976 
+#7 3.976 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.976 [notice] To update, run: pip install --upgrade pip
+#7 ERROR: process "pip install pycrypto" did not complete successfully: exit code: 1
+------
+ > [3/3] RUN ["pip","install","pycrypto"]:
+3.776       [end of output]
+3.776   
+3.776   note: This error originates from a subprocess, and is likely not a problem with pip.
+3.777   ERROR: Failed building wheel for pycrypto
+3.777   Running setup.py clean for pycrypto
+3.882 Failed to build pycrypto
+3.882 ERROR: Could not build wheels for pycrypto, which is required to install pyproject.toml-based projects
+3.976 
+3.976 [notice] A new release of pip is available: 24.0 -> 25.3
+3.976 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:3
+--------------------
+   1 |     FROM python:3.11
+   2 |     COPY hard-gists/8f9980999ed43246b9b2/snippet.py /snippet.py
+   3 | >>> RUN ["pip","install","pycrypto"]
+   4 |     CMD ["python3","/snippet.py"]
+   5 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install pycrypto" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/g6m2bt172fzf2hf6l3lj3esjk
+[2025-10-29 18:14:21] ERROR: Build failed for 8f9980999ed43246b9b2

@@ -1,0 +1,12 @@
+=== Docker Run Log for 6815711 ===
+Started at: Mi 29. Okt 16:43:42 CET 2025
+
+[2025-10-29 16:43:43] START: Running container for 6815711
+[2025-10-29 16:43:43] SUCCESS: Container 5df79e6325bdb817256f22ede98c48a5bec08e9997bb24325b6db9d86ee09489 started for 6815711
+=== Container logs for 6815711 ===
+  File "/snippet.py", line 19
+    print "Without RefSeq: %i/%i" % (sum(no_refseq), len(no_refseq))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 6815711 ===
+[2025-10-29 16:43:45] INFO: Container 5df79e6325bdb817256f22ede98c48a5bec08e9997bb24325b6db9d86ee09489 has stopped

@@ -1,0 +1,76 @@
+=== Docker Build Log for 6da9a7c1e03912fde62e ===
+Started at: Mi 29. Okt 16:51:27 CET 2025
+
+[2025-10-29 16:51:27] START: Building image for 6da9a7c1e03912fde62e
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 177B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 6.45kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/6da9a7c1e03912fde62e/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","luigi"]
+#7 2.032 Collecting luigi
+#7 2.071   Downloading luigi-3.6.0.tar.gz (1.2 MB)
+#7 2.144      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 17.3 MB/s eta 0:00:00
+#7 2.224   Preparing metadata (setup.py): started
+#7 2.681   Preparing metadata (setup.py): finished with status 'done'
+#7 2.722 Collecting python-dateutil<3,>=2.7.5 (from luigi)
+#7 2.735   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#7 2.780 Collecting tenacity<9,>=8 (from luigi)
+#7 2.791   Downloading tenacity-8.5.0-py3-none-any.whl.metadata (1.2 kB)
+#7 2.862 Collecting tornado<7,>=5.0 (from luigi)
+#7 2.872   Downloading tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+#7 2.915 Collecting python-daemon (from luigi)
+#7 2.924   Downloading python_daemon-3.1.2-py3-none-any.whl.metadata (4.8 kB)
+#7 2.965 Collecting six>=1.5 (from python-dateutil<3,>=2.7.5->luigi)
+#7 2.972   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 3.023 Collecting lockfile>=0.10 (from python-daemon->luigi)
+#7 3.031   Downloading lockfile-0.12.2-py2.py3-none-any.whl.metadata (2.4 kB)
+#7 3.052 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#7 3.070    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 13.5 MB/s eta 0:00:00
+#7 3.079 Downloading tenacity-8.5.0-py3-none-any.whl (28 kB)
+#7 3.097 Downloading tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (443 kB)
+#7 3.121    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 443.9/443.9 kB 20.3 MB/s eta 0:00:00
+#7 3.128 Downloading python_daemon-3.1.2-py3-none-any.whl (30 kB)
+#7 3.146 Downloading lockfile-0.12.2-py2.py3-none-any.whl (13 kB)
+#7 3.164 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.183 Building wheels for collected packages: luigi
+#7 3.184   Building wheel for luigi (setup.py): started
+#7 3.565   Building wheel for luigi (setup.py): finished with status 'done'
+#7 3.569   Created wheel for luigi: filename=luigi-3.6.0-py3-none-any.whl size=1093838 sha256=187296b9f6eb8c0cee284681a53fd0f60b827fdcdce4bd2baccf28945990205e
+#7 3.569   Stored in directory: /root/.cache/pip/wheels/b9/22/3c/af6674483adf7af53c451451c24b1e330e00b6fe1cc70bb96a
+#7 3.571 Successfully built luigi
+#7 3.628 Installing collected packages: lockfile, tornado, tenacity, six, python-daemon, python-dateutil, luigi
+#7 4.156 Successfully installed lockfile-0.12.2 luigi-3.6.0 python-daemon-3.1.2 python-dateutil-2.9.0.post0 six-1.17.0 tenacity-8.5.0 tornado-6.5.2
+#7 4.157 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.257 
+#7 4.257 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.257 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.5s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.2s done
+#8 writing image sha256:7fb0111df69aafdac6ca031850f451373b851ebfb414f06be79b26213955999e done
+#8 naming to docker.io/library/test-image-6da9a7c1e03912fde62e 0.0s done
+#8 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/lcwxfii1cutxzswyk6do57el6
+[2025-10-29 16:51:32] SUCCESS: Build completed for 6da9a7c1e03912fde62e

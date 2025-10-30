@@ -1,0 +1,101 @@
+=== Docker Build Log for 88d0ebab5ace81201f04 ===
+Started at: Mi 29. Okt 18:04:17 CET 2025
+
+[2025-10-29 18:04:17] START: Building image for 88d0ebab5ace81201f04
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 258B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.54kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/88d0ebab5ace81201f04/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","requests"]
+#7 1.909 Collecting requests
+#7 1.940   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.056 Collecting charset_normalizer<4,>=2 (from requests)
+#7 2.065   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.110 Collecting idna<4,>=2.5 (from requests)
+#7 2.118   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.178 Collecting urllib3<3,>=1.21.1 (from requests)
+#7 2.187   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.233 Collecting certifi>=2017.4.17 (from requests)
+#7 2.241   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.268 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.286    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.5 MB/s eta 0:00:00
+#7 2.295 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.312    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.9 MB/s eta 0:00:00
+#7 2.320 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.335    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.9 MB/s eta 0:00:00
+#7 2.344 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.358    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.9 MB/s eta 0:00:00
+#7 2.367 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.380    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 10.0 MB/s eta 0:00:00
+#7 2.426 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#7 2.646 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#7 2.646 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.734 
+#7 2.734 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.734 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.9s
+
+#8 [4/5] RUN ["pip","install","facebook-sdk"]
+#8 0.642 Collecting facebook-sdk
+#8 0.679   Downloading facebook_sdk-3.1.0-py2.py3-none-any.whl.metadata (2.2 kB)
+#8 0.694 Requirement already satisfied: requests in /usr/local/lib/python3.11/site-packages (from facebook-sdk) (2.32.5)
+#8 0.699 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests->facebook-sdk) (3.4.4)
+#8 0.700 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests->facebook-sdk) (3.11)
+#8 0.701 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests->facebook-sdk) (2.5.0)
+#8 0.702 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests->facebook-sdk) (2025.10.5)
+#8 0.720 Downloading facebook_sdk-3.1.0-py2.py3-none-any.whl (7.5 kB)
+#8 0.771 Installing collected packages: facebook-sdk
+#8 0.806 Successfully installed facebook-sdk-3.1.0
+#8 0.807 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.811 
+#8 0.811 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.811 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.9s
+
+#9 [5/5] RUN ["pip","install","facebook-ads-api"]
+#9 0.641 Collecting facebook-ads-api
+#9 0.773   Downloading facebook-ads-api-0.3.0.tar.gz (9.4 kB)
+#9 0.793   Preparing metadata (setup.py): started
+#9 1.198   Preparing metadata (setup.py): finished with status 'done'
+#9 1.200 Building wheels for collected packages: facebook-ads-api
+#9 1.200   Building wheel for facebook-ads-api (setup.py): started
+#9 1.358   Building wheel for facebook-ads-api (setup.py): finished with status 'done'
+#9 1.358   Created wheel for facebook-ads-api: filename=facebook_ads_api-0.3.0-py3-none-any.whl size=9933 sha256=fa65cbc9d11f7d22c258d463a529d8b929599e5974759c52843fd0759d07b639
+#9 1.358   Stored in directory: /root/.cache/pip/wheels/a6/3f/03/3d18d743e6291d77ef9d782e3032dc2e3bc4290503afedf078
+#9 1.360 Successfully built facebook-ads-api
+#9 1.400 Installing collected packages: facebook-ads-api
+#9 1.414 Successfully installed facebook-ads-api-0.3.0
+#9 1.414 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.419 
+#9 1.419 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.419 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.5s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.2s done
+#10 writing image sha256:1d5f544d7c32424ab06b3f1ac88a00890bb6be51ea4dd9d20a5004802a2563cc done
+#10 naming to docker.io/library/test-image-88d0ebab5ace81201f04 done
+#10 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/aumpgbg57w789iqr01p440m5h
+[2025-10-29 18:04:22] SUCCESS: Build completed for 88d0ebab5ace81201f04

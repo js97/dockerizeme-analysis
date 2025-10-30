@@ -1,0 +1,77 @@
+=== Docker Build Log for 398429347c96e98aba88 ===
+Started at: Mi 29. Okt 14:07:31 CET 2025
+
+[2025-10-29 14:07:31] START: Building image for 398429347c96e98aba88
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 209B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.54kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/398429347c96e98aba88/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","requests"]
+#7 1.913 Collecting requests
+#7 1.959   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.076 Collecting charset_normalizer<4,>=2 (from requests)
+#7 2.085   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.129 Collecting idna<4,>=2.5 (from requests)
+#7 2.138   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.197 Collecting urllib3<3,>=1.21.1 (from requests)
+#7 2.206   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.249 Collecting certifi>=2017.4.17 (from requests)
+#7 2.257   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.283 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.303    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.2 MB/s eta 0:00:00
+#7 2.312 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.336    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 7.0 MB/s eta 0:00:00
+#7 2.344 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.367    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 6.6 MB/s eta 0:00:00
+#7 2.375 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.391    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.5 MB/s eta 0:00:00
+#7 2.400 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.418    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 7.1 MB/s eta 0:00:00
+#7 2.465 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#7 2.684 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#7 2.684 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.779 
+#7 2.779 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.779 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.0s
+
+#8 [4/4] RUN ["pip","install","pafy"]
+#8 0.638 Collecting pafy
+#8 0.674   Downloading pafy-0.5.5-py2.py3-none-any.whl.metadata (10 kB)
+#8 0.696 Downloading pafy-0.5.5-py2.py3-none-any.whl (35 kB)
+#8 0.752 Installing collected packages: pafy
+#8 0.805 Successfully installed pafy-0.5.5
+#8 0.805 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.810 
+#8 0.810 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.810 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.9s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.2s done
+#9 writing image sha256:8ac19805968488b51b07bff657d66322cc7b7cec56ad01336278a5247e02dc43 done
+#9 naming to docker.io/library/test-image-398429347c96e98aba88 done
+#9 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/e15vabrywphljbdb8up346u20
+[2025-10-29 14:07:36] SUCCESS: Build completed for 398429347c96e98aba88

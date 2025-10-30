@@ -1,0 +1,129 @@
+=== Docker Build Log for e1e011652b297d13b3ac3f99fd11b2bc ===
+Started at: Mi 29. Okt 20:39:48 CET 2025
+
+[2025-10-29 20:39:48] START: Building image for e1e011652b297d13b3ac3f99fd11b2bc
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 257B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.81kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/e1e011652b297d13b3ac3f99fd11b2bc/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","keras"]
+#7 2.041 Collecting keras
+#7 2.091   Downloading keras-3.12.0-py3-none-any.whl.metadata (5.9 kB)
+#7 2.134 Collecting absl-py (from keras)
+#7 2.151   Downloading absl_py-2.3.1-py3-none-any.whl.metadata (3.3 kB)
+#7 2.362 Collecting numpy (from keras)
+#7 2.371   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.401      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 1.9 MB/s eta 0:00:00
+#7 2.480 Collecting rich (from keras)
+#7 2.489   Downloading rich-14.2.0-py3-none-any.whl.metadata (18 kB)
+#7 2.525 Collecting namex (from keras)
+#7 2.536   Downloading namex-0.1.0-py3-none-any.whl.metadata (322 bytes)
+#7 2.622 Collecting h5py (from keras)
+#7 2.633   Downloading h5py-3.15.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+#7 2.727 Collecting optree (from keras)
+#7 2.767   Downloading optree-0.17.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (33 kB)
+#7 2.819 Collecting ml-dtypes (from keras)
+#7 2.829   Downloading ml_dtypes-0.5.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.9 kB)
+#7 2.895 Collecting packaging (from keras)
+#7 2.903   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#7 2.988 Collecting typing-extensions>=4.6.0 (from optree->keras)
+#7 2.996   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#7 3.044 Collecting markdown-it-py>=2.2.0 (from rich->keras)
+#7 3.052   Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+#7 3.101 Collecting pygments<3.0.0,>=2.13.0 (from rich->keras)
+#7 3.109   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#7 3.159 Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->keras)
+#7 3.168   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+#7 3.194 Downloading keras-3.12.0-py3-none-any.whl (1.5 MB)
+#7 3.314    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 12.4 MB/s eta 0:00:00
+#7 3.325 Downloading absl_py-2.3.1-py3-none-any.whl (135 kB)
+#7 3.341    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.8/135.8 kB 8.3 MB/s eta 0:00:00
+#7 3.352 Downloading h5py-3.15.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (4.7 MB)
+#7 3.757    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 11.6 MB/s eta 0:00:00
+#7 3.772 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 5.419    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 8.4 MB/s eta 0:00:00
+#7 5.434 Downloading ml_dtypes-0.5.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (4.9 MB)
+#7 5.804    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 13.4 MB/s eta 0:00:00
+#7 5.814 Downloading namex-0.1.0-py3-none-any.whl (5.9 kB)
+#7 5.839 Downloading optree-0.17.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (402 kB)
+#7 5.869    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 402.0/402.0 kB 13.7 MB/s eta 0:00:00
+#7 5.879 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#7 5.892    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.3 MB/s eta 0:00:00
+#7 5.902 Downloading rich-14.2.0-py3-none-any.whl (243 kB)
+#7 5.927    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.4/243.4 kB 10.3 MB/s eta 0:00:00
+#7 5.936 Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+#7 5.954    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.3/87.3 kB 4.9 MB/s eta 0:00:00
+#7 5.962 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#7 6.050    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 14.1 MB/s eta 0:00:00
+#7 6.059 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#7 6.075    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 2.5 MB/s eta 0:00:00
+#7 6.084 Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+#7 6.244 Installing collected packages: namex, typing-extensions, pygments, packaging, numpy, mdurl, absl-py, optree, ml-dtypes, markdown-it-py, h5py, rich, keras
+#7 9.381 Successfully installed absl-py-2.3.1 h5py-3.15.1 keras-3.12.0 markdown-it-py-4.0.0 mdurl-0.1.2 ml-dtypes-0.5.3 namex-0.1.0 numpy-2.3.4 optree-0.17.0 packaging-25.0 pygments-2.19.2 rich-14.2.0 typing-extensions-4.15.0
+#7 9.381 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 9.518 
+#7 9.518 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 9.518 [notice] To update, run: pip install --upgrade pip
+#7 DONE 10.9s
+
+#8 [4/5] RUN ["pip","install","numpy"]
+#8 0.438 Requirement already satisfied: numpy in /usr/local/lib/python3.11/site-packages (2.3.4)
+#8 0.510 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.516 
+#8 0.516 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.516 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.6s
+
+#9 [5/5] RUN ["pip","install","keras-metrics"]
+#9 0.660 Collecting keras-metrics
+#9 0.795   Downloading keras_metrics-1.1.0-py2.py3-none-any.whl.metadata (3.2 kB)
+#9 0.824 Requirement already satisfied: Keras>=2.1.5 in /usr/local/lib/python3.11/site-packages (from keras-metrics) (3.12.0)
+#9 0.827 Requirement already satisfied: absl-py in /usr/local/lib/python3.11/site-packages (from Keras>=2.1.5->keras-metrics) (2.3.1)
+#9 0.831 Requirement already satisfied: numpy in /usr/local/lib/python3.11/site-packages (from Keras>=2.1.5->keras-metrics) (2.3.4)
+#9 0.832 Requirement already satisfied: rich in /usr/local/lib/python3.11/site-packages (from Keras>=2.1.5->keras-metrics) (14.2.0)
+#9 0.832 Requirement already satisfied: namex in /usr/local/lib/python3.11/site-packages (from Keras>=2.1.5->keras-metrics) (0.1.0)
+#9 0.833 Requirement already satisfied: h5py in /usr/local/lib/python3.11/site-packages (from Keras>=2.1.5->keras-metrics) (3.15.1)
+#9 0.835 Requirement already satisfied: optree in /usr/local/lib/python3.11/site-packages (from Keras>=2.1.5->keras-metrics) (0.17.0)
+#9 0.835 Requirement already satisfied: ml-dtypes in /usr/local/lib/python3.11/site-packages (from Keras>=2.1.5->keras-metrics) (0.5.3)
+#9 0.836 Requirement already satisfied: packaging in /usr/local/lib/python3.11/site-packages (from Keras>=2.1.5->keras-metrics) (25.0)
+#9 0.868 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.11/site-packages (from optree->Keras>=2.1.5->keras-metrics) (4.15.0)
+#9 0.872 Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.11/site-packages (from rich->Keras>=2.1.5->keras-metrics) (4.0.0)
+#9 0.873 Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.11/site-packages (from rich->Keras>=2.1.5->keras-metrics) (2.19.2)
+#9 0.886 Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.11/site-packages (from markdown-it-py>=2.2.0->rich->Keras>=2.1.5->keras-metrics) (0.1.2)
+#9 0.997 Downloading keras_metrics-1.1.0-py2.py3-none-any.whl (5.6 kB)
+#9 1.089 Installing collected packages: keras-metrics
+#9 1.134 Successfully installed keras-metrics-1.1.0
+#9 1.135 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.140 
+#9 1.140 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.140 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.2s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.8s done
+#10 writing image sha256:6ab5905835dd74543587ca0852905f90ae762461d49fefec31f7658eb742ce91 done
+#10 naming to docker.io/library/test-image-e1e011652b297d13b3ac3f99fd11b2bc done
+#10 DONE 0.9s
+
+View build details: docker-desktop://dashboard/build/default/default/8cna72ugvmaokhwrlj5z4quxi
+[2025-10-29 20:40:02] SUCCESS: Build completed for e1e011652b297d13b3ac3f99fd11b2bc

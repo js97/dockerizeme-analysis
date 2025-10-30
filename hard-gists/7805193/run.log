@@ -1,0 +1,33 @@
+=== Docker Run Log for 7805193 ===
+Started at: Mi 29. Okt 17:18:37 CET 2025
+
+[2025-10-29 17:18:50] START: Running container for 7805193
+[2025-10-29 17:18:50] SUCCESS: Container 7ce4c8c9ff22f5b6b5fc1dc69d4730f458febc25852bceea7890d0c993509590 started for 7805193
+=== Container logs for 7805193 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 1, in <module>
+    from django.contrib.gis.db import models
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/gis/db/models/__init__.py", line 3, in <module>
+    import django.contrib.gis.db.models.functions  # NOQA
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/gis/db/models/functions.py", line 3, in <module>
+    from django.contrib.gis.db.models.fields import BaseSpatialField, GeometryField
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/gis/db/models/fields.py", line 3, in <module>
+    from django.contrib.gis import forms, gdal
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/gis/forms/__init__.py", line 3, in <module>
+    from .fields import (  # NOQA
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/gis/forms/fields.py", line 2, in <module>
+    from django.contrib.gis.gdal import GDALException
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/gis/gdal/__init__.py", line 29, in <module>
+    from django.contrib.gis.gdal.datasource import DataSource
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/gis/gdal/datasource.py", line 40, in <module>
+    from django.contrib.gis.gdal.driver import Driver
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/gis/gdal/driver.py", line 5, in <module>
+    from django.contrib.gis.gdal.prototypes import ds as capi
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/gis/gdal/prototypes/ds.py", line 10, in <module>
+    from django.contrib.gis.gdal.libgdal import lgdal
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/gis/gdal/libgdal.py", line 64, in <module>
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Could not find the GDAL library (tried "gdal", "GDAL", "gdal3.10.0", "gdal3.9.0", "gdal3.8.0", "gdal3.7.0", "gdal3.6.0", "gdal3.5.0", "gdal3.4.0", "gdal3.3.0", "gdal3.2.0", "gdal3.1.0"). Is GDAL installed? If it is, try setting GDAL_LIBRARY_PATH in your settings.
+=== End of logs for 7805193 ===
+[2025-10-29 17:18:52] INFO: Container 7ce4c8c9ff22f5b6b5fc1dc69d4730f458febc25852bceea7890d0c993509590 has stopped

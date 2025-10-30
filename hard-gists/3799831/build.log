@@ -1,0 +1,135 @@
+=== Docker Build Log for 3799831 ===
+Started at: Mi 29. Okt 13:59:58 CET 2025
+
+[2025-10-29 13:59:58] START: Building image for 3799831
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 270B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.26kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/6] COPY hard-gists/3799831/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/6] RUN ["pip","install","numpy"]
+#7 2.066 Collecting numpy
+#7 2.106   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.133      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.0 MB/s eta 0:00:00
+#7 2.155 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 3.283    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 15.2 MB/s eta 0:00:00
+#7 3.358 Installing collected packages: numpy
+#7 4.715 Successfully installed numpy-2.3.4
+#7 4.716 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.805 
+#7 4.805 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.805 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.3s
+
+#8 [4/6] RUN ["pip","install","scikit-learn"]
+#8 0.580 Collecting scikit-learn
+#8 0.687   Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#8 0.738 Requirement already satisfied: numpy>=1.22.0 in /usr/local/lib/python3.11/site-packages (from scikit-learn) (2.3.4)
+#8 0.869 Collecting scipy>=1.8.0 (from scikit-learn)
+#8 0.879   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#8 0.906      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.2 MB/s eta 0:00:00
+#8 0.953 Collecting joblib>=1.2.0 (from scikit-learn)
+#8 0.962   Downloading joblib-1.5.2-py3-none-any.whl.metadata (5.6 kB)
+#8 1.000 Collecting threadpoolctl>=3.1.0 (from scikit-learn)
+#8 1.012   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#8 1.058 Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+#8 1.450    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 24.9 MB/s eta 0:00:00
+#8 1.459 Downloading joblib-1.5.2-py3-none-any.whl (308 kB)
+#8 1.479    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 308.4/308.4 kB 15.9 MB/s eta 0:00:00
+#8 1.487 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#8 2.896    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 16.7 MB/s eta 0:00:00
+#8 2.906 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#8 3.120 Installing collected packages: threadpoolctl, scipy, joblib, scikit-learn
+#8 7.214 Successfully installed joblib-1.5.2 scikit-learn-1.7.2 scipy-1.16.3 threadpoolctl-3.6.0
+#8 7.214 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 7.219 
+#8 7.219 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 7.219 [notice] To update, run: pip install --upgrade pip
+#8 DONE 8.1s
+
+#9 [5/6] RUN ["pip","install","FuncDesigner"]
+#9 0.717 Collecting FuncDesigner
+#9 0.850   Downloading FuncDesigner-0.5629.tar.gz (135 kB)
+#9 0.883      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.8/135.8 kB 4.4 MB/s eta 0:00:00
+#9 0.899   Preparing metadata (setup.py): started
+#9 1.360   Preparing metadata (setup.py): finished with status 'error'
+#9 1.363   error: subprocess-exited-with-error
+#9 1.363   
+#9 1.363   × python setup.py egg_info did not run successfully.
+#9 1.363   │ exit code: 1
+#9 1.363   ╰─> [18 lines of output]
+#9 1.363       /tmp/pip-install-wkeohdxd/funcdesigner_254b03f7b29144dfa35eaa5fdb66e37b/FuncDesigner/ooVar.py:130: SyntaxWarning: "is" with a literal. Did you mean "=="?
+#9 1.363         if (self.domain is bool or self.domain is 'bool') and isinstance(other, (oovar, BooleanOOFun)):
+#9 1.363       /tmp/pip-install-wkeohdxd/funcdesigner_254b03f7b29144dfa35eaa5fdb66e37b/FuncDesigner/ooVar.py:294: SyntaxWarning: "is" with a literal. Did you mean "=="?
+#9 1.363         if d is int or d is 'int':
+#9 1.363       /tmp/pip-install-wkeohdxd/funcdesigner_254b03f7b29144dfa35eaa5fdb66e37b/FuncDesigner/ooVar.py:301: SyntaxWarning: "is" with a literal. Did you mean "=="?
+#9 1.363         if v.domain is bool or v.domain is 'bool':
+#9 1.363       /tmp/pip-install-wkeohdxd/funcdesigner_254b03f7b29144dfa35eaa5fdb66e37b/FuncDesigner/ooVar.py:318: SyntaxWarning: "is" with a literal. Did you mean "=="?
+#9 1.363         if d is bool or d is 'bool':
+#9 1.363       Traceback (most recent call last):
+#9 1.363         File "<string>", line 2, in <module>
+#9 1.363         File "<pip-setuptools-caller>", line 34, in <module>
+#9 1.363         File "/tmp/pip-install-wkeohdxd/funcdesigner_254b03f7b29144dfa35eaa5fdb66e37b/setup.py", line 16, in <module>
+#9 1.363           from FuncDesigner import __version__ as Ver
+#9 1.363         File "/tmp/pip-install-wkeohdxd/funcdesigner_254b03f7b29144dfa35eaa5fdb66e37b/FuncDesigner/__init__.py", line 8, in <module>
+#9 1.363           from ooVar import oovar, oovars
+#9 1.363         File "/tmp/pip-install-wkeohdxd/funcdesigner_254b03f7b29144dfa35eaa5fdb66e37b/FuncDesigner/ooVar.py", line 3, in <module>
+#9 1.363           from numpy import asarray, empty, inf, any, array, \
+#9 1.363       ImportError: cannot import name 'asfarray' from 'numpy' (/usr/local/lib/python3.11/site-packages/numpy/__init__.py)
+#9 1.363       [end of output]
+#9 1.363   
+#9 1.363   note: This error originates from a subprocess, and is likely not a problem with pip.
+#9 1.365 error: metadata-generation-failed
+#9 1.365 
+#9 1.365 × Encountered error while generating package metadata.
+#9 1.365 ╰─> See above for output.
+#9 1.365 
+#9 1.365 note: This is an issue with the package mentioned above, not pip.
+#9 1.365 hint: See above for details.
+#9 1.370 
+#9 1.370 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.370 [notice] To update, run: pip install --upgrade pip
+#9 ERROR: process "pip install FuncDesigner" did not complete successfully: exit code: 1
+------
+ > [5/6] RUN ["pip","install","FuncDesigner"]:
+1.365 error: metadata-generation-failed
+1.365 
+1.365 × Encountered error while generating package metadata.
+1.365 ╰─> See above for output.
+1.365 
+1.365 note: This is an issue with the package mentioned above, not pip.
+1.365 hint: See above for details.
+1.370 
+1.370 [notice] A new release of pip is available: 24.0 -> 25.3
+1.370 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:5
+--------------------
+   3 |     RUN ["pip","install","numpy"]
+   4 |     RUN ["pip","install","scikit-learn"]
+   5 | >>> RUN ["pip","install","FuncDesigner"]
+   6 |     RUN ["pip","install","openopt"]
+   7 |     CMD ["python3","/snippet.py"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install FuncDesigner" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/z0a9gwc1mn67zsqovh8yk69vo
+[2025-10-29 14:00:13] ERROR: Build failed for 3799831

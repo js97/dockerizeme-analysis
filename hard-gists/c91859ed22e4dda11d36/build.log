@@ -1,0 +1,115 @@
+=== Docker Build Log for c91859ed22e4dda11d36 ===
+Started at: Mi 29. Okt 20:08:55 CET 2025
+
+[2025-10-29 20:08:55] START: Building image for c91859ed22e4dda11d36
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 223B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 875B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/c91859ed22e4dda11d36/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","image"]
+#7 1.884 Collecting image
+#7 1.916   Downloading image-1.5.33.tar.gz (15 kB)
+#7 1.931   Preparing metadata (setup.py): started
+#7 2.312   Preparing metadata (setup.py): finished with status 'done'
+#7 2.496 Collecting pillow (from image)
+#7 2.505   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#7 2.607 Collecting django (from image)
+#7 2.618   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.655 Collecting six (from image)
+#7 2.664   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.710 Collecting asgiref>=3.8.1 (from django->image)
+#7 2.720   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.759 Collecting sqlparse>=0.3.1 (from django->image)
+#7 2.768   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.803 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.151    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 24.0 MB/s eta 0:00:00
+#7 3.162 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#7 3.486    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 21.8 MB/s eta 0:00:00
+#7 3.497 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.516 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.534 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.544    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 4.0 MB/s eta 0:00:00
+#7 3.613 Building wheels for collected packages: image
+#7 3.614   Building wheel for image (setup.py): started
+#7 3.790   Building wheel for image (setup.py): finished with status 'done'
+#7 3.790   Created wheel for image: filename=image-1.5.33-py2.py3-none-any.whl size=19554 sha256=115491e7632edfb92ea1eedaaf5a5311e40f02d282420fa7433c9b390336b4a7
+#7 3.790   Stored in directory: /root/.cache/pip/wheels/62/40/4f/3c9a8d0f22a1a6f966975a460e5cb509a1e7dc42e2ce5d9a6d
+#7 3.792 Successfully built image
+#7 3.849 Installing collected packages: sqlparse, six, pillow, asgiref, django, image
+#7 5.489 Successfully installed asgiref-3.10.0 django-5.2.7 image-1.5.33 pillow-12.0.0 six-1.17.0 sqlparse-0.5.3
+#7 5.489 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.585 
+#7 5.585 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.585 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.5s
+
+#8 [4/4] RUN ["pip","install","Adafruit-LED-Backpack"]
+#8 0.682 Collecting Adafruit-LED-Backpack
+#8 0.810   Downloading Adafruit_LED_Backpack-1.8.1.tar.gz (7.7 kB)
+#8 0.832   Preparing metadata (setup.py): started
+#8 0.944   Preparing metadata (setup.py): finished with status 'done'
+#8 1.188 Collecting Adafruit-GPIO>=0.6.5 (from Adafruit-LED-Backpack)
+#8 1.197   Downloading Adafruit_GPIO-1.0.3.tar.gz (24 kB)
+#8 1.214   Preparing metadata (setup.py): started
+#8 1.327   Preparing metadata (setup.py): finished with status 'done'
+#8 1.459 Collecting adafruit-pureio (from Adafruit-GPIO>=0.6.5->Adafruit-LED-Backpack)
+#8 1.468   Downloading Adafruit_PureIO-1.1.11-py3-none-any.whl.metadata (3.0 kB)
+#8 1.510 Collecting spidev (from Adafruit-GPIO>=0.6.5->Adafruit-LED-Backpack)
+#8 1.520   Downloading spidev-3.8.tar.gz (13 kB)
+#8 1.539   Installing build dependencies: started
+#8 2.818   Installing build dependencies: finished with status 'done'
+#8 2.819   Getting requirements to build wheel: started
+#8 2.965   Getting requirements to build wheel: finished with status 'done'
+#8 2.966   Preparing metadata (pyproject.toml): started
+#8 3.090   Preparing metadata (pyproject.toml): finished with status 'done'
+#8 3.124 Downloading Adafruit_PureIO-1.1.11-py3-none-any.whl (10 kB)
+#8 3.137 Building wheels for collected packages: Adafruit-LED-Backpack, Adafruit-GPIO, spidev
+#8 3.142   Building wheel for Adafruit-LED-Backpack (setup.py): started
+#8 3.282   Building wheel for Adafruit-LED-Backpack (setup.py): finished with status 'done'
+#8 3.282   Created wheel for Adafruit-LED-Backpack: filename=adafruit_led_backpack-1.8.1-py3-none-any.whl size=15061 sha256=da8970af3de44ef6b73f0c24bad8552a13ef98c661d2d469ae82fd576de51079
+#8 3.282   Stored in directory: /root/.cache/pip/wheels/52/8c/cd/f56c73a6d4d1ec28af89e7c5910ca5426c19ffa058d6445508
+#8 3.284   Building wheel for Adafruit-GPIO (setup.py): started
+#8 3.426   Building wheel for Adafruit-GPIO (setup.py): finished with status 'done'
+#8 3.427   Created wheel for Adafruit-GPIO: filename=adafruit_gpio-1.0.3-py3-none-any.whl size=38157 sha256=eba51768093867aad5c9fed72f84e11d62de84e78ed95a944c8db49b5f4b011d
+#8 3.427   Stored in directory: /root/.cache/pip/wheels/cb/08/ec/568cb75a159c8023852c60aaeb4714afa5dacebf1aabfbe0c2
+#8 3.428   Building wheel for spidev (pyproject.toml): started
+#8 3.901   Building wheel for spidev (pyproject.toml): finished with status 'done'
+#8 3.902   Created wheel for spidev: filename=spidev-3.8-cp311-cp311-linux_x86_64.whl size=44234 sha256=d6db15d22c5920e0e905a4c82ca435d0bfe58f6f169821efc9189e2b62ee11e4
+#8 3.902   Stored in directory: /root/.cache/pip/wheels/ee/88/57/e52104f0467ec3c68bfecc61f179649c8f981caa6cad69d955
+#8 3.904 Successfully built Adafruit-LED-Backpack Adafruit-GPIO spidev
+#8 3.966 Installing collected packages: spidev, adafruit-pureio, Adafruit-GPIO, Adafruit-LED-Backpack
+#8 4.038 Successfully installed Adafruit-GPIO-1.0.3 Adafruit-LED-Backpack-1.8.1 adafruit-pureio-1.1.11 spidev-3.8
+#8 4.038 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 4.044 
+#8 4.044 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 4.044 [notice] To update, run: pip install --upgrade pip
+#8 DONE 4.2s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.8s done
+#9 writing image sha256:6bfcda226a1d367a730cc11546b7207d4151c1b3d69be9a4725c56adfca643c7 done
+#9 naming to docker.io/library/test-image-c91859ed22e4dda11d36 0.0s done
+#9 DONE 0.8s
+
+View build details: docker-desktop://dashboard/build/default/default/ktdh4rzgyjk7sx0gc20r632ga
+[2025-10-29 20:09:07] SUCCESS: Build completed for c91859ed22e4dda11d36

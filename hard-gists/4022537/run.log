@@ -1,0 +1,21 @@
+=== Docker Run Log for 4022537 ===
+Started at: Mi 29. Okt 14:17:41 CET 2025
+
+[2025-10-29 14:17:49] START: Running container for 4022537
+[2025-10-29 14:17:49] SUCCESS: Container f7df8e222e9984521fb48223d6c805a415e565f2dd7333e59f5b6f02eecf53c2 started for 4022537
+=== Container logs for 4022537 ===
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/lxml/cssselect.py", line 12, in <module>
+    import cssselect as external_cssselect
+ModuleNotFoundError: No module named 'cssselect'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snippet.py", line 14, in <module>
+    from lxml.cssselect import CSSSelector
+  File "/usr/local/lib/python3.11/site-packages/lxml/cssselect.py", line 14, in <module>
+    raise ImportError(
+ImportError: cssselect does not seem to be installed. See https://pypi.org/project/cssselect/
+=== End of logs for 4022537 ===
+[2025-10-29 14:17:51] INFO: Container f7df8e222e9984521fb48223d6c805a415e565f2dd7333e59f5b6f02eecf53c2 has stopped

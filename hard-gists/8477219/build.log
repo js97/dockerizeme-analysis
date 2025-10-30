@@ -1,0 +1,105 @@
+=== Docker Build Log for 8477219 ===
+Started at: Mi 29. Okt 17:49:28 CET 2025
+
+[2025-10-29 17:49:28] START: Building image for 8477219
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 234B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 796B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/8477219/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","dj.choices"]
+#7 1.917 Collecting dj.choices
+#7 1.950   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 1.968   Preparing metadata (setup.py): started
+#7 2.356   Preparing metadata (setup.py): finished with status 'done'
+#7 2.463 Collecting django (from dj.choices)
+#7 2.472   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.512 Collecting six (from dj.choices)
+#7 2.521   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.570 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.578   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.621 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.631   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.656 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.008    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 23.7 MB/s eta 0:00:00
+#7 3.017 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.036 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.058 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.072    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 2.7 MB/s eta 0:00:00
+#7 3.110 Building wheels for collected packages: dj.choices
+#7 3.110   Building wheel for dj.choices (setup.py): started
+#7 3.284   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.284   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=0ebbdaaef4ca255c47546ef31ab05dd193cbf98f0f673c44400c41b212a52a04
+#7 3.285   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.287 Successfully built dj.choices
+#7 3.332 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 4.752 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 4.752 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.845 
+#7 4.845 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.845 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.5s
+
+#8 [4/5] RUN ["pip","install","Django"]
+#8 0.454 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#8 0.458 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#8 0.459 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#8 0.500 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.504 
+#8 0.504 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.504 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.6s
+
+#9 [5/5] RUN ["pip","install","django_db"]
+#9 0.629 Collecting django_db
+#9 0.665   Downloading django_db-0.0.7.tar.gz (1.7 kB)
+#9 0.678   Preparing metadata (setup.py): started
+#9 0.801   Preparing metadata (setup.py): finished with status 'done'
+#9 0.803 Requirement already satisfied: django in /usr/local/lib/python3.11/site-packages (from django_db) (5.2.7)
+#9 0.842 Collecting pymysql (from django_db)
+#9 0.851   Downloading pymysql-1.1.2-py3-none-any.whl.metadata (4.3 kB)
+#9 0.865 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from django->django_db) (3.10.0)
+#9 0.865 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from django->django_db) (0.5.3)
+#9 0.879 Downloading pymysql-1.1.2-py3-none-any.whl (45 kB)
+#9 0.897    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.3/45.3 kB 2.2 MB/s eta 0:00:00
+#9 0.900 Building wheels for collected packages: django_db
+#9 0.905   Building wheel for django_db (setup.py): started
+#9 1.036   Building wheel for django_db (setup.py): finished with status 'done'
+#9 1.036   Created wheel for django_db: filename=django_db-0.0.7-py3-none-any.whl size=2255 sha256=6972c176910f69539ac980de3706c23f056ac80a65cd4976b1880b2140fa94b4
+#9 1.036   Stored in directory: /root/.cache/pip/wheels/f7/0e/96/7f32f483dc1709e3218e0b811ef87a1457795bc45d221f1ac2
+#9 1.038 Successfully built django_db
+#9 1.074 Installing collected packages: pymysql, django_db
+#9 1.140 Successfully installed django_db-0.0.7 pymysql-1.1.2
+#9 1.140 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.145 
+#9 1.145 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.145 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.2s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.6s done
+#10 writing image sha256:fcde1636987570fa9903f828f314860dcc16629aace40b4ce88c672f25caa838 done
+#10 naming to docker.io/library/test-image-8477219 done
+#10 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/default/default/w4au96x223ibchebnvn6qo4jh
+[2025-10-29 17:49:36] SUCCESS: Build completed for 8477219

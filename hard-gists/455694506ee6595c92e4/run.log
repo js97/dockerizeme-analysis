@@ -1,0 +1,12 @@
+=== Docker Run Log for 455694506ee6595c92e4 ===
+Started at: Mi 29. Okt 14:43:53 CET 2025
+
+[2025-10-29 14:43:53] START: Running container for 455694506ee6595c92e4
+[2025-10-29 14:43:54] SUCCESS: Container 2d3860f68c710b6f7a50ae24acc7b6e499b4c60ca4b12a16134e9eae5a1b2c54 started for 455694506ee6595c92e4
+=== Container logs for 455694506ee6595c92e4 ===
+  File "/snippet.py", line 301
+    print "Time {:}: L1={:.5f} L2={:.5f} L3={:.5f} Acc={:.5f}".format(time+1, da1.loss, da2.loss, da3.loss, perceptron.acc)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 455694506ee6595c92e4 ===
+[2025-10-29 14:43:56] INFO: Container 2d3860f68c710b6f7a50ae24acc7b6e499b4c60ca4b12a16134e9eae5a1b2c54 has stopped

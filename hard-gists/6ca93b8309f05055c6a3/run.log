@@ -1,0 +1,17 @@
+=== Docker Run Log for 6ca93b8309f05055c6a3 ===
+Started at: Mi 29. Okt 16:49:21 CET 2025
+
+[2025-10-29 16:50:39] START: Running container for 6ca93b8309f05055c6a3
+[2025-10-29 16:50:40] SUCCESS: Container 47c39f1a7e3da1ae3d71ac7918d3a1019e1a9e9cfc2d68b0e7578ab839bded52 started for 6ca93b8309f05055c6a3
+=== Container logs for 6ca93b8309f05055c6a3 ===
+2025-10-29 15:50:40.237498: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-10-29 15:50:40.277469: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-29 15:50:41.659702: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Traceback (most recent call last):
+  File "/snippet.py", line 5, in <module>
+    tf.app.flags.FLAGS = tf.python.platform.flags._FlagValues()
+                         ^^^^^^^^^
+AttributeError: module 'tensorflow' has no attribute 'python'
+=== End of logs for 6ca93b8309f05055c6a3 ===
+[2025-10-29 16:50:42] INFO: Container 47c39f1a7e3da1ae3d71ac7918d3a1019e1a9e9cfc2d68b0e7578ab839bded52 has stopped

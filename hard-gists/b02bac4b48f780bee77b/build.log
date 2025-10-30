@@ -1,0 +1,58 @@
+=== Docker Build Log for b02bac4b48f780bee77b ===
+Started at: Mi 29. Okt 19:23:16 CET 2025
+
+[2025-10-29 19:23:16] START: Building image for b02bac4b48f780bee77b
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 182B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 15.71kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/b02bac4b48f780bee77b/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","feedparser"]
+#7 1.858 Collecting feedparser
+#7 1.903   Downloading feedparser-6.0.12-py3-none-any.whl.metadata (2.7 kB)
+#7 1.940 Collecting sgmllib3k (from feedparser)
+#7 1.948   Downloading sgmllib3k-1.0.0.tar.gz (5.8 kB)
+#7 1.962   Preparing metadata (setup.py): started
+#7 2.363   Preparing metadata (setup.py): finished with status 'done'
+#7 2.375 Downloading feedparser-6.0.12-py3-none-any.whl (81 kB)
+#7 2.400    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 81.5/81.5 kB 3.2 MB/s eta 0:00:00
+#7 2.404 Building wheels for collected packages: sgmllib3k
+#7 2.405   Building wheel for sgmllib3k (setup.py): started
+#7 2.565   Building wheel for sgmllib3k (setup.py): finished with status 'done'
+#7 2.565   Created wheel for sgmllib3k: filename=sgmllib3k-1.0.0-py3-none-any.whl size=6090 sha256=91186ad16ea0c1b130a3d41e70fbfbf21da8ea33f8e6fb508efe26af96ca68f6
+#7 2.565   Stored in directory: /root/.cache/pip/wheels/3b/25/2a/105d6a15df6914f4d15047691c6c28f9052cc1173e40285d03
+#7 2.567 Successfully built sgmllib3k
+#7 2.596 Installing collected packages: sgmllib3k, feedparser
+#7 2.648 Successfully installed feedparser-6.0.12 sgmllib3k-1.0.0
+#7 2.648 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.748 
+#7 2.748 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.748 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.9s
+
+#8 exporting to image
+#8 exporting layers 0.1s done
+#8 writing image sha256:b256ecde12f740f7b95c649d6a1f99d7f37731fc1829706e20b51987f76b04ed done
+#8 naming to docker.io/library/test-image-b02bac4b48f780bee77b done
+#8 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/xb91b7hdqjnd1h5p5k3vjcjxl
+[2025-10-29 19:23:19] SUCCESS: Build completed for b02bac4b48f780bee77b

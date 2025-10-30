@@ -1,0 +1,13 @@
+=== Docker Run Log for 3079065 ===
+Started at: Mi 29. Okt 13:39:34 CET 2025
+
+[2025-10-29 13:39:43] START: Running container for 3079065
+[2025-10-29 13:39:43] SUCCESS: Container 725f729149710ed294c1e52ae68193d67f5937d2b89a61f5b070399befaff57e started for 3079065
+=== Container logs for 3079065 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 10, in <module>
+    application = barrel.cooper.basicauth(users=USERS, realm=REALM)(get_wsgi_application())
+                  ^^^^^^^^^^^^^
+AttributeError: module 'barrel' has no attribute 'cooper'
+=== End of logs for 3079065 ===
+[2025-10-29 13:39:45] INFO: Container 725f729149710ed294c1e52ae68193d67f5937d2b89a61f5b070399befaff57e has stopped

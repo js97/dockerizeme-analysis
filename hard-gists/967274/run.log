@@ -1,0 +1,19 @@
+=== Docker Run Log for 967274 ===
+Started at: Mi 29. Okt 18:29:19 CET 2025
+
+[2025-10-29 18:29:27] START: Running container for 967274
+[2025-10-29 18:29:27] SUCCESS: Container 9c0194d902ff0ebecf87a36803737f79476918b317e2fe33a94dbeeeed2227ed started for 967274
+=== Container logs for 967274 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 2, in <module>
+    from cStringIO import StringIO
+ModuleNotFoundError: No module named 'cStringIO'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snippet.py", line 4, in <module>
+    from StringIO import StringIO
+ModuleNotFoundError: No module named 'StringIO'
+=== End of logs for 967274 ===
+[2025-10-29 18:29:29] INFO: Container 9c0194d902ff0ebecf87a36803737f79476918b317e2fe33a94dbeeeed2227ed has stopped

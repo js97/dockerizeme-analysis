@@ -1,0 +1,23 @@
+=== Docker Run Log for 5520379 ===
+Started at: Mi 29. Okt 15:44:01 CET 2025
+
+[2025-10-29 15:44:07] START: Running container for 5520379
+[2025-10-29 15:44:07] SUCCESS: Container 806d014903027ffab70b8552b01fa6a7d65c7e8d61490305fef372ab7367bb65 started for 5520379
+=== Container logs for 5520379 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 42, in <module>
+    browser = GhostRedirectFix()
+              ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/ghost/ghost.py", line 271, in __init__
+    raise Exception("Ghost.py requires PySide or PyQt4")
+Exception: Ghost.py requires PySide or PyQt4
+Exception ignored in: <function Ghost.__del__ at 0x70ec5c1d9ee0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/ghost/ghost.py", line 325, in __del__
+    self.exit()
+  File "/usr/local/lib/python3.11/site-packages/ghost/ghost.py", line 315, in exit
+    self._app.quit()
+    ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'quit'
+=== End of logs for 5520379 ===
+[2025-10-29 15:44:09] INFO: Container 806d014903027ffab70b8552b01fa6a7d65c7e8d61490305fef372ab7367bb65 has stopped

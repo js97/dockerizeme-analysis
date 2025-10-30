@@ -1,0 +1,21 @@
+=== Docker Run Log for 4745061 ===
+Started at: Mi 29. Okt 15:00:24 CET 2025
+
+[2025-10-29 15:00:25] START: Running container for 4745061
+[2025-10-29 15:00:25] SUCCESS: Container 3dcdebf55fb566984e2810dbf14b99ed5b0f3f7c671559501b1e66ddd738400c started for 4745061
+=== Container logs for 4745061 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 7, in <module>
+    data = json.loads(resp.decode('utf-8'))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+=== End of logs for 4745061 ===
+[2025-10-29 15:00:27] INFO: Container 3dcdebf55fb566984e2810dbf14b99ed5b0f3f7c671559501b1e66ddd738400c has stopped

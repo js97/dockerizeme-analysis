@@ -1,0 +1,28 @@
+=== Docker Run Log for 91334d590b6592c0c960 ===
+Started at: Mi 29. Okt 18:21:02 CET 2025
+
+[2025-10-29 18:21:16] START: Running container for 91334d590b6592c0c960
+[2025-10-29 18:21:16] SUCCESS: Container cdb458b40704d8756231e839d1c89d594f50929246af0c7511a701fb69c864a1 started for 91334d590b6592c0c960
+=== Container logs for 91334d590b6592c0c960 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 4, in <module>
+    from django.contrib.gis.geos import Point, MultiPoint
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/gis/geos/__init__.py", line 6, in <module>
+    from .collections import (  # NOQA
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/gis/geos/collections.py", line 7, in <module>
+    from django.contrib.gis.geos.geometry import GEOSGeometry, LinearGeometryMixin
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/gis/geos/geometry.py", line 9, in <module>
+    from django.contrib.gis import gdal
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/gis/gdal/__init__.py", line 29, in <module>
+    from django.contrib.gis.gdal.datasource import DataSource
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/gis/gdal/datasource.py", line 40, in <module>
+    from django.contrib.gis.gdal.driver import Driver
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/gis/gdal/driver.py", line 5, in <module>
+    from django.contrib.gis.gdal.prototypes import ds as capi
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/gis/gdal/prototypes/ds.py", line 10, in <module>
+    from django.contrib.gis.gdal.libgdal import lgdal
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/gis/gdal/libgdal.py", line 64, in <module>
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Could not find the GDAL library (tried "gdal", "GDAL", "gdal3.10.0", "gdal3.9.0", "gdal3.8.0", "gdal3.7.0", "gdal3.6.0", "gdal3.5.0", "gdal3.4.0", "gdal3.3.0", "gdal3.2.0", "gdal3.1.0"). Is GDAL installed? If it is, try setting GDAL_LIBRARY_PATH in your settings.
+=== End of logs for 91334d590b6592c0c960 ===
+[2025-10-29 18:21:18] INFO: Container cdb458b40704d8756231e839d1c89d594f50929246af0c7511a701fb69c864a1 has stopped

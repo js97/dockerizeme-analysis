@@ -1,0 +1,106 @@
+=== Docker Build Log for 86b74ae47719a27bbb25 ===
+Started at: Mi 29. Okt 17:55:23 CET 2025
+
+[2025-10-29 17:55:23] START: Building image for 86b74ae47719a27bbb25
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 275B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 784B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/6] COPY hard-gists/86b74ae47719a27bbb25/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/6] RUN ["pip","install","app"]
+#7 1.861 Collecting app
+#7 1.899   Downloading app-0.0.1.zip (2.2 kB)
+#7 1.912   Preparing metadata (setup.py): started
+#7 2.304   Preparing metadata (setup.py): finished with status 'done'
+#7 2.305 Building wheels for collected packages: app
+#7 2.306   Building wheel for app (setup.py): started
+#7 2.462   Building wheel for app (setup.py): finished with status 'done'
+#7 2.462   Created wheel for app: filename=app-0.0.1-py3-none-any.whl size=1550 sha256=c29135c568da098f21d66ba100fc6a2a042ca9c37ac6baf89e7b6a9fec363ddf
+#7 2.463   Stored in directory: /root/.cache/pip/wheels/d4/41/8a/a765a5070346662ff4ad1df79a2c7fe777ccf8fe1dff9c2dcd
+#7 2.464 Successfully built app
+#7 2.493 Installing collected packages: app
+#7 2.506 Successfully installed app-0.0.1
+#7 2.506 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.599 
+#7 2.599 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.599 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.7s
+
+#8 [4/6] RUN ["pip","install","Flask"]
+#8 0.578 Collecting Flask
+#8 0.612   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#8 0.665 Collecting blinker>=1.9.0 (from Flask)
+#8 0.673   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#8 0.727 Collecting click>=8.1.3 (from Flask)
+#8 0.735   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#8 0.774 Collecting itsdangerous>=2.2.0 (from Flask)
+#8 0.782   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#8 0.829 Collecting jinja2>=3.1.2 (from Flask)
+#8 0.838   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#8 0.922 Collecting markupsafe>=2.1.1 (from Flask)
+#8 0.929   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#8 0.983 Collecting werkzeug>=3.1.0 (from Flask)
+#8 0.991   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#8 1.020 Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+#8 1.048    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 3.5 MB/s eta 0:00:00
+#8 1.057 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#8 1.074 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#8 1.090    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 6.7 MB/s eta 0:00:00
+#8 1.097 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#8 1.122 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#8 1.136    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 9.7 MB/s eta 0:00:00
+#8 1.145 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#8 1.163 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#8 1.181    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 12.9 MB/s eta 0:00:00
+#8 1.224 Installing collected packages: markupsafe, itsdangerous, click, blinker, werkzeug, jinja2, Flask
+#8 1.542 Successfully installed Flask-3.1.2 blinker-1.9.0 click-8.3.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.3 werkzeug-3.1.3
+#8 1.542 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.548 
+#8 1.548 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.548 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.7s
+
+#9 [5/6] RUN ["pip","install","itsdangerous"]
+#9 0.495 Requirement already satisfied: itsdangerous in /usr/local/lib/python3.11/site-packages (2.2.0)
+#9 0.532 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.537 
+#9 0.537 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.537 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.6s
+
+#10 [6/6] RUN ["pip","install","Werkzeug"]
+#10 0.435 Requirement already satisfied: Werkzeug in /usr/local/lib/python3.11/site-packages (3.1.3)
+#10 0.437 Requirement already satisfied: MarkupSafe>=2.1.1 in /usr/local/lib/python3.11/site-packages (from Werkzeug) (3.0.3)
+#10 0.474 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.479 
+#10 0.479 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.479 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.6s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 0.2s done
+#11 writing image sha256:674f700310f67e4a57781615f56c098ddf1d92c52f59068c9f456c6a5586a902 done
+#11 naming to docker.io/library/test-image-86b74ae47719a27bbb25 0.0s done
+#11 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/leod1tniv8b01bdhyyrxzu357
+[2025-10-29 17:55:29] SUCCESS: Build completed for 86b74ae47719a27bbb25

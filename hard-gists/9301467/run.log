@@ -1,0 +1,13 @@
+=== Docker Run Log for 9301467 ===
+Started at: Mi 29. Okt 18:22:47 CET 2025
+
+[2025-10-29 18:22:47] START: Running container for 9301467
+[2025-10-29 18:22:48] SUCCESS: Container 7094f24994f27177d36c9d7761fee9019664ebd620f10d1f40707facb6818a0b started for 9301467
+=== Container logs for 9301467 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 23, in <module>
+    msg = BytesParser(policy=policy.default).parse(open(filename, 'rb'))
+                                                   ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '20140217-0121.eml.1c2dffd0'
+=== End of logs for 9301467 ===
+[2025-10-29 18:22:50] INFO: Container 7094f24994f27177d36c9d7761fee9019664ebd620f10d1f40707facb6818a0b has stopped

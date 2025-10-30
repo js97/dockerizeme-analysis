@@ -1,0 +1,17 @@
+=== Docker Run Log for 5177683 ===
+Started at: Mi 29. Okt 15:25:04 CET 2025
+
+[2025-10-29 15:25:11] START: Running container for 5177683
+[2025-10-29 15:25:11] SUCCESS: Container b32d80228d867651e7872f0516de99e6e95e890f267e37c497eaa739ac9d9ee8 started for 5177683
+=== Container logs for 5177683 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 4, in <module>
+    CORS_ALLOW_ORIGIN = getattr(settings, 'CORS_ALLOW_ORIGIN', '*')
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting CORS_ALLOW_ORIGIN, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 5177683 ===
+[2025-10-29 15:25:13] INFO: Container b32d80228d867651e7872f0516de99e6e95e890f267e37c497eaa739ac9d9ee8 has stopped

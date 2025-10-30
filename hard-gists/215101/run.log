@@ -1,0 +1,12 @@
+=== Docker Run Log for 215101 ===
+Started at: Mi 29. Okt 13:00:07 CET 2025
+
+[2025-10-29 13:00:08] START: Running container for 215101
+[2025-10-29 13:00:08] SUCCESS: Container 487b9cb46c96e48585f7c8b0f514f5fcd11191bbd45eff64418bdab775655c53 started for 215101
+=== Container logs for 215101 ===
+  File "/snippet.py", line 30
+    print counter, rec[0], status, "[ID=" ,rec[2],"]"
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 215101 ===
+[2025-10-29 13:00:10] INFO: Container 487b9cb46c96e48585f7c8b0f514f5fcd11191bbd45eff64418bdab775655c53 has stopped

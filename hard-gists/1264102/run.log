@@ -1,0 +1,12 @@
+=== Docker Run Log for 1264102 ===
+Started at: Mi 29. Okt 12:03:46 CET 2025
+
+[2025-10-29 12:03:53] START: Running container for 1264102
+[2025-10-29 12:03:53] SUCCESS: Container 6eca9c522dbdaa72c30c5644e1c0984710e2d96a30a2dbc405153dedf31dfc2f started for 1264102
+=== Container logs for 1264102 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 10, in <module>
+    from django.dispatch.dispatcher import Signal, WeakMethod
+ImportError: cannot import name 'WeakMethod' from 'django.dispatch.dispatcher' (/usr/local/lib/python3.11/site-packages/django/dispatch/dispatcher.py)
+=== End of logs for 1264102 ===
+[2025-10-29 12:03:55] INFO: Container 6eca9c522dbdaa72c30c5644e1c0984710e2d96a30a2dbc405153dedf31dfc2f has stopped

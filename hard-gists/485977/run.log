@@ -1,0 +1,12 @@
+=== Docker Run Log for 485977 ===
+Started at: Mi 29. Okt 15:02:23 CET 2025
+
+[2025-10-29 15:02:23] START: Running container for 485977
+[2025-10-29 15:02:24] SUCCESS: Container 16c92e7cfe46ece49bb182618f61459bb60e256a05fb7b16e84c0e8a1ac631d0 started for 485977
+=== Container logs for 485977 ===
+  File "/snippet.py", line 3
+    print lxml.etree.tostring(elem, pretty_print=True)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 485977 ===
+[2025-10-29 15:02:26] INFO: Container 16c92e7cfe46ece49bb182618f61459bb60e256a05fb7b16e84c0e8a1ac631d0 has stopped

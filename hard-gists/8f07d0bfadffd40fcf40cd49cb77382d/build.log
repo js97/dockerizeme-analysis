@@ -1,0 +1,82 @@
+=== Docker Build Log for 8f07d0bfadffd40fcf40cd49cb77382d ===
+Started at: Mi 29. Okt 18:12:45 CET 2025
+
+[2025-10-29 18:12:45] START: Building image for 8f07d0bfadffd40fcf40cd49cb77382d
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 225B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 5.34kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/8f07d0bfadffd40fcf40cd49cb77382d/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","requests"]
+#7 1.873 Collecting requests
+#7 1.904   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.018 Collecting charset_normalizer<4,>=2 (from requests)
+#7 2.026   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.072 Collecting idna<4,>=2.5 (from requests)
+#7 2.081   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.140 Collecting urllib3<3,>=1.21.1 (from requests)
+#7 2.149   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.192 Collecting certifi>=2017.4.17 (from requests)
+#7 2.200   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.227 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.246    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.2 MB/s eta 0:00:00
+#7 2.256 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.272    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 10.3 MB/s eta 0:00:00
+#7 2.283 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.296    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.7 MB/s eta 0:00:00
+#7 2.304 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.316    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.9 MB/s eta 0:00:00
+#7 2.324 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.339    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 8.9 MB/s eta 0:00:00
+#7 2.385 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#7 2.607 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#7 2.607 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.696 
+#7 2.696 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.696 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.0s
+
+#8 [4/4] RUN ["pip","install","cfscrape"]
+#8 0.617 Collecting cfscrape
+#8 0.656   Downloading cfscrape-2.1.1-py3-none-any.whl.metadata (11 kB)
+#8 0.674 Requirement already satisfied: requests>=2.6.1 in /usr/local/lib/python3.11/site-packages (from cfscrape) (2.32.5)
+#8 0.679 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests>=2.6.1->cfscrape) (3.4.4)
+#8 0.680 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests>=2.6.1->cfscrape) (3.11)
+#8 0.681 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests>=2.6.1->cfscrape) (2.5.0)
+#8 0.682 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests>=2.6.1->cfscrape) (2025.10.5)
+#8 0.704 Downloading cfscrape-2.1.1-py3-none-any.whl (12 kB)
+#8 0.760 Installing collected packages: cfscrape
+#8 0.815 Successfully installed cfscrape-2.1.1
+#8 0.815 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.820 
+#8 0.820 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.820 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.9s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.2s done
+#9 writing image sha256:90603476b1d3be55d29352ac760ccad806fd34edd658cbd7abd252562c6820dd done
+#9 naming to docker.io/library/test-image-8f07d0bfadffd40fcf40cd49cb77382d 0.0s done
+#9 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/mvpqgqqhcs1zcrvn8mpmqb58p
+[2025-10-29 18:12:50] SUCCESS: Build completed for 8f07d0bfadffd40fcf40cd49cb77382d

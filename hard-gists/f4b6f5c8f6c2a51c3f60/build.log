@@ -1,0 +1,84 @@
+=== Docker Build Log for f4b6f5c8f6c2a51c3f60 ===
+Started at: Mi 29. Okt 21:26:22 CET 2025
+
+[2025-10-29 21:26:22] START: Building image for f4b6f5c8f6c2a51c3f60
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 180B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.83kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/f4b6f5c8f6c2a51c3f60/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","influxdb"]
+#7 1.854 Collecting influxdb
+#7 1.901   Downloading influxdb-5.3.2-py2.py3-none-any.whl.metadata (6.9 kB)
+#7 1.947 Collecting python-dateutil>=2.6.0 (from influxdb)
+#7 1.956   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#7 2.040 Collecting pytz (from influxdb)
+#7 2.049   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#7 2.118 Collecting requests>=2.17.0 (from influxdb)
+#7 2.128   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.166 Collecting six>=1.10.0 (from influxdb)
+#7 2.176   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.268 Collecting msgpack (from influxdb)
+#7 2.278   Downloading msgpack-1.1.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+#7 2.393 Collecting charset_normalizer<4,>=2 (from requests>=2.17.0->influxdb)
+#7 2.402   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.447 Collecting idna<4,>=2.5 (from requests>=2.17.0->influxdb)
+#7 2.455   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.514 Collecting urllib3<3,>=1.21.1 (from requests>=2.17.0->influxdb)
+#7 2.523   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.567 Collecting certifi>=2017.4.17 (from requests>=2.17.0->influxdb)
+#7 2.575   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.609 Downloading influxdb-5.3.2-py2.py3-none-any.whl (79 kB)
+#7 2.634    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.4/79.4 kB 3.0 MB/s eta 0:00:00
+#7 2.643 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#7 2.672    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 8.9 MB/s eta 0:00:00
+#7 2.682 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.699    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.5 MB/s eta 0:00:00
+#7 2.709 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.735 Downloading msgpack-1.1.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (426 kB)
+#7 2.777    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 426.2/426.2 kB 10.2 MB/s eta 0:00:00
+#7 2.786 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#7 2.827    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 12.8 MB/s eta 0:00:00
+#7 2.838 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.857    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.2 MB/s eta 0:00:00
+#7 2.866 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.894    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 8.0 MB/s eta 0:00:00
+#7 2.903 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.919    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.2 MB/s eta 0:00:00
+#7 2.930 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.950    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 6.5 MB/s eta 0:00:00
+#7 3.025 Installing collected packages: pytz, urllib3, six, msgpack, idna, charset_normalizer, certifi, requests, python-dateutil, influxdb
+#7 3.471 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 influxdb-5.3.2 msgpack-1.1.2 python-dateutil-2.9.0.post0 pytz-2025.2 requests-2.32.5 six-1.17.0 urllib3-2.5.0
+#7 3.471 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.573 
+#7 3.573 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.573 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.9s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.2s done
+#8 writing image sha256:680d72104ffa4050930fc44fb3f24a2c5aadc5089c1a32882185a81038928d6a done
+#8 naming to docker.io/library/test-image-f4b6f5c8f6c2a51c3f60 done
+#8 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/w6apdbjvvmtneg2yzx1elv37n
+[2025-10-29 21:26:27] SUCCESS: Build completed for f4b6f5c8f6c2a51c3f60

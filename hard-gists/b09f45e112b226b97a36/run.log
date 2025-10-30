@@ -1,0 +1,13 @@
+=== Docker Run Log for b09f45e112b226b97a36 ===
+Started at: Mi 29. Okt 19:23:22 CET 2025
+
+[2025-10-29 19:23:27] START: Running container for b09f45e112b226b97a36
+[2025-10-29 19:23:27] SUCCESS: Container ca293d21177dbb064fb790050dfbd1637e1a2957a1ca15014b9770a7adb5277f started for b09f45e112b226b97a36
+=== Container logs for b09f45e112b226b97a36 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 7, in <module>
+    with open(sys.argv[2], 'r') as f:
+              ~~~~~~~~^^^
+IndexError: list index out of range
+=== End of logs for b09f45e112b226b97a36 ===
+[2025-10-29 19:23:29] INFO: Container ca293d21177dbb064fb790050dfbd1637e1a2957a1ca15014b9770a7adb5277f has stopped

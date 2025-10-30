@@ -1,0 +1,120 @@
+=== Docker Build Log for c18130768ac0ef0345947c5aa0827b65 ===
+Started at: Mi 29. Okt 19:43:30 CET 2025
+
+[2025-10-29 19:43:30] START: Building image for c18130768ac0ef0345947c5aa0827b65
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 192B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.74kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/c18130768ac0ef0345947c5aa0827b65/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","neopixel"]
+#7 2.111 Collecting neopixel
+#7 2.192   Downloading neopixel-0.0.1-py3-none-any.whl.metadata (817 bytes)
+#7 2.567 Collecting numpy (from neopixel)
+#7 2.580   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.698      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 513.8 kB/s eta 0:00:00
+#7 2.833 Collecting scipy (from neopixel)
+#7 2.927   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#7 2.943      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 3.9 MB/s eta 0:00:00
+#7 2.987 Collecting pyaudio (from neopixel)
+#7 2.998   Downloading PyAudio-0.2.14.tar.gz (47 kB)
+#7 3.011      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.1/47.1 kB 3.2 MB/s eta 0:00:00
+#7 3.021   Installing build dependencies: started
+#7 4.530   Installing build dependencies: finished with status 'done'
+#7 4.531   Getting requirements to build wheel: started
+#7 4.676   Getting requirements to build wheel: finished with status 'done'
+#7 4.677   Preparing metadata (pyproject.toml): started
+#7 4.803   Preparing metadata (pyproject.toml): finished with status 'done'
+#7 4.958 Downloading neopixel-0.0.1-py3-none-any.whl (9.8 kB)
+#7 4.983 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 5.715    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 19.7 MB/s eta 0:00:00
+#7 5.730 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#7 7.240    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 14.5 MB/s eta 0:00:00
+#7 7.356 Building wheels for collected packages: pyaudio
+#7 7.357   Building wheel for pyaudio (pyproject.toml): started
+#7 7.581   Building wheel for pyaudio (pyproject.toml): finished with status 'error'
+#7 7.585   error: subprocess-exited-with-error
+#7 7.585   
+#7 7.585   × Building wheel for pyaudio (pyproject.toml) did not run successfully.
+#7 7.585   │ exit code: 1
+#7 7.585   ╰─> [27 lines of output]
+#7 7.585       /tmp/pip-build-env-klpep718/overlay/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+#7 7.585       !!
+#7 7.585       
+#7 7.585               ********************************************************************************
+#7 7.585               Please consider removing the following classifiers in favor of a SPDX license expression:
+#7 7.585       
+#7 7.585               License :: OSI Approved :: MIT License
+#7 7.585       
+#7 7.585               See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+#7 7.585               ********************************************************************************
+#7 7.585       
+#7 7.585       !!
+#7 7.585         self._finalize_license_expression()
+#7 7.585       running bdist_wheel
+#7 7.585       running build
+#7 7.585       running build_py
+#7 7.585       creating build/lib.linux-x86_64-cpython-311/pyaudio
+#7 7.585       copying src/pyaudio/__init__.py -> build/lib.linux-x86_64-cpython-311/pyaudio
+#7 7.585       running build_ext
+#7 7.585       building 'pyaudio._portaudio' extension
+#7 7.585       creating build/temp.linux-x86_64-cpython-311/src/pyaudio
+#7 7.585       gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -I/usr/local/include -I/usr/include -I/usr/local/include/python3.11 -c src/pyaudio/device_api.c -o build/temp.linux-x86_64-cpython-311/src/pyaudio/device_api.o
+#7 7.585       src/pyaudio/device_api.c:9:10: fatal error: portaudio.h: No such file or directory
+#7 7.585           9 | #include "portaudio.h"
+#7 7.585             |          ^~~~~~~~~~~~~
+#7 7.585       compilation terminated.
+#7 7.585       error: command '/usr/bin/gcc' failed with exit code 1
+#7 7.585       [end of output]
+#7 7.585   
+#7 7.585   note: This error originates from a subprocess, and is likely not a problem with pip.
+#7 7.585   ERROR: Failed building wheel for pyaudio
+#7 7.586 Failed to build pyaudio
+#7 7.586 ERROR: Could not build wheels for pyaudio, which is required to install pyproject.toml-based projects
+#7 7.591 
+#7 7.591 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 7.591 [notice] To update, run: pip install --upgrade pip
+#7 ERROR: process "pip install neopixel" did not complete successfully: exit code: 1
+------
+ > [3/3] RUN ["pip","install","neopixel"]:
+7.585       error: command '/usr/bin/gcc' failed with exit code 1
+7.585       [end of output]
+7.585   
+7.585   note: This error originates from a subprocess, and is likely not a problem with pip.
+7.585   ERROR: Failed building wheel for pyaudio
+7.586 Failed to build pyaudio
+7.586 ERROR: Could not build wheels for pyaudio, which is required to install pyproject.toml-based projects
+7.591 
+7.591 [notice] A new release of pip is available: 24.0 -> 25.3
+7.591 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:3
+--------------------
+   1 |     FROM python:3.11
+   2 |     COPY hard-gists/c18130768ac0ef0345947c5aa0827b65/snippet.py /snippet.py
+   3 | >>> RUN ["pip","install","neopixel"]
+   4 |     CMD ["python3","/snippet.py"]
+   5 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install neopixel" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/5t4i80ttx8zhcky5w7oc29mp2
+[2025-10-29 19:43:38] ERROR: Build failed for c18130768ac0ef0345947c5aa0827b65

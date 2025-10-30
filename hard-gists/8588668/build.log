@@ -1,0 +1,231 @@
+=== Docker Build Log for 8588668 ===
+Started at: Mi 29. Okt 17:51:03 CET 2025
+
+[2025-10-29 17:51:03] START: Building image for 8588668
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.74kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.27kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/47] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/47] COPY hard-gists/8588668/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/47] RUN ["pip","install","swftp"]
+#7 1.887 Collecting swftp
+#7 1.931   Downloading swftp-1.0.7.tar.gz (40 kB)
+#7 1.947      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.9/40.9 kB 2.3 MB/s eta 0:00:00
+#7 1.956   Preparing metadata (setup.py): started
+#7 2.346   Preparing metadata (setup.py): finished with status 'done'
+#7 2.400 Collecting twisted>=12.1 (from swftp)
+#7 2.409   Downloading twisted-25.5.0-py3-none-any.whl.metadata (22 kB)
+#7 2.451 Collecting pyopenssl (from swftp)
+#7 2.460   Downloading pyopenssl-25.3.0-py3-none-any.whl.metadata (17 kB)
+#7 2.497 Collecting pycrypto (from swftp)
+#7 2.508   Downloading pycrypto-2.6.1.tar.gz (446 kB)
+#7 2.539      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 446.2/446.2 kB 15.2 MB/s eta 0:00:00
+#7 2.573   Preparing metadata (setup.py): started
+#7 2.688   Preparing metadata (setup.py): finished with status 'done'
+#7 2.727 Collecting pyasn1 (from swftp)
+#7 2.739   Downloading pyasn1-0.6.1-py3-none-any.whl.metadata (8.4 kB)
+#7 2.839 Collecting psutil (from swftp)
+#7 2.847   Downloading psutil-7.1.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (23 kB)
+#7 3.029 Collecting attrs>=22.2.0 (from twisted>=12.1->swftp)
+#7 3.038   Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+#7 3.080 Collecting automat>=24.8.0 (from twisted>=12.1->swftp)
+#7 3.090   Downloading automat-25.4.16-py3-none-any.whl.metadata (8.4 kB)
+#7 3.124 Collecting constantly>=15.1 (from twisted>=12.1->swftp)
+#7 3.133   Downloading constantly-23.10.4-py3-none-any.whl.metadata (1.8 kB)
+#7 3.170 Collecting hyperlink>=17.1.1 (from twisted>=12.1->swftp)
+#7 3.179   Downloading hyperlink-21.0.0-py2.py3-none-any.whl.metadata (1.5 kB)
+#7 3.216 Collecting incremental>=24.7.0 (from twisted>=12.1->swftp)
+#7 3.232   Downloading incremental-24.7.2-py3-none-any.whl.metadata (8.1 kB)
+#7 3.298 Collecting typing-extensions>=4.2.0 (from twisted>=12.1->swftp)
+#7 3.306   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#7 3.431 Collecting zope-interface>=5 (from twisted>=12.1->swftp)
+#7 3.442   Downloading zope_interface-8.0.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (44 kB)
+#7 3.454      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.9/44.9 kB 3.4 MB/s eta 0:00:00
+#7 3.704 Collecting cryptography<47,>=45.0.7 (from pyopenssl->swftp)
+#7 3.716   Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+#7 3.861 Collecting cffi>=2.0.0 (from cryptography<47,>=45.0.7->pyopenssl->swftp)
+#7 3.870   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+#7 3.910 Collecting idna>=2.5 (from hyperlink>=17.1.1->twisted>=12.1->swftp)
+#7 3.918   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 3.933 Requirement already satisfied: setuptools>=61.0 in /usr/local/lib/python3.11/site-packages (from incremental>=24.7.0->twisted>=12.1->swftp) (79.0.1)
+#7 3.966 Collecting pycparser (from cffi>=2.0.0->cryptography<47,>=45.0.7->pyopenssl->swftp)
+#7 3.974   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+#7 4.048 Downloading twisted-25.5.0-py3-none-any.whl (3.2 MB)
+#7 4.172    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 26.3 MB/s eta 0:00:00
+#7 4.181 Downloading psutil-7.1.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (258 kB)
+#7 4.199    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 258.7/258.7 kB 15.3 MB/s eta 0:00:00
+#7 4.208 Downloading pyasn1-0.6.1-py3-none-any.whl (83 kB)
+#7 4.221    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.1/83.1 kB 6.6 MB/s eta 0:00:00
+#7 4.230 Downloading pyopenssl-25.3.0-py3-none-any.whl (57 kB)
+#7 4.240    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.3/57.3 kB 5.1 MB/s eta 0:00:00
+#7 4.249 Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+#7 4.261    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.6/67.6 kB 5.9 MB/s eta 0:00:00
+#7 4.270 Downloading automat-25.4.16-py3-none-any.whl (42 kB)
+#7 4.281    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.8/42.8 kB 3.4 MB/s eta 0:00:00
+#7 4.290 Downloading constantly-23.10.4-py3-none-any.whl (13 kB)
+#7 4.309 Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+#7 4.532    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 20.2 MB/s eta 0:00:00
+#7 4.543 Downloading hyperlink-21.0.0-py2.py3-none-any.whl (74 kB)
+#7 4.557    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.6/74.6 kB 5.6 MB/s eta 0:00:00
+#7 4.565 Downloading incremental-24.7.2-py3-none-any.whl (20 kB)
+#7 4.584 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#7 4.594    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.7 MB/s eta 0:00:00
+#7 4.605 Downloading zope_interface-8.0.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (259 kB)
+#7 4.622    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 259.8/259.8 kB 16.3 MB/s eta 0:00:00
+#7 4.631 Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+#7 4.647    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 14.1 MB/s eta 0:00:00
+#7 4.659 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 4.671    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 6.1 MB/s eta 0:00:00
+#7 4.680 Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+#7 4.692    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 9.7 MB/s eta 0:00:00
+#7 4.724 Building wheels for collected packages: swftp, pycrypto
+#7 4.725   Building wheel for swftp (setup.py): started
+#7 4.900   Building wheel for swftp (setup.py): finished with status 'done'
+#7 4.900   Created wheel for swftp: filename=swftp-1.0.7-py3-none-any.whl size=51397 sha256=8d843550452ab1f1b2b2c8705c47fd95177cf952e16796990a457c680ee2dd39
+#7 4.900   Stored in directory: /root/.cache/pip/wheels/c2/30/2f/38897242ec15038d9602d75c585cea0041891fd9dd58f6ca37
+#7 4.903   Building wheel for pycrypto (setup.py): started
+#7 6.230   Building wheel for pycrypto (setup.py): finished with status 'error'
+#7 6.236   error: subprocess-exited-with-error
+#7 6.236   
+#7 6.236   × python setup.py bdist_wheel did not run successfully.
+#7 6.236   │ exit code: 1
+#7 6.236   ╰─> [84 lines of output]
+#7 6.236       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+#7 6.236       !!
+#7 6.236       
+#7 6.236               ********************************************************************************
+#7 6.236               Please consider removing the following classifiers in favor of a SPDX license expression:
+#7 6.236       
+#7 6.236               License :: Public Domain
+#7 6.236       
+#7 6.236               See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+#7 6.236               ********************************************************************************
+#7 6.236       
+#7 6.236       !!
+#7 6.236         self._finalize_license_expression()
+#7 6.236       checking for gcc... gcc
+#7 6.236       checking whether the C compiler works... yes
+#7 6.236       checking for C compiler default output file name... a.out
+#7 6.236       checking for suffix of executables...
+#7 6.236       checking whether we are cross compiling... no
+#7 6.236       checking for suffix of object files... o
+#7 6.236       checking whether we are using the GNU C compiler... yes
+#7 6.236       checking whether gcc accepts -g... yes
+#7 6.236       checking for gcc option to accept ISO C89... none needed
+#7 6.236       checking for __gmpz_init in -lgmp... yes
+#7 6.236       checking for __gmpz_init in -lmpir... no
+#7 6.236       checking whether mpz_powm is declared... yes
+#7 6.236       checking whether mpz_powm_sec is declared... yes
+#7 6.236       checking how to run the C preprocessor... gcc -E
+#7 6.236       checking for grep that handles long lines and -e... /usr/bin/grep
+#7 6.236       checking for egrep... /usr/bin/grep -E
+#7 6.236       checking for ANSI C header files... yes
+#7 6.236       checking for sys/types.h... yes
+#7 6.236       checking for sys/stat.h... yes
+#7 6.236       checking for stdlib.h... yes
+#7 6.236       checking for string.h... yes
+#7 6.236       checking for memory.h... yes
+#7 6.236       checking for strings.h... yes
+#7 6.236       checking for inttypes.h... yes
+#7 6.236       checking for stdint.h... yes
+#7 6.236       checking for unistd.h... yes
+#7 6.236       checking for inttypes.h... (cached) yes
+#7 6.236       checking limits.h usability... yes
+#7 6.236       checking limits.h presence... yes
+#7 6.236       checking for limits.h... yes
+#7 6.236       checking stddef.h usability... yes
+#7 6.236       checking stddef.h presence... yes
+#7 6.236       checking for stddef.h... yes
+#7 6.236       checking for stdint.h... (cached) yes
+#7 6.236       checking for stdlib.h... (cached) yes
+#7 6.236       checking for string.h... (cached) yes
+#7 6.236       checking wchar.h usability... yes
+#7 6.236       checking wchar.h presence... yes
+#7 6.236       checking for wchar.h... yes
+#7 6.236       checking for inline... inline
+#7 6.236       checking for int16_t... yes
+#7 6.236       checking for int32_t... yes
+#7 6.236       checking for int64_t... yes
+#7 6.236       checking for int8_t... yes
+#7 6.236       checking for size_t... yes
+#7 6.236       checking for uint16_t... yes
+#7 6.236       checking for uint32_t... yes
+#7 6.236       checking for uint64_t... yes
+#7 6.236       checking for uint8_t... yes
+#7 6.236       checking for stdlib.h... (cached) yes
+#7 6.236       checking for GNU libc compatible malloc... yes
+#7 6.236       checking for memmove... yes
+#7 6.236       checking for memset... yes
+#7 6.236       configure: creating ./config.status
+#7 6.236       config.status: creating src/config.h
+#7 6.236       In file included from /usr/local/include/python3.11/Python.h:87,
+#7 6.236                        from src/_fastmath.c:31:
+#7 6.236       /usr/local/include/python3.11/cpython/pytime.h:208:60: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+#7 6.236         208 | PyAPI_FUNC(int) _PyTime_FromTimespec(_PyTime_t *tp, struct timespec *ts);
+#7 6.236             |                                                            ^~~~~~~~
+#7 6.236       /usr/local/include/python3.11/cpython/pytime.h:213:56: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+#7 6.236         213 | PyAPI_FUNC(int) _PyTime_AsTimespec(_PyTime_t t, struct timespec *ts);
+#7 6.236             |                                                        ^~~~~~~~
+#7 6.236       /usr/local/include/python3.11/cpython/pytime.h:217:63: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+#7 6.236         217 | PyAPI_FUNC(void) _PyTime_AsTimespec_clamp(_PyTime_t t, struct timespec *ts);
+#7 6.236             |                                                               ^~~~~~~~
+#7 6.236       src/_fastmath.c:33:10: fatal error: longintrepr.h: No such file or directory
+#7 6.236          33 | #include <longintrepr.h>                                /* for conversions */
+#7 6.236             |          ^~~~~~~~~~~~~~~
+#7 6.236       compilation terminated.
+#7 6.236       error: command '/usr/bin/gcc' failed with exit code 1
+#7 6.236       [end of output]
+#7 6.236   
+#7 6.236   note: This error originates from a subprocess, and is likely not a problem with pip.
+#7 6.236   ERROR: Failed building wheel for pycrypto
+#7 6.236   Running setup.py clean for pycrypto
+#7 6.338 Successfully built swftp
+#7 6.338 Failed to build pycrypto
+#7 6.339 ERROR: Could not build wheels for pycrypto, which is required to install pyproject.toml-based projects
+#7 6.433 
+#7 6.433 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 6.433 [notice] To update, run: pip install --upgrade pip
+#7 ERROR: process "pip install swftp" did not complete successfully: exit code: 1
+------
+ > [ 3/47] RUN ["pip","install","swftp"]:
+6.236   
+6.236   note: This error originates from a subprocess, and is likely not a problem with pip.
+6.236   ERROR: Failed building wheel for pycrypto
+6.236   Running setup.py clean for pycrypto
+6.338 Successfully built swftp
+6.338 Failed to build pycrypto
+6.339 ERROR: Could not build wheels for pycrypto, which is required to install pyproject.toml-based projects
+6.433 
+6.433 [notice] A new release of pip is available: 24.0 -> 25.3
+6.433 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:3
+--------------------
+   1 |     FROM python:3.11
+   2 |     COPY hard-gists/8588668/snippet.py /snippet.py
+   3 | >>> RUN ["pip","install","swftp"]
+   4 |     RUN ["pip","install","txasgiresource"]
+   5 |     RUN ["pip","install","axiom"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install swftp" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/0nqnwuoppdzfi31c2916iotjt
+[2025-10-29 17:51:10] ERROR: Build failed for 8588668

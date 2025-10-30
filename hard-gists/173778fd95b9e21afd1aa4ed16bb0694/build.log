@@ -1,0 +1,159 @@
+=== Docker Build Log for 173778fd95b9e21afd1aa4ed16bb0694 ===
+Started at: Mi 29. Okt 12:26:28 CET 2025
+
+[2025-10-29 12:26:28] START: Building image for 173778fd95b9e21afd1aa4ed16bb0694
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 DONE 0.0s
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 328B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 893B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/6] COPY hard-gists/173778fd95b9e21afd1aa4ed16bb0694/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/6] RUN ["pip","install","django-security-knaperek"]
+#7 1.870 Collecting django-security-knaperek
+#7 1.909   Downloading django-security-knaperek-0.9.5.tar.gz (23 kB)
+#7 1.924   Preparing metadata (setup.py): started
+#7 2.304   Preparing metadata (setup.py): finished with status 'done'
+#7 2.306 Building wheels for collected packages: django-security-knaperek
+#7 2.307   Building wheel for django-security-knaperek (setup.py): started
+#7 2.480   Building wheel for django-security-knaperek (setup.py): finished with status 'done'
+#7 2.481   Created wheel for django-security-knaperek: filename=django_security_knaperek-0.9.5-py3-none-any.whl size=28674 sha256=0a00c15e52927955630f46b5f80afcefd5722c65c9bfc8aa3586f5291947d538
+#7 2.481   Stored in directory: /root/.cache/pip/wheels/bd/8c/04/66a17cb77cef25a04d71137109f1280263c895ac146f9c720c
+#7 2.484 Successfully built django-security-knaperek
+#7 2.513 Installing collected packages: django-security-knaperek
+#7 2.546 Successfully installed django-security-knaperek-0.9.5
+#7 2.546 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.635 
+#7 2.635 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.635 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.8s
+
+#8 [4/6] RUN ["pip","install","pySecurityCenter"]
+#8 0.518 Collecting pySecurityCenter
+#8 0.551   Downloading pySecurityCenter-3.1.2.tar.gz (16 kB)
+#8 0.565   Preparing metadata (setup.py): started
+#8 0.689   Preparing metadata (setup.py): finished with status 'done'
+#8 0.738 Collecting requests (from pySecurityCenter)
+#8 0.747   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#8 0.867 Collecting charset_normalizer<4,>=2 (from requests->pySecurityCenter)
+#8 0.876   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#8 0.923 Collecting idna<4,>=2.5 (from requests->pySecurityCenter)
+#8 0.932   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#8 0.991 Collecting urllib3<3,>=1.21.1 (from requests->pySecurityCenter)
+#8 1.000   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#8 1.049 Collecting certifi>=2017.4.17 (from requests->pySecurityCenter)
+#8 1.058   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#8 1.085 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#8 1.097    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 5.6 MB/s eta 0:00:00
+#8 1.105 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#8 1.122    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.5 MB/s eta 0:00:00
+#8 1.131 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#8 1.145    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.5 MB/s eta 0:00:00
+#8 1.154 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#8 1.165    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 6.2 MB/s eta 0:00:00
+#8 1.174 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#8 1.187    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 10.0 MB/s eta 0:00:00
+#8 1.194 Building wheels for collected packages: pySecurityCenter
+#8 1.199   Building wheel for pySecurityCenter (setup.py): started
+#8 1.338   Building wheel for pySecurityCenter (setup.py): finished with status 'done'
+#8 1.339   Created wheel for pySecurityCenter: filename=pysecuritycenter-3.1.2-py3-none-any.whl size=18196 sha256=5632b56cdb57ba695cb7be545153e3ff93804ab5033fe28d403874ed321448ab
+#8 1.339   Stored in directory: /root/.cache/pip/wheels/74/01/2a/69b2a5baa6d1cbaadc2525ead597273aa1be5aeb4209f093ca
+#8 1.340 Successfully built pySecurityCenter
+#8 1.380 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests, pySecurityCenter
+#8 1.641 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 pySecurityCenter-3.1.2 requests-2.32.5 urllib3-2.5.0
+#8 1.642 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.647 
+#8 1.647 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.647 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.9s
+
+#9 [5/6] RUN ["pip","install","django-security"]
+#9 0.647 Collecting django-security
+#9 0.681   Downloading django-security-0.12.0.tar.gz (25 kB)
+#9 0.702   Preparing metadata (setup.py): started
+#9 0.819   Preparing metadata (setup.py): finished with status 'done'
+#9 0.929 Collecting django>=1.11 (from django-security)
+#9 0.938   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#9 0.976 Collecting ua_parser>=0.7.1 (from django-security)
+#9 0.985   Downloading ua_parser-1.0.1-py3-none-any.whl.metadata (5.6 kB)
+#9 1.039 Collecting python-dateutil==2.8.0 (from django-security)
+#9 1.047   Downloading python_dateutil-2.8.0-py2.py3-none-any.whl.metadata (7.6 kB)
+#9 1.085 Collecting six>=1.5 (from python-dateutil==2.8.0->django-security)
+#9 1.094   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#9 1.144 Collecting asgiref>=3.8.1 (from django>=1.11->django-security)
+#9 1.153   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#9 1.190 Collecting sqlparse>=0.3.1 (from django>=1.11->django-security)
+#9 1.198   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#9 1.236 Collecting ua-parser-builtins (from ua_parser>=0.7.1->django-security)
+#9 1.245   Downloading ua_parser_builtins-0.18.0.post1-py3-none-any.whl.metadata (1.4 kB)
+#9 1.275 Downloading python_dateutil-2.8.0-py2.py3-none-any.whl (226 kB)
+#9 1.306    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 226.8/226.8 kB 7.5 MB/s eta 0:00:00
+#9 1.316 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#9 1.629    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 26.6 MB/s eta 0:00:00
+#9 1.637 Downloading ua_parser-1.0.1-py3-none-any.whl (31 kB)
+#9 1.656 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#9 1.675 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#9 1.694 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#9 1.704    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.9 MB/s eta 0:00:00
+#9 1.714 Downloading ua_parser_builtins-0.18.0.post1-py3-none-any.whl (86 kB)
+#9 1.727    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.1/86.1 kB 6.5 MB/s eta 0:00:00
+#9 1.765 Building wheels for collected packages: django-security
+#9 1.770   Building wheel for django-security (setup.py): started
+#9 1.910   Building wheel for django-security (setup.py): finished with status 'done'
+#9 1.910   Created wheel for django-security: filename=django_security-0.12.0-py3-none-any.whl size=31858 sha256=91c7c2a4ba1e44e1e0f3b5f4abdd1a3f47f882467962d027d45cdbcc49c52274
+#9 1.910   Stored in directory: /root/.cache/pip/wheels/3a/4d/dc/4463a761a9ea70413143d2b86d1a1b78b59be5c87d5d11b1ff
+#9 1.912 Successfully built django-security
+#9 1.973 Installing collected packages: ua-parser-builtins, sqlparse, six, asgiref, ua_parser, python-dateutil, django, django-security
+#9 3.563 Successfully installed asgiref-3.10.0 django-5.2.7 django-security-0.12.0 python-dateutil-2.8.0 six-1.17.0 sqlparse-0.5.3 ua-parser-builtins-0.18.0.post1 ua_parser-1.0.1
+#9 3.564 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 3.569 
+#9 3.569 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 3.569 [notice] To update, run: pip install --upgrade pip
+#9 DONE 4.0s
+
+#10 [6/6] RUN ["pip","install","SecurityCenter"]
+#10 0.511 Collecting SecurityCenter
+#10 0.547   Downloading SecurityCenter-1.0.5-py2.py3-none-any.whl.metadata (755 bytes)
+#10 0.562 Requirement already satisfied: requests in /usr/local/lib/python3.11/site-packages (from SecurityCenter) (2.32.5)
+#10 0.563 Requirement already satisfied: six in /usr/local/lib/python3.11/site-packages (from SecurityCenter) (1.17.0)
+#10 0.569 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests->SecurityCenter) (3.4.4)
+#10 0.570 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests->SecurityCenter) (3.11)
+#10 0.571 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests->SecurityCenter) (2.5.0)
+#10 0.572 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests->SecurityCenter) (2025.10.5)
+#10 0.590 Downloading SecurityCenter-1.0.5-py2.py3-none-any.whl (16 kB)
+#10 0.661 Installing collected packages: SecurityCenter
+#10 0.708 Successfully installed SecurityCenter-1.0.5
+#10 0.708 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.713 
+#10 0.713 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.713 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.8s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 0.6s done
+#11 writing image sha256:262331b0831a3c157dd7f1bb0c5f16b6552ed24ebfbc3b06c0b6d64a1a41c0a2 done
+#11 naming to docker.io/library/test-image-173778fd95b9e21afd1aa4ed16bb0694 done
+#11 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/default/default/dmtfzj8k1v2h2n028l6a59n5f
+[2025-10-29 12:26:38] SUCCESS: Build completed for 173778fd95b9e21afd1aa4ed16bb0694

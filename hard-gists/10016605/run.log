@@ -1,0 +1,22 @@
+=== Docker Run Log for 10016605 ===
+Started at: Mi 29. Okt 11:44:25 CET 2025
+
+[2025-10-29 11:44:47] START: Running container for 10016605
+[2025-10-29 11:44:47] SUCCESS: Container ab34400dc0a938dbb0971532a1c8ba9855b9f6ee30f6f29bc2ffa5edfddeb89b started for 10016605
+=== Container logs for 10016605 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 8, in <module>
+    import lx
+  File "/usr/local/lib/python3.11/site-packages/lx/__init__.py", line 204, in <module>
+    import cv2
+  File "/usr/local/lib/python3.11/site-packages/cv2/__init__.py", line 181, in <module>
+    bootstrap()
+  File "/usr/local/lib/python3.11/site-packages/cv2/__init__.py", line 153, in bootstrap
+    native_module = importlib.import_module("cv2")
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ImportError: libGL.so.1: cannot open shared object file: No such file or directory
+=== End of logs for 10016605 ===
+[2025-10-29 11:44:49] INFO: Container ab34400dc0a938dbb0971532a1c8ba9855b9f6ee30f6f29bc2ffa5edfddeb89b has stopped

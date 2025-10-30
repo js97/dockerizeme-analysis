@@ -1,0 +1,104 @@
+=== Docker Build Log for 99f7f921b512496a9563691e15d846b2 ===
+Started at: Mi 29. Okt 18:38:09 CET 2025
+
+[2025-10-29 18:38:09] START: Building image for 99f7f921b512496a9563691e15d846b2
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 219B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.33kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/99f7f921b512496a9563691e15d846b2/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","keras"]
+#7 2.029 Collecting keras
+#7 2.071   Downloading keras-3.12.0-py3-none-any.whl.metadata (5.9 kB)
+#7 2.113 Collecting absl-py (from keras)
+#7 2.121   Downloading absl_py-2.3.1-py3-none-any.whl.metadata (3.3 kB)
+#7 2.320 Collecting numpy (from keras)
+#7 2.328   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.360      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 1.8 MB/s eta 0:00:00
+#7 2.437 Collecting rich (from keras)
+#7 2.445   Downloading rich-14.2.0-py3-none-any.whl.metadata (18 kB)
+#7 2.482 Collecting namex (from keras)
+#7 2.491   Downloading namex-0.1.0-py3-none-any.whl.metadata (322 bytes)
+#7 2.555 Collecting h5py (from keras)
+#7 2.565   Downloading h5py-3.15.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+#7 2.659 Collecting optree (from keras)
+#7 2.668   Downloading optree-0.17.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (33 kB)
+#7 2.719 Collecting ml-dtypes (from keras)
+#7 2.727   Downloading ml_dtypes-0.5.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.9 kB)
+#7 2.790 Collecting packaging (from keras)
+#7 2.799   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#7 2.881 Collecting typing-extensions>=4.6.0 (from optree->keras)
+#7 2.889   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#7 2.935 Collecting markdown-it-py>=2.2.0 (from rich->keras)
+#7 2.943   Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+#7 2.990 Collecting pygments<3.0.0,>=2.13.0 (from rich->keras)
+#7 2.999   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#7 3.047 Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->keras)
+#7 3.055   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+#7 3.090 Downloading keras-3.12.0-py3-none-any.whl (1.5 MB)
+#7 3.233    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 10.3 MB/s eta 0:00:00
+#7 3.243 Downloading absl_py-2.3.1-py3-none-any.whl (135 kB)
+#7 3.263    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.8/135.8 kB 6.7 MB/s eta 0:00:00
+#7 3.272 Downloading h5py-3.15.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (4.7 MB)
+#7 3.663    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 12.1 MB/s eta 0:00:00
+#7 3.673 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 4.867    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 16.6 MB/s eta 0:00:00
+#7 4.877 Downloading ml_dtypes-0.5.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (4.9 MB)
+#7 5.128    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 19.9 MB/s eta 0:00:00
+#7 5.136 Downloading namex-0.1.0-py3-none-any.whl (5.9 kB)
+#7 5.156 Downloading optree-0.17.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (402 kB)
+#7 5.182    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 402.0/402.0 kB 16.0 MB/s eta 0:00:00
+#7 5.191 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#7 5.204    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 4.9 MB/s eta 0:00:00
+#7 5.213 Downloading rich-14.2.0-py3-none-any.whl (243 kB)
+#7 5.232    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.4/243.4 kB 13.7 MB/s eta 0:00:00
+#7 5.240 Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+#7 5.253    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.3/87.3 kB 6.3 MB/s eta 0:00:00
+#7 5.261 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#7 5.322    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 20.6 MB/s eta 0:00:00
+#7 5.330 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#7 5.342    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.1 MB/s eta 0:00:00
+#7 5.351 Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+#7 5.521 Installing collected packages: namex, typing-extensions, pygments, packaging, numpy, mdurl, absl-py, optree, ml-dtypes, markdown-it-py, h5py, rich, keras
+#7 8.638 Successfully installed absl-py-2.3.1 h5py-3.15.1 keras-3.12.0 markdown-it-py-4.0.0 mdurl-0.1.2 ml-dtypes-0.5.3 namex-0.1.0 numpy-2.3.4 optree-0.17.0 packaging-25.0 pygments-2.19.2 rich-14.2.0 typing-extensions-4.15.0
+#7 8.638 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 8.735 
+#7 8.735 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 8.735 [notice] To update, run: pip install --upgrade pip
+#7 DONE 10.0s
+
+#8 [4/4] RUN ["pip","install","numpy"]
+#8 0.440 Requirement already satisfied: numpy in /usr/local/lib/python3.11/site-packages (2.3.4)
+#8 0.513 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.518 
+#8 0.518 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.518 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.6s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.8s done
+#9 writing image sha256:463d66a029b0f2ee02a3aae5c9df7196cd668a10595ab53d0e96db76b37839cb done
+#9 naming to docker.io/library/test-image-99f7f921b512496a9563691e15d846b2 done
+#9 DONE 0.8s
+
+View build details: docker-desktop://dashboard/build/default/default/txzeyvurtazemx9asf300y0bq
+[2025-10-29 18:38:21] SUCCESS: Build completed for 99f7f921b512496a9563691e15d846b2

@@ -1,0 +1,97 @@
+=== Docker Build Log for eeb156dc7b4caca69f5b31037da54708 ===
+Started at: Mi 29. Okt 21:03:26 CET 2025
+
+[2025-10-29 21:03:26] START: Building image for eeb156dc7b4caca69f5b31037da54708
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 217B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.33kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/eeb156dc7b4caca69f5b31037da54708/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","sen"]
+#7 1.956 Collecting sen
+#7 2.006   Downloading sen-0.8.1-py3-none-any.whl.metadata (8.2 kB)
+#7 2.092 Collecting urwid (from sen)
+#7 2.105   Downloading urwid-3.0.3-py3-none-any.whl.metadata (11 kB)
+#7 2.159 Collecting docker (from sen)
+#7 2.173   Downloading docker-7.1.0-py3-none-any.whl.metadata (3.8 kB)
+#7 2.208 Collecting urwidtrees (from sen)
+#7 2.217   Downloading urwidtrees-1.0.4-py3-none-any.whl.metadata (532 bytes)
+#7 2.276 Collecting requests>=2.26.0 (from docker->sen)
+#7 2.285   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.342 Collecting urllib3>=1.26.0 (from docker->sen)
+#7 2.352   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.396 Collecting wcwidth (from urwid->sen)
+#7 2.405   Downloading wcwidth-0.2.14-py2.py3-none-any.whl.metadata (15 kB)
+#7 2.524 Collecting charset_normalizer<4,>=2 (from requests>=2.26.0->docker->sen)
+#7 2.532   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.581 Collecting idna<4,>=2.5 (from requests>=2.26.0->docker->sen)
+#7 2.589   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.642 Collecting certifi>=2017.4.17 (from requests>=2.26.0->docker->sen)
+#7 2.650   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.683 Downloading sen-0.8.1-py3-none-any.whl (58 kB)
+#7 2.698    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.7/58.7 kB 4.9 MB/s eta 0:00:00
+#7 2.707 Downloading docker-7.1.0-py3-none-any.whl (147 kB)
+#7 2.727    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 147.8/147.8 kB 7.5 MB/s eta 0:00:00
+#7 2.737 Downloading urwid-3.0.3-py3-none-any.whl (296 kB)
+#7 2.759    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 296.1/296.1 kB 14.0 MB/s eta 0:00:00
+#7 2.768 Downloading urwidtrees-1.0.4-py3-none-any.whl (28 kB)
+#7 2.786 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.798    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 5.3 MB/s eta 0:00:00
+#7 2.806 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.822    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 8.3 MB/s eta 0:00:00
+#7 2.832 Downloading wcwidth-0.2.14-py2.py3-none-any.whl (37 kB)
+#7 2.851 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.868    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.6 MB/s eta 0:00:00
+#7 2.878 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.895    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 9.2 MB/s eta 0:00:00
+#7 2.904 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.917    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.0 MB/s eta 0:00:00
+#7 2.995 Installing collected packages: wcwidth, urllib3, idna, charset_normalizer, certifi, urwid, requests, urwidtrees, docker, sen
+#7 3.505 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 docker-7.1.0 idna-3.11 requests-2.32.5 sen-0.8.1 urllib3-2.5.0 urwid-3.0.3 urwidtrees-1.0.4 wcwidth-0.2.14
+#7 3.505 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.605 
+#7 3.605 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.605 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.8s
+
+#8 [4/4] RUN ["pip","install","numpy"]
+#8 0.712 Collecting numpy
+#8 0.747   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 0.780      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 1.7 MB/s eta 0:00:00
+#8 0.801 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#8 1.914    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 14.7 MB/s eta 0:00:00
+#8 2.011 Installing collected packages: numpy
+#8 3.395 Successfully installed numpy-2.3.4
+#8 3.395 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 3.400 
+#8 3.400 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.400 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.9s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.4s done
+#9 writing image sha256:2325d8681c50c289a7c3ed7cb377a5dc95377889d02aeffadeadcbd22fdfc3f6 done
+#9 naming to docker.io/library/test-image-eeb156dc7b4caca69f5b31037da54708 done
+#9 DONE 0.4s
+
+View build details: docker-desktop://dashboard/build/default/default/iebxee6a4p14mpf6fmt8co2xo
+[2025-10-29 21:03:35] SUCCESS: Build completed for eeb156dc7b4caca69f5b31037da54708

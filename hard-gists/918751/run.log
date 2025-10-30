@@ -1,0 +1,16 @@
+=== Docker Run Log for 918751 ===
+Started at: Mi 29. Okt 18:21:26 CET 2025
+
+[2025-10-29 18:21:40] START: Running container for 918751
+[2025-10-29 18:21:40] SUCCESS: Container 1b7e7e436b62be3bdbe1c67400c06e105fd29320943b4ef088e9f13823bee9a2 started for 918751
+=== Container logs for 918751 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 6, in <module>
+    image = Image.open('logo_newsblur_512.png')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/PIL/Image.py", line 3493, in open
+    fp = builtins.open(filename, "rb")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'logo_newsblur_512.png'
+=== End of logs for 918751 ===
+[2025-10-29 18:21:42] INFO: Container 1b7e7e436b62be3bdbe1c67400c06e105fd29320943b4ef088e9f13823bee9a2 has stopped

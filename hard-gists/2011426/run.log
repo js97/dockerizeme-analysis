@@ -1,0 +1,18 @@
+=== Docker Run Log for 2011426 ===
+Started at: Mi 29. Okt 12:56:27 CET 2025
+
+[2025-10-29 12:56:45] START: Running container for 2011426
+[2025-10-29 12:56:46] SUCCESS: Container a810f6b5d2e07011b23ddd38897973a6ffbc4b9f3751f03b54834b2bc41a4ad6 started for 2011426
+=== Container logs for 2011426 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 103, in <module>
+    test_dpgmm()
+  File "/snippet.py", line 94, in test_dpgmm
+    X = dpgmm.sample(100)
+        ^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 72, in sample
+    for i in xrange(n_samples):
+             ^^^^^^
+NameError: name 'xrange' is not defined. Did you mean: 'range'?
+=== End of logs for 2011426 ===
+[2025-10-29 12:56:48] INFO: Container a810f6b5d2e07011b23ddd38897973a6ffbc4b9f3751f03b54834b2bc41a4ad6 has stopped

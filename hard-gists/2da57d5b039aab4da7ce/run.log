@@ -1,0 +1,12 @@
+=== Docker Run Log for 2da57d5b039aab4da7ce ===
+Started at: Mi 29. Okt 13:26:25 CET 2025
+
+[2025-10-29 13:26:25] START: Running container for 2da57d5b039aab4da7ce
+[2025-10-29 13:26:25] SUCCESS: Container 604fd61fa2165200ddaff8dda0448a2e26f04707b3c6b5f9439389d248844ca3 started for 2da57d5b039aab4da7ce
+=== Container logs for 2da57d5b039aab4da7ce ===
+  File "/snippet.py", line 37
+    print "%s:%d -> %s:%d (%d bytes): %s\n" % (inet_ntoa(ip.src), ip.data.sport, 
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 2da57d5b039aab4da7ce ===
+[2025-10-29 13:26:27] INFO: Container 604fd61fa2165200ddaff8dda0448a2e26f04707b3c6b5f9439389d248844ca3 has stopped

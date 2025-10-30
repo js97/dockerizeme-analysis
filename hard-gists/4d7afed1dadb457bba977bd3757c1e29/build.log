@@ -1,0 +1,135 @@
+=== Docker Build Log for 4d7afed1dadb457bba977bd3757c1e29 ===
+Started at: Mi 29. Okt 15:12:11 CET 2025
+
+[2025-10-29 15:12:11] START: Building image for 4d7afed1dadb457bba977bd3757c1e29
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 255B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 5.47kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/4d7afed1dadb457bba977bd3757c1e29/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","requests"]
+#7 2.075 Collecting requests
+#7 2.107   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.251 Collecting charset_normalizer<4,>=2 (from requests)
+#7 2.263   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.325 Collecting idna<4,>=2.5 (from requests)
+#7 2.333   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.407 Collecting urllib3<3,>=1.21.1 (from requests)
+#7 2.416   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.469 Collecting certifi>=2017.4.17 (from requests)
+#7 2.478   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.510 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.530    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.4 MB/s eta 0:00:00
+#7 2.540 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.559    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 8.7 MB/s eta 0:00:00
+#7 2.569 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.584    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.2 MB/s eta 0:00:00
+#7 2.592 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.605    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.4 MB/s eta 0:00:00
+#7 2.615 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.629    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 10.4 MB/s eta 0:00:00
+#7 2.692 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#7 2.958 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#7 2.958 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.060 
+#7 3.060 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.060 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.3s
+
+#8 [4/5] RUN ["pip","install","pillow"]
+#8 0.917 Collecting pillow
+#8 0.952   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#8 1.000 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#8 1.291    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 24.4 MB/s eta 0:00:00
+#8 1.363 Installing collected packages: pillow
+#8 1.726 Successfully installed pillow-12.0.0
+#8 1.726 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.734 
+#8 1.734 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.734 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.9s
+
+#9 [5/5] RUN ["pip","install","telepot"]
+#9 0.556 Collecting telepot
+#9 0.591   Downloading telepot-12.7.tar.gz (73 kB)
+#9 0.618      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.1/73.1 kB 2.6 MB/s eta 0:00:00
+#9 0.628   Preparing metadata (setup.py): started
+#9 1.081   Preparing metadata (setup.py): finished with status 'done'
+#9 1.085 Requirement already satisfied: urllib3>=1.9.1 in /usr/local/lib/python3.11/site-packages (from telepot) (2.5.0)
+#9 1.686 Collecting aiohttp>=3.0.0 (from telepot)
+#9 1.695   Downloading aiohttp-3.13.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+#9 1.755 Collecting aiohappyeyeballs>=2.5.0 (from aiohttp>=3.0.0->telepot)
+#9 1.764   Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl.metadata (5.9 kB)
+#9 1.808 Collecting aiosignal>=1.4.0 (from aiohttp>=3.0.0->telepot)
+#9 1.817   Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+#9 1.863 Collecting attrs>=17.3.0 (from aiohttp>=3.0.0->telepot)
+#9 1.871   Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+#9 1.977 Collecting frozenlist>=1.1.1 (from aiohttp>=3.0.0->telepot)
+#9 1.989   Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+#9 2.331 Collecting multidict<7.0,>=4.5 (from aiohttp>=3.0.0->telepot)
+#9 2.342   Downloading multidict-6.7.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+#9 2.452 Collecting propcache>=0.2.0 (from aiohttp>=3.0.0->telepot)
+#9 2.462   Downloading propcache-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+#9 2.802 Collecting yarl<2.0,>=1.17.0 (from aiohttp>=3.0.0->telepot)
+#9 2.813   Downloading yarl-1.22.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (75 kB)
+#9 2.832      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 75.1/75.1 kB 4.0 MB/s eta 0:00:00
+#9 2.901 Collecting typing-extensions>=4.2 (from aiosignal>=1.4.0->aiohttp>=3.0.0->telepot)
+#9 2.910   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#9 2.937 Requirement already satisfied: idna>=2.0 in /usr/local/lib/python3.11/site-packages (from yarl<2.0,>=1.17.0->aiohttp>=3.0.0->telepot) (3.11)
+#9 2.967 Downloading aiohttp-3.13.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.7 MB)
+#9 3.042    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 23.9 MB/s eta 0:00:00
+#9 3.050 Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl (15 kB)
+#9 3.077 Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+#9 3.094 Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+#9 3.107    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.6/67.6 kB 5.6 MB/s eta 0:00:00
+#9 3.116 Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+#9 3.133    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231.1/231.1 kB 14.4 MB/s eta 0:00:00
+#9 3.144 Downloading multidict-6.7.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (246 kB)
+#9 3.163    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 246.7/246.7 kB 14.5 MB/s eta 0:00:00
+#9 3.180 Downloading propcache-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (210 kB)
+#9 3.196    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 210.0/210.0 kB 14.1 MB/s eta 0:00:00
+#9 3.206 Downloading yarl-1.22.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (365 kB)
+#9 3.228    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 16.9 MB/s eta 0:00:00
+#9 3.237 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#9 3.250    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.3 MB/s eta 0:00:00
+#9 3.265 Building wheels for collected packages: telepot
+#9 3.265   Building wheel for telepot (setup.py): started
+#9 3.456   Building wheel for telepot (setup.py): finished with status 'done'
+#9 3.457   Created wheel for telepot: filename=telepot-12.7-py3-none-any.whl size=57985 sha256=ad3cbf6b832b782dabf37c4652964b0fb5a70168041751cd8913819645053bce
+#9 3.457   Stored in directory: /root/.cache/pip/wheels/48/5b/e8/bd84ac4d3edf2378b9bc22049d151a6c28e47cab24eae496cf
+#9 3.459 Successfully built telepot
+#9 3.576 Installing collected packages: typing-extensions, propcache, multidict, frozenlist, attrs, aiohappyeyeballs, yarl, aiosignal, aiohttp, telepot
+#9 3.958 Successfully installed aiohappyeyeballs-2.6.1 aiohttp-3.13.2 aiosignal-1.4.0 attrs-25.4.0 frozenlist-1.8.0 multidict-6.7.0 propcache-0.4.1 telepot-12.7 typing-extensions-4.15.0 yarl-1.22.0
+#9 3.958 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 3.965 
+#9 3.965 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 3.965 [notice] To update, run: pip install --upgrade pip
+#9 DONE 4.4s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.2s done
+#10 writing image sha256:4ccd8b8177aa07e7b2602cfb802267e8dcfc0c09233b5c311568ed799bed8c71 done
+#10 naming to docker.io/library/test-image-4d7afed1dadb457bba977bd3757c1e29 0.0s done
+#10 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/w22qy77uycr8qwxlbc0f11vms
+[2025-10-29 15:12:21] SUCCESS: Build completed for 4d7afed1dadb457bba977bd3757c1e29

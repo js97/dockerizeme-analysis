@@ -1,0 +1,154 @@
+=== Docker Build Log for 3037448 ===
+Started at: Mi 29. Okt 13:37:20 CET 2025
+
+[2025-10-29 13:37:20] START: Building image for 3037448
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 280B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.97kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/3037448/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","bpy"]
+#7 1.903 Collecting bpy
+#7 1.935   Downloading bpy-4.5.4-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (2.0 kB)
+#7 2.181 Collecting cython (from bpy)
+#7 2.190   Downloading cython-3.1.6-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.0 kB)
+#7 2.415 Collecting numpy<2.0,>=1.26 (from bpy)
+#7 2.426   Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+#7 2.454      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.0/61.0 kB 2.0 MB/s eta 0:00:00
+#7 2.503 Collecting requests (from bpy)
+#7 2.511   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.601 Collecting zstandard (from bpy)
+#7 2.610   Downloading zstandard-0.25.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.3 kB)
+#7 2.718 Collecting charset_normalizer<4,>=2 (from requests->bpy)
+#7 2.727   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.766 Collecting idna<4,>=2.5 (from requests->bpy)
+#7 2.774   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.834 Collecting urllib3<3,>=1.21.1 (from requests->bpy)
+#7 2.841   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.884 Collecting certifi>=2017.4.17 (from requests->bpy)
+#7 2.892   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.922 Downloading bpy-4.5.4-cp311-cp311-manylinux_2_28_x86_64.whl (373.0 MB)
+#7 18.55    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 373.0/373.0 MB 2.8 MB/s eta 0:00:00
+#7 18.56 Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.3 MB)
+#7 19.26    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.3/18.3 MB 22.7 MB/s eta 0:00:00
+#7 19.27 Downloading cython-3.1.6-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.3 MB)
+#7 19.64    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 8.9 MB/s eta 0:00:00
+#7 19.65 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 19.66    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 5.9 MB/s eta 0:00:00
+#7 19.67 Downloading zstandard-0.25.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.6 MB)
+#7 19.88    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.6/5.6 MB 26.9 MB/s eta 0:00:00
+#7 19.88 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 19.90    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 12.0 MB/s eta 0:00:00
+#7 19.91 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 19.92    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.0 MB/s eta 0:00:00
+#7 19.93 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 19.94    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.2 MB/s eta 0:00:00
+#7 19.95 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 19.96    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 10.1 MB/s eta 0:00:00
+#7 20.82 Installing collected packages: zstandard, urllib3, numpy, idna, cython, charset_normalizer, certifi, requests, bpy
+#7 27.02 Successfully installed bpy-4.5.4 certifi-2025.10.5 charset_normalizer-3.4.4 cython-3.1.6 idna-3.11 numpy-1.26.4 requests-2.32.5 urllib3-2.5.0 zstandard-0.25.0
+#7 27.02 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 27.12 
+#7 27.12 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 27.12 [notice] To update, run: pip install --upgrade pip
+#7 DONE 33.3s
+
+#8 [4/7] RUN ["pip","install","six"]
+#8 0.606 Collecting six
+#8 0.655   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 0.683 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 0.756 Installing collected packages: six
+#8 0.806 Successfully installed six-1.17.0
+#8 0.806 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.811 
+#8 0.811 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.811 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.9s
+
+#9 [5/7] RUN ["pip","install","pytest"]
+#9 0.586 Collecting pytest
+#9 0.616   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#9 0.663 Collecting iniconfig>=1 (from pytest)
+#9 0.671   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#9 0.722 Collecting packaging>=20 (from pytest)
+#9 0.730   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#9 0.773 Collecting pluggy<2,>=1.5 (from pytest)
+#9 0.781   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#9 0.827 Collecting pygments>=2.7.2 (from pytest)
+#9 0.836   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#9 0.868 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#9 0.911    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 8.9 MB/s eta 0:00:00
+#9 0.920 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#9 0.937 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#9 0.950    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.1 MB/s eta 0:00:00
+#9 0.957 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#9 0.974 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#9 1.028    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 23.4 MB/s eta 0:00:00
+#9 1.095 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#9 1.799 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#9 1.800 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.805 
+#9 1.805 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.805 [notice] To update, run: pip install --upgrade pip
+#9 DONE 2.0s
+
+#10 [6/7] RUN ["pip","install","py"]
+#10 0.518 Collecting py
+#10 0.554   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#10 0.579 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#10 0.617    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.6 MB/s eta 0:00:00
+#10 0.678 Installing collected packages: py
+#10 0.756 Successfully installed py-1.11.0
+#10 0.756 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.761 
+#10 0.761 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.761 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.8s
+
+#11 [7/7] RUN ["pip","install","blender"]
+#11 0.594 Collecting blender
+#11 0.813   Downloading blender-1.4.tar.gz (24.7 MB)
+#11 4.264      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.7/24.7 MB 7.1 MB/s eta 0:00:00
+#11 4.974   Preparing metadata (setup.py): started
+#11 5.416   Preparing metadata (setup.py): finished with status 'done'
+#11 5.418 Building wheels for collected packages: blender
+#11 5.419   Building wheel for blender (setup.py): started
+#11 8.742   Building wheel for blender (setup.py): finished with status 'done'
+#11 8.788   Created wheel for blender: filename=blender-1.4-py3-none-any.whl size=25886921 sha256=549d6e35af4e627f04206d08d2a57ad47ce4f751489ee6579977b7028380095f
+#11 8.788   Stored in directory: /root/.cache/pip/wheels/e5/28/d0/bcde4ea08f3bd98ca0dd79a700240bbb26b43ba208063eee68
+#11 8.796 Successfully built blender
+#11 8.859 Installing collected packages: blender
+#11 11.25 Successfully installed blender-1.4
+#11 11.25 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 11.25 
+#11 11.25 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 11.25 [notice] To update, run: pip install --upgrade pip
+#11 DONE 12.2s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 4.2s done
+#12 writing image sha256:71c9be28b597510d6cecddab9650b6d80bede565463344ceb2ced67fbb4dfc77 done
+#12 naming to docker.io/library/test-image-3037448 done
+#12 DONE 4.2s
+
+View build details: docker-desktop://dashboard/build/default/default/n52yunzo8sc0nur71qe9ujtyf
+[2025-10-29 13:38:14] SUCCESS: Build completed for 3037448

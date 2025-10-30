@@ -1,0 +1,17 @@
+=== Docker Run Log for 3993992 ===
+Started at: Mi 29. Okt 14:09:32 CET 2025
+
+[2025-10-29 14:09:49] START: Running container for 3993992
+[2025-10-29 14:09:49] SUCCESS: Container 2db7a0c51aa670ddc74cf7f5dc268f0f03ea3d69a56cb070b8a3e233909c79ae started for 3993992
+=== Container logs for 3993992 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 51, in <module>
+    test_density_contour()
+  File "/snippet.py", line 48, in test_density_contour
+    density_contour(norm[:,0], norm[:,1], 100, 100)
+  File "/snippet.py", line 25, in density_contour
+    H, xedges, yedges = np.histogram2d(xdata, ydata, bins=(nbins_x,nbins_y), normed=True)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: histogram2d() got an unexpected keyword argument 'normed'
+=== End of logs for 3993992 ===
+[2025-10-29 14:09:51] INFO: Container 2db7a0c51aa670ddc74cf7f5dc268f0f03ea3d69a56cb070b8a3e233909c79ae has stopped

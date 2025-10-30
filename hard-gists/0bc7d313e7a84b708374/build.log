@@ -1,0 +1,72 @@
+=== Docker Build Log for 0bc7d313e7a84b708374 ===
+Started at: Mi 29. Okt 11:35:37 CET 2025
+
+[2025-10-29 11:35:37] START: Building image for 0bc7d313e7a84b708374
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 175B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 457B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/0bc7d313e7a84b708374/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","hug"]
+#7 2.035 Collecting hug
+#7 2.079   Downloading hug-2.6.1-py2.py3-none-any.whl.metadata (16 kB)
+#7 2.326 Collecting falcon==2.0.0 (from hug)
+#7 2.336   Downloading falcon-2.0.0-py2.py3-none-any.whl.metadata (25 kB)
+#7 2.398 Collecting requests (from hug)
+#7 2.406   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.530 Collecting charset_normalizer<4,>=2 (from requests->hug)
+#7 2.538   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.596 Collecting idna<4,>=2.5 (from requests->hug)
+#7 2.604   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.669 Collecting urllib3<3,>=1.21.1 (from requests->hug)
+#7 2.677   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.728 Collecting certifi>=2017.4.17 (from requests->hug)
+#7 2.735   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.765 Downloading hug-2.6.1-py2.py3-none-any.whl (75 kB)
+#7 2.785    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 75.1/75.1 kB 3.5 MB/s eta 0:00:00
+#7 2.794 Downloading falcon-2.0.0-py2.py3-none-any.whl (163 kB)
+#7 2.817    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 164.0/164.0 kB 7.2 MB/s eta 0:00:00
+#7 2.825 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.839    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 4.6 MB/s eta 0:00:00
+#7 2.849 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.866    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 10.6 MB/s eta 0:00:00
+#7 2.874 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.891    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 9.3 MB/s eta 0:00:00
+#7 2.901 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.915    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.8 MB/s eta 0:00:00
+#7 2.923 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.942    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 6.9 MB/s eta 0:00:00
+#7 3.008 Installing collected packages: urllib3, idna, falcon, charset_normalizer, certifi, requests, hug
+#7 3.323 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 falcon-2.0.0 hug-2.6.1 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#7 3.323 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.420 
+#7 3.420 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.420 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.6s
+
+#8 exporting to image
+#8 exporting layers 0.1s done
+#8 writing image sha256:d7447a400a975717e29ea34ec68e5658457166b3a158827ab6a0f66021a055e8 done
+#8 naming to docker.io/library/test-image-0bc7d313e7a84b708374 done
+#8 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/lv16oatel7jgqznfi5n4jsunm
+[2025-10-29 11:35:41] SUCCESS: Build completed for 0bc7d313e7a84b708374

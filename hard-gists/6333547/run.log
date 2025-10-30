@@ -1,0 +1,28 @@
+=== Docker Run Log for 6333547 ===
+Started at: Mi 29. Okt 16:28:28 CET 2025
+
+[2025-10-29 16:28:32] START: Running container for 6333547
+[2025-10-29 16:28:32] SUCCESS: Container 2507bcffec87160c916f7d1d5cee058ec47d2ae03c91328f88c4298d9dd4a874 started for 6333547
+=== Container logs for 6333547 ===
+l:\topit.me\20251029152832\
+http://www.topit.me/album/1310049
+Traceback (most recent call last):
+  File "/snippet.py", line 187, in <module>
+    DownloadAlbum("l:\\topit.me\\","1310049")
+  File "/snippet.py", line 135, in DownloadAlbum
+    spath=parse(pageUrl)
+          ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/lxml/html/__init__.py", line 918, in parse
+    return etree.parse(filename_or_url, parser, base_url=base_url, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "src/lxml/etree.pyx", line 3711, in lxml.etree.parse
+  File "src/lxml/parser.pxi", line 2031, in lxml.etree._parseDocument
+  File "src/lxml/parser.pxi", line 2057, in lxml.etree._parseDocumentFromURL
+  File "src/lxml/parser.pxi", line 1958, in lxml.etree._parseDocFromFile
+  File "src/lxml/parser.pxi", line 1230, in lxml.etree._BaseParser._parseDocFromFile
+  File "src/lxml/parser.pxi", line 647, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src/lxml/parser.pxi", line 765, in lxml.etree._handleParseResult
+  File "src/lxml/parser.pxi", line 687, in lxml.etree._raiseParseError
+OSError: Error reading file 'http://www.topit.me/album/1310049': failed to load "http://www.topit.me/album/1310049": Attempt to load network entity
+=== End of logs for 6333547 ===
+[2025-10-29 16:28:34] INFO: Container 2507bcffec87160c916f7d1d5cee058ec47d2ae03c91328f88c4298d9dd4a874 has stopped

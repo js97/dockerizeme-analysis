@@ -1,0 +1,21 @@
+=== Docker Run Log for 1702293 ===
+Started at: Mi 29. Okt 12:24:03 CET 2025
+
+[2025-10-29 12:24:10] START: Running container for 1702293
+[2025-10-29 12:24:11] SUCCESS: Container 980b3f6840b57f90500c551ae8a82daaf90f84b43f0763094c61bf4830fb6ca2 started for 1702293
+=== Container logs for 1702293 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 1, in <module>
+    from tastypie.fields import ListField
+  File "/usr/local/lib/python3.11/site-packages/tastypie/fields.py", line 15, in <module>
+    from tastypie.compat import datetime_safe
+  File "/usr/local/lib/python3.11/site-packages/tastypie/compat.py", line 30, in <module>
+    AUTH_USER_MODEL = settings.AUTH_USER_MODEL
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting AUTH_USER_MODEL, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 1702293 ===
+[2025-10-29 12:24:13] INFO: Container 980b3f6840b57f90500c551ae8a82daaf90f84b43f0763094c61bf4830fb6ca2 has stopped

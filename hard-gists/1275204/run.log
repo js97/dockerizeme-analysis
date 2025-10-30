@@ -1,0 +1,15 @@
+=== Docker Run Log for 1275204 ===
+Started at: Mi 29. Okt 12:04:40 CET 2025
+
+[2025-10-29 12:04:49] START: Running container for 1275204
+[2025-10-29 12:04:49] SUCCESS: Container d5269c3835ee3744319b691fe72320cf4b6cff3a0a241b6c5765c5b2322e68b8 started for 1275204
+=== Container logs for 1275204 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 5, in <module>
+    class UpdateBook(UpdateView):
+  File "/snippet.py", line 7, in UpdateBook
+    model = Book
+            ^^^^
+NameError: name 'Book' is not defined. Did you mean: 'bool'?
+=== End of logs for 1275204 ===
+[2025-10-29 12:04:51] INFO: Container d5269c3835ee3744319b691fe72320cf4b6cff3a0a241b6c5765c5b2322e68b8 has stopped

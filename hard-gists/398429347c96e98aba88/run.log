@@ -1,0 +1,23 @@
+=== Docker Run Log for 398429347c96e98aba88 ===
+Started at: Mi 29. Okt 14:07:31 CET 2025
+
+[2025-10-29 14:07:36] START: Running container for 398429347c96e98aba88
+[2025-10-29 14:07:36] SUCCESS: Container e72e94ed8fafd87f0cb7575af74169b58f01a382aaa77c3292bc9593f7d5d45a started for 398429347c96e98aba88
+=== Container logs for 398429347c96e98aba88 ===
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/pafy/pafy.py", line 48, in <module>
+    import youtube_dl
+ModuleNotFoundError: No module named 'youtube_dl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snippet.py", line 30, in <module>
+    import pafy
+  File "/usr/local/lib/python3.11/site-packages/pafy/__init__.py", line 7, in <module>
+    from .pafy import new
+  File "/usr/local/lib/python3.11/site-packages/pafy/pafy.py", line 51, in <module>
+    raise ImportError(
+ImportError: pafy: youtube-dl not found; you can use the internal backend by setting the environmental variable PAFY_BACKEND to "internal". It is not enabled by default because it is not as well maintained as the youtube-dl backend.
+=== End of logs for 398429347c96e98aba88 ===
+[2025-10-29 14:07:38] INFO: Container e72e94ed8fafd87f0cb7575af74169b58f01a382aaa77c3292bc9593f7d5d45a has stopped

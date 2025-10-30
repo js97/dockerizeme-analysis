@@ -1,0 +1,31 @@
+=== Docker Run Log for f884a43c59e26199591ec4e234d069f5 ===
+Started at: Mi 29. Okt 21:29:36 CET 2025
+
+[2025-10-29 21:29:47] START: Running container for f884a43c59e26199591ec4e234d069f5
+[2025-10-29 21:29:47] SUCCESS: Container b3acfa51a2a9a9b4cd71b7dc850be987539fb4fe13151257dd81d9591d5221e7 started for f884a43c59e26199591ec4e234d069f5
+=== Container logs for f884a43c59e26199591ec4e234d069f5 ===
+/snippet.py:14: DeprecationWarning: the imp module is deprecated in favour of importlib and slated for removal in Python 3.12; see the module's documentation for alternative uses
+  import imp
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/runtime.py", line 23, in <module>
+    from greenlet import getcurrent as get_ident  # pylint: disable=F0401
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'greenlet'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/runtime.py", line 26, in <module>
+    from thread import get_ident
+ModuleNotFoundError: No module named 'thread'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snippet.py", line 24, in <module>
+    import runtime as lambda_runtime
+  File "/usr/local/lib/python3.11/site-packages/runtime.py", line 28, in <module>
+    from dummy_thread import get_ident
+ModuleNotFoundError: No module named 'dummy_thread'
+=== End of logs for f884a43c59e26199591ec4e234d069f5 ===
+[2025-10-29 21:29:49] INFO: Container b3acfa51a2a9a9b4cd71b7dc850be987539fb4fe13151257dd81d9591d5221e7 has stopped

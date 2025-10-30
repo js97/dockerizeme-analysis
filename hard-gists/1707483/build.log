@@ -1,0 +1,125 @@
+=== Docker Build Log for 1707483 ===
+Started at: Mi 29. Okt 12:24:17 CET 2025
+
+[2025-10-29 12:24:17] START: Building image for 1707483
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 297B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 921B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/1707483/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","dj.choices"]
+#7 1.976 Collecting dj.choices
+#7 2.007   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 2.024   Preparing metadata (setup.py): started
+#7 2.422   Preparing metadata (setup.py): finished with status 'done'
+#7 2.536 Collecting django (from dj.choices)
+#7 2.545   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.581 Collecting six (from dj.choices)
+#7 2.589   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.636 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.644   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.682 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.690   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.715 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.030    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 26.7 MB/s eta 0:00:00
+#7 3.037 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.057 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.075 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.087    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.7 MB/s eta 0:00:00
+#7 3.123 Building wheels for collected packages: dj.choices
+#7 3.123   Building wheel for dj.choices (setup.py): started
+#7 3.290   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.290   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=9da93e5f1119404c0fff4c3244fd933e722cabc9e757a44a1f0372074b5d51ac
+#7 3.291   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.293 Successfully built dj.choices
+#7 3.337 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 4.720 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 4.720 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.808 
+#7 4.808 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.808 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.1s
+
+#8 [4/7] RUN ["pip","install","boto"]
+#8 0.524 Collecting boto
+#8 0.558   Downloading boto-2.49.0-py2.py3-none-any.whl.metadata (7.3 kB)
+#8 0.584 Downloading boto-2.49.0-py2.py3-none-any.whl (1.4 MB)
+#8 0.664    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 17.4 MB/s eta 0:00:00
+#8 0.708 Installing collected packages: boto
+#8 1.179 Successfully installed boto-2.49.0
+#8 1.179 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.185 
+#8 1.185 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.185 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.3s
+
+#9 [5/7] RUN ["pip","install","Django"]
+#9 0.452 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#9 0.456 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#9 0.457 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#9 0.501 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.507 
+#9 0.507 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.507 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.6s
+
+#10 [6/7] RUN ["pip","install","boto-mws"]
+#10 0.624 Collecting boto-mws
+#10 0.657   Downloading boto_mws-2.46.2-py2.py3-none-any.whl.metadata (7.3 kB)
+#10 0.786 Downloading boto_mws-2.46.2-py2.py3-none-any.whl (1.4 MB)
+#10 0.858    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 19.2 MB/s eta 0:00:00
+#10 0.905 Installing collected packages: boto-mws
+#10 1.912 Successfully installed boto-mws-2.46.2
+#10 1.912 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.917 
+#10 1.917 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.917 [notice] To update, run: pip install --upgrade pip
+#10 DONE 2.1s
+
+#11 [7/7] RUN ["pip","install","boto-patch"]
+#11 0.536 Collecting boto-patch
+#11 0.670   Downloading boto-patch-2.38.0.tar.gz (1.4 MB)
+#11 0.760      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 16.1 MB/s eta 0:00:00
+#11 0.895   Preparing metadata (setup.py): started
+#11 1.116   Preparing metadata (setup.py): finished with status 'done'
+#11 1.118 Building wheels for collected packages: boto-patch
+#11 1.123   Building wheel for boto-patch (setup.py): started
+#11 1.567   Building wheel for boto-patch (setup.py): finished with status 'done'
+#11 1.570   Created wheel for boto-patch: filename=boto_patch-2.38.0-py2.py3-none-any.whl size=1340252 sha256=5d519de4cad43ed40bb29a45e620717a409a5c6e58365262d3b23284ccb105d4
+#11 1.570   Stored in directory: /root/.cache/pip/wheels/dc/8d/91/973468dc17204b5976e1d226556d1ac8be31894bdbb8cb28cf
+#11 1.574 Successfully built boto-patch
+#11 1.612 Installing collected packages: boto-patch
+#11 2.610 Successfully installed boto-patch-2.38.0
+#11 2.610 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 2.615 
+#11 2.615 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 2.615 [notice] To update, run: pip install --upgrade pip
+#11 DONE 2.8s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.7s done
+#12 writing image sha256:83783564f53f14a322f6dc3bc4232aea2e80e7174cf5f40415d53cc652b40bec done
+#12 naming to docker.io/library/test-image-1707483 done
+#12 DONE 0.7s
+
+View build details: docker-desktop://dashboard/build/default/default/aoxrvbgpbik11xfce84fqtu0j
+[2025-10-29 12:24:30] SUCCESS: Build completed for 1707483

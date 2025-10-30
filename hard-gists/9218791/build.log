@@ -1,0 +1,77 @@
+=== Docker Build Log for 9218791 ===
+Started at: Mi 29. Okt 18:21:45 CET 2025
+
+[2025-10-29 18:21:45] START: Building image for 9218791
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 199B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.36kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/9218791/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","pillow"]
+#7 2.059 Collecting pillow
+#7 2.102   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#7 2.145 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#7 2.443    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 23.8 MB/s eta 0:00:00
+#7 2.517 Installing collected packages: pillow
+#7 2.751 Successfully installed pillow-12.0.0
+#7 2.752 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.847 
+#7 2.847 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.847 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.1s
+
+#8 [4/4] RUN ["pip","install","colormath"]
+#8 0.614 Collecting colormath
+#8 0.647   Downloading colormath-3.0.0.tar.gz (39 kB)
+#8 0.666   Preparing metadata (setup.py): started
+#8 1.087   Preparing metadata (setup.py): finished with status 'done'
+#8 1.285 Collecting numpy (from colormath)
+#8 1.295   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 1.314      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 3.1 MB/s eta 0:00:00
+#8 1.362 Collecting networkx>=2.0 (from colormath)
+#8 1.370   Downloading networkx-3.5-py3-none-any.whl.metadata (6.3 kB)
+#8 1.408 Downloading networkx-3.5-py3-none-any.whl (2.0 MB)
+#8 1.495    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 23.6 MB/s eta 0:00:00
+#8 1.506 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#8 2.267    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 18.5 MB/s eta 0:00:00
+#8 2.312 Building wheels for collected packages: colormath
+#8 2.312   Building wheel for colormath (setup.py): started
+#8 2.488   Building wheel for colormath (setup.py): finished with status 'done'
+#8 2.489   Created wheel for colormath: filename=colormath-3.0.0-py3-none-any.whl size=39502 sha256=7431861b2c31e9ef3e5aee8c54f6f8aeebbba6380f209d45d1f4c3eccab86400
+#8 2.489   Stored in directory: /root/.cache/pip/wheels/f5/ce/f7/7039d7b57e1a27fc2f6bb2b2abed1be362eefece03caf2fb9a
+#8 2.491 Successfully built colormath
+#8 2.569 Installing collected packages: numpy, networkx, colormath
+#8 4.777 Successfully installed colormath-3.0.0 networkx-3.5 numpy-2.3.4
+#8 4.777 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 4.782 
+#8 4.782 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 4.782 [notice] To update, run: pip install --upgrade pip
+#8 DONE 5.4s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.5s done
+#9 writing image sha256:8f2a5d4207831df1877a8cdbb9b12e728416e59c037a1ad8038ea782c43cea99 done
+#9 naming to docker.io/library/test-image-9218791 done
+#9 DONE 0.5s
+
+View build details: docker-desktop://dashboard/build/default/default/ycvd4a0l0u2zkhlz1tey3izy9
+[2025-10-29 18:21:54] SUCCESS: Build completed for 9218791

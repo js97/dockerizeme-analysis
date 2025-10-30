@@ -1,0 +1,15 @@
+=== Docker Run Log for e5fe0a832872c2b1cebe473c7cf6fb07 ===
+Started at: Mi 29. Okt 20:46:26 CET 2025
+
+[2025-10-29 20:46:57] START: Running container for e5fe0a832872c2b1cebe473c7cf6fb07
+[2025-10-29 20:46:58] SUCCESS: Container 202f15e3c6fe8b58df1b980c428f908ab3d4efd8d6873166f5b083d1c20d9fec started for e5fe0a832872c2b1cebe473c7cf6fb07
+=== Container logs for e5fe0a832872c2b1cebe473c7cf6fb07 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 51, in <module>
+    GdaxStream()
+  File "/snippet.py", line 17, in __init__
+    self.ws = websocket.WebSocketApp(
+              ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'websocket' has no attribute 'WebSocketApp'. Did you mean: 'WebSocket'?
+=== End of logs for e5fe0a832872c2b1cebe473c7cf6fb07 ===
+[2025-10-29 20:47:00] INFO: Container 202f15e3c6fe8b58df1b980c428f908ab3d4efd8d6873166f5b083d1c20d9fec has stopped

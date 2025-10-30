@@ -1,0 +1,283 @@
+=== Docker Build Log for 756c86fdad219867c0f4 ===
+Started at: Mi 29. Okt 17:13:02 CET 2025
+
+[2025-10-29 17:13:02] START: Building image for 756c86fdad219867c0f4
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 569B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.60kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/15] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/15] COPY hard-gists/756c86fdad219867c0f4/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/15] RUN ["pip","install","image"]
+#7 2.040 Collecting image
+#7 2.075   Downloading image-1.5.33.tar.gz (15 kB)
+#7 2.091   Preparing metadata (setup.py): started
+#7 2.523   Preparing metadata (setup.py): finished with status 'done'
+#7 2.739 Collecting pillow (from image)
+#7 2.750   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#7 2.870 Collecting django (from image)
+#7 2.878   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.919 Collecting six (from image)
+#7 2.927   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.977 Collecting asgiref>=3.8.1 (from django->image)
+#7 2.986   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 3.027 Collecting sqlparse>=0.3.1 (from django->image)
+#7 3.035   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 3.076 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.438    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 23.1 MB/s eta 0:00:00
+#7 3.448 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#7 3.719    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 26.1 MB/s eta 0:00:00
+#7 3.727 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.745 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.768 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.779    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.7 MB/s eta 0:00:00
+#7 3.851 Building wheels for collected packages: image
+#7 3.851   Building wheel for image (setup.py): started
+#7 4.044   Building wheel for image (setup.py): finished with status 'done'
+#7 4.045   Created wheel for image: filename=image-1.5.33-py2.py3-none-any.whl size=19554 sha256=f7d53a8a8588d8acb10152a57bf7f0624e8ca1ceb1577002db65e2c997d276d5
+#7 4.045   Stored in directory: /root/.cache/pip/wheels/62/40/4f/3c9a8d0f22a1a6f966975a460e5cb509a1e7dc42e2ce5d9a6d
+#7 4.047 Successfully built image
+#7 4.118 Installing collected packages: sqlparse, six, pillow, asgiref, django, image
+#7 6.021 Successfully installed asgiref-3.10.0 django-5.2.7 image-1.5.33 pillow-12.0.0 six-1.17.0 sqlparse-0.5.3
+#7 6.022 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 6.123 
+#7 6.123 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 6.123 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.7s
+
+#8 [ 4/15] RUN ["pip","install","PyYAML"]
+#8 0.625 Collecting PyYAML
+#8 0.662   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#8 0.682 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#8 0.748    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 12.5 MB/s eta 0:00:00
+#8 0.813 Installing collected packages: PyYAML
+#8 0.889 Successfully installed PyYAML-6.0.3
+#8 0.890 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.895 
+#8 0.895 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.895 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.0s
+
+#9 [ 5/15] RUN ["pip","install","requests"]
+#9 0.625 Collecting requests
+#9 0.668   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#9 0.797 Collecting charset_normalizer<4,>=2 (from requests)
+#9 0.806   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#9 0.857 Collecting idna<4,>=2.5 (from requests)
+#9 0.866   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#9 0.931 Collecting urllib3<3,>=1.21.1 (from requests)
+#9 0.939   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#9 0.988 Collecting certifi>=2017.4.17 (from requests)
+#9 0.998   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#9 1.026 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#9 1.047    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 2.9 MB/s eta 0:00:00
+#9 1.056 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#9 1.072    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 10.3 MB/s eta 0:00:00
+#9 1.081 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#9 1.096    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.6 MB/s eta 0:00:00
+#9 1.104 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#9 1.115    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 6.4 MB/s eta 0:00:00
+#9 1.123 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#9 1.136    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 10.6 MB/s eta 0:00:00
+#9 1.209 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#9 1.473 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#9 1.473 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.479 
+#9 1.479 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.479 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.6s
+
+#10 [ 6/15] RUN ["pip","install","six"]
+#10 0.523 Requirement already satisfied: six in /usr/local/lib/python3.11/site-packages (1.17.0)
+#10 0.593 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.599 
+#10 0.599 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.599 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.7s
+
+#11 [ 7/15] RUN ["pip","install","pytz"]
+#11 0.639 Collecting pytz
+#11 0.675   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#11 0.717 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#11 0.766    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 10.7 MB/s eta 0:00:00
+#11 0.843 Installing collected packages: pytz
+#11 0.967 Successfully installed pytz-2025.2
+#11 0.967 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.972 
+#11 0.972 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.972 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.1s
+
+#12 [ 8/15] RUN ["pip","install","Jinja2"]
+#12 0.631 Collecting Jinja2
+#12 0.665   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#12 0.781 Collecting MarkupSafe>=2.0 (from Jinja2)
+#12 0.790   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#12 0.817 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#12 0.852    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 3.9 MB/s eta 0:00:00
+#12 0.859 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#12 0.945 Installing collected packages: MarkupSafe, Jinja2
+#12 1.070 Successfully installed Jinja2-3.1.6 MarkupSafe-3.0.3
+#12 1.070 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 1.077 
+#12 1.077 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 1.077 [notice] To update, run: pip install --upgrade pip
+#12 DONE 1.2s
+
+#13 [ 9/15] RUN ["pip","install","MarkupSafe"]
+#13 0.520 Requirement already satisfied: MarkupSafe in /usr/local/lib/python3.11/site-packages (3.0.3)
+#13 0.595 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 0.601 
+#13 0.601 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 0.601 [notice] To update, run: pip install --upgrade pip
+#13 DONE 0.7s
+
+#14 [10/15] RUN ["pip","install","Pygments"]
+#14 0.657 Collecting Pygments
+#14 0.693   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#14 0.718 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#14 0.788    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 18.0 MB/s eta 0:00:00
+#14 0.873 Installing collected packages: Pygments
+#14 1.443 Successfully installed Pygments-2.19.2
+#14 1.444 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#14 1.450 
+#14 1.450 [notice] A new release of pip is available: 24.0 -> 25.3
+#14 1.450 [notice] To update, run: pip install --upgrade pip
+#14 DONE 1.6s
+
+#15 [11/15] RUN ["pip","install","docutils"]
+#15 0.628 Collecting docutils
+#15 0.664   Downloading docutils-0.22.2-py3-none-any.whl.metadata (15 kB)
+#15 0.692 Downloading docutils-0.22.2-py3-none-any.whl (632 kB)
+#15 0.747    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 632.7/632.7 kB 11.7 MB/s eta 0:00:00
+#15 0.835 Installing collected packages: docutils
+#15 1.150 Successfully installed docutils-0.22.2
+#15 1.150 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#15 1.157 
+#15 1.157 [notice] A new release of pip is available: 24.0 -> 25.3
+#15 1.157 [notice] To update, run: pip install --upgrade pip
+#15 DONE 1.3s
+
+#16 [12/15] RUN ["pip","install","Sphinx"]
+#16 0.676 Collecting Sphinx
+#16 0.710   Downloading sphinx-8.2.3-py3-none-any.whl.metadata (7.0 kB)
+#16 0.781 Collecting sphinxcontrib-applehelp>=1.0.7 (from Sphinx)
+#16 0.792   Downloading sphinxcontrib_applehelp-2.0.0-py3-none-any.whl.metadata (2.3 kB)
+#16 0.835 Collecting sphinxcontrib-devhelp>=1.0.6 (from Sphinx)
+#16 0.844   Downloading sphinxcontrib_devhelp-2.0.0-py3-none-any.whl.metadata (2.3 kB)
+#16 0.879 Collecting sphinxcontrib-htmlhelp>=2.0.6 (from Sphinx)
+#16 0.889   Downloading sphinxcontrib_htmlhelp-2.1.0-py3-none-any.whl.metadata (2.3 kB)
+#16 0.935 Collecting sphinxcontrib-jsmath>=1.0.1 (from Sphinx)
+#16 0.943   Downloading sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl.metadata (1.4 kB)
+#16 0.987 Collecting sphinxcontrib-qthelp>=1.0.6 (from Sphinx)
+#16 0.995   Downloading sphinxcontrib_qthelp-2.0.0-py3-none-any.whl.metadata (2.3 kB)
+#16 1.049 Collecting sphinxcontrib-serializinghtml>=1.1.9 (from Sphinx)
+#16 1.057   Downloading sphinxcontrib_serializinghtml-2.0.0-py3-none-any.whl.metadata (2.4 kB)
+#16 1.081 Requirement already satisfied: Jinja2>=3.1 in /usr/local/lib/python3.11/site-packages (from Sphinx) (3.1.6)
+#16 1.082 Requirement already satisfied: Pygments>=2.17 in /usr/local/lib/python3.11/site-packages (from Sphinx) (2.19.2)
+#16 1.131 Collecting docutils<0.22,>=0.20 (from Sphinx)
+#16 1.140   Downloading docutils-0.21.2-py3-none-any.whl.metadata (2.8 kB)
+#16 1.180 Collecting snowballstemmer>=2.2 (from Sphinx)
+#16 1.188   Downloading snowballstemmer-3.0.1-py3-none-any.whl.metadata (7.9 kB)
+#16 1.233 Collecting babel>=2.13 (from Sphinx)
+#16 1.241   Downloading babel-2.17.0-py3-none-any.whl.metadata (2.0 kB)
+#16 1.282 Collecting alabaster>=0.7.14 (from Sphinx)
+#16 1.290   Downloading alabaster-1.0.0-py3-none-any.whl.metadata (2.8 kB)
+#16 1.329 Collecting imagesize>=1.3 (from Sphinx)
+#16 1.337   Downloading imagesize-1.4.1-py2.py3-none-any.whl.metadata (1.5 kB)
+#16 1.348 Requirement already satisfied: requests>=2.30.0 in /usr/local/lib/python3.11/site-packages (from Sphinx) (2.32.5)
+#16 1.376 Collecting roman-numerals-py>=1.0.0 (from Sphinx)
+#16 1.388   Downloading roman_numerals_py-3.1.0-py3-none-any.whl.metadata (3.6 kB)
+#16 1.443 Collecting packaging>=23.0 (from Sphinx)
+#16 1.452   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#16 1.476 Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.11/site-packages (from Jinja2>=3.1->Sphinx) (3.0.3)
+#16 1.486 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests>=2.30.0->Sphinx) (3.4.4)
+#16 1.487 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests>=2.30.0->Sphinx) (3.11)
+#16 1.488 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests>=2.30.0->Sphinx) (2.5.0)
+#16 1.489 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests>=2.30.0->Sphinx) (2025.10.5)
+#16 1.551 Downloading sphinx-8.2.3-py3-none-any.whl (3.6 MB)
+#16 1.707    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 23.3 MB/s eta 0:00:00
+#16 1.716 Downloading alabaster-1.0.0-py3-none-any.whl (13 kB)
+#16 1.738 Downloading babel-2.17.0-py3-none-any.whl (10.2 MB)
+#16 2.148    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 24.9 MB/s eta 0:00:00
+#16 2.159 Downloading docutils-0.21.2-py3-none-any.whl (587 kB)
+#16 2.191    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 587.4/587.4 kB 19.3 MB/s eta 0:00:00
+#16 2.198 Downloading imagesize-1.4.1-py2.py3-none-any.whl (8.8 kB)
+#16 2.222 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#16 2.248    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 2.3 MB/s eta 0:00:00
+#16 2.256 Downloading roman_numerals_py-3.1.0-py3-none-any.whl (7.7 kB)
+#16 2.277 Downloading snowballstemmer-3.0.1-py3-none-any.whl (103 kB)
+#16 2.291    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 7.2 MB/s eta 0:00:00
+#16 2.298 Downloading sphinxcontrib_applehelp-2.0.0-py3-none-any.whl (119 kB)
+#16 2.317    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 119.3/119.3 kB 6.4 MB/s eta 0:00:00
+#16 2.325 Downloading sphinxcontrib_devhelp-2.0.0-py3-none-any.whl (82 kB)
+#16 2.345    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 82.5/82.5 kB 3.9 MB/s eta 0:00:00
+#16 2.355 Downloading sphinxcontrib_htmlhelp-2.1.0-py3-none-any.whl (98 kB)
+#16 2.380    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 3.7 MB/s eta 0:00:00
+#16 2.388 Downloading sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl (5.1 kB)
+#16 2.408 Downloading sphinxcontrib_qthelp-2.0.0-py3-none-any.whl (88 kB)
+#16 2.428    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.7/88.7 kB 4.3 MB/s eta 0:00:00
+#16 2.436 Downloading sphinxcontrib_serializinghtml-2.0.0-py3-none-any.whl (92 kB)
+#16 2.455    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 92.1/92.1 kB 4.8 MB/s eta 0:00:00
+#16 2.629 Installing collected packages: sphinxcontrib-serializinghtml, sphinxcontrib-qthelp, sphinxcontrib-jsmath, sphinxcontrib-htmlhelp, sphinxcontrib-devhelp, sphinxcontrib-applehelp, snowballstemmer, roman-numerals-py, packaging, imagesize, docutils, babel, alabaster, Sphinx
+#16 3.014   Attempting uninstall: docutils
+#16 3.019     Found existing installation: docutils 0.22.2
+#16 3.034     Uninstalling docutils-0.22.2:
+#16 3.349       Successfully uninstalled docutils-0.22.2
+#16 4.509 Successfully installed Sphinx-8.2.3 alabaster-1.0.0 babel-2.17.0 docutils-0.21.2 imagesize-1.4.1 packaging-25.0 roman-numerals-py-3.1.0 snowballstemmer-3.0.1 sphinxcontrib-applehelp-2.0.0 sphinxcontrib-devhelp-2.0.0 sphinxcontrib-htmlhelp-2.1.0 sphinxcontrib-jsmath-1.0.1 sphinxcontrib-qthelp-2.0.0 sphinxcontrib-serializinghtml-2.0.0
+#16 4.509 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#16 4.516 
+#16 4.516 [notice] A new release of pip is available: 24.0 -> 25.3
+#16 4.516 [notice] To update, run: pip install --upgrade pip
+#16 DONE 5.1s
+
+#17 [13/15] RUN ["pip","install","snowballstemmer"]
+#17 0.510 Requirement already satisfied: snowballstemmer in /usr/local/lib/python3.11/site-packages (3.0.1)
+#17 0.635 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#17 0.641 
+#17 0.641 [notice] A new release of pip is available: 24.0 -> 25.3
+#17 0.641 [notice] To update, run: pip install --upgrade pip
+#17 DONE 0.7s
+
+#18 [14/15] RUN ["pip","install","alabaster"]
+#18 0.525 Requirement already satisfied: alabaster in /usr/local/lib/python3.11/site-packages (1.0.0)
+#18 0.656 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#18 0.663 
+#18 0.663 [notice] A new release of pip is available: 24.0 -> 25.3
+#18 0.663 [notice] To update, run: pip install --upgrade pip
+#18 DONE 0.7s
+
+#19 [15/15] RUN ["pip","install","imagesize"]
+#19 0.522 Requirement already satisfied: imagesize in /usr/local/lib/python3.11/site-packages (1.4.1)
+#19 0.646 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#19 0.653 
+#19 0.653 [notice] A new release of pip is available: 24.0 -> 25.3
+#19 0.653 [notice] To update, run: pip install --upgrade pip
+#19 DONE 0.7s
+
+#20 exporting to image
+#20 exporting layers
+#20 exporting layers 1.3s done
+#20 writing image sha256:4bf3e3e744e15ed91c4ed6452b435886abe4cbc91477b2e419e37b6c7b69d991 done
+#20 naming to docker.io/library/test-image-756c86fdad219867c0f4 done
+#20 DONE 1.3s
+
+View build details: docker-desktop://dashboard/build/default/default/iy1gvvjc31rn2s250d9pl4quf
+[2025-10-29 17:13:27] SUCCESS: Build completed for 756c86fdad219867c0f4

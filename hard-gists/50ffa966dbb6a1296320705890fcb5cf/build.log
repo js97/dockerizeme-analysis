@@ -1,0 +1,47 @@
+=== Docker Build Log for 50ffa966dbb6a1296320705890fcb5cf ===
+Started at: Mi 29. Okt 15:22:07 CET 2025
+
+[2025-10-29 15:22:07] START: Building image for 50ffa966dbb6a1296320705890fcb5cf
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 187B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 636B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/50ffa966dbb6a1296320705890fcb5cf/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","hou"]
+#7 2.042 Collecting hou
+#7 2.075   Downloading hou-0.1.0-py3-none-any.whl.metadata (288 bytes)
+#7 2.097 Downloading hou-0.1.0-py3-none-any.whl (1.3 kB)
+#7 2.141 Installing collected packages: hou
+#7 2.157 Successfully installed hou-0.1.0
+#7 2.157 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.247 
+#7 2.247 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.247 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.4s
+
+#8 exporting to image
+#8 exporting layers 0.1s done
+#8 writing image sha256:558506bb5c25f820a50f47e151ec100e7ebc21b48fb1bf1269fbad8e7452aff5 done
+#8 naming to docker.io/library/test-image-50ffa966dbb6a1296320705890fcb5cf done
+#8 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/4zdgoefcvbklfknop12oc9ok8
+[2025-10-29 15:22:10] SUCCESS: Build completed for 50ffa966dbb6a1296320705890fcb5cf

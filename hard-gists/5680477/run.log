@@ -1,0 +1,12 @@
+=== Docker Run Log for 5680477 ===
+Started at: Mi 29. Okt 15:53:18 CET 2025
+
+[2025-10-29 15:53:26] START: Running container for 5680477
+[2025-10-29 15:53:26] SUCCESS: Container ef8a1ed2786ad2dad47a859fb23fefa13955fde00a51f8d8bd9ba22dce5c095b started for 5680477
+=== Container logs for 5680477 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 2, in <module>
+    from itsdangerous import JSONWebSignatureSerializer, BadSignature, SignatureExpired
+ImportError: cannot import name 'JSONWebSignatureSerializer' from 'itsdangerous' (/usr/local/lib/python3.11/site-packages/itsdangerous/__init__.py)
+=== End of logs for 5680477 ===
+[2025-10-29 15:53:28] INFO: Container ef8a1ed2786ad2dad47a859fb23fefa13955fde00a51f8d8bd9ba22dce5c095b has stopped

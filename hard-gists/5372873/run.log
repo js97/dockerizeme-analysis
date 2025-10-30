@@ -1,0 +1,12 @@
+=== Docker Run Log for 5372873 ===
+Started at: Mi 29. Okt 15:37:36 CET 2025
+
+[2025-10-29 15:37:36] START: Running container for 5372873
+[2025-10-29 15:37:37] SUCCESS: Container fb7547109a5586971428de04e027e4a57bcc72b7e1126351e56db3b23eec15f3 started for 5372873
+=== Container logs for 5372873 ===
+  File "/snippet.py", line 57
+    print 'AuC score on training data:',auc_score(y_train,p_train.T)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 5372873 ===
+[2025-10-29 15:37:39] INFO: Container fb7547109a5586971428de04e027e4a57bcc72b7e1126351e56db3b23eec15f3 has stopped

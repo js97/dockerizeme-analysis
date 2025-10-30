@@ -1,0 +1,17 @@
+=== Docker Run Log for 1776202 ===
+Started at: Mi 29. Okt 12:27:32 CET 2025
+
+[2025-10-29 12:27:39] START: Running container for 1776202
+[2025-10-29 12:27:39] SUCCESS: Container 74cb18554dab50d5f6cc0ef90c66b95e60cc6e67320ab969d5fd6ea2eca84435 started for 1776202
+=== Container logs for 1776202 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 9, in <module>
+    USE_X_ACCEL_REDIRECT = getattr(settings, 'USE_X_ACCEL_REDIRECT', False)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting USE_X_ACCEL_REDIRECT, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 1776202 ===
+[2025-10-29 12:27:41] INFO: Container 74cb18554dab50d5f6cc0ef90c66b95e60cc6e67320ab969d5fd6ea2eca84435 has stopped

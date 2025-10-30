@@ -1,0 +1,143 @@
+=== Docker Build Log for efe482bad12c2fae6afe ===
+Started at: Mi 29. Okt 21:15:25 CET 2025
+
+[2025-10-29 21:15:25] START: Building image for efe482bad12c2fae6afe
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 552B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.04kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/12] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/12] COPY hard-gists/efe482bad12c2fae6afe/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/12] RUN ["apt-get","update"]
+#7 0.281 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.291 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.313 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.347 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 1.147 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 1.154 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.744 Fetched 9833 kB in 2s (6528 kB/s)
+#7 1.744 Reading package lists...
+#7 DONE 2.4s
+
+#8 [ 4/12] RUN ["pip","install","twitter.common.finagle-thrift"]
+#8 1.995 Collecting twitter.common.finagle-thrift
+#8 2.038   Downloading twitter.common.finagle-thrift-0.3.9.tar.gz (6.3 kB)
+#8 2.051   Preparing metadata (setup.py): started
+#8 2.429   Preparing metadata (setup.py): finished with status 'done'
+#8 2.430 Building wheels for collected packages: twitter.common.finagle-thrift
+#8 2.431   Building wheel for twitter.common.finagle-thrift (setup.py): started
+#8 2.604   Building wheel for twitter.common.finagle-thrift (setup.py): finished with status 'done'
+#8 2.605   Created wheel for twitter.common.finagle-thrift: filename=twitter_common_finagle_thrift-0.3.9-py3-none-any.whl size=7837 sha256=b15a1994e8769ea52dbbfc1b454186060677e669d1224f8dbe52b84ca80fac6f
+#8 2.605   Stored in directory: /root/.cache/pip/wheels/8c/a4/9c/b5c9b4d11348ea1265e2a8c840662ed50edbc4f9d94fd18d46
+#8 2.608 Successfully built twitter.common.finagle-thrift
+#8 2.637 Installing collected packages: twitter.common.finagle-thrift
+#8 2.655 Successfully installed twitter.common.finagle-thrift-0.3.9
+#8 2.655 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.792 
+#8 2.792 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.792 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.0s
+
+#9 [ 5/12] RUN ["pip","install","twitter.common.service-thrift"]
+#9 0.703 Collecting twitter.common.service-thrift
+#9 0.752   Downloading twitter.common.service-thrift-0.3.9.tar.gz (3.1 kB)
+#9 0.768   Preparing metadata (setup.py): started
+#9 0.884   Preparing metadata (setup.py): finished with status 'done'
+#9 0.886 Building wheels for collected packages: twitter.common.service-thrift
+#9 0.890   Building wheel for twitter.common.service-thrift (setup.py): started
+#9 1.024   Building wheel for twitter.common.service-thrift (setup.py): finished with status 'done'
+#9 1.025   Created wheel for twitter.common.service-thrift: filename=twitter_common_service_thrift-0.3.9-py3-none-any.whl size=4889 sha256=1bb0532b885036c7ed08906fd3af65e4a8f537aef0589897364c81d6bcd09e25
+#9 1.025   Stored in directory: /root/.cache/pip/wheels/7e/55/e4/b1fdba8c145d46bda2b228724a92959c8edfd83bc83455d8c3
+#9 1.027 Successfully built twitter.common.service-thrift
+#9 1.055 Installing collected packages: twitter.common.service-thrift
+#9 1.112 Successfully installed twitter.common.service-thrift-0.3.9
+#9 1.113 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.118 
+#9 1.118 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.118 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.2s
+
+#10 [ 6/12] RUN ["pip","install","nltk"]
+#10 0.521 Collecting nltk
+#10 0.562   Downloading nltk-3.9.2-py3-none-any.whl.metadata (3.2 kB)
+#10 0.622 Collecting click (from nltk)
+#10 0.632   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#10 0.681 Collecting joblib (from nltk)
+#10 0.692   Downloading joblib-1.5.2-py3-none-any.whl.metadata (5.6 kB)
+#10 1.112 Collecting regex>=2021.8.3 (from nltk)
+#10 1.123   Downloading regex-2025.10.23-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+#10 1.156      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.5/40.5 kB 990.9 kB/s eta 0:00:00
+#10 1.218 Collecting tqdm (from nltk)
+#10 1.234   Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+#10 1.250      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.7/57.7 kB 3.2 MB/s eta 0:00:00
+#10 1.272 Downloading nltk-3.9.2-py3-none-any.whl (1.5 MB)
+#10 1.452    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 8.4 MB/s eta 0:00:00
+#10 1.461 Downloading regex-2025.10.23-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (800 kB)
+#10 1.533    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 800.3/800.3 kB 11.5 MB/s eta 0:00:00
+#10 1.541 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#10 1.558    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 6.7 MB/s eta 0:00:00
+#10 1.566 Downloading joblib-1.5.2-py3-none-any.whl (308 kB)
+#10 1.595    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 308.4/308.4 kB 11.0 MB/s eta 0:00:00
+#10 1.604 Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+#10 1.621    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 4.5 MB/s eta 0:00:00
+#10 1.678 Installing collected packages: tqdm, regex, joblib, click, nltk
+#10 2.513 Successfully installed click-8.3.0 joblib-1.5.2 nltk-3.9.2 regex-2025.10.23 tqdm-4.67.1
+#10 2.514 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 2.519 
+#10 2.519 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 2.519 [notice] To update, run: pip install --upgrade pip
+#10 DONE 2.8s
+
+#11 [ 7/12] RUN ["apt-get","install","-y","python-pip"]
+#11 0.276 Reading package lists...
+#11 0.701 Building dependency tree...
+#11 0.809 Reading state information...
+#11 0.825 Package python-pip is not available, but is referred to by another package.
+#11 0.825 This may mean that the package is missing, has been obsoleted, or
+#11 0.825 is only available from another source
+#11 0.825 However the following packages replace it:
+#11 0.825   python3-pip
+#11 0.825 
+#11 0.827 E: Package 'python-pip' has no installation candidate
+#11 ERROR: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+------
+ > [ 7/12] RUN ["apt-get","install","-y","python-pip"]:
+
+
+0.825 Package python-pip is not available, but is referred to by another package.
+0.825 This may mean that the package is missing, has been obsoleted, or
+0.825 is only available from another source
+0.825 However the following packages replace it:
+0.825   python3-pip
+0.825 
+0.827 E: Package 'python-pip' has no installation candidate
+------
+Dockerfile:7
+--------------------
+   5 |     RUN ["pip","install","twitter.common.service-thrift"]
+   6 |     RUN ["pip","install","nltk"]
+   7 | >>> RUN ["apt-get","install","-y","python-pip"]
+   8 |     RUN ["apt-get","install","-y","python-dev"]
+   9 |     RUN ["apt-get","install","-y","git"]
+--------------------
+ERROR: failed to build: failed to solve: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/default/default/uvhfq0shcaetmao5mpv11ocuz
+[2025-10-29 21:15:35] ERROR: Build failed for efe482bad12c2fae6afe

@@ -1,0 +1,15 @@
+=== Docker Run Log for 80b4b93baa5b33ed25e1823d3494f0a8 ===
+Started at: Mi 29. Okt 17:38:46 CET 2025
+
+[2025-10-29 17:38:51] START: Running container for 80b4b93baa5b33ed25e1823d3494f0a8
+[2025-10-29 17:38:51] SUCCESS: Container 7e11bf159890b45da9631dabc5eed91e909907b8de1ca8f630d94541e0f20633 started for 80b4b93baa5b33ed25e1823d3494f0a8
+=== Container logs for 80b4b93baa5b33ed25e1823d3494f0a8 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 42, in <module>
+    main()
+  File "/snippet.py", line 28, in main
+    with open(sys.argv[1], 'r') as dotcom_names:
+              ~~~~~~~~^^^
+IndexError: list index out of range
+=== End of logs for 80b4b93baa5b33ed25e1823d3494f0a8 ===
+[2025-10-29 17:38:53] INFO: Container 7e11bf159890b45da9631dabc5eed91e909907b8de1ca8f630d94541e0f20633 has stopped

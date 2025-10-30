@@ -1,0 +1,121 @@
+=== Docker Build Log for 11242170 ===
+Started at: Mi 29. Okt 11:53:05 CET 2025
+
+[2025-10-29 11:53:05] START: Building image for 11242170
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 263B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 592B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/6] COPY hard-gists/11242170/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/6] RUN ["pip","install","clip.py"]
+#7 2.338 Collecting clip.py
+#7 2.381   Downloading clip.py-0.3.2-py2.py3-none-any.whl.metadata (406 bytes)
+#7 2.402 Downloading clip.py-0.3.2-py2.py3-none-any.whl (7.8 kB)
+#7 2.452 Installing collected packages: clip.py
+#7 2.472 Successfully installed clip.py-0.3.2
+#7 2.473 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.573 
+#7 2.573 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.573 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.8s
+
+#8 [4/6] RUN ["pip","install","clipboard"]
+#8 0.721 Collecting clipboard
+#8 0.763   Downloading clipboard-0.0.4.tar.gz (1.7 kB)
+#8 0.776   Preparing metadata (setup.py): started
+#8 1.293   Preparing metadata (setup.py): finished with status 'done'
+#8 1.329 Collecting pyperclip>=1.3 (from clipboard)
+#8 1.339   Downloading pyperclip-1.11.0-py3-none-any.whl.metadata (2.4 kB)
+#8 1.358 Downloading pyperclip-1.11.0-py3-none-any.whl (11 kB)
+#8 1.371 Building wheels for collected packages: clipboard
+#8 1.372   Building wheel for clipboard (setup.py): started
+#8 1.603   Building wheel for clipboard (setup.py): finished with status 'done'
+#8 1.604   Created wheel for clipboard: filename=clipboard-0.0.4-py3-none-any.whl size=1902 sha256=04bd772eb6d7d0129ec0a07a383f374a5435bd8776c392c63aa0f9a33ab209a0
+#8 1.604   Stored in directory: /root/.cache/pip/wheels/20/0a/a4/f32deed892cc142168e64d59e26c7906fb7b6fcdb0e3bfb71f
+#8 1.607 Successfully built clipboard
+#8 1.648 Installing collected packages: pyperclip, clipboard
+#8 1.682 Successfully installed clipboard-0.0.4 pyperclip-1.11.0
+#8 1.682 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.689 
+#8 1.689 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.689 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.9s
+
+#9 [5/6] RUN ["pip","install","pillow"]
+#9 0.923 Collecting pillow
+#9 0.956   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#9 1.001 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#9 1.301    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 23.8 MB/s eta 0:00:00
+#9 1.382 Installing collected packages: pillow
+#9 1.732 Successfully installed pillow-12.0.0
+#9 1.732 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.738 
+#9 1.738 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.738 [notice] To update, run: pip install --upgrade pip
+#9 DONE 2.0s
+
+#10 [6/6] RUN ["pip","install","photos"]
+#10 0.600 Collecting photos
+#10 0.640   Downloading photos-0.0.5-py3-none-any.whl.metadata (600 bytes)
+#10 0.700 Collecting click>=7.0 (from photos)
+#10 0.709   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#10 0.756 Collecting colorama>=0.4.0 (from photos)
+#10 0.764   Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+#10 0.810 Collecting ExifRead (from photos)
+#10 0.819   Downloading exifread-3.5.1-py3-none-any.whl.metadata (10 kB)
+#10 0.964 Collecting filesystemlib (from photos)
+#10 0.974   Downloading filesystemlib-0.1.0-py3-none-any.whl.metadata (532 bytes)
+#10 1.112 Collecting pyheif (from photos)
+#10 1.122   Downloading pyheif-0.8.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.7 kB)
+#10 1.278 Collecting cffi>=1.0.0 (from pyheif->photos)
+#10 1.287   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+#10 1.325 Collecting pycparser (from cffi>=1.0.0->pyheif->photos)
+#10 1.333   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+#10 1.357 Downloading photos-0.0.5-py3-none-any.whl (6.5 kB)
+#10 1.384 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#10 1.406    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 5.1 MB/s eta 0:00:00
+#10 1.414 Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+#10 1.434 Downloading exifread-3.5.1-py3-none-any.whl (59 kB)
+#10 1.451    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.7/59.7 kB 3.5 MB/s eta 0:00:00
+#10 1.461 Downloading filesystemlib-0.1.0-py3-none-any.whl (6.5 kB)
+#10 1.659 Downloading pyheif-0.8.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.3 MB)
+#10 2.293    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 8.3 MB/s eta 0:00:00
+#10 2.302 Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+#10 2.322    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 11.2 MB/s eta 0:00:00
+#10 2.330 Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+#10 2.344    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 9.0 MB/s eta 0:00:00
+#10 2.427 Installing collected packages: pycparser, filesystemlib, ExifRead, colorama, click, cffi, pyheif, photos
+#10 2.933 Successfully installed ExifRead-3.5.1 cffi-2.0.0 click-8.3.0 colorama-0.4.6 filesystemlib-0.1.0 photos-0.0.5 pycparser-2.23 pyheif-0.8.0
+#10 2.933 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 2.941 
+#10 2.941 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 2.941 [notice] To update, run: pip install --upgrade pip
+#10 DONE 3.2s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 0.2s done
+#11 writing image sha256:ecdf18378172880256b28a6baf69301d1d7fdc60772b2b52d7e59c313d9825d6 done
+#11 naming to docker.io/library/test-image-11242170 done
+#11 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/6ijop5s8tgejndfdxp4sqgofa
+[2025-10-29 11:53:15] SUCCESS: Build completed for 11242170

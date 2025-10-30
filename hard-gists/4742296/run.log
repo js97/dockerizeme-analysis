@@ -1,0 +1,24 @@
+=== Docker Run Log for 4742296 ===
+Started at: Mi 29. Okt 14:59:58 CET 2025
+
+[2025-10-29 15:00:22] START: Running container for 4742296
+[2025-10-29 15:00:22] SUCCESS: Container 824c1912bb741f3cfc5c343632c8a13a5745032b1e0ba34c177492cf4ab051db started for 4742296
+=== Container logs for 4742296 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 48, in <module>
+    main()
+  File "/snippet.py", line 20, in main
+    rows = [r for r in json.loads(data)['data'] if r[2]] # Only plot valid data
+                       ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/simplejson/__init__.py", line 514, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/simplejson/decoder.py", line 386, in decode
+    obj, end = self.raw_decode(s)
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/simplejson/decoder.py", line 416, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+=== End of logs for 4742296 ===
+[2025-10-29 15:00:24] INFO: Container 824c1912bb741f3cfc5c343632c8a13a5745032b1e0ba34c177492cf4ab051db has stopped

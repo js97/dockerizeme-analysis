@@ -1,0 +1,12 @@
+=== Docker Run Log for 1534135a419bb0b957b9 ===
+Started at: Mi 29. Okt 12:18:16 CET 2025
+
+[2025-10-29 12:18:17] START: Running container for 1534135a419bb0b957b9
+[2025-10-29 12:18:17] SUCCESS: Container efac3ee8eb289545ffe7d034473b2cf43c90995887ec81fe88958f9b4f178bdc started for 1534135a419bb0b957b9
+=== Container logs for 1534135a419bb0b957b9 ===
+  File "/snippet.py", line 60
+    print i, sess.run(cross_entropy, feed_dict={x: batch_xs, y_:batch_ys}), sess.run(meansq, feed_dict={x: batch_xs, y_:batch_ys})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 1534135a419bb0b957b9 ===
+[2025-10-29 12:18:19] INFO: Container efac3ee8eb289545ffe7d034473b2cf43c90995887ec81fe88958f9b4f178bdc has stopped

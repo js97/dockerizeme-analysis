@@ -1,0 +1,147 @@
+=== Docker Build Log for dfd7eb0ce2915d004367 ===
+Started at: Mi 29. Okt 20:37:49 CET 2025
+
+[2025-10-29 20:37:49] START: Building image for dfd7eb0ce2915d004367
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 353B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.09kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/9] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/9] COPY hard-gists/dfd7eb0ce2915d004367/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/9] RUN ["pip","install","sh"]
+#7 1.913 Collecting sh
+#7 1.950   Downloading sh-2.2.2-py3-none-any.whl.metadata (3.7 kB)
+#7 1.973 Downloading sh-2.2.2-py3-none-any.whl (38 kB)
+#7 2.021 Installing collected packages: sh
+#7 2.046 Successfully installed sh-2.2.2
+#7 2.046 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.143 
+#7 2.143 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.143 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.3s
+
+#8 [4/9] RUN ["pip","install","maya"]
+#8 0.632 Collecting maya
+#8 0.674   Downloading maya-0.6.1-py2.py3-none-any.whl.metadata (7.1 kB)
+#8 0.727 Collecting humanize (from maya)
+#8 0.737   Downloading humanize-4.14.0-py3-none-any.whl.metadata (7.8 kB)
+#8 0.818 Collecting pytz (from maya)
+#8 0.827   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#8 0.870 Collecting dateparser>=0.7.0 (from maya)
+#8 0.880   Downloading dateparser-1.2.2-py3-none-any.whl.metadata (29 kB)
+#8 0.929 Collecting tzlocal (from maya)
+#8 0.937   Downloading tzlocal-5.3.1-py3-none-any.whl.metadata (7.6 kB)
+#8 1.007 Collecting pendulum>=2.0.2 (from maya)
+#8 1.017   Downloading pendulum-3.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#8 1.169 Collecting snaptime (from maya)
+#8 1.184   Downloading snaptime-0.2.4.tar.gz (2.9 kB)
+#8 1.199   Preparing metadata (setup.py): started
+#8 1.611   Preparing metadata (setup.py): finished with status 'done'
+#8 1.651 Collecting python-dateutil>=2.7.0 (from dateparser>=0.7.0->maya)
+#8 1.661   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#8 2.031 Collecting regex>=2024.9.11 (from dateparser>=0.7.0->maya)
+#8 2.045   Downloading regex-2025.10.23-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+#8 2.064      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.5/40.5 kB 1.8 MB/s eta 0:00:00
+#8 2.102 Collecting tzdata>=2020.1 (from pendulum>=2.0.2->maya)
+#8 2.113   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#8 2.158 Collecting six>=1.5 (from python-dateutil>=2.7.0->dateparser>=0.7.0->maya)
+#8 2.167   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 2.192 Downloading maya-0.6.1-py2.py3-none-any.whl (12 kB)
+#8 2.223 Downloading dateparser-1.2.2-py3-none-any.whl (315 kB)
+#8 2.256    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 315.5/315.5 kB 9.8 MB/s eta 0:00:00
+#8 2.268 Downloading pendulum-3.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (353 kB)
+#8 2.296    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 353.7/353.7 kB 12.9 MB/s eta 0:00:00
+#8 2.311 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#8 2.344    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 16.4 MB/s eta 0:00:00
+#8 2.352 Downloading tzlocal-5.3.1-py3-none-any.whl (18 kB)
+#8 2.375 Downloading humanize-4.14.0-py3-none-any.whl (132 kB)
+#8 2.390    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.1/132.1 kB 8.5 MB/s eta 0:00:00
+#8 2.401 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#8 2.426    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 9.5 MB/s eta 0:00:00
+#8 2.435 Downloading regex-2025.10.23-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (800 kB)
+#8 2.481    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 800.3/800.3 kB 18.3 MB/s eta 0:00:00
+#8 2.490 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#8 2.516    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 14.7 MB/s eta 0:00:00
+#8 2.563 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 2.591 Building wheels for collected packages: snaptime
+#8 2.591   Building wheel for snaptime (setup.py): started
+#8 2.750   Building wheel for snaptime (setup.py): finished with status 'done'
+#8 2.751   Created wheel for snaptime: filename=snaptime-0.2.4-py3-none-any.whl size=3605 sha256=0c56883786cc9f021934075500fcad704b5e3c458e3f418067720c3167f3edc8
+#8 2.751   Stored in directory: /root/.cache/pip/wheels/af/cd/02/d3bb11d5c94237cbb0c7a2049d4ae314fdcbca899783d79d91
+#8 2.752 Successfully built snaptime
+#8 2.804 Installing collected packages: pytz, tzlocal, tzdata, six, regex, humanize, python-dateutil, snaptime, pendulum, dateparser, maya
+#8 3.431 Successfully installed dateparser-1.2.2 humanize-4.14.0 maya-0.6.1 pendulum-3.1.0 python-dateutil-2.9.0.post0 pytz-2025.2 regex-2025.10.23 six-1.17.0 snaptime-0.2.4 tzdata-2025.2 tzlocal-5.3.1
+#8 3.431 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 3.436 
+#8 3.436 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.436 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.7s
+
+#9 [5/9] RUN ["pip","install","PySide"]
+#9 0.623 Collecting PySide
+#9 0.661   Downloading PySide-1.2.4.tar.gz (9.3 MB)
+#9 1.245      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.3/9.3 MB 15.9 MB/s eta 0:00:00
+#9 1.661   Preparing metadata (setup.py): started
+#9 1.953   Preparing metadata (setup.py): finished with status 'error'
+#9 1.956   error: subprocess-exited-with-error
+#9 1.956   
+#9 1.956   × python setup.py egg_info did not run successfully.
+#9 1.956   │ exit code: 1
+#9 1.956   ╰─> [1 lines of output]
+#9 1.956       only these python versions are supported: [(2, 6), (2, 7), (3, 2), (3, 3), (3, 4)]
+#9 1.956       [end of output]
+#9 1.956   
+#9 1.956   note: This error originates from a subprocess, and is likely not a problem with pip.
+#9 1.957 error: metadata-generation-failed
+#9 1.957 
+#9 1.957 × Encountered error while generating package metadata.
+#9 1.957 ╰─> See above for output.
+#9 1.957 
+#9 1.957 note: This is an issue with the package mentioned above, not pip.
+#9 1.957 hint: See above for details.
+#9 1.962 
+#9 1.962 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.962 [notice] To update, run: pip install --upgrade pip
+#9 ERROR: process "pip install PySide" did not complete successfully: exit code: 1
+------
+ > [5/9] RUN ["pip","install","PySide"]:
+1.957 error: metadata-generation-failed
+1.957 
+1.957 × Encountered error while generating package metadata.
+1.957 ╰─> See above for output.
+1.957 
+1.957 note: This is an issue with the package mentioned above, not pip.
+1.957 hint: See above for details.
+1.962 
+1.962 [notice] A new release of pip is available: 24.0 -> 25.3
+1.962 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:5
+--------------------
+   3 |     RUN ["pip","install","sh"]
+   4 |     RUN ["pip","install","maya"]
+   5 | >>> RUN ["pip","install","PySide"]
+   6 |     RUN ["pip","install","six"]
+   7 |     RUN ["pip","install","pytest"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install PySide" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/2c0lg3e7owiqet31k4nwzqrzc
+[2025-10-29 20:37:58] ERROR: Build failed for dfd7eb0ce2915d004367

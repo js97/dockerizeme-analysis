@@ -1,0 +1,67 @@
+=== Docker Build Log for 93e0ba46f0fa6faf660d ===
+Started at: Mi 29. Okt 18:25:05 CET 2025
+
+[2025-10-29 18:25:05] START: Building image for 93e0ba46f0fa6faf660d
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 187B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.02kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/93e0ba46f0fa6faf660d/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","mesos.interface"]
+#7 2.198 Collecting mesos.interface
+#7 2.334   Downloading mesos.interface-1.7.2.tar.gz (44 kB)
+#7 2.354      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.3/44.3 kB 1.9 MB/s eta 0:00:00
+#7 2.358   Preparing metadata (setup.py): started
+#7 2.742   Preparing metadata (setup.py): finished with status 'done'
+#7 2.769 Collecting google-common>=0.0.1 (from mesos.interface)
+#7 2.907   Downloading google-common-0.0.1.tar.gz (1.4 kB)
+#7 2.924   Preparing metadata (setup.py): started
+#7 3.031   Preparing metadata (setup.py): finished with status 'done'
+#7 3.229 Collecting protobuf<4,>=3.5.0 (from mesos.interface)
+#7 3.247   Downloading protobuf-3.20.3-py2.py3-none-any.whl.metadata (720 bytes)
+#7 3.273 Downloading protobuf-3.20.3-py2.py3-none-any.whl (162 kB)
+#7 3.294    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 162.1/162.1 kB 7.8 MB/s eta 0:00:00
+#7 3.299 Building wheels for collected packages: mesos.interface, google-common
+#7 3.299   Building wheel for mesos.interface (setup.py): started
+#7 3.465   Building wheel for mesos.interface (setup.py): finished with status 'done'
+#7 3.466   Created wheel for mesos.interface: filename=mesos_interface-1.7.2-py3-none-any.whl size=45625 sha256=a8f7df39e2f8b2d43241d7fd24e72d3f160af182861be32bbc383bf861421aa3
+#7 3.466   Stored in directory: /root/.cache/pip/wheels/89/9f/44/d8a5723308ea89988980d0e8b966c092b6311f2bb1a899b395
+#7 3.467   Building wheel for google-common (setup.py): started
+#7 3.596   Building wheel for google-common (setup.py): finished with status 'done'
+#7 3.597   Created wheel for google-common: filename=google_common-0.0.1-py3-none-any.whl size=1467 sha256=b5b952f8cc2071d9067962fcca0fab2a21d73ae8af8753ec2c6c78e4669c62bf
+#7 3.597   Stored in directory: /root/.cache/pip/wheels/44/de/91/a4d94af87bf2ec9e3b02440f912136bb54ea94d79191123d14
+#7 3.598 Successfully built mesos.interface google-common
+#7 3.630 Installing collected packages: google-common, protobuf, mesos.interface
+#7 3.765 Successfully installed google-common-0.0.1 mesos.interface-1.7.2 protobuf-3.20.3
+#7 3.765 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.858 
+#7 3.858 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.858 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.1s
+
+#8 exporting to image
+#8 exporting layers 0.1s done
+#8 writing image sha256:4473b1a7c1f46e4116b5681300d86b221477464c15f3b62035f0d4e18c4e8ce2 done
+#8 naming to docker.io/library/test-image-93e0ba46f0fa6faf660d 0.0s done
+#8 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/q9ohrd15rvtu6w5acucecfe4b
+[2025-10-29 18:25:10] SUCCESS: Build completed for 93e0ba46f0fa6faf660d

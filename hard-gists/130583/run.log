@@ -1,0 +1,17 @@
+=== Docker Run Log for 130583 ===
+Started at: Mi 29. Okt 12:05:46 CET 2025
+
+[2025-10-29 12:05:53] START: Running container for 130583
+[2025-10-29 12:05:53] SUCCESS: Container c3b62825a7d0476da4807094cfa3b40a9aa7e9dec878838bea2fc18ebd6ad978 started for 130583
+=== Container logs for 130583 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 5, in <module>
+    EXEMPT_URLS = [compile(settings.LOGIN_URL.lstrip('/'))]
+                           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting LOGIN_URL, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 130583 ===
+[2025-10-29 12:05:55] INFO: Container c3b62825a7d0476da4807094cfa3b40a9aa7e9dec878838bea2fc18ebd6ad978 has stopped

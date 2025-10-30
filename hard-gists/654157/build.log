@@ -1,0 +1,146 @@
+=== Docker Build Log for 654157 ===
+Started at: Mi 29. Okt 16:36:52 CET 2025
+
+[2025-10-29 16:36:52] START: Building image for 654157
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.61kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.06kB 0.0s done
+#4 DONE 0.1s
+
+#5 [ 1/42] FROM docker.io/library/python:3.11
+#5 DONE 0.2s
+
+#6 [ 2/42] COPY hard-gists/654157/snippet.py /snippet.py
+#6 DONE 0.8s
+
+#7 [ 3/42] RUN ["apt-get","update"]
+#7 0.279 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.279 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.288 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.305 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.636 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.636 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.348 Fetched 9833 kB in 1s (8891 kB/s)
+#7 1.348 Reading package lists...
+#7 DONE 2.1s
+
+#8 [ 4/42] RUN ["pip","install","backports.functools-lru-cache"]
+#8 2.101 Collecting backports.functools-lru-cache
+#8 2.142   Downloading backports.functools_lru_cache-2.0.0-py2.py3-none-any.whl.metadata (3.5 kB)
+#8 2.172 Downloading backports.functools_lru_cache-2.0.0-py2.py3-none-any.whl (6.7 kB)
+#8 2.225 Installing collected packages: backports.functools-lru-cache
+#8 2.239 Successfully installed backports.functools-lru-cache-2.0.0
+#8 2.239 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.333 
+#8 2.333 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.333 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.5s
+
+#9 [ 5/42] RUN ["pip","install","backports.ssl"]
+#9 0.573 Collecting backports.ssl
+#9 0.620   Downloading backports.ssl-0.0.9.tar.gz (11 kB)
+#9 0.635   Preparing metadata (setup.py): started
+#9 1.149   Preparing metadata (setup.py): finished with status 'done'
+#9 1.150 Building wheels for collected packages: backports.ssl
+#9 1.151   Building wheel for backports.ssl (setup.py): started
+#9 1.344   Building wheel for backports.ssl (setup.py): finished with status 'done'
+#9 1.345   Created wheel for backports.ssl: filename=backports_ssl-0.0.9-py3-none-any.whl size=12458 sha256=69c78e7e990ba82a925e1fec62b796e610e2e84f85de07a2985170e657b772f2
+#9 1.345   Stored in directory: /root/.cache/pip/wheels/b2/9b/23/8e1cd27a5e85cb681a372981243d68c938f75a0de94f9adf51
+#9 1.347 Successfully built backports.ssl
+#9 1.406 Installing collected packages: backports.ssl
+#9 1.440 Successfully installed backports.ssl-0.0.9
+#9 1.440 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.446 
+#9 1.446 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.446 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.6s
+
+#10 [ 6/42] RUN ["pip","install","backports.shutil_get_terminal_size"]
+#10 0.739 Collecting backports.shutil_get_terminal_size
+#10 0.777   Downloading backports.shutil_get_terminal_size-1.0.0-py2.py3-none-any.whl.metadata (1.2 kB)
+#10 0.801 Downloading backports.shutil_get_terminal_size-1.0.0-py2.py3-none-any.whl (6.5 kB)
+#10 0.861 Installing collected packages: backports.shutil_get_terminal_size
+#10 0.908 Successfully installed backports.shutil_get_terminal_size-1.0.0
+#10 0.909 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.914 
+#10 0.914 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.914 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.0s
+
+#11 [ 7/42] RUN ["pip","install","requests"]
+#11 0.636 Collecting requests
+#11 0.671   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#11 0.806 Collecting charset_normalizer<4,>=2 (from requests)
+#11 0.814   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#11 0.862 Collecting idna<4,>=2.5 (from requests)
+#11 0.870   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#11 0.942 Collecting urllib3<3,>=1.21.1 (from requests)
+#11 0.954   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#11 1.001 Collecting certifi>=2017.4.17 (from requests)
+#11 1.010   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#11 1.039 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#11 1.062    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 2.6 MB/s eta 0:00:00
+#11 1.070 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#11 1.091    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 8.0 MB/s eta 0:00:00
+#11 1.099 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#11 1.114    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.1 MB/s eta 0:00:00
+#11 1.123 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#11 1.135    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.8 MB/s eta 0:00:00
+#11 1.144 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#11 1.158    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.5 MB/s eta 0:00:00
+#11 1.217 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#11 1.480 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#11 1.480 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.485 
+#11 1.485 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.485 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.6s
+
+#12 [ 8/42] RUN ["apt-get","install","-y","python-pip"]
+#12 0.224 Reading package lists...
+#12 0.740 Building dependency tree...
+#12 0.860 Reading state information...
+#12 0.879 Package python-pip is not available, but is referred to by another package.
+#12 0.879 This may mean that the package is missing, has been obsoleted, or
+#12 0.879 is only available from another source
+#12 0.879 However the following packages replace it:
+#12 0.879   python3-pip
+#12 0.879 
+#12 0.882 E: Package 'python-pip' has no installation candidate
+#12 ERROR: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+------
+ > [ 8/42] RUN ["apt-get","install","-y","python-pip"]:
+
+
+0.879 Package python-pip is not available, but is referred to by another package.
+0.879 This may mean that the package is missing, has been obsoleted, or
+0.879 is only available from another source
+0.879 However the following packages replace it:
+0.879   python3-pip
+0.879 
+0.882 E: Package 'python-pip' has no installation candidate
+------
+Dockerfile:8
+--------------------
+   6 |     RUN ["pip","install","backports.shutil_get_terminal_size"]
+   7 |     RUN ["pip","install","requests"]
+   8 | >>> RUN ["apt-get","install","-y","python-pip"]
+   9 |     RUN ["apt-get","install","-y","python-dev"]
+  10 |     RUN ["apt-get","install","-y","build-essential"]
+--------------------
+ERROR: failed to build: failed to solve: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/default/default/kpfz5w83wfcgt3etiqk3tbzck
+[2025-10-29 16:37:03] ERROR: Build failed for 654157

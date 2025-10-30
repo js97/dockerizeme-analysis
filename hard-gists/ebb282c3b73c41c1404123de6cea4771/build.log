@@ -1,0 +1,99 @@
+=== Docker Build Log for ebb282c3b73c41c1404123de6cea4771 ===
+Started at: Mi 29. Okt 20:53:41 CET 2025
+
+[2025-10-29 20:53:41] START: Building image for ebb282c3b73c41c1404123de6cea4771
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 218B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/python:3.11
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 2.67kB 0.0s done
+#5 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/python:3.11
+#4 CACHED
+
+#6 [2/4] COPY hard-gists/ebb282c3b73c41c1404123de6cea4771/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","sen"]
+#7 2.181 Collecting sen
+#7 2.218   Downloading sen-0.8.1-py3-none-any.whl.metadata (8.2 kB)
+#7 2.302 Collecting urwid (from sen)
+#7 2.313   Downloading urwid-3.0.3-py3-none-any.whl.metadata (11 kB)
+#7 2.367 Collecting docker (from sen)
+#7 2.379   Downloading docker-7.1.0-py3-none-any.whl.metadata (3.8 kB)
+#7 2.510 Collecting urwidtrees (from sen)
+#7 2.520   Downloading urwidtrees-1.0.4-py3-none-any.whl.metadata (532 bytes)
+#7 2.579 Collecting requests>=2.26.0 (from docker->sen)
+#7 2.591   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.652 Collecting urllib3>=1.26.0 (from docker->sen)
+#7 2.663   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.706 Collecting wcwidth (from urwid->sen)
+#7 2.715   Downloading wcwidth-0.2.14-py2.py3-none-any.whl.metadata (15 kB)
+#7 2.836 Collecting charset_normalizer<4,>=2 (from requests>=2.26.0->docker->sen)
+#7 2.845   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.894 Collecting idna<4,>=2.5 (from requests>=2.26.0->docker->sen)
+#7 2.904   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.955 Collecting certifi>=2017.4.17 (from requests>=2.26.0->docker->sen)
+#7 2.963   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.995 Downloading sen-0.8.1-py3-none-any.whl (58 kB)
+#7 3.008    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.7/58.7 kB 4.7 MB/s eta 0:00:00
+#7 3.017 Downloading docker-7.1.0-py3-none-any.whl (147 kB)
+#7 3.038    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 147.8/147.8 kB 7.2 MB/s eta 0:00:00
+#7 3.049 Downloading urwid-3.0.3-py3-none-any.whl (296 kB)
+#7 3.078    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 296.1/296.1 kB 10.8 MB/s eta 0:00:00
+#7 3.087 Downloading urwidtrees-1.0.4-py3-none-any.whl (28 kB)
+#7 3.110 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 3.124    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 4.7 MB/s eta 0:00:00
+#7 3.133 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 3.148    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 8.9 MB/s eta 0:00:00
+#7 3.160 Downloading wcwidth-0.2.14-py2.py3-none-any.whl (37 kB)
+#7 3.184 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 3.203    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 8.5 MB/s eta 0:00:00
+#7 3.214 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 3.231    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 9.6 MB/s eta 0:00:00
+#7 3.242 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 3.259    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 3.9 MB/s eta 0:00:00
+#7 3.343 Installing collected packages: wcwidth, urllib3, idna, charset_normalizer, certifi, urwid, requests, urwidtrees, docker, sen
+#7 3.865 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 docker-7.1.0 idna-3.11 requests-2.32.5 sen-0.8.1 urllib3-2.5.0 urwid-3.0.3 urwidtrees-1.0.4 wcwidth-0.2.14
+#7 3.865 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.964 
+#7 3.964 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.964 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.2s
+
+#8 [4/4] RUN ["pip","install","PyYAML"]
+#8 0.553 Collecting PyYAML
+#8 0.591   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#8 0.614 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#8 0.707    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 8.7 MB/s eta 0:00:00
+#8 0.764 Installing collected packages: PyYAML
+#8 0.833 Successfully installed PyYAML-6.0.3
+#8 0.833 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.838 
+#8 0.838 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.838 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.9s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.2s done
+#9 writing image sha256:1e6612cfe39289f5fa5adae818d424723dd7884e281675c56f56afdcaf416a9d done
+#9 naming to docker.io/library/test-image-ebb282c3b73c41c1404123de6cea4771 done
+#9 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/hnh9frrbk52y98ottgq963rmv
+[2025-10-29 20:53:47] SUCCESS: Build completed for ebb282c3b73c41c1404123de6cea4771

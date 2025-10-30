@@ -1,0 +1,40 @@
+=== Docker Run Log for 5690111 ===
+Started at: Mi 29. Okt 15:53:34 CET 2025
+
+[2025-10-29 15:53:34] START: Running container for 5690111
+[2025-10-29 15:53:34] SUCCESS: Container 92c2136c0fb26b604b4eff7bfd7551afa1f582da12f1d0af29dd5a10e144675f started for 5690111
+=== Container logs for 5690111 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 43, in <module>
+    inst = Bitcoin_cz("insert api key here")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 8, in __init__
+    urllib.request.urlopen(
+  File "/usr/local/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/usr/local/lib/python3.11/http/client.py", line 1303, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.11/http/client.py", line 1314, in _send_request
+    self.putrequest(method, url, **skips)
+  File "/usr/local/lib/python3.11/http/client.py", line 1148, in putrequest
+    self._validate_path(url)
+  File "/usr/local/lib/python3.11/http/client.py", line 1248, in _validate_path
+    raise InvalidURL(f"URL can't contain control characters. {url!r} "
+http.client.InvalidURL: URL can't contain control characters. '/accounts/profile/json/insert api key here' (found at least ' ')
+=== End of logs for 5690111 ===
+[2025-10-29 15:53:37] INFO: Container 92c2136c0fb26b604b4eff7bfd7551afa1f582da12f1d0af29dd5a10e144675f has stopped

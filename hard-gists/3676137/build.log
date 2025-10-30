@@ -1,0 +1,100 @@
+=== Docker Build Log for 3676137 ===
+Started at: Mi 29. Okt 13:55:48 CET 2025
+
+[2025-10-29 13:55:48] START: Building image for 3676137
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 248B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 896B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/3676137/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","dj.choices"]
+#7 1.908 Collecting dj.choices
+#7 1.945   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 1.961   Preparing metadata (setup.py): started
+#7 2.347   Preparing metadata (setup.py): finished with status 'done'
+#7 2.449 Collecting django (from dj.choices)
+#7 2.458   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.495 Collecting six (from dj.choices)
+#7 2.504   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.552 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.564   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.608 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.617   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.654 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 2.991    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 24.8 MB/s eta 0:00:00
+#7 2.999 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.017 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.035 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.047    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.5 MB/s eta 0:00:00
+#7 3.083 Building wheels for collected packages: dj.choices
+#7 3.084   Building wheel for dj.choices (setup.py): started
+#7 3.250   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.250   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=d7fd87499180a1c2bcaedbf8cf9312ff756ca10c1ff6fd5e850f37d6ec848b09
+#7 3.250   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.252 Successfully built dj.choices
+#7 3.297 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 4.758 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 4.758 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.849 
+#7 4.849 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.849 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.5s
+
+#8 [4/5] RUN ["pip","install","Django"]
+#8 0.497 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#8 0.501 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#8 0.502 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#8 0.541 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.546 
+#8 0.546 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.546 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.6s
+
+#9 [5/5] RUN ["pip","install","django-wysiwyg-redactor"]
+#9 0.627 Collecting django-wysiwyg-redactor
+#9 0.760   Downloading django-wysiwyg-redactor-0.5.1.tar.gz (151 kB)
+#9 0.802      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 152.0/152.0 kB 3.5 MB/s eta 0:00:00
+#9 0.818   Preparing metadata (setup.py): started
+#9 0.929   Preparing metadata (setup.py): finished with status 'done'
+#9 0.931 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from django-wysiwyg-redactor) (79.0.1)
+#9 0.957 Building wheels for collected packages: django-wysiwyg-redactor
+#9 0.962   Building wheel for django-wysiwyg-redactor (setup.py): started
+#9 1.126   Building wheel for django-wysiwyg-redactor (setup.py): finished with status 'done'
+#9 1.127   Created wheel for django-wysiwyg-redactor: filename=django_wysiwyg_redactor-0.5.1-py3-none-any.whl size=166968 sha256=c36a9c54157d07d90c307ffbc45e3e5d780bdf0c08c89849199c946b4f8412b8
+#9 1.127   Stored in directory: /root/.cache/pip/wheels/f5/87/9e/14114d3672ce8f484d6ca80696fecc61f9594ee4b00c643804
+#9 1.129 Successfully built django-wysiwyg-redactor
+#9 1.165 Installing collected packages: django-wysiwyg-redactor
+#9 1.212 Successfully installed django-wysiwyg-redactor-0.5.1
+#9 1.212 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.217 
+#9 1.217 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.217 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.3s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.6s done
+#10 writing image sha256:4f171a8cbcd8c0698418cda433db9d239c8919019144a3ca1ffe859ca6ece950 done
+#10 naming to docker.io/library/test-image-3676137 done
+#10 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/default/default/r54zxrl29fg61d7m49dulsj3t
+[2025-10-29 13:55:56] SUCCESS: Build completed for 3676137

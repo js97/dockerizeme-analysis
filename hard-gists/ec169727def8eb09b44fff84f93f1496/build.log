@@ -1,0 +1,54 @@
+=== Docker Build Log for ec169727def8eb09b44fff84f93f1496 ===
+Started at: Mi 29. Okt 20:53:52 CET 2025
+
+[2025-10-29 20:53:52] START: Building image for ec169727def8eb09b44fff84f93f1496
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 191B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.53kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/ec169727def8eb09b44fff84f93f1496/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","gremlin"]
+#7 2.085 ERROR: Could not find a version that satisfies the requirement gremlin (from versions: none)
+#7 2.085 ERROR: No matching distribution found for gremlin
+#7 2.192 
+#7 2.192 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.192 [notice] To update, run: pip install --upgrade pip
+#7 ERROR: process "pip install gremlin" did not complete successfully: exit code: 1
+------
+ > [3/3] RUN ["pip","install","gremlin"]:
+2.085 ERROR: Could not find a version that satisfies the requirement gremlin (from versions: none)
+2.085 ERROR: No matching distribution found for gremlin
+2.192 
+2.192 [notice] A new release of pip is available: 24.0 -> 25.3
+2.192 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:3
+--------------------
+   1 |     FROM python:3.11
+   2 |     COPY hard-gists/ec169727def8eb09b44fff84f93f1496/snippet.py /snippet.py
+   3 | >>> RUN ["pip","install","gremlin"]
+   4 |     CMD ["python3","/snippet.py"]
+   5 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install gremlin" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/riz497i8xq4sd4nyiob47fegq
+[2025-10-29 20:53:55] ERROR: Build failed for ec169727def8eb09b44fff84f93f1496

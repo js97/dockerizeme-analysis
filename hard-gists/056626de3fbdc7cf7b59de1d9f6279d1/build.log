@@ -1,0 +1,165 @@
+=== Docker Build Log for 056626de3fbdc7cf7b59de1d9f6279d1 ===
+Started at: Mi 29. Okt 11:28:21 CET 2025
+
+[2025-10-29 11:28:21] START: Building image for 056626de3fbdc7cf7b59de1d9f6279d1
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.98kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.20kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/49] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/49] COPY hard-gists/056626de3fbdc7cf7b59de1d9f6279d1/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/49] RUN ["apt-get","update"]
+#7 0.255 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.255 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.267 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.285 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.600 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.607 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.200 Fetched 9833 kB in 1s (9974 kB/s)
+#7 1.200 Reading package lists...
+#7 DONE 1.7s
+
+#8 [ 4/49] RUN ["pip","install","numpy"]
+#8 2.122 Collecting numpy
+#8 2.165   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 2.190      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.3 MB/s eta 0:00:00
+#8 2.208 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#8 2.870    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 23.3 MB/s eta 0:00:00
+#8 2.949 Installing collected packages: numpy
+#8 4.355 Successfully installed numpy-2.3.4
+#8 4.355 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 4.452 
+#8 4.452 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 4.452 [notice] To update, run: pip install --upgrade pip
+#8 DONE 5.0s
+
+#9 [ 5/49] RUN ["pip","install","imutils"]
+#9 0.523 Collecting imutils
+#9 0.562   Downloading imutils-0.5.4.tar.gz (17 kB)
+#9 0.582   Preparing metadata (setup.py): started
+#9 1.061   Preparing metadata (setup.py): finished with status 'done'
+#9 1.063 Building wheels for collected packages: imutils
+#9 1.063   Building wheel for imutils (setup.py): started
+#9 1.260   Building wheel for imutils (setup.py): finished with status 'done'
+#9 1.261   Created wheel for imutils: filename=imutils-0.5.4-py3-none-any.whl size=25870 sha256=fc727ef88f6636e83e9d264527676762f4f863dac9cccc6f39deb2c32813c4ab
+#9 1.261   Stored in directory: /root/.cache/pip/wheels/31/d0/2c/87ce38f6052879e5b7b18f0f8b4a10ad2a9d210e908d449f16
+#9 1.263 Successfully built imutils
+#9 1.299 Installing collected packages: imutils
+#9 1.329 Successfully installed imutils-0.5.4
+#9 1.329 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.334 
+#9 1.334 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.334 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.4s
+
+#10 [ 6/49] RUN ["pip","install","dlib"]
+#10 0.519 Collecting dlib
+#10 0.554   Downloading dlib-20.0.0.tar.gz (3.3 MB)
+#10 0.707      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 22.1 MB/s eta 0:00:00
+#10 1.014   Installing build dependencies: started
+#10 2.413   Installing build dependencies: finished with status 'done'
+#10 2.413   Getting requirements to build wheel: started
+#10 2.651   Getting requirements to build wheel: finished with status 'done'
+#10 2.652   Preparing metadata (pyproject.toml): started
+#10 2.852   Preparing metadata (pyproject.toml): finished with status 'done'
+#10 2.853 Building wheels for collected packages: dlib
+#10 2.858   Building wheel for dlib (pyproject.toml): started
+#10 2.974   Building wheel for dlib (pyproject.toml): finished with status 'error'
+#10 2.979   error: subprocess-exited-with-error
+#10 2.979   
+#10 2.979   × Building wheel for dlib (pyproject.toml) did not run successfully.
+#10 2.979   │ exit code: 1
+#10 2.979   ╰─> [41 lines of output]
+#10 2.979       running bdist_wheel
+#10 2.979       running build
+#10 2.979       running build_ext
+#10 2.979       
+#10 2.979       ================================================================================
+#10 2.979       ================================================================================
+#10 2.979       ================================================================================
+#10 2.979       
+#10 2.979                          CMake is not installed on your system!
+#10 2.979       
+#10 2.979           Or it is possible some broken copy of cmake is installed on your system.
+#10 2.979           It is unfortunately very common for python package managers to include
+#10 2.979           broken copies of cmake.  So if the error above this refers to some file
+#10 2.979           path to a cmake file inside a python or anaconda or miniconda path then you
+#10 2.979           should delete that broken copy of cmake from your computer.
+#10 2.979       
+#10 2.979           Instead, please get an official copy of cmake from one of these known good
+#10 2.979           sources of an official cmake:
+#10 2.979               - cmake.org (this is how windows users should get cmake)
+#10 2.979               - apt install cmake (for Ubuntu or Debian based systems)
+#10 2.979               - yum install cmake (for Redhat or CenOS based systems)
+#10 2.979       
+#10 2.979           On a linux machine you can run `which cmake` to see what cmake you are
+#10 2.979           actually using.  If it tells you it's some cmake from any kind of python
+#10 2.979           packager delete it and install an official cmake.
+#10 2.979       
+#10 2.979           More generally, cmake is not installed if when you open a terminal window
+#10 2.979           and type
+#10 2.979              cmake --version
+#10 2.979           you get an error.  So you can use that as a very basic test to see if you
+#10 2.979           have cmake installed.  That is, if cmake --version doesn't run from the
+#10 2.979           same terminal window from which you are reading this error message, then
+#10 2.979           you have not installed cmake.  Windows users should take note that they
+#10 2.979           need to tell the cmake installer to add cmake to their PATH.  Since you
+#10 2.979           can't run commands that are not in your PATH.  This is how the PATH works
+#10 2.979           on Linux as well, but failing to add cmake to the PATH is a particularly
+#10 2.979           common problem on windows and rarely a problem on Linux.
+#10 2.979       
+#10 2.979       ================================================================================
+#10 2.979       ================================================================================
+#10 2.979       ================================================================================
+#10 2.979       [end of output]
+#10 2.979   
+#10 2.979   note: This error originates from a subprocess, and is likely not a problem with pip.
+#10 2.979   ERROR: Failed building wheel for dlib
+#10 2.980 Failed to build dlib
+#10 2.980 ERROR: Could not build wheels for dlib, which is required to install pyproject.toml-based projects
+#10 2.985 
+#10 2.985 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 2.985 [notice] To update, run: pip install --upgrade pip
+#10 ERROR: process "pip install dlib" did not complete successfully: exit code: 1
+------
+ > [ 6/49] RUN ["pip","install","dlib"]:
+2.979       ================================================================================
+2.979       [end of output]
+2.979   
+2.979   note: This error originates from a subprocess, and is likely not a problem with pip.
+2.979   ERROR: Failed building wheel for dlib
+2.980 Failed to build dlib
+2.980 ERROR: Could not build wheels for dlib, which is required to install pyproject.toml-based projects
+2.985 
+2.985 [notice] A new release of pip is available: 24.0 -> 25.3
+2.985 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:6
+--------------------
+   4 |     RUN ["pip","install","numpy"]
+   5 |     RUN ["pip","install","imutils"]
+   6 | >>> RUN ["pip","install","dlib"]
+   7 |     RUN ["apt-get","install","-y","python-pip"]
+   8 |     RUN ["apt-get","install","-y","python-dev"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install dlib" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/kjjdy3kygtko26lkxokqoiw8s
+[2025-10-29 11:28:33] ERROR: Build failed for 056626de3fbdc7cf7b59de1d9f6279d1

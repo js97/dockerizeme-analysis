@@ -1,0 +1,21 @@
+=== Docker Run Log for 2229985 ===
+Started at: Mi 29. Okt 13:01:33 CET 2025
+
+[2025-10-29 13:01:37] START: Running container for 2229985
+[2025-10-29 13:01:37] SUCCESS: Container 4f412d531acd87c2a173ef278a8d9b5d9c30454652f771cfd7fb80725ee1f8a2 started for 2229985
+=== Container logs for 2229985 ===
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/asyncmongo/__init__.py", line 22, in <module>
+    import bson
+ModuleNotFoundError: No module named 'bson'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snippet.py", line 4, in <module>
+    import asyncmongo
+  File "/usr/local/lib/python3.11/site-packages/asyncmongo/__init__.py", line 24, in <module>
+    raise ImportError("bson library not installed. Install pymongo >= 1.9 https://github.com/mongodb/mongo-python-driver")
+ImportError: bson library not installed. Install pymongo >= 1.9 https://github.com/mongodb/mongo-python-driver
+=== End of logs for 2229985 ===
+[2025-10-29 13:01:39] INFO: Container 4f412d531acd87c2a173ef278a8d9b5d9c30454652f771cfd7fb80725ee1f8a2 has stopped

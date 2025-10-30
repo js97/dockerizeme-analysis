@@ -1,0 +1,154 @@
+=== Docker Build Log for 3c76bc174844948c5f98 ===
+Started at: Mi 29. Okt 14:12:10 CET 2025
+
+[2025-10-29 14:12:10] START: Building image for 3c76bc174844948c5f98
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 363B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 866B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/8] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/8] COPY hard-gists/3c76bc174844948c5f98/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/8] RUN ["pip","install","dj.choices"]
+#7 1.912 Collecting dj.choices
+#7 1.952   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 1.971   Preparing metadata (setup.py): started
+#7 2.359   Preparing metadata (setup.py): finished with status 'done'
+#7 2.466 Collecting django (from dj.choices)
+#7 2.476   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.513 Collecting six (from dj.choices)
+#7 2.522   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.569 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.579   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.616 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.628   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.653 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.025    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 22.4 MB/s eta 0:00:00
+#7 3.034 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.052 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.071 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.083    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.4 MB/s eta 0:00:00
+#7 3.120 Building wheels for collected packages: dj.choices
+#7 3.121   Building wheel for dj.choices (setup.py): started
+#7 3.290   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.291   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=572bbd91421c4f5bfa79b547a86a5338aca49133b15ff7d637af7c0b6e5a7bc5
+#7 3.291   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.293 Successfully built dj.choices
+#7 3.338 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 4.677 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 4.677 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.769 
+#7 4.769 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.769 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.2s
+
+#8 [4/8] RUN ["pip","install","psycopg2"]
+#8 0.564 Collecting psycopg2
+#8 0.603   Downloading psycopg2-2.9.11.tar.gz (379 kB)
+#8 0.643      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 379.6/379.6 kB 9.7 MB/s eta 0:00:00
+#8 0.679   Preparing metadata (setup.py): started
+#8 0.815   Preparing metadata (setup.py): finished with status 'done'
+#8 0.817 Building wheels for collected packages: psycopg2
+#8 0.823   Building wheel for psycopg2 (setup.py): started
+#8 5.945   Building wheel for psycopg2 (setup.py): finished with status 'done'
+#8 5.947   Created wheel for psycopg2: filename=psycopg2-2.9.11-cp311-cp311-linux_x86_64.whl size=503336 sha256=fad5f95033a20713693b657061550c3d61ad0f2154c678261f83e5da83ff31a1
+#8 5.947   Stored in directory: /root/.cache/pip/wheels/15/a7/0e/37c6d130333cbaac2e6bb15e4ff41ef3a195af78a70907ca0d
+#8 5.949 Successfully built psycopg2
+#8 5.986 Installing collected packages: psycopg2
+#8 6.018 Successfully installed psycopg2-2.9.11
+#8 6.018 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 6.023 
+#8 6.023 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 6.023 [notice] To update, run: pip install --upgrade pip
+#8 DONE 6.1s
+
+#9 [5/8] RUN ["pip","install","django-pipeline"]
+#9 0.605 Collecting django-pipeline
+#9 0.773   Downloading django_pipeline-4.1.0-py3-none-any.whl.metadata (5.9 kB)
+#9 0.788 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from django-pipeline) (79.0.1)
+#9 0.789 Requirement already satisfied: wheel in /usr/local/lib/python3.11/site-packages (from django-pipeline) (0.45.1)
+#9 0.885 Downloading django_pipeline-4.1.0-py3-none-any.whl (75 kB)
+#9 0.909    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 75.5/75.5 kB 3.0 MB/s eta 0:00:00
+#9 0.953 Installing collected packages: django-pipeline
+#9 1.013 Successfully installed django-pipeline-4.1.0
+#9 1.013 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.019 
+#9 1.019 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.019 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.1s
+
+#10 [6/8] RUN ["pip","install","Django"]
+#10 0.447 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#10 0.450 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#10 0.451 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#10 0.496 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.502 
+#10 0.502 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.502 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.6s
+
+#11 [7/8] RUN ["pip","install","GoogleAppEnginePipeline"]
+#11 0.619 Collecting GoogleAppEnginePipeline
+#11 0.755   Downloading GoogleAppEnginePipeline-1.9.22.1.tar.gz (89 kB)
+#11 0.785      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 89.3/89.3 kB 3.1 MB/s eta 0:00:00
+#11 0.793   Preparing metadata (setup.py): started
+#11 0.908   Preparing metadata (setup.py): finished with status 'done'
+#11 1.038 Collecting GoogleAppEngineCloudStorageClient>=1.9.22 (from GoogleAppEnginePipeline)
+#11 1.142   Downloading GoogleAppEngineCloudStorageClient-1.9.22.1.tar.gz (28 kB)
+#11 1.161   Preparing metadata (setup.py): started
+#11 1.360   Preparing metadata (setup.py): finished with status 'done'
+#11 1.362 Building wheels for collected packages: GoogleAppEnginePipeline, GoogleAppEngineCloudStorageClient
+#11 1.366   Building wheel for GoogleAppEnginePipeline (setup.py): started
+#11 1.526   Building wheel for GoogleAppEnginePipeline (setup.py): finished with status 'done'
+#11 1.527   Created wheel for GoogleAppEnginePipeline: filename=googleappenginepipeline-1.9.22.1-py3-none-any.whl size=99312 sha256=b27903188338ddf2a32239ae884ad60ff1778f08c6e9a1e4ca19b1e404f3f304
+#11 1.527   Stored in directory: /root/.cache/pip/wheels/c4/8c/88/de657befdd883d2fc670fe14c1d2e06329865794340f253499
+#11 1.529   Building wheel for GoogleAppEngineCloudStorageClient (setup.py): started
+#11 1.695   Building wheel for GoogleAppEngineCloudStorageClient (setup.py): finished with status 'done'
+#11 1.695   Created wheel for GoogleAppEngineCloudStorageClient: filename=googleappenginecloudstorageclient-1.9.22.1-py3-none-any.whl size=30740 sha256=2f33be82f6bed9813209ac0e188e2100c04db80094e19cdbafef2bdd44485533
+#11 1.696   Stored in directory: /root/.cache/pip/wheels/2c/84/fb/2961d15fc82ecb028ee482ccb9696e8046381d4cb5fa18ea1a
+#11 1.697 Successfully built GoogleAppEnginePipeline GoogleAppEngineCloudStorageClient
+#11 1.737 Installing collected packages: GoogleAppEngineCloudStorageClient, GoogleAppEnginePipeline
+#11 1.787 Successfully installed GoogleAppEngineCloudStorageClient-1.9.22.1 GoogleAppEnginePipeline-1.9.22.1
+#11 1.787 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.792 
+#11 1.792 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.792 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.9s
+
+#12 [8/8] RUN ["pip","install","pipe"]
+#12 0.508 Collecting pipe
+#12 0.541   Downloading pipe-2.2-py3-none-any.whl.metadata (17 kB)
+#12 0.567 Downloading pipe-2.2-py3-none-any.whl (9.7 kB)
+#12 0.625 Installing collected packages: pipe
+#12 0.665 Successfully installed pipe-2.2
+#12 0.665 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 0.670 
+#12 0.670 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 0.670 [notice] To update, run: pip install --upgrade pip
+#12 DONE 0.7s
+
+#13 exporting to image
+#13 exporting layers
+#13 exporting layers 0.7s done
+#13 writing image sha256:c4d8d5190399b4fcc3a3e2522b3288f5e4e6a22281bd8a53e6da76c08e87adaf done
+#13 naming to docker.io/library/test-image-3c76bc174844948c5f98 0.0s done
+#13 DONE 0.8s
+
+View build details: docker-desktop://dashboard/build/default/default/yu3y4e5vk547m04oh05cbpzeg
+[2025-10-29 14:12:27] SUCCESS: Build completed for 3c76bc174844948c5f98

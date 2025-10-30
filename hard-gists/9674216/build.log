@@ -1,0 +1,393 @@
+=== Docker Build Log for 9674216 ===
+Started at: Mi 29. Okt 18:29:45 CET 2025
+
+[2025-10-29 18:29:45] START: Building image for 9674216
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 162B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.66kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/9674216/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","xchat"]
+#7 2.083 Collecting xchat
+#7 2.413   Downloading xchat-2023.11.16.17.50.4-py3-none-any.whl.metadata (1.2 kB)
+#7 2.744 Collecting meutils (from xchat)
+#7 2.847   Downloading meutils-2025.10.28.20.5.25-py3-none-any.whl.metadata (32 kB)
+#7 2.901 Collecting pyppeteer (from xchat)
+#7 2.910   Downloading pyppeteer-2.0.0-py3-none-any.whl.metadata (7.1 kB)
+#7 2.961 Collecting dataclasses-json (from xchat)
+#7 2.970   Downloading dataclasses_json-0.6.7-py3-none-any.whl.metadata (25 kB)
+#7 3.014 Collecting pyee (from xchat)
+#7 3.025   Downloading pyee-13.0.0-py3-none-any.whl.metadata (2.9 kB)
+#7 3.062 Collecting PyQRCode (from xchat)
+#7 3.076   Downloading PyQRCode-1.2.1.zip (41 kB)
+#7 3.091      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.9/41.9 kB 3.2 MB/s eta 0:00:00
+#7 3.095   Preparing metadata (setup.py): started
+#7 3.479   Preparing metadata (setup.py): finished with status 'done'
+#7 3.511 Collecting grpclib (from xchat)
+#7 3.526   Downloading grpclib-0.4.8-py3-none-any.whl.metadata (6.1 kB)
+#7 3.567 Collecting node-semver~=0.8.1 (from xchat)
+#7 3.676   Downloading node_semver-0.8.1-py3-none-any.whl.metadata (2.2 kB)
+#7 3.754 Collecting marshmallow<4.0.0,>=3.18.0 (from dataclasses-json->xchat)
+#7 3.763   Downloading marshmallow-3.26.1-py3-none-any.whl.metadata (7.3 kB)
+#7 3.799 Collecting typing-inspect<1,>=0.4.0 (from dataclasses-json->xchat)
+#7 3.807   Downloading typing_inspect-0.9.0-py3-none-any.whl.metadata (1.5 kB)
+#7 3.846 Collecting h2<5,>=3.1.0 (from grpclib->xchat)
+#7 3.855   Downloading h2-4.3.0-py3-none-any.whl.metadata (5.1 kB)
+#7 4.107 Collecting multidict (from grpclib->xchat)
+#7 4.119   Downloading multidict-6.7.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+#7 4.465 Collecting openai (from meutils->xchat)
+#7 4.474   Downloading openai-2.6.1-py3-none-any.whl.metadata (29 kB)
+#7 4.541 Collecting tqdm (from meutils->xchat)
+#7 4.549   Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+#7 4.562      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.7/57.7 kB 4.2 MB/s eta 0:00:00
+#7 4.601 Collecting joblib (from meutils->xchat)
+#7 4.610   Downloading joblib-1.5.2-py3-none-any.whl.metadata (5.6 kB)
+#7 4.819 Collecting numpy (from meutils->xchat)
+#7 4.829   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 4.841      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 4.7 MB/s eta 0:00:00
+#7 4.972 Collecting pandas (from meutils->xchat)
+#7 4.983   Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+#7 4.995      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 7.4 MB/s eta 0:00:00
+#7 5.129 Collecting Pillow-PIL (from meutils->xchat)
+#7 5.140   Downloading Pillow-PIL-0.1dev.tar.gz (3.6 kB)
+#7 5.158   Preparing metadata (setup.py): started
+#7 5.265   Preparing metadata (setup.py): finished with status 'done'
+#7 5.382 Collecting faker (from meutils->xchat)
+#7 5.393   Downloading faker-37.12.0-py3-none-any.whl.metadata (15 kB)
+#7 5.471 Collecting rich (from meutils->xchat)
+#7 5.482   Downloading rich-14.2.0-py3-none-any.whl.metadata (18 kB)
+#7 5.524 Collecting emoji (from meutils->xchat)
+#7 5.533   Downloading emoji-2.15.0-py3-none-any.whl.metadata (5.7 kB)
+#7 5.573 Collecting python-dotenv (from meutils->xchat)
+#7 5.582   Downloading python_dotenv-1.2.1-py3-none-any.whl.metadata (25 kB)
+#7 5.720 Collecting wrapt (from meutils->xchat)
+#7 5.729   Downloading wrapt-2.0.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.8 kB)
+#7 5.806 Collecting loguru (from meutils->xchat)
+#7 5.814   Downloading loguru-0.7.3-py3-none-any.whl.metadata (22 kB)
+#7 5.863 Collecting typer (from meutils->xchat)
+#7 5.871   Downloading typer-0.20.0-py3-none-any.whl.metadata (16 kB)
+#7 5.970 Collecting watchfiles (from meutils->xchat)
+#7 5.980   Downloading watchfiles-1.1.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#7 6.020 Collecting shortuuid (from meutils->xchat)
+#7 6.029   Downloading shortuuid-1.0.13-py3-none-any.whl.metadata (5.8 kB)
+#7 6.064 Collecting toml (from meutils->xchat)
+#7 6.072   Downloading toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+#7 6.137 Collecting pyyaml (from meutils->xchat)
+#7 6.145   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#7 6.277 Collecting jsonpath (from meutils->xchat)
+#7 6.287   Downloading jsonpath-0.82.2.tar.gz (10 kB)
+#7 6.300   Preparing metadata (setup.py): started
+#7 6.403   Preparing metadata (setup.py): finished with status 'done'
+#7 6.429 Collecting jmespath (from meutils->xchat)
+#7 6.437   Downloading jmespath-1.0.1-py3-none-any.whl.metadata (7.6 kB)
+#7 6.505 Collecting json_repair (from meutils->xchat)
+#7 6.515   Downloading json_repair-0.52.3-py3-none-any.whl.metadata (11 kB)
+#7 6.652 Collecting nacos-sdk-python (from meutils->xchat)
+#7 6.870   Downloading nacos_sdk_python-2.0.9-py3-none-any.whl.metadata (21 kB)
+#7 6.907 Collecting wget (from meutils->xchat)
+#7 6.928   Downloading wget-3.2.zip (10 kB)
+#7 6.940   Preparing metadata (setup.py): started
+#7 7.044   Preparing metadata (setup.py): finished with status 'done'
+#7 7.084 Collecting httpx (from meutils->xchat)
+#7 7.093   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+#7 7.145 Collecting requests (from meutils->xchat)
+#7 7.154   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 7.194 Collecting tenacity (from meutils->xchat)
+#7 7.202   Downloading tenacity-9.1.2-py3-none-any.whl.metadata (1.2 kB)
+#7 7.399 Collecting lxml (from meutils->xchat)
+#7 7.410   Downloading lxml-6.0.2-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.6 kB)
+#7 7.447 Collecting tinytag (from meutils->xchat)
+#7 7.457   Downloading tinytag-2.1.2-py3-none-any.whl.metadata (19 kB)
+#7 7.642 Collecting pydantic==2.9.2 (from meutils->xchat)
+#7 7.655   Downloading pydantic-2.9.2-py3-none-any.whl.metadata (149 kB)
+#7 7.674      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 149.4/149.4 kB 8.0 MB/s eta 0:00:00
+#7 7.704 Collecting schedule (from meutils->xchat)
+#7 7.716   Downloading schedule-1.2.2-py3-none-any.whl.metadata (3.8 kB)
+#7 7.753 Collecting async_lru (from meutils->xchat)
+#7 7.765   Downloading async_lru-2.0.5-py3-none-any.whl.metadata (4.5 kB)
+#7 7.805 Collecting nest_asyncio (from meutils->xchat)
+#7 7.814   Downloading nest_asyncio-1.6.0-py3-none-any.whl.metadata (2.8 kB)
+#7 7.857 Collecting asgiref (from meutils->xchat)
+#7 7.864   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 7.998 Collecting aiostream (from meutils->xchat)
+#7 8.008   Downloading aiostream-0.7.1-py3-none-any.whl.metadata (10 kB)
+#7 8.053 Collecting diskcache (from meutils->xchat)
+#7 8.071   Downloading diskcache-5.6.3-py3-none-any.whl.metadata (20 kB)
+#7 8.114 Collecting cachetools (from meutils->xchat)
+#7 8.125   Downloading cachetools-6.2.1-py3-none-any.whl.metadata (5.5 kB)
+#7 8.163 Collecting aiocache (from meutils->xchat)
+#7 8.172   Downloading aiocache-0.12.3-py2.py3-none-any.whl.metadata (8.3 kB)
+#7 8.315 Collecting HermesCache (from meutils->xchat)
+#7 8.424   Downloading hermescache-1.1.0.tar.gz (24 kB)
+#7 8.439   Preparing metadata (setup.py): started
+#7 8.546   Preparing metadata (setup.py): finished with status 'done'
+#7 8.584 Collecting annotated-types>=0.6.0 (from pydantic==2.9.2->meutils->xchat)
+#7 8.594   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+#7 9.266 Collecting pydantic-core==2.23.4 (from pydantic==2.9.2->meutils->xchat)
+#7 9.278   Downloading pydantic_core-2.23.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+#7 9.333 Collecting typing-extensions>=4.6.1 (from pydantic==2.9.2->meutils->xchat)
+#7 9.342   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#7 9.395 Collecting appdirs<2.0.0,>=1.4.3 (from pyppeteer->xchat)
+#7 9.404   Downloading appdirs-1.4.4-py2.py3-none-any.whl.metadata (9.0 kB)
+#7 9.448 Collecting certifi>=2023 (from pyppeteer->xchat)
+#7 9.457   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 9.523 Collecting importlib-metadata>=1.4 (from pyppeteer->xchat)
+#7 9.534   Downloading importlib_metadata-8.7.0-py3-none-any.whl.metadata (4.8 kB)
+#7 9.550 Collecting pyee (from xchat)
+#7 9.560   Downloading pyee-11.1.1-py3-none-any.whl.metadata (2.8 kB)
+#7 9.631 Collecting urllib3<2.0.0,>=1.25.8 (from pyppeteer->xchat)
+#7 9.640   Downloading urllib3-1.26.20-py2.py3-none-any.whl.metadata (50 kB)
+#7 9.654      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 kB 3.3 MB/s eta 0:00:00
+#7 9.828 Collecting websockets<11.0,>=10.0 (from pyppeteer->xchat)
+#7 9.841   Downloading websockets-10.4-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.4 kB)
+#7 9.901 Collecting hyperframe<7,>=6.1 (from h2<5,>=3.1.0->grpclib->xchat)
+#7 9.909   Downloading hyperframe-6.1.0-py3-none-any.whl.metadata (4.3 kB)
+#7 9.945 Collecting hpack<5,>=4.1 (from h2<5,>=3.1.0->grpclib->xchat)
+#7 9.953   Downloading hpack-4.1.0-py3-none-any.whl.metadata (4.6 kB)
+#7 10.01 Collecting zipp>=3.20 (from importlib-metadata>=1.4->pyppeteer->xchat)
+#7 10.02   Downloading zipp-3.23.0-py3-none-any.whl.metadata (3.6 kB)
+#7 10.07 Collecting packaging>=17.0 (from marshmallow<4.0.0,>=3.18.0->dataclasses-json->xchat)
+#7 10.07   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#7 10.12 Collecting mypy-extensions>=0.3.0 (from typing-inspect<1,>=0.4.0->dataclasses-json->xchat)
+#7 10.13   Downloading mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+#7 10.21 Collecting tzdata (from faker->meutils->xchat)
+#7 10.21   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#7 10.27 Collecting anyio (from httpx->meutils->xchat)
+#7 10.28   Downloading anyio-4.11.0-py3-none-any.whl.metadata (4.1 kB)
+#7 10.32 Collecting httpcore==1.* (from httpx->meutils->xchat)
+#7 10.33   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+#7 10.36 Collecting idna (from httpx->meutils->xchat)
+#7 10.37   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 10.41 Collecting h11>=0.16 (from httpcore==1.*->httpx->meutils->xchat)
+#7 10.42   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#7 10.51 Collecting aiofiles>=24.1.0 (from nacos-sdk-python->meutils->xchat)
+#7 10.52   Downloading aiofiles-25.1.0-py3-none-any.whl.metadata (6.3 kB)
+#7 11.10 Collecting aiohttp>=3.10.11 (from nacos-sdk-python->meutils->xchat)
+#7 11.11   Downloading aiohttp-3.13.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+#7 11.27 Collecting alibabacloud-kms20160120>=2.2.3 (from nacos-sdk-python->meutils->xchat)
+#7 11.48   Downloading alibabacloud_kms20160120-2.3.1-py3-none-any.whl.metadata (2.4 kB)
+#7 11.81 Collecting alibabacloud-tea-openapi>=0.3.12 (from nacos-sdk-python->meutils->xchat)
+#7 11.92   Downloading alibabacloud_tea_openapi-0.4.1-py3-none-any.whl.metadata (2.2 kB)
+#7 12.40 Collecting grpcio>=1.66.1 (from nacos-sdk-python->meutils->xchat)
+#7 12.41   Downloading grpcio-1.76.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.7 kB)
+#7 12.60 Collecting protobuf>=3.20.3 (from nacos-sdk-python->meutils->xchat)
+#7 12.61   Downloading protobuf-6.33.0-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)
+#7 12.82 Collecting psutil>=5.9.5 (from nacos-sdk-python->meutils->xchat)
+#7 12.83   Downloading psutil-7.1.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (23 kB)
+#7 12.95 Collecting pycryptodome>=3.19.1 (from nacos-sdk-python->meutils->xchat)
+#7 12.96   Downloading pycryptodome-3.23.0-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.4 kB)
+#7 12.98 INFO: pip is looking at multiple versions of nacos-sdk-python to determine which version is compatible with other requirements. This could take a while.
+#7 12.98 Collecting nacos-sdk-python (from meutils->xchat)
+#7 13.09   Downloading nacos_sdk_python-2.0.8-py3-none-any.whl.metadata (21 kB)
+#7 13.22   Downloading nacos_sdk_python-2.0.7-py3-none-any.whl.metadata (21 kB)
+#7 13.35   Downloading nacos_sdk_python-2.0.6-py3-none-any.whl.metadata (21 kB)
+#7 13.49   Downloading nacos_sdk_python-2.0.5-py3-none-any.whl.metadata (21 kB)
+#7 13.62   Downloading nacos_sdk_python-2.0.4-py3-none-any.whl.metadata (21 kB)
+#7 13.74   Downloading nacos_sdk_python-2.0.3-py3-none-any.whl.metadata (21 kB)
+#7 13.87   Downloading nacos_sdk_python-2.0.2-py3-none-any.whl.metadata (21 kB)
+#7 13.88 INFO: pip is still looking at multiple versions of nacos-sdk-python to determine which version is compatible with other requirements. This could take a while.
+#7 14.00   Downloading nacos_sdk_python-2.0.1-py3-none-any.whl.metadata (21 kB)
+#7 14.12   Downloading nacos_sdk_python-2.0.0-py3-none-any.whl.metadata (21 kB)
+#7 14.29   Downloading nacos_sdk_python-1.0.0-py3-none-any.whl.metadata (10 kB)
+#7 14.35 Collecting distro<2,>=1.7.0 (from openai->meutils->xchat)
+#7 14.36   Downloading distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+#7 14.45 Collecting jiter<1,>=0.10.0 (from openai->meutils->xchat)
+#7 14.46   Downloading jiter-0.11.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.2 kB)
+#7 14.50 Collecting sniffio (from openai->meutils->xchat)
+#7 14.51   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+#7 14.61 Collecting python-dateutil>=2.8.2 (from pandas->meutils->xchat)
+#7 14.62   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#7 14.68 Collecting pytz>=2020.1 (from pandas->meutils->xchat)
+#7 14.69   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#7 14.88 Collecting Pillow (from Pillow-PIL->meutils->xchat)
+#7 14.89   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#7 15.00 Collecting charset_normalizer<4,>=2 (from requests->meutils->xchat)
+#7 15.01   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 15.08 Collecting markdown-it-py>=2.2.0 (from rich->meutils->xchat)
+#7 15.08   Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+#7 15.13 Collecting pygments<3.0.0,>=2.13.0 (from rich->meutils->xchat)
+#7 15.14   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#7 15.21 Collecting click>=8.0.0 (from typer->meutils->xchat)
+#7 15.22   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#7 15.26 Collecting shellingham>=1.3.0 (from typer->meutils->xchat)
+#7 15.27   Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+#7 15.41 Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->meutils->xchat)
+#7 15.42   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+#7 15.48 Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->meutils->xchat)
+#7 15.49   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 15.70 Downloading xchat-2023.11.16.17.50.4-py3-none-any.whl (338 kB)
+#7 15.72    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 338.4/338.4 kB 14.6 MB/s eta 0:00:00
+#7 15.88 Downloading node_semver-0.8.1-py3-none-any.whl (24 kB)
+#7 15.90 Downloading dataclasses_json-0.6.7-py3-none-any.whl (28 kB)
+#7 15.92 Downloading grpclib-0.4.8-py3-none-any.whl (76 kB)
+#7 15.93    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 76.3/76.3 kB 6.1 MB/s eta 0:00:00
+#7 16.09 Downloading meutils-2025.10.28.20.5.25-py3-none-any.whl (7.0 MB)
+#7 16.55    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 15.3 MB/s eta 0:00:00
+#7 16.56 Downloading pydantic-2.9.2-py3-none-any.whl (434 kB)
+#7 16.58    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 434.9/434.9 kB 18.6 MB/s eta 0:00:00
+#7 16.59 Downloading pydantic_core-2.23.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+#7 16.67    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 26.5 MB/s eta 0:00:00
+#7 16.68 Downloading pyppeteer-2.0.0-py3-none-any.whl (82 kB)
+#7 16.70    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 82.9/82.9 kB 6.4 MB/s eta 0:00:00
+#7 16.70 Downloading pyee-11.1.1-py3-none-any.whl (15 kB)
+#7 16.73 Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+#7 16.75 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 16.76    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 11.2 MB/s eta 0:00:00
+#7 16.77 Downloading h2-4.3.0-py3-none-any.whl (61 kB)
+#7 16.78    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.8/61.8 kB 4.8 MB/s eta 0:00:00
+#7 16.79 Downloading importlib_metadata-8.7.0-py3-none-any.whl (27 kB)
+#7 16.82 Downloading marshmallow-3.26.1-py3-none-any.whl (50 kB)
+#7 16.83    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.9/50.9 kB 4.3 MB/s eta 0:00:00
+#7 16.84 Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+#7 16.85    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 6.3 MB/s eta 0:00:00
+#7 16.86 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#7 16.87    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.5 MB/s eta 0:00:00
+#7 16.88 Downloading typing_inspect-0.9.0-py3-none-any.whl (8.8 kB)
+#7 16.89 Downloading urllib3-1.26.20-py2.py3-none-any.whl (144 kB)
+#7 16.91    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.2/144.2 kB 9.9 MB/s eta 0:00:00
+#7 16.92 Downloading websockets-10.4-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (107 kB)
+#7 16.94    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.4/107.4 kB 9.0 MB/s eta 0:00:00
+#7 16.94 Downloading aiocache-0.12.3-py2.py3-none-any.whl (28 kB)
+#7 16.96 Downloading aiostream-0.7.1-py3-none-any.whl (41 kB)
+#7 16.98    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.4/41.4 kB 2.8 MB/s eta 0:00:00
+#7 16.99 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 17.00 Downloading async_lru-2.0.5-py3-none-any.whl (6.1 kB)
+#7 17.02 Downloading cachetools-6.2.1-py3-none-any.whl (11 kB)
+#7 17.04 Downloading diskcache-5.6.3-py3-none-any.whl (45 kB)
+#7 17.05    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.5/45.5 kB 3.8 MB/s eta 0:00:00
+#7 17.06 Downloading emoji-2.15.0-py3-none-any.whl (608 kB)
+#7 17.09    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 608.4/608.4 kB 21.2 MB/s eta 0:00:00
+#7 17.11 Downloading faker-37.12.0-py3-none-any.whl (2.0 MB)
+#7 17.19    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 27.5 MB/s eta 0:00:00
+#7 17.20 Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+#7 17.21    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.5/73.5 kB 6.4 MB/s eta 0:00:00
+#7 17.22 Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+#7 17.23    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.8/78.8 kB 7.5 MB/s eta 0:00:00
+#7 17.24 Downloading jmespath-1.0.1-py3-none-any.whl (20 kB)
+#7 17.26 Downloading joblib-1.5.2-py3-none-any.whl (308 kB)
+#7 17.28    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 308.4/308.4 kB 15.8 MB/s eta 0:00:00
+#7 17.29 Downloading json_repair-0.52.3-py3-none-any.whl (26 kB)
+#7 17.30 Downloading loguru-0.7.3-py3-none-any.whl (61 kB)
+#7 17.32    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.6/61.6 kB 4.9 MB/s eta 0:00:00
+#7 17.33 Downloading lxml-6.0.2-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.2 MB)
+#7 17.53    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 25.8 MB/s eta 0:00:00
+#7 17.54 Downloading multidict-6.7.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (246 kB)
+#7 17.56    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 246.7/246.7 kB 15.6 MB/s eta 0:00:00
+#7 17.66 Downloading nacos_sdk_python-1.0.0-py3-none-any.whl (25 kB)
+#7 17.68 Downloading nest_asyncio-1.6.0-py3-none-any.whl (5.2 kB)
+#7 17.70 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 18.36    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 23.3 MB/s eta 0:00:00
+#7 18.37 Downloading openai-2.6.1-py3-none-any.whl (1.0 MB)
+#7 18.42    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 23.5 MB/s eta 0:00:00
+#7 18.44 Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+#7 18.91    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 25.9 MB/s eta 0:00:00
+#7 18.92 Downloading python_dotenv-1.2.1-py3-none-any.whl (21 kB)
+#7 18.94 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#7 18.98    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 23.5 MB/s eta 0:00:00
+#7 18.99 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 19.00    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 6.0 MB/s eta 0:00:00
+#7 19.01 Downloading rich-14.2.0-py3-none-any.whl (243 kB)
+#7 19.03    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.4/243.4 kB 14.9 MB/s eta 0:00:00
+#7 19.04 Downloading schedule-1.2.2-py3-none-any.whl (12 kB)
+#7 19.07 Downloading shortuuid-1.0.13-py3-none-any.whl (10 kB)
+#7 19.09 Downloading tenacity-9.1.2-py3-none-any.whl (28 kB)
+#7 19.10 Downloading tinytag-2.1.2-py3-none-any.whl (31 kB)
+#7 19.12 Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+#7 19.14 Downloading typer-0.20.0-py3-none-any.whl (47 kB)
+#7 19.15    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.0/47.0 kB 4.4 MB/s eta 0:00:00
+#7 19.16 Downloading watchfiles-1.1.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (456 kB)
+#7 19.19    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 456.1/456.1 kB 17.4 MB/s eta 0:00:00
+#7 19.20 Downloading wrapt-2.0.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (114 kB)
+#7 19.21    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.1/114.1 kB 8.7 MB/s eta 0:00:00
+#7 19.23 Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+#7 19.24 Downloading anyio-4.11.0-py3-none-any.whl (109 kB)
+#7 19.26    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.1/109.1 kB 9.3 MB/s eta 0:00:00
+#7 19.26 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 19.28    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.7 MB/s eta 0:00:00
+#7 19.29 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#7 19.31    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 8.3 MB/s eta 0:00:00
+#7 19.32 Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+#7 19.34 Downloading hpack-4.1.0-py3-none-any.whl (34 kB)
+#7 19.35 Downloading hyperframe-6.1.0-py3-none-any.whl (13 kB)
+#7 19.37 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 19.38    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 6.5 MB/s eta 0:00:00
+#7 19.39 Downloading jiter-0.11.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (359 kB)
+#7 19.41    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 359.2/359.2 kB 18.3 MB/s eta 0:00:00
+#7 19.42 Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+#7 19.43    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.3/87.3 kB 7.6 MB/s eta 0:00:00
+#7 19.44 Downloading mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+#7 19.46 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#7 19.47    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 6.0 MB/s eta 0:00:00
+#7 19.48 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#7 19.53    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 25.9 MB/s eta 0:00:00
+#7 19.54 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#7 19.55    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 17.2 MB/s eta 0:00:00
+#7 19.56 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#7 19.59    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 21.4 MB/s eta 0:00:00
+#7 19.59 Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+#7 19.61 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+#7 19.63 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#7 19.65    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 16.8 MB/s eta 0:00:00
+#7 19.66 Downloading zipp-3.23.0-py3-none-any.whl (10 kB)
+#7 19.68 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#7 19.97    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 25.0 MB/s eta 0:00:00
+#7 19.97 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#7 19.99 Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+#7 20.01 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 20.20 Building wheels for collected packages: PyQRCode, HermesCache, jsonpath, Pillow-PIL, wget
+#7 20.20   Building wheel for PyQRCode (setup.py): started
+#7 20.36   Building wheel for PyQRCode (setup.py): finished with status 'done'
+#7 20.36   Created wheel for PyQRCode: filename=pyqrcode-1.2.1-py3-none-any.whl size=36267 sha256=edd2a89404a3972db77ddd8c17224549be1587e323f64c53a12076a1d3f2341f
+#7 20.36   Stored in directory: /root/.cache/pip/wheels/f5/db/22/ade11e0c0854d1bb2fcc673dc90f6495ee2c0d2b6eb41492e3
+#7 20.36   Building wheel for HermesCache (setup.py): started
+#7 20.50   Building wheel for HermesCache (setup.py): finished with status 'done'
+#7 20.50   Created wheel for HermesCache: filename=hermescache-1.1.0-py3-none-any.whl size=30620 sha256=9f9c7e20a18d34313aaf32b0e9ac38c0313117dc09af084acd81b55ec4f2fa77
+#7 20.50   Stored in directory: /root/.cache/pip/wheels/bc/f7/bd/6ba0370f9d2db4f70eafd27bb5eab531e22db141460b5cf0a5
+#7 20.50   Building wheel for jsonpath (setup.py): started
+#7 20.63   Building wheel for jsonpath (setup.py): finished with status 'done'
+#7 20.63   Created wheel for jsonpath: filename=jsonpath-0.82.2-py3-none-any.whl size=5669 sha256=dbe4c02a201d1ab9af7083adc5fe8b436d500e0b09ec981cc0c91eeca235dc7d
+#7 20.63   Stored in directory: /root/.cache/pip/wheels/7d/b8/16/48bbd715040679311fa68cb564ad24a97d9a67fea5d4c848c8
+#7 20.63   Building wheel for Pillow-PIL (setup.py): started
+#7 20.78   Building wheel for Pillow-PIL (setup.py): finished with status 'done'
+#7 20.78   Created wheel for Pillow-PIL: filename=pillow_pil-0.1.dev0-py3-none-any.whl size=15725 sha256=95422739a1148bb1e56c0ad35594a51c0bf873a05538e09acfbaded70e0e8f22
+#7 20.78   Stored in directory: /root/.cache/pip/wheels/1b/3f/03/ca3ab433e74f61aa389973acfe0d2a2efe9244969ced3c0b44
+#7 20.78   Building wheel for wget (setup.py): started
+#7 20.90   Building wheel for wget (setup.py): finished with status 'done'
+#7 20.90   Created wheel for wget: filename=wget-3.2-py3-none-any.whl size=9687 sha256=56624e451e36f03e11a0c661c5c1990ffe63083a983acdd1af471b6da56369a8
+#7 20.90   Stored in directory: /root/.cache/pip/wheels/40/b3/0f/a40dbd1c6861731779f62cc4babcb234387e11d697df70ee97
+#7 20.91 Successfully built PyQRCode HermesCache jsonpath Pillow-PIL wget
+#7 21.43 Installing collected packages: wget, pytz, PyQRCode, node-semver, nacos-sdk-python, jsonpath, appdirs, aiocache, zipp, wrapt, websockets, urllib3, tzdata, typing-extensions, tqdm, toml, tinytag, tenacity, sniffio, six, shortuuid, shellingham, schedule, pyyaml, python-dotenv, pygments, Pillow, packaging, numpy, nest_asyncio, mypy-extensions, multidict, mdurl, lxml, loguru, json_repair, joblib, jmespath, jiter, idna, hyperframe, hpack, HermesCache, h11, emoji, distro, diskcache, click, charset_normalizer, certifi, cachetools, async_lru, asgiref, annotated-types, typing-inspect, requests, python-dateutil, pyee, pydantic-core, Pillow-PIL, marshmallow, markdown-it-py, importlib-metadata, httpcore, h2, faker, anyio, aiostream, watchfiles, rich, pyppeteer, pydantic, pandas, httpx, grpclib, dataclasses-json, typer, openai, meutils, xchat
+#7 32.36 Successfully installed HermesCache-1.1.0 Pillow-12.0.0 Pillow-PIL-0.1.dev0 PyQRCode-1.2.1 aiocache-0.12.3 aiostream-0.7.1 annotated-types-0.7.0 anyio-4.11.0 appdirs-1.4.4 asgiref-3.10.0 async_lru-2.0.5 cachetools-6.2.1 certifi-2025.10.5 charset_normalizer-3.4.4 click-8.3.0 dataclasses-json-0.6.7 diskcache-5.6.3 distro-1.9.0 emoji-2.15.0 faker-37.12.0 grpclib-0.4.8 h11-0.16.0 h2-4.3.0 hpack-4.1.0 httpcore-1.0.9 httpx-0.28.1 hyperframe-6.1.0 idna-3.11 importlib-metadata-8.7.0 jiter-0.11.1 jmespath-1.0.1 joblib-1.5.2 json_repair-0.52.3 jsonpath-0.82.2 loguru-0.7.3 lxml-6.0.2 markdown-it-py-4.0.0 marshmallow-3.26.1 mdurl-0.1.2 meutils-2025.10.28.20.5.25 multidict-6.7.0 mypy-extensions-1.1.0 nacos-sdk-python-1.0.0 nest_asyncio-1.6.0 node-semver-0.8.1 numpy-2.3.4 openai-2.6.1 packaging-25.0 pandas-2.3.3 pydantic-2.9.2 pydantic-core-2.23.4 pyee-11.1.1 pygments-2.19.2 pyppeteer-2.0.0 python-dateutil-2.9.0.post0 python-dotenv-1.2.1 pytz-2025.2 pyyaml-6.0.3 requests-2.32.5 rich-14.2.0 schedule-1.2.2 shellingham-1.5.4 shortuuid-1.0.13 six-1.17.0 sniffio-1.3.1 tenacity-9.1.2 tinytag-2.1.2 toml-0.10.2 tqdm-4.67.1 typer-0.20.0 typing-extensions-4.15.0 typing-inspect-0.9.0 tzdata-2025.2 urllib3-1.26.20 watchfiles-1.1.1 websockets-10.4 wget-3.2 wrapt-2.0.0 xchat-2023.11.16.17.50.4 zipp-3.23.0
+#7 32.36 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 32.47 
+#7 32.47 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 32.47 [notice] To update, run: pip install --upgrade pip
+#7 DONE 35.2s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 1.9s done
+#8 writing image sha256:89a380ad0decaa59abd304693e8c0d5aa97d7b4b3a8ac8f345b736170ca8e76c done
+#8 naming to docker.io/library/test-image-9674216 done
+#8 DONE 1.9s
+
+View build details: docker-desktop://dashboard/build/default/default/f13zs765ifkiuplnuo9xprjd9
+[2025-10-29 18:30:22] SUCCESS: Build completed for 9674216

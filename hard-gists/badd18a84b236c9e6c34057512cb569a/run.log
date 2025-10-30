@@ -1,0 +1,32 @@
+=== Docker Run Log for badd18a84b236c9e6c34057512cb569a ===
+Started at: Mi 29. Okt 19:35:00 CET 2025
+
+[2025-10-29 19:35:06] START: Running container for badd18a84b236c9e6c34057512cb569a
+[2025-10-29 19:35:06] SUCCESS: Container 761292b2fa43108521bf8db5f50ad5aca3f8a9aec0303e1ce3dbeba86f8d4421 started for badd18a84b236c9e6c34057512cb569a
+=== Container logs for badd18a84b236c9e6c34057512cb569a ===
+/snippet.py:302: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if (point.x == function_pos[load_matrix] and point.direction is 2) \
+/snippet.py:303: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  or (point.x == 0 and point.direction is 4) \
+/snippet.py:304: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  or (point.y == 0 and point.direction is 3) \
+/snippet.py:305: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  or (point.y == height - 1 and point.direction is 1):
+/snippet.py:315: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if (point.x > function_pos[load_matrix] and point.direction is 2) \
+/snippet.py:316: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  or (point.x < 0 and point.direction is 4) \
+/snippet.py:317: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  or (point.y < 0 and point.direction is 3) \
+/snippet.py:318: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  or (point.y > height - 1 and point.direction is 1):
+Traceback (most recent call last):
+  File "/snippet.py", line 14, in <module>
+    import unicornhat as unicorn
+  File "/usr/local/lib/python3.11/site-packages/unicornhat.py", line 35, in <module>
+    ws2812.begin()
+  File "/usr/local/lib/python3.11/site-packages/rpi_ws281x/rpi_ws281x.py", line 143, in begin
+    raise RuntimeError('ws2811_init failed with code {0} ({1})'.format(resp, str_resp))
+RuntimeError: ws2811_init failed with code -3 (Hardware revision is not supported)
+=== End of logs for badd18a84b236c9e6c34057512cb569a ===
+[2025-10-29 19:35:08] INFO: Container 761292b2fa43108521bf8db5f50ad5aca3f8a9aec0303e1ce3dbeba86f8d4421 has stopped

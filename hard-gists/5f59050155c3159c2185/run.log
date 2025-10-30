@@ -1,0 +1,15 @@
+=== Docker Run Log for 5f59050155c3159c2185 ===
+Started at: Mi 29. Okt 16:17:05 CET 2025
+
+[2025-10-29 16:17:11] START: Running container for 5f59050155c3159c2185
+[2025-10-29 16:17:11] SUCCESS: Container 1d1e795053386a9e4ca3933c614aab8698b038cdcf8fdf9c6654ffe487317d9b started for 5f59050155c3159c2185
+=== Container logs for 5f59050155c3159c2185 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 18, in <module>
+    isMayaInBatchMode = checkMayaGuiBatchMode()
+                        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 10, in checkMayaGuiBatchMode
+    import maya.OpenMaya
+ModuleNotFoundError: No module named 'maya.OpenMaya'
+=== End of logs for 5f59050155c3159c2185 ===
+[2025-10-29 16:17:13] INFO: Container 1d1e795053386a9e4ca3933c614aab8698b038cdcf8fdf9c6654ffe487317d9b has stopped

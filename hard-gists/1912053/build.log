@@ -1,0 +1,71 @@
+=== Docker Build Log for 1912053 ===
+Started at: Mi 29. Okt 12:33:58 CET 2025
+
+[2025-10-29 12:33:58] START: Building image for 1912053
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 199B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.78kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/1912053/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","pan-python"]
+#7 2.000 Collecting pan-python
+#7 2.039   Downloading pan_python-0.25.0-py3-none-any.whl.metadata (1.4 kB)
+#7 2.060 Downloading pan_python-0.25.0-py3-none-any.whl (60 kB)
+#7 2.081    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.3/60.3 kB 2.8 MB/s eta 0:00:00
+#7 2.113 Installing collected packages: pan-python
+#7 2.166 Successfully installed pan-python-0.25.0
+#7 2.166 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.254 
+#7 2.254 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.254 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.4s
+
+#8 [4/4] RUN ["pip","install","pango"]
+#8 0.518 Collecting pango
+#8 0.551   Downloading pango-0.0.1.tar.gz (1.0 kB)
+#8 0.563   Installing build dependencies: started
+#8 1.839   Installing build dependencies: finished with status 'done'
+#8 1.840   Getting requirements to build wheel: started
+#8 2.022   Getting requirements to build wheel: finished with status 'done'
+#8 2.023   Preparing metadata (pyproject.toml): started
+#8 2.153   Preparing metadata (pyproject.toml): finished with status 'done'
+#8 2.154 Building wheels for collected packages: pango
+#8 2.155   Building wheel for pango (pyproject.toml): started
+#8 2.291   Building wheel for pango (pyproject.toml): finished with status 'done'
+#8 2.292   Created wheel for pango: filename=pango-0.0.1-py3-none-any.whl size=1044 sha256=24ae1a25077067b242f969e2d94b7e9a1265df444635a9ae213c03c69bec20c8
+#8 2.292   Stored in directory: /root/.cache/pip/wheels/eb/63/bb/5483b38364b67a6781acf5ca46e3043f0551c78fa6de952a2d
+#8 2.294 Successfully built pango
+#8 2.323 Installing collected packages: pango
+#8 2.335 Successfully installed pango-0.0.1
+#8 2.335 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.340 
+#8 2.340 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.340 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.4s
+
+#9 exporting to image
+#9 exporting layers 0.1s done
+#9 writing image sha256:919c80fce245e4b0fa365fb442feb57eac00a4f5e376f8cfe145fa4f6aec67a7 done
+#9 naming to docker.io/library/test-image-1912053 done
+#9 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/mgrhv97tm0kz3f6v9objedywl
+[2025-10-29 12:34:03] SUCCESS: Build completed for 1912053

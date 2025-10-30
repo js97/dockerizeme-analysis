@@ -1,0 +1,181 @@
+=== Docker Build Log for 5858518 ===
+Started at: Mi 29. Okt 16:06:15 CET 2025
+
+[2025-10-29 16:06:15] START: Building image for 5858518
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 293B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.73kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/5858518/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","dj.choices"]
+#7 2.055 Collecting dj.choices
+#7 2.092   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 2.110   Preparing metadata (setup.py): started
+#7 2.510   Preparing metadata (setup.py): finished with status 'done'
+#7 2.626 Collecting django (from dj.choices)
+#7 2.636   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.677 Collecting six (from dj.choices)
+#7 2.685   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.734 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.744   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.782 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.790   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.814 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.155    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 24.5 MB/s eta 0:00:00
+#7 3.165 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.200 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.233 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.245    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.4 MB/s eta 0:00:00
+#7 3.287 Building wheels for collected packages: dj.choices
+#7 3.287   Building wheel for dj.choices (setup.py): started
+#7 3.480   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.480   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=08e53991b3558c7e69e86a43cd63c3317245c3bbb03a89c5c3382137c688bfa4
+#7 3.480   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.483 Successfully built dj.choices
+#7 3.537 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 5.260 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 5.260 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.367 
+#7 5.367 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.367 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.9s
+
+#8 [4/7] RUN ["pip","install","requests"]
+#8 0.654 Collecting requests
+#8 0.690   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#8 0.831 Collecting charset_normalizer<4,>=2 (from requests)
+#8 0.840   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#8 0.903 Collecting idna<4,>=2.5 (from requests)
+#8 0.911   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#8 0.979 Collecting urllib3<3,>=1.21.1 (from requests)
+#8 0.988   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#8 1.040 Collecting certifi>=2017.4.17 (from requests)
+#8 1.051   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#8 1.080 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#8 1.104    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 2.5 MB/s eta 0:00:00
+#8 1.113 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#8 1.137    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 7.0 MB/s eta 0:00:00
+#8 1.145 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#8 1.166    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 7.2 MB/s eta 0:00:00
+#8 1.173 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#8 1.187    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.9 MB/s eta 0:00:00
+#8 1.195 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#8 1.215    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 6.5 MB/s eta 0:00:00
+#8 1.275 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#8 1.552 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#8 1.552 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.558 
+#8 1.558 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.558 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.7s
+
+#9 [5/7] RUN ["pip","install","celery"]
+#9 0.651 Collecting celery
+#9 0.692   Downloading celery-5.5.3-py3-none-any.whl.metadata (22 kB)
+#9 0.784 Collecting billiard<5.0,>=4.2.1 (from celery)
+#9 0.793   Downloading billiard-4.2.2-py3-none-any.whl.metadata (4.8 kB)
+#9 0.873 Collecting kombu<5.6,>=5.5.2 (from celery)
+#9 0.883   Downloading kombu-5.5.4-py3-none-any.whl.metadata (3.5 kB)
+#9 0.924 Collecting vine<6.0,>=5.1.0 (from celery)
+#9 0.933   Downloading vine-5.1.0-py3-none-any.whl.metadata (2.7 kB)
+#9 0.984 Collecting click<9.0,>=8.1.2 (from celery)
+#9 0.993   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#9 1.028 Collecting click-didyoumean>=0.3.0 (from celery)
+#9 1.038   Downloading click_didyoumean-0.3.1-py3-none-any.whl.metadata (3.9 kB)
+#9 1.077 Collecting click-repl>=0.2.0 (from celery)
+#9 1.086   Downloading click_repl-0.3.0-py3-none-any.whl.metadata (3.6 kB)
+#9 1.126 Collecting click-plugins>=1.1.1 (from celery)
+#9 1.134   Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl.metadata (6.5 kB)
+#9 1.190 Collecting python-dateutil>=2.8.2 (from celery)
+#9 1.198   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#9 1.281 Collecting prompt-toolkit>=3.0.36 (from click-repl>=0.2.0->celery)
+#9 1.288   Downloading prompt_toolkit-3.0.52-py3-none-any.whl.metadata (6.4 kB)
+#9 1.354 Collecting amqp<6.0.0,>=5.1.1 (from kombu<5.6,>=5.5.2->celery)
+#9 1.362   Downloading amqp-5.3.1-py3-none-any.whl.metadata (8.9 kB)
+#9 1.408 Collecting tzdata>=2025.2 (from kombu<5.6,>=5.5.2->celery)
+#9 1.416   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#9 1.470 Collecting packaging (from kombu<5.6,>=5.5.2->celery)
+#9 1.479   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#9 1.492 Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.11/site-packages (from python-dateutil>=2.8.2->celery) (1.17.0)
+#9 1.524 Collecting wcwidth (from prompt-toolkit>=3.0.36->click-repl>=0.2.0->celery)
+#9 1.532   Downloading wcwidth-0.2.14-py2.py3-none-any.whl.metadata (15 kB)
+#9 1.561 Downloading celery-5.5.3-py3-none-any.whl (438 kB)
+#9 1.598    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 438.8/438.8 kB 12.2 MB/s eta 0:00:00
+#9 1.606 Downloading billiard-4.2.2-py3-none-any.whl (86 kB)
+#9 1.618    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.9/86.9 kB 7.7 MB/s eta 0:00:00
+#9 1.627 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#9 1.639    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 8.7 MB/s eta 0:00:00
+#9 1.647 Downloading click_didyoumean-0.3.1-py3-none-any.whl (3.6 kB)
+#9 1.669 Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl (11 kB)
+#9 1.689 Downloading click_repl-0.3.0-py3-none-any.whl (10 kB)
+#9 1.717 Downloading kombu-5.5.4-py3-none-any.whl (210 kB)
+#9 1.733    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 210.0/210.0 kB 13.6 MB/s eta 0:00:00
+#9 1.741 Downloading vine-5.1.0-py3-none-any.whl (9.6 kB)
+#9 1.759 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#9 1.777    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 13.8 MB/s eta 0:00:00
+#9 1.784 Downloading amqp-5.3.1-py3-none-any.whl (50 kB)
+#9 1.795    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.9/50.9 kB 4.7 MB/s eta 0:00:00
+#9 1.803 Downloading prompt_toolkit-3.0.52-py3-none-any.whl (391 kB)
+#9 1.825    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 391.4/391.4 kB 18.3 MB/s eta 0:00:00
+#9 1.833 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#9 1.855    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 17.2 MB/s eta 0:00:00
+#9 1.863 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#9 1.875    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.5 MB/s eta 0:00:00
+#9 1.882 Downloading wcwidth-0.2.14-py2.py3-none-any.whl (37 kB)
+#9 2.028 Installing collected packages: wcwidth, vine, tzdata, python-dateutil, packaging, click, billiard, prompt-toolkit, click-plugins, click-didyoumean, amqp, kombu, click-repl, celery
+#9 3.163 Successfully installed amqp-5.3.1 billiard-4.2.2 celery-5.5.3 click-8.3.0 click-didyoumean-0.3.1 click-plugins-1.1.1.2 click-repl-0.3.0 kombu-5.5.4 packaging-25.0 prompt-toolkit-3.0.52 python-dateutil-2.9.0.post0 tzdata-2025.2 vine-5.1.0 wcwidth-0.2.14
+#9 3.163 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 3.169 
+#9 3.169 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 3.169 [notice] To update, run: pip install --upgrade pip
+#9 DONE 3.4s
+
+#10 [6/7] RUN ["pip","install","Django"]
+#10 0.513 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#10 0.518 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#10 0.519 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#10 0.641 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.647 
+#10 0.647 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.647 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.7s
+
+#11 [7/7] RUN ["pip","install","conf"]
+#11 0.729 Collecting conf
+#11 0.861   Downloading conf-0.4.1-py3-none-any.whl.metadata (3.1 kB)
+#11 0.994 Downloading conf-0.4.1-py3-none-any.whl (6.0 kB)
+#11 1.134 Installing collected packages: conf
+#11 1.176 Successfully installed conf-0.4.1
+#11 1.177 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.182 
+#11 1.182 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.182 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.3s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.7s done
+#12 writing image sha256:415c254467c8841554a0e5d98c8e1c31a085f964b49fa2afd42dff6cbfceca7d done
+#12 naming to docker.io/library/test-image-5858518 done
+#12 DONE 0.7s
+
+View build details: docker-desktop://dashboard/build/default/default/a4049gc081p7dyybajm6vq967
+[2025-10-29 16:06:29] SUCCESS: Build completed for 5858518

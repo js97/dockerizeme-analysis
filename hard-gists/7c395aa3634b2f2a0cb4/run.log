@@ -1,0 +1,12 @@
+=== Docker Run Log for 7c395aa3634b2f2a0cb4 ===
+Started at: Mi 29. Okt 17:31:42 CET 2025
+
+[2025-10-29 17:31:51] START: Running container for 7c395aa3634b2f2a0cb4
+[2025-10-29 17:31:52] SUCCESS: Container 80281ffd692e3cb9c22b7946350d5a0a6f6d249ebba5bbcbb619999c1e1480f3 started for 7c395aa3634b2f2a0cb4
+=== Container logs for 7c395aa3634b2f2a0cb4 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 4, in <module>
+    from django.db.models import get_models, Model
+ImportError: cannot import name 'get_models' from 'django.db.models' (/usr/local/lib/python3.11/site-packages/django/db/models/__init__.py)
+=== End of logs for 7c395aa3634b2f2a0cb4 ===
+[2025-10-29 17:31:54] INFO: Container 80281ffd692e3cb9c22b7946350d5a0a6f6d249ebba5bbcbb619999c1e1480f3 has stopped

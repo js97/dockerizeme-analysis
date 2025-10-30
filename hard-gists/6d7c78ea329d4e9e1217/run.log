@@ -1,0 +1,15 @@
+=== Docker Run Log for 6d7c78ea329d4e9e1217 ===
+Started at: Mi 29. Okt 16:50:50 CET 2025
+
+[2025-10-29 16:51:14] START: Running container for 6d7c78ea329d4e9e1217
+[2025-10-29 16:51:15] SUCCESS: Container dc5fd2cf3662ae7f70badc1f19198fee1ec91b1b0166d1f9efb7b4912522b55b started for 6d7c78ea329d4e9e1217
+=== Container logs for 6d7c78ea329d4e9e1217 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 8, in <module>
+    montage = mne.channels.read_montage('biosemi128')
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/lazy_loader/__init__.py", line 94, in __getattr__
+    raise AttributeError(f"No {package_name} attribute {name}")
+AttributeError: No mne.channels attribute read_montage
+=== End of logs for 6d7c78ea329d4e9e1217 ===
+[2025-10-29 16:51:17] INFO: Container dc5fd2cf3662ae7f70badc1f19198fee1ec91b1b0166d1f9efb7b4912522b55b has stopped

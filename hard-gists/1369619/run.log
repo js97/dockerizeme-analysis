@@ -1,0 +1,17 @@
+=== Docker Run Log for 1369619 ===
+Started at: Mi 29. Okt 12:10:21 CET 2025
+
+[2025-10-29 12:10:28] START: Running container for 1369619
+[2025-10-29 12:10:28] SUCCESS: Container bc45b363ce659ea85ff195e101ac1725e2f2937f2bdc2b0812282fc22f00ca60 started for 1369619
+=== Container logs for 1369619 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 5, in <module>
+    XS_SHARING_ALLOWED_ORIGINS = settings.XS_SHARING_ALLOWED_ORIGINS
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting XS_SHARING_ALLOWED_ORIGINS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 1369619 ===
+[2025-10-29 12:10:30] INFO: Container bc45b363ce659ea85ff195e101ac1725e2f2937f2bdc2b0812282fc22f00ca60 has stopped

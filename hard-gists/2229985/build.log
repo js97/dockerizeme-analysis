@@ -1,0 +1,68 @@
+=== Docker Build Log for 2229985 ===
+Started at: Mi 29. Okt 13:01:33 CET 2025
+
+[2025-10-29 13:01:33] START: Building image for 2229985
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 201B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.20kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/2229985/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","tornado"]
+#7 1.934 Collecting tornado
+#7 1.968   Downloading tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+#7 1.988 Downloading tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (443 kB)
+#7 2.031    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 443.9/443.9 kB 11.4 MB/s eta 0:00:00
+#7 2.065 Installing collected packages: tornado
+#7 2.257 Successfully installed tornado-6.5.2
+#7 2.257 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.348 
+#7 2.348 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.348 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.5s
+
+#8 [4/4] RUN ["pip","install","asyncmongo"]
+#8 0.614 Collecting asyncmongo
+#8 0.765   Downloading asyncmongo-1.3.tar.gz (27 kB)
+#8 0.794   Preparing metadata (setup.py): started
+#8 1.208   Preparing metadata (setup.py): finished with status 'done'
+#8 1.209 Building wheels for collected packages: asyncmongo
+#8 1.210   Building wheel for asyncmongo (setup.py): started
+#8 1.378   Building wheel for asyncmongo (setup.py): finished with status 'done'
+#8 1.379   Created wheel for asyncmongo: filename=asyncmongo-1.3-py3-none-any.whl size=29587 sha256=877315e0b2aa6edd20c41ec8d9cf929a204ee3a27a4246cebc7e374ff0104cd8
+#8 1.379   Stored in directory: /root/.cache/pip/wheels/b5/12/ec/2668cc25955f1c7d1a2105173dea946ad2e60abef49795848c
+#8 1.381 Successfully built asyncmongo
+#8 1.410 Installing collected packages: asyncmongo
+#8 1.431 Successfully installed asyncmongo-1.3
+#8 1.431 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.436 
+#8 1.436 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.436 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.5s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.2s done
+#9 writing image sha256:5b17bc5105d0a49466a9df8bc9ee5f8d0c319ef335a0d8f95cc2be862ebaba97 done
+#9 naming to docker.io/library/test-image-2229985 done
+#9 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/oqtr1ah9imchvc1387gmg9f8q
+[2025-10-29 13:01:37] SUCCESS: Build completed for 2229985

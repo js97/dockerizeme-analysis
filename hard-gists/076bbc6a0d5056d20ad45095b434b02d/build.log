@@ -1,0 +1,93 @@
+=== Docker Build Log for 076bbc6a0d5056d20ad45095b434b02d ===
+Started at: Mi 29. Okt 11:29:37 CET 2025
+
+[2025-10-29 11:29:37] START: Building image for 076bbc6a0d5056d20ad45095b434b02d
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 226B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.77kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/076bbc6a0d5056d20ad45095b434b02d/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","python-nomad"]
+#7 1.999 Collecting python-nomad
+#7 2.038   Downloading python_nomad-2.1.0-py3-none-any.whl.metadata (6.3 kB)
+#7 2.098 Collecting requests (from python-nomad)
+#7 2.171   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.288 Collecting charset_normalizer<4,>=2 (from requests->python-nomad)
+#7 2.299   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.343 Collecting idna<4,>=2.5 (from requests->python-nomad)
+#7 2.352   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.410 Collecting urllib3<3,>=1.21.1 (from requests->python-nomad)
+#7 2.419   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.465 Collecting certifi>=2017.4.17 (from requests->python-nomad)
+#7 2.473   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.501 Downloading python_nomad-2.1.0-py3-none-any.whl (37 kB)
+#7 2.520 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.532    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 5.3 MB/s eta 0:00:00
+#7 2.540 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.561    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 7.9 MB/s eta 0:00:00
+#7 2.570 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.585    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.6 MB/s eta 0:00:00
+#7 2.594 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.608    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.1 MB/s eta 0:00:00
+#7 2.616 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.630    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.4 MB/s eta 0:00:00
+#7 2.679 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests, python-nomad
+#7 2.945 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 python-nomad-2.1.0 requests-2.32.5 urllib3-2.5.0
+#7 2.946 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.038 
+#7 3.038 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.038 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.2s
+
+#8 [4/4] RUN ["pip","install","nomad"]
+#8 0.508 Collecting nomad
+#8 0.540   Downloading nomad-2.4-py3-none-any.whl.metadata (10 kB)
+#8 0.592 Collecting opster==5.0 (from nomad)
+#8 0.602   Downloading opster-5.0.tar.gz (13 kB)
+#8 0.617   Preparing metadata (setup.py): started
+#8 1.076   Preparing metadata (setup.py): finished with status 'done'
+#8 1.103 Collecting termcolor==2.2.0 (from nomad)
+#8 1.112   Downloading termcolor-2.2.0-py3-none-any.whl.metadata (5.3 kB)
+#8 1.134 Downloading nomad-2.4-py3-none-any.whl (14 kB)
+#8 1.155 Downloading termcolor-2.2.0-py3-none-any.whl (6.6 kB)
+#8 1.171 Building wheels for collected packages: opster
+#8 1.172   Building wheel for opster (setup.py): started
+#8 1.332   Building wheel for opster (setup.py): finished with status 'done'
+#8 1.333   Created wheel for opster: filename=opster-5.0-py3-none-any.whl size=11834 sha256=b0fc824fe22f2c80c9bfe16c7a68a034b965332d67845917718baecab2e6ba66
+#8 1.333   Stored in directory: /root/.cache/pip/wheels/0c/91/83/46f3b3a91319cfadbfb4a40749d4c49e2c83a70069f48e1083
+#8 1.334 Successfully built opster
+#8 1.378 Installing collected packages: opster, termcolor, nomad
+#8 1.437 Successfully installed nomad-2.4 opster-5.0 termcolor-2.2.0
+#8 1.437 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.442 
+#8 1.442 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.442 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.6s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.2s done
+#9 writing image sha256:bd166bc103a29abf9ac379163e7a41a167fea07641165f12dd54ecdea4b0479f done
+#9 naming to docker.io/library/test-image-076bbc6a0d5056d20ad45095b434b02d done
+#9 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/i6klwb79bu98vdu91owwrtwkc
+[2025-10-29 11:29:42] SUCCESS: Build completed for 076bbc6a0d5056d20ad45095b434b02d

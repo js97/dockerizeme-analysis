@@ -1,0 +1,29 @@
+=== Docker Run Log for de546cb143ebae4a489a482a05ab4beb ===
+Started at: Mi 29. Okt 20:35:45 CET 2025
+
+[2025-10-29 20:35:49] START: Running container for de546cb143ebae4a489a482a05ab4beb
+[2025-10-29 20:35:49] SUCCESS: Container ae5d15f6d819ae2754ca3b36563c8ac724c58f6fc354aff2dfff5a73b1ef3c64 started for de546cb143ebae4a489a482a05ab4beb
+=== Container logs for de546cb143ebae4a489a482a05ab4beb ===
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/notmuch/globals.py", line 30, in <module>
+    nmlib = CDLL("libnotmuch.so.{0:s}".format(SOVERSION))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/ctypes/__init__.py", line 376, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: libnotmuch.so.5: cannot open shared object file: No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snippet.py", line 7, in <module>
+    import notmuch
+  File "/usr/local/lib/python3.11/site-packages/notmuch/__init__.py", line 54, in <module>
+    from .database import Database
+  File "/usr/local/lib/python3.11/site-packages/notmuch/database.py", line 25, in <module>
+    from .globals import (
+  File "/usr/local/lib/python3.11/site-packages/notmuch/globals.py", line 32, in <module>
+    raise ImportError("Could not find shared 'notmuch' library.")
+ImportError: Could not find shared 'notmuch' library.
+=== End of logs for de546cb143ebae4a489a482a05ab4beb ===
+[2025-10-29 20:35:51] INFO: Container ae5d15f6d819ae2754ca3b36563c8ac724c58f6fc354aff2dfff5a73b1ef3c64 has stopped

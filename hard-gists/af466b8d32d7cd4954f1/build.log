@@ -1,0 +1,223 @@
+=== Docker Build Log for af466b8d32d7cd4954f1 ===
+Started at: Mi 29. Okt 19:21:53 CET 2025
+
+[2025-10-29 19:21:53] START: Building image for af466b8d32d7cd4954f1
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 703B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.05kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/19] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/19] COPY hard-gists/af466b8d32d7cd4954f1/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/19] RUN ["pip","install","six"]
+#7 1.886 Collecting six
+#7 1.921   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 1.942 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 1.984 Installing collected packages: six
+#7 2.000 Successfully installed six-1.17.0
+#7 2.000 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.095 
+#7 2.095 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.095 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.3s
+
+#8 [ 4/19] RUN ["pip","install","Flask"]
+#8 0.533 Collecting Flask
+#8 0.588   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#8 0.634 Collecting blinker>=1.9.0 (from Flask)
+#8 0.643   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#8 0.689 Collecting click>=8.1.3 (from Flask)
+#8 0.709   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#8 0.745 Collecting itsdangerous>=2.2.0 (from Flask)
+#8 0.759   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#8 0.806 Collecting jinja2>=3.1.2 (from Flask)
+#8 0.819   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#8 0.909 Collecting markupsafe>=2.1.1 (from Flask)
+#8 0.921   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#8 0.972 Collecting werkzeug>=3.1.0 (from Flask)
+#8 0.982   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#8 1.009 Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+#8 1.034    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 4.1 MB/s eta 0:00:00
+#8 1.043 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#8 1.066 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#8 1.082    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 6.9 MB/s eta 0:00:00
+#8 1.089 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#8 1.105 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#8 1.125    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 6.8 MB/s eta 0:00:00
+#8 1.135 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#8 1.154 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#8 1.184    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 7.4 MB/s eta 0:00:00
+#8 1.229 Installing collected packages: markupsafe, itsdangerous, click, blinker, werkzeug, jinja2, Flask
+#8 1.546 Successfully installed Flask-3.1.2 blinker-1.9.0 click-8.3.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.3 werkzeug-3.1.3
+#8 1.546 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.551 
+#8 1.551 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.551 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.7s
+
+#9 [ 5/19] RUN ["pip","install","Werkzeug"]
+#9 0.446 Requirement already satisfied: Werkzeug in /usr/local/lib/python3.11/site-packages (3.1.3)
+#9 0.448 Requirement already satisfied: MarkupSafe>=2.1.1 in /usr/local/lib/python3.11/site-packages (from Werkzeug) (3.0.3)
+#9 0.485 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.490 
+#9 0.490 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.490 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.6s
+
+#10 [ 6/19] RUN ["pip","install","itsdangerous"]
+#10 0.446 Requirement already satisfied: itsdangerous in /usr/local/lib/python3.11/site-packages (2.2.0)
+#10 0.484 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.489 
+#10 0.489 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.489 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.6s
+
+#11 [ 7/19] RUN ["pip","install","alembic"]
+#11 0.612 Collecting alembic
+#11 0.648   Downloading alembic-1.17.1-py3-none-any.whl.metadata (7.2 kB)
+#11 1.028 Collecting SQLAlchemy>=1.4.0 (from alembic)
+#11 1.039   Downloading sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.5 kB)
+#11 1.102 Collecting Mako (from alembic)
+#11 1.111   Downloading mako-1.3.10-py3-none-any.whl.metadata (2.9 kB)
+#11 1.159 Collecting typing-extensions>=4.12 (from alembic)
+#11 1.169   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#11 1.380 Collecting greenlet>=1 (from SQLAlchemy>=1.4.0->alembic)
+#11 1.390   Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+#11 1.413 Requirement already satisfied: MarkupSafe>=0.9.2 in /usr/local/lib/python3.11/site-packages (from Mako->alembic) (3.0.3)
+#11 1.438 Downloading alembic-1.17.1-py3-none-any.whl (247 kB)
+#11 1.492    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.8/247.8 kB 4.7 MB/s eta 0:00:00
+#11 1.505 Downloading sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+#11 1.827    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 10.3 MB/s eta 0:00:00
+#11 1.838 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#11 1.851    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 2.9 MB/s eta 0:00:00
+#11 1.863 Downloading mako-1.3.10-py3-none-any.whl (78 kB)
+#11 1.878    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 4.9 MB/s eta 0:00:00
+#11 1.888 Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (587 kB)
+#11 1.938    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 587.7/587.7 kB 11.9 MB/s eta 0:00:00
+#11 2.013 Installing collected packages: typing-extensions, Mako, greenlet, SQLAlchemy, alembic
+#11 3.029 Successfully installed Mako-1.3.10 SQLAlchemy-2.0.44 alembic-1.17.1 greenlet-3.2.4 typing-extensions-4.15.0
+#11 3.029 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 3.034 
+#11 3.034 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 3.034 [notice] To update, run: pip install --upgrade pip
+#11 DONE 3.5s
+
+#12 [ 8/19] RUN ["pip","install","python-editor"]
+#12 0.667 Collecting python-editor
+#12 0.703   Downloading python_editor-1.0.4-py3-none-any.whl.metadata (2.2 kB)
+#12 0.728 Downloading python_editor-1.0.4-py3-none-any.whl (4.9 kB)
+#12 0.806 Installing collected packages: python-editor
+#12 0.847 Successfully installed python-editor-1.0.4
+#12 0.848 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 0.853 
+#12 0.853 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 0.853 [notice] To update, run: pip install --upgrade pip
+#12 DONE 0.9s
+
+#13 [ 9/19] RUN ["pip","install","py-curses-editor"]
+#13 0.650 Collecting py-curses-editor
+#13 0.692   Downloading py_curses_editor-1.3.2-py2.py3-none-any.whl.metadata (3.5 kB)
+#13 0.718 Downloading py_curses_editor-1.3.2-py2.py3-none-any.whl (13 kB)
+#13 0.799 Installing collected packages: py-curses-editor
+#13 0.843 Successfully installed py-curses-editor-1.3.2
+#13 0.843 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 0.848 
+#13 0.848 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 0.848 [notice] To update, run: pip install --upgrade pip
+#13 DONE 0.9s
+
+#14 [10/19] RUN ["pip","install","zipnish"]
+#14 0.712 Collecting zipnish
+#14 0.755   Downloading zipnish-0.1.5.tar.gz (1.6 MB)
+#14 0.905      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 11.0 MB/s eta 0:00:00
+#14 1.007   Preparing metadata (setup.py): started
+#14 1.458   Preparing metadata (setup.py): finished with status 'done'
+#14 1.673 Collecting simplemysql (from zipnish)
+#14 1.683   Downloading simplemysql-1.25.tar.gz (4.5 kB)
+#14 1.698   Preparing metadata (setup.py): started
+#14 1.810   Preparing metadata (setup.py): finished with status 'done'
+#14 1.812 Requirement already satisfied: flask in /usr/local/lib/python3.11/site-packages (from zipnish) (3.1.2)
+#14 1.813 Requirement already satisfied: sqlalchemy in /usr/local/lib/python3.11/site-packages (from zipnish) (2.0.44)
+#14 1.843 Collecting flask_sqlalchemy (from zipnish)
+#14 1.853   Downloading flask_sqlalchemy-3.1.1-py3-none-any.whl.metadata (3.4 kB)
+#14 1.870 Requirement already satisfied: blinker>=1.9.0 in /usr/local/lib/python3.11/site-packages (from flask->zipnish) (1.9.0)
+#14 1.870 Requirement already satisfied: click>=8.1.3 in /usr/local/lib/python3.11/site-packages (from flask->zipnish) (8.3.0)
+#14 1.871 Requirement already satisfied: itsdangerous>=2.2.0 in /usr/local/lib/python3.11/site-packages (from flask->zipnish) (2.2.0)
+#14 1.872 Requirement already satisfied: jinja2>=3.1.2 in /usr/local/lib/python3.11/site-packages (from flask->zipnish) (3.1.6)
+#14 1.873 Requirement already satisfied: markupsafe>=2.1.1 in /usr/local/lib/python3.11/site-packages (from flask->zipnish) (3.0.3)
+#14 1.874 Requirement already satisfied: werkzeug>=3.1.0 in /usr/local/lib/python3.11/site-packages (from flask->zipnish) (3.1.3)
+#14 1.898 Requirement already satisfied: greenlet>=1 in /usr/local/lib/python3.11/site-packages (from sqlalchemy->zipnish) (3.2.4)
+#14 1.899 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.11/site-packages (from sqlalchemy->zipnish) (4.15.0)
+#14 2.030 Collecting mysql-python (from simplemysql->zipnish)
+#14 2.040   Downloading MySQL-python-1.2.5.zip (108 kB)
+#14 2.063      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 108.9/108.9 kB 7.0 MB/s eta 0:00:00
+#14 2.071   Preparing metadata (setup.py): started
+#14 2.160   Preparing metadata (setup.py): finished with status 'error'
+#14 2.163   error: subprocess-exited-with-error
+#14 2.163   
+#14 2.163   × python setup.py egg_info did not run successfully.
+#14 2.163   │ exit code: 1
+#14 2.163   ╰─> [8 lines of output]
+#14 2.163       Traceback (most recent call last):
+#14 2.163         File "<string>", line 2, in <module>
+#14 2.163         File "<pip-setuptools-caller>", line 34, in <module>
+#14 2.163         File "/tmp/pip-install-wa1yx5lw/mysql-python_b6faa5ff841d4213b2511d8d56e90ef8/setup.py", line 13, in <module>
+#14 2.163           from setup_posix import get_config
+#14 2.163         File "/tmp/pip-install-wa1yx5lw/mysql-python_b6faa5ff841d4213b2511d8d56e90ef8/setup_posix.py", line 2, in <module>
+#14 2.163           from ConfigParser import SafeConfigParser
+#14 2.163       ModuleNotFoundError: No module named 'ConfigParser'
+#14 2.163       [end of output]
+#14 2.163   
+#14 2.163   note: This error originates from a subprocess, and is likely not a problem with pip.
+#14 2.165 error: metadata-generation-failed
+#14 2.165 
+#14 2.165 × Encountered error while generating package metadata.
+#14 2.165 ╰─> See above for output.
+#14 2.165 
+#14 2.165 note: This is an issue with the package mentioned above, not pip.
+#14 2.165 hint: See above for details.
+#14 2.169 
+#14 2.169 [notice] A new release of pip is available: 24.0 -> 25.3
+#14 2.169 [notice] To update, run: pip install --upgrade pip
+#14 ERROR: process "pip install zipnish" did not complete successfully: exit code: 1
+------
+ > [10/19] RUN ["pip","install","zipnish"]:
+2.165 error: metadata-generation-failed
+2.165 
+2.165 × Encountered error while generating package metadata.
+2.165 ╰─> See above for output.
+2.165 
+2.165 note: This is an issue with the package mentioned above, not pip.
+2.165 hint: See above for details.
+2.169 
+2.169 [notice] A new release of pip is available: 24.0 -> 25.3
+2.169 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:10
+--------------------
+   8 |     RUN ["pip","install","python-editor"]
+   9 |     RUN ["pip","install","py-curses-editor"]
+  10 | >>> RUN ["pip","install","zipnish"]
+  11 |     RUN ["pip","install","clip.py"]
+  12 |     RUN ["pip","install","numpy"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install zipnish" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/xe6415a88zc6uyzb1ku0hket9
+[2025-10-29 19:22:06] ERROR: Build failed for af466b8d32d7cd4954f1

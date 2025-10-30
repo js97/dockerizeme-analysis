@@ -1,0 +1,202 @@
+=== Docker Build Log for 20a36f89546854cc434ecee70522cb8d ===
+Started at: Mi 29. Okt 12:59:08 CET 2025
+
+[2025-10-29 12:59:08] START: Building image for 20a36f89546854cc434ecee70522cb8d
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 445B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.48kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/11] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/11] COPY hard-gists/20a36f89546854cc434ecee70522cb8d/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/11] RUN ["pip","install","webvirtmgr"]
+#7 2.142 Collecting webvirtmgr
+#7 2.317   Downloading webvirtmgr-4.8.9.tar.gz (705 kB)
+#7 2.377      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 705.8/705.8 kB 12.2 MB/s eta 0:00:00
+#7 2.410   Preparing metadata (setup.py): started
+#7 2.857   Preparing metadata (setup.py): finished with status 'done'
+#7 2.861 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from webvirtmgr) (79.0.1)
+#7 2.968 Collecting django>=1.5.5 (from webvirtmgr)
+#7 2.976   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 3.019 Collecting gunicorn>=18.0 (from webvirtmgr)
+#7 3.027   Downloading gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+#7 3.062 Collecting lockfile>=0.9 (from webvirtmgr)
+#7 3.070   Downloading lockfile-0.12.2-py2.py3-none-any.whl.metadata (2.4 kB)
+#7 3.116 Collecting asgiref>=3.8.1 (from django>=1.5.5->webvirtmgr)
+#7 3.124   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 3.162 Collecting sqlparse>=0.3.1 (from django>=1.5.5->webvirtmgr)
+#7 3.169   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 3.216 Collecting packaging (from gunicorn>=18.0->webvirtmgr)
+#7 3.229   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#7 3.280 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.646    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 22.8 MB/s eta 0:00:00
+#7 3.654 Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB)
+#7 3.666    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.0/85.0 kB 7.2 MB/s eta 0:00:00
+#7 3.674 Downloading lockfile-0.12.2-py2.py3-none-any.whl (13 kB)
+#7 3.692 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.710 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.722    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.4 MB/s eta 0:00:00
+#7 3.730 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#7 3.741    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.5 MB/s eta 0:00:00
+#7 3.782 Building wheels for collected packages: webvirtmgr
+#7 3.783   Building wheel for webvirtmgr (setup.py): started
+#7 4.068   Building wheel for webvirtmgr (setup.py): finished with status 'done'
+#7 4.069   Created wheel for webvirtmgr: filename=webvirtmgr-4.8.9-py3-none-any.whl size=698037 sha256=16a10e8d6cc4b2289cf8e5eb0018f90dc0dd34e3502d898b602ef04e0cded491
+#7 4.070   Stored in directory: /root/.cache/pip/wheels/c7/67/ab/a716fc1b614ea6bb537a20a0b880eb7071514208cc442aeac3
+#7 4.071 Successfully built webvirtmgr
+#7 4.142 Installing collected packages: lockfile, sqlparse, packaging, asgiref, gunicorn, django, webvirtmgr
+#7 5.760 Successfully installed asgiref-3.10.0 django-5.2.7 gunicorn-23.0.0 lockfile-0.12.2 packaging-25.0 sqlparse-0.5.3 webvirtmgr-4.8.9
+#7 5.760 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.852 
+#7 5.852 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.852 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.3s
+
+#8 [ 4/11] RUN ["pip","install","console"]
+#8 0.612 Collecting console
+#8 0.645   Downloading console-0.9912-py3-none-any.whl.metadata (18 kB)
+#8 0.786 Collecting ezenv>=0.92 (from console)
+#8 0.796   Downloading ezenv-0.92-py2.py3-none-any.whl.metadata (13 kB)
+#8 0.825 Downloading console-0.9912-py3-none-any.whl (96 kB)
+#8 0.857    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.8/96.8 kB 3.0 MB/s eta 0:00:00
+#8 0.866 Downloading ezenv-0.92-py2.py3-none-any.whl (10 kB)
+#8 0.925 Installing collected packages: ezenv, console
+#8 1.021 Successfully installed console-0.9912 ezenv-0.92
+#8 1.022 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.027 
+#8 1.027 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.027 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.1s
+
+#9 [ 5/11] RUN ["pip","install","pillow"]
+#9 0.671 Collecting pillow
+#9 0.707   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#9 0.745 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#9 1.047    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 23.4 MB/s eta 0:00:00
+#9 1.133 Installing collected packages: pillow
+#9 1.394 Successfully installed pillow-12.0.0
+#9 1.395 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.399 
+#9 1.399 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.399 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.6s
+
+#10 [ 6/11] RUN ["pip","install","di-py"]
+#10 0.705 Collecting di-py
+#10 0.836   Downloading di-py-1.2.0.tar.gz (13 kB)
+#10 0.862   Preparing metadata (setup.py): started
+#10 1.006   Preparing metadata (setup.py): finished with status 'done'
+#10 1.007 Building wheels for collected packages: di-py
+#10 1.012   Building wheel for di-py (setup.py): started
+#10 1.158   Building wheel for di-py (setup.py): finished with status 'done'
+#10 1.158   Created wheel for di-py: filename=di_py-1.2.0-py3-none-any.whl size=12208 sha256=5519b8c28be82235d906cadcbf71606806fe36f7bd91d179f35e894324c43ad0
+#10 1.158   Stored in directory: /root/.cache/pip/wheels/b0/35/5b/bb45e77608f3c4681542d958f3efd437631caaf25ef90fa2eb
+#10 1.160 Successfully built di-py
+#10 1.222 Installing collected packages: di-py
+#10 1.243 Successfully installed di-py-1.2.0
+#10 1.244 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.249 
+#10 1.249 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.249 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.3s
+
+#11 [ 7/11] RUN ["pip","install","numpy"]
+#11 0.691 Collecting numpy
+#11 0.724   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#11 0.751      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.1 MB/s eta 0:00:00
+#11 0.770 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#11 1.426    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 23.9 MB/s eta 0:00:00
+#11 1.542 Installing collected packages: numpy
+#11 3.105 Successfully installed numpy-2.3.4
+#11 3.106 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 3.111 
+#11 3.111 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 3.111 [notice] To update, run: pip install --upgrade pip
+#11 DONE 3.6s
+
+#12 [ 8/11] RUN ["pip","install","scipy"]
+#12 0.653 Collecting scipy
+#12 0.687   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#12 0.723      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 1.5 MB/s eta 0:00:00
+#12 0.756 Requirement already satisfied: numpy<2.6,>=1.25.2 in /usr/local/lib/python3.11/site-packages (from scipy) (2.3.4)
+#12 0.774 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#12 2.519    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 17.1 MB/s eta 0:00:00
+#12 2.697 Installing collected packages: scipy
+#12 5.749 Successfully installed scipy-1.16.3
+#12 5.749 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 5.755 
+#12 5.755 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 5.755 [notice] To update, run: pip install --upgrade pip
+#12 DONE 6.7s
+
+#13 [ 9/11] RUN ["pip","install","pmagpy"]
+#13 0.643 Collecting pmagpy
+#13 0.776   Downloading pmagpy-4.3.8-py3-none-any.whl.metadata (8.0 kB)
+#13 0.917 Downloading pmagpy-4.3.8-py3-none-any.whl (42.8 MB)
+#13 6.077    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.8/42.8 MB 7.4 MB/s eta 0:00:00
+#13 6.256 Installing collected packages: pmagpy
+#13 8.862 Successfully installed pmagpy-4.3.8
+#13 8.862 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 8.867 
+#13 8.867 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 8.867 [notice] To update, run: pip install --upgrade pip
+#13 DONE 10.4s
+
+#14 [10/11] RUN ["pip","install","pmagpy-cli"]
+#14 0.657 Collecting pmagpy-cli
+#14 0.793   Downloading pmagpy_cli-4.3.8-py3-none-any.whl.metadata (8.0 kB)
+#14 0.925 Downloading pmagpy_cli-4.3.8-py3-none-any.whl (864 kB)
+#14 1.001    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 865.0/865.0 kB 11.8 MB/s eta 0:00:00
+#14 1.094 Installing collected packages: pmagpy-cli
+#14 1.616 Successfully installed pmagpy-cli-4.3.8
+#14 1.616 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#14 1.622 
+#14 1.622 [notice] A new release of pip is available: 24.0 -> 25.3
+#14 1.622 [notice] To update, run: pip install --upgrade pip
+#14 DONE 1.7s
+
+#15 [11/11] RUN ["pip","install","Dialogs"]
+#15 0.651 Collecting Dialogs
+#15 0.792   Downloading Dialogs-1.0.tar.gz (439 kB)
+#15 0.841      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 439.2/439.2 kB 9.6 MB/s eta 0:00:00
+#15 0.861   Preparing metadata (setup.py): started
+#15 1.025   Preparing metadata (setup.py): finished with status 'done'
+#15 1.026 Building wheels for collected packages: Dialogs
+#15 1.031   Building wheel for Dialogs (setup.py): started
+#15 1.238   Building wheel for Dialogs (setup.py): finished with status 'done'
+#15 1.239   Created wheel for Dialogs: filename=dialogs-1.0-py3-none-any.whl size=463284 sha256=7c51470d100f905c715d2fdc8561566ec1934792d2bb33979c9b0e3eaef0bad0
+#15 1.240   Stored in directory: /root/.cache/pip/wheels/f6/04/fe/6a714714c23db86b12cd25ab67e312d08299fb1beb7df12f09
+#15 1.242 Successfully built Dialogs
+#15 1.329 Installing collected packages: Dialogs
+#15 1.476 Successfully installed Dialogs-1.0
+#15 1.476 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#15 1.482 
+#15 1.482 [notice] A new release of pip is available: 24.0 -> 25.3
+#15 1.482 [notice] To update, run: pip install --upgrade pip
+#15 DONE 1.6s
+
+#16 exporting to image
+#16 exporting layers
+#16 exporting layers 1.0s done
+#16 writing image sha256:562086c7c1187bc4dfe1b1e5711a435d6508f78373bfe436b928e8ede55596bf done
+#16 naming to docker.io/library/test-image-20a36f89546854cc434ecee70522cb8d done
+#16 DONE 1.1s
+
+View build details: docker-desktop://dashboard/build/default/default/ivoh85ikn1t9c7pynypf0fkqq
+[2025-10-29 12:59:44] SUCCESS: Build completed for 20a36f89546854cc434ecee70522cb8d

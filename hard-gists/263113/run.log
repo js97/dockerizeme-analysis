@@ -1,0 +1,12 @@
+=== Docker Run Log for 263113 ===
+Started at: Mi 29. Okt 13:10:41 CET 2025
+
+[2025-10-29 13:10:53] START: Running container for 263113
+[2025-10-29 13:10:53] SUCCESS: Container eb5478bc11d00b27f48a1d20962d3aa46089a4f687abcb6514bdbe4b33ba8f20 started for 263113
+=== Container logs for 263113 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 2, in <module>
+    from django.utils.translation import ugettext_lazy as _
+ImportError: cannot import name 'ugettext_lazy' from 'django.utils.translation' (/usr/local/lib/python3.11/site-packages/django/utils/translation/__init__.py)
+=== End of logs for 263113 ===
+[2025-10-29 13:10:55] INFO: Container eb5478bc11d00b27f48a1d20962d3aa46089a4f687abcb6514bdbe4b33ba8f20 has stopped

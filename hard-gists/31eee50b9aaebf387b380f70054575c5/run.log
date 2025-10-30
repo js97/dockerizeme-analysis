@@ -1,0 +1,36 @@
+=== Docker Run Log for 31eee50b9aaebf387b380f70054575c5 ===
+Started at: Mi 29. Okt 13:44:51 CET 2025
+
+[2025-10-29 13:46:10] START: Running container for 31eee50b9aaebf387b380f70054575c5
+[2025-10-29 13:46:10] SUCCESS: Container 7f9283adeeff91dc0e50a38a08414f1b2e6ef5b433d29a25d7665c51ea88aa2d started for 31eee50b9aaebf387b380f70054575c5
+=== Container logs for 31eee50b9aaebf387b380f70054575c5 ===
+2025-10-29 12:46:10.709302: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-10-29 12:46:10.742813: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-29 12:46:11.989630: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Traceback (most recent call last):
+  File "/snippet.py", line 12, in <module>
+    from tensorboard.backend.event_processing import plugin_event_multiplexer as event_multiplexer  # pylint: disable=line-too-long
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/tensorboard/backend/event_processing/plugin_event_multiplexer.py", line 28, in <module>
+    from tensorboard.backend.event_processing import plugin_event_accumulator as event_accumulator  # pylint: disable=line-too-long
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/tensorboard/backend/event_processing/plugin_event_accumulator.py", line 27, in <module>
+    from tensorboard import data_compat
+  File "/usr/local/lib/python3.11/site-packages/tensorboard/data_compat.py", line 24, in <module>
+    from tensorboard.plugins.audio import metadata as audio_metadata
+  File "/usr/local/lib/python3.11/site-packages/tensorboard/plugins/audio/metadata.py", line 22, in <module>
+    from tensorboard.plugins.audio import plugin_data_pb2
+  File "/usr/local/lib/python3.11/site-packages/tensorboard/plugins/audio/plugin_data_pb2.py", line 33, in <module>
+    _descriptor.EnumValueDescriptor(
+  File "/usr/local/lib/python3.11/site-packages/google/protobuf/descriptor.py", line 1038, in __new__
+    _message.Message._CheckCalledFromGeneratedFile()
+TypeError: Descriptors cannot be created directly.
+If this call came from a _pb2.py file, your generated code is out of date and must be regenerated with protoc >= 3.19.0.
+If you cannot immediately regenerate your protos, some other possible workarounds are:
+ 1. Downgrade the protobuf package to 3.20.x or lower.
+ 2. Set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python (but this will use pure-Python parsing and will be much slower).
+
+More information: https://developers.google.com/protocol-buffers/docs/news/2022-05-06#python-updates
+=== End of logs for 31eee50b9aaebf387b380f70054575c5 ===
+[2025-10-29 13:46:12] INFO: Container 7f9283adeeff91dc0e50a38a08414f1b2e6ef5b433d29a25d7665c51ea88aa2d has stopped

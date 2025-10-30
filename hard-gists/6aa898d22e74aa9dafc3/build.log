@@ -1,0 +1,105 @@
+=== Docker Build Log for 6aa898d22e74aa9dafc3 ===
+Started at: Mi 29. Okt 16:47:34 CET 2025
+
+[2025-10-29 16:47:34] START: Building image for 6aa898d22e74aa9dafc3
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 239B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.53kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/6aa898d22e74aa9dafc3/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","numpy"]
+#7 2.406 Collecting numpy
+#7 2.454   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.483      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 1.9 MB/s eta 0:00:00
+#7 2.502 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 3.139    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 24.3 MB/s eta 0:00:00
+#7 3.225 Installing collected packages: numpy
+#7 5.065 Successfully installed numpy-2.3.4
+#7 5.065 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.168 
+#7 5.168 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.168 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.7s
+
+#8 [4/5] RUN ["pip","install","scipy"]
+#8 0.642 Collecting scipy
+#8 0.678   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#8 0.699      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.8 MB/s eta 0:00:00
+#8 0.729 Requirement already satisfied: numpy<2.6,>=1.25.2 in /usr/local/lib/python3.11/site-packages (from scipy) (2.3.4)
+#8 0.744 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#8 2.240    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 14.9 MB/s eta 0:00:00
+#8 2.393 Installing collected packages: scipy
+#8 5.562 Successfully installed scipy-1.16.3
+#8 5.562 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 5.568 
+#8 5.568 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 5.568 [notice] To update, run: pip install --upgrade pip
+#8 DONE 6.7s
+
+#9 [5/5] RUN ["pip","install","moviepy"]
+#9 0.547 Collecting moviepy
+#9 0.582   Downloading moviepy-2.2.1-py3-none-any.whl.metadata (6.9 kB)
+#9 0.639 Collecting decorator<6.0,>=4.0.2 (from moviepy)
+#9 0.647   Downloading decorator-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+#9 0.707 Collecting imageio<3.0,>=2.5 (from moviepy)
+#9 0.715   Downloading imageio-2.37.0-py3-none-any.whl.metadata (5.2 kB)
+#9 0.757 Collecting imageio_ffmpeg>=0.2.0 (from moviepy)
+#9 0.767   Downloading imageio_ffmpeg-0.6.0-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+#9 0.785 Requirement already satisfied: numpy>=1.25.0 in /usr/local/lib/python3.11/site-packages (from moviepy) (2.3.4)
+#9 0.809 Collecting proglog<=1.0.0 (from moviepy)
+#9 0.819   Downloading proglog-0.1.12-py3-none-any.whl.metadata (794 bytes)
+#9 0.859 Collecting python-dotenv>=0.10 (from moviepy)
+#9 0.868   Downloading python_dotenv-1.2.1-py3-none-any.whl.metadata (25 kB)
+#9 1.091 Collecting pillow<12.0,>=9.2.0 (from moviepy)
+#9 1.100   Downloading pillow-11.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.0 kB)
+#9 1.253 Collecting tqdm (from proglog<=1.0.0->moviepy)
+#9 1.261   Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+#9 1.282      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.7/57.7 kB 2.5 MB/s eta 0:00:00
+#9 1.303 Downloading moviepy-2.2.1-py3-none-any.whl (129 kB)
+#9 1.325    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.9/129.9 kB 6.1 MB/s eta 0:00:00
+#9 1.332 Downloading decorator-5.2.1-py3-none-any.whl (9.2 kB)
+#9 1.348 Downloading imageio-2.37.0-py3-none-any.whl (315 kB)
+#9 1.375    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 315.8/315.8 kB 11.9 MB/s eta 0:00:00
+#9 1.387 Downloading imageio_ffmpeg-0.6.0-py3-none-manylinux2014_x86_64.whl (29.5 MB)
+#9 2.591    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 29.5/29.5 MB 17.1 MB/s eta 0:00:00
+#9 2.602 Downloading pillow-11.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.6 MB)
+#9 2.866    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 25.4 MB/s eta 0:00:00
+#9 2.876 Downloading proglog-0.1.12-py3-none-any.whl (6.3 kB)
+#9 2.891 Downloading python_dotenv-1.2.1-py3-none-any.whl (21 kB)
+#9 2.909 Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+#9 2.921    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 6.5 MB/s eta 0:00:00
+#9 3.119 Installing collected packages: tqdm, python-dotenv, pillow, imageio_ffmpeg, decorator, proglog, imageio, moviepy
+#9 4.014 Successfully installed decorator-5.2.1 imageio-2.37.0 imageio_ffmpeg-0.6.0 moviepy-2.2.1 pillow-11.3.0 proglog-0.1.12 python-dotenv-1.2.1 tqdm-4.67.1
+#9 4.014 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 4.020 
+#9 4.020 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 4.020 [notice] To update, run: pip install --upgrade pip
+#9 DONE 4.5s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.8s done
+#10 writing image sha256:1f0c7daa0f487c95aa52a3bfb2aebaed086a34761a9f51751a1671d255c174e4 done
+#10 naming to docker.io/library/test-image-6aa898d22e74aa9dafc3 done
+#10 DONE 0.8s
+
+View build details: docker-desktop://dashboard/build/default/default/k1os7hlz2yqhfntc6gjyoe00t
+[2025-10-29 16:47:52] SUCCESS: Build completed for 6aa898d22e74aa9dafc3

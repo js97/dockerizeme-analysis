@@ -1,0 +1,134 @@
+=== Docker Build Log for 445785 ===
+Started at: Mi 29. Okt 14:39:22 CET 2025
+
+[2025-10-29 14:39:22] START: Building image for 445785
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 468B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 631B 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/12] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/12] COPY hard-gists/445785/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/12] RUN ["apt-get","update"]
+#7 0.275 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.275 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.292 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.304 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.950 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.956 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.601 Fetched 9833 kB in 1s (7235 kB/s)
+#7 1.601 Reading package lists...
+#7 DONE 2.1s
+
+#8 [ 4/12] RUN ["pip","install","future"]
+#8 1.969 Collecting future
+#8 2.004   Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+#8 2.028 Downloading future-1.0.0-py3-none-any.whl (491 kB)
+#8 2.072    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 491.3/491.3 kB 11.7 MB/s eta 0:00:00
+#8 2.109 Installing collected packages: future
+#8 2.318 Successfully installed future-1.0.0
+#8 2.318 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.412 
+#8 2.412 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.412 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.5s
+
+#9 [ 5/12] RUN ["pip","install","gevent"]
+#9 0.651 Collecting gevent
+#9 0.688   Downloading gevent-25.9.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (14 kB)
+#9 0.855 Collecting greenlet>=3.2.2 (from gevent)
+#9 0.867   Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+#9 0.916 Collecting zope.event (from gevent)
+#9 0.926   Downloading zope_event-6.0-py3-none-any.whl.metadata (5.1 kB)
+#9 1.051 Collecting zope.interface (from gevent)
+#9 1.061   Downloading zope_interface-8.0.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (44 kB)
+#9 1.086      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.9/44.9 kB 1.5 MB/s eta 0:00:00
+#9 1.095 Requirement already satisfied: setuptools>=75.8.2 in /usr/local/lib/python3.11/site-packages (from zope.event->gevent) (79.0.1)
+#9 1.150 Downloading gevent-25.9.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.1 MB)
+#9 1.249    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 22.0 MB/s eta 0:00:00
+#9 1.259 Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (587 kB)
+#9 1.290    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 587.7/587.7 kB 19.9 MB/s eta 0:00:00
+#9 1.300 Downloading zope_event-6.0-py3-none-any.whl (6.4 kB)
+#9 1.325 Downloading zope_interface-8.0.1-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (259 kB)
+#9 1.344    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 259.8/259.8 kB 15.2 MB/s eta 0:00:00
+#9 1.417 Installing collected packages: zope.interface, zope.event, greenlet, gevent
+#9 1.928 Successfully installed gevent-25.9.1 greenlet-3.2.4 zope.event-6.0 zope.interface-8.0.1
+#9 1.929 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.935 
+#9 1.935 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.935 [notice] To update, run: pip install --upgrade pip
+#9 DONE 2.1s
+
+#10 [ 6/12] RUN ["pip","install","PasteScript"]
+#10 0.692 Collecting PasteScript
+#10 0.730   Downloading PasteScript-3.7.0-py2.py3-none-any.whl.metadata (3.0 kB)
+#10 0.790 Collecting Paste>=3.0 (from PasteScript)
+#10 0.800   Downloading Paste-3.10.1-py3-none-any.whl.metadata (5.3 kB)
+#10 0.849 Collecting PasteDeploy (from PasteScript)
+#10 0.861   Downloading PasteDeploy-3.1.0-py3-none-any.whl.metadata (2.7 kB)
+#10 0.878 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from PasteScript) (79.0.1)
+#10 0.997 Downloading PasteScript-3.7.0-py2.py3-none-any.whl (73 kB)
+#10 1.037    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.4/73.4 kB 1.8 MB/s eta 0:00:00
+#10 1.051 Downloading Paste-3.10.1-py3-none-any.whl (289 kB)
+#10 1.088    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 289.3/289.3 kB 7.8 MB/s eta 0:00:00
+#10 1.100 Downloading PasteDeploy-3.1.0-py3-none-any.whl (16 kB)
+#10 1.178 Installing collected packages: PasteDeploy, Paste, PasteScript
+#10 1.400 Successfully installed Paste-3.10.1 PasteDeploy-3.1.0 PasteScript-3.7.0
+#10 1.401 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.406 
+#10 1.406 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.406 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.5s
+
+#11 [ 7/12] RUN ["apt-get","install","-y","python-pip"]
+#11 0.249 Reading package lists...
+#11 0.685 Building dependency tree...
+#11 0.800 Reading state information...
+#11 0.816 Package python-pip is not available, but is referred to by another package.
+#11 0.816 This may mean that the package is missing, has been obsoleted, or
+#11 0.816 is only available from another source
+#11 0.816 However the following packages replace it:
+#11 0.816   python3-pip
+#11 0.816 
+#11 0.818 E: Package 'python-pip' has no installation candidate
+#11 ERROR: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+------
+ > [ 7/12] RUN ["apt-get","install","-y","python-pip"]:
+
+
+0.816 Package python-pip is not available, but is referred to by another package.
+0.816 This may mean that the package is missing, has been obsoleted, or
+0.816 is only available from another source
+0.816 However the following packages replace it:
+0.816   python3-pip
+0.816 
+0.818 E: Package 'python-pip' has no installation candidate
+------
+Dockerfile:7
+--------------------
+   5 |     RUN ["pip","install","gevent"]
+   6 |     RUN ["pip","install","PasteScript"]
+   7 | >>> RUN ["apt-get","install","-y","python-pip"]
+   8 |     RUN ["apt-get","install","-y","python-dev"]
+   9 |     RUN ["pip","install","six"]
+--------------------
+ERROR: failed to build: failed to solve: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/default/default/mubkwqme0eag4hiski892x29q
+[2025-10-29 14:39:31] ERROR: Build failed for 445785

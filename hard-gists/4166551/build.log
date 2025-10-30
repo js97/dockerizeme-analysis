@@ -1,0 +1,92 @@
+=== Docker Build Log for 4166551 ===
+Started at: Mi 29. Okt 14:23:28 CET 2025
+
+[2025-10-29 14:23:28] START: Building image for 4166551
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 231B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.85kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/4166551/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","dj.choices"]
+#7 1.904 Collecting dj.choices
+#7 1.945   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 1.963   Preparing metadata (setup.py): started
+#7 2.359   Preparing metadata (setup.py): finished with status 'done'
+#7 2.466 Collecting django (from dj.choices)
+#7 2.476   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.516 Collecting six (from dj.choices)
+#7 2.526   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.573 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.582   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.624 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.633   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.658 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.059    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 20.8 MB/s eta 0:00:00
+#7 3.068 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.091 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.107 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.117    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.6 MB/s eta 0:00:00
+#7 3.155 Building wheels for collected packages: dj.choices
+#7 3.156   Building wheel for dj.choices (setup.py): started
+#7 3.329   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.330   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=7ba91ff551fc167eb22d09c298faa05a2af1b708c95a0c45442fe546445a2059
+#7 3.330   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.332 Successfully built dj.choices
+#7 3.380 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 4.873 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 4.874 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.970 
+#7 4.970 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.970 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.5s
+
+#8 [4/5] RUN ["pip","install","Django"]
+#8 0.441 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#8 0.445 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#8 0.446 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#8 0.488 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.493 
+#8 0.493 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.493 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.6s
+
+#9 [5/5] RUN ["pip","install","pillow"]
+#9 0.671 Collecting pillow
+#9 0.703   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#9 0.744 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#9 1.061    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 22.3 MB/s eta 0:00:00
+#9 1.123 Installing collected packages: pillow
+#9 1.397 Successfully installed pillow-12.0.0
+#9 1.397 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.402 
+#9 1.402 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.402 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.6s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.6s done
+#10 writing image sha256:bb79a96ecf945a191f38ac6996de370bcc6d903037c68e48b3bbbff39686ebbd done
+#10 naming to docker.io/library/test-image-4166551 done
+#10 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/default/default/7z6ex76hdfg921isuvo0xqbqg
+[2025-10-29 14:23:36] SUCCESS: Build completed for 4166551

@@ -1,0 +1,46 @@
+=== Docker Run Log for 6530635 ===
+Started at: Mi 29. Okt 16:34:42 CET 2025
+
+[2025-10-29 16:34:50] START: Running container for 6530635
+[2025-10-29 16:34:51] SUCCESS: Container 4e7e6afeb56187880bbbd4b17198cfdc44c08cc17df46b9927bd7efaceb6a110 started for 6530635
+=== Container logs for 6530635 ===
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/utils/connection.py", line 58, in __getitem__
+    return getattr(self._connections, alias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/asgiref/local.py", line 121, in __getattr__
+    return getattr(storage, key)
+           ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: '_thread._local' object has no attribute 'default'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snippet.py", line 3, in <module>
+    cursor = connection.cursor()
+             ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/connection.py", line 15, in __getattr__
+    return getattr(self._connections[self._alias], item)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/connection.py", line 60, in __getitem__
+    if alias not in self.settings:
+                    ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/connection.py", line 45, in settings
+    self._settings = self.configure_settings(self._settings)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/utils.py", line 148, in configure_settings
+    databases = super().configure_settings(databases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/connection.py", line 50, in configure_settings
+    settings = getattr(django_settings, self.settings_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting DATABASES, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 6530635 ===
+[2025-10-29 16:34:53] INFO: Container 4e7e6afeb56187880bbbd4b17198cfdc44c08cc17df46b9927bd7efaceb6a110 has stopped

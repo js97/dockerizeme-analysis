@@ -1,0 +1,317 @@
+=== Docker Build Log for f93a377244be9bfcb96d3547b9bc424d ===
+Started at: Mi 29. Okt 21:31:06 CET 2025
+
+[2025-10-29 21:31:06] START: Building image for f93a377244be9bfcb96d3547b9bc424d
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 614B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.50kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/16] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/16] COPY hard-gists/f93a377244be9bfcb96d3547b9bc424d/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/16] RUN ["pip","install","requests"]
+#7 1.915 Collecting requests
+#7 1.964   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.081 Collecting charset_normalizer<4,>=2 (from requests)
+#7 2.113   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.187 Collecting idna<4,>=2.5 (from requests)
+#7 2.271   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.359 Collecting urllib3<3,>=1.21.1 (from requests)
+#7 2.368   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.414 Collecting certifi>=2017.4.17 (from requests)
+#7 2.431   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.464 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.490    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 2.3 MB/s eta 0:00:00
+#7 2.499 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.532    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 4.9 MB/s eta 0:00:00
+#7 2.540 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.567    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 5.6 MB/s eta 0:00:00
+#7 2.575 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.592    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.1 MB/s eta 0:00:00
+#7 2.601 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.625    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 5.5 MB/s eta 0:00:00
+#7 2.674 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#7 2.900 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#7 2.900 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.993 
+#7 2.993 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.993 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.2s
+
+#8 [ 4/16] RUN ["pip","install","six"]
+#8 0.529 Collecting six
+#8 0.574   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 0.597 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 0.652 Installing collected packages: six
+#8 0.698 Successfully installed six-1.17.0
+#8 0.698 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.703 
+#8 0.703 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.703 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.8s
+
+#9 [ 5/16] RUN ["pip","install","certifi"]
+#9 0.436 Requirement already satisfied: certifi in /usr/local/lib/python3.11/site-packages (2025.10.5)
+#9 0.476 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.480 
+#9 0.480 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.480 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.6s
+
+#10 [ 6/16] RUN ["pip","install","pycparser"]
+#10 0.547 Collecting pycparser
+#10 0.579   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+#10 0.603 Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+#10 0.636    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 3.5 MB/s eta 0:00:00
+#10 0.679 Installing collected packages: pycparser
+#10 0.792 Successfully installed pycparser-2.23
+#10 0.792 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.798 
+#10 0.798 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.798 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.9s
+
+#11 [ 7/16] RUN ["pip","install","decorator"]
+#11 0.510 Collecting decorator
+#11 0.546   Downloading decorator-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+#11 0.575 Downloading decorator-5.2.1-py3-none-any.whl (9.2 kB)
+#11 0.629 Installing collected packages: decorator
+#11 0.672 Successfully installed decorator-5.2.1
+#11 0.673 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.678 
+#11 0.678 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.678 [notice] To update, run: pip install --upgrade pip
+#11 DONE 0.7s
+
+#12 [ 8/16] RUN ["pip","install","idna"]
+#12 0.447 Requirement already satisfied: idna in /usr/local/lib/python3.11/site-packages (3.11)
+#12 0.492 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 0.498 
+#12 0.498 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 0.498 [notice] To update, run: pip install --upgrade pip
+#12 DONE 0.6s
+
+#13 [ 9/16] RUN ["pip","install","cryptography"]
+#13 0.781 Collecting cryptography
+#13 0.821   Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+#13 0.963 Collecting cffi>=2.0.0 (from cryptography)
+#13 0.971   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+#13 0.995 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi>=2.0.0->cryptography) (2.23)
+#13 1.011 Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+#13 1.328    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 14.3 MB/s eta 0:00:00
+#13 1.338 Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+#13 1.358    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 11.3 MB/s eta 0:00:00
+#13 1.438 Installing collected packages: cffi, cryptography
+#13 1.636 Successfully installed cffi-2.0.0 cryptography-46.0.3
+#13 1.636 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 1.641 
+#13 1.641 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 1.641 [notice] To update, run: pip install --upgrade pip
+#13 DONE 1.9s
+
+#14 [10/16] RUN ["pip","install","cffi"]
+#14 0.484 Requirement already satisfied: cffi in /usr/local/lib/python3.11/site-packages (2.0.0)
+#14 0.487 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi) (2.23)
+#14 0.539 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#14 0.544 
+#14 0.544 [notice] A new release of pip is available: 24.0 -> 25.3
+#14 0.544 [notice] To update, run: pip install --upgrade pip
+#14 DONE 0.6s
+
+#15 [11/16] RUN ["pip","install","enum34"]
+#15 0.556 Collecting enum34
+#15 0.591   Downloading enum34-1.1.10-py3-none-any.whl.metadata (1.6 kB)
+#15 0.621 Downloading enum34-1.1.10-py3-none-any.whl (11 kB)
+#15 0.694 Installing collected packages: enum34
+#15 0.732 Successfully installed enum34-1.1.10
+#15 0.732 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#15 0.737 
+#15 0.737 [notice] A new release of pip is available: 24.0 -> 25.3
+#15 0.737 [notice] To update, run: pip install --upgrade pip
+#15 DONE 0.8s
+
+#16 [12/16] RUN ["pip","install","pyasn1"]
+#16 0.552 Collecting pyasn1
+#16 0.586   Downloading pyasn1-0.6.1-py3-none-any.whl.metadata (8.4 kB)
+#16 0.610 Downloading pyasn1-0.6.1-py3-none-any.whl (83 kB)
+#16 0.641    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.1/83.1 kB 2.7 MB/s eta 0:00:00
+#16 0.698 Installing collected packages: pyasn1
+#16 0.772 Successfully installed pyasn1-0.6.1
+#16 0.772 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#16 0.777 
+#16 0.777 [notice] A new release of pip is available: 24.0 -> 25.3
+#16 0.777 [notice] To update, run: pip install --upgrade pip
+#16 DONE 0.9s
+
+#17 [13/16] RUN ["pip","install","asn1crypto"]
+#17 0.529 Collecting asn1crypto
+#17 0.564   Downloading asn1crypto-1.5.1-py2.py3-none-any.whl.metadata (13 kB)
+#17 0.589 Downloading asn1crypto-1.5.1-py2.py3-none-any.whl (105 kB)
+#17 0.621    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 105.0/105.0 kB 3.3 MB/s eta 0:00:00
+#17 0.679 Installing collected packages: asn1crypto
+#17 0.759 Successfully installed asn1crypto-1.5.1
+#17 0.760 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#17 0.765 
+#17 0.765 [notice] A new release of pip is available: 24.0 -> 25.3
+#17 0.765 [notice] To update, run: pip install --upgrade pip
+#17 DONE 0.8s
+
+#18 [14/16] RUN ["pip","install","pyasn1-modules"]
+#18 0.540 Collecting pyasn1-modules
+#18 0.580   Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+#18 0.597 Requirement already satisfied: pyasn1<0.7.0,>=0.6.1 in /usr/local/lib/python3.11/site-packages (from pyasn1-modules) (0.6.1)
+#18 0.607 Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+#18 0.646    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 181.3/181.3 kB 4.8 MB/s eta 0:00:00
+#18 0.705 Installing collected packages: pyasn1-modules
+#18 0.840 Successfully installed pyasn1-modules-0.4.2
+#18 0.841 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#18 0.846 
+#18 0.846 [notice] A new release of pip is available: 24.0 -> 25.3
+#18 0.846 [notice] To update, run: pip install --upgrade pip
+#18 DONE 0.9s
+
+#19 [15/16] RUN ["pip","install","graphviz"]
+#19 0.531 Collecting graphviz
+#19 0.570   Downloading graphviz-0.21-py3-none-any.whl.metadata (12 kB)
+#19 0.602 Downloading graphviz-0.21-py3-none-any.whl (47 kB)
+#19 0.626    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.3/47.3 kB 1.7 MB/s eta 0:00:00
+#19 0.692 Installing collected packages: graphviz
+#19 0.745 Successfully installed graphviz-0.21
+#19 0.745 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#19 0.750 
+#19 0.750 [notice] A new release of pip is available: 24.0 -> 25.3
+#19 0.750 [notice] To update, run: pip install --upgrade pip
+#19 DONE 0.8s
+
+#20 [16/16] RUN ["pip","install","torch"]
+#20 0.557 Collecting torch
+#20 0.592   Downloading torch-2.9.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (30 kB)
+#20 0.688 Collecting filelock (from torch)
+#20 0.697   Downloading filelock-3.20.0-py3-none-any.whl.metadata (2.1 kB)
+#20 0.745 Collecting typing-extensions>=4.10.0 (from torch)
+#20 0.756   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#20 0.807 Collecting sympy>=1.13.3 (from torch)
+#20 0.816   Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+#20 0.872 Collecting networkx>=2.5.1 (from torch)
+#20 0.880   Downloading networkx-3.5-py3-none-any.whl.metadata (6.3 kB)
+#20 0.930 Collecting jinja2 (from torch)
+#20 0.938   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#20 0.999 Collecting fsspec>=0.8.5 (from torch)
+#20 1.013   Downloading fsspec-2025.9.0-py3-none-any.whl.metadata (10 kB)
+#20 1.066 Collecting nvidia-cuda-nvrtc-cu12==12.8.93 (from torch)
+#20 1.076   Downloading nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+#20 1.118 Collecting nvidia-cuda-runtime-cu12==12.8.90 (from torch)
+#20 1.127   Downloading nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+#20 1.169 Collecting nvidia-cuda-cupti-cu12==12.8.90 (from torch)
+#20 1.179   Downloading nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+#20 1.225 Collecting nvidia-cudnn-cu12==9.10.2.21 (from torch)
+#20 1.233   Downloading nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl.metadata (1.8 kB)
+#20 1.272 Collecting nvidia-cublas-cu12==12.8.4.1 (from torch)
+#20 1.291   Downloading nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl.metadata (1.7 kB)
+#20 1.332 Collecting nvidia-cufft-cu12==11.3.3.83 (from torch)
+#20 1.342   Downloading nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+#20 1.385 Collecting nvidia-curand-cu12==10.3.9.90 (from torch)
+#20 1.393   Downloading nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl.metadata (1.7 kB)
+#20 1.432 Collecting nvidia-cusolver-cu12==11.7.3.90 (from torch)
+#20 1.441   Downloading nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl.metadata (1.8 kB)
+#20 1.478 Collecting nvidia-cusparse-cu12==12.5.8.93 (from torch)
+#20 1.487   Downloading nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+#20 1.526 Collecting nvidia-cusparselt-cu12==0.7.1 (from torch)
+#20 1.534   Downloading nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl.metadata (7.0 kB)
+#20 1.599 Collecting nvidia-nccl-cu12==2.27.5 (from torch)
+#20 1.607   Downloading nvidia_nccl_cu12-2.27.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.0 kB)
+#20 1.649 Collecting nvidia-nvshmem-cu12==3.3.20 (from torch)
+#20 1.657   Downloading nvidia_nvshmem_cu12-3.3.20-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.1 kB)
+#20 1.708 Collecting nvidia-nvtx-cu12==12.8.90 (from torch)
+#20 1.752   Downloading nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+#20 1.796 Collecting nvidia-nvjitlink-cu12==12.8.93 (from torch)
+#20 1.809   Downloading nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+#20 1.843 Collecting nvidia-cufile-cu12==1.13.1.3 (from torch)
+#20 1.857   Downloading nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+#20 1.897 Collecting triton==3.5.0 (from torch)
+#20 1.906   Downloading triton-3.5.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (1.7 kB)
+#20 2.043 Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch)
+#20 2.052   Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+#20 2.134 Collecting MarkupSafe>=2.0 (from jinja2->torch)
+#20 2.145   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#20 2.186 Downloading torch-2.9.0-cp311-cp311-manylinux_2_28_x86_64.whl (899.8 MB)
+#20 65.71    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 899.8/899.8 MB 834.2 kB/s eta 0:00:00
+#20 65.73 Downloading nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl (594.3 MB)
+#20 107.7    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 594.3/594.3 MB 1.0 MB/s eta 0:00:00
+#20 107.7 Downloading nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.2 MB)
+#20 109.4    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 6.0 MB/s eta 0:00:00
+#20 109.4 Downloading nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (88.0 MB)
+#20 114.8    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.0/88.0 MB 8.9 MB/s eta 0:00:00
+#20 114.9 Downloading nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (954 kB)
+#20 114.9    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 954.8/954.8 kB 14.6 MB/s eta 0:00:00
+#20 114.9 Downloading nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl (706.8 MB)
+#20 161.0    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 706.8/706.8 MB 1.4 MB/s eta 0:00:00
+#20 161.0 Downloading nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (193.1 MB)
+#20 172.8    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 193.1/193.1 MB 6.6 MB/s eta 0:00:00
+#20 172.8 Downloading nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.2 MB)
+#20 172.9    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 12.8 MB/s eta 0:00:00
+#20 173.0 Downloading nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl (63.6 MB)
+#20 176.7    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.6/63.6 MB 13.0 MB/s eta 0:00:00
+#20 176.7 Downloading nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl (267.5 MB)
+#20 194.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 267.5/267.5 MB 3.5 MB/s eta 0:00:00
+#20 194.2 Downloading nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (288.2 MB)
+#20 212.5    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 288.2/288.2 MB 5.3 MB/s eta 0:00:00
+#20 212.5 Downloading nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl (287.2 MB)
+#20 230.0    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 287.2/287.2 MB 4.7 MB/s eta 0:00:00
+#20 230.0 Downloading nvidia_nccl_cu12-2.27.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (322.3 MB)
+#20 250.3    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 322.3/322.3 MB 3.0 MB/s eta 0:00:00
+#20 250.3 Downloading nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (39.3 MB)
+#20 252.7    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 39.3/39.3 MB 11.9 MB/s eta 0:00:00
+#20 252.7 Downloading nvidia_nvshmem_cu12-3.3.20-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (124.7 MB)
+#20 261.0    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 124.7/124.7 MB 5.8 MB/s eta 0:00:00
+#20 261.0 Downloading nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (89 kB)
+#20 261.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.0/90.0 kB 5.1 MB/s eta 0:00:00
+#20 261.1 Downloading triton-3.5.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (170.4 MB)
+#20 271.5    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 170.4/170.4 MB 7.3 MB/s eta 0:00:00
+#20 271.5 Downloading fsspec-2025.9.0-py3-none-any.whl (199 kB)
+#20 271.6    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 199.3/199.3 kB 10.2 MB/s eta 0:00:00
+#20 271.6 Downloading networkx-3.5-py3-none-any.whl (2.0 MB)
+#20 271.7    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 15.3 MB/s eta 0:00:00
+#20 271.7 Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+#20 272.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 16.2 MB/s eta 0:00:00
+#20 272.1 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#20 272.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 2.8 MB/s eta 0:00:00
+#20 272.1 Downloading filelock-3.20.0-py3-none-any.whl (16 kB)
+#20 272.2 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#20 272.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 8.3 MB/s eta 0:00:00
+#20 272.2 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#20 272.2 Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+#20 272.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 16.3 MB/s eta 0:00:00
+#20 280.5 Installing collected packages: nvidia-cusparselt-cu12, mpmath, typing-extensions, triton, sympy, nvidia-nvtx-cu12, nvidia-nvshmem-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufile-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, networkx, MarkupSafe, fsspec, filelock, nvidia-cusparse-cu12, nvidia-cufft-cu12, nvidia-cudnn-cu12, jinja2, nvidia-cusolver-cu12, torch
+#20 346.1 Successfully installed MarkupSafe-3.0.3 filelock-3.20.0 fsspec-2025.9.0 jinja2-3.1.6 mpmath-1.3.0 networkx-3.5 nvidia-cublas-cu12-12.8.4.1 nvidia-cuda-cupti-cu12-12.8.90 nvidia-cuda-nvrtc-cu12-12.8.93 nvidia-cuda-runtime-cu12-12.8.90 nvidia-cudnn-cu12-9.10.2.21 nvidia-cufft-cu12-11.3.3.83 nvidia-cufile-cu12-1.13.1.3 nvidia-curand-cu12-10.3.9.90 nvidia-cusolver-cu12-11.7.3.90 nvidia-cusparse-cu12-12.5.8.93 nvidia-cusparselt-cu12-0.7.1 nvidia-nccl-cu12-2.27.5 nvidia-nvjitlink-cu12-12.8.93 nvidia-nvshmem-cu12-3.3.20 nvidia-nvtx-cu12-12.8.90 sympy-1.14.0 torch-2.9.0 triton-3.5.0 typing-extensions-4.15.0
+#20 346.1 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#20 346.1 
+#20 346.1 [notice] A new release of pip is available: 24.0 -> 25.3
+#20 346.1 [notice] To update, run: pip install --upgrade pip
+#20 DONE 356.3s
+
+#21 exporting to image
+#21 exporting layers
+#21 exporting layers 34.8s done
+#21 writing image sha256:2ba326bc240149644cb89aff325e3682c63921fd0ce5de8c210a6a1a23fb77c3 done
+#21 naming to docker.io/library/test-image-f93a377244be9bfcb96d3547b9bc424d done
+#21 DONE 34.8s
+
+View build details: docker-desktop://dashboard/build/default/default/0u0ywpzd2r2ycz79oi3e9wzmm
+[2025-10-29 21:37:51] SUCCESS: Build completed for f93a377244be9bfcb96d3547b9bc424d

@@ -1,0 +1,12 @@
+=== Docker Run Log for 5420020 ===
+Started at: Mi 29. Okt 15:41:08 CET 2025
+
+[2025-10-29 15:41:09] START: Running container for 5420020
+[2025-10-29 15:41:09] SUCCESS: Container 24ec984ef7ded16dacef246c25ca56e70e80735d0a5474a9bcefcbdad01ee270 started for 5420020
+=== Container logs for 5420020 ===
+  File "/snippet.py", line 11
+    return reduce(lambda x, (y, z): x | (z << y),
+                            ^^^^^^
+SyntaxError: Lambda expression parameters cannot be parenthesized
+=== End of logs for 5420020 ===
+[2025-10-29 15:41:11] INFO: Container 24ec984ef7ded16dacef246c25ca56e70e80735d0a5474a9bcefcbdad01ee270 has stopped

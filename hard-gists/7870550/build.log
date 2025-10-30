@@ -1,0 +1,117 @@
+=== Docker Build Log for 7870550 ===
+Started at: Mi 29. Okt 17:20:13 CET 2025
+
+[2025-10-29 17:20:13] START: Building image for 7870550
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 3.72kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.08kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/90] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/90] COPY hard-gists/7870550/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/90] RUN ["apt-get","update"]
+#7 0.278 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.278 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.287 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.298 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.619 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.621 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.304 Fetched 9833 kB in 1s (9236 kB/s)
+#7 1.304 Reading package lists...
+#7 DONE 1.9s
+
+#8 [ 4/90] RUN ["pip","install","webvirtmgr"]
+#8 2.144 Collecting webvirtmgr
+#8 2.179   Downloading webvirtmgr-4.8.9.tar.gz (705 kB)
+#8 2.230      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 705.8/705.8 kB 14.2 MB/s eta 0:00:00
+#8 2.269   Preparing metadata (setup.py): started
+#8 2.708   Preparing metadata (setup.py): finished with status 'done'
+#8 2.713 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from webvirtmgr) (79.0.1)
+#8 2.835 Collecting django>=1.5.5 (from webvirtmgr)
+#8 2.844   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#8 2.891 Collecting gunicorn>=18.0 (from webvirtmgr)
+#8 2.899   Downloading gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+#8 2.934 Collecting lockfile>=0.9 (from webvirtmgr)
+#8 2.944   Downloading lockfile-0.12.2-py2.py3-none-any.whl.metadata (2.4 kB)
+#8 2.992 Collecting asgiref>=3.8.1 (from django>=1.5.5->webvirtmgr)
+#8 3.005   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#8 3.046 Collecting sqlparse>=0.3.1 (from django>=1.5.5->webvirtmgr)
+#8 3.055   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#8 3.106 Collecting packaging (from gunicorn>=18.0->webvirtmgr)
+#8 3.114   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 3.180 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#8 3.477    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 28.1 MB/s eta 0:00:00
+#8 3.485 Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB)
+#8 3.497    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.0/85.0 kB 7.0 MB/s eta 0:00:00
+#8 3.507 Downloading lockfile-0.12.2-py2.py3-none-any.whl (13 kB)
+#8 3.525 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#8 3.544 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#8 3.555    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.5 MB/s eta 0:00:00
+#8 3.566 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 3.577    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.7 MB/s eta 0:00:00
+#8 3.619 Building wheels for collected packages: webvirtmgr
+#8 3.620   Building wheel for webvirtmgr (setup.py): started
+#8 3.947   Building wheel for webvirtmgr (setup.py): finished with status 'done'
+#8 3.950   Created wheel for webvirtmgr: filename=webvirtmgr-4.8.9-py3-none-any.whl size=698037 sha256=c699dd15159ca8b41dba20161d6be5d6c56de7e1e80cdf3b42e5ec207bf67d24
+#8 3.950   Stored in directory: /root/.cache/pip/wheels/c7/67/ab/a716fc1b614ea6bb537a20a0b880eb7071514208cc442aeac3
+#8 3.954 Successfully built webvirtmgr
+#8 4.050 Installing collected packages: lockfile, sqlparse, packaging, asgiref, gunicorn, django, webvirtmgr
+#8 5.929 Successfully installed asgiref-3.10.0 django-5.2.7 gunicorn-23.0.0 lockfile-0.12.2 packaging-25.0 sqlparse-0.5.3 webvirtmgr-4.8.9
+#8 5.929 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 6.042 
+#8 6.042 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 6.042 [notice] To update, run: pip install --upgrade pip
+#8 DONE 7.1s
+
+#9 [ 5/90] RUN ["apt-get","install","-y","python-pip"]
+#9 0.224 Reading package lists...
+#9 0.704 Building dependency tree...
+#9 0.822 Reading state information...
+#9 0.839 Package python-pip is not available, but is referred to by another package.
+#9 0.839 This may mean that the package is missing, has been obsoleted, or
+#9 0.839 is only available from another source
+#9 0.839 However the following packages replace it:
+#9 0.839   python3-pip
+#9 0.839 
+#9 0.841 E: Package 'python-pip' has no installation candidate
+#9 ERROR: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+------
+ > [ 5/90] RUN ["apt-get","install","-y","python-pip"]:
+
+
+0.839 Package python-pip is not available, but is referred to by another package.
+0.839 This may mean that the package is missing, has been obsoleted, or
+0.839 is only available from another source
+0.839 However the following packages replace it:
+0.839   python3-pip
+0.839 
+0.841 E: Package 'python-pip' has no installation candidate
+------
+Dockerfile:5
+--------------------
+   3 |     RUN ["apt-get","update"]
+   4 |     RUN ["pip","install","webvirtmgr"]
+   5 | >>> RUN ["apt-get","install","-y","python-pip"]
+   6 |     RUN ["apt-get","install","-y","python-dev"]
+   7 |     RUN ["apt-get","install","-y","git"]
+--------------------
+ERROR: failed to build: failed to solve: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/default/default/i1s204y1zwdeyipzebc10h06d
+[2025-10-29 17:20:23] ERROR: Build failed for 7870550

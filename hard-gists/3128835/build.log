@@ -1,0 +1,176 @@
+=== Docker Build Log for 3128835 ===
+Started at: Mi 29. Okt 13:41:17 CET 2025
+
+[2025-10-29 13:41:17] START: Building image for 3128835
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 340B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.40kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/8] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/8] COPY hard-gists/3128835/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/8] RUN ["pip","install","dj.choices"]
+#7 1.870 Collecting dj.choices
+#7 1.904   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 1.920   Preparing metadata (setup.py): started
+#7 2.294   Preparing metadata (setup.py): finished with status 'done'
+#7 2.399 Collecting django (from dj.choices)
+#7 2.408   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.445 Collecting six (from dj.choices)
+#7 2.453   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.499 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.508   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.546 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.555   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.578 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 2.927    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 23.9 MB/s eta 0:00:00
+#7 2.935 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.953 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 2.970 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 2.981    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.9 MB/s eta 0:00:00
+#7 3.017 Building wheels for collected packages: dj.choices
+#7 3.017   Building wheel for dj.choices (setup.py): started
+#7 3.187   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.188   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=115758c239b5e8abbdad1311f6d27e86c3ae8f9f4040f2adf04870a9b28c5aa8
+#7 3.188   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.190 Successfully built dj.choices
+#7 3.235 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 4.619 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 4.620 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.715 
+#7 4.715 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.715 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.1s
+
+#8 [4/8] RUN ["pip","install","requests"]
+#8 0.540 Collecting requests
+#8 0.573   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#8 0.700 Collecting charset_normalizer<4,>=2 (from requests)
+#8 0.709   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#8 0.757 Collecting idna<4,>=2.5 (from requests)
+#8 0.765   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#8 0.826 Collecting urllib3<3,>=1.21.1 (from requests)
+#8 0.835   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#8 0.900 Collecting certifi>=2017.4.17 (from requests)
+#8 0.908   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#8 0.937 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#8 0.957    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.0 MB/s eta 0:00:00
+#8 0.965 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#8 0.983    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.4 MB/s eta 0:00:00
+#8 0.991 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#8 1.008    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 9.5 MB/s eta 0:00:00
+#8 1.016 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#8 1.030    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.8 MB/s eta 0:00:00
+#8 1.045 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#8 1.064    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 6.9 MB/s eta 0:00:00
+#8 1.114 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#8 1.379 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#8 1.379 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.384 
+#8 1.384 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.384 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.5s
+
+#9 [5/8] RUN ["pip","install","psycopg2"]
+#9 0.584 Collecting psycopg2
+#9 0.618   Downloading psycopg2-2.9.11.tar.gz (379 kB)
+#9 0.659      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 379.6/379.6 kB 9.5 MB/s eta 0:00:00
+#9 0.694   Preparing metadata (setup.py): started
+#9 0.831   Preparing metadata (setup.py): finished with status 'done'
+#9 0.832 Building wheels for collected packages: psycopg2
+#9 0.838   Building wheel for psycopg2 (setup.py): started
+#9 5.800   Building wheel for psycopg2 (setup.py): finished with status 'done'
+#9 5.802   Created wheel for psycopg2: filename=psycopg2-2.9.11-cp311-cp311-linux_x86_64.whl size=503320 sha256=b393f10cbd33ae9e809bd44b83b8df3df4e4b34fec5c8fd14b1df931a9c68785
+#9 5.802   Stored in directory: /root/.cache/pip/wheels/15/a7/0e/37c6d130333cbaac2e6bb15e4ff41ef3a195af78a70907ca0d
+#9 5.804 Successfully built psycopg2
+#9 5.849 Installing collected packages: psycopg2
+#9 5.890 Successfully installed psycopg2-2.9.11
+#9 5.890 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 5.895 
+#9 5.895 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 5.895 [notice] To update, run: pip install --upgrade pip
+#9 DONE 6.0s
+
+#10 [6/8] RUN ["pip","install","requests-oauthlib"]
+#10 0.525 Collecting requests-oauthlib
+#10 0.562   Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl.metadata (11 kB)
+#10 0.610 Collecting oauthlib>=3.0.0 (from requests-oauthlib)
+#10 0.619   Downloading oauthlib-3.3.1-py3-none-any.whl.metadata (7.9 kB)
+#10 0.635 Requirement already satisfied: requests>=2.0.0 in /usr/local/lib/python3.11/site-packages (from requests-oauthlib) (2.32.5)
+#10 0.642 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests>=2.0.0->requests-oauthlib) (3.4.4)
+#10 0.643 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests>=2.0.0->requests-oauthlib) (3.11)
+#10 0.644 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests>=2.0.0->requests-oauthlib) (2.5.0)
+#10 0.645 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests>=2.0.0->requests-oauthlib) (2025.10.5)
+#10 0.662 Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl (24 kB)
+#10 0.687 Downloading oauthlib-3.3.1-py3-none-any.whl (160 kB)
+#10 0.712    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 160.1/160.1 kB 6.8 MB/s eta 0:00:00
+#10 0.764 Installing collected packages: oauthlib, requests-oauthlib
+#10 0.863 Successfully installed oauthlib-3.3.1 requests-oauthlib-2.0.0
+#10 0.863 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.868 
+#10 0.868 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.868 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.0s
+
+#11 [7/8] RUN ["pip","install","dropbox"]
+#11 0.545 Collecting dropbox
+#11 0.579   Downloading dropbox-12.0.2-py3-none-any.whl.metadata (4.3 kB)
+#11 0.597 Requirement already satisfied: requests>=2.16.2 in /usr/local/lib/python3.11/site-packages (from dropbox) (2.32.5)
+#11 0.598 Requirement already satisfied: six>=1.12.0 in /usr/local/lib/python3.11/site-packages (from dropbox) (1.17.0)
+#11 0.631 Collecting stone<3.3.3,>=2 (from dropbox)
+#11 0.641   Downloading stone-3.3.1-py3-none-any.whl.metadata (8.0 kB)
+#11 0.662 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests>=2.16.2->dropbox) (3.4.4)
+#11 0.663 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests>=2.16.2->dropbox) (3.11)
+#11 0.664 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests>=2.16.2->dropbox) (2.5.0)
+#11 0.665 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests>=2.16.2->dropbox) (2025.10.5)
+#11 0.695 Collecting ply>=3.4 (from stone<3.3.3,>=2->dropbox)
+#11 0.703   Downloading ply-3.11-py2.py3-none-any.whl.metadata (844 bytes)
+#11 0.741 Downloading dropbox-12.0.2-py3-none-any.whl (572 kB)
+#11 0.794    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 572.1/572.1 kB 11.1 MB/s eta 0:00:00
+#11 0.804 Downloading stone-3.3.1-py3-none-any.whl (162 kB)
+#11 0.823    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 162.3/162.3 kB 8.8 MB/s eta 0:00:00
+#11 0.831 Downloading ply-3.11-py2.py3-none-any.whl (49 kB)
+#11 0.845    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.6/49.6 kB 3.2 MB/s eta 0:00:00
+#11 0.902 Installing collected packages: ply, stone, dropbox
+#11 1.503 Successfully installed dropbox-12.0.2 ply-3.11 stone-3.3.1
+#11 1.504 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.509 
+#11 1.509 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.509 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.7s
+
+#12 [8/8] RUN ["pip","install","Django"]
+#12 0.438 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#12 0.441 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#12 0.442 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#12 0.498 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 0.503 
+#12 0.503 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 0.503 [notice] To update, run: pip install --upgrade pip
+#12 DONE 0.6s
+
+#13 exporting to image
+#13 exporting layers
+#13 exporting layers 0.7s done
+#13 writing image sha256:72171974ae3a4d05930ac5775c09ca0f5f3ee87db624efbbaf71f70d71913b4d done
+#13 naming to docker.io/library/test-image-3128835 done
+#13 DONE 0.8s
+
+View build details: docker-desktop://dashboard/build/default/default/hykly0awracbcem93t9mn8m7w
+[2025-10-29 13:41:34] SUCCESS: Build completed for 3128835

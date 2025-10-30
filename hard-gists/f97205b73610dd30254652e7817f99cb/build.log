@@ -1,0 +1,161 @@
+=== Docker Build Log for f97205b73610dd30254652e7817f99cb ===
+Started at: Mi 29. Okt 21:38:21 CET 2025
+
+[2025-10-29 21:38:21] START: Building image for f97205b73610dd30254652e7817f99cb
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 223B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 806B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/f97205b73610dd30254652e7817f99cb/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","pyzmq"]
+#7 2.163 Collecting pyzmq
+#7 2.246   Downloading pyzmq-27.1.0-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (6.0 kB)
+#7 2.273 Downloading pyzmq-27.1.0-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (857 kB)
+#7 2.356    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 857.0/857.0 kB 10.5 MB/s eta 0:00:00
+#7 2.393 Installing collected packages: pyzmq
+#7 2.476 Successfully installed pyzmq-27.1.0
+#7 2.476 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.591 
+#7 2.591 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.591 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.8s
+
+#8 [4/4] RUN ["pip","install","ipykernel"]
+#8 0.556 Collecting ipykernel
+#8 0.600   Downloading ipykernel-7.1.0-py3-none-any.whl.metadata (4.5 kB)
+#8 0.648 Collecting comm>=0.1.1 (from ipykernel)
+#8 0.658   Downloading comm-0.2.3-py3-none-any.whl.metadata (3.7 kB)
+#8 0.782 Collecting debugpy>=1.6.5 (from ipykernel)
+#8 0.794   Downloading debugpy-1.8.17-cp311-cp311-manylinux_2_34_x86_64.whl.metadata (1.4 kB)
+#8 0.873 Collecting ipython>=7.23.1 (from ipykernel)
+#8 0.882   Downloading ipython-9.6.0-py3-none-any.whl.metadata (4.4 kB)
+#8 0.934 Collecting jupyter-client>=8.0.0 (from ipykernel)
+#8 0.945   Downloading jupyter_client-8.6.3-py3-none-any.whl.metadata (8.3 kB)
+#8 1.000 Collecting jupyter-core!=5.0.*,>=4.12 (from ipykernel)
+#8 1.010   Downloading jupyter_core-5.9.1-py3-none-any.whl.metadata (1.5 kB)
+#8 1.047 Collecting matplotlib-inline>=0.1 (from ipykernel)
+#8 1.057   Downloading matplotlib_inline-0.2.1-py3-none-any.whl.metadata (2.3 kB)
+#8 1.099 Collecting nest-asyncio>=1.4 (from ipykernel)
+#8 1.110   Downloading nest_asyncio-1.6.0-py3-none-any.whl.metadata (2.8 kB)
+#8 1.170 Collecting packaging>=22 (from ipykernel)
+#8 1.181   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 1.293 Collecting psutil>=5.7 (from ipykernel)
+#8 1.301   Downloading psutil-7.1.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (23 kB)
+#8 1.316 Requirement already satisfied: pyzmq>=25 in /usr/local/lib/python3.11/site-packages (from ipykernel) (27.1.0)
+#8 1.370 Collecting tornado>=6.2 (from ipykernel)
+#8 1.379   Downloading tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+#8 1.424 Collecting traitlets>=5.4.0 (from ipykernel)
+#8 1.434   Downloading traitlets-5.14.3-py3-none-any.whl.metadata (10 kB)
+#8 1.507 Collecting decorator (from ipython>=7.23.1->ipykernel)
+#8 1.519   Downloading decorator-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+#8 1.557 Collecting ipython-pygments-lexers (from ipython>=7.23.1->ipykernel)
+#8 1.569   Downloading ipython_pygments_lexers-1.1.1-py3-none-any.whl.metadata (1.1 kB)
+#8 1.608 Collecting jedi>=0.16 (from ipython>=7.23.1->ipykernel)
+#8 1.621   Downloading jedi-0.19.2-py2.py3-none-any.whl.metadata (22 kB)
+#8 1.662 Collecting pexpect>4.3 (from ipython>=7.23.1->ipykernel)
+#8 1.675   Downloading pexpect-4.9.0-py2.py3-none-any.whl.metadata (2.5 kB)
+#8 1.731 Collecting prompt_toolkit<3.1.0,>=3.0.41 (from ipython>=7.23.1->ipykernel)
+#8 1.741   Downloading prompt_toolkit-3.0.52-py3-none-any.whl.metadata (6.4 kB)
+#8 1.785 Collecting pygments>=2.4.0 (from ipython>=7.23.1->ipykernel)
+#8 1.797   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#8 1.836 Collecting stack_data (from ipython>=7.23.1->ipykernel)
+#8 1.847   Downloading stack_data-0.6.3-py3-none-any.whl.metadata (18 kB)
+#8 1.897 Collecting typing_extensions>=4.6 (from ipython>=7.23.1->ipykernel)
+#8 1.907   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#8 1.955 Collecting python-dateutil>=2.8.2 (from jupyter-client>=8.0.0->ipykernel)
+#8 1.964   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#8 2.018 Collecting platformdirs>=2.5 (from jupyter-core!=5.0.*,>=4.12->ipykernel)
+#8 2.027   Downloading platformdirs-4.5.0-py3-none-any.whl.metadata (12 kB)
+#8 2.117 Collecting parso<0.9.0,>=0.8.4 (from jedi>=0.16->ipython>=7.23.1->ipykernel)
+#8 2.127   Downloading parso-0.8.5-py2.py3-none-any.whl.metadata (8.3 kB)
+#8 2.162 Collecting ptyprocess>=0.5 (from pexpect>4.3->ipython>=7.23.1->ipykernel)
+#8 2.172   Downloading ptyprocess-0.7.0-py2.py3-none-any.whl.metadata (1.3 kB)
+#8 2.215 Collecting wcwidth (from prompt_toolkit<3.1.0,>=3.0.41->ipython>=7.23.1->ipykernel)
+#8 2.223   Downloading wcwidth-0.2.14-py2.py3-none-any.whl.metadata (15 kB)
+#8 2.268 Collecting six>=1.5 (from python-dateutil>=2.8.2->jupyter-client>=8.0.0->ipykernel)
+#8 2.277   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 2.328 Collecting executing>=1.2.0 (from stack_data->ipython>=7.23.1->ipykernel)
+#8 2.337   Downloading executing-2.2.1-py2.py3-none-any.whl.metadata (8.9 kB)
+#8 2.375 Collecting asttokens>=2.1.0 (from stack_data->ipython>=7.23.1->ipykernel)
+#8 2.383   Downloading asttokens-3.0.0-py3-none-any.whl.metadata (4.7 kB)
+#8 2.417 Collecting pure-eval (from stack_data->ipython>=7.23.1->ipykernel)
+#8 2.427   Downloading pure_eval-0.2.3-py3-none-any.whl.metadata (6.3 kB)
+#8 2.474 Downloading ipykernel-7.1.0-py3-none-any.whl (117 kB)
+#8 2.497    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.0/118.0 kB 5.2 MB/s eta 0:00:00
+#8 2.506 Downloading comm-0.2.3-py3-none-any.whl (7.3 kB)
+#8 2.525 Downloading debugpy-1.8.17-cp311-cp311-manylinux_2_34_x86_64.whl (3.2 MB)
+#8 2.739    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 14.9 MB/s eta 0:00:00
+#8 2.760 Downloading ipython-9.6.0-py3-none-any.whl (616 kB)
+#8 2.800    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 616.2/616.2 kB 15.8 MB/s eta 0:00:00
+#8 2.814 Downloading jupyter_client-8.6.3-py3-none-any.whl (106 kB)
+#8 2.828    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.1/106.1 kB 7.4 MB/s eta 0:00:00
+#8 2.838 Downloading jupyter_core-5.9.1-py3-none-any.whl (29 kB)
+#8 2.859 Downloading matplotlib_inline-0.2.1-py3-none-any.whl (9.5 kB)
+#8 2.877 Downloading nest_asyncio-1.6.0-py3-none-any.whl (5.2 kB)
+#8 2.894 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 2.907    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.2 MB/s eta 0:00:00
+#8 2.918 Downloading psutil-7.1.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (258 kB)
+#8 2.944    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 258.7/258.7 kB 10.1 MB/s eta 0:00:00
+#8 2.955 Downloading tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (443 kB)
+#8 2.992    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 443.9/443.9 kB 15.0 MB/s eta 0:00:00
+#8 3.003 Downloading traitlets-5.14.3-py3-none-any.whl (85 kB)
+#8 3.015    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.4/85.4 kB 6.9 MB/s eta 0:00:00
+#8 3.025 Downloading jedi-0.19.2-py2.py3-none-any.whl (1.6 MB)
+#8 3.124    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 16.0 MB/s eta 0:00:00
+#8 3.133 Downloading pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+#8 3.145    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.8/63.8 kB 5.1 MB/s eta 0:00:00
+#8 3.153 Downloading platformdirs-4.5.0-py3-none-any.whl (18 kB)
+#8 3.172 Downloading prompt_toolkit-3.0.52-py3-none-any.whl (391 kB)
+#8 3.201    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 391.4/391.4 kB 14.0 MB/s eta 0:00:00
+#8 3.212 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#8 3.291    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 15.6 MB/s eta 0:00:00
+#8 3.302 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#8 3.327    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 9.4 MB/s eta 0:00:00
+#8 3.336 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#8 3.347    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.6 MB/s eta 0:00:00
+#8 3.356 Downloading decorator-5.2.1-py3-none-any.whl (9.2 kB)
+#8 3.377 Downloading ipython_pygments_lexers-1.1.1-py3-none-any.whl (8.1 kB)
+#8 3.396 Downloading stack_data-0.6.3-py3-none-any.whl (24 kB)
+#8 3.416 Downloading asttokens-3.0.0-py3-none-any.whl (26 kB)
+#8 3.437 Downloading executing-2.2.1-py2.py3-none-any.whl (28 kB)
+#8 3.457 Downloading parso-0.8.5-py2.py3-none-any.whl (106 kB)
+#8 3.471    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.7/106.7 kB 7.5 MB/s eta 0:00:00
+#8 3.485 Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+#8 3.504 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 3.526 Downloading pure_eval-0.2.3-py3-none-any.whl (11 kB)
+#8 3.545 Downloading wcwidth-0.2.14-py2.py3-none-any.whl (37 kB)
+#8 3.763 Installing collected packages: pure-eval, ptyprocess, wcwidth, typing_extensions, traitlets, tornado, six, pygments, psutil, platformdirs, pexpect, parso, packaging, nest-asyncio, executing, decorator, debugpy, comm, asttokens, stack_data, python-dateutil, prompt_toolkit, matplotlib-inline, jupyter-core, jedi, ipython-pygments-lexers, jupyter-client, ipython, ipykernel
+#8 6.510 Successfully installed asttokens-3.0.0 comm-0.2.3 debugpy-1.8.17 decorator-5.2.1 executing-2.2.1 ipykernel-7.1.0 ipython-9.6.0 ipython-pygments-lexers-1.1.1 jedi-0.19.2 jupyter-client-8.6.3 jupyter-core-5.9.1 matplotlib-inline-0.2.1 nest-asyncio-1.6.0 packaging-25.0 parso-0.8.5 pexpect-4.9.0 platformdirs-4.5.0 prompt_toolkit-3.0.52 psutil-7.1.2 ptyprocess-0.7.0 pure-eval-0.2.3 pygments-2.19.2 python-dateutil-2.9.0.post0 six-1.17.0 stack_data-0.6.3 tornado-6.5.2 traitlets-5.14.3 typing_extensions-4.15.0 wcwidth-0.2.14
+#8 6.511 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 6.516 
+#8 6.516 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 6.516 [notice] To update, run: pip install --upgrade pip
+#8 DONE 7.3s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.5s done
+#9 writing image sha256:673634a629428e76c47e03a12ab7a1743c05246bca9d6976fb1763495081bd4f done
+#9 naming to docker.io/library/test-image-f97205b73610dd30254652e7817f99cb done
+#9 DONE 0.5s
+
+View build details: docker-desktop://dashboard/build/default/default/ukm4q6d61w1a8eggl68k2j1to
+[2025-10-29 21:38:32] SUCCESS: Build completed for f97205b73610dd30254652e7817f99cb

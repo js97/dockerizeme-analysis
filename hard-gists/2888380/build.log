@@ -1,0 +1,65 @@
+=== Docker Build Log for 2888380 ===
+Started at: Mi 29. Okt 13:19:32 CET 2025
+
+[2025-10-29 13:19:32] START: Building image for 2888380
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 200B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.23kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/2888380/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","bottle"]
+#7 1.874 Collecting bottle
+#7 1.906   Downloading bottle-0.13.4-py2.py3-none-any.whl.metadata (1.6 kB)
+#7 1.928 Downloading bottle-0.13.4-py2.py3-none-any.whl (103 kB)
+#7 1.954    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.8/103.8 kB 4.0 MB/s eta 0:00:00
+#7 1.987 Installing collected packages: bottle
+#7 2.046 Successfully installed bottle-0.13.4
+#7 2.047 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.136 
+#7 2.136 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.136 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.3s
+
+#8 [4/4] RUN ["pip","install","WSGIProxy2"]
+#8 0.501 Collecting WSGIProxy2
+#8 0.536   Downloading WSGIProxy2-0.5.1-py3-none-any.whl.metadata (2.7 kB)
+#8 0.586 Collecting webob (from WSGIProxy2)
+#8 0.595   Downloading WebOb-1.8.9-py2.py3-none-any.whl.metadata (11 kB)
+#8 0.620 Downloading WSGIProxy2-0.5.1-py3-none-any.whl (9.2 kB)
+#8 0.639 Downloading WebOb-1.8.9-py2.py3-none-any.whl (115 kB)
+#8 0.665    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 115.4/115.4 kB 4.4 MB/s eta 0:00:00
+#8 0.701 Installing collected packages: webob, WSGIProxy2
+#8 0.791 Successfully installed WSGIProxy2-0.5.1 webob-1.8.9
+#8 0.791 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.796 
+#8 0.796 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.796 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.9s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.1s done
+#9 writing image sha256:bfbe4dc8828b076b8b8964fbdddfd882a5132ca47c43cbd344c473356081c02f done
+#9 naming to docker.io/library/test-image-2888380 done
+#9 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/k61aoxvorw5ugv1sqqeyyjd31
+[2025-10-29 13:19:36] SUCCESS: Build completed for 2888380

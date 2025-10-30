@@ -1,0 +1,137 @@
+=== Docker Build Log for 7805193 ===
+Started at: Mi 29. Okt 17:18:37 CET 2025
+
+[2025-10-29 17:18:37] START: Building image for 7805193
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 322B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 754B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/7805193/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","dj.choices"]
+#7 2.113 Collecting dj.choices
+#7 2.150   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 2.167   Preparing metadata (setup.py): started
+#7 2.640   Preparing metadata (setup.py): finished with status 'done'
+#7 2.758 Collecting django (from dj.choices)
+#7 2.768   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.810 Collecting six (from dj.choices)
+#7 2.818   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.867 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.875   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.916 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.924   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.953 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.311    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 23.4 MB/s eta 0:00:00
+#7 3.320 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.337 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.363 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.374    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.4 MB/s eta 0:00:00
+#7 3.415 Building wheels for collected packages: dj.choices
+#7 3.415   Building wheel for dj.choices (setup.py): started
+#7 3.598   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.598   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=3457007e243b0f61c870a05303599fca6dd8a8955e7dec322f42435ae99edde7
+#7 3.598   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.600 Successfully built dj.choices
+#7 3.654 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 5.381 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 5.381 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.486 
+#7 5.486 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.486 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.2s
+
+#8 [4/7] RUN ["pip","install","requests"]
+#8 0.595 Collecting requests
+#8 0.630   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#8 0.762 Collecting charset_normalizer<4,>=2 (from requests)
+#8 0.771   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#8 0.822 Collecting idna<4,>=2.5 (from requests)
+#8 0.831   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#8 0.898 Collecting urllib3<3,>=1.21.1 (from requests)
+#8 0.907   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#8 0.957 Collecting certifi>=2017.4.17 (from requests)
+#8 0.966   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#8 0.996 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#8 1.016    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.1 MB/s eta 0:00:00
+#8 1.024 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#8 1.044    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 8.9 MB/s eta 0:00:00
+#8 1.052 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#8 1.066    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.2 MB/s eta 0:00:00
+#8 1.074 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#8 1.090    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.3 MB/s eta 0:00:00
+#8 1.098 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#8 1.115    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 7.8 MB/s eta 0:00:00
+#8 1.179 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#8 1.448 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#8 1.448 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.454 
+#8 1.454 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.454 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.6s
+
+#9 [5/7] RUN ["pip","install","django-polymorphic"]
+#9 0.718 Collecting django-polymorphic
+#9 0.752   Downloading django_polymorphic-4.1.0-py3-none-any.whl.metadata (5.1 kB)
+#9 0.767 Requirement already satisfied: Django>=3.2 in /usr/local/lib/python3.11/site-packages (from django-polymorphic) (5.2.7)
+#9 0.771 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django>=3.2->django-polymorphic) (3.10.0)
+#9 0.772 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django>=3.2->django-polymorphic) (0.5.3)
+#9 0.788 Downloading django_polymorphic-4.1.0-py3-none-any.whl (62 kB)
+#9 0.813    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.8/62.8 kB 2.4 MB/s eta 0:00:00
+#9 0.870 Installing collected packages: django-polymorphic
+#9 0.925 Successfully installed django-polymorphic-4.1.0
+#9 0.925 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.931 
+#9 0.931 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.931 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.0s
+
+#10 [6/7] RUN ["pip","install","Django"]
+#10 0.564 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#10 0.569 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#10 0.570 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#10 0.638 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.644 
+#10 0.644 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.644 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.7s
+
+#11 [7/7] RUN ["pip","install","django-polymorphic-ng"]
+#11 0.887 Collecting django-polymorphic-ng
+#11 1.247   Downloading django_polymorphic_ng-0.8.0-py2.py3-none-any.whl.metadata (3.4 kB)
+#11 1.475 Downloading django_polymorphic_ng-0.8.0-py2.py3-none-any.whl (43 kB)
+#11 1.509    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.3/43.3 kB 1.1 MB/s eta 0:00:00
+#11 1.561 Installing collected packages: django-polymorphic-ng
+#11 1.640 Successfully installed django-polymorphic-ng-0.8.0
+#11 1.640 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.645 
+#11 1.645 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.645 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.7s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.7s done
+#12 writing image sha256:aa361a698f36d1d05a7d00af5b995173af60c71eec9eeeb0408a935a784cf1ea done
+#12 naming to docker.io/library/test-image-7805193 done
+#12 DONE 0.8s
+
+View build details: docker-desktop://dashboard/build/default/default/mu1pbdpsind6mlvdjoa8o5fnb
+[2025-10-29 17:18:50] SUCCESS: Build completed for 7805193

@@ -1,0 +1,13 @@
+=== Docker Run Log for ec5c8bed17396e8e55cf3305dbb88f56 ===
+Started at: Mi 29. Okt 20:54:06 CET 2025
+
+[2025-10-29 20:54:16] START: Running container for ec5c8bed17396e8e55cf3305dbb88f56
+[2025-10-29 20:54:16] SUCCESS: Container a213119ee54d3611de771cc00a811fa2c13111e0eccbc2d81d2ad774afada26d started for ec5c8bed17396e8e55cf3305dbb88f56
+=== Container logs for ec5c8bed17396e8e55cf3305dbb88f56 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 9, in <module>
+    driver = webdriver.Firefox(executable_path=r'geckodriver.exe')
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: WebDriver.__init__() got an unexpected keyword argument 'executable_path'
+=== End of logs for ec5c8bed17396e8e55cf3305dbb88f56 ===
+[2025-10-29 20:54:18] INFO: Container a213119ee54d3611de771cc00a811fa2c13111e0eccbc2d81d2ad774afada26d has stopped

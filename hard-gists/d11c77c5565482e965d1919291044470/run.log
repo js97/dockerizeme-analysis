@@ -1,0 +1,16 @@
+=== Docker Run Log for d11c77c5565482e965d1919291044470 ===
+Started at: Mi 29. Okt 20:20:18 CET 2025
+
+[2025-10-29 20:21:44] START: Running container for d11c77c5565482e965d1919291044470
+[2025-10-29 20:21:44] SUCCESS: Container 7f4673bb0c827e567769698350d645ef7bac0245d0457529efe2aad3ceaa8f69 started for d11c77c5565482e965d1919291044470
+=== Container logs for d11c77c5565482e965d1919291044470 ===
+2025-10-29 19:21:45.221233: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-10-29 19:21:45.259600: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-29 19:21:46.447103: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Traceback (most recent call last):
+  File "/snippet.py", line 6, in <module>
+    from tensorflow.models.rnn import rnn_cell
+ModuleNotFoundError: No module named 'tensorflow.models'
+=== End of logs for d11c77c5565482e965d1919291044470 ===
+[2025-10-29 20:21:46] INFO: Container 7f4673bb0c827e567769698350d645ef7bac0245d0457529efe2aad3ceaa8f69 has stopped

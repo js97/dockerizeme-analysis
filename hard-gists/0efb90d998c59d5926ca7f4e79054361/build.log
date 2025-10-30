@@ -1,0 +1,335 @@
+=== Docker Build Log for 0efb90d998c59d5926ca7f4e79054361 ===
+Started at: Mi 29. Okt 11:43:13 CET 2025
+
+[2025-10-29 11:43:13] START: Building image for 0efb90d998c59d5926ca7f4e79054361
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 382B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 5.06kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/9] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/9] COPY hard-gists/0efb90d998c59d5926ca7f4e79054361/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/9] RUN ["pip","install","gobject"]
+#7 1.911 Collecting gobject
+#7 1.944   Downloading gobject-0.1.0-py3-none-any.whl.metadata (775 bytes)
+#7 1.964 Downloading gobject-0.1.0-py3-none-any.whl (5.9 kB)
+#7 2.006 Installing collected packages: gobject
+#7 2.021 Successfully installed gobject-0.1.0
+#7 2.021 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.114 
+#7 2.114 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.114 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.3s
+
+#8 [4/9] RUN ["pip","install","db"]
+#8 0.528 Collecting db
+#8 0.564   Downloading db-0.1.1.tar.gz (3.4 kB)
+#8 0.581   Preparing metadata (setup.py): started
+#8 1.060   Preparing metadata (setup.py): finished with status 'done'
+#8 1.082 Collecting antiorm (from db)
+#8 1.091   Downloading antiorm-1.2.1.tar.gz (171 kB)
+#8 1.120      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 172.0/172.0 kB 5.9 MB/s eta 0:00:00
+#8 1.129   Preparing metadata (setup.py): started
+#8 1.242   Preparing metadata (setup.py): finished with status 'done'
+#8 1.243 Building wheels for collected packages: db, antiorm
+#8 1.243   Building wheel for db (setup.py): started
+#8 1.473   Building wheel for db (setup.py): finished with status 'done'
+#8 1.474   Created wheel for db: filename=db-0.1.1-py3-none-any.whl size=3915 sha256=89d61da35a91c1ba3fd7062939a76a4edf1c99ca915c33b0c9bc614e5e8370cf
+#8 1.474   Stored in directory: /root/.cache/pip/wheels/1f/a9/df/8e343ae1489f35fa96888200ee3340217512b98bed2c2def2d
+#8 1.476   Building wheel for antiorm (setup.py): started
+#8 1.608   Building wheel for antiorm (setup.py): finished with status 'done'
+#8 1.609   Created wheel for antiorm: filename=antiorm-1.2.1-py3-none-any.whl size=31744 sha256=a9a895178b3e484faea33d7c53f6032acc56e50b74ebaa90212af95e25119a89
+#8 1.609   Stored in directory: /root/.cache/pip/wheels/71/04/d9/c9b4297ae902eb961bc1cff29b248a7e706693200ef2656fb2
+#8 1.610 Successfully built db antiorm
+#8 1.641 Installing collected packages: antiorm, db
+#8 1.677 Successfully installed antiorm-1.2.1 db-0.1.1
+#8 1.677 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.682 
+#8 1.682 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.682 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.8s
+
+#9 [5/9] RUN ["pip","install","dbpy"]
+#9 0.518 Collecting dbpy
+#9 0.552   Downloading dbpy-0.1.3.zip (38 kB)
+#9 0.569   Preparing metadata (setup.py): started
+#9 0.689   Preparing metadata (setup.py): finished with status 'done'
+#9 0.692 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from dbpy) (79.0.1)
+#9 0.717 Building wheels for collected packages: dbpy
+#9 0.721   Building wheel for dbpy (setup.py): started
+#9 0.870   Building wheel for dbpy (setup.py): finished with status 'done'
+#9 0.870   Created wheel for dbpy: filename=dbpy-0.1.3-py2.py3-none-any.whl size=27221 sha256=775882ce53a3a4706fb54467e5f4102cbe28b4238be8a5eb4affa61adfda97ca
+#9 0.870   Stored in directory: /root/.cache/pip/wheels/d3/92/fb/f8e90df911f01b60fbfa24bcee791301ba892b0dbe30c73022
+#9 0.873 Successfully built dbpy
+#9 0.902 Installing collected packages: dbpy
+#9 0.955 Successfully installed dbpy-0.1.3
+#9 0.956 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.961 
+#9 0.961 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.961 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.0s
+
+#10 [6/9] RUN ["pip","install","db.py"]
+#10 0.510 Collecting db.py
+#10 0.544   Downloading db.py-0.5.3-py2.py3-none-any.whl.metadata (22 kB)
+#10 0.700 Collecting pandas (from db.py)
+#10 0.710   Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+#10 0.742      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 2.7 MB/s eta 0:00:00
+#10 0.793 Collecting prettytable==0.7.2 (from db.py)
+#10 0.801   Downloading prettytable-0.7.2.zip (28 kB)
+#10 0.821   Preparing metadata (setup.py): started
+#10 0.942   Preparing metadata (setup.py): finished with status 'done'
+#10 0.972 Collecting pybars3 (from db.py)
+#10 0.983   Downloading pybars3-0.9.7.tar.gz (29 kB)
+#10 0.996   Preparing metadata (setup.py): started
+#10 1.109   Preparing metadata (setup.py): finished with status 'done'
+#10 1.349 Collecting numpy>=1.23.2 (from pandas->db.py)
+#10 1.359   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#10 1.375      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 3.6 MB/s eta 0:00:00
+#10 1.415 Collecting python-dateutil>=2.8.2 (from pandas->db.py)
+#10 1.422   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#10 1.485 Collecting pytz>=2020.1 (from pandas->db.py)
+#10 1.493   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#10 1.531 Collecting tzdata>=2022.7 (from pandas->db.py)
+#10 1.540   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#10 1.578 Collecting PyMeta3>=0.5.1 (from pybars3->db.py)
+#10 1.592   Downloading PyMeta3-0.5.1.tar.gz (29 kB)
+#10 1.606   Preparing metadata (setup.py): started
+#10 1.713   Preparing metadata (setup.py): finished with status 'done'
+#10 1.744 Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->db.py)
+#10 1.752   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#10 1.775 Downloading db.py-0.5.3-py2.py3-none-any.whl (419 kB)
+#10 1.803    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 419.4/419.4 kB 15.3 MB/s eta 0:00:00
+#10 1.812 Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+#10 2.286    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 26.0 MB/s eta 0:00:00
+#10 2.296 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#10 2.919    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 24.9 MB/s eta 0:00:00
+#10 2.928 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#10 2.945    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 14.5 MB/s eta 0:00:00
+#10 2.954 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#10 2.980    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 20.0 MB/s eta 0:00:00
+#10 2.990 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#10 3.013    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 15.9 MB/s eta 0:00:00
+#10 3.021 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#10 3.112 Building wheels for collected packages: prettytable, pybars3, PyMeta3
+#10 3.117   Building wheel for prettytable (setup.py): started
+#10 3.256   Building wheel for prettytable (setup.py): finished with status 'done'
+#10 3.256   Created wheel for prettytable: filename=prettytable-0.7.2-py3-none-any.whl size=13762 sha256=2a8c7e8725850d53d0c426d5510300ceeac9a1bb1cf7b3fbb3fd3ebc0983850e
+#10 3.256   Stored in directory: /root/.cache/pip/wheels/b1/e4/65/051f9bd54c89d377db5ca942a672439c36cbf5ceff8e8902e0
+#10 3.258   Building wheel for pybars3 (setup.py): started
+#10 3.389   Building wheel for pybars3 (setup.py): finished with status 'done'
+#10 3.390   Created wheel for pybars3: filename=pybars3-0.9.7-py3-none-any.whl size=14163 sha256=b1a6d458e5aebaa51874f2b0db8a5721a2117107948a11fbc46358278f2a57e5
+#10 3.390   Stored in directory: /root/.cache/pip/wheels/64/b1/3d/cfac19f3ddd92f19e630a97106a66d1a92ffd30e4e95ca5e45
+#10 3.391   Building wheel for PyMeta3 (setup.py): started
+#10 3.528   Building wheel for PyMeta3 (setup.py): finished with status 'done'
+#10 3.528   Created wheel for PyMeta3: filename=pymeta3-0.5.1-py3-none-any.whl size=16520 sha256=ee6542e54f326b478413969970d5ae51d5d24b4ff17499ece32d19ab7ba47ce3
+#10 3.528   Stored in directory: /root/.cache/pip/wheels/67/18/5a/5a3a19ff18c8118a8dd11204dcde08349c2bbbdd77ac45b6a7
+#10 3.529 Successfully built prettytable pybars3 PyMeta3
+#10 3.629 Installing collected packages: pytz, PyMeta3, prettytable, tzdata, six, pybars3, numpy, python-dateutil, pandas, db.py
+#10 8.493 Successfully installed PyMeta3-0.5.1 db.py-0.5.3 numpy-2.3.4 pandas-2.3.3 prettytable-0.7.2 pybars3-0.9.7 python-dateutil-2.9.0.post0 pytz-2025.2 six-1.17.0 tzdata-2025.2
+#10 8.493 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 8.498 
+#10 8.498 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 8.498 [notice] To update, run: pip install --upgrade pip
+#10 DONE 9.0s
+
+#11 [7/9] RUN ["pip","install","lisa"]
+#11 0.515 Collecting lisa
+#11 0.717   Downloading lisa-1.21.0.tar.gz (482 kB)
+#11 0.839      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 482.8/482.8 kB 4.0 MB/s eta 0:00:00
+#11 0.868   Preparing metadata (setup.py): started
+#11 0.988   Preparing metadata (setup.py): finished with status 'done'
+#11 0.989 Building wheels for collected packages: lisa
+#11 0.996   Building wheel for lisa (setup.py): started
+#11 1.175   Building wheel for lisa (setup.py): finished with status 'done'
+#11 1.176   Created wheel for lisa: filename=lisa-1.21.0-py3-none-any.whl size=192113 sha256=9eabef4698d305d08119a5139bee632dc0fcaa8aa1886adb62876beb62c462e7
+#11 1.176   Stored in directory: /root/.cache/pip/wheels/57/f1/60/80c9fee3df7a3a7a259365ac030a56505068c5c524c7850fb2
+#11 1.178 Successfully built lisa
+#11 1.269 Installing collected packages: lisa
+#11 1.399 Successfully installed lisa-1.21.0
+#11 1.400 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.405 
+#11 1.405 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.405 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.5s
+
+#12 [8/9] RUN ["pip","install","django-experiments"]
+#12 0.529 Collecting django-experiments
+#12 0.562   Downloading django-experiments-1.2.0.tar.gz (42 kB)
+#12 0.584      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.2/42.2 kB 1.7 MB/s eta 0:00:00
+#12 0.593   Preparing metadata (setup.py): started
+#12 0.737   Preparing metadata (setup.py): finished with status 'done'
+#12 0.802 Collecting redis>=2.4.9 (from django-experiments)
+#12 0.810   Downloading redis-7.0.1-py3-none-any.whl.metadata (12 kB)
+#12 0.936 Collecting django>=1.7.0 (from django-experiments)
+#12 0.943   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#12 0.982 Collecting django-modeldict-yplan>=1.5.0 (from django-experiments)
+#12 0.991   Downloading django_modeldict_yplan-2.0.3-py3-none-any.whl.metadata (6.1 kB)
+#12 1.032 Collecting jsonfield>=1.0.3 (from django-experiments)
+#12 1.136   Downloading jsonfield-3.2.0-py3-none-any.whl.metadata (6.6 kB)
+#12 1.199 Collecting mock>=1.0.1 (from django-experiments)
+#12 1.207   Downloading mock-5.2.0-py3-none-any.whl.metadata (3.1 kB)
+#12 1.313 Collecting tox>=2.3.1 (from django-experiments)
+#12 1.322   Downloading tox-4.32.0-py3-none-any.whl.metadata (3.5 kB)
+#12 1.375 Collecting asgiref>=3.8.1 (from django>=1.7.0->django-experiments)
+#12 1.383   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#12 1.424 Collecting sqlparse>=0.3.1 (from django>=1.7.0->django-experiments)
+#12 1.432   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#12 1.545 Collecting cachetools>=6.2 (from tox>=2.3.1->django-experiments)
+#12 1.552   Downloading cachetools-6.2.1-py3-none-any.whl.metadata (5.5 kB)
+#12 1.602 Collecting chardet>=5.2 (from tox>=2.3.1->django-experiments)
+#12 1.610   Downloading chardet-5.2.0-py3-none-any.whl.metadata (3.4 kB)
+#12 1.654 Collecting colorama>=0.4.6 (from tox>=2.3.1->django-experiments)
+#12 1.662   Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+#12 1.709 Collecting filelock>=3.20 (from tox>=2.3.1->django-experiments)
+#12 1.717   Downloading filelock-3.20.0-py3-none-any.whl.metadata (2.1 kB)
+#12 1.771 Collecting packaging>=25 (from tox>=2.3.1->django-experiments)
+#12 1.779   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#12 1.827 Collecting platformdirs>=4.5 (from tox>=2.3.1->django-experiments)
+#12 1.835   Downloading platformdirs-4.5.0-py3-none-any.whl.metadata (12 kB)
+#12 1.880 Collecting pluggy>=1.6 (from tox>=2.3.1->django-experiments)
+#12 1.888   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#12 1.928 Collecting pyproject-api>=1.9.1 (from tox>=2.3.1->django-experiments)
+#12 1.936   Downloading pyproject_api-1.10.0-py3-none-any.whl.metadata (2.7 kB)
+#12 2.027 Collecting virtualenv>=20.34 (from tox>=2.3.1->django-experiments)
+#12 2.034   Downloading virtualenv-20.35.4-py3-none-any.whl.metadata (4.6 kB)
+#12 2.126 Collecting distlib<1,>=0.3.7 (from virtualenv>=20.34->tox>=2.3.1->django-experiments)
+#12 2.134   Downloading distlib-0.4.0-py2.py3-none-any.whl.metadata (5.2 kB)
+#12 2.164 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#12 2.494    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 25.3 MB/s eta 0:00:00
+#12 2.503 Downloading django_modeldict_yplan-2.0.3-py3-none-any.whl (15 kB)
+#12 2.627 Downloading jsonfield-3.2.0-py3-none-any.whl (8.3 kB)
+#12 2.649 Downloading mock-5.2.0-py3-none-any.whl (31 kB)
+#12 2.670 Downloading redis-7.0.1-py3-none-any.whl (339 kB)
+#12 2.692    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 339.9/339.9 kB 15.9 MB/s eta 0:00:00
+#12 2.702 Downloading tox-4.32.0-py3-none-any.whl (175 kB)
+#12 2.716    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 175.9/175.9 kB 12.6 MB/s eta 0:00:00
+#12 2.724 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#12 2.741 Downloading cachetools-6.2.1-py3-none-any.whl (11 kB)
+#12 2.758 Downloading chardet-5.2.0-py3-none-any.whl (199 kB)
+#12 2.776    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 199.4/199.4 kB 12.0 MB/s eta 0:00:00
+#12 2.784 Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+#12 2.802 Downloading filelock-3.20.0-py3-none-any.whl (16 kB)
+#12 2.824 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#12 2.836    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.5 MB/s eta 0:00:00
+#12 2.844 Downloading platformdirs-4.5.0-py3-none-any.whl (18 kB)
+#12 2.863 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#12 2.881 Downloading pyproject_api-1.10.0-py3-none-any.whl (13 kB)
+#12 2.899 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#12 2.911    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.4 MB/s eta 0:00:00
+#12 2.919 Downloading virtualenv-20.35.4-py3-none-any.whl (6.0 MB)
+#12 3.150    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.0/6.0 MB 26.2 MB/s eta 0:00:00
+#12 3.163 Downloading distlib-0.4.0-py2.py3-none-any.whl (469 kB)
+#12 3.189    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 469.0/469.0 kB 18.6 MB/s eta 0:00:00
+#12 3.246 Building wheels for collected packages: django-experiments
+#12 3.251   Building wheel for django-experiments (setup.py): started
+#12 3.412   Building wheel for django-experiments (setup.py): finished with status 'done'
+#12 3.413   Created wheel for django-experiments: filename=django_experiments-1.2.0-py3-none-any.whl size=50102 sha256=3abd09555eef8b1c6cf718db248712fef9771c47e88b10d32f155cf3f9f15792
+#12 3.413   Stored in directory: /root/.cache/pip/wheels/a1/c3/68/ad0d83c9f6b8b86d838cd524c8b48f5ddb220f151e01fbf94a
+#12 3.415 Successfully built django-experiments
+#12 3.567 Installing collected packages: distlib, sqlparse, redis, pluggy, platformdirs, packaging, mock, filelock, colorama, chardet, cachetools, asgiref, virtualenv, pyproject-api, django, tox, jsonfield, django-modeldict-yplan, django-experiments
+#12 5.832 Successfully installed asgiref-3.10.0 cachetools-6.2.1 chardet-5.2.0 colorama-0.4.6 distlib-0.4.0 django-5.2.7 django-experiments-1.2.0 django-modeldict-yplan-2.0.3 filelock-3.20.0 jsonfield-3.2.0 mock-5.2.0 packaging-25.0 platformdirs-4.5.0 pluggy-1.6.0 pyproject-api-1.10.0 redis-7.0.1 sqlparse-0.5.3 tox-4.32.0 virtualenv-20.35.4
+#12 5.832 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 5.837 
+#12 5.837 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 5.837 [notice] To update, run: pip install --upgrade pip
+#12 DONE 6.2s
+
+#13 [9/9] RUN ["pip","install","bluezero"]
+#13 0.618 Collecting bluezero
+#13 0.652   Downloading bluezero-0.9.1-py2.py3-none-any.whl.metadata (5.9 kB)
+#13 0.705 Collecting PyGObject<3.52.0 (from bluezero)
+#13 0.714   Downloading pygobject-3.50.2.tar.gz (1.1 MB)
+#13 0.785      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 15.6 MB/s eta 0:00:00
+#13 0.852   Installing build dependencies: started
+#13 6.403   Installing build dependencies: finished with status 'done'
+#13 6.404   Getting requirements to build wheel: started
+#13 6.482   Getting requirements to build wheel: finished with status 'done'
+#13 6.485   Installing backend dependencies: started
+#13 7.065   Installing backend dependencies: finished with status 'done'
+#13 7.066   Preparing metadata (pyproject.toml): started
+#13 7.633   Preparing metadata (pyproject.toml): finished with status 'error'
+#13 7.636   error: subprocess-exited-with-error
+#13 7.636   
+#13 7.636   × Preparing metadata (pyproject.toml) did not run successfully.
+#13 7.636   │ exit code: 1
+#13 7.636   ╰─> [24 lines of output]
+#13 7.636       + meson setup /tmp/pip-install-wq9ofazt/pygobject_e17ab8e9c92041d5b260077218119482 /tmp/pip-install-wq9ofazt/pygobject_e17ab8e9c92041d5b260077218119482/.mesonpy-w_7v1d2o -Dbuildtype=release -Db_ndebug=if-release -Db_vscrt=md -Dtests=false -Dwheel=true --wrap-mode=nofallback --native-file=/tmp/pip-install-wq9ofazt/pygobject_e17ab8e9c92041d5b260077218119482/.mesonpy-w_7v1d2o/meson-python-native-file.ini
+#13 7.636       The Meson build system
+#13 7.636       Version: 1.9.1
+#13 7.636       Source dir: /tmp/pip-install-wq9ofazt/pygobject_e17ab8e9c92041d5b260077218119482
+#13 7.636       Build dir: /tmp/pip-install-wq9ofazt/pygobject_e17ab8e9c92041d5b260077218119482/.mesonpy-w_7v1d2o
+#13 7.636       Build type: native build
+#13 7.636       Project name: pygobject
+#13 7.636       Project version: 3.50.2
+#13 7.636       C compiler for the host machine: cc (gcc 14.2.0 "cc (Debian 14.2.0-19) 14.2.0")
+#13 7.636       C linker for the host machine: cc ld.bfd 2.44
+#13 7.636       Host machine cpu family: x86_64
+#13 7.636       Host machine cpu: x86_64
+#13 7.636       Program python3 found: YES (/usr/local/bin/python3.11)
+#13 7.636       Found pkg-config: YES (/usr/bin/pkg-config) 1.8.1
+#13 7.636       Run-time dependency python found: YES 3.11
+#13 7.636       Did not find CMake 'cmake'
+#13 7.636       Found CMake: NO
+#13 7.636       Run-time dependency gobject-introspection-1.0 found: NO (tried pkgconfig and cmake)
+#13 7.636       Not looking for a fallback subproject for the dependency gobject-introspection-1.0 because:
+#13 7.636       Use of fallback dependencies is disabled.
+#13 7.636       
+#13 7.636       ../meson.build:31:9: ERROR: Dependency 'gobject-introspection-1.0' is required but not found.
+#13 7.636       
+#13 7.636       A full log can be found at /tmp/pip-install-wq9ofazt/pygobject_e17ab8e9c92041d5b260077218119482/.mesonpy-w_7v1d2o/meson-logs/meson-log.txt
+#13 7.636       [end of output]
+#13 7.636   
+#13 7.636   note: This error originates from a subprocess, and is likely not a problem with pip.
+#13 7.637 error: metadata-generation-failed
+#13 7.637 
+#13 7.637 × Encountered error while generating package metadata.
+#13 7.637 ╰─> See above for output.
+#13 7.637 
+#13 7.637 note: This is an issue with the package mentioned above, not pip.
+#13 7.637 hint: See above for details.
+#13 7.642 
+#13 7.642 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 7.642 [notice] To update, run: pip install --upgrade pip
+#13 ERROR: process "pip install bluezero" did not complete successfully: exit code: 1
+------
+ > [9/9] RUN ["pip","install","bluezero"]:
+7.637 error: metadata-generation-failed
+7.637 
+7.637 × Encountered error while generating package metadata.
+7.637 ╰─> See above for output.
+7.637 
+7.637 note: This is an issue with the package mentioned above, not pip.
+7.637 hint: See above for details.
+7.642 
+7.642 [notice] A new release of pip is available: 24.0 -> 25.3
+7.642 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:9
+--------------------
+   7 |     RUN ["pip","install","lisa"]
+   8 |     RUN ["pip","install","django-experiments"]
+   9 | >>> RUN ["pip","install","bluezero"]
+  10 |     CMD ["python3","/snippet.py"]
+  11 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install bluezero" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/ldeeduprmjxt52kgck14gu51m
+[2025-10-29 11:43:43] ERROR: Build failed for 0efb90d998c59d5926ca7f4e79054361

@@ -1,0 +1,17 @@
+=== Docker Run Log for 631953 ===
+Started at: Mi 29. Okt 16:28:03 CET 2025
+
+[2025-10-29 16:28:15] START: Running container for 631953
+[2025-10-29 16:28:15] SUCCESS: Container 8e3152b54826fb2130bcc5883b34fea822ebad6337f548dfd3003aba5900911f started for 631953
+=== Container logs for 631953 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 18, in <module>
+    LOCK_WAIT_TIMEOUT = getattr(settings, "DEFAULT_LOCK_WAIT_TIMEOUT", -1)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting DEFAULT_LOCK_WAIT_TIMEOUT, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 631953 ===
+[2025-10-29 16:28:17] INFO: Container 8e3152b54826fb2130bcc5883b34fea822ebad6337f548dfd3003aba5900911f has stopped

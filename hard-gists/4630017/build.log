@@ -1,0 +1,74 @@
+=== Docker Build Log for 4630017 ===
+Started at: Mi 29. Okt 14:55:09 CET 2025
+
+[2025-10-29 14:55:09] START: Building image for 4630017
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 196B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.11kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/4630017/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","phue"]
+#7 1.990 Collecting phue
+#7 2.029   Downloading phue-1.1.tar.gz (10 kB)
+#7 2.041   Preparing metadata (setup.py): started
+#7 2.420   Preparing metadata (setup.py): finished with status 'done'
+#7 2.421 Building wheels for collected packages: phue
+#7 2.422   Building wheel for phue (setup.py): started
+#7 2.584   Building wheel for phue (setup.py): finished with status 'done'
+#7 2.585   Created wheel for phue: filename=phue-1.1-py3-none-any.whl size=10920 sha256=a69d7e88327a4ff8a8dfc4d9afa724c25aaf040843bc3be86911f45ba24399d1
+#7 2.585   Stored in directory: /root/.cache/pip/wheels/78/79/6d/c783887686220376961c645d4d6daa0e52abe845c0181614cc
+#7 2.588 Successfully built phue
+#7 2.619 Installing collected packages: phue
+#7 2.636 Successfully installed phue-1.1
+#7 2.636 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.729 
+#7 2.729 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.729 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.9s
+
+#8 [4/4] RUN ["pip","install","RPi.GPIO"]
+#8 0.557 Collecting RPi.GPIO
+#8 0.592   Downloading RPi.GPIO-0.7.1.tar.gz (29 kB)
+#8 0.610   Preparing metadata (setup.py): started
+#8 0.726   Preparing metadata (setup.py): finished with status 'done'
+#8 0.728 Building wheels for collected packages: RPi.GPIO
+#8 0.734   Building wheel for RPi.GPIO (setup.py): started
+#8 1.653   Building wheel for RPi.GPIO (setup.py): finished with status 'done'
+#8 1.654   Created wheel for RPi.GPIO: filename=rpi_gpio-0.7.1-cp311-cp311-linux_x86_64.whl size=70837 sha256=512d0e041e53747fff9bd0eb84000f8dd30ed4375f54f51670c4af802e16db0b
+#8 1.654   Stored in directory: /root/.cache/pip/wheels/58/9a/da/bc92ced3a63320f51bfb2eb461f0408a206acdcedfa57fbfbe
+#8 1.656 Successfully built RPi.GPIO
+#8 1.686 Installing collected packages: RPi.GPIO
+#8 1.701 Successfully installed RPi.GPIO-0.7.1
+#8 1.701 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.707 
+#8 1.707 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.707 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.8s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.2s done
+#9 writing image sha256:ea3f9a4564dc4986e76249ce73c8de6041996f97aaf5eee9471a1e192b78e216 done
+#9 naming to docker.io/library/test-image-4630017 done
+#9 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/271oywy9aztm50vqfot6ses6w
+[2025-10-29 14:55:14] SUCCESS: Build completed for 4630017

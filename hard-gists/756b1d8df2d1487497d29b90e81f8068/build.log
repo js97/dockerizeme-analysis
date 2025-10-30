@@ -1,0 +1,94 @@
+=== Docker Build Log for 756b1d8df2d1487497d29b90e81f8068 ===
+Started at: Mi 29. Okt 17:12:54 CET 2025
+
+[2025-10-29 17:12:54] START: Building image for 756b1d8df2d1487497d29b90e81f8068
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 226B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.16kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/756b1d8df2d1487497d29b90e81f8068/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","requests"]
+#7 1.957 Collecting requests
+#7 1.995   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.115 Collecting charset_normalizer<4,>=2 (from requests)
+#7 2.123   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.171 Collecting idna<4,>=2.5 (from requests)
+#7 2.179   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.239 Collecting urllib3<3,>=1.21.1 (from requests)
+#7 2.247   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.290 Collecting certifi>=2017.4.17 (from requests)
+#7 2.298   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.325 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.344    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.4 MB/s eta 0:00:00
+#7 2.352 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.371    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 8.9 MB/s eta 0:00:00
+#7 2.380 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.396    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 9.4 MB/s eta 0:00:00
+#7 2.405 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.418    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.3 MB/s eta 0:00:00
+#7 2.427 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.441    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.6 MB/s eta 0:00:00
+#7 2.488 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#7 2.714 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#7 2.714 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.808 
+#7 2.808 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.808 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.0s
+
+#8 [4/4] RUN ["pip","install","pyOpenSSL"]
+#8 0.662 Collecting pyOpenSSL
+#8 0.744   Downloading pyopenssl-25.3.0-py3-none-any.whl.metadata (17 kB)
+#8 1.082 Collecting cryptography<47,>=45.0.7 (from pyOpenSSL)
+#8 1.169   Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+#8 1.230 Collecting typing-extensions>=4.9 (from pyOpenSSL)
+#8 1.238   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#8 1.411 Collecting cffi>=2.0.0 (from cryptography<47,>=45.0.7->pyOpenSSL)
+#8 1.431   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+#8 1.498 Collecting pycparser (from cffi>=2.0.0->cryptography<47,>=45.0.7->pyOpenSSL)
+#8 1.509   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+#8 1.535 Downloading pyopenssl-25.3.0-py3-none-any.whl (57 kB)
+#8 1.554    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.3/57.3 kB 2.7 MB/s eta 0:00:00
+#8 1.563 Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+#8 1.749    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 24.3 MB/s eta 0:00:00
+#8 1.757 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#8 1.771    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 2.8 MB/s eta 0:00:00
+#8 1.779 Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+#8 1.797    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 12.6 MB/s eta 0:00:00
+#8 1.807 Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+#8 1.825    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 6.6 MB/s eta 0:00:00
+#8 1.921 Installing collected packages: typing-extensions, pycparser, cffi, cryptography, pyOpenSSL
+#8 2.317 Successfully installed cffi-2.0.0 cryptography-46.0.3 pyOpenSSL-25.3.0 pycparser-2.23 typing-extensions-4.15.0
+#8 2.317 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.323 
+#8 2.323 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.323 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.6s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.3s done
+#9 writing image sha256:159303a8e367316599feae3014a654232d7be632c6622b5e7c56801aa3b86acd done
+#9 naming to docker.io/library/test-image-756b1d8df2d1487497d29b90e81f8068 done
+#9 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/s7ltt1sswguidkazpxeqhmb0y
+[2025-10-29 17:13:00] SUCCESS: Build completed for 756b1d8df2d1487497d29b90e81f8068

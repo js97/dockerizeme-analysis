@@ -1,0 +1,146 @@
+=== Docker Build Log for 5716253 ===
+Started at: Mi 29. Okt 15:55:11 CET 2025
+
+[2025-10-29 15:55:11] START: Building image for 5716253
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 285B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 498B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/5716253/snippet.py /snippet.py
+#6 DONE 0.0s
+
+#7 [3/7] RUN ["pip","install","six"]
+#7 2.186 Collecting six
+#7 2.228   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.248 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.299 Installing collected packages: six
+#7 2.316 Successfully installed six-1.17.0
+#7 2.317 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.416 
+#7 2.416 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.416 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.6s
+
+#8 [4/7] RUN ["pip","install","pytest"]
+#8 0.636 Collecting pytest
+#8 0.678   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#8 0.721 Collecting iniconfig>=1 (from pytest)
+#8 0.731   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#8 0.785 Collecting packaging>=20 (from pytest)
+#8 0.794   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.837 Collecting pluggy<2,>=1.5 (from pytest)
+#8 0.845   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#8 0.894 Collecting pygments>=2.7.2 (from pytest)
+#8 0.903   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#8 0.931 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#8 0.969    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 10.1 MB/s eta 0:00:00
+#8 0.976 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#8 1.018 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 1.029    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 6.1 MB/s eta 0:00:00
+#8 1.038 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#8 1.054 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#8 1.114    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 20.8 MB/s eta 0:00:00
+#8 1.174 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#8 2.029 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#8 2.029 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.036 
+#8 2.036 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.036 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.2s
+
+#9 [5/7] RUN ["pip","install","py"]
+#9 0.580 Collecting py
+#9 0.621   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#9 0.645 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#9 0.678    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.8 MB/s eta 0:00:00
+#9 0.732 Installing collected packages: py
+#9 0.819 Successfully installed py-1.11.0
+#9 0.819 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.826 
+#9 0.826 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.826 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.9s
+
+#10 [6/7] RUN ["pip","install","numpy"]
+#10 0.784 Collecting numpy
+#10 0.822   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#10 0.847      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.3 MB/s eta 0:00:00
+#10 0.866 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#10 1.629    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 20.6 MB/s eta 0:00:00
+#10 1.735 Installing collected packages: numpy
+#10 3.466 Successfully installed numpy-2.3.4
+#10 3.468 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 3.478 
+#10 3.478 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 3.478 [notice] To update, run: pip install --upgrade pip
+#10 DONE 4.0s
+
+#11 [7/7] RUN ["pip","install","matplotlib"]
+#11 0.743 Collecting matplotlib
+#11 0.785   Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#11 0.907 Collecting contourpy>=1.0.1 (from matplotlib)
+#11 0.917   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#11 0.957 Collecting cycler>=0.10 (from matplotlib)
+#11 0.965   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#11 1.165 Collecting fonttools>=4.22.0 (from matplotlib)
+#11 1.176   Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+#11 1.217      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.3/112.3 kB 2.7 MB/s eta 0:00:00
+#11 1.322 Collecting kiwisolver>=1.3.1 (from matplotlib)
+#11 1.334   Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+#11 1.354 Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.11/site-packages (from matplotlib) (2.3.4)
+#11 1.355 Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.11/site-packages (from matplotlib) (25.0)
+#11 1.561 Collecting pillow>=8 (from matplotlib)
+#11 1.570   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#11 1.642 Collecting pyparsing>=3 (from matplotlib)
+#11 1.650   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#11 1.713 Collecting python-dateutil>=2.7 (from matplotlib)
+#11 1.721   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#11 1.794 Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.11/site-packages (from python-dateutil>=2.7->matplotlib) (1.17.0)
+#11 1.805 Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+#11 2.179    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 23.3 MB/s eta 0:00:00
+#11 2.188 Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+#11 2.213    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 355.2/355.2 kB 14.8 MB/s eta 0:00:00
+#11 2.220 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#11 2.238 Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#11 2.437    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 25.2 MB/s eta 0:00:00
+#11 2.449 Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+#11 2.511    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 23.5 MB/s eta 0:00:00
+#11 2.521 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#11 2.881    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 19.6 MB/s eta 0:00:00
+#11 2.890 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#11 2.904    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 9.0 MB/s eta 0:00:00
+#11 2.912 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#11 2.930    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 13.7 MB/s eta 0:00:00
+#11 3.155 Installing collected packages: python-dateutil, pyparsing, pillow, kiwisolver, fonttools, cycler, contourpy, matplotlib
+#11 5.589 Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.60.1 kiwisolver-1.4.9 matplotlib-3.10.7 pillow-12.0.0 pyparsing-3.2.5 python-dateutil-2.9.0.post0
+#11 5.590 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 5.596 
+#11 5.596 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 5.596 [notice] To update, run: pip install --upgrade pip
+#11 DONE 6.7s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.6s done
+#12 writing image sha256:9f440fcaa5b69dcd72480352e01a1bdc858d97539257356055a02a31f6c52adf done
+#12 naming to docker.io/library/test-image-5716253 done
+#12 DONE 0.7s
+
+View build details: docker-desktop://dashboard/build/default/default/jo33l5znjzphtfat7e641ahr5
+[2025-10-29 15:55:28] SUCCESS: Build completed for 5716253

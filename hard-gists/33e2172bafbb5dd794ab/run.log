@@ -1,0 +1,20 @@
+=== Docker Run Log for 33e2172bafbb5dd794ab ===
+Started at: Mi 29. Okt 13:50:41 CET 2025
+
+[2025-10-29 13:50:59] START: Running container for 33e2172bafbb5dd794ab
+[2025-10-29 13:50:59] SUCCESS: Container e5684bce650222aba73f7e0707c297588759ebacbf5493495aedd8b7a403eecc started for 33e2172bafbb5dd794ab
+=== Container logs for 33e2172bafbb5dd794ab ===
+loading annotations into memory...
+Traceback (most recent call last):
+  File "/snippet.py", line 248, in <module>
+    ds = MSCOCO_dataset()
+         ^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 157, in __init__
+    coco = COCO(ann_path)
+           ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pycocotools/coco.py", line 81, in __init__
+    with open(annotation_file, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/data/lisa/data/COCO//annotations_v1.0.3/instances_train2014.json'
+=== End of logs for 33e2172bafbb5dd794ab ===
+[2025-10-29 13:51:02] INFO: Container e5684bce650222aba73f7e0707c297588759ebacbf5493495aedd8b7a403eecc has stopped

@@ -1,0 +1,13 @@
+=== Docker Run Log for 1858252 ===
+Started at: Mi 29. Okt 12:31:45 CET 2025
+
+[2025-10-29 12:31:58] START: Running container for 1858252
+[2025-10-29 12:31:58] SUCCESS: Container c4ec977d65f6357e14cad72574754beea097fb08bd7871617c92e3ace7a240d2 started for 1858252
+=== Container logs for 1858252 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 23, in <module>
+    for i in xrange(N):
+             ^^^^^^
+NameError: name 'xrange' is not defined. Did you mean: 'range'?
+=== End of logs for 1858252 ===
+[2025-10-29 12:32:00] INFO: Container c4ec977d65f6357e14cad72574754beea097fb08bd7871617c92e3ace7a240d2 has stopped

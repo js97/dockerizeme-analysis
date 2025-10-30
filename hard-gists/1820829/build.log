@@ -1,0 +1,142 @@
+=== Docker Build Log for 1820829 ===
+Started at: Mi 29. Okt 12:30:15 CET 2025
+
+[2025-10-29 12:30:15] START: Building image for 1820829
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 310B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 986B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/1820829/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","marrow.mailer"]
+#7 1.944 Collecting marrow.mailer
+#7 1.982   Downloading marrow.mailer-4.0.3-py2.py3-none-any.whl.metadata (1.4 kB)
+#7 2.021 Collecting marrow.util<2.0 (from marrow.mailer)
+#7 2.031   Downloading marrow.util-1.2.3.tar.gz (17 kB)
+#7 2.045   Preparing metadata (setup.py): started
+#7 2.419   Preparing metadata (setup.py): finished with status 'done'
+#7 2.430 Downloading marrow.mailer-4.0.3-py2.py3-none-any.whl (132 kB)
+#7 2.458    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.7/132.7 kB 4.9 MB/s eta 0:00:00
+#7 2.463 Building wheels for collected packages: marrow.util
+#7 2.463   Building wheel for marrow.util (setup.py): started
+#7 2.630   Building wheel for marrow.util (setup.py): finished with status 'done'
+#7 2.631   Created wheel for marrow.util: filename=marrow_util-1.2.3-py3-none-any.whl size=23729 sha256=a933fc640056b11edd86b6eff619b6c4a4bab83bd99a7e84b18837af44168775
+#7 2.631   Stored in directory: /root/.cache/pip/wheels/c1/26/db/9d972b23abf62c5f197f5b57713fcdba2c6b727d887e1df6f0
+#7 2.633 Successfully built marrow.util
+#7 2.665 Installing collected packages: marrow.util, marrow.mailer
+#7 2.733 Successfully installed marrow.mailer-4.0.3 marrow.util-1.2.3
+#7 2.733 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.820 
+#7 2.820 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.820 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.0s
+
+#8 [4/7] RUN ["pip","install","marrow.schema"]
+#8 0.504 Collecting marrow.schema
+#8 0.544   Downloading marrow.schema-2.0.0-py2.py3-none-any.whl.metadata (29 kB)
+#8 0.569 Downloading marrow.schema-2.0.0-py2.py3-none-any.whl (78 kB)
+#8 0.597    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.4/78.4 kB 2.7 MB/s eta 0:00:00
+#8 0.637 Installing collected packages: marrow.schema
+#8 0.694 Successfully installed marrow.schema-2.0.0
+#8 0.694 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.699 
+#8 0.699 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.699 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.8s
+
+#9 [5/7] RUN ["pip","install","marrow.mongo"]
+#9 0.513 Collecting marrow.mongo
+#9 0.547   Downloading marrow.mongo-1.1.2-py2.py3-none-any.whl.metadata (9.5 kB)
+#9 0.596 Collecting uri<3.0.0,>=2.0.0 (from marrow.mongo)
+#9 0.604   Downloading uri-2.0.1-py2.py3-none-any.whl.metadata (13 kB)
+#9 0.660 Collecting marrow.schema<2.0.0,>=1.2.0 (from marrow.mongo)
+#9 0.670   Downloading marrow.schema-1.2.0-py2.py3-none-any.whl.metadata (29 kB)
+#9 0.708 Collecting marrow.package<2.0.0,>=1.1.0 (from marrow.mongo)
+#9 0.716   Downloading marrow.package-1.2.0-py2.py3-none-any.whl.metadata (13 kB)
+#9 1.029 Collecting pymongo>=3.2 (from marrow.mongo)
+#9 1.040   Downloading pymongo-4.15.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+#9 1.135 Collecting dnspython<3.0.0,>=1.16.0 (from pymongo>=3.2->marrow.mongo)
+#9 1.143   Downloading dnspython-2.8.0-py3-none-any.whl.metadata (5.7 kB)
+#9 1.181 Downloading marrow.mongo-1.1.2-py2.py3-none-any.whl (159 kB)
+#9 1.205    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 159.1/159.1 kB 7.1 MB/s eta 0:00:00
+#9 1.214 Downloading marrow.package-1.2.0-py2.py3-none-any.whl (28 kB)
+#9 1.238 Downloading marrow.schema-1.2.0-py2.py3-none-any.whl (62 kB)
+#9 1.267    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.2/62.2 kB 1.9 MB/s eta 0:00:00
+#9 1.276 Downloading pymongo-4.15.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.5 MB)
+#9 1.334    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 25.6 MB/s eta 0:00:00
+#9 1.344 Downloading uri-2.0.1-py2.py3-none-any.whl (42 kB)
+#9 1.357    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.0/43.0 kB 2.9 MB/s eta 0:00:00
+#9 1.365 Downloading dnspython-2.8.0-py3-none-any.whl (331 kB)
+#9 1.386    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 331.1/331.1 kB 16.5 MB/s eta 0:00:00
+#9 1.474 Installing collected packages: uri, marrow.schema, marrow.package, dnspython, pymongo, marrow.mongo
+#9 1.521   Attempting uninstall: marrow.schema
+#9 1.524     Found existing installation: marrow.schema 2.0.0
+#9 1.528     Uninstalling marrow.schema-2.0.0:
+#9 1.595       Successfully uninstalled marrow.schema-2.0.0
+#9 2.158 Successfully installed dnspython-2.8.0 marrow.mongo-1.1.2 marrow.package-1.2.0 marrow.schema-1.2.0 pymongo-4.15.3 uri-2.0.1
+#9 2.159 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 2.170 
+#9 2.170 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 2.170 [notice] To update, run: pip install --upgrade pip
+#9 DONE 2.4s
+
+#10 [6/7] RUN ["pip","install","WebCore"]
+#10 0.527 Collecting WebCore
+#10 0.562   Downloading WebCore-2.0.4-py2.py3-none-any.whl.metadata (26 kB)
+#10 0.589 Requirement already satisfied: marrow.package<2.0 in /usr/local/lib/python3.11/site-packages (from WebCore) (1.2.0)
+#10 0.622 Collecting WebOb (from WebCore)
+#10 0.631   Downloading WebOb-1.8.9-py2.py3-none-any.whl.metadata (11 kB)
+#10 0.662 Downloading WebCore-2.0.4-py2.py3-none-any.whl (104 kB)
+#10 0.690    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 104.6/104.6 kB 3.5 MB/s eta 0:00:00
+#10 0.701 Downloading WebOb-1.8.9-py2.py3-none-any.whl (115 kB)
+#10 0.715    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 115.4/115.4 kB 8.5 MB/s eta 0:00:00
+#10 0.807 Installing collected packages: WebOb, WebCore
+#10 0.917 Successfully installed WebCore-2.0.4 WebOb-1.8.9
+#10 0.918 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.922 
+#10 0.922 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.922 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.0s
+
+#11 [7/7] RUN ["pip","install","Jinja2"]
+#11 0.566 Collecting Jinja2
+#11 0.604   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#11 0.715 Collecting MarkupSafe>=2.0 (from Jinja2)
+#11 0.724   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#11 0.745 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#11 0.784    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 3.7 MB/s eta 0:00:00
+#11 0.794 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#11 0.921 Installing collected packages: MarkupSafe, Jinja2
+#11 1.075 Successfully installed Jinja2-3.1.6 MarkupSafe-3.0.3
+#11 1.076 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.083 
+#11 1.083 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.083 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.2s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.3s done
+#12 writing image sha256:56ecd91199c500fd0c1e6961f56c252eb965dccc5f2e1b1eee34c3ae321139a1 done
+#12 naming to docker.io/library/test-image-1820829 0.0s done
+#12 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/2i3slodj6mj53m4pvp50sw8pq
+[2025-10-29 12:30:24] SUCCESS: Build completed for 1820829

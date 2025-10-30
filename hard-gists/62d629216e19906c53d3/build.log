@@ -1,0 +1,108 @@
+=== Docker Build Log for 62d629216e19906c53d3 ===
+Started at: Mi 29. Okt 16:27:42 CET 2025
+
+[2025-10-29 16:27:42] START: Building image for 62d629216e19906c53d3
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 240B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.75kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/62d629216e19906c53d3/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","click"]
+#7 2.023 Collecting click
+#7 2.064   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#7 2.084 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#7 2.112    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 3.8 MB/s eta 0:00:00
+#7 2.150 Installing collected packages: click
+#7 2.205 Successfully installed click-8.3.0
+#7 2.205 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.300 
+#7 2.300 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.300 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.5s
+
+#8 [4/5] RUN ["pip","install","fiona"]
+#8 0.716 Collecting fiona
+#8 0.856   Downloading fiona-1.10.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (56 kB)
+#8 0.880      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.6/56.6 kB 2.1 MB/s eta 0:00:00
+#8 0.925 Collecting attrs>=19.2.0 (from fiona)
+#8 1.030   Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+#8 1.086 Collecting certifi (from fiona)
+#8 1.095   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#8 1.106 Requirement already satisfied: click~=8.0 in /usr/local/lib/python3.11/site-packages (from fiona) (8.3.0)
+#8 1.130 Collecting click-plugins>=1.0 (from fiona)
+#8 1.236   Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl.metadata (6.5 kB)
+#8 1.295 Collecting cligj>=0.5 (from fiona)
+#8 1.304   Downloading cligj-0.7.2-py3-none-any.whl.metadata (5.0 kB)
+#8 1.441 Downloading fiona-1.10.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.3 MB)
+#8 2.293    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.3/17.3 MB 22.5 MB/s eta 0:00:00
+#8 2.305 Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+#8 2.315    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.6/67.6 kB 6.7 MB/s eta 0:00:00
+#8 2.325 Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl (11 kB)
+#8 2.341 Downloading cligj-0.7.2-py3-none-any.whl (7.1 kB)
+#8 2.358 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#8 2.373    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 11.6 MB/s eta 0:00:00
+#8 2.462 Installing collected packages: cligj, click-plugins, certifi, attrs, fiona
+#8 2.831 Successfully installed attrs-25.4.0 certifi-2025.10.5 click-plugins-1.1.1.2 cligj-0.7.2 fiona-1.10.1
+#8 2.831 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.837 
+#8 2.837 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.837 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.2s
+
+#9 [5/5] RUN ["pip","install","rasterio"]
+#9 0.663 Collecting rasterio
+#9 0.698   Downloading rasterio-1.4.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.1 kB)
+#9 0.761 Collecting affine (from rasterio)
+#9 0.770   Downloading affine-2.4.0-py3-none-any.whl.metadata (4.0 kB)
+#9 0.785 Requirement already satisfied: attrs in /usr/local/lib/python3.11/site-packages (from rasterio) (25.4.0)
+#9 0.785 Requirement already satisfied: certifi in /usr/local/lib/python3.11/site-packages (from rasterio) (2025.10.5)
+#9 0.786 Requirement already satisfied: click>=4.0 in /usr/local/lib/python3.11/site-packages (from rasterio) (8.3.0)
+#9 0.787 Requirement already satisfied: cligj>=0.5 in /usr/local/lib/python3.11/site-packages (from rasterio) (0.7.2)
+#9 1.007 Collecting numpy>=1.24 (from rasterio)
+#9 1.015   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#9 1.052      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 1.6 MB/s eta 0:00:00
+#9 1.062 Requirement already satisfied: click-plugins in /usr/local/lib/python3.11/site-packages (from rasterio) (1.1.1.2)
+#9 1.112 Collecting pyparsing (from rasterio)
+#9 1.120   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#9 1.157 Downloading rasterio-1.4.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (22.2 MB)
+#9 2.088    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 22.2/22.2 MB 18.6 MB/s eta 0:00:00
+#9 2.102 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#9 2.782    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 21.7 MB/s eta 0:00:00
+#9 2.794 Downloading affine-2.4.0-py3-none-any.whl (15 kB)
+#9 2.816 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#9 2.829    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 8.5 MB/s eta 0:00:00
+#9 3.037 Installing collected packages: pyparsing, numpy, affine, rasterio
+#9 5.173 Successfully installed affine-2.4.0 numpy-2.3.4 pyparsing-3.2.5 rasterio-1.4.3
+#9 5.173 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 5.179 
+#9 5.179 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 5.179 [notice] To update, run: pip install --upgrade pip
+#9 DONE 5.8s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.8s done
+#10 writing image sha256:71cc5a8da96049f25544bf23832d14f9eaebf975678b040f6e929b2e90dccaae done
+#10 naming to docker.io/library/test-image-62d629216e19906c53d3 done
+#10 DONE 0.8s
+
+View build details: docker-desktop://dashboard/build/default/default/k3jr69x9uagmlvsxlqezikjq7
+[2025-10-29 16:27:55] SUCCESS: Build completed for 62d629216e19906c53d3

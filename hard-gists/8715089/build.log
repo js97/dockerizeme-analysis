@@ -1,0 +1,172 @@
+=== Docker Build Log for 8715089 ===
+Started at: Mi 29. Okt 17:55:31 CET 2025
+
+[2025-10-29 17:55:31] START: Building image for 8715089
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 3.30kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.71kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/89] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/89] COPY hard-gists/8715089/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/89] RUN ["apt-get","update"]
+#7 0.283 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.283 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.298 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.311 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.661 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.668 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.254 Fetched 9833 kB in 1s (9701 kB/s)
+#7 1.254 Reading package lists...
+#7 DONE 1.9s
+
+#8 [ 4/89] RUN ["pip","install","pycrypto"]
+#8 1.923 Collecting pycrypto
+#8 1.966   Downloading pycrypto-2.6.1.tar.gz (446 kB)
+#8 2.008      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 446.2/446.2 kB 11.0 MB/s eta 0:00:00
+#8 2.041   Preparing metadata (setup.py): started
+#8 2.420   Preparing metadata (setup.py): finished with status 'done'
+#8 2.421 Building wheels for collected packages: pycrypto
+#8 2.421   Building wheel for pycrypto (setup.py): started
+#8 3.772   Building wheel for pycrypto (setup.py): finished with status 'error'
+#8 3.778   error: subprocess-exited-with-error
+#8 3.778   
+#8 3.778   × python setup.py bdist_wheel did not run successfully.
+#8 3.778   │ exit code: 1
+#8 3.778   ╰─> [84 lines of output]
+#8 3.778       /usr/local/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+#8 3.778       !!
+#8 3.778       
+#8 3.778               ********************************************************************************
+#8 3.778               Please consider removing the following classifiers in favor of a SPDX license expression:
+#8 3.778       
+#8 3.778               License :: Public Domain
+#8 3.778       
+#8 3.778               See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+#8 3.778               ********************************************************************************
+#8 3.778       
+#8 3.778       !!
+#8 3.778         self._finalize_license_expression()
+#8 3.778       checking for gcc... gcc
+#8 3.778       checking whether the C compiler works... yes
+#8 3.778       checking for C compiler default output file name... a.out
+#8 3.778       checking for suffix of executables...
+#8 3.778       checking whether we are cross compiling... no
+#8 3.778       checking for suffix of object files... o
+#8 3.778       checking whether we are using the GNU C compiler... yes
+#8 3.778       checking whether gcc accepts -g... yes
+#8 3.778       checking for gcc option to accept ISO C89... none needed
+#8 3.778       checking for __gmpz_init in -lgmp... yes
+#8 3.778       checking for __gmpz_init in -lmpir... no
+#8 3.778       checking whether mpz_powm is declared... yes
+#8 3.778       checking whether mpz_powm_sec is declared... yes
+#8 3.778       checking how to run the C preprocessor... gcc -E
+#8 3.778       checking for grep that handles long lines and -e... /usr/bin/grep
+#8 3.778       checking for egrep... /usr/bin/grep -E
+#8 3.778       checking for ANSI C header files... yes
+#8 3.778       checking for sys/types.h... yes
+#8 3.778       checking for sys/stat.h... yes
+#8 3.778       checking for stdlib.h... yes
+#8 3.778       checking for string.h... yes
+#8 3.778       checking for memory.h... yes
+#8 3.778       checking for strings.h... yes
+#8 3.778       checking for inttypes.h... yes
+#8 3.778       checking for stdint.h... yes
+#8 3.778       checking for unistd.h... yes
+#8 3.778       checking for inttypes.h... (cached) yes
+#8 3.778       checking limits.h usability... yes
+#8 3.778       checking limits.h presence... yes
+#8 3.778       checking for limits.h... yes
+#8 3.778       checking stddef.h usability... yes
+#8 3.778       checking stddef.h presence... yes
+#8 3.778       checking for stddef.h... yes
+#8 3.778       checking for stdint.h... (cached) yes
+#8 3.778       checking for stdlib.h... (cached) yes
+#8 3.778       checking for string.h... (cached) yes
+#8 3.778       checking wchar.h usability... yes
+#8 3.778       checking wchar.h presence... yes
+#8 3.778       checking for wchar.h... yes
+#8 3.778       checking for inline... inline
+#8 3.778       checking for int16_t... yes
+#8 3.778       checking for int32_t... yes
+#8 3.778       checking for int64_t... yes
+#8 3.778       checking for int8_t... yes
+#8 3.778       checking for size_t... yes
+#8 3.778       checking for uint16_t... yes
+#8 3.778       checking for uint32_t... yes
+#8 3.778       checking for uint64_t... yes
+#8 3.778       checking for uint8_t... yes
+#8 3.778       checking for stdlib.h... (cached) yes
+#8 3.778       checking for GNU libc compatible malloc... yes
+#8 3.778       checking for memmove... yes
+#8 3.778       checking for memset... yes
+#8 3.778       configure: creating ./config.status
+#8 3.778       config.status: creating src/config.h
+#8 3.778       In file included from /usr/local/include/python3.11/Python.h:87,
+#8 3.778                        from src/_fastmath.c:31:
+#8 3.778       /usr/local/include/python3.11/cpython/pytime.h:208:60: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+#8 3.778         208 | PyAPI_FUNC(int) _PyTime_FromTimespec(_PyTime_t *tp, struct timespec *ts);
+#8 3.778             |                                                            ^~~~~~~~
+#8 3.778       /usr/local/include/python3.11/cpython/pytime.h:213:56: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+#8 3.778         213 | PyAPI_FUNC(int) _PyTime_AsTimespec(_PyTime_t t, struct timespec *ts);
+#8 3.778             |                                                        ^~~~~~~~
+#8 3.778       /usr/local/include/python3.11/cpython/pytime.h:217:63: warning: ‘struct timespec’ declared inside parameter list will not be visible outside of this definition or declaration
+#8 3.778         217 | PyAPI_FUNC(void) _PyTime_AsTimespec_clamp(_PyTime_t t, struct timespec *ts);
+#8 3.778             |                                                               ^~~~~~~~
+#8 3.778       src/_fastmath.c:33:10: fatal error: longintrepr.h: No such file or directory
+#8 3.778          33 | #include <longintrepr.h>                                /* for conversions */
+#8 3.778             |          ^~~~~~~~~~~~~~~
+#8 3.778       compilation terminated.
+#8 3.778       error: command '/usr/bin/gcc' failed with exit code 1
+#8 3.778       [end of output]
+#8 3.778   
+#8 3.778   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 3.778   ERROR: Failed building wheel for pycrypto
+#8 3.778   Running setup.py clean for pycrypto
+#8 3.884 Failed to build pycrypto
+#8 3.884 ERROR: Could not build wheels for pycrypto, which is required to install pyproject.toml-based projects
+#8 3.977 
+#8 3.977 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.977 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install pycrypto" did not complete successfully: exit code: 1
+------
+ > [ 4/89] RUN ["pip","install","pycrypto"]:
+3.778       [end of output]
+3.778   
+3.778   note: This error originates from a subprocess, and is likely not a problem with pip.
+3.778   ERROR: Failed building wheel for pycrypto
+3.778   Running setup.py clean for pycrypto
+3.884 Failed to build pycrypto
+3.884 ERROR: Could not build wheels for pycrypto, which is required to install pyproject.toml-based projects
+3.977 
+3.977 [notice] A new release of pip is available: 24.0 -> 25.3
+3.977 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/8715089/snippet.py /snippet.py
+   3 |     RUN ["apt-get","update"]
+   4 | >>> RUN ["pip","install","pycrypto"]
+   5 |     RUN ["pip","install","backports.functools-lru-cache"]
+   6 |     RUN ["pip","install","backports.ssl"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install pycrypto" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/wkwapdi91jwmyz1ow607x392e
+[2025-10-29 17:55:38] ERROR: Build failed for 8715089

@@ -1,0 +1,12 @@
+=== Docker Run Log for 95f97485ada5b47693ca ===
+Started at: Mi 29. Okt 18:28:35 CET 2025
+
+[2025-10-29 18:28:36] START: Running container for 95f97485ada5b47693ca
+[2025-10-29 18:28:36] SUCCESS: Container 4467710f5eab7ac2682bb3d470035f7fb4e3613ee8b3928dff84d9067c7c3e67 started for 95f97485ada5b47693ca
+=== Container logs for 95f97485ada5b47693ca ===
+  File "/snippet.py", line 19
+    print "Hi! Pid %s" % os.getpid()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 95f97485ada5b47693ca ===
+[2025-10-29 18:28:38] INFO: Container 4467710f5eab7ac2682bb3d470035f7fb4e3613ee8b3928dff84d9067c7c3e67 has stopped

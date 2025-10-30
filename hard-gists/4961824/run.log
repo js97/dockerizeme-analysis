@@ -1,0 +1,26 @@
+=== Docker Run Log for 4961824 ===
+Started at: Mi 29. Okt 15:04:36 CET 2025
+
+[2025-10-29 15:04:37] START: Running container for 4961824
+[2025-10-29 15:04:37] SUCCESS: Container 26a90566919ce12e6660ccf11f0f643c2f75324f3cbdce6d6003936efa3a8dcd started for 4961824
+=== Container logs for 4961824 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 5, in <module>
+    clock = tkinter.Label()
+            ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/tkinter/__init__.py", line 3236, in __init__
+    Widget.__init__(self, master, 'label', cnf, kw)
+  File "/usr/local/lib/python3.11/tkinter/__init__.py", line 2641, in __init__
+    self._setup(master, cnf)
+  File "/usr/local/lib/python3.11/tkinter/__init__.py", line 2608, in _setup
+    master = _get_default_root()
+             ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/tkinter/__init__.py", line 320, in _get_default_root
+    root = Tk()
+           ^^^^
+  File "/usr/local/lib/python3.11/tkinter/__init__.py", line 2345, in __init__
+    self.tk = _tkinter.create(screenName, baseName, className, interactive, wantobjects, useTk, sync, use)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_tkinter.TclError: no display name and no $DISPLAY environment variable
+=== End of logs for 4961824 ===
+[2025-10-29 15:04:39] INFO: Container 26a90566919ce12e6660ccf11f0f643c2f75324f3cbdce6d6003936efa3a8dcd has stopped

@@ -1,0 +1,112 @@
+=== Docker Build Log for 6af3dd8894ec4255a63f ===
+Started at: Mi 29. Okt 16:47:55 CET 2025
+
+[2025-10-29 16:47:55] START: Building image for 6af3dd8894ec4255a63f
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 310B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 7.43kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/6af3dd8894ec4255a63f/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["apt-get","update"]
+#7 0.265 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.265 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.280 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.287 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.618 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.618 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.331 Fetched 9833 kB in 1s (8862 kB/s)
+#7 1.331 Reading package lists...
+#7 DONE 2.0s
+
+#8 [4/7] RUN ["apt-get","install","-y","curl"]
+#8 0.226 Reading package lists...
+#8 0.718 Building dependency tree...
+#8 0.837 Reading state information...
+#8 1.067 curl is already the newest version (8.14.1-2).
+#8 1.067 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+#8 DONE 1.1s
+
+#9 [5/7] RUN ["pip","install","prettytable"]
+#9 2.061 Collecting prettytable
+#9 2.102   Downloading prettytable-3.16.0-py3-none-any.whl.metadata (33 kB)
+#9 2.147 Collecting wcwidth (from prettytable)
+#9 2.155   Downloading wcwidth-0.2.14-py2.py3-none-any.whl.metadata (15 kB)
+#9 2.174 Downloading prettytable-3.16.0-py3-none-any.whl (33 kB)
+#9 2.193 Downloading wcwidth-0.2.14-py2.py3-none-any.whl (37 kB)
+#9 2.245 Installing collected packages: wcwidth, prettytable
+#9 2.323 Successfully installed prettytable-3.16.0 wcwidth-0.2.14
+#9 2.324 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 2.418 
+#9 2.418 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 2.418 [notice] To update, run: pip install --upgrade pip
+#9 DONE 2.6s
+
+#10 [6/7] RUN ["pip","install","requests"]
+#10 0.572 Collecting requests
+#10 0.608   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#10 0.736 Collecting charset_normalizer<4,>=2 (from requests)
+#10 0.745   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#10 0.789 Collecting idna<4,>=2.5 (from requests)
+#10 0.797   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#10 0.858 Collecting urllib3<3,>=1.21.1 (from requests)
+#10 0.866   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#10 0.909 Collecting certifi>=2017.4.17 (from requests)
+#10 0.917   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#10 0.945 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#10 0.963    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.3 MB/s eta 0:00:00
+#10 0.972 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#10 0.990    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.4 MB/s eta 0:00:00
+#10 0.999 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#10 1.014    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.3 MB/s eta 0:00:00
+#10 1.023 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#10 1.038    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.4 MB/s eta 0:00:00
+#10 1.047 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#10 1.065    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 6.9 MB/s eta 0:00:00
+#10 1.119 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#10 1.385 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#10 1.385 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.390 
+#10 1.390 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.390 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.5s
+
+#11 [7/7] RUN ["pip","install","PyYAML"]
+#11 0.611 Collecting PyYAML
+#11 0.646   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#11 0.674 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#11 0.733    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 14.1 MB/s eta 0:00:00
+#11 0.790 Installing collected packages: PyYAML
+#11 0.865 Successfully installed PyYAML-6.0.3
+#11 0.865 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.871 
+#11 0.871 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.871 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.0s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.2s done
+#12 writing image sha256:85fff68de577eff161f1659af9f8b585bd3707a6d9665d98b1a6a6985c0432a5 done
+#12 naming to docker.io/library/test-image-6af3dd8894ec4255a63f done
+#12 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/ehmydwnnh9b13a0zqypktosw7
+[2025-10-29 16:48:03] SUCCESS: Build completed for 6af3dd8894ec4255a63f

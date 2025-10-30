@@ -1,0 +1,328 @@
+=== Docker Build Log for 1b49c03968b2c83897a4a15c78980b18 ===
+Started at: Mi 29. Okt 12:37:50 CET 2025
+
+[2025-10-29 12:37:50] START: Building image for 1b49c03968b2c83897a4a15c78980b18
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 501B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 9.03kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/12] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/12] COPY hard-gists/1b49c03968b2c83897a4a15c78980b18/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/12] RUN ["apt-get","update"]
+#7 0.261 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.272 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.288 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.301 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.623 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.630 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.223 Fetched 9833 kB in 1s (9781 kB/s)
+#7 1.223 Reading package lists...
+#7 DONE 1.8s
+
+#8 [ 4/12] RUN ["pip","install","torch"]
+#8 1.945 Collecting torch
+#8 1.992   Downloading torch-2.9.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (30 kB)
+#8 2.071 Collecting filelock (from torch)
+#8 2.080   Downloading filelock-3.20.0-py3-none-any.whl.metadata (2.1 kB)
+#8 2.123 Collecting typing-extensions>=4.10.0 (from torch)
+#8 2.132   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#8 2.178 Collecting sympy>=1.13.3 (from torch)
+#8 2.187   Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+#8 2.237 Collecting networkx>=2.5.1 (from torch)
+#8 2.245   Downloading networkx-3.5-py3-none-any.whl.metadata (6.3 kB)
+#8 2.289 Collecting jinja2 (from torch)
+#8 2.297   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#8 2.349 Collecting fsspec>=0.8.5 (from torch)
+#8 2.357   Downloading fsspec-2025.9.0-py3-none-any.whl.metadata (10 kB)
+#8 2.395 Collecting nvidia-cuda-nvrtc-cu12==12.8.93 (from torch)
+#8 2.403   Downloading nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+#8 2.442 Collecting nvidia-cuda-runtime-cu12==12.8.90 (from torch)
+#8 2.450   Downloading nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+#8 2.488 Collecting nvidia-cuda-cupti-cu12==12.8.90 (from torch)
+#8 2.496   Downloading nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+#8 2.541 Collecting nvidia-cudnn-cu12==9.10.2.21 (from torch)
+#8 2.550   Downloading nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl.metadata (1.8 kB)
+#8 2.588 Collecting nvidia-cublas-cu12==12.8.4.1 (from torch)
+#8 2.596   Downloading nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl.metadata (1.7 kB)
+#8 2.634 Collecting nvidia-cufft-cu12==11.3.3.83 (from torch)
+#8 2.642   Downloading nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+#8 2.680 Collecting nvidia-curand-cu12==10.3.9.90 (from torch)
+#8 2.688   Downloading nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl.metadata (1.7 kB)
+#8 2.726 Collecting nvidia-cusolver-cu12==11.7.3.90 (from torch)
+#8 2.734   Downloading nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl.metadata (1.8 kB)
+#8 2.772 Collecting nvidia-cusparse-cu12==12.5.8.93 (from torch)
+#8 2.781   Downloading nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+#8 2.815 Collecting nvidia-cusparselt-cu12==0.7.1 (from torch)
+#8 2.825   Downloading nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl.metadata (7.0 kB)
+#8 2.862 Collecting nvidia-nccl-cu12==2.27.5 (from torch)
+#8 2.870   Downloading nvidia_nccl_cu12-2.27.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.0 kB)
+#8 2.905 Collecting nvidia-nvshmem-cu12==3.3.20 (from torch)
+#8 2.914   Downloading nvidia_nvshmem_cu12-3.3.20-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.1 kB)
+#8 2.952 Collecting nvidia-nvtx-cu12==12.8.90 (from torch)
+#8 2.961   Downloading nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+#8 2.998 Collecting nvidia-nvjitlink-cu12==12.8.93 (from torch)
+#8 3.006   Downloading nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+#8 3.056 Collecting nvidia-cufile-cu12==1.13.1.3 (from torch)
+#8 3.064   Downloading nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+#8 3.102 Collecting triton==3.5.0 (from torch)
+#8 3.111   Downloading triton-3.5.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (1.7 kB)
+#8 3.231 Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch)
+#8 3.239   Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+#8 3.327 Collecting MarkupSafe>=2.0 (from jinja2->torch)
+#8 3.336   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#8 3.365 Downloading torch-2.9.0-cp311-cp311-manylinux_2_28_x86_64.whl (899.8 MB)
+#8 37.47    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 899.8/899.8 MB 1.8 MB/s eta 0:00:00
+#8 37.48 Downloading nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl (594.3 MB)
+#8 58.92    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 594.3/594.3 MB 3.5 MB/s eta 0:00:00
+#8 58.94 Downloading nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.2 MB)
+#8 59.31    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 27.4 MB/s eta 0:00:00
+#8 59.32 Downloading nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (88.0 MB)
+#8 62.40    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.0/88.0 MB 16.1 MB/s eta 0:00:00
+#8 62.41 Downloading nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (954 kB)
+#8 62.45    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 954.8/954.8 kB 24.8 MB/s eta 0:00:00
+#8 62.46 Downloading nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl (706.8 MB)
+#8 90.60    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 706.8/706.8 MB 1.7 MB/s eta 0:00:00
+#8 90.61 Downloading nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (193.1 MB)
+#8 97.97    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 193.1/193.1 MB 8.3 MB/s eta 0:00:00
+#8 98.07 Downloading nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.2 MB)
+#8 98.12    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 23.3 MB/s eta 0:00:00
+#8 98.13 Downloading nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl (63.6 MB)
+#8 100.4    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.6/63.6 MB 16.5 MB/s eta 0:00:00
+#8 100.4 Downloading nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl (267.5 MB)
+#8 109.6    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 267.5/267.5 MB 8.7 MB/s eta 0:00:00
+#8 109.6 Downloading nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (288.2 MB)
+#8 120.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 288.2/288.2 MB 5.8 MB/s eta 0:00:00
+#8 120.1 Downloading nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl (287.2 MB)
+#8 130.4    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 287.2/287.2 MB 6.2 MB/s eta 0:00:00
+#8 130.4 Downloading nvidia_nccl_cu12-2.27.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (322.3 MB)
+#8 142.4    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 322.3/322.3 MB 5.9 MB/s eta 0:00:00
+#8 142.4 Downloading nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (39.3 MB)
+#8 143.9    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 39.3/39.3 MB 17.8 MB/s eta 0:00:00
+#8 143.9 Downloading nvidia_nvshmem_cu12-3.3.20-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (124.7 MB)
+#8 148.4    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 124.7/124.7 MB 11.2 MB/s eta 0:00:00
+#8 148.4 Downloading nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (89 kB)
+#8 148.5    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.0/90.0 kB 5.7 MB/s eta 0:00:00
+#8 148.5 Downloading triton-3.5.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (170.4 MB)
+#8 154.8    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 170.4/170.4 MB 7.6 MB/s eta 0:00:00
+#8 154.8 Downloading fsspec-2025.9.0-py3-none-any.whl (199 kB)
+#8 154.9    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 199.3/199.3 kB 12.9 MB/s eta 0:00:00
+#8 154.9 Downloading networkx-3.5-py3-none-any.whl (2.0 MB)
+#8 155.0    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 20.4 MB/s eta 0:00:00
+#8 155.0 Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+#8 155.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 27.4 MB/s eta 0:00:00
+#8 155.2 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#8 155.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.7 MB/s eta 0:00:00
+#8 155.2 Downloading filelock-3.20.0-py3-none-any.whl (16 kB)
+#8 155.3 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#8 155.3    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 10.5 MB/s eta 0:00:00
+#8 155.3 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#8 155.3 Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+#8 155.3    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 19.8 MB/s eta 0:00:00
+#8 165.3 Installing collected packages: nvidia-cusparselt-cu12, mpmath, typing-extensions, triton, sympy, nvidia-nvtx-cu12, nvidia-nvshmem-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufile-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, networkx, MarkupSafe, fsspec, filelock, nvidia-cusparse-cu12, nvidia-cufft-cu12, nvidia-cudnn-cu12, jinja2, nvidia-cusolver-cu12, torch
+#8 225.2 Successfully installed MarkupSafe-3.0.3 filelock-3.20.0 fsspec-2025.9.0 jinja2-3.1.6 mpmath-1.3.0 networkx-3.5 nvidia-cublas-cu12-12.8.4.1 nvidia-cuda-cupti-cu12-12.8.90 nvidia-cuda-nvrtc-cu12-12.8.93 nvidia-cuda-runtime-cu12-12.8.90 nvidia-cudnn-cu12-9.10.2.21 nvidia-cufft-cu12-11.3.3.83 nvidia-cufile-cu12-1.13.1.3 nvidia-curand-cu12-10.3.9.90 nvidia-cusolver-cu12-11.7.3.90 nvidia-cusparse-cu12-12.5.8.93 nvidia-cusparselt-cu12-0.7.1 nvidia-nccl-cu12-2.27.5 nvidia-nvjitlink-cu12-12.8.93 nvidia-nvshmem-cu12-3.3.20 nvidia-nvtx-cu12-12.8.90 sympy-1.14.0 torch-2.9.0 triton-3.5.0 typing-extensions-4.15.0
+#8 225.2 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 226.4 
+#8 226.4 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 226.4 [notice] To update, run: pip install --upgrade pip
+#8 DONE 227.9s
+
+#9 [ 5/12] RUN ["pip","install","progressbar"]
+#9 0.558 Collecting progressbar
+#9 0.601   Downloading progressbar-2.5.tar.gz (10 kB)
+#9 0.623   Preparing metadata (setup.py): started
+#9 1.059   Preparing metadata (setup.py): finished with status 'done'
+#9 1.062 Building wheels for collected packages: progressbar
+#9 1.064   Building wheel for progressbar (setup.py): started
+#9 1.243   Building wheel for progressbar (setup.py): finished with status 'done'
+#9 1.243   Created wheel for progressbar: filename=progressbar-2.5-py3-none-any.whl size=12145 sha256=7873be1e39a07a9b06b2c371689df9db4dda0774df9195f593b3a859111bfa65
+#9 1.243   Stored in directory: /root/.cache/pip/wheels/8d/bb/b2/5353b966ac6f3c5e1000629a9a5f6aed41794487f551e32efc
+#9 1.245 Successfully built progressbar
+#9 1.366 Installing collected packages: progressbar
+#9 1.390 Successfully installed progressbar-2.5
+#9 1.391 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.396 
+#9 1.396 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.396 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.5s
+
+#10 [ 6/12] RUN ["pip","install","torch-optim"]
+#10 0.616 Collecting torch-optim
+#10 0.752   Downloading torch_optim-0.0.4-py3-none-any.whl.metadata (5.9 kB)
+#10 0.927 Collecting deap>=1.3.1 (from torch-optim)
+#10 1.038   Downloading deap-1.4.3-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+#10 1.387 Collecting pytorch-ignite>=0.4.8 (from torch-optim)
+#10 1.399   Downloading pytorch_ignite-0.5.3-py3-none-any.whl.metadata (27 kB)
+#10 1.448 Collecting thop>=0.0.31 (from torch-optim)
+#10 1.456   Downloading thop-0.1.1.post2209072238-py3-none-any.whl.metadata (2.7 kB)
+#10 1.472 Requirement already satisfied: torch>=1.10.0 in /usr/local/lib/python3.11/site-packages (from torch-optim) (2.9.0)
+#10 1.509 Collecting torch-pruning>=0.2.7 (from torch-optim)
+#10 1.519   Downloading torch_pruning-1.6.1-py3-none-any.whl.metadata (32 kB)
+#10 1.616 Collecting torchvision>=0.11.1 (from torch-optim)
+#10 1.626   Downloading torchvision-0.24.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (5.9 kB)
+#10 1.839 Collecting numpy (from deap>=1.3.1->torch-optim)
+#10 1.849   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#10 1.877      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.0 MB/s eta 0:00:00
+#10 1.931 Collecting packaging (from pytorch-ignite>=0.4.8->torch-optim)
+#10 1.939   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#10 1.982 Requirement already satisfied: filelock in /usr/local/lib/python3.11/site-packages (from torch>=1.10.0->torch-optim) (3.20.0)
+#10 1.983 Requirement already satisfied: typing-extensions>=4.10.0 in /usr/local/lib/python3.11/site-packages (from torch>=1.10.0->torch-optim) (4.15.0)
+#10 1.984 Requirement already satisfied: sympy>=1.13.3 in /usr/local/lib/python3.11/site-packages (from torch>=1.10.0->torch-optim) (1.14.0)
+#10 1.985 Requirement already satisfied: networkx>=2.5.1 in /usr/local/lib/python3.11/site-packages (from torch>=1.10.0->torch-optim) (3.5)
+#10 1.985 Requirement already satisfied: jinja2 in /usr/local/lib/python3.11/site-packages (from torch>=1.10.0->torch-optim) (3.1.6)
+#10 1.987 Requirement already satisfied: fsspec>=0.8.5 in /usr/local/lib/python3.11/site-packages (from torch>=1.10.0->torch-optim) (2025.9.0)
+#10 1.988 Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.8.93 in /usr/local/lib/python3.11/site-packages (from torch>=1.10.0->torch-optim) (12.8.93)
+#10 1.989 Requirement already satisfied: nvidia-cuda-runtime-cu12==12.8.90 in /usr/local/lib/python3.11/site-packages (from torch>=1.10.0->torch-optim) (12.8.90)
+#10 1.991 Requirement already satisfied: nvidia-cuda-cupti-cu12==12.8.90 in /usr/local/lib/python3.11/site-packages (from torch>=1.10.0->torch-optim) (12.8.90)
+#10 1.992 Requirement already satisfied: nvidia-cudnn-cu12==9.10.2.21 in /usr/local/lib/python3.11/site-packages (from torch>=1.10.0->torch-optim) (9.10.2.21)
+#10 1.993 Requirement already satisfied: nvidia-cublas-cu12==12.8.4.1 in /usr/local/lib/python3.11/site-packages (from torch>=1.10.0->torch-optim) (12.8.4.1)
+#10 1.994 Requirement already satisfied: nvidia-cufft-cu12==11.3.3.83 in /usr/local/lib/python3.11/site-packages (from torch>=1.10.0->torch-optim) (11.3.3.83)
+#10 1.996 Requirement already satisfied: nvidia-curand-cu12==10.3.9.90 in /usr/local/lib/python3.11/site-packages (from torch>=1.10.0->torch-optim) (10.3.9.90)
+#10 1.997 Requirement already satisfied: nvidia-cusolver-cu12==11.7.3.90 in /usr/local/lib/python3.11/site-packages (from torch>=1.10.0->torch-optim) (11.7.3.90)
+#10 1.998 Requirement already satisfied: nvidia-cusparse-cu12==12.5.8.93 in /usr/local/lib/python3.11/site-packages (from torch>=1.10.0->torch-optim) (12.5.8.93)
+#10 2.000 Requirement already satisfied: nvidia-cusparselt-cu12==0.7.1 in /usr/local/lib/python3.11/site-packages (from torch>=1.10.0->torch-optim) (0.7.1)
+#10 2.001 Requirement already satisfied: nvidia-nccl-cu12==2.27.5 in /usr/local/lib/python3.11/site-packages (from torch>=1.10.0->torch-optim) (2.27.5)
+#10 2.002 Requirement already satisfied: nvidia-nvshmem-cu12==3.3.20 in /usr/local/lib/python3.11/site-packages (from torch>=1.10.0->torch-optim) (3.3.20)
+#10 2.004 Requirement already satisfied: nvidia-nvtx-cu12==12.8.90 in /usr/local/lib/python3.11/site-packages (from torch>=1.10.0->torch-optim) (12.8.90)
+#10 2.005 Requirement already satisfied: nvidia-nvjitlink-cu12==12.8.93 in /usr/local/lib/python3.11/site-packages (from torch>=1.10.0->torch-optim) (12.8.93)
+#10 2.007 Requirement already satisfied: nvidia-cufile-cu12==1.13.1.3 in /usr/local/lib/python3.11/site-packages (from torch>=1.10.0->torch-optim) (1.13.1.3)
+#10 2.009 Requirement already satisfied: triton==3.5.0 in /usr/local/lib/python3.11/site-packages (from torch>=1.10.0->torch-optim) (3.5.0)
+#10 2.250 Collecting pillow!=8.3.*,>=5.3.0 (from torchvision>=0.11.1->torch-optim)
+#10 2.262   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#10 2.369 Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.11/site-packages (from sympy>=1.13.3->torch>=1.10.0->torch-optim) (1.3.0)
+#10 2.377 Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.11/site-packages (from jinja2->torch>=1.10.0->torch-optim) (3.0.3)
+#10 2.515 Downloading torch_optim-0.0.4-py3-none-any.whl (59.1 MB)
+#10 9.407    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.1/59.1 MB 6.9 MB/s eta 0:00:00
+#10 9.515 Downloading deap-1.4.3-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (135 kB)
+#10 9.539    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.6/135.6 kB 5.6 MB/s eta 0:00:00
+#10 9.551 Downloading pytorch_ignite-0.5.3-py3-none-any.whl (343 kB)
+#10 9.572    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 343.8/343.8 kB 17.8 MB/s eta 0:00:00
+#10 9.581 Downloading thop-0.1.1.post2209072238-py3-none-any.whl (15 kB)
+#10 9.604 Downloading torch_pruning-1.6.1-py3-none-any.whl (70 kB)
+#10 9.619    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 70.2/70.2 kB 4.3 MB/s eta 0:00:00
+#10 9.629 Downloading torchvision-0.24.0-cp311-cp311-manylinux_2_28_x86_64.whl (8.0 MB)
+#10 9.942    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.0/8.0 MB 25.8 MB/s eta 0:00:00
+#10 9.953 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#10 10.23    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 25.8 MB/s eta 0:00:00
+#10 10.24 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#10 10.88    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 23.8 MB/s eta 0:00:00
+#10 10.89 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#10 10.90    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.9 MB/s eta 0:00:00
+#10 11.25 Installing collected packages: pillow, packaging, numpy, deap, torchvision, torch-pruning, thop, pytorch-ignite, torch-optim
+#10 14.09 Successfully installed deap-1.4.3 numpy-2.3.4 packaging-25.0 pillow-12.0.0 pytorch-ignite-0.5.3 thop-0.1.1.post2209072238 torch-optim-0.0.4 torch-pruning-1.6.1 torchvision-0.24.0
+#10 14.09 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 14.09 
+#10 14.09 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 14.09 [notice] To update, run: pip install --upgrade pip
+#10 DONE 14.9s
+
+#11 [ 7/12] RUN ["pip","install","numpy"]
+#11 0.447 Requirement already satisfied: numpy in /usr/local/lib/python3.11/site-packages (2.3.4)
+#11 0.597 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.602 
+#11 0.602 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.602 [notice] To update, run: pip install --upgrade pip
+#11 DONE 0.7s
+
+#12 [ 8/12] RUN ["pip","install","progress"]
+#12 0.545 Collecting progress
+#12 0.585   Downloading progress-1.6.1-py3-none-any.whl.metadata (4.3 kB)
+#12 0.610 Downloading progress-1.6.1-py3-none-any.whl (9.8 kB)
+#12 0.773 Installing collected packages: progress
+#12 0.817 Successfully installed progress-1.6.1
+#12 0.817 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 0.822 
+#12 0.822 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 0.822 [notice] To update, run: pip install --upgrade pip
+#12 DONE 0.9s
+
+#13 [ 9/12] RUN ["apt-get","install","-y","git"]
+#13 0.211 Reading package lists...
+#13 0.655 Building dependency tree...
+#13 0.768 Reading state information...
+#13 0.991 git is already the newest version (1:2.47.3-0+deb13u1).
+#13 0.991 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+#13 DONE 1.0s
+
+#14 [10/12] RUN ["apt-get","install","-y","build-essential"]
+#14 0.223 Reading package lists...
+#14 0.634 Building dependency tree...
+#14 0.746 Reading state information...
+#14 0.964 The following NEW packages will be installed:
+#14 0.965   build-essential
+#14 1.013 0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+#14 1.013 Need to get 4624 B of archives.
+#14 1.013 After this operation, 17.4 kB of additional disk space will be used.
+#14 1.013 Get:1 http://deb.debian.org/debian trixie/main amd64 build-essential amd64 12.12 [4624 B]
+#14 1.159 debconf: unable to initialize frontend: Dialog
+#14 1.159 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#14 1.159 debconf: falling back to frontend: Readline
+#14 1.163 debconf: unable to initialize frontend: Readline
+#14 1.163 debconf: (This frontend requires a controlling tty.)
+#14 1.163 debconf: falling back to frontend: Teletype
+#14 1.166 debconf: unable to initialize frontend: Teletype
+#14 1.166 debconf: (This frontend requires a controlling tty.)
+#14 1.166 debconf: falling back to frontend: Noninteractive
+#14 1.618 Fetched 4624 B in 0s (124 kB/s)
+#14 1.658 Selecting previously unselected package build-essential.
+#14 1.658 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 26761 files and directories currently installed.)
+#14 1.689 Preparing to unpack .../build-essential_12.12_amd64.deb ...
+#14 1.699 Unpacking build-essential (12.12) ...
+#14 1.773 Setting up build-essential (12.12) ...
+#14 DONE 1.8s
+
+#15 [11/12] RUN ["pip","install","pytz"]
+#15 0.576 Collecting pytz
+#15 0.610   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#15 0.636 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#15 0.693    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 9.0 MB/s eta 0:00:00
+#15 0.846 Installing collected packages: pytz
+#15 0.969 Successfully installed pytz-2025.2
+#15 0.969 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#15 0.974 
+#15 0.974 [notice] A new release of pip is available: 24.0 -> 25.3
+#15 0.974 [notice] To update, run: pip install --upgrade pip
+#15 DONE 1.1s
+
+#16 [12/12] RUN ["pip","install","progressbar2"]
+#16 0.539 Collecting progressbar2
+#16 0.572   Downloading progressbar2-4.5.0-py3-none-any.whl.metadata (16 kB)
+#16 0.628 Collecting python-utils>=3.8.1 (from progressbar2)
+#16 0.639   Downloading python_utils-3.9.1-py2.py3-none-any.whl.metadata (9.8 kB)
+#16 0.663 Requirement already satisfied: typing_extensions>3.10.0.2 in /usr/local/lib/python3.11/site-packages (from python-utils>=3.8.1->progressbar2) (4.15.0)
+#16 0.673 Downloading progressbar2-4.5.0-py3-none-any.whl (57 kB)
+#16 0.696    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.1/57.1 kB 2.2 MB/s eta 0:00:00
+#16 0.705 Downloading python_utils-3.9.1-py2.py3-none-any.whl (32 kB)
+#16 0.887 Installing collected packages: python-utils, progressbar2
+#16 0.993 Successfully installed progressbar2-4.5.0 python-utils-3.9.1
+#16 0.993 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#16 0.998 
+#16 0.998 [notice] A new release of pip is available: 24.0 -> 25.3
+#16 0.998 [notice] To update, run: pip install --upgrade pip
+#16 DONE 1.1s
+
+#17 exporting to image
+#17 exporting layers
+#17 exporting layers 34.7s done
+#17 writing image sha256:dde8cfb0d71cd7f2b1b46fa64f2c44023b0df6a7143df01c07deacb4fb720185 done
+#17 naming to docker.io/library/test-image-1b49c03968b2c83897a4a15c78980b18 done
+#17 DONE 34.8s
+
+View build details: docker-desktop://dashboard/build/default/default/6d7bz3ou2alrzidex00crmi6y
+[2025-10-29 12:42:38] SUCCESS: Build completed for 1b49c03968b2c83897a4a15c78980b18

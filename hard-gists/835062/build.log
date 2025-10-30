@@ -1,0 +1,173 @@
+=== Docker Build Log for 835062 ===
+Started at: Mi 29. Okt 17:43:27 CET 2025
+
+[2025-10-29 17:43:27] START: Building image for 835062
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 240B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.93kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/835062/snippet.py /snippet.py
+#6 DONE 0.9s
+
+#7 [3/5] RUN ["pip","install","image"]
+#7 2.069 Collecting image
+#7 2.257   Downloading image-1.5.33.tar.gz (15 kB)
+#7 2.278   Preparing metadata (setup.py): started
+#7 2.659   Preparing metadata (setup.py): finished with status 'done'
+#7 3.041 Collecting pillow (from image)
+#7 3.085   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#7 3.245 Collecting django (from image)
+#7 3.289   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 3.378 Collecting six (from image)
+#7 3.420   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 3.503 Collecting asgiref>=3.8.1 (from django->image)
+#7 3.538   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 3.628 Collecting sqlparse>=0.3.1 (from django->image)
+#7 3.671   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 3.744 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 7.722    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 2.1 MB/s eta 0:00:00
+#7 7.777 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#7 9.788    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 3.5 MB/s eta 0:00:00
+#7 9.826 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 9.867 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 9.915 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 9.932    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 2.6 MB/s eta 0:00:00
+#7 10.00 Building wheels for collected packages: image
+#7 10.00   Building wheel for image (setup.py): started
+#7 10.20   Building wheel for image (setup.py): finished with status 'done'
+#7 10.20   Created wheel for image: filename=image-1.5.33-py2.py3-none-any.whl size=19554 sha256=f24be84a1e2114804ce0ef3f3a446d59fb6f58b7cedd594fe38c9098bebc4e8e
+#7 10.20   Stored in directory: /root/.cache/pip/wheels/62/40/4f/3c9a8d0f22a1a6f966975a460e5cb509a1e7dc42e2ce5d9a6d
+#7 10.20 Successfully built image
+#7 10.27 Installing collected packages: sqlparse, six, pillow, asgiref, django, image
+#7 13.15 Successfully installed asgiref-3.10.0 django-5.2.7 image-1.5.33 pillow-12.0.0 six-1.17.0 sqlparse-0.5.3
+#7 13.15 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 13.35 
+#7 13.35 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 13.35 [notice] To update, run: pip install --upgrade pip
+#7 DONE 14.3s
+
+#8 [4/5] RUN ["pip","install","feedparser"]
+#8 0.632 Collecting feedparser
+#8 0.774   Downloading feedparser-6.0.12-py3-none-any.whl.metadata (2.7 kB)
+#8 0.856 Collecting sgmllib3k (from feedparser)
+#8 0.901   Downloading sgmllib3k-1.0.0.tar.gz (5.8 kB)
+#8 0.916   Preparing metadata (setup.py): started
+#8 1.039   Preparing metadata (setup.py): finished with status 'done'
+#8 1.085 Downloading feedparser-6.0.12-py3-none-any.whl (81 kB)
+#8 1.198    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 81.5/81.5 kB 654.8 kB/s eta 0:00:00
+#8 1.202 Building wheels for collected packages: sgmllib3k
+#8 1.207   Building wheel for sgmllib3k (setup.py): started
+#8 1.350   Building wheel for sgmllib3k (setup.py): finished with status 'done'
+#8 1.351   Created wheel for sgmllib3k: filename=sgmllib3k-1.0.0-py3-none-any.whl size=6090 sha256=25d64befb7e1eb7bac8a37ee2386cf67c89497fdac1c8e50f42364642526cf5f
+#8 1.351   Stored in directory: /root/.cache/pip/wheels/3b/25/2a/105d6a15df6914f4d15047691c6c28f9052cc1173e40285d03
+#8 1.352 Successfully built sgmllib3k
+#8 1.403 Installing collected packages: sgmllib3k, feedparser
+#8 1.480 Successfully installed feedparser-6.0.12 sgmllib3k-1.0.0
+#8 1.481 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.486 
+#8 1.486 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.486 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.0s
+
+#9 [5/5] RUN ["pip","install","androidviewclient"]
+#9 0.813 Collecting androidviewclient
+#9 0.969   Downloading androidviewclient-24.1.0-py3-none-any.whl.metadata (661 bytes)
+#9 0.995 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from androidviewclient) (79.0.1)
+#9 1.084 Collecting requests (from androidviewclient)
+#9 1.131   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#9 1.453 Collecting numpy (from androidviewclient)
+#9 1.463   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#9 1.679      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 245.9 kB/s eta 0:00:00
+#9 1.891 Collecting matplotlib (from androidviewclient)
+#9 1.935   Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#9 2.114 Collecting culebratester-client>=2.0.73 (from androidviewclient)
+#9 2.159   Downloading culebratester_client-2.0.73-py3-none-any.whl.metadata (685 bytes)
+#9 2.285 Collecting urllib3>=1.15 (from culebratester-client>=2.0.73->androidviewclient)
+#9 2.330   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#9 2.348 Requirement already satisfied: six>=1.10 in /usr/local/lib/python3.11/site-packages (from culebratester-client>=2.0.73->androidviewclient) (1.17.0)
+#9 2.436 Collecting certifi (from culebratester-client>=2.0.73->androidviewclient)
+#9 2.453   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#9 2.502 Collecting python-dateutil (from culebratester-client>=2.0.73->androidviewclient)
+#9 2.511   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#9 2.666 Collecting contourpy>=1.0.1 (from matplotlib->androidviewclient)
+#9 2.674   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#9 2.724 Collecting cycler>=0.10 (from matplotlib->androidviewclient)
+#9 2.732   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#9 2.909 Collecting fonttools>=4.22.0 (from matplotlib->androidviewclient)
+#9 2.918   Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+#9 2.957      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.3/112.3 kB 2.8 MB/s eta 0:00:00
+#9 3.035 Collecting kiwisolver>=1.3.1 (from matplotlib->androidviewclient)
+#9 3.045   Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+#9 3.100 Collecting packaging>=20.0 (from matplotlib->androidviewclient)
+#9 3.109   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#9 3.124 Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.11/site-packages (from matplotlib->androidviewclient) (12.0.0)
+#9 3.173 Collecting pyparsing>=3 (from matplotlib->androidviewclient)
+#9 3.182   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#9 3.299 Collecting charset_normalizer<4,>=2 (from requests->androidviewclient)
+#9 3.309   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#9 3.361 Collecting idna<4,>=2.5 (from requests->androidviewclient)
+#9 3.369   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#9 3.533 Downloading androidviewclient-24.1.0-py3-none-any.whl (425 kB)
+#9 3.604    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 425.1/425.1 kB 6.3 MB/s eta 0:00:00
+#9 3.616 Downloading culebratester_client-2.0.73-py3-none-any.whl (114 kB)
+#9 3.640    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.2/114.2 kB 4.6 MB/s eta 0:00:00
+#9 3.649 Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+#9 4.405    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 11.5 MB/s eta 0:00:00
+#9 4.416 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#9 5.469    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 15.2 MB/s eta 0:00:00
+#9 5.482 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#9 5.499    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.7 MB/s eta 0:00:00
+#9 5.507 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#9 5.527    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 8.6 MB/s eta 0:00:00
+#9 5.537 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#9 5.552    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.0 MB/s eta 0:00:00
+#9 5.562 Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+#9 5.591    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 355.2/355.2 kB 12.9 MB/s eta 0:00:00
+#9 5.599 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#9 5.621 Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#9 5.884    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 19.0 MB/s eta 0:00:00
+#9 5.892 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#9 5.910    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 3.7 MB/s eta 0:00:00
+#9 5.921 Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+#9 5.989    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 21.4 MB/s eta 0:00:00
+#9 5.997 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#9 6.016    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 3.2 MB/s eta 0:00:00
+#9 6.025 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#9 6.045    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 5.4 MB/s eta 0:00:00
+#9 6.053 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#9 6.074    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 11.5 MB/s eta 0:00:00
+#9 6.083 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#9 6.099    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 8.1 MB/s eta 0:00:00
+#9 6.288 Installing collected packages: urllib3, python-dateutil, pyparsing, packaging, numpy, kiwisolver, idna, fonttools, cycler, charset_normalizer, certifi, requests, culebratester-client, contourpy, matplotlib, androidviewclient
+#9 9.828 Successfully installed androidviewclient-24.1.0 certifi-2025.10.5 charset_normalizer-3.4.4 contourpy-1.3.3 culebratester-client-2.0.73 cycler-0.12.1 fonttools-4.60.1 idna-3.11 kiwisolver-1.4.9 matplotlib-3.10.7 numpy-2.3.4 packaging-25.0 pyparsing-3.2.5 python-dateutil-2.9.0.post0 requests-2.32.5 urllib3-2.5.0
+#9 9.828 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 9.833 
+#9 9.833 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 9.833 [notice] To update, run: pip install --upgrade pip
+#9 DONE 11.5s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.8s done
+#10 writing image sha256:3e9c811916e171ac8c7eadbe87bf738dc99fb4d5c2d7ba54aaae39d83d96b0f7 done
+#10 naming to docker.io/library/test-image-835062 done
+#10 DONE 0.9s
+
+View build details: docker-desktop://dashboard/build/default/default/752c9k9kldpflyio5nve534lq
+[2025-10-29 17:43:57] SUCCESS: Build completed for 835062

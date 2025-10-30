@@ -1,0 +1,143 @@
+=== Docker Build Log for 4efe2e28ffcba38aa242 ===
+Started at: Mi 29. Okt 15:13:32 CET 2025
+
+[2025-10-29 15:13:32] START: Building image for 4efe2e28ffcba38aa242
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 318B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.05kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/4efe2e28ffcba38aa242/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","dj.choices"]
+#7 1.975 Collecting dj.choices
+#7 2.008   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 2.027   Preparing metadata (setup.py): started
+#7 2.443   Preparing metadata (setup.py): finished with status 'done'
+#7 2.558 Collecting django (from dj.choices)
+#7 2.568   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.607 Collecting six (from dj.choices)
+#7 2.615   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.663 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.671   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.709 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.719   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.745 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.067    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 26.0 MB/s eta 0:00:00
+#7 3.076 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.093 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.111 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.123    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.5 MB/s eta 0:00:00
+#7 3.162 Building wheels for collected packages: dj.choices
+#7 3.163   Building wheel for dj.choices (setup.py): started
+#7 3.349   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.349   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=b4cc646db519fa620d0ee5d812219ce49163ad8b0219d6928ad777749de84e18
+#7 3.350   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.352 Successfully built dj.choices
+#7 3.406 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 4.968 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 4.969 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.062 
+#7 5.062 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.062 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.4s
+
+#8 [4/7] RUN ["pip","install","nose"]
+#8 0.575 Collecting nose
+#8 0.615   Downloading nose-1.3.7-py3-none-any.whl.metadata (1.7 kB)
+#8 0.640 Downloading nose-1.3.7-py3-none-any.whl (154 kB)
+#8 0.671    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 154.7/154.7 kB 4.9 MB/s eta 0:00:00
+#8 0.715 Installing collected packages: nose
+#8 0.823 Successfully installed nose-1.3.7
+#8 0.823 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.829 
+#8 0.829 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.829 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.9s
+
+#9 [5/7] RUN ["pip","install","Django"]
+#9 0.478 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#9 0.482 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#9 0.483 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#9 0.525 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.531 
+#9 0.531 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.531 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.6s
+
+#10 [6/7] RUN ["pip","install","django-test-utils"]
+#10 0.544 Collecting django-test-utils
+#10 0.580   Downloading django-test-utils-0.3.tar.gz (29 kB)
+#10 0.605   Preparing metadata (setup.py): started
+#10 0.726   Preparing metadata (setup.py): finished with status 'done'
+#10 0.751 Collecting BeautifulSoup (from django-test-utils)
+#10 0.761   Downloading BeautifulSoup-3.2.2.tar.gz (32 kB)
+#10 0.774   Preparing metadata (setup.py): started
+#10 0.877   Preparing metadata (setup.py): finished with status 'error'
+#10 0.880   error: subprocess-exited-with-error
+#10 0.880   
+#10 0.880   × python setup.py egg_info did not run successfully.
+#10 0.880   │ exit code: 1
+#10 0.880   ╰─> [7 lines of output]
+#10 0.880       Traceback (most recent call last):
+#10 0.880         File "<string>", line 2, in <module>
+#10 0.880         File "<pip-setuptools-caller>", line 34, in <module>
+#10 0.880         File "/tmp/pip-install-gag0s3p3/beautifulsoup_b5b8f9a09b544f9b8f71aa02f3d9849f/setup.py", line 3
+#10 0.880           "You're trying to run a very old release of Beautiful Soup under Python 3. This will not work."<>"Please use Beautiful Soup 4, available through the pip package 'beautifulsoup4'."
+#10 0.880                                                                                                          ^^
+#10 0.880       SyntaxError: invalid syntax
+#10 0.880       [end of output]
+#10 0.880   
+#10 0.880   note: This error originates from a subprocess, and is likely not a problem with pip.
+#10 0.882 error: metadata-generation-failed
+#10 0.882 
+#10 0.882 × Encountered error while generating package metadata.
+#10 0.882 ╰─> See above for output.
+#10 0.882 
+#10 0.882 note: This is an issue with the package mentioned above, not pip.
+#10 0.882 hint: See above for details.
+#10 0.887 
+#10 0.887 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.887 [notice] To update, run: pip install --upgrade pip
+#10 ERROR: process "pip install django-test-utils" did not complete successfully: exit code: 1
+------
+ > [6/7] RUN ["pip","install","django-test-utils"]:
+0.882 error: metadata-generation-failed
+0.882 
+0.882 × Encountered error while generating package metadata.
+0.882 ╰─> See above for output.
+0.882 
+0.882 note: This is an issue with the package mentioned above, not pip.
+0.882 hint: See above for details.
+0.887 
+0.887 [notice] A new release of pip is available: 24.0 -> 25.3
+0.887 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:6
+--------------------
+   4 |     RUN ["pip","install","nose"]
+   5 |     RUN ["pip","install","Django"]
+   6 | >>> RUN ["pip","install","django-test-utils"]
+   7 |     RUN ["pip","install","django_db"]
+   8 |     CMD ["python3","/snippet.py"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install django-test-utils" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/irv0so4qd483yoiwhc5g7s64k
+[2025-10-29 15:13:41] ERROR: Build failed for 4efe2e28ffcba38aa242

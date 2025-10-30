@@ -1,0 +1,15 @@
+=== Docker Run Log for 6869344 ===
+Started at: Mi 29. Okt 16:44:11 CET 2025
+
+[2025-10-29 16:44:15] START: Running container for 6869344
+[2025-10-29 16:44:15] SUCCESS: Container 47d3021a5584ae7537cfb65d568df77b069cce8db73b795deca8223fca9f3585 started for 6869344
+=== Container logs for 6869344 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 17, in <module>
+    class SleepHandler(tornado.web.RequestHandler):
+  File "/snippet.py", line 19, in SleepHandler
+    @tornado.web.asynchronous
+     ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'tornado.web' has no attribute 'asynchronous'
+=== End of logs for 6869344 ===
+[2025-10-29 16:44:17] INFO: Container 47d3021a5584ae7537cfb65d568df77b069cce8db73b795deca8223fca9f3585 has stopped

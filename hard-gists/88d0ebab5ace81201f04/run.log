@@ -1,0 +1,15 @@
+=== Docker Run Log for 88d0ebab5ace81201f04 ===
+Started at: Mi 29. Okt 18:04:17 CET 2025
+
+[2025-10-29 18:04:22] START: Running container for 88d0ebab5ace81201f04
+[2025-10-29 18:04:23] SUCCESS: Container 954178215c8d6f4066d9c55b473562351825d8f3bd9a352b64f3d64c704ed537 started for 88d0ebab5ace81201f04
+=== Container logs for 88d0ebab5ace81201f04 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 10, in <module>
+    client = facebook.GraphAPI(access_token=USER_ACCESS_TOKEN, version='2.5')
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/facebook/__init__.py", line 103, in __init__
+    raise GraphAPIError(
+facebook.GraphAPIError: Valid API versions are '2.8', '2.9', '2.10', '2.11', '2.12', '3.0', '3.1'
+=== End of logs for 88d0ebab5ace81201f04 ===
+[2025-10-29 18:04:25] INFO: Container 954178215c8d6f4066d9c55b473562351825d8f3bd9a352b64f3d64c704ed537 has stopped

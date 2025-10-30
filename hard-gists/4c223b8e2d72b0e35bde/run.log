@@ -1,0 +1,26 @@
+=== Docker Run Log for 4c223b8e2d72b0e35bde ===
+Started at: Mi 29. Okt 15:09:40 CET 2025
+
+[2025-10-29 15:09:47] START: Running container for 4c223b8e2d72b0e35bde
+[2025-10-29 15:09:47] SUCCESS: Container f05be55a2e570bc5093b5a1e238730a330e659b82bd260bff38ec23ad37c93b5 started for 4c223b8e2d72b0e35bde
+=== Container logs for 4c223b8e2d72b0e35bde ===
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/lasagne/__init__.py", line 6, in <module>
+    import theano
+ModuleNotFoundError: No module named 'theano'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snippet.py", line 1, in <module>
+    from lasagne.layers import Layer
+  File "/usr/local/lib/python3.11/site-packages/lasagne/__init__.py", line 8, in <module>
+    raise ImportError("""Could not import Theano.
+ImportError: Could not import Theano.
+
+Please make sure you install a recent enough version of Theano.  See
+section 'Install from PyPI' in the installation docs for more details:
+http://lasagne.readthedocs.org/en/latest/user/installation.html#install-from-pypi
+
+=== End of logs for 4c223b8e2d72b0e35bde ===
+[2025-10-29 15:09:49] INFO: Container f05be55a2e570bc5093b5a1e238730a330e659b82bd260bff38ec23ad37c93b5 has stopped

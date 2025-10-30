@@ -1,0 +1,21 @@
+=== Docker Run Log for 6af3dd8894ec4255a63f ===
+Started at: Mi 29. Okt 16:47:55 CET 2025
+
+[2025-10-29 16:48:03] START: Running container for 6af3dd8894ec4255a63f
+[2025-10-29 16:48:04] SUCCESS: Container ff023e18deb1765fab98c9a16def05468c6ace25191dc5e13eeead3b92fb1ae0 started for 6af3dd8894ec4255a63f
+=== Container logs for 6af3dd8894ec4255a63f ===
+No configuration file found! Will exit now.
+
+Usage: /snippet.py [<-X>|<day name>]
+ - <X> being an integer, will return time entries for X days ago
+ - <day name> in 'mon' 'tue' 'wed' 'thu' 'fri', returns time entries for the previous named-day
+ - default to returning the current day time entries
+
+Usage: /snippet.py -w [<-X>]
+ - <X> being an integer, will return time entries for X weeks ago
+ - default to returning the current week time entries
+
+Usage: /snippet.py --make-config
+ - creates a configuration template in $XDG_HOME or ~/.config/targetprocess.yml
+=== End of logs for 6af3dd8894ec4255a63f ===
+[2025-10-29 16:48:06] INFO: Container ff023e18deb1765fab98c9a16def05468c6ace25191dc5e13eeead3b92fb1ae0 has stopped

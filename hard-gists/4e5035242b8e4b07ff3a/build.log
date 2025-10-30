@@ -1,0 +1,127 @@
+=== Docker Build Log for 4e5035242b8e4b07ff3a ===
+Started at: Mi 29. Okt 15:13:06 CET 2025
+
+[2025-10-29 15:13:06] START: Building image for 4e5035242b8e4b07ff3a
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 294B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 10.92kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/4e5035242b8e4b07ff3a/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","bson"]
+#7 1.996 Collecting bson
+#7 2.029   Downloading bson-0.5.10.tar.gz (10 kB)
+#7 2.043   Preparing metadata (setup.py): started
+#7 2.456   Preparing metadata (setup.py): finished with status 'done'
+#7 2.491 Collecting python-dateutil>=2.4.0 (from bson)
+#7 2.501   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#7 2.541 Collecting six>=1.9.0 (from bson)
+#7 2.549   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.572 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#7 2.598    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 9.5 MB/s eta 0:00:00
+#7 2.606 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.621 Building wheels for collected packages: bson
+#7 2.621   Building wheel for bson (setup.py): started
+#7 2.797   Building wheel for bson (setup.py): finished with status 'done'
+#7 2.798   Created wheel for bson: filename=bson-0.5.10-py3-none-any.whl size=12034 sha256=d129b9986376ed7143e60d75fbacdb35d566406f19a46b81d5d589cf3acfc539
+#7 2.798   Stored in directory: /root/.cache/pip/wheels/cb/f3/45/c859e83339943dfe2f43e1c9aaebdc00db321191a6fe120947
+#7 2.800 Successfully built bson
+#7 2.832 Installing collected packages: six, python-dateutil, bson
+#7 2.914 Successfully installed bson-0.5.10 python-dateutil-2.9.0.post0 six-1.17.0
+#7 2.914 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.005 
+#7 3.005 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.005 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.2s
+
+#8 [4/7] RUN ["pip","install","six"]
+#8 0.526 Requirement already satisfied: six in /usr/local/lib/python3.11/site-packages (1.17.0)
+#8 0.559 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.564 
+#8 0.564 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.564 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.6s
+
+#9 [5/7] RUN ["pip","install","pytest"]
+#9 0.622 Collecting pytest
+#9 0.654   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#9 0.697 Collecting iniconfig>=1 (from pytest)
+#9 0.705   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#9 0.757 Collecting packaging>=20 (from pytest)
+#9 0.765   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#9 0.810 Collecting pluggy<2,>=1.5 (from pytest)
+#9 0.820   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#9 0.868 Collecting pygments>=2.7.2 (from pytest)
+#9 0.876   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#9 0.907 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#9 0.950    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 8.8 MB/s eta 0:00:00
+#9 0.959 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#9 0.978 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#9 0.991    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.5 MB/s eta 0:00:00
+#9 1.000 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#9 1.018 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#9 1.070    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 24.3 MB/s eta 0:00:00
+#9 1.124 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#9 1.924 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#9 1.924 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.929 
+#9 1.929 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.929 [notice] To update, run: pip install --upgrade pip
+#9 DONE 2.1s
+
+#10 [6/7] RUN ["pip","install","py"]
+#10 0.606 Collecting py
+#10 0.638   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#10 0.663 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#10 0.698    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.7 MB/s eta 0:00:00
+#10 0.744 Installing collected packages: py
+#10 0.824 Successfully installed py-1.11.0
+#10 0.824 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.829 
+#10 0.829 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.829 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.9s
+
+#11 [7/7] RUN ["pip","install","pymongo"]
+#11 0.868 Collecting pymongo
+#11 0.907   Downloading pymongo-4.15.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+#11 0.984 Collecting dnspython<3.0.0,>=1.16.0 (from pymongo)
+#11 0.994   Downloading dnspython-2.8.0-py3-none-any.whl.metadata (5.7 kB)
+#11 1.023 Downloading pymongo-4.15.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.5 MB)
+#11 1.097    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 20.2 MB/s eta 0:00:00
+#11 1.106 Downloading dnspython-2.8.0-py3-none-any.whl (331 kB)
+#11 1.130    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 331.1/331.1 kB 14.4 MB/s eta 0:00:00
+#11 1.225 Installing collected packages: dnspython, pymongo
+#11 1.737 Successfully installed dnspython-2.8.0 pymongo-4.15.3
+#11 1.737 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.742 
+#11 1.742 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.742 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.9s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.3s done
+#12 writing image sha256:80b3e0fc69e3afbd6f02bf27ca2f582adc542cf9e0f6b449a6dbcbaaca0cd86e done
+#12 naming to docker.io/library/test-image-4e5035242b8e4b07ff3a done
+#12 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/p27sl4mi30w29rk1p6h59an7b
+[2025-10-29 15:13:15] SUCCESS: Build completed for 4e5035242b8e4b07ff3a

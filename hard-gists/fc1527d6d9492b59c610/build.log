@@ -1,0 +1,133 @@
+=== Docker Build Log for fc1527d6d9492b59c610 ===
+Started at: Mi 29. Okt 21:41:47 CET 2025
+
+[2025-10-29 21:41:47] START: Building image for fc1527d6d9492b59c610
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.02kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.37kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/54] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/54] COPY hard-gists/fc1527d6d9492b59c610/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/54] RUN ["apt-get","update"]
+#7 0.247 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.247 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.262 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.277 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.882 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.889 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.465 Fetched 9833 kB in 1s (7879 kB/s)
+#7 1.465 Reading package lists...
+#7 DONE 2.0s
+
+#8 [ 4/54] RUN ["pip","install","trigger"]
+#8 2.007 Collecting trigger
+#8 2.048   Downloading trigger-1.6.0.tar.gz (384 kB)
+#8 2.100      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 384.7/384.7 kB 7.5 MB/s eta 0:00:00
+#8 2.134   Preparing metadata (setup.py): started
+#8 2.554   Preparing metadata (setup.py): finished with status 'done'
+#8 2.586 Collecting IPy>=0.73 (from trigger)
+#8 2.617   Downloading IPy-1.01.tar.gz (33 kB)
+#8 2.631   Preparing metadata (setup.py): started
+#8 2.739   Preparing metadata (setup.py): finished with status 'done'
+#8 2.964 Collecting cryptography==1.4 (from trigger)
+#8 2.976   Downloading cryptography-1.4.tar.gz (399 kB)
+#8 3.015      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 399.7/399.7 kB 11.0 MB/s eta 0:00:00
+#8 3.056   Preparing metadata (setup.py): started
+#8 3.229   Preparing metadata (setup.py): finished with status 'done'
+#8 3.271 Collecting Twisted<17.0.0,>=15.5.0 (from trigger)
+#8 3.287   Downloading Twisted-16.6.0.tar.bz2 (3.0 MB)
+#8 3.474      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 16.0 MB/s eta 0:00:00
+#8 4.238   Preparing metadata (setup.py): started
+#8 5.098   Preparing metadata (setup.py): finished with status 'done'
+#8 5.234 Collecting crochet==1.5.0 (from trigger)
+#8 5.246   Downloading crochet-1.5.0.tar.gz (52 kB)
+#8 5.258      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.0/53.0 kB 4.1 MB/s eta 0:00:00
+#8 5.265   Preparing metadata (setup.py): started
+#8 5.380   Preparing metadata (setup.py): finished with status 'done'
+#8 5.410 Collecting mock==2.0.0 (from trigger)
+#8 5.425   Downloading mock-2.0.0-py2.py3-none-any.whl.metadata (3.2 kB)
+#8 5.470 Collecting pyasn1 (from trigger)
+#8 5.480   Downloading pyasn1-0.6.1-py3-none-any.whl.metadata (8.4 kB)
+#8 5.540 Collecting pyparsing~=2.2.0 (from trigger)
+#8 5.550   Downloading pyparsing-2.2.2-py2.py3-none-any.whl.metadata (1.1 kB)
+#8 5.619 Collecting pytz (from trigger)
+#8 5.627   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#8 5.767 Collecting SimpleParse (from trigger)
+#8 5.781   Downloading SimpleParse-2.2.4.tar.gz (186 kB)
+#8 5.797      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 186.3/186.3 kB 11.7 MB/s eta 0:00:00
+#8 5.818   Preparing metadata (setup.py): started
+#8 5.934   Preparing metadata (setup.py): finished with status 'done'
+#8 6.055 Collecting gtextfsm (from trigger)
+#8 6.065   Downloading gtextfsm-0.2.1.tar.gz (20 kB)
+#8 6.077   Preparing metadata (setup.py): started
+#8 6.170   Preparing metadata (setup.py): finished with status 'error'
+#8 6.173   error: subprocess-exited-with-error
+#8 6.173   
+#8 6.173   × python setup.py egg_info did not run successfully.
+#8 6.173   │ exit code: 1
+#8 6.173   ╰─> [9 lines of output]
+#8 6.173       Traceback (most recent call last):
+#8 6.173         File "<string>", line 2, in <module>
+#8 6.173         File "<pip-setuptools-caller>", line 34, in <module>
+#8 6.173         File "/tmp/pip-install-q7rosngr/gtextfsm_31ed598ab1cd4565a2fbdbc709f31ba8/setup.py", line 19, in <module>
+#8 6.173           import textfsm
+#8 6.173         File "/tmp/pip-install-q7rosngr/gtextfsm_31ed598ab1cd4565a2fbdbc709f31ba8/textfsm/__init__.py", line 2, in <module>
+#8 6.173           __version__ = textfsm.__version__
+#8 6.173                         ^^^^^^^
+#8 6.173       NameError: name 'textfsm' is not defined
+#8 6.173       [end of output]
+#8 6.173   
+#8 6.173   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 6.174 error: metadata-generation-failed
+#8 6.174 
+#8 6.174 × Encountered error while generating package metadata.
+#8 6.174 ╰─> See above for output.
+#8 6.174 
+#8 6.174 note: This is an issue with the package mentioned above, not pip.
+#8 6.174 hint: See above for details.
+#8 6.287 
+#8 6.287 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 6.287 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install trigger" did not complete successfully: exit code: 1
+------
+ > [ 4/54] RUN ["pip","install","trigger"]:
+6.174 error: metadata-generation-failed
+6.174 
+6.174 × Encountered error while generating package metadata.
+6.174 ╰─> See above for output.
+6.174 
+6.174 note: This is an issue with the package mentioned above, not pip.
+6.174 hint: See above for details.
+6.287 
+6.287 [notice] A new release of pip is available: 24.0 -> 25.3
+6.287 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/fc1527d6d9492b59c610/snippet.py /snippet.py
+   3 |     RUN ["apt-get","update"]
+   4 | >>> RUN ["pip","install","trigger"]
+   5 |     RUN ["pip","install","axiom"]
+   6 |     RUN ["pip","install","swftp"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install trigger" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/emxf2h32q3d7phereemscx18h
+[2025-10-29 21:41:56] ERROR: Build failed for fc1527d6d9492b59c610

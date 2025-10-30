@@ -1,0 +1,125 @@
+=== Docker Build Log for 7434f7431d1cc0350dbe ===
+Started at: Mi 29. Okt 17:09:18 CET 2025
+
+[2025-10-29 17:09:18] START: Building image for 7434f7431d1cc0350dbe
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 242B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.31kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/7434f7431d1cc0350dbe/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","osgeo"]
+#7 2.168 Collecting osgeo
+#7 2.204   Downloading osgeo-0.0.1.tar.gz (1.2 kB)
+#7 2.221   Preparing metadata (setup.py): started
+#7 2.670   Preparing metadata (setup.py): finished with status 'done'
+#7 2.672 Building wheels for collected packages: osgeo
+#7 2.672   Building wheel for osgeo (setup.py): started
+#7 2.828   Building wheel for osgeo (setup.py): finished with status 'error'
+#7 2.833   error: subprocess-exited-with-error
+#7 2.833   
+#7 2.833   × python setup.py bdist_wheel did not run successfully.
+#7 2.833   │ exit code: 1
+#7 2.833   ╰─> [49 lines of output]
+#7 2.833       running bdist_wheel
+#7 2.833       running build
+#7 2.833       /usr/local/lib/python3.11/site-packages/setuptools/_distutils/cmd.py:90: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+#7 2.833       !!
+#7 2.833       
+#7 2.833               ********************************************************************************
+#7 2.833               Please avoid running ``setup.py`` directly.
+#7 2.833               Instead, use pypa/build, pypa/installer or other
+#7 2.833               standards-based tools.
+#7 2.833       
+#7 2.833               See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+#7 2.833               ********************************************************************************
+#7 2.833       
+#7 2.833       !!
+#7 2.833         self.initialize_options()
+#7 2.833       installing to build/bdist.linux-x86_64/wheel
+#7 2.833       running install
+#7 2.833       Traceback (most recent call last):
+#7 2.833         File "<string>", line 2, in <module>
+#7 2.833         File "<pip-setuptools-caller>", line 34, in <module>
+#7 2.833         File "/tmp/pip-install-585qfdny/osgeo_2191703d8e624bb290eaf8d5c3db7193/setup.py", line 32, in <module>
+#7 2.833           setup(
+#7 2.833         File "/usr/local/lib/python3.11/site-packages/setuptools/__init__.py", line 117, in setup
+#7 2.833           return distutils.core.setup(**attrs)
+#7 2.833                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#7 2.833         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/core.py", line 186, in setup
+#7 2.833           return run_commands(dist)
+#7 2.833                  ^^^^^^^^^^^^^^^^^^
+#7 2.833         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/core.py", line 202, in run_commands
+#7 2.833           dist.run_commands()
+#7 2.833         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/dist.py", line 1002, in run_commands
+#7 2.833           self.run_command(cmd)
+#7 2.833         File "/usr/local/lib/python3.11/site-packages/setuptools/dist.py", line 1104, in run_command
+#7 2.833           super().run_command(command)
+#7 2.833         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/dist.py", line 1021, in run_command
+#7 2.833           cmd_obj.run()
+#7 2.833         File "/usr/local/lib/python3.11/site-packages/setuptools/command/bdist_wheel.py", line 405, in run
+#7 2.833           self.run_command("install")
+#7 2.833         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/cmd.py", line 357, in run_command
+#7 2.833           self.distribution.run_command(command)
+#7 2.833         File "/usr/local/lib/python3.11/site-packages/setuptools/dist.py", line 1104, in run_command
+#7 2.833           super().run_command(command)
+#7 2.833         File "/usr/local/lib/python3.11/site-packages/setuptools/_distutils/dist.py", line 1021, in run_command
+#7 2.833           cmd_obj.run()
+#7 2.833         File "/tmp/pip-install-585qfdny/osgeo_2191703d8e624bb290eaf8d5c3db7193/setup.py", line 27, in run
+#7 2.833           raise Exception(error_msg)
+#7 2.833       Exception: In order to be able to run `from osgeo import gdal`,
+#7 2.833       You were probably trying to install `gdal` by running `pip install osgeo`.
+#7 2.833       Instead, you should either `pip install gdal` or replace `osgeo` with `gdal` in your requirements.
+#7 2.833       [end of output]
+#7 2.833   
+#7 2.833   note: This error originates from a subprocess, and is likely not a problem with pip.
+#7 2.833   ERROR: Failed building wheel for osgeo
+#7 2.833   Running setup.py clean for osgeo
+#7 2.952 Failed to build osgeo
+#7 2.952 ERROR: Could not build wheels for osgeo, which is required to install pyproject.toml-based projects
+#7 3.056 
+#7 3.056 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.056 [notice] To update, run: pip install --upgrade pip
+#7 ERROR: process "pip install osgeo" did not complete successfully: exit code: 1
+------
+ > [3/5] RUN ["pip","install","osgeo"]:
+2.833       [end of output]
+2.833   
+2.833   note: This error originates from a subprocess, and is likely not a problem with pip.
+2.833   ERROR: Failed building wheel for osgeo
+2.833   Running setup.py clean for osgeo
+2.952 Failed to build osgeo
+2.952 ERROR: Could not build wheels for osgeo, which is required to install pyproject.toml-based projects
+3.056 
+3.056 [notice] A new release of pip is available: 24.0 -> 25.3
+3.056 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:3
+--------------------
+   1 |     FROM python:3.11
+   2 |     COPY hard-gists/7434f7431d1cc0350dbe/snippet.py /snippet.py
+   3 | >>> RUN ["pip","install","osgeo"]
+   4 |     RUN ["pip","install","numpy"]
+   5 |     RUN ["pip","install","matplotlib"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install osgeo" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/b017tyzrgk6qremv4cxj5ojup
+[2025-10-29 17:09:22] ERROR: Build failed for 7434f7431d1cc0350dbe

@@ -1,0 +1,12 @@
+=== Docker Run Log for 1262332 ===
+Started at: Mi 29. Okt 12:03:43 CET 2025
+
+[2025-10-29 12:03:43] START: Running container for 1262332
+[2025-10-29 12:03:44] SUCCESS: Container 22c49970fb02971e9cc22e3af7e73ba6db6dfdf9f74ac1302d37c4b3ebdae1af started for 1262332
+=== Container logs for 1262332 ===
+  File "/snippet.py", line 32
+    print sendCommand("AT+CMGD=1,1")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 1262332 ===
+[2025-10-29 12:03:46] INFO: Container 22c49970fb02971e9cc22e3af7e73ba6db6dfdf9f74ac1302d37c4b3ebdae1af has stopped

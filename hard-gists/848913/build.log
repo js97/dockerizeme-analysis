@@ -1,0 +1,49 @@
+=== Docker Build Log for 848913 ===
+Started at: Mi 29. Okt 17:49:41 CET 2025
+
+[2025-10-29 17:49:41] START: Building image for 848913
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 162B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 536B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/848913/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","pillow"]
+#7 2.079 Collecting pillow
+#7 2.114   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#7 2.152 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#7 2.487    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 21.1 MB/s eta 0:00:00
+#7 2.559 Installing collected packages: pillow
+#7 2.795 Successfully installed pillow-12.0.0
+#7 2.795 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.891 
+#7 2.891 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.891 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.1s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.2s done
+#8 writing image sha256:b62d0fcb9c9903a5155ffbd0e07be4176764b71a9dc8b2b4bbfe6db653cf265e done
+#8 naming to docker.io/library/test-image-848913 done
+#8 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/73a02p6gj2xpd1y0ny5378gac
+[2025-10-29 17:49:45] SUCCESS: Build completed for 848913

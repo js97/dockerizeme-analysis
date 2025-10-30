@@ -1,0 +1,84 @@
+=== Docker Build Log for df9ad5ef01d16c02d68d9a8c17c75b73 ===
+Started at: Mi 29. Okt 20:37:38 CET 2025
+
+[2025-10-29 20:37:38] START: Building image for df9ad5ef01d16c02d68d9a8c17c75b73
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 271B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.21kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/df9ad5ef01d16c02d68d9a8c17c75b73/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","python-dateutil"]
+#7 1.910 Collecting python-dateutil
+#7 1.954   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#7 1.996 Collecting six>=1.5 (from python-dateutil)
+#7 2.004   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.024 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#7 2.064    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 6.0 MB/s eta 0:00:00
+#7 2.073 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.117 Installing collected packages: six, python-dateutil
+#7 2.173 Successfully installed python-dateutil-2.9.0.post0 six-1.17.0
+#7 2.173 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.263 
+#7 2.263 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.263 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.5s
+
+#8 [4/5] RUN ["pip","install","twitter-text-python"]
+#8 0.624 Collecting twitter-text-python
+#8 0.754   Downloading twitter-text-python-1.1.1.tar.gz (11 kB)
+#8 0.772   Preparing metadata (setup.py): started
+#8 1.208   Preparing metadata (setup.py): finished with status 'done'
+#8 1.209 Building wheels for collected packages: twitter-text-python
+#8 1.210   Building wheel for twitter-text-python (setup.py): started
+#8 1.370   Building wheel for twitter-text-python (setup.py): finished with status 'done'
+#8 1.370   Created wheel for twitter-text-python: filename=twitter_text_python-1.1.1-py3-none-any.whl size=10070 sha256=07d0cf2da9f7c89c7fdf235488f063f9e06eb36c4051e0547eeaaacb360fec7c
+#8 1.371   Stored in directory: /root/.cache/pip/wheels/c3/3e/ac/10c2cba08dae88cec6bf7d09a132a32d461e4885326ef13043
+#8 1.372 Successfully built twitter-text-python
+#8 1.403 Installing collected packages: twitter-text-python
+#8 1.421 Successfully installed twitter-text-python-1.1.1
+#8 1.421 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.426 
+#8 1.426 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.426 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.5s
+
+#9 [5/5] RUN ["pip","install","ttp"]
+#9 0.639 Collecting ttp
+#9 0.679   Downloading ttp-0.9.5-py2.py3-none-any.whl.metadata (9.6 kB)
+#9 0.731 Downloading ttp-0.9.5-py2.py3-none-any.whl (85 kB)
+#9 0.769    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.8/85.8 kB 2.4 MB/s eta 0:00:00
+#9 0.823 Installing collected packages: ttp
+#9 0.917 Successfully installed ttp-0.9.5
+#9 0.918 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.923 
+#9 0.923 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.923 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.0s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.2s done
+#10 writing image sha256:7ea321cd0c4d8f600f989e505cf3d0a174bea9917a9944b9fa8fcfec283e0dd0 done
+#10 naming to docker.io/library/test-image-df9ad5ef01d16c02d68d9a8c17c75b73 done
+#10 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/k22uok901sg7cq5svxe3f4c8h
+[2025-10-29 20:37:44] SUCCESS: Build completed for df9ad5ef01d16c02d68d9a8c17c75b73

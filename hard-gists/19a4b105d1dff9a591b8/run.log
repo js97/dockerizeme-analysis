@@ -1,0 +1,24 @@
+=== Docker Run Log for 19a4b105d1dff9a591b8 ===
+Started at: Mi 29. Okt 12:36:21 CET 2025
+
+[2025-10-29 12:36:25] START: Running container for 19a4b105d1dff9a591b8
+[2025-10-29 12:36:25] SUCCESS: Container 74d278ccb949456b08b4563269daafb07345851c4f4f339cf0bbec04aebdf3d5 started for 19a4b105d1dff9a591b8
+=== Container logs for 19a4b105d1dff9a591b8 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 85, in <module>
+    babel = Babel(node_modules)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 19, in __init__
+    self.babel = execjs.compile(self.module_append_string + command_string)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/execjs/__init__.py", line 61, in compile
+    return get().compile(source, cwd)
+           ^^^^^
+  File "/usr/local/lib/python3.11/site-packages/execjs/_runtimes.py", line 21, in get
+    return get_from_environment() or _find_available_runtime()
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/execjs/_runtimes.py", line 49, in _find_available_runtime
+    raise exceptions.RuntimeUnavailableError("Could not find an available JavaScript runtime.")
+execjs._exceptions.RuntimeUnavailableError: Could not find an available JavaScript runtime.
+=== End of logs for 19a4b105d1dff9a591b8 ===
+[2025-10-29 12:36:27] INFO: Container 74d278ccb949456b08b4563269daafb07345851c4f4f339cf0bbec04aebdf3d5 has stopped

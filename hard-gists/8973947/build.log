@@ -1,0 +1,126 @@
+=== Docker Build Log for 8973947 ===
+Started at: Mi 29. Okt 18:05:52 CET 2025
+
+[2025-10-29 18:05:52] START: Building image for 8973947
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 307B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.67kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/8973947/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","Flask"]
+#7 2.012 Collecting Flask
+#7 2.049   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#7 2.090 Collecting blinker>=1.9.0 (from Flask)
+#7 2.099   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#7 2.145 Collecting click>=8.1.3 (from Flask)
+#7 2.153   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#7 2.191 Collecting itsdangerous>=2.2.0 (from Flask)
+#7 2.200   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#7 2.241 Collecting jinja2>=3.1.2 (from Flask)
+#7 2.251   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#7 2.332 Collecting markupsafe>=2.1.1 (from Flask)
+#7 2.341   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#7 2.390 Collecting werkzeug>=3.1.0 (from Flask)
+#7 2.398   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#7 2.426 Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+#7 2.454    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 3.6 MB/s eta 0:00:00
+#7 2.462 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#7 2.479 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#7 2.497    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 6.0 MB/s eta 0:00:00
+#7 2.506 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#7 2.523 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#7 2.537    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 10.3 MB/s eta 0:00:00
+#7 2.544 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#7 2.563 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#7 2.581    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 13.5 MB/s eta 0:00:00
+#7 2.624 Installing collected packages: markupsafe, itsdangerous, click, blinker, werkzeug, jinja2, Flask
+#7 2.935 Successfully installed Flask-3.1.2 blinker-1.9.0 click-8.3.0 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.3 werkzeug-3.1.3
+#7 2.935 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.028 
+#7 3.028 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.028 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.2s
+
+#8 [4/7] RUN ["pip","install","itsdangerous"]
+#8 0.437 Requirement already satisfied: itsdangerous in /usr/local/lib/python3.11/site-packages (2.2.0)
+#8 0.472 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.476 
+#8 0.476 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.476 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.6s
+
+#9 [5/7] RUN ["pip","install","Werkzeug"]
+#9 0.443 Requirement already satisfied: Werkzeug in /usr/local/lib/python3.11/site-packages (3.1.3)
+#9 0.445 Requirement already satisfied: MarkupSafe>=2.1.1 in /usr/local/lib/python3.11/site-packages (from Werkzeug) (3.0.3)
+#9 0.483 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.488 
+#9 0.488 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.488 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.6s
+
+#10 [6/7] RUN ["pip","install","couchbase"]
+#10 0.610 Collecting couchbase
+#10 0.648   Downloading couchbase-4.5.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (23 kB)
+#10 0.685 Downloading couchbase-4.5.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.4 MB)
+#10 0.908    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 24.7 MB/s eta 0:00:00
+#10 0.959 Installing collected packages: couchbase
+#10 1.213 Successfully installed couchbase-4.5.0
+#10 1.213 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.219 
+#10 1.219 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.219 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.4s
+
+#11 [7/7] RUN ["pip","install","Flask-Sessions"]
+#11 0.563 Collecting Flask-Sessions
+#11 0.600   Downloading Flask-Sessions-0.1.5.tar.gz (25 kB)
+#11 0.623   Preparing metadata (setup.py): started
+#11 1.059   Preparing metadata (setup.py): finished with status 'done'
+#11 1.061 Requirement already satisfied: Flask>=0.8 in /usr/local/lib/python3.11/site-packages (from Flask-Sessions) (3.1.2)
+#11 1.066 Requirement already satisfied: blinker>=1.9.0 in /usr/local/lib/python3.11/site-packages (from Flask>=0.8->Flask-Sessions) (1.9.0)
+#11 1.067 Requirement already satisfied: click>=8.1.3 in /usr/local/lib/python3.11/site-packages (from Flask>=0.8->Flask-Sessions) (8.3.0)
+#11 1.068 Requirement already satisfied: itsdangerous>=2.2.0 in /usr/local/lib/python3.11/site-packages (from Flask>=0.8->Flask-Sessions) (2.2.0)
+#11 1.069 Requirement already satisfied: jinja2>=3.1.2 in /usr/local/lib/python3.11/site-packages (from Flask>=0.8->Flask-Sessions) (3.1.6)
+#11 1.070 Requirement already satisfied: markupsafe>=2.1.1 in /usr/local/lib/python3.11/site-packages (from Flask>=0.8->Flask-Sessions) (3.0.3)
+#11 1.070 Requirement already satisfied: werkzeug>=3.1.0 in /usr/local/lib/python3.11/site-packages (from Flask>=0.8->Flask-Sessions) (3.1.3)
+#11 1.077 Building wheels for collected packages: Flask-Sessions
+#11 1.078   Building wheel for Flask-Sessions (setup.py): started
+#11 1.243   Building wheel for Flask-Sessions (setup.py): finished with status 'done'
+#11 1.244   Created wheel for Flask-Sessions: filename=flask_sessions-0.1.5-py3-none-any.whl size=6370 sha256=ae4c7cc13c812988bb99758b009b12fdf13c58035d9e03147421faf86dd2c93a
+#11 1.244   Stored in directory: /root/.cache/pip/wheels/c1/e4/44/7eefb821a6b59dd61ab2ff8e79fd1a3e365f6b81ffc231da63
+#11 1.245 Successfully built Flask-Sessions
+#11 1.284 Installing collected packages: Flask-Sessions
+#11 1.298 Successfully installed Flask-Sessions-0.1.5
+#11 1.299 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.304 
+#11 1.304 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.304 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.4s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.3s done
+#12 writing image sha256:b5c5dbb39503b9a7e4c32d034ac673f0510f192d3f7169eaafb87402fb32889f done
+#12 naming to docker.io/library/test-image-8973947 done
+#12 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/iustezcs3pocc0mxbm4dehqlz
+[2025-10-29 18:06:00] SUCCESS: Build completed for 8973947

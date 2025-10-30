@@ -1,0 +1,179 @@
+=== Docker Build Log for b4a0aed67fc0da6b02434a5c2cef45c4 ===
+Started at: Mi 29. Okt 19:30:35 CET 2025
+
+[2025-10-29 19:30:35] START: Building image for b4a0aed67fc0da6b02434a5c2cef45c4
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 237B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 3.16kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/b4a0aed67fc0da6b02434a5c2cef45c4/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","eventlet"]
+#7 1.887 Collecting eventlet
+#7 1.923   Downloading eventlet-0.40.3-py3-none-any.whl.metadata (5.4 kB)
+#7 1.968 Collecting dnspython>=1.15.0 (from eventlet)
+#7 1.976   Downloading dnspython-2.8.0-py3-none-any.whl.metadata (5.7 kB)
+#7 2.139 Collecting greenlet>=1.0 (from eventlet)
+#7 2.152   Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+#7 2.201 Downloading eventlet-0.40.3-py3-none-any.whl (364 kB)
+#7 2.253    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 364.3/364.3 kB 7.1 MB/s eta 0:00:00
+#7 2.303 Downloading dnspython-2.8.0-py3-none-any.whl (331 kB)
+#7 2.348    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 331.1/331.1 kB 7.4 MB/s eta 0:00:00
+#7 2.546 Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (587 kB)
+#7 2.635    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 587.7/587.7 kB 6.6 MB/s eta 0:00:00
+#7 2.702 Installing collected packages: greenlet, dnspython, eventlet
+#7 3.010 Successfully installed dnspython-2.8.0 eventlet-0.40.3 greenlet-3.2.4
+#7 3.011 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.111 
+#7 3.111 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.111 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.3s
+
+#8 [4/4] RUN ["pip","install","django-storage-swift"]
+#8 0.617 Collecting django-storage-swift
+#8 0.744   Downloading django_storage_swift-1.4.0-py2.py3-none-any.whl.metadata (22 kB)
+#8 0.890 Collecting python-swiftclient>=2.2.0 (from django-storage-swift)
+#8 0.900   Downloading python_swiftclient-4.8.0-py3-none-any.whl.metadata (3.5 kB)
+#8 1.049 Collecting python-keystoneclient>=0.2.3 (from django-storage-swift)
+#8 1.062   Downloading python_keystoneclient-5.7.0-py3-none-any.whl.metadata (3.6 kB)
+#8 1.103 Collecting six (from django-storage-swift)
+#8 1.111   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 1.160 Collecting python-magic>=0.4.10 (from django-storage-swift)
+#8 1.168   Downloading python_magic-0.4.27-py2.py3-none-any.whl.metadata (5.8 kB)
+#8 1.221 Collecting pbr>=2.0.0 (from python-keystoneclient>=0.2.3->django-storage-swift)
+#8 1.231   Downloading pbr-7.0.1-py2.py3-none-any.whl.metadata (1.4 kB)
+#8 1.270 Collecting debtcollector>=1.2.0 (from python-keystoneclient>=0.2.3->django-storage-swift)
+#8 1.279   Downloading debtcollector-3.0.0-py3-none-any.whl.metadata (2.3 kB)
+#8 1.429 Collecting keystoneauth1>=3.4.0 (from python-keystoneclient>=0.2.3->django-storage-swift)
+#8 1.441   Downloading keystoneauth1-5.12.0-py3-none-any.whl.metadata (3.1 kB)
+#8 1.619 Collecting oslo.config>=5.2.0 (from python-keystoneclient>=0.2.3->django-storage-swift)
+#8 1.631   Downloading oslo_config-10.0.0-py3-none-any.whl.metadata (2.8 kB)
+#8 1.679 Collecting oslo.i18n>=3.15.3 (from python-keystoneclient>=0.2.3->django-storage-swift)
+#8 1.688   Downloading oslo_i18n-6.6.0-py3-none-any.whl.metadata (2.1 kB)
+#8 1.839 Collecting oslo.serialization>=2.18.0 (from python-keystoneclient>=0.2.3->django-storage-swift)
+#8 1.850   Downloading oslo_serialization-5.8.0-py3-none-any.whl.metadata (2.1 kB)
+#8 2.024 Collecting oslo.utils>=3.33.0 (from python-keystoneclient>=0.2.3->django-storage-swift)
+#8 2.034   Downloading oslo_utils-9.1.0-py3-none-any.whl.metadata (2.2 kB)
+#8 2.092 Collecting requests>=2.14.2 (from python-keystoneclient>=0.2.3->django-storage-swift)
+#8 2.100   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#8 2.148 Collecting stevedore>=1.20.0 (from python-keystoneclient>=0.2.3->django-storage-swift)
+#8 2.158   Downloading stevedore-5.5.0-py3-none-any.whl.metadata (2.2 kB)
+#8 2.200 Collecting packaging>=20.4 (from python-keystoneclient>=0.2.3->django-storage-swift)
+#8 2.208   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 2.380 Collecting wrapt>=1.7.0 (from debtcollector>=1.2.0->python-keystoneclient>=0.2.3->django-storage-swift)
+#8 2.389   Downloading wrapt-2.0.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.8 kB)
+#8 2.438 Collecting iso8601>=2.0.0 (from keystoneauth1>=3.4.0->python-keystoneclient>=0.2.3->django-storage-swift)
+#8 2.447   Downloading iso8601-2.1.0-py3-none-any.whl.metadata (3.7 kB)
+#8 2.579 Collecting os-service-types>=1.2.0 (from keystoneauth1>=3.4.0->python-keystoneclient>=0.2.3->django-storage-swift)
+#8 2.588   Downloading os_service_types-1.8.0-py3-none-any.whl.metadata (1.9 kB)
+#8 2.641 Collecting typing-extensions>=4.12 (from keystoneauth1>=3.4.0->python-keystoneclient>=0.2.3->django-storage-swift)
+#8 2.649   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#8 2.716 Collecting netaddr>=0.7.18 (from oslo.config>=5.2.0->python-keystoneclient>=0.2.3->django-storage-swift)
+#8 2.728   Downloading netaddr-1.3.0-py3-none-any.whl.metadata (5.0 kB)
+#8 2.764 Collecting rfc3986>=1.2.0 (from oslo.config>=5.2.0->python-keystoneclient>=0.2.3->django-storage-swift)
+#8 2.772   Downloading rfc3986-2.0.0-py2.py3-none-any.whl.metadata (6.6 kB)
+#8 2.844 Collecting PyYAML>=5.1 (from oslo.config>=5.2.0->python-keystoneclient>=0.2.3->django-storage-swift)
+#8 2.854   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#8 2.956 Collecting msgpack>=0.5.2 (from oslo.serialization>=2.18.0->python-keystoneclient>=0.2.3->django-storage-swift)
+#8 2.965   Downloading msgpack-1.1.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+#8 3.005 Collecting tzdata>=2022.4 (from oslo.serialization>=2.18.0->python-keystoneclient>=0.2.3->django-storage-swift)
+#8 3.013   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#8 3.086 Collecting pyparsing>=2.1.0 (from oslo.utils>=3.33.0->python-keystoneclient>=0.2.3->django-storage-swift)
+#8 3.094   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#8 3.200 Collecting psutil>=3.2.2 (from oslo.utils>=3.33.0->python-keystoneclient>=0.2.3->django-storage-swift)
+#8 3.209   Downloading psutil-7.1.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (23 kB)
+#8 3.232 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from pbr>=2.0.0->python-keystoneclient>=0.2.3->django-storage-swift) (79.0.1)
+#8 3.330 Collecting charset_normalizer<4,>=2 (from requests>=2.14.2->python-keystoneclient>=0.2.3->django-storage-swift)
+#8 3.369   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#8 3.415 Collecting idna<4,>=2.5 (from requests>=2.14.2->python-keystoneclient>=0.2.3->django-storage-swift)
+#8 3.425   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#8 3.488 Collecting urllib3<3,>=1.21.1 (from requests>=2.14.2->python-keystoneclient>=0.2.3->django-storage-swift)
+#8 3.497   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#8 3.539 Collecting certifi>=2017.4.17 (from requests>=2.14.2->python-keystoneclient>=0.2.3->django-storage-swift)
+#8 3.548   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#8 3.805 Downloading django_storage_swift-1.4.0-py2.py3-none-any.whl (11 kB)
+#8 3.824 Downloading python_keystoneclient-5.7.0-py3-none-any.whl (397 kB)
+#8 3.875    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 397.2/397.2 kB 8.0 MB/s eta 0:00:00
+#8 3.883 Downloading python_magic-0.4.27-py2.py3-none-any.whl (13 kB)
+#8 3.902 Downloading python_swiftclient-4.8.0-py3-none-any.whl (88 kB)
+#8 3.916    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.8/88.8 kB 6.3 MB/s eta 0:00:00
+#8 3.926 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 3.945 Downloading debtcollector-3.0.0-py3-none-any.whl (23 kB)
+#8 3.980 Downloading keystoneauth1-5.12.0-py3-none-any.whl (343 kB)
+#8 4.011    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 343.4/343.4 kB 11.3 MB/s eta 0:00:00
+#8 4.022 Downloading oslo_config-10.0.0-py3-none-any.whl (131 kB)
+#8 4.043    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 131.6/131.6 kB 6.3 MB/s eta 0:00:00
+#8 4.053 Downloading oslo_i18n-6.6.0-py3-none-any.whl (46 kB)
+#8 4.066    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.7/46.7 kB 3.4 MB/s eta 0:00:00
+#8 4.077 Downloading oslo_serialization-5.8.0-py3-none-any.whl (25 kB)
+#8 4.100 Downloading oslo_utils-9.1.0-py3-none-any.whl (134 kB)
+#8 4.120    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.2/134.2 kB 6.8 MB/s eta 0:00:00
+#8 4.129 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 4.144    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 4.3 MB/s eta 0:00:00
+#8 4.155 Downloading pbr-7.0.1-py2.py3-none-any.whl (126 kB)
+#8 4.174    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 126.1/126.1 kB 7.0 MB/s eta 0:00:00
+#8 4.186 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#8 4.202    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 5.3 MB/s eta 0:00:00
+#8 4.211 Downloading stevedore-5.5.0-py3-none-any.whl (49 kB)
+#8 4.225    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.5/49.5 kB 3.3 MB/s eta 0:00:00
+#8 4.234 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#8 4.261    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 6.0 MB/s eta 0:00:00
+#8 4.269 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#8 4.287    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 8.9 MB/s eta 0:00:00
+#8 4.296 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#8 4.310    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.8 MB/s eta 0:00:00
+#8 4.318 Downloading iso8601-2.1.0-py3-none-any.whl (7.5 kB)
+#8 4.338 Downloading msgpack-1.1.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (426 kB)
+#8 4.376    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 426.2/426.2 kB 11.5 MB/s eta 0:00:00
+#8 4.385 Downloading netaddr-1.3.0-py3-none-any.whl (2.3 MB)
+#8 4.536    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 15.1 MB/s eta 0:00:00
+#8 4.546 Downloading os_service_types-1.8.0-py3-none-any.whl (24 kB)
+#8 4.569 Downloading psutil-7.1.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (258 kB)
+#8 4.592    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 258.7/258.7 kB 11.5 MB/s eta 0:00:00
+#8 4.603 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#8 4.621    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 6.4 MB/s eta 0:00:00
+#8 4.630 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#8 4.685    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 14.8 MB/s eta 0:00:00
+#8 4.695 Downloading rfc3986-2.0.0-py2.py3-none-any.whl (31 kB)
+#8 4.714 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#8 4.725    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.6 MB/s eta 0:00:00
+#8 4.733 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#8 4.765    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 11.2 MB/s eta 0:00:00
+#8 4.773 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#8 4.790    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 7.8 MB/s eta 0:00:00
+#8 4.804 Downloading wrapt-2.0.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (114 kB)
+#8 4.821    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.1/114.1 kB 7.4 MB/s eta 0:00:00
+#8 4.969 Installing collected packages: wrapt, urllib3, tzdata, typing-extensions, stevedore, six, rfc3986, PyYAML, python-magic, pyparsing, psutil, pbr, packaging, netaddr, msgpack, iso8601, idna, charset_normalizer, certifi, requests, oslo.i18n, os-service-types, debtcollector, python-swiftclient, oslo.utils, oslo.config, keystoneauth1, oslo.serialization, python-keystoneclient, django-storage-swift
+#8 6.547 Successfully installed PyYAML-6.0.3 certifi-2025.10.5 charset_normalizer-3.4.4 debtcollector-3.0.0 django-storage-swift-1.4.0 idna-3.11 iso8601-2.1.0 keystoneauth1-5.12.0 msgpack-1.1.2 netaddr-1.3.0 os-service-types-1.8.0 oslo.config-10.0.0 oslo.i18n-6.6.0 oslo.serialization-5.8.0 oslo.utils-9.1.0 packaging-25.0 pbr-7.0.1 psutil-7.1.2 pyparsing-3.2.5 python-keystoneclient-5.7.0 python-magic-0.4.27 python-swiftclient-4.8.0 requests-2.32.5 rfc3986-2.0.0 six-1.17.0 stevedore-5.5.0 typing-extensions-4.15.0 tzdata-2025.2 urllib3-2.5.0 wrapt-2.0.0
+#8 6.547 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 6.554 
+#8 6.554 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 6.554 [notice] To update, run: pip install --upgrade pip
+#8 DONE 7.1s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.4s done
+#9 writing image sha256:d6b69cdfc8a83a4fe03949f29b93dc622dc63ac39c60c0f1b6d7b2820558bd01 done
+#9 naming to docker.io/library/test-image-b4a0aed67fc0da6b02434a5c2cef45c4 0.0s done
+#9 DONE 0.4s
+
+View build details: docker-desktop://dashboard/build/default/default/r9yg99nry14oxp6g0ft0kavwl
+[2025-10-29 19:30:46] SUCCESS: Build completed for b4a0aed67fc0da6b02434a5c2cef45c4

@@ -1,0 +1,95 @@
+=== Docker Build Log for c362f0ad488e3b289394 ===
+Started at: Mi 29. Okt 19:52:40 CET 2025
+
+[2025-10-29 19:52:40] START: Building image for c362f0ad488e3b289394
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 343B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.84kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/8] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/8] COPY hard-gists/c362f0ad488e3b289394/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/8] RUN ["pip","install","pan-python"]
+#7 2.039 Collecting pan-python
+#7 2.251   Downloading pan_python-0.25.0-py3-none-any.whl.metadata (1.4 kB)
+#7 2.284 Downloading pan_python-0.25.0-py3-none-any.whl (60 kB)
+#7 2.375    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.3/60.3 kB 605.1 kB/s eta 0:00:00
+#7 2.407 Installing collected packages: pan-python
+#7 2.454 Successfully installed pan-python-0.25.0
+#7 2.454 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.645 
+#7 2.645 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.645 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.8s
+
+#8 [4/8] RUN ["pip","install","pandacan"]
+#8 0.701 Collecting pandacan
+#8 0.739   Downloading pandacan-0.0.9.tar.gz (36 kB)
+#8 0.760   Preparing metadata (setup.py): started
+#8 1.183   Preparing metadata (setup.py): finished with status 'done'
+#8 1.218 Collecting libusb1==1.6.6 (from pandacan)
+#8 1.238   Downloading libusb1-1.6.6.tar.gz (56 kB)
+#8 1.257      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.0/56.0 kB 2.8 MB/s eta 0:00:00
+#8 1.262   Preparing metadata (setup.py): started
+#8 1.359   Preparing metadata (setup.py): finished with status 'error'
+#8 1.362   error: subprocess-exited-with-error
+#8 1.362   
+#8 1.362   × python setup.py egg_info did not run successfully.
+#8 1.362   │ exit code: 1
+#8 1.362   ╰─> [1 lines of output]
+#8 1.362       error in libusb1 setup command: use_2to3 is invalid.
+#8 1.362       [end of output]
+#8 1.362   
+#8 1.362   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 1.363 error: metadata-generation-failed
+#8 1.363 
+#8 1.363 × Encountered error while generating package metadata.
+#8 1.363 ╰─> See above for output.
+#8 1.363 
+#8 1.363 note: This is an issue with the package mentioned above, not pip.
+#8 1.363 hint: See above for details.
+#8 1.368 
+#8 1.368 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.368 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install pandacan" did not complete successfully: exit code: 1
+------
+ > [4/8] RUN ["pip","install","pandacan"]:
+1.363 error: metadata-generation-failed
+1.363 
+1.363 × Encountered error while generating package metadata.
+1.363 ╰─> See above for output.
+1.363 
+1.363 note: This is an issue with the package mentioned above, not pip.
+1.363 hint: See above for details.
+1.368 
+1.368 [notice] A new release of pip is available: 24.0 -> 25.3
+1.368 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/c362f0ad488e3b289394/snippet.py /snippet.py
+   3 |     RUN ["pip","install","pan-python"]
+   4 | >>> RUN ["pip","install","pandacan"]
+   5 |     RUN ["pip","install","keras"]
+   6 |     RUN ["pip","install","numpy"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install pandacan" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/wbb2cafx1q9wxv5ftj76y5b9b
+[2025-10-29 19:52:45] ERROR: Build failed for c362f0ad488e3b289394

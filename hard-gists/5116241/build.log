@@ -1,0 +1,279 @@
+=== Docker Build Log for 5116241 ===
+Started at: Mi 29. Okt 15:23:20 CET 2025
+
+[2025-10-29 15:23:20] START: Building image for 5116241
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 315B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 812B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/8] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/8] COPY hard-gists/5116241/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/8] RUN ["pip","install","six"]
+#7 1.974 Collecting six
+#7 2.008   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.028 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.072 Installing collected packages: six
+#7 2.089 Successfully installed six-1.17.0
+#7 2.089 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.185 
+#7 2.185 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.185 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.3s
+
+#8 [4/8] RUN ["pip","install","pytest"]
+#8 0.583 Collecting pytest
+#8 0.618   Downloading pytest-8.4.2-py3-none-any.whl.metadata (7.7 kB)
+#8 0.662 Collecting iniconfig>=1 (from pytest)
+#8 0.670   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+#8 0.725 Collecting packaging>=20 (from pytest)
+#8 0.734   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 0.781 Collecting pluggy<2,>=1.5 (from pytest)
+#8 0.790   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#8 0.842 Collecting pygments>=2.7.2 (from pytest)
+#8 0.850   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#8 0.881 Downloading pytest-8.4.2-py3-none-any.whl (365 kB)
+#8 0.919    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 365.8/365.8 kB 10.1 MB/s eta 0:00:00
+#8 0.927 Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+#8 0.944 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 0.958    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.1 MB/s eta 0:00:00
+#8 0.967 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#8 0.985 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#8 1.039    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 23.4 MB/s eta 0:00:00
+#8 1.100 Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest
+#8 1.840 Successfully installed iniconfig-2.3.0 packaging-25.0 pluggy-1.6.0 pygments-2.19.2 pytest-8.4.2
+#8 1.841 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.846 
+#8 1.846 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.846 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.1s
+
+#9 [5/8] RUN ["pip","install","py"]
+#9 0.575 Collecting py
+#9 0.609   Downloading py-1.11.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#9 0.634 Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+#9 0.673    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 kB 2.6 MB/s eta 0:00:00
+#9 0.719 Installing collected packages: py
+#9 0.803 Successfully installed py-1.11.0
+#9 0.803 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.809 
+#9 0.809 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.809 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.9s
+
+#10 [6/8] RUN ["pip","install","numpy"]
+#10 0.758 Collecting numpy
+#10 0.792   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#10 0.820      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.0 MB/s eta 0:00:00
+#10 0.842 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#10 1.508    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 22.6 MB/s eta 0:00:00
+#10 1.599 Installing collected packages: numpy
+#10 3.072 Successfully installed numpy-2.3.4
+#10 3.072 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 3.078 
+#10 3.078 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 3.078 [notice] To update, run: pip install --upgrade pip
+#10 DONE 3.5s
+
+#11 [7/8] RUN ["pip","install","matplotlib"]
+#11 0.644 Collecting matplotlib
+#11 0.678   Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#11 0.790 Collecting contourpy>=1.0.1 (from matplotlib)
+#11 0.799   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#11 0.839 Collecting cycler>=0.10 (from matplotlib)
+#11 0.848   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#11 1.040 Collecting fonttools>=4.22.0 (from matplotlib)
+#11 1.050   Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+#11 1.096      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.3/112.3 kB 2.4 MB/s eta 0:00:00
+#11 1.201 Collecting kiwisolver>=1.3.1 (from matplotlib)
+#11 1.210   Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+#11 1.231 Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.11/site-packages (from matplotlib) (2.3.4)
+#11 1.232 Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.11/site-packages (from matplotlib) (25.0)
+#11 1.412 Collecting pillow>=8 (from matplotlib)
+#11 1.420   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#11 1.488 Collecting pyparsing>=3 (from matplotlib)
+#11 1.496   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#11 1.541 Collecting python-dateutil>=2.7 (from matplotlib)
+#11 1.549   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#11 1.615 Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.11/site-packages (from python-dateutil>=2.7->matplotlib) (1.17.0)
+#11 1.627 Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+#11 1.966    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 25.7 MB/s eta 0:00:00
+#11 1.975 Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+#11 1.998    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 355.2/355.2 kB 16.4 MB/s eta 0:00:00
+#11 2.007 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#11 2.032 Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#11 2.272    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 20.9 MB/s eta 0:00:00
+#11 2.281 Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+#11 2.338    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 25.9 MB/s eta 0:00:00
+#11 2.348 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#11 2.691    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 20.6 MB/s eta 0:00:00
+#11 2.699 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#11 2.712    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 9.4 MB/s eta 0:00:00
+#11 2.720 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#11 2.737    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 14.7 MB/s eta 0:00:00
+#11 2.916 Installing collected packages: python-dateutil, pyparsing, pillow, kiwisolver, fonttools, cycler, contourpy, matplotlib
+#11 4.948 Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.60.1 kiwisolver-1.4.9 matplotlib-3.10.7 pillow-12.0.0 pyparsing-3.2.5 python-dateutil-2.9.0.post0
+#11 4.949 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 4.956 
+#11 4.956 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 4.956 [notice] To update, run: pip install --upgrade pip
+#11 DONE 5.5s
+
+#12 [8/8] RUN ["pip","install","larch"]
+#12 0.737 Collecting larch
+#12 0.873   Downloading larch-6.0.42-py3-none-any.whl.metadata (2.4 kB)
+#12 0.912 Requirement already satisfied: numpy>=1.19 in /usr/local/lib/python3.11/site-packages (from larch) (2.3.4)
+#12 1.055 Collecting pandas>=1.5 (from larch)
+#12 1.066   Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+#12 1.105      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 2.2 MB/s eta 0:00:00
+#12 1.210 Collecting pyarrow (from larch)
+#12 1.220   Downloading pyarrow-22.0.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (3.2 kB)
+#12 1.276 Collecting xarray (from larch)
+#12 1.285   Downloading xarray-2025.10.1-py3-none-any.whl.metadata (12 kB)
+#12 1.401 Collecting numba>=0.60.0 (from larch)
+#12 1.410   Downloading numba-0.62.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.8 kB)
+#12 1.522 Collecting numexpr (from larch)
+#12 1.532   Downloading numexpr-2.14.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.0 kB)
+#12 1.588 Collecting filelock (from larch)
+#12 1.596   Downloading filelock-3.20.0-py3-none-any.whl.metadata (2.1 kB)
+#12 1.677 Collecting dask (from larch)
+#12 1.687   Downloading dask-2025.10.0-py3-none-any.whl.metadata (3.8 kB)
+#12 1.737 Collecting networkx (from larch)
+#12 1.746   Downloading networkx-3.5-py3-none-any.whl.metadata (6.3 kB)
+#12 1.889 Collecting addicty (from larch)
+#12 1.998   Downloading addicty-2023.9.3-py3-none-any.whl.metadata (336 bytes)
+#12 2.141 Collecting xmle>=0.1.25 (from larch)
+#12 2.320   Downloading xmle-0.1.26-py3-none-any.whl.metadata (845 bytes)
+#12 2.416 Collecting rich (from larch)
+#12 2.424   Downloading rich-14.2.0-py3-none-any.whl.metadata (18 kB)
+#12 2.478 Collecting sparse (from larch)
+#12 2.487   Downloading sparse-0.17.0-py2.py3-none-any.whl.metadata (5.3 kB)
+#12 2.627 Collecting scipy (from larch)
+#12 2.636   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#12 2.652      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 4.1 MB/s eta 0:00:00
+#12 2.693 Collecting Jinja2 (from larch)
+#12 2.701   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#12 2.783 Collecting llvmlite<0.46,>=0.45.0dev0 (from numba>=0.60.0->larch)
+#12 2.792   Downloading llvmlite-0.45.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+#12 2.880 Requirement already satisfied: python-dateutil>=2.8.2 in /usr/local/lib/python3.11/site-packages (from pandas>=1.5->larch) (2.9.0.post0)
+#12 2.939 Collecting pytz>=2020.1 (from pandas>=1.5->larch)
+#12 2.947   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#12 2.988 Collecting tzdata>=2022.7 (from pandas>=1.5->larch)
+#12 2.996   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#12 3.066 Collecting pyyaml (from addicty->larch)
+#12 3.075   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#12 3.127 Collecting yamllint (from addicty->larch)
+#12 3.135   Downloading yamllint-1.37.1-py3-none-any.whl.metadata (4.3 kB)
+#12 3.200 Collecting click>=8.1 (from dask->larch)
+#12 3.209   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#12 3.252 Collecting cloudpickle>=3.0.0 (from dask->larch)
+#12 3.261   Downloading cloudpickle-3.1.1-py3-none-any.whl.metadata (7.1 kB)
+#12 3.311 Collecting fsspec>=2021.09.0 (from dask->larch)
+#12 3.321   Downloading fsspec-2025.9.0-py3-none-any.whl.metadata (10 kB)
+#12 3.334 Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.11/site-packages (from dask->larch) (25.0)
+#12 3.361 Collecting partd>=1.4.0 (from dask->larch)
+#12 3.370   Downloading partd-1.4.2-py3-none-any.whl.metadata (4.6 kB)
+#12 3.409 Collecting toolz>=0.10.0 (from dask->larch)
+#12 3.417   Downloading toolz-1.1.0-py3-none-any.whl.metadata (5.1 kB)
+#12 3.485 Collecting importlib_metadata>=4.13.0 (from dask->larch)
+#12 3.493   Downloading importlib_metadata-8.7.0-py3-none-any.whl.metadata (4.8 kB)
+#12 3.580 Collecting MarkupSafe>=2.0 (from Jinja2->larch)
+#12 3.589   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#12 3.656 Collecting markdown-it-py>=2.2.0 (from rich->larch)
+#12 3.664   Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+#12 3.676 Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.11/site-packages (from rich->larch) (2.19.2)
+#12 3.843 Collecting zipp>=3.20 (from importlib_metadata>=4.13.0->dask->larch)
+#12 3.853   Downloading zipp-3.23.0-py3-none-any.whl.metadata (3.6 kB)
+#12 3.903 Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->larch)
+#12 3.911   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+#12 3.959 Collecting locket (from partd>=1.4.0->dask->larch)
+#12 3.968   Downloading locket-1.0.0-py2.py3-none-any.whl.metadata (2.8 kB)
+#12 3.986 Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.11/site-packages (from python-dateutil>=2.8.2->pandas>=1.5->larch) (1.17.0)
+#12 4.025 Collecting pathspec>=0.5.3 (from yamllint->addicty->larch)
+#12 4.035   Downloading pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+#12 4.266 Downloading larch-6.0.42-py3-none-any.whl (1.9 MB)
+#12 4.533    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 7.0 MB/s eta 0:00:00
+#12 4.543 Downloading numba-0.62.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.7 MB)
+#12 4.757    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.7/3.7 MB 17.6 MB/s eta 0:00:00
+#12 4.801 Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+#12 5.355    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 23.3 MB/s eta 0:00:00
+#12 5.495 Downloading xmle-0.1.26-py3-none-any.whl (27 kB)
+#12 5.700 Downloading addicty-2023.9.3-py3-none-any.whl (7.5 kB)
+#12 5.728 Downloading dask-2025.10.0-py3-none-any.whl (1.5 MB)
+#12 5.799    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 21.2 MB/s eta 0:00:00
+#12 5.807 Downloading filelock-3.20.0-py3-none-any.whl (16 kB)
+#12 5.828 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#12 5.842    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 11.3 MB/s eta 0:00:00
+#12 5.850 Downloading networkx-3.5-py3-none-any.whl (2.0 MB)
+#12 5.942    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 22.6 MB/s eta 0:00:00
+#12 5.953 Downloading numexpr-2.14.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (442 kB)
+#12 5.978    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 442.0/442.0 kB 18.0 MB/s eta 0:00:00
+#12 5.988 Downloading pyarrow-22.0.0-cp311-cp311-manylinux_2_28_x86_64.whl (47.7 MB)
+#12 7.952    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.7/47.7 MB 21.1 MB/s eta 0:00:00
+#12 7.962 Downloading rich-14.2.0-py3-none-any.whl (243 kB)
+#12 7.980    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.4/243.4 kB 14.1 MB/s eta 0:00:00
+#12 7.990 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#12 9.462    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 16.1 MB/s eta 0:00:00
+#12 9.473 Downloading sparse-0.17.0-py2.py3-none-any.whl (259 kB)
+#12 9.491    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 259.4/259.4 kB 15.9 MB/s eta 0:00:00
+#12 9.499 Downloading xarray-2025.10.1-py3-none-any.whl (1.4 MB)
+#12 9.560    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 23.2 MB/s eta 0:00:00
+#12 9.568 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#12 9.581    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 9.2 MB/s eta 0:00:00
+#12 9.590 Downloading cloudpickle-3.1.1-py3-none-any.whl (20 kB)
+#12 9.608 Downloading fsspec-2025.9.0-py3-none-any.whl (199 kB)
+#12 9.625    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 199.3/199.3 kB 13.4 MB/s eta 0:00:00
+#12 9.634 Downloading importlib_metadata-8.7.0-py3-none-any.whl (27 kB)
+#12 9.654 Downloading llvmlite-0.45.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (56.3 MB)
+#12 11.87    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.3/56.3 MB 13.4 MB/s eta 0:00:00
+#12 11.88 Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+#12 11.89    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.3/87.3 kB 6.4 MB/s eta 0:00:00
+#12 11.90 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#12 11.92 Downloading partd-1.4.2-py3-none-any.whl (18 kB)
+#12 11.94 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#12 11.97    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 17.6 MB/s eta 0:00:00
+#12 11.97 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#12 12.01    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 20.6 MB/s eta 0:00:00
+#12 12.02 Downloading toolz-1.1.0-py3-none-any.whl (58 kB)
+#12 12.04    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.1/58.1 kB 4.8 MB/s eta 0:00:00
+#12 12.04 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#12 12.07    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 15.1 MB/s eta 0:00:00
+#12 12.08 Downloading yamllint-1.37.1-py3-none-any.whl (68 kB)
+#12 12.09    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.8/68.8 kB 4.9 MB/s eta 0:00:00
+#12 12.10 Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+#12 12.12 Downloading pathspec-0.12.1-py3-none-any.whl (31 kB)
+#12 12.14 Downloading zipp-3.23.0-py3-none-any.whl (10 kB)
+#12 12.15 Downloading locket-1.0.0-py2.py3-none-any.whl (4.4 kB)
+#12 12.87 Installing collected packages: pytz, zipp, xmle, tzdata, toolz, scipy, pyyaml, pyarrow, pathspec, numexpr, networkx, mdurl, MarkupSafe, locket, llvmlite, fsspec, filelock, cloudpickle, click, yamllint, partd, pandas, numba, markdown-it-py, Jinja2, importlib_metadata, xarray, sparse, rich, dask, addicty, larch
+#12 26.79 Successfully installed Jinja2-3.1.6 MarkupSafe-3.0.3 addicty-2023.9.3 click-8.3.0 cloudpickle-3.1.1 dask-2025.10.0 filelock-3.20.0 fsspec-2025.9.0 importlib_metadata-8.7.0 larch-6.0.42 llvmlite-0.45.1 locket-1.0.0 markdown-it-py-4.0.0 mdurl-0.1.2 networkx-3.5 numba-0.62.1 numexpr-2.14.1 pandas-2.3.3 partd-1.4.2 pathspec-0.12.1 pyarrow-22.0.0 pytz-2025.2 pyyaml-6.0.3 rich-14.2.0 scipy-1.16.3 sparse-0.17.0 toolz-1.1.0 tzdata-2025.2 xarray-2025.10.1 xmle-0.1.26 yamllint-1.37.1 zipp-3.23.0
+#12 26.79 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 26.80 
+#12 26.80 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 26.80 [notice] To update, run: pip install --upgrade pip
+#12 DONE 30.6s
+
+#13 exporting to image
+#13 exporting layers
+#13 exporting layers 3.6s done
+#13 writing image sha256:643f0ad963f3700414c43d46ee5e0377a71302dc44a938c3b7802f8b341a8a15 done
+#13 naming to docker.io/library/test-image-5116241 done
+#13 DONE 3.7s
+
+View build details: docker-desktop://dashboard/build/default/default/zinrs7oofhng6f3y2tc7q1dy7
+[2025-10-29 15:24:09] SUCCESS: Build completed for 5116241

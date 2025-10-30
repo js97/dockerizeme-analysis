@@ -1,0 +1,16 @@
+=== Docker Run Log for 42472327b4be382b02eb ===
+Started at: Mi 29. Okt 14:28:26 CET 2025
+
+[2025-10-29 14:28:45] START: Running container for 42472327b4be382b02eb
+[2025-10-29 14:28:47] SUCCESS: Container ec555003d01700dac4cd6af98c80b3542aef95d9c4064e6216bbbb31cdb2f140 started for 42472327b4be382b02eb
+=== Container logs for 42472327b4be382b02eb ===
+Traceback (most recent call last):
+  File "/snippet.py", line 27, in <module>
+    repo = Repository('.git')
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pygit2/repository.py", line 1791, in __init__
+    path_backend = init_file_backend(path, int(flags))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_pygit2.GitError: Repository not found at .git
+=== End of logs for 42472327b4be382b02eb ===
+[2025-10-29 14:28:49] INFO: Container ec555003d01700dac4cd6af98c80b3542aef95d9c4064e6216bbbb31cdb2f140 has stopped

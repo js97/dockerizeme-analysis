@@ -1,0 +1,135 @@
+=== Docker Build Log for 4524299 ===
+Started at: Mi 29. Okt 14:42:37 CET 2025
+
+[2025-10-29 14:42:37] START: Building image for 4524299
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 202B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.20kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/4524299/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","dpkt"]
+#7 1.973 Collecting dpkt
+#7 2.010   Downloading dpkt-1.9.8-py3-none-any.whl.metadata (1.7 kB)
+#7 2.030 Downloading dpkt-1.9.8-py3-none-any.whl (194 kB)
+#7 2.061    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 195.0/195.0 kB 6.3 MB/s eta 0:00:00
+#7 2.096 Installing collected packages: dpkt
+#7 2.204 Successfully installed dpkt-1.9.8
+#7 2.204 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.299 
+#7 2.299 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.299 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.5s
+
+#8 [4/4] RUN ["pip","install","NetfilterQueue"]
+#8 0.650 Collecting NetfilterQueue
+#8 0.783   Downloading NetfilterQueue-1.1.0.tar.gz (90 kB)
+#8 0.820      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.3/90.3 kB 2.4 MB/s eta 0:00:00
+#8 0.831   Installing build dependencies: started
+#8 2.267   Installing build dependencies: finished with status 'done'
+#8 2.268   Getting requirements to build wheel: started
+#8 2.417   Getting requirements to build wheel: finished with status 'done'
+#8 2.420   Installing backend dependencies: started
+#8 3.810   Installing backend dependencies: finished with status 'done'
+#8 3.811   Preparing metadata (pyproject.toml): started
+#8 4.510   Preparing metadata (pyproject.toml): finished with status 'done'
+#8 4.512 Building wheels for collected packages: NetfilterQueue
+#8 4.513   Building wheel for NetfilterQueue (pyproject.toml): started
+#8 4.842   Building wheel for NetfilterQueue (pyproject.toml): finished with status 'error'
+#8 4.849   error: subprocess-exited-with-error
+#8 4.849   
+#8 4.849   × Building wheel for NetfilterQueue (pyproject.toml) did not run successfully.
+#8 4.849   │ exit code: 1
+#8 4.849   ╰─> [40 lines of output]
+#8 4.849       /tmp/pip-build-env-3gaksovs/overlay/lib/python3.11/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+#8 4.849       !!
+#8 4.849       
+#8 4.849               ********************************************************************************
+#8 4.849               Please consider removing the following classifiers in favor of a SPDX license expression:
+#8 4.849       
+#8 4.849               License :: OSI Approved :: MIT License
+#8 4.849       
+#8 4.849               See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+#8 4.849               ********************************************************************************
+#8 4.849       
+#8 4.849       !!
+#8 4.849         self._finalize_license_expression()
+#8 4.849       running bdist_wheel
+#8 4.849       running build
+#8 4.849       running build_py
+#8 4.849       creating build/lib.linux-x86_64-cpython-311/netfilterqueue
+#8 4.849       copying netfilterqueue/_version.py -> build/lib.linux-x86_64-cpython-311/netfilterqueue
+#8 4.849       copying netfilterqueue/__init__.py -> build/lib.linux-x86_64-cpython-311/netfilterqueue
+#8 4.849       running egg_info
+#8 4.849       writing NetfilterQueue.egg-info/PKG-INFO
+#8 4.849       writing dependency_links to NetfilterQueue.egg-info/dependency_links.txt
+#8 4.849       writing top-level names to NetfilterQueue.egg-info/top_level.txt
+#8 4.849       reading manifest file 'NetfilterQueue.egg-info/SOURCES.txt'
+#8 4.849       reading manifest template 'MANIFEST.in'
+#8 4.849       adding license file 'LICENSE.txt'
+#8 4.849       writing manifest file 'NetfilterQueue.egg-info/SOURCES.txt'
+#8 4.849       copying netfilterqueue/_impl.pxd -> build/lib.linux-x86_64-cpython-311/netfilterqueue
+#8 4.849       copying netfilterqueue/_impl.pyi -> build/lib.linux-x86_64-cpython-311/netfilterqueue
+#8 4.849       copying netfilterqueue/_impl.pyx -> build/lib.linux-x86_64-cpython-311/netfilterqueue
+#8 4.849       copying netfilterqueue/py.typed -> build/lib.linux-x86_64-cpython-311/netfilterqueue
+#8 4.849       running build_ext
+#8 4.849       building 'netfilterqueue._impl' extension
+#8 4.849       creating build/temp.linux-x86_64-cpython-311/netfilterqueue
+#8 4.849       gcc -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -I/usr/local/include/python3.11 -c netfilterqueue/_impl.c -o build/temp.linux-x86_64-cpython-311/netfilterqueue/_impl.o
+#8 4.849       netfilterqueue/_impl.c:1151:10: fatal error: libnfnetlink/linux_nfnetlink.h: No such file or directory
+#8 4.849        1151 | #include "libnfnetlink/linux_nfnetlink.h"
+#8 4.849             |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#8 4.849       compilation terminated.
+#8 4.849       error: command '/usr/bin/gcc' failed with exit code 1
+#8 4.849       [end of output]
+#8 4.849   
+#8 4.849   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 4.849   ERROR: Failed building wheel for NetfilterQueue
+#8 4.850 Failed to build NetfilterQueue
+#8 4.850 ERROR: Could not build wheels for NetfilterQueue, which is required to install pyproject.toml-based projects
+#8 4.856 
+#8 4.856 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 4.856 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install NetfilterQueue" did not complete successfully: exit code: 1
+------
+ > [4/4] RUN ["pip","install","NetfilterQueue"]:
+4.849       error: command '/usr/bin/gcc' failed with exit code 1
+4.849       [end of output]
+4.849   
+4.849   note: This error originates from a subprocess, and is likely not a problem with pip.
+4.849   ERROR: Failed building wheel for NetfilterQueue
+4.850 Failed to build NetfilterQueue
+4.850 ERROR: Could not build wheels for NetfilterQueue, which is required to install pyproject.toml-based projects
+4.856 
+4.856 [notice] A new release of pip is available: 24.0 -> 25.3
+4.856 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/4524299/snippet.py /snippet.py
+   3 |     RUN ["pip","install","dpkt"]
+   4 | >>> RUN ["pip","install","NetfilterQueue"]
+   5 |     CMD ["python3","/snippet.py"]
+   6 |     
+--------------------
+ERROR: failed to build: failed to solve: process "pip install NetfilterQueue" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/issa3mohe4ltyj5gmgu2x0h3d
+[2025-10-29 14:42:45] ERROR: Build failed for 4524299

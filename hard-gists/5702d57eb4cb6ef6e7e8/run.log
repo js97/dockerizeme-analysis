@@ -1,0 +1,12 @@
+=== Docker Run Log for 5702d57eb4cb6ef6e7e8 ===
+Started at: Mi 29. Okt 15:54:33 CET 2025
+
+[2025-10-29 15:54:34] START: Running container for 5702d57eb4cb6ef6e7e8
+[2025-10-29 15:54:34] SUCCESS: Container 0c47e26f24ac797ea6ae8962e87008d3e1fbc35d73850100f5aebe692df547e6 started for 5702d57eb4cb6ef6e7e8
+=== Container logs for 5702d57eb4cb6ef6e7e8 ===
+  File "/snippet.py", line 47
+    print """Saving "%s" to "qrcode-account-%02d.svg" """[:-1] % (account.account_desc,
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 5702d57eb4cb6ef6e7e8 ===
+[2025-10-29 15:54:36] INFO: Container 0c47e26f24ac797ea6ae8962e87008d3e1fbc35d73850100f5aebe692df547e6 has stopped

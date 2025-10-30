@@ -1,0 +1,12 @@
+=== Docker Run Log for 3012318 ===
+Started at: Mi 29. Okt 13:36:45 CET 2025
+
+[2025-10-29 13:36:45] START: Running container for 3012318
+[2025-10-29 13:36:45] SUCCESS: Container 5d85db121117a88b9b1fdedfa332169c485042e7076840a6ad4a2f8d1a491584 started for 3012318
+=== Container logs for 3012318 ===
+  File "/snippet.py", line 14
+    print "Using existing test database for alias '%s'%s..." % (self.connection.alias, test_db_repr)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 3012318 ===
+[2025-10-29 13:36:48] INFO: Container 5d85db121117a88b9b1fdedfa332169c485042e7076840a6ad4a2f8d1a491584 has stopped

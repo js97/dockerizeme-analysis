@@ -1,0 +1,25 @@
+=== Docker Run Log for 1260ba896d448bad0eebdf26b80c00cc ===
+Started at: Mi 29. Okt 12:02:24 CET 2025
+
+[2025-10-29 12:03:40] START: Running container for 1260ba896d448bad0eebdf26b80c00cc
+[2025-10-29 12:03:41] SUCCESS: Container 0cf5dc2e4c0a2d6d4a4ebc4eb3b77fcdfff779c7fa30fc646e6fd17f4391777e started for 1260ba896d448bad0eebdf26b80c00cc
+=== Container logs for 1260ba896d448bad0eebdf26b80c00cc ===
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+2025-10-29 11:03:41.422837: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-10-29 11:03:41.463239: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-29 11:03:42.673554: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+/usr/local/lib/python3.11/site-packages/gym/envs/registration.py:555: UserWarning: [33mWARN: The environment CartPole-v0 is out of date. You should consider upgrading to version `v1`.[0m
+  logger.warn(
+Traceback (most recent call last):
+  File "/snippet.py", line 161, in <module>
+    dqn.init_network()
+  File "/snippet.py", line 30, in init_network
+    self.x = tf.placeholder(tf.float32, [None, self.input_size])
+             ^^^^^^^^^^^^^^
+AttributeError: module 'tensorflow' has no attribute 'placeholder'
+=== End of logs for 1260ba896d448bad0eebdf26b80c00cc ===
+[2025-10-29 12:03:43] INFO: Container 0cf5dc2e4c0a2d6d4a4ebc4eb3b77fcdfff779c7fa30fc646e6fd17f4391777e has stopped

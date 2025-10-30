@@ -1,0 +1,12 @@
+=== Docker Run Log for 3714115 ===
+Started at: Mi 29. Okt 13:57:25 CET 2025
+
+[2025-10-29 13:57:26] START: Running container for 3714115
+[2025-10-29 13:57:26] SUCCESS: Container 38b5a978ee1f31c017d3ff0259c4e4b18543ee5bd2dbd2b9d54d44fdf675b34b started for 3714115
+=== Container logs for 3714115 ===
+  File "/snippet.py", line 74
+    qp = filter(lambda (n, v): not(n == name and v == value), qp)
+                       ^^^^^^
+SyntaxError: Lambda expression parameters cannot be parenthesized
+=== End of logs for 3714115 ===
+[2025-10-29 13:57:28] INFO: Container 38b5a978ee1f31c017d3ff0259c4e4b18543ee5bd2dbd2b9d54d44fdf675b34b has stopped

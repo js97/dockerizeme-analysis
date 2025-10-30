@@ -1,0 +1,110 @@
+=== Docker Build Log for 19284bd220165758a0c953ae25108b6b ===
+Started at: Mi 29. Okt 12:34:32 CET 2025
+
+[2025-10-29 12:34:32] START: Building image for 19284bd220165758a0c953ae25108b6b
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 251B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 5.14kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/19284bd220165758a0c953ae25108b6b/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","mathutils"]
+#7 2.038 Collecting mathutils
+#7 2.077   Downloading mathutils-3.3.0.tar.gz (245 kB)
+#7 2.112      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 245.4/245.4 kB 7.6 MB/s eta 0:00:00
+#7 2.131   Preparing metadata (setup.py): started
+#7 2.513   Preparing metadata (setup.py): finished with status 'done'
+#7 2.515 Building wheels for collected packages: mathutils
+#7 2.516   Building wheel for mathutils (setup.py): started
+#7 9.743   Building wheel for mathutils (setup.py): finished with status 'done'
+#7 9.746   Created wheel for mathutils: filename=mathutils-3.3.0-cp311-cp311-linux_x86_64.whl size=714341 sha256=5818da6882f3c9d1ce358f0bcb39830839bea1a38deafa8b006939fb030766e9
+#7 9.746   Stored in directory: /root/.cache/pip/wheels/49/bb/9e/86bd4d162535e81c0f80c64918acf23d920ed0123430d5b4a0
+#7 9.751 Successfully built mathutils
+#7 9.780 Installing collected packages: mathutils
+#7 9.806 Successfully installed mathutils-3.3.0
+#7 9.807 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 9.899 
+#7 9.899 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 9.899 [notice] To update, run: pip install --upgrade pip
+#7 DONE 10.1s
+
+#8 [4/5] RUN ["pip","install","bpy"]
+#8 0.498 Collecting bpy
+#8 0.533   Downloading bpy-4.5.4-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (2.0 kB)
+#8 0.767 Collecting cython (from bpy)
+#8 0.778   Downloading cython-3.1.6-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.0 kB)
+#8 0.968 Collecting numpy<2.0,>=1.26 (from bpy)
+#8 0.980   Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+#8 1.008      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.0/61.0 kB 2.0 MB/s eta 0:00:00
+#8 1.055 Collecting requests (from bpy)
+#8 1.063   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#8 1.166 Collecting zstandard (from bpy)
+#8 1.175   Downloading zstandard-0.25.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.3 kB)
+#8 1.283 Collecting charset_normalizer<4,>=2 (from requests->bpy)
+#8 1.292   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#8 1.332 Collecting idna<4,>=2.5 (from requests->bpy)
+#8 1.340   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#8 1.399 Collecting urllib3<3,>=1.21.1 (from requests->bpy)
+#8 1.407   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#8 1.451 Collecting certifi>=2017.4.17 (from requests->bpy)
+#8 1.459   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#8 1.490 Downloading bpy-4.5.4-cp311-cp311-manylinux_2_28_x86_64.whl (373.0 MB)
+#8 17.12    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 373.0/373.0 MB 2.4 MB/s eta 0:00:00
+#8 17.13 Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.3 MB)
+#8 17.82    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.3/18.3 MB 23.1 MB/s eta 0:00:00
+#8 17.83 Downloading cython-3.1.6-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.3 MB)
+#8 17.97    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 24.7 MB/s eta 0:00:00
+#8 17.98 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#8 17.99    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 4.8 MB/s eta 0:00:00
+#8 18.00 Downloading zstandard-0.25.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.6 MB)
+#8 18.21    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.6/5.6 MB 26.9 MB/s eta 0:00:00
+#8 18.22 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#8 18.23    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 11.6 MB/s eta 0:00:00
+#8 18.24 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#8 18.25    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.0 MB/s eta 0:00:00
+#8 18.26 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#8 18.28    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 3.1 MB/s eta 0:00:00
+#8 18.29 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#8 18.30    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 8.8 MB/s eta 0:00:00
+#8 19.13 Installing collected packages: zstandard, urllib3, numpy, idna, cython, charset_normalizer, certifi, requests, bpy
+#8 24.87 Successfully installed bpy-4.5.4 certifi-2025.10.5 charset_normalizer-3.4.4 cython-3.1.6 idna-3.11 numpy-1.26.4 requests-2.32.5 urllib3-2.5.0 zstandard-0.25.0
+#8 24.87 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 24.87 
+#8 24.87 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 24.87 [notice] To update, run: pip install --upgrade pip
+#8 DONE 28.9s
+
+#9 [5/5] RUN ["pip","install","numpy"]
+#9 0.545 Requirement already satisfied: numpy in /usr/local/lib/python3.11/site-packages (1.26.4)
+#9 0.596 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.601 
+#9 0.601 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.601 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.7s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 3.9s done
+#10 writing image sha256:da0bd9469e9336a65da59193004d838e25d9234f379298ab59a0fb324e980e49 done
+#10 naming to docker.io/library/test-image-19284bd220165758a0c953ae25108b6b done
+#10 DONE 4.0s
+
+View build details: docker-desktop://dashboard/build/default/default/k0u8bkieyv97uixwqx2jzuk7g
+[2025-10-29 12:35:16] SUCCESS: Build completed for 19284bd220165758a0c953ae25108b6b

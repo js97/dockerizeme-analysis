@@ -1,0 +1,114 @@
+=== Docker Build Log for 139f710ca91ed5fabaf9e6616d2c762b ===
+Started at: Mi 29. Okt 12:12:21 CET 2025
+
+[2025-10-29 12:12:21] START: Building image for 139f710ca91ed5fabaf9e6616d2c762b
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 334B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.25kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/6] COPY hard-gists/139f710ca91ed5fabaf9e6616d2c762b/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/6] RUN ["pip","install","twitter.common.finagle-thrift"]
+#7 1.937 Collecting twitter.common.finagle-thrift
+#7 1.974   Downloading twitter.common.finagle-thrift-0.3.9.tar.gz (6.3 kB)
+#7 1.988   Preparing metadata (setup.py): started
+#7 2.359   Preparing metadata (setup.py): finished with status 'done'
+#7 2.361 Building wheels for collected packages: twitter.common.finagle-thrift
+#7 2.361   Building wheel for twitter.common.finagle-thrift (setup.py): started
+#7 2.517   Building wheel for twitter.common.finagle-thrift (setup.py): finished with status 'done'
+#7 2.518   Created wheel for twitter.common.finagle-thrift: filename=twitter_common_finagle_thrift-0.3.9-py3-none-any.whl size=7837 sha256=e602067febe631763468f933effebc167ea3f2b2e3cf1c3c2411a489dc829306
+#7 2.518   Stored in directory: /root/.cache/pip/wheels/8c/a4/9c/b5c9b4d11348ea1265e2a8c840662ed50edbc4f9d94fd18d46
+#7 2.521 Successfully built twitter.common.finagle-thrift
+#7 2.552 Installing collected packages: twitter.common.finagle-thrift
+#7 2.569 Successfully installed twitter.common.finagle-thrift-0.3.9
+#7 2.569 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.659 
+#7 2.659 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.659 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.8s
+
+#8 [4/6] RUN ["pip","install","twitter.common.service-thrift"]
+#8 0.520 Collecting twitter.common.service-thrift
+#8 0.554   Downloading twitter.common.service-thrift-0.3.9.tar.gz (3.1 kB)
+#8 0.567   Preparing metadata (setup.py): started
+#8 0.673   Preparing metadata (setup.py): finished with status 'done'
+#8 0.674 Building wheels for collected packages: twitter.common.service-thrift
+#8 0.679   Building wheel for twitter.common.service-thrift (setup.py): started
+#8 0.807   Building wheel for twitter.common.service-thrift (setup.py): finished with status 'done'
+#8 0.808   Created wheel for twitter.common.service-thrift: filename=twitter_common_service_thrift-0.3.9-py3-none-any.whl size=4889 sha256=a28248a9a0f5abe4fb3bb578b8e801eb0a0f12dc8f25f3276867c110db93dea6
+#8 0.808   Stored in directory: /root/.cache/pip/wheels/7e/55/e4/b1fdba8c145d46bda2b228724a92959c8edfd83bc83455d8c3
+#8 0.810 Successfully built twitter.common.service-thrift
+#8 0.838 Installing collected packages: twitter.common.service-thrift
+#8 0.889 Successfully installed twitter.common.service-thrift-0.3.9
+#8 0.890 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.897 
+#8 0.897 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.897 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.0s
+
+#9 [5/6] RUN ["pip","install","numpy"]
+#9 0.665 Collecting numpy
+#9 0.698   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#9 0.719      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.8 MB/s eta 0:00:00
+#9 0.736 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#9 1.356    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 25.3 MB/s eta 0:00:00
+#9 1.429 Installing collected packages: numpy
+#9 2.876 Successfully installed numpy-2.3.4
+#9 2.876 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 2.882 
+#9 2.882 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 2.882 [notice] To update, run: pip install --upgrade pip
+#9 DONE 3.5s
+
+#10 [6/6] RUN ["pip","install","scikit-learn"]
+#10 0.568 Collecting scikit-learn
+#10 0.601   Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#10 0.657 Requirement already satisfied: numpy>=1.22.0 in /usr/local/lib/python3.11/site-packages (from scikit-learn) (2.3.4)
+#10 0.784 Collecting scipy>=1.8.0 (from scikit-learn)
+#10 0.792   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#10 0.816      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.5 MB/s eta 0:00:00
+#10 0.864 Collecting joblib>=1.2.0 (from scikit-learn)
+#10 0.873   Downloading joblib-1.5.2-py3-none-any.whl.metadata (5.6 kB)
+#10 0.914 Collecting threadpoolctl>=3.1.0 (from scikit-learn)
+#10 0.922   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#10 0.967 Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+#10 1.334    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 26.6 MB/s eta 0:00:00
+#10 1.344 Downloading joblib-1.5.2-py3-none-any.whl (308 kB)
+#10 1.363    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 308.4/308.4 kB 17.3 MB/s eta 0:00:00
+#10 1.373 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#10 2.864    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 17.4 MB/s eta 0:00:00
+#10 2.873 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#10 3.086 Installing collected packages: threadpoolctl, scipy, joblib, scikit-learn
+#10 7.313 Successfully installed joblib-1.5.2 scikit-learn-1.7.2 scipy-1.16.3 threadpoolctl-3.6.0
+#10 7.313 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 7.319 
+#10 7.319 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 7.319 [notice] To update, run: pip install --upgrade pip
+#10 DONE 8.1s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 0.9s done
+#11 writing image sha256:bd4561701c32ad90916a78af5a202ff85075dc77928d6a6a1bfee7e3dc08ee98 done
+#11 naming to docker.io/library/test-image-139f710ca91ed5fabaf9e6616d2c762b done
+#11 DONE 0.9s
+
+View build details: docker-desktop://dashboard/build/default/default/hie2v3oex7mif1h4ifrf7qmur
+[2025-10-29 12:12:38] SUCCESS: Build completed for 139f710ca91ed5fabaf9e6616d2c762b

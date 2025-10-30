@@ -1,0 +1,13 @@
+=== Docker Run Log for 3e5107b11d19ac62a2ed ===
+Started at: Mi 29. Okt 14:13:36 CET 2025
+
+[2025-10-29 14:13:44] START: Running container for 3e5107b11d19ac62a2ed
+[2025-10-29 14:13:44] SUCCESS: Container 9f41a457655bea156db864257e1020f948263ed5c76706e7155342ccfae2583a started for 3e5107b11d19ac62a2ed
+=== Container logs for 3e5107b11d19ac62a2ed ===
+Traceback (most recent call last):
+  File "/snippet.py", line 5, in <module>
+    today_min = datetime.datetime.combine(timezone.now().date(), datetime.time.min)
+                ^^^^^^^^
+NameError: name 'datetime' is not defined
+=== End of logs for 3e5107b11d19ac62a2ed ===
+[2025-10-29 14:13:46] INFO: Container 9f41a457655bea156db864257e1020f948263ed5c76706e7155342ccfae2583a has stopped

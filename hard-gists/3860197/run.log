@@ -1,0 +1,18 @@
+=== Docker Run Log for 3860197 ===
+Started at: Mi 29. Okt 14:03:54 CET 2025
+
+[2025-10-29 14:04:18] START: Running container for 3860197
+[2025-10-29 14:04:19] SUCCESS: Container 6560e0cf6b348451ff39b86748f7448b29a59d9a0c76af55f73dc1e691a6f4c9 started for 3860197
+=== Container logs for 3860197 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 61, in <module>
+    main(fnames)
+  File "/snippet.py", line 45, in main
+    y_test, probas = read(fname)
+                     ^^^^^^^^^^^
+  File "/snippet.py", line 15, in read
+    with open(fname, 'r') as f:
+         ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'file1.txt'
+=== End of logs for 3860197 ===
+[2025-10-29 14:04:21] INFO: Container 6560e0cf6b348451ff39b86748f7448b29a59d9a0c76af55f73dc1e691a6f4c9 has stopped

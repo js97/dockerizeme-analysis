@@ -1,0 +1,368 @@
+=== Docker Build Log for 1971061 ===
+Started at: Mi 29. Okt 12:35:53 CET 2025
+
+[2025-10-29 12:35:53] START: Building image for 1971061
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 195B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.46kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/1971061/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","flex"]
+#7 1.991 Collecting flex
+#7 2.027   Downloading flex-6.14.1.tar.gz (40 kB)
+#7 2.042      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.9/40.9 kB 2.5 MB/s eta 0:00:00
+#7 2.055   Preparing metadata (setup.py): started
+#7 2.443   Preparing metadata (setup.py): finished with status 'done'
+#7 2.476 Collecting six>=1.7.3 (from flex)
+#7 2.486   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.554 Collecting PyYAML>=3.11 (from flex)
+#7 2.563   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#7 2.600 Collecting validate-email>=1.2 (from flex)
+#7 2.609   Downloading validate_email-1.3.tar.gz (4.7 kB)
+#7 2.621   Preparing metadata (setup.py): started
+#7 2.727   Preparing metadata (setup.py): finished with status 'done'
+#7 2.755 Collecting rfc3987>=1.3.4 (from flex)
+#7 2.763   Downloading rfc3987-1.3.8-py2.py3-none-any.whl.metadata (7.5 kB)
+#7 2.817 Collecting requests>=2.4.3 (from flex)
+#7 2.826   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.862 Collecting strict-rfc3339>=0.7 (from flex)
+#7 2.872   Downloading strict-rfc3339-0.7.tar.gz (17 kB)
+#7 2.884   Preparing metadata (setup.py): started
+#7 2.985   Preparing metadata (setup.py): finished with status 'done'
+#7 3.021 Collecting click>=3.3 (from flex)
+#7 3.030   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#7 3.067 Collecting jsonpointer>=1.7 (from flex)
+#7 3.076   Downloading jsonpointer-3.0.0-py2.py3-none-any.whl.metadata (2.3 kB)
+#7 3.184 Collecting charset_normalizer<4,>=2 (from requests>=2.4.3->flex)
+#7 3.192   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 3.237 Collecting idna<4,>=2.5 (from requests>=2.4.3->flex)
+#7 3.245   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 3.303 Collecting urllib3<3,>=1.21.1 (from requests>=2.4.3->flex)
+#7 3.311   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 3.358 Collecting certifi>=2017.4.17 (from requests>=2.4.3->flex)
+#7 3.365   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 3.398 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#7 3.418    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 5.3 MB/s eta 0:00:00
+#7 3.426 Downloading jsonpointer-3.0.0-py2.py3-none-any.whl (7.6 kB)
+#7 3.444 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#7 3.482    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 21.7 MB/s eta 0:00:00
+#7 3.490 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 3.502    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 5.1 MB/s eta 0:00:00
+#7 3.510 Downloading rfc3987-1.3.8-py2.py3-none-any.whl (13 kB)
+#7 3.526 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.543 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 3.558    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 11.9 MB/s eta 0:00:00
+#7 3.567 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 3.583    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.1 MB/s eta 0:00:00
+#7 3.591 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 3.602    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 6.1 MB/s eta 0:00:00
+#7 3.610 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 3.626    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 8.4 MB/s eta 0:00:00
+#7 3.637 Building wheels for collected packages: flex, strict-rfc3339, validate-email
+#7 3.638   Building wheel for flex (setup.py): started
+#7 3.851   Building wheel for flex (setup.py): finished with status 'done'
+#7 3.852   Created wheel for flex: filename=flex-6.14.1-py3-none-any.whl size=77345 sha256=b82348badba943cd7140f1353032d0de4f5650018a8b6c6edf411bf5507d884e
+#7 3.852   Stored in directory: /root/.cache/pip/wheels/c7/2b/9e/dc6f1991cb2426dacaf943e3e2cef948b3c7fa945b054d8871
+#7 3.854   Building wheel for strict-rfc3339 (setup.py): started
+#7 3.986   Building wheel for strict-rfc3339 (setup.py): finished with status 'done'
+#7 3.986   Created wheel for strict-rfc3339: filename=strict_rfc3339-0.7-py3-none-any.whl size=18222 sha256=e0f6b8aa48feafe8f0bc960333f501ab6ae8377b35baa840f93b9466addb1b41
+#7 3.986   Stored in directory: /root/.cache/pip/wheels/46/4b/49/d87861d88493d037a92b621b819407e4affdb20e25f1e3daef
+#7 3.988   Building wheel for validate-email (setup.py): started
+#7 4.122   Building wheel for validate-email (setup.py): finished with status 'done'
+#7 4.122   Created wheel for validate-email: filename=validate_email-1.3-py3-none-any.whl size=5561 sha256=97440823fbb8bb272dee8eb2d1a5ab5802a2b81bcb3df040fff79512ec904d09
+#7 4.122   Stored in directory: /root/.cache/pip/wheels/c6/fc/a7/6af457e30bd82e294457a27b2ab3b7c23e7e01fd33029c5d49
+#7 4.124 Successfully built flex strict-rfc3339 validate-email
+#7 4.182 Installing collected packages: validate-email, strict-rfc3339, rfc3987, urllib3, six, PyYAML, jsonpointer, idna, click, charset_normalizer, certifi, requests, flex
+#7 4.613 Successfully installed PyYAML-6.0.3 certifi-2025.10.5 charset_normalizer-3.4.4 click-8.3.0 flex-6.14.1 idna-3.11 jsonpointer-3.0.0 requests-2.32.5 rfc3987-1.3.8 six-1.17.0 strict-rfc3339-0.7 urllib3-2.5.0 validate-email-1.3
+#7 4.613 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.704 
+#7 4.704 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.704 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.9s
+
+#8 [4/4] RUN ["pip","install","flexget"]
+#8 0.880 Collecting flexget
+#8 0.920   Downloading flexget-3.18.20-py3-none-any.whl.metadata (22 kB)
+#8 1.154 Collecting apscheduler~=3.11 (from flexget)
+#8 1.163   Downloading APScheduler-3.11.0-py3-none-any.whl.metadata (6.4 kB)
+#8 1.218 Collecting beautifulsoup4~=4.12 (from flexget)
+#8 1.227   Downloading beautifulsoup4-4.14.2-py3-none-any.whl.metadata (3.8 kB)
+#8 1.400 Collecting cherrypy~=18.10 (from flexget)
+#8 1.409   Downloading CherryPy-18.10.0-py3-none-any.whl.metadata (8.7 kB)
+#8 1.466 Collecting feedparser~=6.0 (from flexget)
+#8 1.474   Downloading feedparser-6.0.12-py3-none-any.whl.metadata (2.7 kB)
+#8 1.514 Collecting flask-compress~=1.17 (from flexget)
+#8 1.523   Downloading flask_compress-1.20-py3-none-any.whl.metadata (9.3 kB)
+#8 1.567 Collecting flask-cors~=6.0 (from flexget)
+#8 1.575   Downloading flask_cors-6.0.1-py3-none-any.whl.metadata (5.3 kB)
+#8 1.614 Collecting flask-login~=0.6.3 (from flexget)
+#8 1.623   Downloading Flask_Login-0.6.3-py3-none-any.whl.metadata (5.8 kB)
+#8 1.661 Collecting flask-restx~=1.3 (from flexget)
+#8 1.669   Downloading flask_restx-1.3.2-py2.py3-none-any.whl.metadata (9.3 kB)
+#8 1.712 Collecting flask~=3.1 (from flexget)
+#8 1.719   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+#8 1.769 Collecting guessit~=3.8 (from flexget)
+#8 1.779   Downloading guessit-3.8.0-py3-none-any.whl.metadata (140 kB)
+#8 1.803      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 140.7/140.7 kB 6.2 MB/s eta 0:00:00
+#8 1.839 Collecting html5lib~=1.1 (from flexget)
+#8 1.849   Downloading html5lib-1.1-py2.py3-none-any.whl.metadata (16 kB)
+#8 1.895 Collecting jinja2~=3.1 (from flexget)
+#8 1.902   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#8 1.957 Collecting jsonschema~=4.23 (from flexget)
+#8 1.964   Downloading jsonschema-4.25.1-py3-none-any.whl.metadata (7.6 kB)
+#8 2.007 Collecting loguru~=0.7.3 (from flexget)
+#8 2.015   Downloading loguru-0.7.3-py3-none-any.whl.metadata (22 kB)
+#8 2.063 Collecting packaging~=25.0 (from flexget)
+#8 2.071   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 2.155 Collecting pendulum~=3.0 (from flexget)
+#8 2.164   Downloading pendulum-3.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#8 2.261 Collecting psutil~=7.0 (from flexget)
+#8 2.270   Downloading psutil-7.1.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (23 kB)
+#8 2.432 Collecting pynzb~=0.1.0 (from flexget)
+#8 2.540   Downloading pynzb-0.1.0.tar.gz (5.6 kB)
+#8 2.554   Preparing metadata (setup.py): started
+#8 2.708   Preparing metadata (setup.py): finished with status 'done'
+#8 2.758 Collecting pyparsing~=3.2 (from flexget)
+#8 2.767   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#8 2.902 Collecting pyrss2gen~=1.1 (from flexget)
+#8 3.006   Downloading PyRSS2Gen-1.1.tar.gz (6.9 kB)
+#8 3.017   Preparing metadata (setup.py): started
+#8 3.131   Preparing metadata (setup.py): finished with status 'done'
+#8 3.171 Collecting python-dateutil~=2.9 (from flexget)
+#8 3.180   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#8 3.192 Requirement already satisfied: pyyaml~=6.0 in /usr/local/lib/python3.11/site-packages (from flexget) (6.0.3)
+#8 3.356 Collecting rebulk~=3.2 (from flexget)
+#8 3.364   Downloading rebulk-3.2.0-py3-none-any.whl.metadata (22 kB)
+#8 3.376 Requirement already satisfied: requests~=2.32 in /usr/local/lib/python3.11/site-packages (from flexget) (2.32.5)
+#8 3.449 Collecting rich~=14.0 (from flexget)
+#8 3.457   Downloading rich-14.2.0-py3-none-any.whl.metadata (18 kB)
+#8 3.497 Collecting rpyc~=6.0 (from flexget)
+#8 3.505   Downloading rpyc-6.0.2-py3-none-any.whl.metadata (3.5 kB)
+#8 3.829 Collecting sqlalchemy~=2.0 (from flexget)
+#8 3.840   Downloading sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.5 kB)
+#8 3.947 Collecting werkzeug~=3.1 (from flexget)
+#8 3.957   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+#8 3.990 Collecting zxcvbn~=4.4 (from flexget)
+#8 3.999   Downloading zxcvbn-4.5.0-py2.py3-none-any.whl.metadata (5.9 kB)
+#8 4.053 Collecting tzlocal>=3.0 (from apscheduler~=3.11->flexget)
+#8 4.064   Downloading tzlocal-5.3.1-py3-none-any.whl.metadata (7.6 kB)
+#8 4.111 Collecting soupsieve>1.2 (from beautifulsoup4~=4.12->flexget)
+#8 4.119   Downloading soupsieve-2.8-py3-none-any.whl.metadata (4.6 kB)
+#8 4.166 Collecting typing-extensions>=4.0.0 (from beautifulsoup4~=4.12->flexget)
+#8 4.174   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#8 4.244 Collecting cheroot>=8.2.1 (from cherrypy~=18.10->flexget)
+#8 4.254   Downloading cheroot-11.0.0-py3-none-any.whl.metadata (7.0 kB)
+#8 4.386 Collecting portend>=2.1.1 (from cherrypy~=18.10->flexget)
+#8 4.395   Downloading portend-3.2.1-py3-none-any.whl.metadata (4.1 kB)
+#8 4.438 Collecting more-itertools (from cherrypy~=18.10->flexget)
+#8 4.447   Downloading more_itertools-10.8.0-py3-none-any.whl.metadata (39 kB)
+#8 4.584 Collecting zc.lockfile (from cherrypy~=18.10->flexget)
+#8 4.593   Downloading zc_lockfile-4.0-py3-none-any.whl.metadata (6.6 kB)
+#8 4.638 Collecting jaraco.collections (from cherrypy~=18.10->flexget)
+#8 4.646   Downloading jaraco_collections-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+#8 4.681 Collecting sgmllib3k (from feedparser~=6.0->flexget)
+#8 4.689   Downloading sgmllib3k-1.0.0.tar.gz (5.8 kB)
+#8 4.701   Preparing metadata (setup.py): started
+#8 4.844   Preparing metadata (setup.py): finished with status 'done'
+#8 4.883 Collecting blinker>=1.9.0 (from flask~=3.1->flexget)
+#8 4.892   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+#8 4.903 Requirement already satisfied: click>=8.1.3 in /usr/local/lib/python3.11/site-packages (from flask~=3.1->flexget) (8.3.0)
+#8 4.930 Collecting itsdangerous>=2.2.0 (from flask~=3.1->flexget)
+#8 4.937   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#8 5.012 Collecting markupsafe>=2.1.1 (from flask~=3.1->flexget)
+#8 5.020   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#8 5.080 Collecting brotli (from flask-compress~=1.17->flexget)
+#8 5.091   Downloading Brotli-1.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.5 kB)
+#8 5.146 Collecting backports.zstd (from flask-compress~=1.17->flexget)
+#8 5.154   Downloading backports_zstd-1.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (6.9 kB)
+#8 5.229 Collecting aniso8601>=0.82 (from flask-restx~=1.3->flexget)
+#8 5.238   Downloading aniso8601-10.0.1-py2.py3-none-any.whl.metadata (23 kB)
+#8 5.291 Collecting referencing (from flask-restx~=1.3->flexget)
+#8 5.299   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+#8 5.365 Collecting importlib-resources (from flask-restx~=1.3->flexget)
+#8 5.373   Downloading importlib_resources-6.5.2-py3-none-any.whl.metadata (3.9 kB)
+#8 5.519 Collecting babelfish>=0.6.0 (from guessit~=3.8->flexget)
+#8 5.528   Downloading babelfish-0.6.1-py3-none-any.whl.metadata (3.1 kB)
+#8 5.549 Requirement already satisfied: six>=1.9 in /usr/local/lib/python3.11/site-packages (from html5lib~=1.1->flexget) (1.17.0)
+#8 5.572 Collecting webencodings (from html5lib~=1.1->flexget)
+#8 5.580   Downloading webencodings-0.5.1-py2.py3-none-any.whl.metadata (2.1 kB)
+#8 5.641 Collecting attrs>=22.2.0 (from jsonschema~=4.23->flexget)
+#8 5.649   Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+#8 5.690 Collecting jsonschema-specifications>=2023.03.6 (from jsonschema~=4.23->flexget)
+#8 5.700   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+#8 6.069 Collecting rpds-py>=0.7.1 (from jsonschema~=4.23->flexget)
+#8 6.080   Downloading rpds_py-0.28.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+#8 6.176 Collecting tzdata>=2020.1 (from pendulum~=3.0->flexget)
+#8 6.184   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#8 6.223 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from pynzb~=0.1.0->flexget) (79.0.1)
+#8 6.257 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.11/site-packages (from requests~=2.32->flexget) (3.4.4)
+#8 6.258 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.11/site-packages (from requests~=2.32->flexget) (3.11)
+#8 6.260 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.11/site-packages (from requests~=2.32->flexget) (2.5.0)
+#8 6.262 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.11/site-packages (from requests~=2.32->flexget) (2025.10.5)
+#8 6.298 Collecting markdown-it-py>=2.2.0 (from rich~=14.0->flexget)
+#8 6.305   Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+#8 6.353 Collecting pygments<3.0.0,>=2.13.0 (from rich~=14.0->flexget)
+#8 6.360   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#8 6.403 Collecting plumbum (from rpyc~=6.0->flexget)
+#8 6.412   Downloading plumbum-1.9.0-py3-none-any.whl.metadata (10 kB)
+#8 6.572 Collecting greenlet>=1 (from sqlalchemy~=2.0->flexget)
+#8 6.581   Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+#8 6.678 Collecting jaraco.functools (from cheroot>=8.2.1->cherrypy~=18.10->flexget)
+#8 6.686   Downloading jaraco_functools-4.3.0-py3-none-any.whl.metadata (2.9 kB)
+#8 6.767 Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich~=14.0->flexget)
+#8 6.775   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+#8 6.930 Collecting tempora>=1.8 (from portend>=2.1.1->cherrypy~=18.10->flexget)
+#8 6.939   Downloading tempora-5.8.1-py3-none-any.whl.metadata (3.3 kB)
+#8 7.134 Collecting jaraco.text (from jaraco.collections->cherrypy~=18.10->flexget)
+#8 7.144   Downloading jaraco.text-4.0.0-py3-none-any.whl.metadata (3.7 kB)
+#8 7.291 Collecting jaraco.context>=4.1 (from jaraco.text->jaraco.collections->cherrypy~=18.10->flexget)
+#8 7.299   Downloading jaraco.context-6.0.1-py3-none-any.whl.metadata (4.1 kB)
+#8 7.336 Collecting autocommand (from jaraco.text->jaraco.collections->cherrypy~=18.10->flexget)
+#8 7.348   Downloading autocommand-2.2.2-py3-none-any.whl.metadata (15 kB)
+#8 7.398 Collecting backports.tarfile (from jaraco.context>=4.1->jaraco.text->jaraco.collections->cherrypy~=18.10->flexget)
+#8 7.407   Downloading backports.tarfile-1.2.0-py3-none-any.whl.metadata (2.0 kB)
+#8 7.643 Downloading flexget-3.18.20-py3-none-any.whl (9.1 MB)
+#8 8.558    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.1/9.1 MB 10.0 MB/s eta 0:00:00
+#8 8.567 Downloading APScheduler-3.11.0-py3-none-any.whl (64 kB)
+#8 8.584    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.0/64.0 kB 3.6 MB/s eta 0:00:00
+#8 8.592 Downloading beautifulsoup4-4.14.2-py3-none-any.whl (106 kB)
+#8 8.605    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.4/106.4 kB 8.5 MB/s eta 0:00:00
+#8 8.614 Downloading CherryPy-18.10.0-py3-none-any.whl (349 kB)
+#8 8.636    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 349.8/349.8 kB 16.5 MB/s eta 0:00:00
+#8 8.643 Downloading feedparser-6.0.12-py3-none-any.whl (81 kB)
+#8 8.654    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 81.5/81.5 kB 7.4 MB/s eta 0:00:00
+#8 8.662 Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+#8 8.674    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 8.7 MB/s eta 0:00:00
+#8 8.682 Downloading flask_compress-1.20-py3-none-any.whl (9.5 kB)
+#8 8.698 Downloading flask_cors-6.0.1-py3-none-any.whl (13 kB)
+#8 8.714 Downloading Flask_Login-0.6.3-py3-none-any.whl (17 kB)
+#8 8.730 Downloading flask_restx-1.3.2-py2.py3-none-any.whl (2.8 MB)
+#8 8.853    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.8/2.8 MB 23.1 MB/s eta 0:00:00
+#8 8.863 Downloading guessit-3.8.0-py3-none-any.whl (206 kB)
+#8 8.896    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 206.0/206.0 kB 6.1 MB/s eta 0:00:00
+#8 8.906 Downloading html5lib-1.1-py2.py3-none-any.whl (112 kB)
+#8 8.918    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.2/112.2 kB 9.5 MB/s eta 0:00:00
+#8 8.927 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#8 8.942    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 9.5 MB/s eta 0:00:00
+#8 8.950 Downloading jsonschema-4.25.1-py3-none-any.whl (90 kB)
+#8 8.964    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.0/90.0 kB 6.5 MB/s eta 0:00:00
+#8 8.972 Downloading loguru-0.7.3-py3-none-any.whl (61 kB)
+#8 8.988    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.6/61.6 kB 3.7 MB/s eta 0:00:00
+#8 8.997 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 9.012    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 4.2 MB/s eta 0:00:00
+#8 9.021 Downloading pendulum-3.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (353 kB)
+#8 9.041    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 353.7/353.7 kB 18.9 MB/s eta 0:00:00
+#8 9.050 Downloading psutil-7.1.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (258 kB)
+#8 9.068    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 258.7/258.7 kB 14.8 MB/s eta 0:00:00
+#8 9.076 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#8 9.093    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 6.6 MB/s eta 0:00:00
+#8 9.102 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#8 9.120    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 13.8 MB/s eta 0:00:00
+#8 9.129 Downloading rebulk-3.2.0-py3-none-any.whl (56 kB)
+#8 9.144    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.3/56.3 kB 3.4 MB/s eta 0:00:00
+#8 9.151 Downloading rich-14.2.0-py3-none-any.whl (243 kB)
+#8 9.172    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.4/243.4 kB 11.9 MB/s eta 0:00:00
+#8 9.180 Downloading rpyc-6.0.2-py3-none-any.whl (74 kB)
+#8 9.191    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.8/74.8 kB 6.3 MB/s eta 0:00:00
+#8 9.264 Downloading sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+#8 9.403    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 24.0 MB/s eta 0:00:00
+#8 9.412 Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+#8 9.429    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 13.5 MB/s eta 0:00:00
+#8 9.438 Downloading zxcvbn-4.5.0-py2.py3-none-any.whl (409 kB)
+#8 9.462    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 409.4/409.4 kB 17.7 MB/s eta 0:00:00
+#8 9.472 Downloading aniso8601-10.0.1-py2.py3-none-any.whl (52 kB)
+#8 9.483    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.8/52.8 kB 4.3 MB/s eta 0:00:00
+#8 9.492 Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+#8 9.503    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.6/67.6 kB 5.7 MB/s eta 0:00:00
+#8 9.513 Downloading babelfish-0.6.1-py3-none-any.whl (94 kB)
+#8 9.526    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.2/94.2 kB 7.3 MB/s eta 0:00:00
+#8 9.533 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+#8 9.553 Downloading cheroot-11.0.0-py3-none-any.whl (106 kB)
+#8 9.566    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.4/106.4 kB 8.0 MB/s eta 0:00:00
+#8 9.575 Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (587 kB)
+#8 9.613    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 587.7/587.7 kB 16.1 MB/s eta 0:00:00
+#8 9.621 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#8 9.639 Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+#8 9.664 Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+#8 9.676    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.3/87.3 kB 7.4 MB/s eta 0:00:00
+#8 9.685 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#8 9.701 Downloading more_itertools-10.8.0-py3-none-any.whl (69 kB)
+#8 9.713    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.7/69.7 kB 5.8 MB/s eta 0:00:00
+#8 9.722 Downloading portend-3.2.1-py3-none-any.whl (5.7 kB)
+#8 9.737 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#8 9.795    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 21.7 MB/s eta 0:00:00
+#8 9.803 Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+#8 9.822 Downloading rpds_py-0.28.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (382 kB)
+#8 9.844    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 382.9/382.9 kB 18.2 MB/s eta 0:00:00
+#8 9.852 Downloading soupsieve-2.8-py3-none-any.whl (36 kB)
+#8 9.869 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#8 9.885    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 2.4 MB/s eta 0:00:00
+#8 9.893 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#8 9.913    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 18.2 MB/s eta 0:00:00
+#8 9.921 Downloading tzlocal-5.3.1-py3-none-any.whl (18 kB)
+#8 9.939 Downloading backports_zstd-1.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (491 kB)
+#8 9.965    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 491.1/491.1 kB 19.7 MB/s eta 0:00:00
+#8 9.974 Downloading Brotli-1.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.9 MB)
+#8 10.09    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.9/2.9 MB 25.0 MB/s eta 0:00:00
+#8 10.10 Downloading importlib_resources-6.5.2-py3-none-any.whl (37 kB)
+#8 10.12 Downloading jaraco_collections-5.2.1-py3-none-any.whl (11 kB)
+#8 10.14 Downloading plumbum-1.9.0-py3-none-any.whl (127 kB)
+#8 10.16    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 128.0/128.0 kB 9.5 MB/s eta 0:00:00
+#8 10.16 Downloading webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+#8 10.19 Downloading zc_lockfile-4.0-py3-none-any.whl (9.1 kB)
+#8 10.21 Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+#8 10.23 Downloading tempora-5.8.1-py3-none-any.whl (14 kB)
+#8 10.25 Downloading jaraco_functools-4.3.0-py3-none-any.whl (10 kB)
+#8 10.27 Downloading jaraco.text-4.0.0-py3-none-any.whl (11 kB)
+#8 10.29 Downloading jaraco.context-6.0.1-py3-none-any.whl (6.8 kB)
+#8 10.31 Downloading autocommand-2.2.2-py3-none-any.whl (19 kB)
+#8 10.33 Downloading backports.tarfile-1.2.0-py3-none-any.whl (30 kB)
+#8 10.42 Building wheels for collected packages: pynzb, pyrss2gen, sgmllib3k
+#8 10.43   Building wheel for pynzb (setup.py): started
+#8 10.60   Building wheel for pynzb (setup.py): finished with status 'done'
+#8 10.60   Created wheel for pynzb: filename=pynzb-0.1.0-py3-none-any.whl size=6272 sha256=f10ed91241206afc34e6e3adf0ddc6a61d90d4f86fe7c3cd9e12a3335f424ad2
+#8 10.60   Stored in directory: /root/.cache/pip/wheels/85/73/16/6f25aed510b4e512cc62d12f3a02ecc940d0d3ff54d727b56f
+#8 10.60   Building wheel for pyrss2gen (setup.py): started
+#8 10.77   Building wheel for pyrss2gen (setup.py): finished with status 'done'
+#8 10.77   Created wheel for pyrss2gen: filename=pyrss2gen-1.1-py3-none-any.whl size=5010 sha256=1dbae8ff0b331e9db1f7c01697c1c1ce9d72b0e36f0f6ec85b073fed0227b2bb
+#8 10.77   Stored in directory: /root/.cache/pip/wheels/21/5d/bc/a9bebae789186d3597b203923025fccb1d9bec4269db02d48b
+#8 10.77   Building wheel for sgmllib3k (setup.py): started
+#8 10.90   Building wheel for sgmllib3k (setup.py): finished with status 'done'
+#8 10.90   Created wheel for sgmllib3k: filename=sgmllib3k-1.0.0-py3-none-any.whl size=6090 sha256=205a1887c3065c124dbcc2776aacf980f6fffcd7a601a5c3e0f07666cb46be85
+#8 10.90   Stored in directory: /root/.cache/pip/wheels/3b/25/2a/105d6a15df6914f4d15047691c6c28f9052cc1173e40285d03
+#8 10.91 Successfully built pynzb pyrss2gen sgmllib3k
+#8 11.34 Installing collected packages: zxcvbn, webencodings, sgmllib3k, rebulk, pyrss2gen, brotli, aniso8601, zc.lockfile, tzlocal, tzdata, typing-extensions, soupsieve, rpds-py, python-dateutil, pyparsing, pynzb, pygments, psutil, plumbum, packaging, more-itertools, mdurl, markupsafe, loguru, itsdangerous, importlib-resources, html5lib, greenlet, feedparser, blinker, backports.zstd, backports.tarfile, babelfish, autocommand, attrs, werkzeug, sqlalchemy, rpyc, referencing, pendulum, markdown-it-py, jinja2, jaraco.functools, jaraco.context, guessit, beautifulsoup4, apscheduler, tempora, rich, jsonschema-specifications, jaraco.text, flask, cheroot, portend, jsonschema, jaraco.collections, flask-login, flask-cors, flask-compress, flask-restx, cherrypy, flexget
+#8 15.96 Successfully installed aniso8601-10.0.1 apscheduler-3.11.0 attrs-25.4.0 autocommand-2.2.2 babelfish-0.6.1 backports.tarfile-1.2.0 backports.zstd-1.0.0 beautifulsoup4-4.14.2 blinker-1.9.0 brotli-1.1.0 cheroot-11.0.0 cherrypy-18.10.0 feedparser-6.0.12 flask-3.1.2 flask-compress-1.20 flask-cors-6.0.1 flask-login-0.6.3 flask-restx-1.3.2 flexget-3.18.20 greenlet-3.2.4 guessit-3.8.0 html5lib-1.1 importlib-resources-6.5.2 itsdangerous-2.2.0 jaraco.collections-5.2.1 jaraco.context-6.0.1 jaraco.functools-4.3.0 jaraco.text-4.0.0 jinja2-3.1.6 jsonschema-4.25.1 jsonschema-specifications-2025.9.1 loguru-0.7.3 markdown-it-py-4.0.0 markupsafe-3.0.3 mdurl-0.1.2 more-itertools-10.8.0 packaging-25.0 pendulum-3.1.0 plumbum-1.9.0 portend-3.2.1 psutil-7.1.2 pygments-2.19.2 pynzb-0.1.0 pyparsing-3.2.5 pyrss2gen-1.1 python-dateutil-2.9.0.post0 rebulk-3.2.0 referencing-0.37.0 rich-14.2.0 rpds-py-0.28.0 rpyc-6.0.2 sgmllib3k-1.0.0 soupsieve-2.8 sqlalchemy-2.0.44 tempora-5.8.1 typing-extensions-4.15.0 tzdata-2025.2 tzlocal-5.3.1 webencodings-0.5.1 werkzeug-3.1.3 zc.lockfile-4.0 zxcvbn-4.5.0
+#8 15.96 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 15.97 
+#8 15.97 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 15.97 [notice] To update, run: pip install --upgrade pip
+#8 DONE 16.8s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.8s done
+#9 writing image sha256:d0270d47e8b33d9e19961d97bc7ed1cdc0a50253df1549e36b9f8c86aa5043d4 done
+#9 naming to docker.io/library/test-image-1971061 done
+#9 DONE 0.9s
+
+View build details: docker-desktop://dashboard/build/default/default/al7ux0uucywl6ktfidslsb4gh
+[2025-10-29 12:36:16] SUCCESS: Build completed for 1971061

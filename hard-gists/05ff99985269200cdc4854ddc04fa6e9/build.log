@@ -1,0 +1,69 @@
+=== Docker Build Log for 05ff99985269200cdc4854ddc04fa6e9 ===
+Started at: Mi 29. Okt 11:28:39 CET 2025
+
+[2025-10-29 11:28:39] START: Building image for 05ff99985269200cdc4854ddc04fa6e9
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 222B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 756B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/05ff99985269200cdc4854ddc04fa6e9/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","numpy"]
+#7 2.124 Collecting numpy
+#7 2.163   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.185      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.6 MB/s eta 0:00:00
+#7 2.201 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 2.824    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 25.9 MB/s eta 0:00:00
+#7 2.902 Installing collected packages: numpy
+#7 4.339 Successfully installed numpy-2.3.4
+#7 4.339 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.434 
+#7 4.434 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.434 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.8s
+
+#8 [4/4] RUN ["pip","install","lightgbm"]
+#8 0.524 Collecting lightgbm
+#8 0.557   Downloading lightgbm-4.6.0-py3-none-manylinux_2_28_x86_64.whl.metadata (17 kB)
+#8 0.581 Requirement already satisfied: numpy>=1.17.0 in /usr/local/lib/python3.11/site-packages (from lightgbm) (2.3.4)
+#8 0.725 Collecting scipy (from lightgbm)
+#8 0.737   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#8 0.759      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.7 MB/s eta 0:00:00
+#8 0.801 Downloading lightgbm-4.6.0-py3-none-manylinux_2_28_x86_64.whl (3.6 MB)
+#8 0.946    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 24.9 MB/s eta 0:00:00
+#8 0.955 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#8 2.259    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 20.3 MB/s eta 0:00:00
+#8 2.417 Installing collected packages: scipy, lightgbm
+#8 5.202 Successfully installed lightgbm-4.6.0 scipy-1.16.3
+#8 5.202 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 5.207 
+#8 5.207 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 5.207 [notice] To update, run: pip install --upgrade pip
+#8 DONE 5.9s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.8s done
+#9 writing image sha256:47e550dea245a659702e8ec711150ad9d20143fa9d87ed3bfc07e4abae397947 done
+#9 naming to docker.io/library/test-image-05ff99985269200cdc4854ddc04fa6e9 done
+#9 DONE 0.8s
+
+View build details: docker-desktop://dashboard/build/default/default/suq6lzvbllmyxlta5zdtnl9s4
+[2025-10-29 11:28:50] SUCCESS: Build completed for 05ff99985269200cdc4854ddc04fa6e9

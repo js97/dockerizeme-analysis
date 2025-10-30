@@ -1,0 +1,18 @@
+=== Docker Run Log for 342989 ===
+Started at: Mi 29. Okt 13:51:13 CET 2025
+
+[2025-10-29 13:51:50] START: Running container for 342989
+[2025-10-29 13:51:50] SUCCESS: Container 67f9aa4e5ddfaf9a2f6894b2e13ccf677155f1fe0d2debc0e3dd01bdf38937d2 started for 342989
+=== Container logs for 342989 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 21, in <module>
+    ('emission', np.float)]),
+                 ^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/numpy/__init__.py", line 778, in __getattr__
+    raise AttributeError(__former_attrs__[attr], name=None)
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+=== End of logs for 342989 ===
+[2025-10-29 13:51:52] INFO: Container 67f9aa4e5ddfaf9a2f6894b2e13ccf677155f1fe0d2debc0e3dd01bdf38937d2 has stopped

@@ -1,0 +1,287 @@
+=== Docker Build Log for 5213fabf2bcb943efc82f00959b91163 ===
+Started at: Mi 29. Okt 15:28:40 CET 2025
+
+[2025-10-29 15:28:40] START: Building image for 5213fabf2bcb943efc82f00959b91163
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 296B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.29kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/6] COPY hard-gists/5213fabf2bcb943efc82f00959b91163/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/6] RUN ["pip","install","img2txt.py"]
+#7 1.980 Collecting img2txt.py
+#7 2.018   Downloading img2txt.py-2.4.tar.gz (14 kB)
+#7 2.031   Preparing metadata (setup.py): started
+#7 2.431   Preparing metadata (setup.py): finished with status 'done'
+#7 2.458 Collecting docopt (from img2txt.py)
+#7 2.467   Downloading docopt-0.6.2.tar.gz (25 kB)
+#7 2.484   Preparing metadata (setup.py): started
+#7 2.608   Preparing metadata (setup.py): finished with status 'done'
+#7 2.811 Collecting Pillow (from img2txt.py)
+#7 2.822   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#7 2.862 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#7 3.139    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 25.6 MB/s eta 0:00:00
+#7 3.158 Building wheels for collected packages: img2txt.py, docopt
+#7 3.159   Building wheel for img2txt.py (setup.py): started
+#7 3.336   Building wheel for img2txt.py (setup.py): finished with status 'done'
+#7 3.337   Created wheel for img2txt.py: filename=img2txt_py-2.4-py3-none-any.whl size=15512 sha256=8151fb6d86aa7887b7372cadc7cd43ec46bfb40a454a052b1801219f52c6d8ef
+#7 3.337   Stored in directory: /root/.cache/pip/wheels/11/22/df/077a78d9bd055d02d5732e315266bb298277da894dc4dcbc26
+#7 3.341   Building wheel for docopt (setup.py): started
+#7 3.484   Building wheel for docopt (setup.py): finished with status 'done'
+#7 3.484   Created wheel for docopt: filename=docopt-0.6.2-py2.py3-none-any.whl size=13781 sha256=b634930baa42bf744789b09ccfed4919176b0c02c2dabc0ce85db3c5c308e49c
+#7 3.484   Stored in directory: /root/.cache/pip/wheels/1a/b0/8c/4b75c4116c31f83c8f9f047231251e13cc74481cca4a78a9ce
+#7 3.487 Successfully built img2txt.py docopt
+#7 3.544 Installing collected packages: docopt, Pillow, img2txt.py
+#7 3.826 Successfully installed Pillow-12.0.0 docopt-0.6.2 img2txt.py-2.4
+#7 3.826 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.919 
+#7 3.919 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.919 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.2s
+
+#8 [4/6] RUN ["pip","install","ansible-alicloud"]
+#8 0.554 Collecting ansible-alicloud
+#8 0.591   Downloading ansible_alicloud-1.20.0.tar.gz (166 kB)
+#8 0.619      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 166.8/166.8 kB 6.2 MB/s eta 0:00:00
+#8 0.643   Preparing metadata (setup.py): started
+#8 0.760   Preparing metadata (setup.py): finished with status 'done'
+#8 0.844 Collecting ansible (from ansible-alicloud)
+#8 0.852   Downloading ansible-12.1.0-py3-none-any.whl.metadata (8.0 kB)
+#8 0.893 Collecting footmark>=1.20.0 (from ansible-alicloud)
+#8 0.903   Downloading footmark-1.25.0.tar.gz (86 kB)
+#8 0.918      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.3/86.3 kB 5.9 MB/s eta 0:00:00
+#8 0.937   Preparing metadata (setup.py): started
+#8 1.073   Preparing metadata (setup.py): finished with status 'done'
+#8 1.109 Collecting ansible_alicloud_module_utils>=1.5.0 (from ansible-alicloud)
+#8 1.119   Downloading ansible_alicloud_module_utils-1.6.0.tar.gz (5.2 kB)
+#8 1.131   Preparing metadata (setup.py): started
+#8 1.249   Preparing metadata (setup.py): finished with status 'done'
+#8 1.412 Collecting ruamel.yaml>=0.10.2 (from ansible-alicloud)
+#8 1.421   Downloading ruamel.yaml-0.18.16-py3-none-any.whl.metadata (25 kB)
+#8 1.487 Collecting aliyun-python-sdk-core>=2.13.10 (from footmark>=1.20.0->ansible-alicloud)
+#8 1.498   Downloading aliyun-python-sdk-core-2.16.0.tar.gz (449 kB)
+#8 1.524      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 449.6/449.6 kB 19.0 MB/s eta 0:00:00
+#8 1.563   Preparing metadata (setup.py): started
+#8 1.701   Preparing metadata (setup.py): finished with status 'done'
+#8 1.744 Collecting aliyun-python-sdk-ecs>=4.18.3 (from footmark>=1.20.0->ansible-alicloud)
+#8 1.752   Downloading aliyun_python_sdk_ecs-4.24.82-py2.py3-none-any.whl.metadata (1.5 kB)
+#8 1.810 Collecting aliyun-python-sdk-slb>=3.2.16 (from footmark>=1.20.0->ansible-alicloud)
+#8 1.821   Downloading aliyun_python_sdk_slb-3.3.22-py2.py3-none-any.whl.metadata (1.5 kB)
+#8 1.964 Collecting aliyun-python-sdk-vpc>=3.0.7 (from footmark>=1.20.0->ansible-alicloud)
+#8 1.974   Downloading aliyun_python_sdk_vpc-3.0.47-py2.py3-none-any.whl.metadata (1.5 kB)
+#8 2.123 Collecting aliyun-python-sdk-rds>=2.1.0 (from footmark>=1.20.0->ansible-alicloud)
+#8 2.133   Downloading aliyun_python_sdk_rds-2.7.53-py2.py3-none-any.whl.metadata (1.5 kB)
+#8 2.186 Collecting aliyun-python-sdk-ess>=2.1.3 (from footmark>=1.20.0->ansible-alicloud)
+#8 2.195   Downloading aliyun_python_sdk_ess-2.3.32-py2.py3-none-any.whl.metadata (1.5 kB)
+#8 2.325 Collecting aliyun-python-sdk-sts>=2.1.7 (from footmark>=1.20.0->ansible-alicloud)
+#8 2.334   Downloading aliyun_python_sdk_sts-3.1.3-py2.py3-none-any.whl.metadata (1.5 kB)
+#8 2.373 Collecting aliyun-python-sdk-alidns>=2.0.11 (from footmark>=1.20.0->ansible-alicloud)
+#8 2.382   Downloading aliyun_python_sdk_alidns-3.0.7-py2.py3-none-any.whl.metadata (1.5 kB)
+#8 2.516 Collecting aliyun-python-sdk-ram>=3.1.0 (from footmark>=1.20.0->ansible-alicloud)
+#8 2.526   Downloading aliyun_python_sdk_ram-3.3.1-py2.py3-none-any.whl.metadata (1.5 kB)
+#8 2.567 Collecting aliyun-python-sdk-market>=2.0.24 (from footmark>=1.20.0->ansible-alicloud)
+#8 2.577   Downloading aliyun-python-sdk-market-2.0.24.tar.gz (5.1 kB)
+#8 2.594   Preparing metadata (setup.py): started
+#8 2.776   Preparing metadata (setup.py): finished with status 'done'
+#8 2.806 Collecting aliyun-python-sdk-ros>=3.2.0 (from footmark>=1.20.0->ansible-alicloud)
+#8 2.816   Downloading aliyun_python_sdk_ros-3.6.0-py2.py3-none-any.whl.metadata (1.5 kB)
+#8 2.856 Collecting oss2>=2.3.3 (from footmark>=1.20.0->ansible-alicloud)
+#8 2.866   Downloading oss2-2.19.1.tar.gz (298 kB)
+#8 2.885      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 298.8/298.8 kB 17.1 MB/s eta 0:00:00
+#8 2.924   Preparing metadata (setup.py): started
+#8 3.052   Preparing metadata (setup.py): finished with status 'done'
+#8 3.082 Collecting aliyun-python-sdk-oos>=1.1.0 (from footmark>=1.20.0->ansible-alicloud)
+#8 3.091   Downloading aliyun_python_sdk_oos-1.5.16-py2.py3-none-any.whl.metadata (1.5 kB)
+#8 3.149 Collecting ruamel.yaml.clib>=0.2.7 (from ruamel.yaml>=0.10.2->ansible-alicloud)
+#8 3.158   Downloading ruamel.yaml.clib-0.2.14-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.0 kB)
+#8 3.262 Collecting ansible-core~=2.19.3 (from ansible->ansible-alicloud)
+#8 3.271   Downloading ansible_core-2.19.3-py3-none-any.whl.metadata (7.7 kB)
+#8 3.318 Collecting jmespath<1.0.0,>=0.9.3 (from aliyun-python-sdk-core>=2.13.10->footmark>=1.20.0->ansible-alicloud)
+#8 3.328   Downloading jmespath-0.10.0-py2.py3-none-any.whl.metadata (8.0 kB)
+#8 3.550 Collecting cryptography>=3.0.0 (from aliyun-python-sdk-core>=2.13.10->footmark>=1.20.0->ansible-alicloud)
+#8 3.561   Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+#8 3.622 Collecting jinja2>=3.1.0 (from ansible-core~=2.19.3->ansible->ansible-alicloud)
+#8 3.631   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#8 3.704 Collecting PyYAML>=5.1 (from ansible-core~=2.19.3->ansible->ansible-alicloud)
+#8 3.713   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#8 3.760 Collecting packaging (from ansible-core~=2.19.3->ansible->ansible-alicloud)
+#8 3.768   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 3.811 Collecting resolvelib<2.0.0,>=0.5.3 (from ansible-core~=2.19.3->ansible->ansible-alicloud)
+#8 3.820   Downloading resolvelib-1.2.1-py3-none-any.whl.metadata (3.7 kB)
+#8 3.886 Collecting requests!=2.9.0 (from oss2>=2.3.3->footmark>=1.20.0->ansible-alicloud)
+#8 3.894   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#8 3.930 Collecting crcmod>=1.7 (from oss2>=2.3.3->footmark>=1.20.0->ansible-alicloud)
+#8 3.941   Downloading crcmod-1.7.tar.gz (89 kB)
+#8 3.954      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 89.7/89.7 kB 7.7 MB/s eta 0:00:00
+#8 3.968   Preparing metadata (setup.py): started
+#8 4.100   Preparing metadata (setup.py): finished with status 'done'
+#8 4.198 Collecting pycryptodome>=3.4.7 (from oss2>=2.3.3->footmark>=1.20.0->ansible-alicloud)
+#8 4.206   Downloading pycryptodome-3.23.0-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.4 kB)
+#8 4.243 Collecting aliyun-python-sdk-kms>=2.4.1 (from oss2>=2.3.3->footmark>=1.20.0->ansible-alicloud)
+#8 4.251   Downloading aliyun_python_sdk_kms-2.16.5-py2.py3-none-any.whl.metadata (1.5 kB)
+#8 4.293 Collecting six (from oss2>=2.3.3->footmark>=1.20.0->ansible-alicloud)
+#8 4.302   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 4.481 Collecting cffi>=2.0.0 (from cryptography>=3.0.0->aliyun-python-sdk-core>=2.13.10->footmark>=1.20.0->ansible-alicloud)
+#8 4.490   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+#8 4.566 Collecting MarkupSafe>=2.0 (from jinja2>=3.1.0->ansible-core~=2.19.3->ansible->ansible-alicloud)
+#8 4.575   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#8 4.690 Collecting charset_normalizer<4,>=2 (from requests!=2.9.0->oss2>=2.3.3->footmark>=1.20.0->ansible-alicloud)
+#8 4.699   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#8 4.738 Collecting idna<4,>=2.5 (from requests!=2.9.0->oss2>=2.3.3->footmark>=1.20.0->ansible-alicloud)
+#8 4.746   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#8 4.804 Collecting urllib3<3,>=1.21.1 (from requests!=2.9.0->oss2>=2.3.3->footmark>=1.20.0->ansible-alicloud)
+#8 4.813   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#8 4.857 Collecting certifi>=2017.4.17 (from requests!=2.9.0->oss2>=2.3.3->footmark>=1.20.0->ansible-alicloud)
+#8 4.865   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#8 4.918 Collecting pycparser (from cffi>=2.0.0->cryptography>=3.0.0->aliyun-python-sdk-core>=2.13.10->footmark>=1.20.0->ansible-alicloud)
+#8 4.926   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+#8 4.973 Downloading ruamel.yaml-0.18.16-py3-none-any.whl (119 kB)
+#8 4.987    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 119.9/119.9 kB 8.9 MB/s eta 0:00:00
+#8 4.995 Downloading ansible-12.1.0-py3-none-any.whl (52.8 MB)
+#8 7.084    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.8/52.8 MB 13.6 MB/s eta 0:00:00
+#8 7.097 Downloading aliyun_python_sdk_alidns-3.0.7-py2.py3-none-any.whl (177 kB)
+#8 7.115    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 177.1/177.1 kB 10.6 MB/s eta 0:00:00
+#8 7.125 Downloading aliyun_python_sdk_ecs-4.24.82-py2.py3-none-any.whl (468 kB)
+#8 7.154    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 468.5/468.5 kB 16.7 MB/s eta 0:00:00
+#8 7.163 Downloading aliyun_python_sdk_ess-2.3.32-py2.py3-none-any.whl (118 kB)
+#8 7.177    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 9.5 MB/s eta 0:00:00
+#8 7.187 Downloading aliyun_python_sdk_oos-1.5.16-py2.py3-none-any.whl (94 kB)
+#8 7.201    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.7/94.7 kB 7.4 MB/s eta 0:00:00
+#8 7.209 Downloading aliyun_python_sdk_ram-3.3.1-py2.py3-none-any.whl (69 kB)
+#8 7.222    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 70.0/70.0 kB 5.8 MB/s eta 0:00:00
+#8 7.231 Downloading aliyun_python_sdk_rds-2.7.53-py2.py3-none-any.whl (446 kB)
+#8 7.257    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 446.1/446.1 kB 17.9 MB/s eta 0:00:00
+#8 7.267 Downloading aliyun_python_sdk_ros-3.6.0-py2.py3-none-any.whl (96 kB)
+#8 7.279    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.0/97.0 kB 8.2 MB/s eta 0:00:00
+#8 7.289 Downloading aliyun_python_sdk_slb-3.3.22-py2.py3-none-any.whl (118 kB)
+#8 7.302    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.8/118.8 kB 9.5 MB/s eta 0:00:00
+#8 7.311 Downloading aliyun_python_sdk_sts-3.1.3-py2.py3-none-any.whl (8.0 kB)
+#8 7.330 Downloading aliyun_python_sdk_vpc-3.0.47-py2.py3-none-any.whl (485 kB)
+#8 7.355    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 485.6/485.6 kB 20.5 MB/s eta 0:00:00
+#8 7.364 Downloading ansible_core-2.19.3-py3-none-any.whl (2.4 MB)
+#8 7.452    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 27.9 MB/s eta 0:00:00
+#8 7.461 Downloading ruamel.yaml.clib-0.2.14-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (738 kB)
+#8 7.499    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 738.1/738.1 kB 20.7 MB/s eta 0:00:00
+#8 7.510 Downloading aliyun_python_sdk_kms-2.16.5-py2.py3-none-any.whl (99 kB)
+#8 7.528    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 99.5/99.5 kB 5.7 MB/s eta 0:00:00
+#8 7.537 Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+#8 7.699    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 27.8 MB/s eta 0:00:00
+#8 7.708 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#8 7.723    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 9.2 MB/s eta 0:00:00
+#8 7.732 Downloading jmespath-0.10.0-py2.py3-none-any.whl (24 kB)
+#8 7.757 Downloading pycryptodome-3.23.0-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.3 MB)
+#8 7.864    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 21.6 MB/s eta 0:00:00
+#8 7.874 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#8 7.920    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 18.6 MB/s eta 0:00:00
+#8 7.929 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#8 7.945    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.9 MB/s eta 0:00:00
+#8 7.954 Downloading resolvelib-1.2.1-py3-none-any.whl (18 kB)
+#8 7.973 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 7.988    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 4.4 MB/s eta 0:00:00
+#8 7.998 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 8.019 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#8 8.039    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 8.8 MB/s eta 0:00:00
+#8 8.048 Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+#8 8.065    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 14.3 MB/s eta 0:00:00
+#8 8.075 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#8 8.090    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.2 MB/s eta 0:00:00
+#8 8.099 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#8 8.113    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.6 MB/s eta 0:00:00
+#8 8.122 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#8 8.140 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#8 8.155    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.5 MB/s eta 0:00:00
+#8 8.164 Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+#8 8.179    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 8.5 MB/s eta 0:00:00
+#8 8.538 Building wheels for collected packages: ansible-alicloud, ansible_alicloud_module_utils, footmark, aliyun-python-sdk-core, aliyun-python-sdk-market, oss2, crcmod
+#8 8.546   Building wheel for ansible-alicloud (setup.py): started
+#8 8.755   Building wheel for ansible-alicloud (setup.py): finished with status 'done'
+#8 8.757   Created wheel for ansible-alicloud: filename=ansible_alicloud-1.20.0-py3-none-any.whl size=354692 sha256=8867909e3b9850d6bf66c3d8df4117a9bd7a01a045a0ca7e6ab6fd39b6da8b01
+#8 8.757   Stored in directory: /root/.cache/pip/wheels/f8/9c/79/53940939dfb58b0ef68d06f3e1baca91fdde292a9e3d0132cb
+#8 8.759   Building wheel for ansible_alicloud_module_utils (setup.py): started
+#8 8.895   Building wheel for ansible_alicloud_module_utils (setup.py): finished with status 'done'
+#8 8.895   Created wheel for ansible_alicloud_module_utils: filename=ansible_alicloud_module_utils-1.6.0-py3-none-any.whl size=6691 sha256=6fd837db866fe5331f6af34296e1a3d7f81ba371199027b63b619eccaed9de5a
+#8 8.896   Stored in directory: /root/.cache/pip/wheels/4d/a0/22/92edc81e60427d7fec274576bbea1b4f4cc8fa95d7f8d5c6c6
+#8 8.897   Building wheel for footmark (setup.py): started
+#8 9.087   Building wheel for footmark (setup.py): finished with status 'done'
+#8 9.088   Created wheel for footmark: filename=footmark-1.25.0-py2.py3-none-any.whl size=116951 sha256=a8191b2b3c33b778b14a7059103368994ab2f49274ae6b97fb4f27e533586568
+#8 9.088   Stored in directory: /root/.cache/pip/wheels/a0/ff/14/93046556a210bf278c02b492c2d8d79233369d3dec83f491b3
+#8 9.090   Building wheel for aliyun-python-sdk-core (setup.py): started
+#8 9.337   Building wheel for aliyun-python-sdk-core (setup.py): finished with status 'done'
+#8 9.338   Created wheel for aliyun-python-sdk-core: filename=aliyun_python_sdk_core-2.16.0-py3-none-any.whl size=535418 sha256=27b75b5cc73e17a1087b827c8d447f0cdebfcf5eac39843abed060a81772ec31
+#8 9.339   Stored in directory: /root/.cache/pip/wheels/2b/9a/95/60f111d2a488c5f7f7ed2a96ce407ea57ec7393ddfdec8c956
+#8 9.341   Building wheel for aliyun-python-sdk-market (setup.py): started
+#8 9.495   Building wheel for aliyun-python-sdk-market (setup.py): finished with status 'done'
+#8 9.496   Created wheel for aliyun-python-sdk-market: filename=aliyun_python_sdk_market-2.0.24-py3-none-any.whl size=24872 sha256=e49567d73334dcae6926046db480ae431beae1f367cb51606d3d8ccfd5489a0c
+#8 9.496   Stored in directory: /root/.cache/pip/wheels/a9/85/33/aaea41f7c841cdca000a38ceb1871e91d493f8864bbe81fe6b
+#8 9.498   Building wheel for oss2 (setup.py): started
+#8 9.652   Building wheel for oss2 (setup.py): finished with status 'done'
+#8 9.653   Created wheel for oss2: filename=oss2-2.19.1-py3-none-any.whl size=124036 sha256=04c00956ec819e196855c69899dd82ce723ed87dfb39ef42d3067fbed4f009b7
+#8 9.653   Stored in directory: /root/.cache/pip/wheels/56/27/a3/50e7db0dd68810d9d4e383a547b88b4a5b1eaae58e63c1d64a
+#8 9.656   Building wheel for crcmod (setup.py): started
+#8 10.04   Building wheel for crcmod (setup.py): finished with status 'done'
+#8 10.04   Created wheel for crcmod: filename=crcmod-1.7-cp311-cp311-linux_x86_64.whl size=31039 sha256=2a02fb077c1a3e24c310714116a834274d9b9472b75780506f314ca15fd459f2
+#8 10.04   Stored in directory: /root/.cache/pip/wheels/23/94/7a/8cb7d14597e6395ce969933f01aed9ea8fa5f5b4d4c8a61e99
+#8 10.04 Successfully built ansible-alicloud ansible_alicloud_module_utils footmark aliyun-python-sdk-core aliyun-python-sdk-market oss2 crcmod
+#8 10.21 Installing collected packages: crcmod, urllib3, six, ruamel.yaml.clib, resolvelib, PyYAML, pycryptodome, pycparser, packaging, MarkupSafe, jmespath, idna, charset_normalizer, certifi, ruamel.yaml, requests, jinja2, cffi, cryptography, ansible-core, aliyun-python-sdk-core, ansible, aliyun-python-sdk-vpc, aliyun-python-sdk-sts, aliyun-python-sdk-slb, aliyun-python-sdk-ros, aliyun-python-sdk-rds, aliyun-python-sdk-ram, aliyun-python-sdk-oos, aliyun-python-sdk-market, aliyun-python-sdk-kms, aliyun-python-sdk-ess, aliyun-python-sdk-ecs, aliyun-python-sdk-alidns, oss2, footmark, ansible_alicloud_module_utils, ansible-alicloud
+#8 29.36 Successfully installed MarkupSafe-3.0.3 PyYAML-6.0.3 aliyun-python-sdk-alidns-3.0.7 aliyun-python-sdk-core-2.16.0 aliyun-python-sdk-ecs-4.24.82 aliyun-python-sdk-ess-2.3.32 aliyun-python-sdk-kms-2.16.5 aliyun-python-sdk-market-2.0.24 aliyun-python-sdk-oos-1.5.16 aliyun-python-sdk-ram-3.3.1 aliyun-python-sdk-rds-2.7.53 aliyun-python-sdk-ros-3.6.0 aliyun-python-sdk-slb-3.3.22 aliyun-python-sdk-sts-3.1.3 aliyun-python-sdk-vpc-3.0.47 ansible-12.1.0 ansible-alicloud-1.20.0 ansible-core-2.19.3 ansible_alicloud_module_utils-1.6.0 certifi-2025.10.5 cffi-2.0.0 charset_normalizer-3.4.4 crcmod-1.7 cryptography-46.0.3 footmark-1.25.0 idna-3.11 jinja2-3.1.6 jmespath-0.10.0 oss2-2.19.1 packaging-25.0 pycparser-2.23 pycryptodome-3.23.0 requests-2.32.5 resolvelib-1.2.1 ruamel.yaml-0.18.16 ruamel.yaml.clib-0.2.14 six-1.17.0 urllib3-2.5.0
+#8 29.37 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 29.37 
+#8 29.37 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 29.37 [notice] To update, run: pip install --upgrade pip
+#8 DONE 33.2s
+
+#9 [5/6] RUN ["pip","install","ansi"]
+#9 0.540 Collecting ansi
+#9 0.578   Downloading ansi-0.3.7-py3-none-any.whl.metadata (1.4 kB)
+#9 0.607 Downloading ansi-0.3.7-py3-none-any.whl (9.0 kB)
+#9 0.724 Installing collected packages: ansi
+#9 0.760 Successfully installed ansi-0.3.7
+#9 0.761 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.766 
+#9 0.766 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.766 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.9s
+
+#10 [6/6] RUN ["pip","install","ansible"]
+#10 0.486 Requirement already satisfied: ansible in /usr/local/lib/python3.11/site-packages (12.1.0)
+#10 0.488 Requirement already satisfied: ansible-core~=2.19.3 in /usr/local/lib/python3.11/site-packages (from ansible) (2.19.3)
+#10 0.492 Requirement already satisfied: jinja2>=3.1.0 in /usr/local/lib/python3.11/site-packages (from ansible-core~=2.19.3->ansible) (3.1.6)
+#10 0.494 Requirement already satisfied: PyYAML>=5.1 in /usr/local/lib/python3.11/site-packages (from ansible-core~=2.19.3->ansible) (6.0.3)
+#10 0.495 Requirement already satisfied: cryptography in /usr/local/lib/python3.11/site-packages (from ansible-core~=2.19.3->ansible) (46.0.3)
+#10 0.496 Requirement already satisfied: packaging in /usr/local/lib/python3.11/site-packages (from ansible-core~=2.19.3->ansible) (25.0)
+#10 0.497 Requirement already satisfied: resolvelib<2.0.0,>=0.5.3 in /usr/local/lib/python3.11/site-packages (from ansible-core~=2.19.3->ansible) (1.2.1)
+#10 0.500 Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.11/site-packages (from jinja2>=3.1.0->ansible-core~=2.19.3->ansible) (3.0.3)
+#10 0.525 Requirement already satisfied: cffi>=2.0.0 in /usr/local/lib/python3.11/site-packages (from cryptography->ansible-core~=2.19.3->ansible) (2.0.0)
+#10 0.529 Requirement already satisfied: pycparser in /usr/local/lib/python3.11/site-packages (from cffi>=2.0.0->cryptography->ansible-core~=2.19.3->ansible) (2.23)
+#10 0.637 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.644 
+#10 0.644 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.644 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.7s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 4.5s done
+#11 writing image sha256:81db75ae324ee17a18b30e8dcc0eab48c9d194422e688711f78ead9a921466ec done
+#11 naming to docker.io/library/test-image-5213fabf2bcb943efc82f00959b91163 done
+#11 DONE 4.6s
+
+View build details: docker-desktop://dashboard/build/default/default/wsineinkq4xb3n25ch6lm6xyb
+[2025-10-29 15:29:24] SUCCESS: Build completed for 5213fabf2bcb943efc82f00959b91163

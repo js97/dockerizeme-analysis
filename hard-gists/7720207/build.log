@@ -1,0 +1,92 @@
+=== Docker Build Log for 7720207 ===
+Started at: Mi 29. Okt 17:17:17 CET 2025
+
+[2025-10-29 17:17:17] START: Building image for 7720207
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 304B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 262B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/7720207/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","githubpy"]
+#7 2.213 Collecting githubpy
+#7 2.344   Downloading githubpy-2.0.0-py3-none-any.whl.metadata (757 bytes)
+#7 2.372 Downloading githubpy-2.0.0-py3-none-any.whl (17 kB)
+#7 2.423 Installing collected packages: githubpy
+#7 2.437 Successfully installed githubpy-2.0.0
+#7 2.438 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.537 
+#7 2.537 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.537 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.7s
+
+#8 [4/7] RUN ["pip","install","pygithub-redux"]
+#8 0.779 Collecting pygithub-redux
+#8 0.937   Downloading pygithub-redux-1.33.0.tar.gz (2.6 MB)
+#8 1.328      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 MB 6.7 MB/s eta 0:00:00
+#8 1.474   Preparing metadata (setup.py): started
+#8 1.872   Preparing metadata (setup.py): finished with status 'error'
+#8 1.875   error: subprocess-exited-with-error
+#8 1.875   
+#8 1.875   × python setup.py egg_info did not run successfully.
+#8 1.875   │ exit code: 1
+#8 1.875   ╰─> [3 lines of output]
+#8 1.875       /usr/local/lib/python3.11/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'test_suite'
+#8 1.875         warnings.warn(msg)
+#8 1.875       error in pygithub-redux setup command: use_2to3 is invalid.
+#8 1.875       [end of output]
+#8 1.875   
+#8 1.875   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 1.876 error: metadata-generation-failed
+#8 1.876 
+#8 1.876 × Encountered error while generating package metadata.
+#8 1.876 ╰─> See above for output.
+#8 1.876 
+#8 1.876 note: This is an issue with the package mentioned above, not pip.
+#8 1.876 hint: See above for details.
+#8 1.881 
+#8 1.881 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.881 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install pygithub-redux" did not complete successfully: exit code: 1
+------
+ > [4/7] RUN ["pip","install","pygithub-redux"]:
+1.876 error: metadata-generation-failed
+1.876 
+1.876 × Encountered error while generating package metadata.
+1.876 ╰─> See above for output.
+1.876 
+1.876 note: This is an issue with the package mentioned above, not pip.
+1.876 hint: See above for details.
+1.881 
+1.881 [notice] A new release of pip is available: 24.0 -> 25.3
+1.881 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/7720207/snippet.py /snippet.py
+   3 |     RUN ["pip","install","githubpy"]
+   4 | >>> RUN ["pip","install","pygithub-redux"]
+   5 |     RUN ["pip","install","PyGithub"]
+   6 |     RUN ["pip","install","GitPython"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install pygithub-redux" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/k2x1jij38m2sgymvzw5621u2u
+[2025-10-29 17:17:22] ERROR: Build failed for 7720207

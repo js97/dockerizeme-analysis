@@ -1,0 +1,12 @@
+=== Docker Run Log for 4d859423b9dae1cf7471 ===
+Started at: Mi 29. Okt 15:12:26 CET 2025
+
+[2025-10-29 15:12:27] START: Running container for 4d859423b9dae1cf7471
+[2025-10-29 15:12:27] SUCCESS: Container 0fb10850b7c652cc583f4d848735b89d65b1ff2e9c98875264156c8e486a4b15 started for 4d859423b9dae1cf7471
+=== Container logs for 4d859423b9dae1cf7471 ===
+  File "/snippet.py", line 69
+    print "TR unigram accuracy: %s" % tr_unigram_tagger.evaluate(eval_data)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+=== End of logs for 4d859423b9dae1cf7471 ===
+[2025-10-29 15:12:29] INFO: Container 0fb10850b7c652cc583f4d848735b89d65b1ff2e9c98875264156c8e486a4b15 has stopped

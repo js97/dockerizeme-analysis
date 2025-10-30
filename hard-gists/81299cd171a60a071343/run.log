@@ -1,0 +1,23 @@
+=== Docker Run Log for 81299cd171a60a071343 ===
+Started at: Mi 29. Okt 17:39:36 CET 2025
+
+[2025-10-29 17:39:39] START: Running container for 81299cd171a60a071343
+[2025-10-29 17:39:39] SUCCESS: Container 6ba176508e4b84805f936a15f1dd7061b262dd18b23ea40d2e6704bd22f790ca started for 81299cd171a60a071343
+=== Container logs for 81299cd171a60a071343 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 69, in <module>
+    main()
+  File "/snippet.py", line 61, in main
+    step_data = get_values_for_type("export.xml",
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/snippet.py", line 45, in get_values_for_type
+    tree = ET.parse("export.xml")
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/xml/etree/ElementTree.py", line 1219, in parse
+    tree.parse(source, parser)
+  File "/usr/local/lib/python3.11/xml/etree/ElementTree.py", line 570, in parse
+    source = open(source, "rb")
+             ^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'export.xml'
+=== End of logs for 81299cd171a60a071343 ===
+[2025-10-29 17:39:41] INFO: Container 6ba176508e4b84805f936a15f1dd7061b262dd18b23ea40d2e6704bd22f790ca has stopped

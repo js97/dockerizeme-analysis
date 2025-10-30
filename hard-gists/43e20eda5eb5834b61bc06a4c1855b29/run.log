@@ -1,0 +1,16 @@
+=== Docker Run Log for 43e20eda5eb5834b61bc06a4c1855b29 ===
+Started at: Mi 29. Okt 14:36:41 CET 2025
+
+[2025-10-29 14:37:57] START: Running container for 43e20eda5eb5834b61bc06a4c1855b29
+[2025-10-29 14:37:58] SUCCESS: Container eb941dc90a20dc49f0db55d4cfe8bd5c23e57f7991eb87dd30465353e7ef5b62 started for 43e20eda5eb5834b61bc06a4c1855b29
+=== Container logs for 43e20eda5eb5834b61bc06a4c1855b29 ===
+2025-10-29 13:37:58.664877: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2025-10-29 13:37:58.701885: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-29 13:37:59.891429: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+Traceback (most recent call last):
+  File "/snippet.py", line 7, in <module>
+    from keras.engine import Model
+ModuleNotFoundError: No module named 'keras.engine'
+=== End of logs for 43e20eda5eb5834b61bc06a4c1855b29 ===
+[2025-10-29 14:38:00] INFO: Container eb941dc90a20dc49f0db55d4cfe8bd5c23e57f7991eb87dd30465353e7ef5b62 has stopped

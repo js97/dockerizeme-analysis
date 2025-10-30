@@ -1,0 +1,37 @@
+=== Docker Run Log for 0618f44dc5270f9a2be2826d0d933ed7 ===
+Started at: Mi 29. Okt 11:28:53 CET 2025
+
+[2025-10-29 11:29:00] START: Running container for 0618f44dc5270f9a2be2826d0d933ed7
+[2025-10-29 11:29:00] SUCCESS: Container 91a07a2d9601f317b890f9d685e8881f96473d559243120d8263bc5860e8952d started for 0618f44dc5270f9a2be2826d0d933ed7
+=== Container logs for 0618f44dc5270f9a2be2826d0d933ed7 ===
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/logging/config.py", line 396, in resolve
+    found = self.importer(used)
+            ^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'raven'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/logging/config.py", line 573, in configure
+    handler = self.configure_handler(handlers[name])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/logging/config.py", line 735, in configure_handler
+    klass = self.resolve(cname)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/logging/config.py", line 407, in resolve
+    raise v from e
+ValueError: Cannot resolve 'raven.contrib.django.raven_compat.handlers.SentryHandler': No module named 'raven'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/snippet.py", line 10, in <module>
+    logging.config.dictConfig({
+  File "/usr/local/lib/python3.11/logging/config.py", line 823, in dictConfig
+    dictConfigClass(config).configure()
+  File "/usr/local/lib/python3.11/logging/config.py", line 580, in configure
+    raise ValueError('Unable to configure handler '
+ValueError: Unable to configure handler 'sentry'
+=== End of logs for 0618f44dc5270f9a2be2826d0d933ed7 ===
+[2025-10-29 11:29:02] INFO: Container 91a07a2d9601f317b890f9d685e8881f96473d559243120d8263bc5860e8952d has stopped

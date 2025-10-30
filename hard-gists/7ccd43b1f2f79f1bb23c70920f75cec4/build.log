@@ -1,0 +1,91 @@
+=== Docker Build Log for 7ccd43b1f2f79f1bb23c70920f75cec4 ===
+Started at: Mi 29. Okt 17:32:14 CET 2025
+
+[2025-10-29 17:32:14] START: Building image for 7ccd43b1f2f79f1bb23c70920f75cec4
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 233B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 5.74kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/7ccd43b1f2f79f1bb23c70920f75cec4/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","SQLAlchemy"]
+#7 2.453 Collecting SQLAlchemy
+#7 2.495   Downloading sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.5 kB)
+#7 2.693 Collecting greenlet>=1 (from SQLAlchemy)
+#7 2.703   Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+#7 2.763 Collecting typing-extensions>=4.6.0 (from SQLAlchemy)
+#7 2.771   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#7 2.795 Downloading sqlalchemy-2.0.44-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+#7 2.939    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 23.2 MB/s eta 0:00:00
+#7 2.948 Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (587 kB)
+#7 2.975    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 587.7/587.7 kB 22.4 MB/s eta 0:00:00
+#7 2.983 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#7 2.994    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.7 MB/s eta 0:00:00
+#7 3.070 Installing collected packages: typing-extensions, greenlet, SQLAlchemy
+#7 4.080 Successfully installed SQLAlchemy-2.0.44 greenlet-3.2.4 typing-extensions-4.15.0
+#7 4.080 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.180 
+#7 4.180 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.180 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.6s
+
+#8 [4/4] RUN ["pip","install","sqlalchemy-orm"]
+#8 0.710 Collecting sqlalchemy-orm
+#8 0.743   Downloading sqlalchemy-orm-1.2.10.tar.gz (21 kB)
+#8 0.770   Preparing metadata (setup.py): started
+#8 1.254   Preparing metadata (setup.py): finished with status 'done'
+#8 1.260 Requirement already satisfied: SQLAlchemy in /usr/local/lib/python3.11/site-packages (from sqlalchemy-orm) (2.0.44)
+#8 1.298 Collecting inflection (from sqlalchemy-orm)
+#8 1.308   Downloading inflection-0.5.1-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 1.347 Collecting cached-property (from sqlalchemy-orm)
+#8 1.357   Downloading cached_property-2.0.1-py3-none-any.whl.metadata (10 kB)
+#8 1.402 Collecting typing_inspect (from sqlalchemy-orm)
+#8 1.411   Downloading typing_inspect-0.9.0-py3-none-any.whl.metadata (1.5 kB)
+#8 1.447 Requirement already satisfied: greenlet>=1 in /usr/local/lib/python3.11/site-packages (from SQLAlchemy->sqlalchemy-orm) (3.2.4)
+#8 1.447 Requirement already satisfied: typing-extensions>=4.6.0 in /usr/local/lib/python3.11/site-packages (from SQLAlchemy->sqlalchemy-orm) (4.15.0)
+#8 1.474 Collecting mypy-extensions>=0.3.0 (from typing_inspect->sqlalchemy-orm)
+#8 1.482   Downloading mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+#8 1.509 Downloading cached_property-2.0.1-py3-none-any.whl (7.4 kB)
+#8 1.529 Downloading inflection-0.5.1-py2.py3-none-any.whl (9.5 kB)
+#8 1.548 Downloading typing_inspect-0.9.0-py3-none-any.whl (8.8 kB)
+#8 1.565 Downloading mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+#8 1.580 Building wheels for collected packages: sqlalchemy-orm
+#8 1.581   Building wheel for sqlalchemy-orm (setup.py): started
+#8 1.752   Building wheel for sqlalchemy-orm (setup.py): finished with status 'done'
+#8 1.753   Created wheel for sqlalchemy-orm: filename=sqlalchemy_orm-1.2.10-py3-none-any.whl size=27371 sha256=13e9725ad353e3f850407351c41e22e222d79465efa7d274fa3f523fd519d24c
+#8 1.753   Stored in directory: /root/.cache/pip/wheels/d4/b0/27/9394422ce43e5fa9d17b52d40c40182022768449bfc9e06f57
+#8 1.755 Successfully built sqlalchemy-orm
+#8 1.806 Installing collected packages: mypy-extensions, inflection, cached-property, typing_inspect, sqlalchemy-orm
+#8 1.899 Successfully installed cached-property-2.0.1 inflection-0.5.1 mypy-extensions-1.1.0 sqlalchemy-orm-1.2.10 typing_inspect-0.9.0
+#8 1.899 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.904 
+#8 1.904 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.904 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.0s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.3s done
+#9 writing image sha256:3aaaeec628bd628fb63ba191b4e2bf6c02274ba92fb35de4ff948705990b1184 done
+#9 naming to docker.io/library/test-image-7ccd43b1f2f79f1bb23c70920f75cec4 done
+#9 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/7s3nf3dt4mvcdyvq6rry7z4oq
+[2025-10-29 17:32:21] SUCCESS: Build completed for 7ccd43b1f2f79f1bb23c70920f75cec4

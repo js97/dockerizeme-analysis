@@ -1,0 +1,118 @@
+=== Docker Build Log for 1792428 ===
+Started at: Mi 29. Okt 12:29:30 CET 2025
+
+[2025-10-29 12:29:30] START: Building image for 1792428
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 176B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.17kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/1792428/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","androidviewclient"]
+#7 1.912 Collecting androidviewclient
+#7 1.943   Downloading androidviewclient-24.1.0-py3-none-any.whl.metadata (661 bytes)
+#7 1.956 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from androidviewclient) (79.0.1)
+#7 1.997 Collecting requests (from androidviewclient)
+#7 2.007   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.188 Collecting numpy (from androidviewclient)
+#7 2.200   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.228      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.1 MB/s eta 0:00:00
+#7 2.365 Collecting matplotlib (from androidviewclient)
+#7 2.377   Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#7 2.446 Collecting culebratester-client>=2.0.73 (from androidviewclient)
+#7 2.455   Downloading culebratester_client-2.0.73-py3-none-any.whl.metadata (685 bytes)
+#7 2.517 Collecting urllib3>=1.15 (from culebratester-client>=2.0.73->androidviewclient)
+#7 2.525   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.563 Collecting six>=1.10 (from culebratester-client>=2.0.73->androidviewclient)
+#7 2.572   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.615 Collecting certifi (from culebratester-client>=2.0.73->androidviewclient)
+#7 2.623   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.661 Collecting python-dateutil (from culebratester-client>=2.0.73->androidviewclient)
+#7 2.670   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#7 2.764 Collecting contourpy>=1.0.1 (from matplotlib->androidviewclient)
+#7 2.773   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#7 2.809 Collecting cycler>=0.10 (from matplotlib->androidviewclient)
+#7 2.816   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#7 2.981 Collecting fonttools>=4.22.0 (from matplotlib->androidviewclient)
+#7 2.991   Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+#7 3.018      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.3/112.3 kB 4.2 MB/s eta 0:00:00
+#7 3.090 Collecting kiwisolver>=1.3.1 (from matplotlib->androidviewclient)
+#7 3.100   Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+#7 3.149 Collecting packaging>=20.0 (from matplotlib->androidviewclient)
+#7 3.156   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#7 3.365 Collecting pillow>=8 (from matplotlib->androidviewclient)
+#7 3.375   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#7 3.438 Collecting pyparsing>=3 (from matplotlib->androidviewclient)
+#7 3.446   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#7 3.556 Collecting charset_normalizer<4,>=2 (from requests->androidviewclient)
+#7 3.565   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 3.607 Collecting idna<4,>=2.5 (from requests->androidviewclient)
+#7 3.616   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 3.739 Downloading androidviewclient-24.1.0-py3-none-any.whl (425 kB)
+#7 3.773    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 425.1/425.1 kB 13.1 MB/s eta 0:00:00
+#7 3.785 Downloading culebratester_client-2.0.73-py3-none-any.whl (114 kB)
+#7 3.799    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.2/114.2 kB 8.6 MB/s eta 0:00:00
+#7 3.809 Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+#7 4.125    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 27.6 MB/s eta 0:00:00
+#7 4.136 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 4.769    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 24.1 MB/s eta 0:00:00
+#7 4.779 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 4.790    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 5.5 MB/s eta 0:00:00
+#7 4.799 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 4.812    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 12.5 MB/s eta 0:00:00
+#7 4.820 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 4.836    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.1 MB/s eta 0:00:00
+#7 4.846 Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+#7 4.869    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 355.2/355.2 kB 15.8 MB/s eta 0:00:00
+#7 4.878 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#7 4.898 Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#7 5.085    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 26.7 MB/s eta 0:00:00
+#7 5.093 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 5.106    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.3 MB/s eta 0:00:00
+#7 5.116 Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+#7 5.177    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 24.2 MB/s eta 0:00:00
+#7 5.184 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#7 5.196    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.3 MB/s eta 0:00:00
+#7 5.205 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#7 5.457    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 28.1 MB/s eta 0:00:00
+#7 5.466 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#7 5.479    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 8.5 MB/s eta 0:00:00
+#7 5.488 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#7 5.505    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 14.1 MB/s eta 0:00:00
+#7 5.514 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 5.533 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 5.548    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.0 MB/s eta 0:00:00
+#7 5.741 Installing collected packages: urllib3, six, pyparsing, pillow, packaging, numpy, kiwisolver, idna, fonttools, cycler, charset_normalizer, certifi, requests, python-dateutil, contourpy, matplotlib, culebratester-client, androidviewclient
+#7 9.501 Successfully installed androidviewclient-24.1.0 certifi-2025.10.5 charset_normalizer-3.4.4 contourpy-1.3.3 culebratester-client-2.0.73 cycler-0.12.1 fonttools-4.60.1 idna-3.11 kiwisolver-1.4.9 matplotlib-3.10.7 numpy-2.3.4 packaging-25.0 pillow-12.0.0 pyparsing-3.2.5 python-dateutil-2.9.0.post0 requests-2.32.5 six-1.17.0 urllib3-2.5.0
+#7 9.501 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 9.628 
+#7 9.628 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 9.628 [notice] To update, run: pip install --upgrade pip
+#7 DONE 10.7s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.9s done
+#8 writing image sha256:86624fab0d81fd783a70208e517d0718f59b8d53c42cb0038bc7ff96ef5169d5 done
+#8 naming to docker.io/library/test-image-1792428 done
+#8 DONE 0.9s
+
+View build details: docker-desktop://dashboard/build/default/default/cdkybepurbc2z9a7q6gfj5wxj
+[2025-10-29 12:29:42] SUCCESS: Build completed for 1792428

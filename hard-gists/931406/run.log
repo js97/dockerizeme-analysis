@@ -1,0 +1,13 @@
+=== Docker Run Log for 931406 ===
+Started at: Mi 29. Okt 18:22:52 CET 2025
+
+[2025-10-29 18:22:57] START: Running container for 931406
+[2025-10-29 18:22:57] SUCCESS: Container 3a1e009725ed0369c8eab73e3fe3a95e3518ae41e4b01893abd98c51e7bd90e8 started for 931406
+=== Container logs for 931406 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 9, in <module>
+    mc = memcache.Client(['127.0.0.1:11211'], debug=0)
+         ^^^^^^^^^^^^^^^
+AttributeError: module 'memcache' has no attribute 'Client'
+=== End of logs for 931406 ===
+[2025-10-29 18:22:59] INFO: Container 3a1e009725ed0369c8eab73e3fe3a95e3518ae41e4b01893abd98c51e7bd90e8 has stopped

@@ -1,0 +1,18 @@
+=== Docker Run Log for 0c7ccae5d764ff61788fc626096e5688 ===
+Started at: Mi 29. Okt 11:36:35 CET 2025
+
+[2025-10-29 11:36:39] START: Running container for 0c7ccae5d764ff61788fc626096e5688
+[2025-10-29 11:36:39] SUCCESS: Container 38149b21e86888690644a097532a65a06b4b72804b1ffc777536d6cf902f71fd started for 0c7ccae5d764ff61788fc626096e5688
+=== Container logs for 0c7ccae5d764ff61788fc626096e5688 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 36, in <module>
+    commits = log(path)
+              ^^^^^^^^^
+  File "/snippet.py", line 11, in log
+    repo = git.Repo(repo)
+           ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/git/repo/base.py", line 289, in __init__
+    raise InvalidGitRepositoryError(epath)
+git.exc.InvalidGitRepositoryError: /
+=== End of logs for 0c7ccae5d764ff61788fc626096e5688 ===
+[2025-10-29 11:36:41] INFO: Container 38149b21e86888690644a097532a65a06b4b72804b1ffc777536d6cf902f71fd has stopped

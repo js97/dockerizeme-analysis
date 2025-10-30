@@ -1,0 +1,65 @@
+=== Docker Build Log for 5329310 ===
+Started at: Mi 29. Okt 15:36:41 CET 2025
+
+[2025-10-29 15:36:41] START: Building image for 5329310
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 194B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.72kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/5329310/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","numpy"]
+#7 2.151 Collecting numpy
+#7 2.185   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.209      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.5 MB/s eta 0:00:00
+#7 2.228 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 2.898    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 22.9 MB/s eta 0:00:00
+#7 2.979 Installing collected packages: numpy
+#7 4.423 Successfully installed numpy-2.3.4
+#7 4.423 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.519 
+#7 4.519 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.519 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.5s
+
+#8 [4/4] RUN ["pip","install","scipy"]
+#8 0.653 Collecting scipy
+#8 0.688   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#8 0.714      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.1 MB/s eta 0:00:00
+#8 0.743 Requirement already satisfied: numpy<2.6,>=1.25.2 in /usr/local/lib/python3.11/site-packages (from scipy) (2.3.4)
+#8 0.757 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#8 2.389    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 12.7 MB/s eta 0:00:00
+#8 2.532 Installing collected packages: scipy
+#8 5.246 Successfully installed scipy-1.16.3
+#8 5.246 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 5.251 
+#8 5.251 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 5.251 [notice] To update, run: pip install --upgrade pip
+#8 DONE 6.0s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.8s done
+#9 writing image sha256:697e841beb4db8a90ea674467f39bf049e7afe4a1fd0d42110aadae081e97399 done
+#9 naming to docker.io/library/test-image-5329310 done
+#9 DONE 0.9s
+
+View build details: docker-desktop://dashboard/build/default/default/pww1zk6k7yzn5b9htcetemtoi
+[2025-10-29 15:36:54] SUCCESS: Build completed for 5329310

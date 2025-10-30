@@ -1,0 +1,121 @@
+=== Docker Build Log for 4882342eba2b57376ed1 ===
+Started at: Mi 29. Okt 15:02:33 CET 2025
+
+[2025-10-29 15:02:33] START: Building image for 4882342eba2b57376ed1
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 241B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.69kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/4882342eba2b57376ed1/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","Lasagne"]
+#7 2.108 Collecting Lasagne
+#7 2.153   Downloading Lasagne-0.1.tar.gz (125 kB)
+#7 2.180      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.1/125.1 kB 4.8 MB/s eta 0:00:00
+#7 2.197   Preparing metadata (setup.py): started
+#7 2.599   Preparing metadata (setup.py): finished with status 'done'
+#7 2.809 Collecting numpy (from Lasagne)
+#7 2.818   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.831      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 5.1 MB/s eta 0:00:00
+#7 2.849 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 3.528    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 22.0 MB/s eta 0:00:00
+#7 3.577 Building wheels for collected packages: Lasagne
+#7 3.578   Building wheel for Lasagne (setup.py): started
+#7 3.793   Building wheel for Lasagne (setup.py): finished with status 'done'
+#7 3.794   Created wheel for Lasagne: filename=lasagne-0.1-py3-none-any.whl size=79359 sha256=8ebf26922ade89e5d710d2ed88e751951335cd8b646e2092ff9bd0391b407ad0
+#7 3.794   Stored in directory: /root/.cache/pip/wheels/4e/ad/d7/6376b7842a2d4635bb42a9889ef94b6de55291916efa1952e9
+#7 3.796 Successfully built Lasagne
+#7 3.833 Installing collected packages: numpy, Lasagne
+#7 5.471 Successfully installed Lasagne-0.1 numpy-2.3.4
+#7 5.472 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.579 
+#7 5.579 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.579 [notice] To update, run: pip install --upgrade pip
+#7 DONE 6.2s
+
+#8 [4/5] RUN ["pip","install","nolearn"]
+#8 0.789 Collecting nolearn
+#8 0.943   Downloading nolearn-0.6.1.tar.gz (38 kB)
+#8 0.979   Preparing metadata (setup.py): started
+#8 1.224   Preparing metadata (setup.py): finished with status 'done'
+#8 1.303 Collecting joblib (from nolearn)
+#8 1.314   Downloading joblib-1.5.2-py3-none-any.whl.metadata (5.6 kB)
+#8 1.474 Collecting scikit-learn (from nolearn)
+#8 1.484   Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#8 1.540 Collecting tabulate (from nolearn)
+#8 1.550   Downloading tabulate-0.9.0-py3-none-any.whl.metadata (34 kB)
+#8 1.568 Requirement already satisfied: Lasagne in /usr/local/lib/python3.11/site-packages (from nolearn) (0.1)
+#8 1.713 Collecting Theano (from nolearn)
+#8 1.726   Downloading Theano-1.0.5.tar.gz (2.8 MB)
+#8 1.853      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.8/2.8 MB 22.9 MB/s eta 0:00:00
+#8 2.073   Preparing metadata (setup.py): started
+#8 2.292   Preparing metadata (setup.py): finished with status 'done'
+#8 2.304 Requirement already satisfied: numpy in /usr/local/lib/python3.11/site-packages (from Lasagne->nolearn) (2.3.4)
+#8 2.605 Collecting scipy>=1.8.0 (from scikit-learn->nolearn)
+#8 2.630   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#8 2.653      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 4.7 MB/s eta 0:00:00
+#8 2.716 Collecting threadpoolctl>=3.1.0 (from scikit-learn->nolearn)
+#8 2.726   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#8 2.816 Collecting six>=1.9.0 (from Theano->nolearn)
+#8 2.825   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 2.883 Downloading joblib-1.5.2-py3-none-any.whl (308 kB)
+#8 2.903    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 308.4/308.4 kB 16.6 MB/s eta 0:00:00
+#8 2.916 Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+#8 3.304    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 25.1 MB/s eta 0:00:00
+#8 3.315 Downloading tabulate-0.9.0-py3-none-any.whl (35 kB)
+#8 3.338 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#8 4.967    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 16.3 MB/s eta 0:00:00
+#8 4.978 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 4.997 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#8 5.135 Building wheels for collected packages: nolearn, Theano
+#8 5.142   Building wheel for nolearn (setup.py): started
+#8 5.344   Building wheel for nolearn (setup.py): finished with status 'done'
+#8 5.345   Created wheel for nolearn: filename=nolearn-0.6.1-py3-none-any.whl size=38587 sha256=11783988ab5c80f05bc0a64a48982c203dd6c9e3da24bacaf36040c003de15f4
+#8 5.345   Stored in directory: /root/.cache/pip/wheels/20/02/4d/ba60210a8ec441602b2cc5ac9a08f6f8ad769a23dad7ef353d
+#8 5.348   Building wheel for Theano (setup.py): started
+#8 6.110   Building wheel for Theano (setup.py): finished with status 'done'
+#8 6.116   Created wheel for Theano: filename=theano-1.0.5-py3-none-any.whl size=2668205 sha256=5f2a3135df300123ad24780474fb3d8a3625912fc837ce247ca8686ec17b5d22
+#8 6.117   Stored in directory: /root/.cache/pip/wheels/26/1f/2f/02d738022626461828148150c0354e712c4ad74f1a60f10933
+#8 6.120 Successfully built nolearn Theano
+#8 6.226 Installing collected packages: threadpoolctl, tabulate, six, scipy, joblib, Theano, scikit-learn, nolearn
+#8 12.65 Successfully installed Theano-1.0.5 joblib-1.5.2 nolearn-0.6.1 scikit-learn-1.7.2 scipy-1.16.3 six-1.17.0 tabulate-0.9.0 threadpoolctl-3.6.0
+#8 12.65 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 12.65 
+#8 12.65 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 12.65 [notice] To update, run: pip install --upgrade pip
+#8 DONE 14.1s
+
+#9 [5/5] RUN ["pip","install","numpy"]
+#9 0.635 Requirement already satisfied: numpy in /usr/local/lib/python3.11/site-packages (2.3.4)
+#9 0.763 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.772 
+#9 0.772 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.772 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.9s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 1.6s done
+#10 writing image sha256:9cc86dcd330514e8af35db88e3edefd2f9897fba2d792900aa97fd5ab802fb2d done
+#10 naming to docker.io/library/test-image-4882342eba2b57376ed1 done
+#10 DONE 1.6s
+
+View build details: docker-desktop://dashboard/build/default/default/foziowoxxpht3sbe64ti0275m
+[2025-10-29 15:02:56] SUCCESS: Build completed for 4882342eba2b57376ed1

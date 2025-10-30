@@ -1,0 +1,71 @@
+=== Docker Build Log for 6507cb95562f1db6df84 ===
+Started at: Mi 29. Okt 16:34:05 CET 2025
+
+[2025-10-29 16:34:05] START: Building image for 6507cb95562f1db6df84
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 207B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.25kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/6507cb95562f1db6df84/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","numpy"]
+#7 2.205 Collecting numpy
+#7 2.245   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.272      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.1 MB/s eta 0:00:00
+#7 2.292 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 2.966    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 22.9 MB/s eta 0:00:00
+#7 3.046 Installing collected packages: numpy
+#7 4.574 Successfully installed numpy-2.3.4
+#7 4.574 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.666 
+#7 4.666 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.666 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.1s
+
+#8 [4/4] RUN ["pip","install","PyQt5"]
+#8 0.534 Collecting PyQt5
+#8 0.573   Downloading PyQt5-5.15.11-cp38-abi3-manylinux_2_17_x86_64.whl.metadata (2.1 kB)
+#8 0.639 Collecting PyQt5-sip<13,>=12.15 (from PyQt5)
+#8 0.649   Downloading pyqt5_sip-12.17.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.whl.metadata (494 bytes)
+#8 0.684 Collecting PyQt5-Qt5<5.16.0,>=5.15.2 (from PyQt5)
+#8 0.693   Downloading PyQt5_Qt5-5.15.17-py3-none-manylinux2014_x86_64.whl.metadata (536 bytes)
+#8 0.716 Downloading PyQt5-5.15.11-cp38-abi3-manylinux_2_17_x86_64.whl (8.2 MB)
+#8 1.046    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.2/8.2 MB 25.0 MB/s eta 0:00:00
+#8 1.056 Downloading PyQt5_Qt5-5.15.17-py3-none-manylinux2014_x86_64.whl (61.1 MB)
+#8 3.483    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.1/61.1 MB 14.5 MB/s eta 0:00:00
+#8 3.497 Downloading pyqt5_sip-12.17.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.whl (276 kB)
+#8 3.513    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 276.8/276.8 kB 18.5 MB/s eta 0:00:00
+#8 3.717 Installing collected packages: PyQt5-Qt5, PyQt5-sip, PyQt5
+#8 4.800 Successfully installed PyQt5-5.15.11 PyQt5-Qt5-5.15.17 PyQt5-sip-12.17.1
+#8 4.801 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 4.806 
+#8 4.806 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 4.806 [notice] To update, run: pip install --upgrade pip
+#8 DONE 6.0s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.9s done
+#9 writing image sha256:d63410ba8c00c38a76f6a53c90be4b3a4d5fe11e0b2a136154acf2fd1551ab8e done
+#9 naming to docker.io/library/test-image-6507cb95562f1db6df84 done
+#9 DONE 1.0s
+
+View build details: docker-desktop://dashboard/build/default/default/soxm1jmji283cv9qxaww8ywr7
+[2025-10-29 16:34:18] SUCCESS: Build completed for 6507cb95562f1db6df84

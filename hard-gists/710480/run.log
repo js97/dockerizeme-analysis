@@ -1,0 +1,12 @@
+=== Docker Run Log for 710480 ===
+Started at: Mi 29. Okt 17:00:45 CET 2025
+
+[2025-10-29 17:00:53] START: Running container for 710480
+[2025-10-29 17:00:53] SUCCESS: Container 247912188b95f982049d76bc63758d5fa69efba48234994ac94f3d47bb496d84 started for 710480
+=== Container logs for 710480 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 3, in <module>
+    from django.http import CompatCookie, HttpRequest
+ImportError: cannot import name 'CompatCookie' from 'django.http' (/usr/local/lib/python3.11/site-packages/django/http/__init__.py)
+=== End of logs for 710480 ===
+[2025-10-29 17:00:55] INFO: Container 247912188b95f982049d76bc63758d5fa69efba48234994ac94f3d47bb496d84 has stopped

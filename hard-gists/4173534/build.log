@@ -1,0 +1,77 @@
+=== Docker Build Log for 4173534 ===
+Started at: Mi 29. Okt 14:23:41 CET 2025
+
+[2025-10-29 14:23:41] START: Building image for 4173534
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 199B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 10.21kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/4173534/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","scene"]
+#7 1.996 Collecting scene
+#7 2.096   Downloading scene-0.0.1.tar.gz (4.3 kB)
+#7 2.114   Preparing metadata (setup.py): started
+#7 2.552   Preparing metadata (setup.py): finished with status 'done'
+#7 2.555 Building wheels for collected packages: scene
+#7 2.556   Building wheel for scene (setup.py): started
+#7 2.818   Building wheel for scene (setup.py): finished with status 'done'
+#7 2.819   Created wheel for scene: filename=scene-0.0.1-py2.py3-none-any.whl size=3300 sha256=645d6a03c7ec8c2f12b7cf5e3a673959cb177b460d0411560a07d9fe26bb90e9
+#7 2.819   Stored in directory: /root/.cache/pip/wheels/8d/92/cb/ec23387ed573b50de008a60ab148d18dac724dd0e65cd18715
+#7 2.825 Successfully built scene
+#7 2.866 Installing collected packages: scene
+#7 2.892 Successfully installed scene-0.0.1
+#7 2.892 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.994 
+#7 2.994 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.994 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.2s
+
+#8 [4/4] RUN ["pip","install","feedparser"]
+#8 0.655 Collecting feedparser
+#8 0.688   Downloading feedparser-6.0.12-py3-none-any.whl.metadata (2.7 kB)
+#8 0.724 Collecting sgmllib3k (from feedparser)
+#8 0.732   Downloading sgmllib3k-1.0.0.tar.gz (5.8 kB)
+#8 0.749   Preparing metadata (setup.py): started
+#8 0.868   Preparing metadata (setup.py): finished with status 'done'
+#8 0.884 Downloading feedparser-6.0.12-py3-none-any.whl (81 kB)
+#8 0.916    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 81.5/81.5 kB 2.5 MB/s eta 0:00:00
+#8 0.921 Building wheels for collected packages: sgmllib3k
+#8 0.926   Building wheel for sgmllib3k (setup.py): started
+#8 1.077   Building wheel for sgmllib3k (setup.py): finished with status 'done'
+#8 1.078   Created wheel for sgmllib3k: filename=sgmllib3k-1.0.0-py3-none-any.whl size=6090 sha256=58c80ddd784d7fd4aee430ced15ed035294c6ccdfb5ee7fb8379e4c1974b9312
+#8 1.078   Stored in directory: /root/.cache/pip/wheels/3b/25/2a/105d6a15df6914f4d15047691c6c28f9052cc1173e40285d03
+#8 1.080 Successfully built sgmllib3k
+#8 1.111 Installing collected packages: sgmllib3k, feedparser
+#8 1.187 Successfully installed feedparser-6.0.12 sgmllib3k-1.0.0
+#8 1.188 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.193 
+#8 1.193 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.193 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.3s
+
+#9 exporting to image
+#9 exporting layers 0.1s done
+#9 writing image sha256:eed276603a9ba4ffe42f64c015cc977a7653b2139dfade06d669c6ccedb8397b done
+#9 naming to docker.io/library/test-image-4173534 done
+#9 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/1ugl66owxng8fx69e45pobwjs
+[2025-10-29 14:23:46] SUCCESS: Build completed for 4173534

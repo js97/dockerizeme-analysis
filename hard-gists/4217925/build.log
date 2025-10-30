@@ -1,0 +1,87 @@
+=== Docker Build Log for 4217925 ===
+Started at: Mi 29. Okt 14:26:35 CET 2025
+
+[2025-10-29 14:26:35] START: Building image for 4217925
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 197B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 796B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/4217925/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","Ghost.py"]
+#7 2.081 Collecting Ghost.py
+#7 2.218   Downloading Ghost.py-0.2.3.tar.gz (220 kB)
+#7 2.254      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 220.8/220.8 kB 6.2 MB/s eta 0:00:00
+#7 2.271   Preparing metadata (setup.py): started
+#7 2.790   Preparing metadata (setup.py): finished with status 'done'
+#7 2.791 Building wheels for collected packages: Ghost.py
+#7 2.792   Building wheel for Ghost.py (setup.py): started
+#7 3.000   Building wheel for Ghost.py (setup.py): finished with status 'done'
+#7 3.000   Created wheel for Ghost.py: filename=ghost_py-0.2.3-py3-none-any.whl size=35838 sha256=3a2fd7560c48ae26d0cf8a7bf380e653f0348c1bc59f5d36754b88cf0135035d
+#7 3.001   Stored in directory: /root/.cache/pip/wheels/11/88/f4/fdf129eca8f4613276ef38307a878fd7365ff9b24fb068a99d
+#7 3.004 Successfully built Ghost.py
+#7 3.033 Installing collected packages: Ghost.py
+#7 3.065 Successfully installed Ghost.py-0.2.3
+#7 3.065 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.162 
+#7 3.162 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.162 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.4s
+
+#8 [4/4] RUN ["pip","install","ghost"]
+#8 0.652 Collecting ghost
+#8 0.783   Downloading ghost-0.6.1-py2.py3-none-any.whl.metadata (1.5 kB)
+#8 0.836 Collecting click>=6.7 (from ghost)
+#8 0.844   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+#8 0.892 Collecting tinydb>=3.2.2 (from ghost)
+#8 0.901   Downloading tinydb-4.8.2-py3-none-any.whl.metadata (6.7 kB)
+#8 1.153 Collecting cryptography>=1.5.0 (from ghost)
+#8 1.162   Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+#8 1.316 Collecting cffi>=2.0.0 (from cryptography>=1.5.0->ghost)
+#8 1.327   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+#8 1.365 Collecting pycparser (from cffi>=2.0.0->cryptography>=1.5.0->ghost)
+#8 1.373   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+#8 1.490 Downloading ghost-0.6.1-py2.py3-none-any.whl (21 kB)
+#8 1.508 Downloading click-8.3.0-py3-none-any.whl (107 kB)
+#8 1.528    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 5.2 MB/s eta 0:00:00
+#8 1.537 Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+#8 1.714    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 25.6 MB/s eta 0:00:00
+#8 1.722 Downloading tinydb-4.8.2-py3-none-any.whl (24 kB)
+#8 1.740 Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+#8 1.764    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 9.4 MB/s eta 0:00:00
+#8 1.773 Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+#8 1.787    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 8.6 MB/s eta 0:00:00
+#8 1.869 Installing collected packages: tinydb, pycparser, click, cffi, cryptography, ghost
+#8 2.274 Successfully installed cffi-2.0.0 click-8.3.0 cryptography-46.0.3 ghost-0.6.1 pycparser-2.23 tinydb-4.8.2
+#8 2.274 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 2.280 
+#8 2.280 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 2.280 [notice] To update, run: pip install --upgrade pip
+#8 DONE 2.5s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.2s done
+#9 writing image sha256:fa1080bfa07d4316f55790fb51bd21066c6ccead59a7ac6550ecf441e6d0d223 done
+#9 naming to docker.io/library/test-image-4217925 done
+#9 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/default/default/cbahtg4cod47zvdk5hubonxgp
+[2025-10-29 14:26:42] SUCCESS: Build completed for 4217925

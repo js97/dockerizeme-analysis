@@ -1,0 +1,13 @@
+=== Docker Run Log for aa64ddf6109414291030 ===
+Started at: Mi 29. Okt 19:11:47 CET 2025
+
+[2025-10-29 19:12:04] START: Running container for aa64ddf6109414291030
+[2025-10-29 19:12:04] SUCCESS: Container 3d675055933c3f8e23212b1d7834331d42fe8175ab15d79bf900a4daf23bb54d started for aa64ddf6109414291030
+=== Container logs for aa64ddf6109414291030 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 8, in <module>
+    with open(sys.argv[1],"rb") as r1:
+              ~~~~~~~~^^^
+IndexError: list index out of range
+=== End of logs for aa64ddf6109414291030 ===
+[2025-10-29 19:12:06] INFO: Container 3d675055933c3f8e23212b1d7834331d42fe8175ab15d79bf900a4daf23bb54d has stopped

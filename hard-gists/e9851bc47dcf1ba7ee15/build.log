@@ -1,0 +1,105 @@
+=== Docker Build Log for e9851bc47dcf1ba7ee15 ===
+Started at: Mi 29. Okt 20:48:37 CET 2025
+
+[2025-10-29 20:48:37] START: Building image for e9851bc47dcf1ba7ee15
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 205B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 334B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/e9851bc47dcf1ba7ee15/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","maya"]
+#7 1.918 Collecting maya
+#7 1.958   Downloading maya-0.6.1-py2.py3-none-any.whl.metadata (7.1 kB)
+#7 2.008 Collecting humanize (from maya)
+#7 2.019   Downloading humanize-4.14.0-py3-none-any.whl.metadata (7.8 kB)
+#7 2.103 Collecting pytz (from maya)
+#7 2.111   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#7 2.167 Collecting dateparser>=0.7.0 (from maya)
+#7 2.182   Downloading dateparser-1.2.2-py3-none-any.whl.metadata (29 kB)
+#7 2.227 Collecting tzlocal (from maya)
+#7 2.236   Downloading tzlocal-5.3.1-py3-none-any.whl.metadata (7.6 kB)
+#7 2.319 Collecting pendulum>=2.0.2 (from maya)
+#7 2.329   Downloading pendulum-3.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#7 2.378 Collecting snaptime (from maya)
+#7 2.411   Downloading snaptime-0.2.4.tar.gz (2.9 kB)
+#7 2.423   Preparing metadata (setup.py): started
+#7 2.802   Preparing metadata (setup.py): finished with status 'done'
+#7 2.841 Collecting python-dateutil>=2.7.0 (from dateparser>=0.7.0->maya)
+#7 2.856   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#7 3.260 Collecting regex>=2024.9.11 (from dateparser>=0.7.0->maya)
+#7 3.273   Downloading regex-2025.10.23-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+#7 3.288      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.5/40.5 kB 2.4 MB/s eta 0:00:00
+#7 3.326 Collecting tzdata>=2020.1 (from pendulum>=2.0.2->maya)
+#7 3.334   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#7 3.377 Collecting six>=1.5 (from python-dateutil>=2.7.0->dateparser>=0.7.0->maya)
+#7 3.385   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 3.410 Downloading maya-0.6.1-py2.py3-none-any.whl (12 kB)
+#7 3.430 Downloading dateparser-1.2.2-py3-none-any.whl (315 kB)
+#7 3.462    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 315.5/315.5 kB 10.3 MB/s eta 0:00:00
+#7 3.479 Downloading pendulum-3.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (353 kB)
+#7 3.511    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 353.7/353.7 kB 11.4 MB/s eta 0:00:00
+#7 3.522 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#7 3.558    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 14.7 MB/s eta 0:00:00
+#7 3.573 Downloading tzlocal-5.3.1-py3-none-any.whl (18 kB)
+#7 3.593 Downloading humanize-4.14.0-py3-none-any.whl (132 kB)
+#7 3.610    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.1/132.1 kB 8.1 MB/s eta 0:00:00
+#7 3.619 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#7 3.641    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 11.2 MB/s eta 0:00:00
+#7 3.650 Downloading regex-2025.10.23-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (800 kB)
+#7 3.738    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 800.3/800.3 kB 9.2 MB/s eta 0:00:00
+#7 3.746 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#7 3.779    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 11.1 MB/s eta 0:00:00
+#7 3.788 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.816 Building wheels for collected packages: snaptime
+#7 3.817   Building wheel for snaptime (setup.py): started
+#7 3.974   Building wheel for snaptime (setup.py): finished with status 'done'
+#7 3.974   Created wheel for snaptime: filename=snaptime-0.2.4-py3-none-any.whl size=3605 sha256=7934543a86f2a802180d9be5284d138432e960a0af470c3fe74d0c56a90fa83b
+#7 3.975   Stored in directory: /root/.cache/pip/wheels/af/cd/02/d3bb11d5c94237cbb0c7a2049d4ae314fdcbca899783d79d91
+#7 3.976 Successfully built snaptime
+#7 4.026 Installing collected packages: pytz, tzlocal, tzdata, six, regex, humanize, python-dateutil, snaptime, pendulum, dateparser, maya
+#7 4.652 Successfully installed dateparser-1.2.2 humanize-4.14.0 maya-0.6.1 pendulum-3.1.0 python-dateutil-2.9.0.post0 pytz-2025.2 regex-2025.10.23 six-1.17.0 snaptime-0.2.4 tzdata-2025.2 tzlocal-5.3.1
+#7 4.652 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.765 
+#7 4.765 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.765 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.1s
+
+#8 [4/4] RUN ["pip","install","tank"]
+#8 0.615 Collecting tank
+#8 0.749   Downloading tank-0.1.0-py3-none-any.whl.metadata (310 bytes)
+#8 0.869 Downloading tank-0.1.0-py3-none-any.whl (1.2 kB)
+#8 0.931 Installing collected packages: tank
+#8 0.963 Successfully installed tank-0.1.0
+#8 0.963 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.969 
+#8 0.969 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.969 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.1s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.3s done
+#9 writing image sha256:34a246fbe19f2f09843c29ca64549b1ed8c60792c40b6f87b7562ae575ae3fb2 done
+#9 naming to docker.io/library/test-image-e9851bc47dcf1ba7ee15 done
+#9 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/t6en0ge99jhpwda2xpdx5xagk
+[2025-10-29 20:48:44] SUCCESS: Build completed for e9851bc47dcf1ba7ee15

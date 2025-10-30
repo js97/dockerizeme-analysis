@@ -1,0 +1,156 @@
+=== Docker Build Log for a64321dd69339c42a184 ===
+Started at: Mi 29. Okt 19:05:29 CET 2025
+
+[2025-10-29 19:05:29] START: Building image for a64321dd69339c42a184
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 313B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.26kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/a64321dd69339c42a184/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","dj.choices"]
+#7 2.137 Collecting dj.choices
+#7 2.184   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 2.207   Preparing metadata (setup.py): started
+#7 2.599   Preparing metadata (setup.py): finished with status 'done'
+#7 2.704 Collecting django (from dj.choices)
+#7 2.712   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.750 Collecting six (from dj.choices)
+#7 2.758   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.803 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.813   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.852 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.861   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.887 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.528    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 13.0 MB/s eta 0:00:00
+#7 3.541 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.562 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.584 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.597    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 2.9 MB/s eta 0:00:00
+#7 3.634 Building wheels for collected packages: dj.choices
+#7 3.635   Building wheel for dj.choices (setup.py): started
+#7 3.806   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.807   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=160de0269e73065bc71466bbad5eb95b2fa686d5687cfdfdd2cb64f92e9336fd
+#7 3.807   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.809 Successfully built dj.choices
+#7 3.856 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 5.222 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 5.222 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.321 
+#7 5.321 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.321 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.7s
+
+#8 [4/7] RUN ["pip","install","indras_net"]
+#8 0.537 Collecting indras_net
+#8 0.586   Downloading indras_net-2.0.6.tar.gz (48 kB)
+#8 0.610      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.6/48.6 kB 1.8 MB/s eta 0:00:00
+#8 0.620   Preparing metadata (setup.py): started
+#8 0.737   Preparing metadata (setup.py): finished with status 'done'
+#8 0.786 Collecting networkx (from indras_net)
+#8 0.794   Downloading networkx-3.5-py3-none-any.whl.metadata (6.3 kB)
+#8 1.042 Collecting numpy (from indras_net)
+#8 1.053   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 1.090      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 1.6 MB/s eta 0:00:00
+#8 1.141 Downloading networkx-3.5-py3-none-any.whl (2.0 MB)
+#8 1.570    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 4.7 MB/s eta 0:00:00
+#8 1.580 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#8 3.707    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 8.4 MB/s eta 0:00:00
+#8 3.753 Building wheels for collected packages: indras_net
+#8 3.758   Building wheel for indras_net (setup.py): started
+#8 3.923   Building wheel for indras_net (setup.py): finished with status 'done'
+#8 3.924   Created wheel for indras_net: filename=indras_net-2.0.6-py3-none-any.whl size=76537 sha256=c41bc8066d02177e2fcefe560a591ba58a14caca2c3ff9ae8a867fe988f8ef50
+#8 3.924   Stored in directory: /root/.cache/pip/wheels/5c/22/97/5567dece42982388902a2ab5839e2ff0775ee3608834b5e431
+#8 3.926 Successfully built indras_net
+#8 3.996 Installing collected packages: numpy, networkx, indras_net
+#8 6.263 Successfully installed indras_net-2.0.6 networkx-3.5 numpy-2.3.4
+#8 6.263 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 6.268 
+#8 6.268 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 6.268 [notice] To update, run: pip install --upgrade pip
+#8 DONE 6.8s
+
+#9 [5/7] RUN ["pip","install","Django"]
+#9 0.428 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#9 0.432 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#9 0.433 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#9 0.492 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.497 
+#9 0.497 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.497 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.6s
+
+#10 [6/7] RUN ["pip","install","models"]
+#10 0.698 Collecting models
+#10 0.776   Downloading models-0.9.3.tar.gz (16 kB)
+#10 0.791   Preparing metadata (setup.py): started
+#10 0.880   Preparing metadata (setup.py): finished with status 'error'
+#10 0.883   error: subprocess-exited-with-error
+#10 0.883   
+#10 0.883   × python setup.py egg_info did not run successfully.
+#10 0.883   │ exit code: 1
+#10 0.883   ╰─> [8 lines of output]
+#10 0.883       Traceback (most recent call last):
+#10 0.883         File "<string>", line 2, in <module>
+#10 0.883         File "<pip-setuptools-caller>", line 34, in <module>
+#10 0.883         File "/tmp/pip-install-w8_nxynz/models_f6023f85e8ce4652913c3a829ed0bc08/setup.py", line 25, in <module>
+#10 0.883           import models
+#10 0.883         File "/tmp/pip-install-w8_nxynz/models_f6023f85e8ce4652913c3a829ed0bc08/models/__init__.py", line 23, in <module>
+#10 0.883           from base import *
+#10 0.883       ModuleNotFoundError: No module named 'base'
+#10 0.883       [end of output]
+#10 0.883   
+#10 0.883   note: This error originates from a subprocess, and is likely not a problem with pip.
+#10 0.884 error: metadata-generation-failed
+#10 0.884 
+#10 0.884 × Encountered error while generating package metadata.
+#10 0.884 ╰─> See above for output.
+#10 0.884 
+#10 0.884 note: This is an issue with the package mentioned above, not pip.
+#10 0.884 hint: See above for details.
+#10 0.890 
+#10 0.890 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.890 [notice] To update, run: pip install --upgrade pip
+#10 ERROR: process "pip install models" did not complete successfully: exit code: 1
+------
+ > [6/7] RUN ["pip","install","models"]:
+0.884 error: metadata-generation-failed
+0.884 
+0.884 × Encountered error while generating package metadata.
+0.884 ╰─> See above for output.
+0.884 
+0.884 note: This is an issue with the package mentioned above, not pip.
+0.884 hint: See above for details.
+0.890 
+0.890 [notice] A new release of pip is available: 24.0 -> 25.3
+0.890 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:6
+--------------------
+   4 |     RUN ["pip","install","indras_net"]
+   5 |     RUN ["pip","install","Django"]
+   6 | >>> RUN ["pip","install","models"]
+   7 |     RUN ["pip","install","django_db"]
+   8 |     CMD ["python3","/snippet.py"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install models" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/t6z3tjz5cx1xq5v615lxj73sb
+[2025-10-29 19:05:43] ERROR: Build failed for a64321dd69339c42a184

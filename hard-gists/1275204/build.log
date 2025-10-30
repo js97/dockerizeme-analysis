@@ -1,0 +1,129 @@
+=== Docker Build Log for 1275204 ===
+Started at: Mi 29. Okt 12:04:40 CET 2025
+
+[2025-10-29 12:04:40] START: Building image for 1275204
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 231B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 568B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/1275204/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","hyhyhy"]
+#7 1.894 Collecting hyhyhy
+#7 1.930   Downloading hyhyhy-1.1.9.tar.gz (25 kB)
+#7 1.945   Preparing metadata (setup.py): started
+#7 2.325   Preparing metadata (setup.py): finished with status 'done'
+#7 2.366 Collecting rjsmin (from hyhyhy)
+#7 2.375   Downloading rjsmin-1.2.5-cp311-cp311-manylinux1_x86_64.whl.metadata (4.6 kB)
+#7 2.426 Collecting rcssmin (from hyhyhy)
+#7 2.434   Downloading rcssmin-1.2.2-cp311-cp311-manylinux1_x86_64.whl.metadata (4.8 kB)
+#7 2.479 Collecting markdown (from hyhyhy)
+#7 2.487   Downloading markdown-3.9-py3-none-any.whl.metadata (5.1 kB)
+#7 2.529 Collecting jinja2 (from hyhyhy)
+#7 2.537   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#7 2.611 Collecting watchdog (from hyhyhy)
+#7 2.619   Downloading watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl.metadata (44 kB)
+#7 2.636      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.3/44.3 kB 2.3 MB/s eta 0:00:00
+#7 2.663 Collecting docopt (from hyhyhy)
+#7 2.671   Downloading docopt-0.6.2.tar.gz (25 kB)
+#7 2.686   Preparing metadata (setup.py): started
+#7 2.795   Preparing metadata (setup.py): finished with status 'done'
+#7 2.861 Collecting MarkupSafe>=2.0 (from jinja2->hyhyhy)
+#7 2.870   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#7 2.898 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#7 2.918    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 7.1 MB/s eta 0:00:00
+#7 2.927 Downloading markdown-3.9-py3-none-any.whl (107 kB)
+#7 2.941    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.4/107.4 kB 8.5 MB/s eta 0:00:00
+#7 2.950 Downloading rcssmin-1.2.2-cp311-cp311-manylinux1_x86_64.whl (49 kB)
+#7 2.960    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.4/49.4 kB 4.3 MB/s eta 0:00:00
+#7 2.974 Downloading rjsmin-1.2.5-cp311-cp311-manylinux1_x86_64.whl (31 kB)
+#7 3.001 Downloading watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl (79 kB)
+#7 3.012    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.1/79.1 kB 6.9 MB/s eta 0:00:00
+#7 3.020 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#7 3.036 Building wheels for collected packages: hyhyhy, docopt
+#7 3.037   Building wheel for hyhyhy (setup.py): started
+#7 3.210   Building wheel for hyhyhy (setup.py): finished with status 'done'
+#7 3.211   Created wheel for hyhyhy: filename=hyhyhy-1.1.9-py3-none-any.whl size=29412 sha256=80fecffb1811f71d326b401a8a08bc033bed782556fd46be2fb2113494e112ac
+#7 3.211   Stored in directory: /root/.cache/pip/wheels/97/03/21/744b0351204068360c7464af9b51945508b1aab4c21d331842
+#7 3.213   Building wheel for docopt (setup.py): started
+#7 3.341   Building wheel for docopt (setup.py): finished with status 'done'
+#7 3.342   Created wheel for docopt: filename=docopt-0.6.2-py2.py3-none-any.whl size=13781 sha256=526e9a3bba4f9263690c55dcf646a6fb0fe721bee6c6071847cc1a35689296b7
+#7 3.342   Stored in directory: /root/.cache/pip/wheels/1a/b0/8c/4b75c4116c31f83c8f9f047231251e13cc74481cca4a78a9ce
+#7 3.344 Successfully built hyhyhy docopt
+#7 3.385 Installing collected packages: rjsmin, rcssmin, docopt, watchdog, MarkupSafe, markdown, jinja2, hyhyhy
+#7 3.632 Successfully installed MarkupSafe-3.0.3 docopt-0.6.2 hyhyhy-1.1.9 jinja2-3.1.6 markdown-3.9 rcssmin-1.2.2 rjsmin-1.2.5 watchdog-6.0.0
+#7 3.632 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 3.723 
+#7 3.723 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.723 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.9s
+
+#8 [4/5] RUN ["pip","install","dj.choices"]
+#8 0.513 Collecting dj.choices
+#8 0.546   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#8 0.567   Preparing metadata (setup.py): started
+#8 0.677   Preparing metadata (setup.py): finished with status 'done'
+#8 0.779 Collecting django (from dj.choices)
+#8 0.788   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#8 0.834 Collecting six (from dj.choices)
+#8 0.843   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 0.888 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#8 0.897   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#8 0.938 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#8 0.947   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#8 0.978 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#8 1.500    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 16.0 MB/s eta 0:00:00
+#8 1.508 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 1.531 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#8 1.549 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#8 1.562    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.4 MB/s eta 0:00:00
+#8 1.599 Building wheels for collected packages: dj.choices
+#8 1.608   Building wheel for dj.choices (setup.py): started
+#8 1.758   Building wheel for dj.choices (setup.py): finished with status 'done'
+#8 1.759   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=ab054704c8fbe27fdce403fc84f29805a8a34016b663a42a502e1fa7fe9c6a32
+#8 1.759   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#8 1.761 Successfully built dj.choices
+#8 1.817 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#8 3.251 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#8 3.251 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 3.256 
+#8 3.256 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 3.256 [notice] To update, run: pip install --upgrade pip
+#8 DONE 3.5s
+
+#9 [5/5] RUN ["pip","install","Django"]
+#9 0.411 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#9 0.415 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#9 0.416 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#9 0.471 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.475 
+#9 0.475 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.475 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.5s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.5s done
+#10 writing image sha256:248d05ee8801f0eef1c410e7d706f8156626424303b02fe01c50e83551d85834 done
+#10 naming to docker.io/library/test-image-1275204 done
+#10 DONE 0.5s
+
+View build details: docker-desktop://dashboard/build/default/default/owghc12mty701mipb9p7ley6n
+[2025-10-29 12:04:49] SUCCESS: Build completed for 1275204

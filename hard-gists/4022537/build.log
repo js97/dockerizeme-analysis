@@ -1,0 +1,121 @@
+=== Docker Build Log for 4022537 ===
+Started at: Mi 29. Okt 14:17:41 CET 2025
+
+[2025-10-29 14:17:41] START: Building image for 4022537
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 291B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 5.34kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/4022537/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","requests"]
+#7 1.904 Collecting requests
+#7 1.936   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#7 2.050 Collecting charset_normalizer<4,>=2 (from requests)
+#7 2.059   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#7 2.103 Collecting idna<4,>=2.5 (from requests)
+#7 2.111   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#7 2.172 Collecting urllib3<3,>=1.21.1 (from requests)
+#7 2.179   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#7 2.223 Collecting certifi>=2017.4.17 (from requests)
+#7 2.231   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#7 2.258 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#7 2.277    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.5 MB/s eta 0:00:00
+#7 2.286 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#7 2.309    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 7.1 MB/s eta 0:00:00
+#7 2.321 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#7 2.335    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.4 MB/s eta 0:00:00
+#7 2.343 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#7 2.355    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 6.1 MB/s eta 0:00:00
+#7 2.379 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#7 2.395    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 8.3 MB/s eta 0:00:00
+#7 2.440 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#7 2.658 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#7 2.658 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.752 
+#7 2.752 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.752 [notice] To update, run: pip install --upgrade pip
+#7 DONE 3.0s
+
+#8 [4/7] RUN ["pip","install","HTMLParser"]
+#8 0.556 Collecting HTMLParser
+#8 0.590   Downloading HTMLParser-0.0.2.tar.gz (6.0 kB)
+#8 0.612   Preparing metadata (setup.py): started
+#8 1.062   Preparing metadata (setup.py): finished with status 'done'
+#8 1.063 Building wheels for collected packages: HTMLParser
+#8 1.064   Building wheel for HTMLParser (setup.py): started
+#8 1.236   Building wheel for HTMLParser (setup.py): finished with status 'done'
+#8 1.236   Created wheel for HTMLParser: filename=htmlparser-0.0.2-py3-none-any.whl size=6033 sha256=1e9191d0a3ce3b6cebfd0d99166675652d74e6bc71effdeb535e322cd64214a1
+#8 1.236   Stored in directory: /root/.cache/pip/wheels/a4/3b/1a/c6cf6093dcb4a243bebf253c48acd3ffa93c8c48685a4fbb05
+#8 1.238 Successfully built HTMLParser
+#8 1.277 Installing collected packages: HTMLParser
+#8 1.291 Successfully installed HTMLParser-0.0.2
+#8 1.292 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 1.296 
+#8 1.296 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 1.296 [notice] To update, run: pip install --upgrade pip
+#8 DONE 1.4s
+
+#9 [5/7] RUN ["pip","install","six"]
+#9 0.550 Collecting six
+#9 0.583   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#9 0.609 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#9 0.675 Installing collected packages: six
+#9 0.734 Successfully installed six-1.17.0
+#9 0.734 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.739 
+#9 0.739 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.739 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.8s
+
+#10 [6/7] RUN ["pip","install","iso8601"]
+#10 0.551 Collecting iso8601
+#10 0.586   Downloading iso8601-2.1.0-py3-none-any.whl.metadata (3.7 kB)
+#10 0.605 Downloading iso8601-2.1.0-py3-none-any.whl (7.5 kB)
+#10 0.657 Installing collected packages: iso8601
+#10 0.694 Successfully installed iso8601-2.1.0
+#10 0.694 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.699 
+#10 0.699 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.699 [notice] To update, run: pip install --upgrade pip
+#10 DONE 0.8s
+
+#11 [7/7] RUN ["pip","install","lxml"]
+#11 0.836 Collecting lxml
+#11 0.939   Downloading lxml-6.0.2-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.6 kB)
+#11 0.978 Downloading lxml-6.0.2-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.2 MB)
+#11 1.339    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 14.5 MB/s eta 0:00:00
+#11 1.395 Installing collected packages: lxml
+#11 1.520 Successfully installed lxml-6.0.2
+#11 1.520 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.525 
+#11 1.525 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.525 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.7s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.2s done
+#12 writing image sha256:d0b4c9e96d328229bf57d0c39cf495c3c202f69975b543832d5f0d25750c6a44 done
+#12 naming to docker.io/library/test-image-4022537 done
+#12 DONE 0.3s
+
+View build details: docker-desktop://dashboard/build/default/default/icvb17dzcbmgemfqztenya6rc
+[2025-10-29 14:17:49] SUCCESS: Build completed for 4022537

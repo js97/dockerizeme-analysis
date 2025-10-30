@@ -1,0 +1,85 @@
+=== Docker Build Log for 16e35ed936bab863a29b ===
+Started at: Mi 29. Okt 12:23:41 CET 2025
+
+[2025-10-29 12:23:41] START: Building image for 16e35ed936bab863a29b
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 212B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.14kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/16e35ed936bab863a29b/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","maybe"]
+#7 1.958 Collecting maybe
+#7 1.996   Downloading maybe-0.4.0.tar.gz (6.1 kB)
+#7 2.009   Preparing metadata (setup.py): started
+#7 2.863   Preparing metadata (setup.py): finished with status 'done'
+#7 2.988 Collecting blessings==1.6 (from maybe)
+#7 2.998   Downloading blessings-1.6.tar.gz (19 kB)
+#7 3.011   Preparing metadata (setup.py): started
+#7 3.123   Preparing metadata (setup.py): finished with status 'error'
+#7 3.126   error: subprocess-exited-with-error
+#7 3.126   
+#7 3.126   × python setup.py egg_info did not run successfully.
+#7 3.126   │ exit code: 1
+#7 3.126   ╰─> [5 lines of output]
+#7 3.126       /usr/local/lib/python3.11/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+#7 3.126         warnings.warn(msg)
+#7 3.126       /usr/local/lib/python3.11/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'test_suite'
+#7 3.126         warnings.warn(msg)
+#7 3.126       error in blessings setup command: use_2to3 is invalid.
+#7 3.126       [end of output]
+#7 3.126   
+#7 3.126   note: This error originates from a subprocess, and is likely not a problem with pip.
+#7 3.128 error: metadata-generation-failed
+#7 3.128 
+#7 3.128 × Encountered error while generating package metadata.
+#7 3.128 ╰─> See above for output.
+#7 3.128 
+#7 3.128 note: This is an issue with the package mentioned above, not pip.
+#7 3.128 hint: See above for details.
+#7 3.212 
+#7 3.212 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 3.212 [notice] To update, run: pip install --upgrade pip
+#7 ERROR: process "pip install maybe" did not complete successfully: exit code: 1
+------
+ > [3/4] RUN ["pip","install","maybe"]:
+3.128 error: metadata-generation-failed
+3.128 
+3.128 × Encountered error while generating package metadata.
+3.128 ╰─> See above for output.
+3.128 
+3.128 note: This is an issue with the package mentioned above, not pip.
+3.128 hint: See above for details.
+3.212 
+3.212 [notice] A new release of pip is available: 24.0 -> 25.3
+3.212 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:3
+--------------------
+   1 |     FROM python:3.11
+   2 |     COPY hard-gists/16e35ed936bab863a29b/snippet.py /snippet.py
+   3 | >>> RUN ["pip","install","maybe"]
+   4 |     RUN ["pip","install","validation"]
+   5 |     CMD ["python3","/snippet.py"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install maybe" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/3g0qn2h8dp7os9ym5edditcmq
+[2025-10-29 12:23:45] ERROR: Build failed for 16e35ed936bab863a29b

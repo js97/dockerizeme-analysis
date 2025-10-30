@@ -1,0 +1,60 @@
+=== Docker Build Log for 9089444 ===
+Started at: Mi 29. Okt 18:17:04 CET 2025
+
+[2025-10-29 18:17:04] START: Building image for 9089444
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 178B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 986B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/9089444/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","djangorestframework"]
+#7 1.940 Collecting djangorestframework
+#7 1.980   Downloading djangorestframework-3.16.1-py3-none-any.whl.metadata (11 kB)
+#7 2.097 Collecting django>=4.2 (from djangorestframework)
+#7 2.106   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.153 Collecting asgiref>=3.8.1 (from django>=4.2->djangorestframework)
+#7 2.162   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.205 Collecting sqlparse>=0.3.1 (from django>=4.2->djangorestframework)
+#7 2.213   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.238 Downloading djangorestframework-3.16.1-py3-none-any.whl (1.1 MB)
+#7 2.299    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 18.3 MB/s eta 0:00:00
+#7 2.308 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 2.637    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 25.3 MB/s eta 0:00:00
+#7 2.645 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 2.665 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 2.679    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 2.8 MB/s eta 0:00:00
+#7 2.760 Installing collected packages: sqlparse, asgiref, django, djangorestframework
+#7 4.258 Successfully installed asgiref-3.10.0 django-5.2.7 djangorestframework-3.16.1 sqlparse-0.5.3
+#7 4.258 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.351 
+#7 4.351 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.351 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.9s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.5s done
+#8 writing image sha256:bff7e19de97302a90d71470315699723e43f297fe7e62b07c683e361db319390 done
+#8 naming to docker.io/library/test-image-9089444 done
+#8 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/default/default/atwi6vf8rw27vb5lcp27bqelx
+[2025-10-29 18:17:10] SUCCESS: Build completed for 9089444

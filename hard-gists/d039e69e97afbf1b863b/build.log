@@ -1,0 +1,76 @@
+=== Docker Build Log for d039e69e97afbf1b863b ===
+Started at: Mi 29. Okt 20:19:49 CET 2025
+
+[2025-10-29 20:19:49] START: Building image for d039e69e97afbf1b863b
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 214B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.65kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/4] COPY hard-gists/d039e69e97afbf1b863b/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/4] RUN ["pip","install","numpy"]
+#7 2.053 Collecting numpy
+#7 2.093   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.120      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.1 MB/s eta 0:00:00
+#7 2.139 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 2.778    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 24.2 MB/s eta 0:00:00
+#7 2.854 Installing collected packages: numpy
+#7 4.249 Successfully installed numpy-2.3.4
+#7 4.250 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.341 
+#7 4.341 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.341 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.8s
+
+#8 [4/4] RUN ["pip","install","scikit-learn"]
+#8 0.602 Collecting scikit-learn
+#8 0.640   Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#8 0.695 Requirement already satisfied: numpy>=1.22.0 in /usr/local/lib/python3.11/site-packages (from scikit-learn) (2.3.4)
+#8 0.826 Collecting scipy>=1.8.0 (from scikit-learn)
+#8 0.837   Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+#8 0.868      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 1.8 MB/s eta 0:00:00
+#8 0.910 Collecting joblib>=1.2.0 (from scikit-learn)
+#8 0.919   Downloading joblib-1.5.2-py3-none-any.whl.metadata (5.6 kB)
+#8 0.955 Collecting threadpoolctl>=3.1.0 (from scikit-learn)
+#8 0.963   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#8 1.011 Downloading scikit_learn-1.7.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+#8 1.383    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 26.3 MB/s eta 0:00:00
+#8 1.393 Downloading joblib-1.5.2-py3-none-any.whl (308 kB)
+#8 1.412    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 308.4/308.4 kB 17.6 MB/s eta 0:00:00
+#8 1.423 Downloading scipy-1.16.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+#8 2.961    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 15.3 MB/s eta 0:00:00
+#8 2.970 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#8 3.190 Installing collected packages: threadpoolctl, scipy, joblib, scikit-learn
+#8 7.488 Successfully installed joblib-1.5.2 scikit-learn-1.7.2 scipy-1.16.3 threadpoolctl-3.6.0
+#8 7.488 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 7.493 
+#8 7.493 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 7.493 [notice] To update, run: pip install --upgrade pip
+#8 DONE 9.0s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 0.9s done
+#9 writing image sha256:25c4a85d76565787d38fcf343eb193fd7b1ad5b2c5d37fe783853894902c3b07 done
+#9 naming to docker.io/library/test-image-d039e69e97afbf1b863b done
+#9 DONE 1.0s
+
+View build details: docker-desktop://dashboard/build/default/default/0erw3jo00ihn4gttd9niscje6
+[2025-10-29 20:20:04] SUCCESS: Build completed for d039e69e97afbf1b863b

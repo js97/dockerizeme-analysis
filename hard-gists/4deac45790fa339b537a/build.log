@@ -1,0 +1,117 @@
+=== Docker Build Log for 4deac45790fa339b537a ===
+Started at: Mi 29. Okt 15:12:33 CET 2025
+
+[2025-10-29 15:12:33] START: Building image for 4deac45790fa339b537a
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 3.67kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.43kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/88] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/88] COPY hard-gists/4deac45790fa339b537a/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/88] RUN ["apt-get","update"]
+#7 0.303 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.303 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.312 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.328 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.650 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.651 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.284 Fetched 9833 kB in 1s (9599 kB/s)
+#7 1.284 Reading package lists...
+#7 DONE 1.9s
+
+#8 [ 4/88] RUN ["pip","install","webvirtmgr"]
+#8 2.231 Collecting webvirtmgr
+#8 2.292   Downloading webvirtmgr-4.8.9.tar.gz (705 kB)
+#8 2.348      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 705.8/705.8 kB 13.0 MB/s eta 0:00:00
+#8 2.387   Preparing metadata (setup.py): started
+#8 2.849   Preparing metadata (setup.py): finished with status 'done'
+#8 2.858 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from webvirtmgr) (79.0.1)
+#8 2.995 Collecting django>=1.5.5 (from webvirtmgr)
+#8 3.005   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#8 3.058 Collecting gunicorn>=18.0 (from webvirtmgr)
+#8 3.068   Downloading gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB)
+#8 3.116 Collecting lockfile>=0.9 (from webvirtmgr)
+#8 3.124   Downloading lockfile-0.12.2-py2.py3-none-any.whl.metadata (2.4 kB)
+#8 3.181 Collecting asgiref>=3.8.1 (from django>=1.5.5->webvirtmgr)
+#8 3.189   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#8 3.239 Collecting sqlparse>=0.3.1 (from django>=1.5.5->webvirtmgr)
+#8 3.247   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#8 3.298 Collecting packaging (from gunicorn>=18.0->webvirtmgr)
+#8 3.306   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#8 3.364 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#8 3.738    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 22.4 MB/s eta 0:00:00
+#8 3.746 Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB)
+#8 3.760    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.0/85.0 kB 6.3 MB/s eta 0:00:00
+#8 3.769 Downloading lockfile-0.12.2-py2.py3-none-any.whl (13 kB)
+#8 3.787 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#8 3.806 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#8 3.818    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.5 MB/s eta 0:00:00
+#8 3.826 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#8 3.837    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 5.9 MB/s eta 0:00:00
+#8 3.877 Building wheels for collected packages: webvirtmgr
+#8 3.878   Building wheel for webvirtmgr (setup.py): started
+#8 4.191   Building wheel for webvirtmgr (setup.py): finished with status 'done'
+#8 4.193   Created wheel for webvirtmgr: filename=webvirtmgr-4.8.9-py3-none-any.whl size=698037 sha256=b265ccc6610bba21ca4d47c67a7c3c2f5cf331666752bc070dbebd6d7f73bd38
+#8 4.193   Stored in directory: /root/.cache/pip/wheels/c7/67/ab/a716fc1b614ea6bb537a20a0b880eb7071514208cc442aeac3
+#8 4.195 Successfully built webvirtmgr
+#8 4.263 Installing collected packages: lockfile, sqlparse, packaging, asgiref, gunicorn, django, webvirtmgr
+#8 5.963 Successfully installed asgiref-3.10.0 django-5.2.7 gunicorn-23.0.0 lockfile-0.12.2 packaging-25.0 sqlparse-0.5.3 webvirtmgr-4.8.9
+#8 5.963 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 6.055 
+#8 6.055 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 6.055 [notice] To update, run: pip install --upgrade pip
+#8 DONE 6.6s
+
+#9 [ 5/88] RUN ["apt-get","install","-y","python-pip"]
+#9 0.221 Reading package lists...
+#9 0.676 Building dependency tree...
+#9 0.792 Reading state information...
+#9 0.816 Package python-pip is not available, but is referred to by another package.
+#9 0.816 This may mean that the package is missing, has been obsoleted, or
+#9 0.816 is only available from another source
+#9 0.816 However the following packages replace it:
+#9 0.816   python3-pip
+#9 0.816 
+#9 0.819 E: Package 'python-pip' has no installation candidate
+#9 ERROR: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+------
+ > [ 5/88] RUN ["apt-get","install","-y","python-pip"]:
+
+
+0.816 Package python-pip is not available, but is referred to by another package.
+0.816 This may mean that the package is missing, has been obsoleted, or
+0.816 is only available from another source
+0.816 However the following packages replace it:
+0.816   python3-pip
+0.816 
+0.819 E: Package 'python-pip' has no installation candidate
+------
+Dockerfile:5
+--------------------
+   3 |     RUN ["apt-get","update"]
+   4 |     RUN ["pip","install","webvirtmgr"]
+   5 | >>> RUN ["apt-get","install","-y","python-pip"]
+   6 |     RUN ["apt-get","install","-y","python-dev"]
+   7 |     RUN ["apt-get","install","-y","git"]
+--------------------
+ERROR: failed to build: failed to solve: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/default/default/bdkd9brt8plgfpdrfwfw3n0lz
+[2025-10-29 15:12:43] ERROR: Build failed for 4deac45790fa339b537a

@@ -1,0 +1,101 @@
+=== Docker Build Log for 5078476 ===
+Started at: Mi 29. Okt 15:21:09 CET 2025
+
+[2025-10-29 15:21:09] START: Building image for 5078476
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 273B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 9.36kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/6] COPY hard-gists/5078476/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/6] RUN ["pip","install","Jinja2"]
+#7 1.969 Collecting Jinja2
+#7 2.014   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#7 2.109 Collecting MarkupSafe>=2.0 (from Jinja2)
+#7 2.118   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#7 2.138 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#7 2.168    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 4.5 MB/s eta 0:00:00
+#7 2.176 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#7 2.222 Installing collected packages: MarkupSafe, Jinja2
+#7 2.309 Successfully installed Jinja2-3.1.6 MarkupSafe-3.0.3
+#7 2.309 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 2.410 
+#7 2.410 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 2.410 [notice] To update, run: pip install --upgrade pip
+#7 DONE 2.7s
+
+#8 [4/6] RUN ["pip","install","MySQL-python"]
+#8 0.531 Collecting MySQL-python
+#8 0.563   Downloading MySQL-python-1.2.5.zip (108 kB)
+#8 0.595      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 108.9/108.9 kB 3.4 MB/s eta 0:00:00
+#8 0.603   Preparing metadata (setup.py): started
+#8 0.987   Preparing metadata (setup.py): finished with status 'error'
+#8 0.990   error: subprocess-exited-with-error
+#8 0.990   
+#8 0.990   × python setup.py egg_info did not run successfully.
+#8 0.990   │ exit code: 1
+#8 0.990   ╰─> [8 lines of output]
+#8 0.990       Traceback (most recent call last):
+#8 0.990         File "<string>", line 2, in <module>
+#8 0.990         File "<pip-setuptools-caller>", line 34, in <module>
+#8 0.990         File "/tmp/pip-install-hmyvw2co/mysql-python_f8a958af80774708b8f9560f01397c88/setup.py", line 13, in <module>
+#8 0.990           from setup_posix import get_config
+#8 0.990         File "/tmp/pip-install-hmyvw2co/mysql-python_f8a958af80774708b8f9560f01397c88/setup_posix.py", line 2, in <module>
+#8 0.990           from ConfigParser import SafeConfigParser
+#8 0.990       ModuleNotFoundError: No module named 'ConfigParser'
+#8 0.990       [end of output]
+#8 0.990   
+#8 0.990   note: This error originates from a subprocess, and is likely not a problem with pip.
+#8 0.992 error: metadata-generation-failed
+#8 0.992 
+#8 0.992 × Encountered error while generating package metadata.
+#8 0.992 ╰─> See above for output.
+#8 0.992 
+#8 0.992 note: This is an issue with the package mentioned above, not pip.
+#8 0.992 hint: See above for details.
+#8 0.997 
+#8 0.997 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.997 [notice] To update, run: pip install --upgrade pip
+#8 ERROR: process "pip install MySQL-python" did not complete successfully: exit code: 1
+------
+ > [4/6] RUN ["pip","install","MySQL-python"]:
+0.992 error: metadata-generation-failed
+0.992 
+0.992 × Encountered error while generating package metadata.
+0.992 ╰─> See above for output.
+0.992 
+0.992 note: This is an issue with the package mentioned above, not pip.
+0.992 hint: See above for details.
+0.997 
+0.997 [notice] A new release of pip is available: 24.0 -> 25.3
+0.997 [notice] To update, run: pip install --upgrade pip
+------
+Dockerfile:4
+--------------------
+   2 |     COPY hard-gists/5078476/snippet.py /snippet.py
+   3 |     RUN ["pip","install","Jinja2"]
+   4 | >>> RUN ["pip","install","MySQL-python"]
+   5 |     RUN ["pip","install","mysqlclient"]
+   6 |     RUN ["pip","install","unicodecsv"]
+--------------------
+ERROR: failed to build: failed to solve: process "pip install MySQL-python" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/default/default/5oxcxi0gmpjzaf0ncjgtqgym1
+[2025-10-29 15:21:13] ERROR: Build failed for 5078476

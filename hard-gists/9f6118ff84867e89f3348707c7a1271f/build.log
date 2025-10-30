@@ -1,0 +1,156 @@
+=== Docker Build Log for 9f6118ff84867e89f3348707c7a1271f ===
+Started at: Mi 29. Okt 18:42:33 CET 2025
+
+[2025-10-29 18:42:33] START: Building image for 9f6118ff84867e89f3348707c7a1271f
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 195B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.02kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/9f6118ff84867e89f3348707c7a1271f/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","torchvision"]
+#7 1.972 Collecting torchvision
+#7 2.006   Downloading torchvision-0.24.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (5.9 kB)
+#7 2.211 Collecting numpy (from torchvision)
+#7 2.222   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.245      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.5 MB/s eta 0:00:00
+#7 2.311 Collecting torch==2.9.0 (from torchvision)
+#7 2.320   Downloading torch-2.9.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (30 kB)
+#7 2.529 Collecting pillow!=8.3.*,>=5.3.0 (from torchvision)
+#7 2.540   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#7 2.619 Collecting filelock (from torch==2.9.0->torchvision)
+#7 2.627   Downloading filelock-3.20.0-py3-none-any.whl.metadata (2.1 kB)
+#7 2.671 Collecting typing-extensions>=4.10.0 (from torch==2.9.0->torchvision)
+#7 2.679   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#7 2.727 Collecting sympy>=1.13.3 (from torch==2.9.0->torchvision)
+#7 2.734   Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+#7 2.785 Collecting networkx>=2.5.1 (from torch==2.9.0->torchvision)
+#7 2.792   Downloading networkx-3.5-py3-none-any.whl.metadata (6.3 kB)
+#7 2.832 Collecting jinja2 (from torch==2.9.0->torchvision)
+#7 2.840   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#7 2.891 Collecting fsspec>=0.8.5 (from torch==2.9.0->torchvision)
+#7 2.900   Downloading fsspec-2025.9.0-py3-none-any.whl.metadata (10 kB)
+#7 2.940 Collecting nvidia-cuda-nvrtc-cu12==12.8.93 (from torch==2.9.0->torchvision)
+#7 2.949   Downloading nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+#7 2.988 Collecting nvidia-cuda-runtime-cu12==12.8.90 (from torch==2.9.0->torchvision)
+#7 2.997   Downloading nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+#7 3.036 Collecting nvidia-cuda-cupti-cu12==12.8.90 (from torch==2.9.0->torchvision)
+#7 3.044   Downloading nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+#7 3.090 Collecting nvidia-cudnn-cu12==9.10.2.21 (from torch==2.9.0->torchvision)
+#7 3.098   Downloading nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl.metadata (1.8 kB)
+#7 3.135 Collecting nvidia-cublas-cu12==12.8.4.1 (from torch==2.9.0->torchvision)
+#7 3.143   Downloading nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl.metadata (1.7 kB)
+#7 3.188 Collecting nvidia-cufft-cu12==11.3.3.83 (from torch==2.9.0->torchvision)
+#7 3.196   Downloading nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+#7 3.235 Collecting nvidia-curand-cu12==10.3.9.90 (from torch==2.9.0->torchvision)
+#7 3.243   Downloading nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl.metadata (1.7 kB)
+#7 3.283 Collecting nvidia-cusolver-cu12==11.7.3.90 (from torch==2.9.0->torchvision)
+#7 3.291   Downloading nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl.metadata (1.8 kB)
+#7 3.334 Collecting nvidia-cusparse-cu12==12.5.8.93 (from torch==2.9.0->torchvision)
+#7 3.342   Downloading nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+#7 3.377 Collecting nvidia-cusparselt-cu12==0.7.1 (from torch==2.9.0->torchvision)
+#7 3.386   Downloading nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl.metadata (7.0 kB)
+#7 3.425 Collecting nvidia-nccl-cu12==2.27.5 (from torch==2.9.0->torchvision)
+#7 3.434   Downloading nvidia_nccl_cu12-2.27.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.0 kB)
+#7 3.471 Collecting nvidia-nvshmem-cu12==3.3.20 (from torch==2.9.0->torchvision)
+#7 3.479   Downloading nvidia_nvshmem_cu12-3.3.20-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.1 kB)
+#7 3.515 Collecting nvidia-nvtx-cu12==12.8.90 (from torch==2.9.0->torchvision)
+#7 3.522   Downloading nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+#7 3.564 Collecting nvidia-nvjitlink-cu12==12.8.93 (from torch==2.9.0->torchvision)
+#7 3.573   Downloading nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+#7 3.609 Collecting nvidia-cufile-cu12==1.13.1.3 (from torch==2.9.0->torchvision)
+#7 3.618   Downloading nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+#7 3.654 Collecting triton==3.5.0 (from torch==2.9.0->torchvision)
+#7 3.664   Downloading triton-3.5.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (1.7 kB)
+#7 3.838 Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch==2.9.0->torchvision)
+#7 3.846   Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+#7 3.924 Collecting MarkupSafe>=2.0 (from jinja2->torch==2.9.0->torchvision)
+#7 3.933   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#7 3.964 Downloading torchvision-0.24.0-cp311-cp311-manylinux_2_28_x86_64.whl (8.0 MB)
+#7 4.292    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.0/8.0 MB 24.7 MB/s eta 0:00:00
+#7 4.301 Downloading torch-2.9.0-cp311-cp311-manylinux_2_28_x86_64.whl (899.8 MB)
+#7 48.19    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 899.8/899.8 MB 662.8 kB/s eta 0:00:00
+#7 48.20 Downloading nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl (594.3 MB)
+#7 71.74    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 594.3/594.3 MB 2.1 MB/s eta 0:00:00
+#7 71.75 Downloading nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.2 MB)
+#7 72.13    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 26.7 MB/s eta 0:00:00
+#7 72.14 Downloading nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (88.0 MB)
+#7 78.23    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.0/88.0 MB 2.8 MB/s eta 0:00:00
+#7 78.25 Downloading nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (954 kB)
+#7 78.93    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 954.8/954.8 kB 1.4 MB/s eta 0:00:00
+#7 78.94 Downloading nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl (706.8 MB)
+#7 106.7    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 706.8/706.8 MB 1.8 MB/s eta 0:00:00
+#7 106.7 Downloading nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (193.1 MB)
+#7 116.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 193.1/193.1 MB 3.7 MB/s eta 0:00:00
+#7 116.1 Downloading nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.2 MB)
+#7 116.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 23.7 MB/s eta 0:00:00
+#7 116.2 Downloading nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl (63.6 MB)
+#7 118.7    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.6/63.6 MB 12.2 MB/s eta 0:00:00
+#7 118.7 Downloading nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl (267.5 MB)
+#7 128.6    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 267.5/267.5 MB 5.6 MB/s eta 0:00:00
+#7 128.6 Downloading nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (288.2 MB)
+#7 139.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 288.2/288.2 MB 5.5 MB/s eta 0:00:00
+#7 139.2 Downloading nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl (287.2 MB)
+#7 150.4    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 287.2/287.2 MB 4.2 MB/s eta 0:00:00
+#7 150.4 Downloading nvidia_nccl_cu12-2.27.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (322.3 MB)
+#7 164.3    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 322.3/322.3 MB 3.2 MB/s eta 0:00:00
+#7 164.3 Downloading nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (39.3 MB)
+#7 165.8    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 39.3/39.3 MB 16.5 MB/s eta 0:00:00
+#7 165.9 Downloading nvidia_nvshmem_cu12-3.3.20-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (124.7 MB)
+#7 170.6    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 124.7/124.7 MB 8.6 MB/s eta 0:00:00
+#7 170.6 Downloading nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (89 kB)
+#7 170.7    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.0/90.0 kB 4.0 MB/s eta 0:00:00
+#7 170.7 Downloading triton-3.5.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (170.4 MB)
+#7 177.7    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 170.4/170.4 MB 5.1 MB/s eta 0:00:00
+#7 177.7 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#7 178.0    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 25.3 MB/s eta 0:00:00
+#7 178.0 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 178.7    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 21.5 MB/s eta 0:00:00
+#7 178.7 Downloading fsspec-2025.9.0-py3-none-any.whl (199 kB)
+#7 178.8    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 199.3/199.3 kB 11.7 MB/s eta 0:00:00
+#7 178.8 Downloading networkx-3.5-py3-none-any.whl (2.0 MB)
+#7 178.8    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 27.2 MB/s eta 0:00:00
+#7 178.9 Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+#7 179.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 23.7 MB/s eta 0:00:00
+#7 179.1 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#7 179.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 2.6 MB/s eta 0:00:00
+#7 179.2 Downloading filelock-3.20.0-py3-none-any.whl (16 kB)
+#7 179.2 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#7 179.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 8.6 MB/s eta 0:00:00
+#7 179.2 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#7 179.2 Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+#7 179.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 20.5 MB/s eta 0:00:00
+#7 187.3 Installing collected packages: nvidia-cusparselt-cu12, mpmath, typing-extensions, triton, sympy, pillow, nvidia-nvtx-cu12, nvidia-nvshmem-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufile-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, numpy, networkx, MarkupSafe, fsspec, filelock, nvidia-cusparse-cu12, nvidia-cufft-cu12, nvidia-cudnn-cu12, jinja2, nvidia-cusolver-cu12, torch, torchvision
+#7 256.6 Successfully installed MarkupSafe-3.0.3 filelock-3.20.0 fsspec-2025.9.0 jinja2-3.1.6 mpmath-1.3.0 networkx-3.5 numpy-2.3.4 nvidia-cublas-cu12-12.8.4.1 nvidia-cuda-cupti-cu12-12.8.90 nvidia-cuda-nvrtc-cu12-12.8.93 nvidia-cuda-runtime-cu12-12.8.90 nvidia-cudnn-cu12-9.10.2.21 nvidia-cufft-cu12-11.3.3.83 nvidia-cufile-cu12-1.13.1.3 nvidia-curand-cu12-10.3.9.90 nvidia-cusolver-cu12-11.7.3.90 nvidia-cusparse-cu12-12.5.8.93 nvidia-cusparselt-cu12-0.7.1 nvidia-nccl-cu12-2.27.5 nvidia-nvjitlink-cu12-12.8.93 nvidia-nvshmem-cu12-3.3.20 nvidia-nvtx-cu12-12.8.90 pillow-12.0.0 sympy-1.14.0 torch-2.9.0 torchvision-0.24.0 triton-3.5.0 typing-extensions-4.15.0
+#7 256.6 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 258.5 
+#7 258.5 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 258.5 [notice] To update, run: pip install --upgrade pip
+#7 DONE 265.0s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 31.3s done
+#8 writing image sha256:8b21c26dbbc85b81704cc8dbc2485117cb9f59bd5e60960315ae3f07b44c7950 done
+#8 naming to docker.io/library/test-image-9f6118ff84867e89f3348707c7a1271f done
+#8 DONE 31.3s
+
+View build details: docker-desktop://dashboard/build/default/default/zofkz9uujnbwmdw89994akeo0
+[2025-10-29 18:47:30] SUCCESS: Build completed for 9f6118ff84867e89f3348707c7a1271f

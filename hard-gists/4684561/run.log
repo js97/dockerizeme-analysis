@@ -1,0 +1,23 @@
+=== Docker Run Log for 4684561 ===
+Started at: Mi 29. Okt 14:57:27 CET 2025
+
+[2025-10-29 14:57:35] START: Running container for 4684561
+[2025-10-29 14:57:36] SUCCESS: Container 857ff33f3c282ac59b3e38c8d2405671431aec4ecf4a3537163ba82f91f0bb7b started for 4684561
+=== Container logs for 4684561 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 6, in <module>
+    class ConstraintModel(models.Model):
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 131, in __new__
+    app_config = apps.get_containing_app_config(module)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/apps/registry.py", line 260, in get_containing_app_config
+    self.check_apps_ready()
+  File "/usr/local/lib/python3.11/site-packages/django/apps/registry.py", line 137, in check_apps_ready
+    settings.INSTALLED_APPS
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 81, in __getattr__
+    self._setup(name)
+  File "/usr/local/lib/python3.11/site-packages/django/conf/__init__.py", line 61, in _setup
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+=== End of logs for 4684561 ===
+[2025-10-29 14:57:38] INFO: Container 857ff33f3c282ac59b3e38c8d2405671431aec4ecf4a3537163ba82f91f0bb7b has stopped

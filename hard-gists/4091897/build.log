@@ -1,0 +1,204 @@
+=== Docker Build Log for 4091897 ===
+Started at: Mi 29. Okt 14:21:00 CET 2025
+
+[2025-10-29 14:21:00] START: Building image for 4091897
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 317B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 4.58kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/7] COPY hard-gists/4091897/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/7] RUN ["pip","install","dj.choices"]
+#7 1.907 Collecting dj.choices
+#7 1.940   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 1.957   Preparing metadata (setup.py): started
+#7 2.338   Preparing metadata (setup.py): finished with status 'done'
+#7 2.449 Collecting django (from dj.choices)
+#7 2.458   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.494 Collecting six (from dj.choices)
+#7 2.502   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.547 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.556   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.597 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.605   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.630 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.175    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 15.3 MB/s eta 0:00:00
+#7 3.183 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.203 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.220 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.232    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.6 MB/s eta 0:00:00
+#7 3.269 Building wheels for collected packages: dj.choices
+#7 3.270   Building wheel for dj.choices (setup.py): started
+#7 3.442   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.442   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=41d5438d07d4473fb211ff8c2cfb864ce49a9509cacb9785e1787ca90310ab79
+#7 3.442   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.444 Successfully built dj.choices
+#7 3.493 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 4.974 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 4.975 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.074 
+#7 5.074 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.074 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.6s
+
+#8 [4/7] RUN ["pip","install","Django"]
+#8 0.454 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#8 0.458 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#8 0.459 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#8 0.500 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.505 
+#8 0.505 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.505 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.6s
+
+#9 [5/7] RUN ["pip","install","androidviewclient"]
+#9 0.648 Collecting androidviewclient
+#9 0.685   Downloading androidviewclient-24.1.0-py3-none-any.whl.metadata (661 bytes)
+#9 0.698 Requirement already satisfied: setuptools in /usr/local/lib/python3.11/site-packages (from androidviewclient) (79.0.1)
+#9 0.744 Collecting requests (from androidviewclient)
+#9 0.753   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#9 0.969 Collecting numpy (from androidviewclient)
+#9 0.980   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#9 1.014      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 1.7 MB/s eta 0:00:00
+#9 1.163 Collecting matplotlib (from androidviewclient)
+#9 1.174   Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+#9 1.236 Collecting culebratester-client>=2.0.73 (from androidviewclient)
+#9 1.244   Downloading culebratester_client-2.0.73-py3-none-any.whl.metadata (685 bytes)
+#9 1.307 Collecting urllib3>=1.15 (from culebratester-client>=2.0.73->androidviewclient)
+#9 1.315   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#9 1.327 Requirement already satisfied: six>=1.10 in /usr/local/lib/python3.11/site-packages (from culebratester-client>=2.0.73->androidviewclient) (1.17.0)
+#9 1.363 Collecting certifi (from culebratester-client>=2.0.73->androidviewclient)
+#9 1.372   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#9 1.411 Collecting python-dateutil (from culebratester-client>=2.0.73->androidviewclient)
+#9 1.418   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#9 1.535 Collecting contourpy>=1.0.1 (from matplotlib->androidviewclient)
+#9 1.543   Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#9 1.578 Collecting cycler>=0.10 (from matplotlib->androidviewclient)
+#9 1.586   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#9 1.759 Collecting fonttools>=4.22.0 (from matplotlib->androidviewclient)
+#9 1.769   Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (112 kB)
+#9 1.805      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.3/112.3 kB 3.0 MB/s eta 0:00:00
+#9 1.878 Collecting kiwisolver>=1.3.1 (from matplotlib->androidviewclient)
+#9 1.887   Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+#9 1.937 Collecting packaging>=20.0 (from matplotlib->androidviewclient)
+#9 1.945   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#9 2.164 Collecting pillow>=8 (from matplotlib->androidviewclient)
+#9 2.175   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#9 2.243 Collecting pyparsing>=3 (from matplotlib->androidviewclient)
+#9 2.251   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#9 2.363 Collecting charset_normalizer<4,>=2 (from requests->androidviewclient)
+#9 2.371   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#9 2.413 Collecting idna<4,>=2.5 (from requests->androidviewclient)
+#9 2.421   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#9 2.547 Downloading androidviewclient-24.1.0-py3-none-any.whl (425 kB)
+#9 2.580    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 425.1/425.1 kB 13.7 MB/s eta 0:00:00
+#9 2.589 Downloading culebratester_client-2.0.73-py3-none-any.whl (114 kB)
+#9 2.604    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.2/114.2 kB 7.5 MB/s eta 0:00:00
+#9 2.615 Downloading matplotlib-3.10.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+#9 2.952    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 25.9 MB/s eta 0:00:00
+#9 3.040 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#9 3.704    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 22.9 MB/s eta 0:00:00
+#9 3.714 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#9 3.726    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 5.8 MB/s eta 0:00:00
+#9 3.734 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#9 3.749    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 10.8 MB/s eta 0:00:00
+#9 3.759 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#9 3.774    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 10.7 MB/s eta 0:00:00
+#9 3.783 Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+#9 3.805    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 355.2/355.2 kB 17.5 MB/s eta 0:00:00
+#9 3.813 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#9 3.839 Downloading fonttools-4.60.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#9 4.021    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 27.5 MB/s eta 0:00:00
+#9 4.030 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#9 4.042    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 5.7 MB/s eta 0:00:00
+#9 4.290 Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+#9 4.346    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 26.4 MB/s eta 0:00:00
+#9 4.354 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#9 4.365    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 6.3 MB/s eta 0:00:00
+#9 4.375 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#9 4.652    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 25.5 MB/s eta 0:00:00
+#9 4.662 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#9 4.675    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 9.2 MB/s eta 0:00:00
+#9 4.683 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#9 4.701    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 14.2 MB/s eta 0:00:00
+#9 4.710 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#9 4.723    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 10.3 MB/s eta 0:00:00
+#9 4.931 Installing collected packages: urllib3, python-dateutil, pyparsing, pillow, packaging, numpy, kiwisolver, idna, fonttools, cycler, charset_normalizer, certifi, requests, culebratester-client, contourpy, matplotlib, androidviewclient
+#9 8.813 Successfully installed androidviewclient-24.1.0 certifi-2025.10.5 charset_normalizer-3.4.4 contourpy-1.3.3 culebratester-client-2.0.73 cycler-0.12.1 fonttools-4.60.1 idna-3.11 kiwisolver-1.4.9 matplotlib-3.10.7 numpy-2.3.4 packaging-25.0 pillow-12.0.0 pyparsing-3.2.5 python-dateutil-2.9.0.post0 requests-2.32.5 urllib3-2.5.0
+#9 8.813 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 8.819 
+#9 8.819 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 8.819 [notice] To update, run: pip install --upgrade pip
+#9 DONE 10.1s
+
+#10 [6/7] RUN ["pip","install","django-shortcuts"]
+#10 0.523 Collecting django-shortcuts
+#10 0.567   Downloading django-shortcuts-1.6.tar.gz (3.1 kB)
+#10 0.584   Preparing metadata (setup.py): started
+#10 0.699   Preparing metadata (setup.py): finished with status 'done'
+#10 0.701 Building wheels for collected packages: django-shortcuts
+#10 0.708   Building wheel for django-shortcuts (setup.py): started
+#10 0.848   Building wheel for django-shortcuts (setup.py): finished with status 'done'
+#10 0.849   Created wheel for django-shortcuts: filename=django_shortcuts-1.6-py3-none-any.whl size=3912 sha256=7b9e113d8ab82db1f3e2cf326bd8f6ef6db53b197330be4ed7231338f08bec8c
+#10 0.849   Stored in directory: /root/.cache/pip/wheels/b3/bc/72/b0359b6bf4fd547811a758ee17a3bf62f8fa4179229b07f6d8
+#10 0.851 Successfully built django-shortcuts
+#10 0.951 Installing collected packages: django-shortcuts
+#10 1.006 Successfully installed django-shortcuts-1.6
+#10 1.006 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.011 
+#10 1.011 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.011 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.1s
+
+#11 [7/7] RUN ["pip","install","django_db"]
+#11 0.664 Collecting django_db
+#11 0.698   Downloading django_db-0.0.7.tar.gz (1.7 kB)
+#11 0.715   Preparing metadata (setup.py): started
+#11 0.828   Preparing metadata (setup.py): finished with status 'done'
+#11 0.830 Requirement already satisfied: django in /usr/local/lib/python3.11/site-packages (from django_db) (5.2.7)
+#11 0.865 Collecting pymysql (from django_db)
+#11 0.874   Downloading pymysql-1.1.2-py3-none-any.whl.metadata (4.3 kB)
+#11 0.892 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from django->django_db) (3.10.0)
+#11 0.893 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from django->django_db) (0.5.3)
+#11 0.907 Downloading pymysql-1.1.2-py3-none-any.whl (45 kB)
+#11 0.927    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.3/45.3 kB 1.9 MB/s eta 0:00:00
+#11 0.930 Building wheels for collected packages: django_db
+#11 0.935   Building wheel for django_db (setup.py): started
+#11 1.075   Building wheel for django_db (setup.py): finished with status 'done'
+#11 1.076   Created wheel for django_db: filename=django_db-0.0.7-py3-none-any.whl size=2255 sha256=f6713f5e59ea4e6e56694dc0200bdeb15d1e1da40c6545bd342047e5dc9cef9d
+#11 1.076   Stored in directory: /root/.cache/pip/wheels/f7/0e/96/7f32f483dc1709e3218e0b811ef87a1457795bc45d221f1ac2
+#11 1.077 Successfully built django_db
+#11 1.182 Installing collected packages: pymysql, django_db
+#11 1.243 Successfully installed django_db-0.0.7 pymysql-1.1.2
+#11 1.244 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 1.249 
+#11 1.249 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 1.249 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.3s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.9s done
+#12 writing image sha256:7cfcfc7a6be7f9a1298b19c53c5c91a543e6b0388a1c52647f53f231cd99a3c3 done
+#12 naming to docker.io/library/test-image-4091897 done
+#12 DONE 0.9s
+
+View build details: docker-desktop://dashboard/build/default/default/pu3qpgi9i9uoawq56hj399uhm
+[2025-10-29 14:21:20] SUCCESS: Build completed for 4091897

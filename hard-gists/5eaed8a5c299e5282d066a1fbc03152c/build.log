@@ -1,0 +1,105 @@
+=== Docker Build Log for 5eaed8a5c299e5282d066a1fbc03152c ===
+Started at: Mi 29. Okt 16:16:12 CET 2025
+
+[2025-10-29 16:16:12] START: Building image for 5eaed8a5c299e5282d066a1fbc03152c
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 259B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.67kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/5] COPY hard-gists/5eaed8a5c299e5282d066a1fbc03152c/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/5] RUN ["pip","install","dj.choices"]
+#7 2.123 Collecting dj.choices
+#7 2.167   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 2.186   Preparing metadata (setup.py): started
+#7 2.615   Preparing metadata (setup.py): finished with status 'done'
+#7 2.743 Collecting django (from dj.choices)
+#7 2.753   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.792 Collecting six (from dj.choices)
+#7 2.802   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.854 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.863   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.902 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.912   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.937 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 3.280    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 24.3 MB/s eta 0:00:00
+#7 3.289 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 3.307 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 3.326 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 3.336    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 4.0 MB/s eta 0:00:00
+#7 3.379 Building wheels for collected packages: dj.choices
+#7 3.380   Building wheel for dj.choices (setup.py): started
+#7 3.574   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.575   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=08266857da13e17ab8638899fde3ecbc8ae13f94d4f901077868b8d6c0f97c5c
+#7 3.575   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.577 Successfully built dj.choices
+#7 3.632 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 5.342 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 5.342 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 5.438 
+#7 5.438 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 5.438 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.9s
+
+#8 [4/5] RUN ["pip","install","Django"]
+#8 0.513 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#8 0.517 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#8 0.518 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#8 0.566 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.571 
+#8 0.571 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.571 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.6s
+
+#9 [5/5] RUN ["pip","install","django_db"]
+#9 0.748 Collecting django_db
+#9 0.792   Downloading django_db-0.0.7.tar.gz (1.7 kB)
+#9 0.805   Preparing metadata (setup.py): started
+#9 0.937   Preparing metadata (setup.py): finished with status 'done'
+#9 0.939 Requirement already satisfied: django in /usr/local/lib/python3.11/site-packages (from django_db) (5.2.7)
+#9 0.977 Collecting pymysql (from django_db)
+#9 0.986   Downloading pymysql-1.1.2-py3-none-any.whl.metadata (4.3 kB)
+#9 1.001 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from django->django_db) (3.10.0)
+#9 1.002 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from django->django_db) (0.5.3)
+#9 1.018 Downloading pymysql-1.1.2-py3-none-any.whl (45 kB)
+#9 1.034    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.3/45.3 kB 2.6 MB/s eta 0:00:00
+#9 1.038 Building wheels for collected packages: django_db
+#9 1.043   Building wheel for django_db (setup.py): started
+#9 1.214   Building wheel for django_db (setup.py): finished with status 'done'
+#9 1.215   Created wheel for django_db: filename=django_db-0.0.7-py3-none-any.whl size=2255 sha256=e967fe57aa564d3b51f1a58f621f712e6cb15af4ae965d4763b3872c69d57fd0
+#9 1.215   Stored in directory: /root/.cache/pip/wheels/f7/0e/96/7f32f483dc1709e3218e0b811ef87a1457795bc45d221f1ac2
+#9 1.216 Successfully built django_db
+#9 1.266 Installing collected packages: pymysql, django_db
+#9 1.337 Successfully installed django_db-0.0.7 pymysql-1.1.2
+#9 1.337 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 1.343 
+#9 1.343 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 1.343 [notice] To update, run: pip install --upgrade pip
+#9 DONE 1.4s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.7s done
+#10 writing image sha256:0eb14c572c81d17388ac5a857caaeec52f245a38ab1db8fbdf2069177e2e47ff done
+#10 naming to docker.io/library/test-image-5eaed8a5c299e5282d066a1fbc03152c done
+#10 DONE 0.8s
+
+View build details: docker-desktop://dashboard/build/default/default/misddisxq3yrxpv7x4limsw4c
+[2025-10-29 16:16:21] SUCCESS: Build completed for 5eaed8a5c299e5282d066a1fbc03152c

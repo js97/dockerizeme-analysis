@@ -1,0 +1,13 @@
+=== Docker Run Log for cadedd0dd0d4c966462b ===
+Started at: Mi 29. Okt 20:16:43 CET 2025
+
+[2025-10-29 20:16:56] START: Running container for cadedd0dd0d4c966462b
+[2025-10-29 20:16:56] SUCCESS: Container 17ab8c02e712c18e1004fed4d74a1b80e6df662fce5324710b80d97f1d70c6cd started for cadedd0dd0d4c966462b
+=== Container logs for cadedd0dd0d4c966462b ===
+Traceback (most recent call last):
+  File "/snippet.py", line 39, in <module>
+    chromecast_devices = ', '.join(pychromecast.get_chromecasts_as_dict().keys())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'pychromecast' has no attribute 'get_chromecasts_as_dict'. Did you mean: 'get_chromecast_from_host'?
+=== End of logs for cadedd0dd0d4c966462b ===
+[2025-10-29 20:16:58] INFO: Container 17ab8c02e712c18e1004fed4d74a1b80e6df662fce5324710b80d97f1d70c6cd has stopped

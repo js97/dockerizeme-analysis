@@ -1,0 +1,58 @@
+=== Docker Build Log for 083777cb1f8c9efe6418c75d18bdd32b ===
+Started at: Mi 29. Okt 11:30:22 CET 2025
+
+[2025-10-29 11:30:22] START: Building image for 083777cb1f8c9efe6418c75d18bdd32b
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 189B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.25kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/083777cb1f8c9efe6418c75d18bdd32b/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","evdev"]
+#7 1.891 Collecting evdev
+#7 1.924   Downloading evdev-1.9.2.tar.gz (33 kB)
+#7 1.947   Installing build dependencies: started
+#7 3.239   Installing build dependencies: finished with status 'done'
+#7 3.240   Getting requirements to build wheel: started
+#7 3.402   Getting requirements to build wheel: finished with status 'done'
+#7 3.403   Preparing metadata (pyproject.toml): started
+#7 3.537   Preparing metadata (pyproject.toml): finished with status 'done'
+#7 3.539 Building wheels for collected packages: evdev
+#7 3.540   Building wheel for evdev (pyproject.toml): started
+#7 4.324   Building wheel for evdev (pyproject.toml): finished with status 'done'
+#7 4.325   Created wheel for evdev: filename=evdev-1.9.2-cp311-cp311-linux_x86_64.whl size=111427 sha256=880fa1f9ea617b9627a79d3adbab91763dab28b87b61637c8b1a69a94714da94
+#7 4.325   Stored in directory: /root/.cache/pip/wheels/72/97/d0/ea1b02915719d1cdb6a8810aa7683524c7aceedc5812cdeed7
+#7 4.327 Successfully built evdev
+#7 4.357 Installing collected packages: evdev
+#7 4.393 Successfully installed evdev-1.9.2
+#7 4.394 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.399 
+#7 4.399 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.399 [notice] To update, run: pip install --upgrade pip
+#7 DONE 4.6s
+
+#8 exporting to image
+#8 exporting layers 0.1s done
+#8 writing image sha256:418b7afcabc1a0348d8940a50d9a9b03ccdabb3e620adf8a953b37a7b6c969e1 done
+#8 naming to docker.io/library/test-image-083777cb1f8c9efe6418c75d18bdd32b done
+#8 DONE 0.1s
+
+View build details: docker-desktop://dashboard/build/default/default/3h3gpl3mxxssvjg68v8tgmez7
+[2025-10-29 11:30:27] SUCCESS: Build completed for 083777cb1f8c9efe6418c75d18bdd32b

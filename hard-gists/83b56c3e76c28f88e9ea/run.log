@@ -1,0 +1,30 @@
+=== Docker Run Log for 83b56c3e76c28f88e9ea ===
+Started at: Mi 29. Okt 17:46:42 CET 2025
+
+[2025-10-29 17:47:06] START: Running container for 83b56c3e76c28f88e9ea
+[2025-10-29 17:47:06] SUCCESS: Container 3a6f36c82d75c2a2fc389a9469754c4479252600af3d09c0c5d9f059e26cc3e6 started for 83b56c3e76c28f88e9ea
+=== Container logs for 83b56c3e76c28f88e9ea ===
+Traceback (most recent call last):
+  File "/snippet.py", line 1, in <module>
+    import chainer
+  File "/usr/local/lib/python3.11/site-packages/chainer/__init__.py", line 13, in <module>
+    from chainer import distributions  # NOQA
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/chainer/distributions/__init__.py", line 3, in <module>
+    from chainer.distributions.bernoulli import Bernoulli  # NOQA
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/chainer/distributions/bernoulli.py", line 7, in <module>
+    import chainer.distributions.utils
+  File "/usr/local/lib/python3.11/site-packages/chainer/distributions/utils.py", line 4, in <module>
+    from chainer.functions.array import where
+  File "/usr/local/lib/python3.11/site-packages/chainer/functions/__init__.py", line 25, in <module>
+    from chainer.functions.array.as_strided import as_strided  # NOQA
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/chainer/functions/array/as_strided.py", line 10, in <module>
+    index_dtype = {t().itemsize: t for t in np.sctypes['int']}
+                                            ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/numpy/__init__.py", line 781, in __getattr__
+    raise AttributeError(
+AttributeError: `np.sctypes` was removed in the NumPy 2.0 release. Access dtypes explicitly instead.
+=== End of logs for 83b56c3e76c28f88e9ea ===
+[2025-10-29 17:47:08] INFO: Container 3a6f36c82d75c2a2fc389a9469754c4479252600af3d09c0c5d9f059e26cc3e6 has stopped

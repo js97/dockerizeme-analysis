@@ -1,0 +1,235 @@
+=== Docker Build Log for 1068868 ===
+Started at: Mi 29. Okt 11:48:41 CET 2025
+
+[2025-10-29 11:48:41] START: Building image for 1068868
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 381B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.39kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/9] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/9] COPY hard-gists/1068868/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/9] RUN ["pip","install","dj.choices"]
+#7 1.902 Collecting dj.choices
+#7 1.937   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#7 1.954   Preparing metadata (setup.py): started
+#7 2.340   Preparing metadata (setup.py): finished with status 'done'
+#7 2.442 Collecting django (from dj.choices)
+#7 2.450   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#7 2.487 Collecting six (from dj.choices)
+#7 2.495   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#7 2.542 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#7 2.550   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#7 2.588 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#7 2.596   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#7 2.621 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#7 2.933    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 26.8 MB/s eta 0:00:00
+#7 2.941 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#7 2.965 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#7 2.988 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#7 2.999    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.4 MB/s eta 0:00:00
+#7 3.040 Building wheels for collected packages: dj.choices
+#7 3.041   Building wheel for dj.choices (setup.py): started
+#7 3.224   Building wheel for dj.choices (setup.py): finished with status 'done'
+#7 3.224   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=c7721f1a79071fe25297cb83deba18d40ed7ef956fc8a3b30247a21196ef997b
+#7 3.224   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#7 3.228 Successfully built dj.choices
+#7 3.288 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#7 4.834 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#7 4.834 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 4.926 
+#7 4.926 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 4.926 [notice] To update, run: pip install --upgrade pip
+#7 DONE 5.5s
+
+#8 [4/9] RUN ["pip","install","Django"]
+#8 0.447 Requirement already satisfied: Django in /usr/local/lib/python3.11/site-packages (5.2.7)
+#8 0.451 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django) (3.10.0)
+#8 0.452 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django) (0.5.3)
+#8 0.494 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 0.500 
+#8 0.500 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 0.500 [notice] To update, run: pip install --upgrade pip
+#8 DONE 0.6s
+
+#9 [5/9] RUN ["pip","install","django-blog-zinnia"]
+#9 0.520 Collecting django-blog-zinnia
+#9 0.552   Downloading django_blog_zinnia-0.20-py2.py3-none-any.whl.metadata (15 kB)
+#9 0.606 Collecting beautifulsoup4>=4.3.2 (from django-blog-zinnia)
+#9 0.615   Downloading beautifulsoup4-4.14.2-py3-none-any.whl.metadata (3.8 kB)
+#9 0.660 Collecting django-contrib-comments>=1.7.2 (from django-blog-zinnia)
+#9 0.766   Downloading django_contrib_comments-2.2.0-py3-none-any.whl.metadata (6.2 kB)
+#9 0.821 Collecting django-mptt>=0.8.6 (from django-blog-zinnia)
+#9 0.831   Downloading django_mptt-0.18.0-py3-none-any.whl.metadata (5.3 kB)
+#9 0.992 Collecting django-tagging>=0.4.5 (from django-blog-zinnia)
+#9 1.001   Downloading django_tagging-0.5.0-py3-none-any.whl.metadata (7.6 kB)
+#9 1.149 Collecting django-xmlrpc>=0.1.5 (from django-blog-zinnia)
+#9 1.255   Downloading django_xmlrpc-0.1.8-py2.py3-none-any.whl.metadata (2.4 kB)
+#9 1.294 Collecting mots-vides>=2015.5.11 (from django-blog-zinnia)
+#9 1.304   Downloading mots_vides-2015.5.11-py2.py3-none-any.whl.metadata (7.2 kB)
+#9 1.509 Collecting pillow>=2.0.0 (from django-blog-zinnia)
+#9 1.520   Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+#9 1.574 Collecting pyparsing>=2.0.3 (from django-blog-zinnia)
+#9 1.582   Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+#9 1.648 Collecting pytz>=2014.10 (from django-blog-zinnia)
+#9 1.656   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#9 2.028 Collecting regex>=2016.3.2 (from django-blog-zinnia)
+#9 2.039   Downloading regex-2025.10.23-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+#9 2.055      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.5/40.5 kB 2.1 MB/s eta 0:00:00
+#9 2.097 Collecting soupsieve>1.2 (from beautifulsoup4>=4.3.2->django-blog-zinnia)
+#9 2.105   Downloading soupsieve-2.8-py3-none-any.whl.metadata (4.6 kB)
+#9 2.150 Collecting typing-extensions>=4.0.0 (from beautifulsoup4>=4.3.2->django-blog-zinnia)
+#9 2.158   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#9 2.171 Requirement already satisfied: Django>=2.2 in /usr/local/lib/python3.11/site-packages (from django-contrib-comments>=1.7.2->django-blog-zinnia) (5.2.7)
+#9 2.200 Collecting django-js-asset (from django-mptt>=0.8.6->django-blog-zinnia)
+#9 2.208   Downloading django_js_asset-3.1.2-py3-none-any.whl.metadata (6.4 kB)
+#9 2.239 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django>=2.2->django-contrib-comments>=1.7.2->django-blog-zinnia) (3.10.0)
+#9 2.240 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django>=2.2->django-contrib-comments>=1.7.2->django-blog-zinnia) (0.5.3)
+#9 2.260 Downloading django_blog_zinnia-0.20-py2.py3-none-any.whl (792 kB)
+#9 2.308    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 792.6/792.6 kB 16.9 MB/s eta 0:00:00
+#9 2.316 Downloading beautifulsoup4-4.14.2-py3-none-any.whl (106 kB)
+#9 2.328    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.4/106.4 kB 8.6 MB/s eta 0:00:00
+#9 2.338 Downloading django_contrib_comments-2.2.0-py3-none-any.whl (416 kB)
+#9 2.360    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 416.4/416.4 kB 19.1 MB/s eta 0:00:00
+#9 2.369 Downloading django_mptt-0.18.0-py3-none-any.whl (120 kB)
+#9 2.383    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 120.2/120.2 kB 8.9 MB/s eta 0:00:00
+#9 2.392 Downloading django_tagging-0.5.0-py3-none-any.whl (33 kB)
+#9 2.409 Downloading django_xmlrpc-0.1.8-py2.py3-none-any.whl (16 kB)
+#9 2.527 Downloading mots_vides-2015.5.11-py2.py3-none-any.whl (59 kB)
+#9 2.542    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.5/59.5 kB 3.5 MB/s eta 0:00:00
+#9 2.555 Downloading pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+#9 2.853    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 23.7 MB/s eta 0:00:00
+#9 2.862 Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+#9 2.875    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 8.6 MB/s eta 0:00:00
+#9 2.884 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#9 2.911    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 19.3 MB/s eta 0:00:00
+#9 2.922 Downloading regex-2025.10.23-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (800 kB)
+#9 2.957    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 800.3/800.3 kB 23.9 MB/s eta 0:00:00
+#9 2.966 Downloading soupsieve-2.8-py3-none-any.whl (36 kB)
+#9 2.984 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#9 2.999    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 2.7 MB/s eta 0:00:00
+#9 3.009 Downloading django_js_asset-3.1.2-py3-none-any.whl (5.9 kB)
+#9 3.153 Installing collected packages: pytz, mots-vides, django-xmlrpc, django-tagging, typing-extensions, soupsieve, regex, pyparsing, pillow, django-js-asset, django-contrib-comments, beautifulsoup4, django-mptt, django-blog-zinnia
+#9 4.051 Successfully installed beautifulsoup4-4.14.2 django-blog-zinnia-0.20 django-contrib-comments-2.2.0 django-js-asset-3.1.2 django-mptt-0.18.0 django-tagging-0.5.0 django-xmlrpc-0.1.8 mots-vides-2015.5.11 pillow-12.0.0 pyparsing-3.2.5 pytz-2025.2 regex-2025.10.23 soupsieve-2.8 typing-extensions-4.15.0
+#9 4.051 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 4.056 
+#9 4.056 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 4.056 [notice] To update, run: pip install --upgrade pip
+#9 DONE 4.4s
+
+#10 [6/9] RUN ["pip","install","requests"]
+#10 0.546 Collecting requests
+#10 0.579   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#10 0.707 Collecting charset_normalizer<4,>=2 (from requests)
+#10 0.715   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#10 0.772 Collecting idna<4,>=2.5 (from requests)
+#10 0.780   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#10 0.845 Collecting urllib3<3,>=1.21.1 (from requests)
+#10 0.853   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#10 0.901 Collecting certifi>=2017.4.17 (from requests)
+#10 0.909   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#10 0.936 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#10 0.960    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 2.4 MB/s eta 0:00:00
+#10 0.968 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#10 0.987    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 9.0 MB/s eta 0:00:00
+#10 0.997 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#10 1.015    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 8.7 MB/s eta 0:00:00
+#10 1.023 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#10 1.039    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 4.3 MB/s eta 0:00:00
+#10 1.047 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#10 1.060    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 10.1 MB/s eta 0:00:00
+#10 1.141 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#10 1.378 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#10 1.378 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 1.383 
+#10 1.383 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 1.383 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.5s
+
+#11 [7/9] RUN ["pip","install","psycopg2"]
+#11 0.552 Collecting psycopg2
+#11 0.587   Downloading psycopg2-2.9.11.tar.gz (379 kB)
+#11 0.627      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 379.6/379.6 kB 9.8 MB/s eta 0:00:00
+#11 0.662   Preparing metadata (setup.py): started
+#11 0.806   Preparing metadata (setup.py): finished with status 'done'
+#11 0.808 Building wheels for collected packages: psycopg2
+#11 0.813   Building wheel for psycopg2 (setup.py): started
+#11 6.024   Building wheel for psycopg2 (setup.py): finished with status 'done'
+#11 6.026   Created wheel for psycopg2: filename=psycopg2-2.9.11-cp311-cp311-linux_x86_64.whl size=503320 sha256=e4be7a500a714e2743a8bbb63a002514213b5b661bfc7ebfbf397859dbb2ec35
+#11 6.026   Stored in directory: /root/.cache/pip/wheels/15/a7/0e/37c6d130333cbaac2e6bb15e4ff41ef3a195af78a70907ca0d
+#11 6.028 Successfully built psycopg2
+#11 6.104 Installing collected packages: psycopg2
+#11 6.140 Successfully installed psycopg2-2.9.11
+#11 6.140 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 6.145 
+#11 6.145 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 6.145 [notice] To update, run: pip install --upgrade pip
+#11 DONE 6.2s
+
+#12 [8/9] RUN ["pip","install","django-taggit"]
+#12 0.538 Collecting django-taggit
+#12 0.576   Downloading django_taggit-6.1.0-py3-none-any.whl.metadata (3.5 kB)
+#12 0.589 Requirement already satisfied: Django>=4.1 in /usr/local/lib/python3.11/site-packages (from django-taggit) (5.2.7)
+#12 0.592 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from Django>=4.1->django-taggit) (3.10.0)
+#12 0.593 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from Django>=4.1->django-taggit) (0.5.3)
+#12 0.607 Downloading django_taggit-6.1.0-py3-none-any.whl (75 kB)
+#12 0.634    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 75.7/75.7 kB 2.6 MB/s eta 0:00:00
+#12 0.714 Installing collected packages: django-taggit
+#12 0.773 Successfully installed django-taggit-6.1.0
+#12 0.773 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 0.778 
+#12 0.778 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 0.778 [notice] To update, run: pip install --upgrade pip
+#12 DONE 0.9s
+
+#13 [9/9] RUN ["pip","install","django_db"]
+#13 0.521 Collecting django_db
+#13 0.555   Downloading django_db-0.0.7.tar.gz (1.7 kB)
+#13 0.576   Preparing metadata (setup.py): started
+#13 0.690   Preparing metadata (setup.py): finished with status 'done'
+#13 0.692 Requirement already satisfied: django in /usr/local/lib/python3.11/site-packages (from django_db) (5.2.7)
+#13 0.732 Collecting pymysql (from django_db)
+#13 0.741   Downloading pymysql-1.1.2-py3-none-any.whl.metadata (4.3 kB)
+#13 0.760 Requirement already satisfied: asgiref>=3.8.1 in /usr/local/lib/python3.11/site-packages (from django->django_db) (3.10.0)
+#13 0.761 Requirement already satisfied: sqlparse>=0.3.1 in /usr/local/lib/python3.11/site-packages (from django->django_db) (0.5.3)
+#13 0.775 Downloading pymysql-1.1.2-py3-none-any.whl (45 kB)
+#13 0.796    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.3/45.3 kB 1.9 MB/s eta 0:00:00
+#13 0.800 Building wheels for collected packages: django_db
+#13 0.804   Building wheel for django_db (setup.py): started
+#13 0.945   Building wheel for django_db (setup.py): finished with status 'done'
+#13 0.945   Created wheel for django_db: filename=django_db-0.0.7-py3-none-any.whl size=2255 sha256=4c15f1bc0f4bf63bf5ecd93d43805fc996b6b2d185abad67f68fe98fcca2dbc2
+#13 0.945   Stored in directory: /root/.cache/pip/wheels/f7/0e/96/7f32f483dc1709e3218e0b811ef87a1457795bc45d221f1ac2
+#13 0.947 Successfully built django_db
+#13 1.027 Installing collected packages: pymysql, django_db
+#13 1.093 Successfully installed django_db-0.0.7 pymysql-1.1.2
+#13 1.093 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#13 1.099 
+#13 1.099 [notice] A new release of pip is available: 24.0 -> 25.3
+#13 1.099 [notice] To update, run: pip install --upgrade pip
+#13 DONE 1.2s
+
+#14 exporting to image
+#14 exporting layers
+#14 exporting layers 0.7s done
+#14 writing image sha256:6e097a91a4cf06215c6c6878a720ca63fd2d50f0f606ffd0990add4a0cd24902 done
+#14 naming to docker.io/library/test-image-1068868 done
+#14 DONE 0.7s
+
+View build details: docker-desktop://dashboard/build/default/default/lygpeml1dz9mlg7hpe46glapu
+[2025-10-29 11:49:02] SUCCESS: Build completed for 1068868

@@ -1,0 +1,22 @@
+=== Docker Run Log for 9985307 ===
+Started at: Mi 29. Okt 18:37:25 CET 2025
+
+[2025-10-29 18:37:54] START: Running container for 9985307
+[2025-10-29 18:37:54] SUCCESS: Container 37aa6ba4f13ba4332747228694f888e391af2d1e2c3bf936acb8ac31ddb9af7e started for 9985307
+=== Container logs for 9985307 ===
+Traceback (most recent call last):
+  File "/snippet.py", line 7, in <module>
+    ROOTCORE_PATH = os.environ['ROOTCOREDIR']
+                    ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<frozen os>", line 679, in __getitem__
+KeyError: 'ROOTCOREDIR'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snippet.py", line 9, in <module>
+    print >>sys.stderr, "Warning! $ROOTCOREDIR env. variable is not set. Did you configure RootCore?"
+    ~~~~~~^^~~~~~~~~~~
+TypeError: unsupported operand type(s) for >>: 'builtin_function_or_method' and '_io.TextIOWrapper'. Did you mean "print(<message>, file=<output_stream>)"?
+=== End of logs for 9985307 ===
+[2025-10-29 18:37:56] INFO: Container 37aa6ba4f13ba4332747228694f888e391af2d1e2c3bf936acb8ac31ddb9af7e has stopped

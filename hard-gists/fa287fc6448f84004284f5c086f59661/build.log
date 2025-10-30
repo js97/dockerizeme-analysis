@@ -1,0 +1,96 @@
+=== Docker Build Log for fa287fc6448f84004284f5c086f59661 ===
+Started at: Mi 29. Okt 21:38:37 CET 2025
+
+[2025-10-29 21:38:37] START: Building image for fa287fc6448f84004284f5c086f59661
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 189B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 2.29kB 0.0s done
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [2/3] COPY hard-gists/fa287fc6448f84004284f5c086f59661/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [3/3] RUN ["pip","install","keras"]
+#7 1.953 Collecting keras
+#7 2.003   Downloading keras-3.12.0-py3-none-any.whl.metadata (5.9 kB)
+#7 2.045 Collecting absl-py (from keras)
+#7 2.054   Downloading absl_py-2.3.1-py3-none-any.whl.metadata (3.3 kB)
+#7 2.278 Collecting numpy (from keras)
+#7 2.289   Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#7 2.319      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 2.2 MB/s eta 0:00:00
+#7 2.398 Collecting rich (from keras)
+#7 2.407   Downloading rich-14.2.0-py3-none-any.whl.metadata (18 kB)
+#7 2.447 Collecting namex (from keras)
+#7 2.457   Downloading namex-0.1.0-py3-none-any.whl.metadata (322 bytes)
+#7 2.523 Collecting h5py (from keras)
+#7 2.532   Downloading h5py-3.15.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+#7 2.629 Collecting optree (from keras)
+#7 2.639   Downloading optree-0.17.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (33 kB)
+#7 2.690 Collecting ml-dtypes (from keras)
+#7 2.703   Downloading ml_dtypes-0.5.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.9 kB)
+#7 2.767 Collecting packaging (from keras)
+#7 2.775   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#7 2.857 Collecting typing-extensions>=4.6.0 (from optree->keras)
+#7 2.865   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+#7 2.913 Collecting markdown-it-py>=2.2.0 (from rich->keras)
+#7 2.922   Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+#7 2.966 Collecting pygments<3.0.0,>=2.13.0 (from rich->keras)
+#7 2.975   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+#7 3.022 Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->keras)
+#7 3.031   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+#7 3.059 Downloading keras-3.12.0-py3-none-any.whl (1.5 MB)
+#7 3.181    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 12.4 MB/s eta 0:00:00
+#7 3.198 Downloading absl_py-2.3.1-py3-none-any.whl (135 kB)
+#7 3.212    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.8/135.8 kB 9.8 MB/s eta 0:00:00
+#7 3.237 Downloading h5py-3.15.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (4.7 MB)
+#7 3.537    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 15.7 MB/s eta 0:00:00
+#7 3.548 Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#7 4.752    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 13.6 MB/s eta 0:00:00
+#7 4.765 Downloading ml_dtypes-0.5.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (4.9 MB)
+#7 5.043    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 17.9 MB/s eta 0:00:00
+#7 5.053 Downloading namex-0.1.0-py3-none-any.whl (5.9 kB)
+#7 5.072 Downloading optree-0.17.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (402 kB)
+#7 5.101    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 402.0/402.0 kB 14.4 MB/s eta 0:00:00
+#7 5.112 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#7 5.124    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 6.4 MB/s eta 0:00:00
+#7 5.133 Downloading rich-14.2.0-py3-none-any.whl (243 kB)
+#7 5.158    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.4/243.4 kB 9.9 MB/s eta 0:00:00
+#7 5.168 Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+#7 5.181    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.3/87.3 kB 6.7 MB/s eta 0:00:00
+#7 5.190 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+#7 5.262    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 17.3 MB/s eta 0:00:00
+#7 5.271 Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+#7 5.284    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 3.0 MB/s eta 0:00:00
+#7 5.293 Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+#7 5.449 Installing collected packages: namex, typing-extensions, pygments, packaging, numpy, mdurl, absl-py, optree, ml-dtypes, markdown-it-py, h5py, rich, keras
+#7 8.586 Successfully installed absl-py-2.3.1 h5py-3.15.1 keras-3.12.0 markdown-it-py-4.0.0 mdurl-0.1.2 ml-dtypes-0.5.3 namex-0.1.0 numpy-2.3.4 optree-0.17.0 packaging-25.0 pygments-2.19.2 rich-14.2.0 typing-extensions-4.15.0
+#7 8.586 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 8.676 
+#7 8.676 [notice] A new release of pip is available: 24.0 -> 25.3
+#7 8.676 [notice] To update, run: pip install --upgrade pip
+#7 DONE 9.7s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.8s done
+#8 writing image sha256:60bbff15a1beaf375b0a25b53715cc797d38889c17c9aeb06a7957e9ec79196d done
+#8 naming to docker.io/library/test-image-fa287fc6448f84004284f5c086f59661 done
+#8 DONE 0.8s
+
+View build details: docker-desktop://dashboard/build/default/default/0t4i1f52jczibx8m4rz5cu56r
+[2025-10-29 21:38:48] SUCCESS: Build completed for fa287fc6448f84004284f5c086f59661

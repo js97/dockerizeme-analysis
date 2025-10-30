@@ -1,0 +1,179 @@
+=== Docker Build Log for 2142891 ===
+Started at: Mi 29. Okt 12:59:54 CET 2025
+
+[2025-10-29 12:59:54] START: Building image for 2142891
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.61kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 1.14kB 0.0s done
+#4 DONE 0.0s
+
+#5 [ 1/42] FROM docker.io/library/python:3.11
+#5 CACHED
+
+#6 [ 2/42] COPY hard-gists/2142891/snippet.py /snippet.py
+#6 DONE 0.1s
+
+#7 [ 3/42] RUN ["apt-get","update"]
+#7 0.268 Hit:1 http://deb.debian.org/debian trixie InRelease
+#7 0.268 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#7 0.282 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#7 0.295 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9669 kB]
+#7 0.621 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#7 0.622 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [67.8 kB]
+#7 1.234 Fetched 9833 kB in 1s (9843 kB/s)
+#7 1.234 Reading package lists...
+#7 DONE 1.8s
+
+#8 [ 4/42] RUN ["pip","install","dj.choices"]
+#8 1.962 Collecting dj.choices
+#8 2.103   Downloading dj.choices-0.11.0.tar.gz (28 kB)
+#8 2.133   Preparing metadata (setup.py): started
+#8 2.541   Preparing metadata (setup.py): finished with status 'done'
+#8 2.647 Collecting django (from dj.choices)
+#8 2.656   Downloading django-5.2.7-py3-none-any.whl.metadata (4.1 kB)
+#8 2.697 Collecting six (from dj.choices)
+#8 2.705   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 2.753 Collecting asgiref>=3.8.1 (from django->dj.choices)
+#8 2.762   Downloading asgiref-3.10.0-py3-none-any.whl.metadata (9.3 kB)
+#8 2.804 Collecting sqlparse>=0.3.1 (from django->dj.choices)
+#8 2.813   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#8 2.841 Downloading django-5.2.7-py3-none-any.whl (8.3 MB)
+#8 3.175    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 25.0 MB/s eta 0:00:00
+#8 3.184 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 3.202 Downloading asgiref-3.10.0-py3-none-any.whl (24 kB)
+#8 3.220 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#8 3.232    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 3.4 MB/s eta 0:00:00
+#8 3.271 Building wheels for collected packages: dj.choices
+#8 3.271   Building wheel for dj.choices (setup.py): started
+#8 3.446   Building wheel for dj.choices (setup.py): finished with status 'done'
+#8 3.447   Created wheel for dj.choices: filename=dj_choices-0.11.0-py3-none-any.whl size=28716 sha256=1e026891904b6845a9687b3cd0e6983dde700d41b36a082a35d2225ea6b8f79f
+#8 3.447   Stored in directory: /root/.cache/pip/wheels/97/38/bd/4ca089ff8ffdead6a07e7af033d36d74a01ab7a37e70797942
+#8 3.449 Successfully built dj.choices
+#8 3.499 Installing collected packages: sqlparse, six, asgiref, django, dj.choices
+#8 4.939 Successfully installed asgiref-3.10.0 dj.choices-0.11.0 django-5.2.7 six-1.17.0 sqlparse-0.5.3
+#8 4.939 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#8 5.038 
+#8 5.038 [notice] A new release of pip is available: 24.0 -> 25.3
+#8 5.038 [notice] To update, run: pip install --upgrade pip
+#8 DONE 5.5s
+
+#9 [ 5/42] RUN ["pip","install","backports.functools-lru-cache"]
+#9 0.614 Collecting backports.functools-lru-cache
+#9 0.646   Downloading backports.functools_lru_cache-2.0.0-py2.py3-none-any.whl.metadata (3.5 kB)
+#9 0.678 Downloading backports.functools_lru_cache-2.0.0-py2.py3-none-any.whl (6.7 kB)
+#9 0.737 Installing collected packages: backports.functools-lru-cache
+#9 0.772 Successfully installed backports.functools-lru-cache-2.0.0
+#9 0.772 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 0.777 
+#9 0.777 [notice] A new release of pip is available: 24.0 -> 25.3
+#9 0.777 [notice] To update, run: pip install --upgrade pip
+#9 DONE 0.8s
+
+#10 [ 6/42] RUN ["pip","install","backports.ssl"]
+#10 0.530 Collecting backports.ssl
+#10 0.563   Downloading backports.ssl-0.0.9.tar.gz (11 kB)
+#10 0.580   Preparing metadata (setup.py): started
+#10 0.692   Preparing metadata (setup.py): finished with status 'done'
+#10 0.693 Building wheels for collected packages: backports.ssl
+#10 0.698   Building wheel for backports.ssl (setup.py): started
+#10 0.836   Building wheel for backports.ssl (setup.py): finished with status 'done'
+#10 0.837   Created wheel for backports.ssl: filename=backports_ssl-0.0.9-py3-none-any.whl size=12458 sha256=76b4841ad20ce8b6a2fd66df22c70fe1e8c68fc5ba62a839504a6aa68e52220f
+#10 0.837   Stored in directory: /root/.cache/pip/wheels/b2/9b/23/8e1cd27a5e85cb681a372981243d68c938f75a0de94f9adf51
+#10 0.839 Successfully built backports.ssl
+#10 0.883 Installing collected packages: backports.ssl
+#10 0.931 Successfully installed backports.ssl-0.0.9
+#10 0.932 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#10 0.937 
+#10 0.937 [notice] A new release of pip is available: 24.0 -> 25.3
+#10 0.937 [notice] To update, run: pip install --upgrade pip
+#10 DONE 1.0s
+
+#11 [ 7/42] RUN ["pip","install","backports.shutil_get_terminal_size"]
+#11 0.624 Collecting backports.shutil_get_terminal_size
+#11 0.755   Downloading backports.shutil_get_terminal_size-1.0.0-py2.py3-none-any.whl.metadata (1.2 kB)
+#11 0.793 Downloading backports.shutil_get_terminal_size-1.0.0-py2.py3-none-any.whl (6.5 kB)
+#11 0.852 Installing collected packages: backports.shutil_get_terminal_size
+#11 0.895 Successfully installed backports.shutil_get_terminal_size-1.0.0
+#11 0.895 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#11 0.900 
+#11 0.900 [notice] A new release of pip is available: 24.0 -> 25.3
+#11 0.900 [notice] To update, run: pip install --upgrade pip
+#11 DONE 1.0s
+
+#12 [ 8/42] RUN ["pip","install","requests"]
+#12 0.551 Collecting requests
+#12 0.588   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+#12 0.711 Collecting charset_normalizer<4,>=2 (from requests)
+#12 0.720   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+#12 0.765 Collecting idna<4,>=2.5 (from requests)
+#12 0.774   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+#12 0.831 Collecting urllib3<3,>=1.21.1 (from requests)
+#12 0.840   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+#12 0.888 Collecting certifi>=2017.4.17 (from requests)
+#12 0.896   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB)
+#12 0.922 Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+#12 0.940    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.6 MB/s eta 0:00:00
+#12 0.949 Downloading certifi-2025.10.5-py3-none-any.whl (163 kB)
+#12 0.971    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 7.8 MB/s eta 0:00:00
+#12 0.980 Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+#12 0.994    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 11.7 MB/s eta 0:00:00
+#12 1.002 Downloading idna-3.11-py3-none-any.whl (71 kB)
+#12 1.013    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 6.0 MB/s eta 0:00:00
+#12 1.020 Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+#12 1.034    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 9.8 MB/s eta 0:00:00
+#12 1.095 Installing collected packages: urllib3, idna, charset_normalizer, certifi, requests
+#12 1.331 Successfully installed certifi-2025.10.5 charset_normalizer-3.4.4 idna-3.11 requests-2.32.5 urllib3-2.5.0
+#12 1.331 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#12 1.336 
+#12 1.336 [notice] A new release of pip is available: 24.0 -> 25.3
+#12 1.336 [notice] To update, run: pip install --upgrade pip
+#12 DONE 1.4s
+
+#13 [ 9/42] RUN ["apt-get","install","-y","python-pip"]
+#13 0.225 Reading package lists...
+#13 0.663 Building dependency tree...
+#13 0.767 Reading state information...
+#13 0.787 Package python-pip is not available, but is referred to by another package.
+#13 0.787 This may mean that the package is missing, has been obsoleted, or
+#13 0.787 is only available from another source
+#13 0.787 However the following packages replace it:
+#13 0.787   python3-pip
+#13 0.787 
+#13 0.789 E: Package 'python-pip' has no installation candidate
+#13 ERROR: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+------
+ > [ 9/42] RUN ["apt-get","install","-y","python-pip"]:
+
+
+0.787 Package python-pip is not available, but is referred to by another package.
+0.787 This may mean that the package is missing, has been obsoleted, or
+0.787 is only available from another source
+0.787 However the following packages replace it:
+0.787   python3-pip
+0.787 
+0.789 E: Package 'python-pip' has no installation candidate
+------
+Dockerfile:9
+--------------------
+   7 |     RUN ["pip","install","backports.shutil_get_terminal_size"]
+   8 |     RUN ["pip","install","requests"]
+   9 | >>> RUN ["apt-get","install","-y","python-pip"]
+  10 |     RUN ["apt-get","install","-y","python-dev"]
+  11 |     RUN ["apt-get","install","-y","build-essential"]
+--------------------
+ERROR: failed to build: failed to solve: process "apt-get install -y python-pip" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/default/default/exvxyykco1wskhf7lc7vblldk
+[2025-10-29 13:00:07] ERROR: Build failed for 2142891
